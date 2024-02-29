@@ -11,6 +11,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
       - uses: mshick/add-pr-comment@v2
+        continue-on-error: true
         with:
           message: |
             **Cleaning up PREview environment...**

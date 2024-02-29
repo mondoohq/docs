@@ -5,9 +5,6 @@ on:
     types: [synchronize]
 
 jobs:
-  data:
-    uses: ./.github/actions/PREview-data
-
   build:
     uses: ./.github/workflows/_build.yaml
     with:
@@ -15,7 +12,7 @@ jobs:
     secrets: inherit
 
   deploy-update:
-    needs: [data, build]
+    needs: [build]
     uses: ./.github/workflows/_deploy.yaml
     with:
       src_dir: build
@@ -24,13 +21,16 @@ jobs:
 
   notify:
     runs-on: ubuntu-latest
-    needs: [deploy-update, data]
+    needs: [deploy-update]
     steps:
+      - name: Obtain URL
+        id: data
+        uses: ./.github/actions/PREview-data
       - uses: mshick/add-pr-comment@v2
         if: success()
         continue-on-error: true
         with:
           message: |
-            **PREview has been updated at ${{ needs.data.outputs.url }}**
+            **PREview has been updated at ${{ steps.data.outputs.url }}**
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           allow-repeats: true

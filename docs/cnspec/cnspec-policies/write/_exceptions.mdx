@@ -1,0 +1,76 @@
+---
+title: Policy Authoring Guide | Exceptions
+sidebar_label: Something about Exceptions
+displayed_sidebar: cnspec
+sidebar_position: 8
+description: Description something write me
+image: /img/featured_img/mondoo-feature.jpg
+---
+
+** IGNORE. THIS DOESN'T GET COMPILED. **
+
+Now that you've learned how to [combine policies in a bundle and make more efficient policies by reusing queries and checks](/cnspec/cnspec-policies/write/reuse/), you can learn how to arrange a policy into chapters.
+
+A _group_ is a collection of related checks and queries in a policy. Groups provide a way to organize your policy. One type of group is a _chapter_. These are an arbitrary way of breaking up a policy into more manageable sections.
+
+A common way to use groups is to match the chapters in a written benchmark, policy, or other compliance document. For each chapter in the document, you can create a group in the policy.
+
+Here's another simple example of a policy bundle containing one policy:
+
+```yaml showLineNumbers
+policies:
+  - uid: example-with-chapters
+    name: Simple example with chapters
+    version: "1.0.0"
+    scoring_system: highest impact
+    authors:
+      - name: Lunalectric
+        email: security@lunalectric.com
+    groups:
+      - type: chapter
+        title: SSH
+        checks:
+          - uid: sshd-01
+            title: Ensure the port is set to 22
+            mql: sshd.config.params["Port"] == 22
+            impact: 30
+
+          - uid: sshd-02
+            title: Prevent weaker CBC ciphers from being used
+            mql: sshd.config.ciphers.none( /cbc/ )
+            impact: 60
+        queries:
+          - uid: sshd-d-1
+            title: Gather SSH config params
+            mql: sshd.config.params
+            - type: chapter
+
+        type: chapter
+        title: Packages
+        checks:
+          - uid: pkg-01
+            title: Ensure AIDE is installed
+            mql: package("aide").installed
+            impact: 70
+
+          - uid: pkg-02
+            title: Ensure prelink is disabled
+            mql: package("prelink").installed == false
+            impact: 70
+```
+
+The policy contains two chapters:
+
+- The `SSH` chapter begins on line 10. It has two checks and one query, all concerning SSH parameters.
+
+- The `Packages`chapter begins on line 28. It has two checks, both of which concern installed packages.
+
+A policy can have as many chapters as you need.
+
+## Next steps
+
+- To learn about controlling the types of assets a policy applies to, read [Limit Target Assets with Filters](/cnspec/cnspec-policies/write/filters/).
+
+- If you're ready to create your own policy: To learn how to set up, validate, and store policy bundles, read [Manage Policies](/cnspec/cnspec-policies/cnspec-manage-policies/).
+
+---

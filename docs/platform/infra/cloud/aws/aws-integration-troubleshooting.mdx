@@ -1,0 +1,175 @@
+---
+title: Mondoo AWS Integration Troubleshooting
+sidebar_label: Integration Troubleshooting
+sidebar_position: 4
+image: /img/featured_img/mondoo-aws.jpg
+description: This document covers how to debug and troubleshoot problems that may come up with the AWS Integration.
+---
+
+Troubleshoot problems that may come up deploying, running, and updating the Mondoo AWS Integration.
+
+## CloudFormation
+
+### Create failure - single account
+
+If CloudFormation fails to complete a single stack for any reason, Mondoo reports that failure.
+
+To fix the problem:
+
+1. Check the AWS CloudFormation console for detailed information about the error.
+
+2. Resolve the error as instructed.
+
+3. Visit the Configuration tab of the integration detail view to re-launch the stack.
+
+### Create failure - StackSets org install
+
+If AWS performs an org install and fails to complete a StackSet for any reason, you see an incomplete list of AWS accounts.
+
+To fix the problem and force an update:
+
+1. Check the AWS CloudFormation console for detailed information about the error.
+
+2. Resolve the error as instructed.
+
+3. Open the StackSet in the AWS CloudFormation console.
+
+4. In the top-right corner of the console, select the Actions menu and select Edit StackSet details.
+
+5. Step through the wizard without actually changing any information. Some fields require you to re-enter values.
+
+6. At the end of the wizard, select the Submit button to update the StackSet.
+
+7. Select the Operations tab and select the Refresh icon to see the update progress.
+
+### Requirements for deploying the Mondoo StackSet at the organization level
+
+For an AWS Organization to successfully integrate Mondoo, it must be configured [following AWS core principles](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tutorials_basic.html).
+
+A common misconfiguration seen in AWS Organizations that interferes with successful Mondoo integration is the lack of [organizational units (OUs)](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tutorials_basic.html#tutorial-orgs-step2).
+
+To ensure your Organizations are configured as needed, go to the [AWS Organizations console](https://console.aws.amazon.com/organizations/v2) and check your structure:
+
+- The top level entity of the Organization is 'root', assigned an ID that uses this format: `r-ab12`
+
+- The 'root' spans a tree of one or more OUs with IDs that use this format: `ou-ab12-1234abcd`
+
+If the entities below your `root` node have IDs in the format `o-abcd5678`, this interferes with an Organization-level Mondoo integration. You can still deploy the Mondoo integration; just integrate with [single accounts](/platform/infra/cloud/aws/aws-integration-scan/#integrate-with-an-entire-organization-or-single-account).
+
+You can't integrate an improperly configured AWS Organization with Mondoo. The integration fails.
+
+The failed integration attempt creates artifacts (StackSets and roles) in the accounts below root that you must remove manually. Trying to delete those faulty StackSets in the AWS console can return an error like this:
+
+```
+An error occurred (ValidationError) when calling the DeleteStackInstances operation:
+StackSets with SERVICE_MANAGED permission model can only have OrganizationalUnit as target
+```
+
+You must remove these StackSet instances manually from an account using the AWS CLI.
+
+### Remove a faulty StackSet from the Organization root using the AWS CLI
+
+To remove a faulty StackSet with the AWS CLI , use the `aws cloudformation delete-stack-instances` [command](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/delete-stack-instances.html).
+
+:::danger WARNING
+Read the [full documentation on this command in the AWS CLI Command Reference](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/delete-stack-instances.html) before you run it in your infrastructure.
+
+- **STACK-SET-NAME-USUALLY-MONDOO**: The name of your StackSet. By default, this is `Mondoo`.
+
+- **ROOT-OU-ID**: The ID of your Organization root, such as `r-85mw`.
+
+- **REGION**: The Organization's region, such as `us-central1`.
+
+```bash
+aws cloudformation delete-stack-instances \
+--stack-set-name STACK-SET-NAME-USUALLY-MONDOO \
+--deployment-targets OrganizationUnitIds=ROOT-OU-ID \
+--regions REGION \
+--no-retain-stacks
+```
+
+:::
+
+### Manually remove roles from an AWS account
+
+If you manually remove a Mondoo integration from an AWS account, you must remove all of these roles:
+
+```bash
+- ebs-volume-scan-instance
+- ecs
+- ecsInstanceRole
+- ecsTaskExecutionRole
+- MondooEventBusRole
+- MondooLambdaRole
+```
+
+:::info
+
+Depending on how you configured your deployment, not all of the roles above may be present.
+
+:::
+
+### Updates
+
+The CloudFormation stack and Lambda function update themselves to the latest available every 8 hours. These updates are independent of each other, meaning that if the CloudFormation stack fails to update, the Lambda code will still be updated.
+
+On occasion, one of these CloudFormation updates may result in an `Update Failed` state on the stack. Sometimes this is a chicken/egg issue that will resolve on the next auto-update. In some cases, a stack will remain in `Update Failed` state until a user manually updates the stack to give it the required extra permissions.
+
+## VPC
+
+### Lambda VPC access
+
+The [AWSLambdaVPCAccessExecutionRole](https://docs.aws.amazon.com/lambda/latest/dg/lambda-intro-execution-role.html#permissions-executionrole-features) is already attached to the Mondoo Lambda Role in order to discover assets, and run policies against those assets.
+
+Should your Lambda function require VPC access to be able to scan instances, please refer to AWS documentation on [Configuring a Lambda function to access resources in a VPC](https://docs.aws.amazon.com/lambda/latest/dg/configuration-vpc.html#vpc-configuring) to grant the Lambda function access to the appropriate VPC.
+
+Security groups for all AWS SSM managed instances must include an egress rule to allow outbound traffic on port 443 (HTTPS) to [Mondoo Platform](https://console.mondoo.com) at IP address `34.98.71.94` to send results back to your account.
+
+## Logging
+
+All lambda logs are stored in CloudWatch Logs, under a log group calls `/aws/lambda/MondooLambda` in the region where the CloudFormation was installed.
+
+To search the logs in the log group, select it and choose "Search Log Group" from the upper right corner of the console. ![AWS CloudWatch Log Group Details Console](/img/platform/infra/cloud/aws/lambda-loggroup.png)
+You can search for specific log messages or view a specific time frame of activity in one pane from this view.
+
+### Debug logging
+
+To enable debug logging, add the debug environment variable to the MondooLambda function: `DEBUG=1` by visiting the AWS Mondoo Lambda Console Configuration tab. ![Lambda Console](/img/platform/infra/cloud/aws/lambda-envvars.png)
+
+## 403 errors and Terraform
+
+A known restriction of the HashiCorp Terraform `aws_iam_policy_attachment` resource can result in 403 errors. According to [HashiCorp](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_policy_attachment):
+
+The `aws_iam_policy_attachment` resource creates exclusive attachments of IAM policies. Across the entire AWS account, all of the users/roles/groups to which a single policy is attached must be declared by a single `aws_iam_policy_attachment` resource. This means that even any users/roles/groups that have the attached policy via any other mechanism (including other Terraform resources) will have that attached policy revoked by this resource. Consider `aws_iam_role_policy_attachment`, `aws_iam_user_policy_attachment`, or `aws_iam_group_policy_attachment` instead. These resources do not enforce exclusive attachment of an IAM policy.
+
+If you use the `iam_policy_attachment` resource: Attaching a managed policy that Mondoo uses to a role you manage with Terraform detaches the policy from Mondoo's role. As recommended by HashiCorp, use a different resource to prevent this issue:
+
+- `aws_iam_role_policy_attachment`
+- `aws_iam_user_policy_attachment`
+- `aws_iam_group_policy_attachment`
+
+## Advanced debugging
+
+_Note: The AWS CloudFormation Stack can always be deleted and created without any data loss._
+
+Mondoo Platform receives a check-in from the AWS integration every 10 minutes. If no ping is received, the status will update in the Mondoo Platform UI.
+
+If the status is _not_ `active` or `deleted`:
+
+- Try the "Retry Setup" button, which will ensure that the EventBridge rule to talk to your AWS account is present in the Mondoo AWS account and refresh the stored service credentials if it is.
+
+Check the CloudFormation stack status and the CloudWatch logs for any obvious errors.
+
+Check for missing infrastructure:
+
+- Are the Mondoo credentials present? check the SSM parameter store in the installed region, under `MondooAgentConfig`
+- Is the EventBridge rule that allows Mondoo to talk to the integration present? check AWS EventBridge, rule named `mondoo-customevent-lambda-rule`
+
+And of course, please contact support@mondoo.com and join us in the [Mondoo Community Slack Channel](https://mondoo.link/slack).
+
+## Learn more
+
+- [AWS Integration FAQ](/docs/platform/infra/cloud/aws/aws-integration-faq)
+- [Scan Continuously with an AWS Integration](/docs/platform/infra/cloud/aws/aws-integration-scan)
+
+---

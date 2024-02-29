@@ -1,0 +1,5 @@
+### mondoohq/docs CODEOWNERS
+
+# Markdown updates should be reviewed by an editor
+*.md @mondoohq/mondoo-editors
+*.mdx @mondoohq/mondoo-editors

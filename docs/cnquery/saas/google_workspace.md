@@ -1,0 +1,145 @@
+---
+title: Query Google Workspace with cnquery
+sidebar_label: Google Workspace
+sidebar_position: 3
+displayed_sidebar: cnquery
+description: Query Google Workspace configuration
+---
+
+Use cnquery to inventory and query your Google Workspace environment.
+
+## Configure access to the Google Workspace API
+
+:::note
+
+These steps for configuring [Admin SDK API](https://developers.google.com/admin-sdk) access to your
+Google Workspace environment rely on Google Cloud (GCP) even if you aren't otherwise using GCP.
+
+:::
+
+1. [Create a Google Workspace service account](https://support.google.com/a/answer/7378726).
+   - In addition to the APIs that Google requires, also enable:
+     - Cloud Identity API
+     - Google Drive API
+   - After creating the service account, be sure to record the **Unique ID** on the details page. This is the Client ID to use in the next step.
+   - Be sure to download and protect the JSON credentials file.
+2. Log into the [Google Workspace Admin Portal](https://admin.google.com).
+
+3. In the left-side navigation, select **Security -> Access and data controls -> API controls**.
+
+4. Select [**Domain-wide Delegation**](https://developers.google.com/workspace/guides/create-credentials#delegate_domain-wide_authority_to_your_service_account) and then select **Add new**.
+
+5. For the **Client ID** enter the **Unique ID** of the service account you created.
+
+6. Paste this comma-delimited list to add all 17 read-only OAuth scopes:
+
+   ```text
+   https://www.googleapis.com/auth/admin.chrome.printers.readonly,https://www.googleapis.com/auth/admin.directory.customer.readonly,https://www.googleapis.com/auth/admin.directory.device.chromeos.readonly,https://www.googleapis.com/auth/admin.directory.device.mobile.readonly,https://www.googleapis.com/auth/admin.directory.domain.readonly,https://www.googleapis.com/auth/admin.directory.group.member.readonly,https://www.googleapis.com/auth/admin.directory.group.readonly,https://www.googleapis.com/auth/admin.directory.orgunit.readonly,https://www.googleapis.com/auth/admin.directory.resource.calendar.readonly,https://www.googleapis.com/auth/admin.directory.rolemanagement.readonly,https://www.googleapis.com/auth/admin.directory.user.alias.readonly,https://www.googleapis.com/auth/admin.directory.user.readonly,https://www.googleapis.com/auth/admin.directory.userschema.readonly,https://www.googleapis.com/auth/admin.reports.audit.readonly,https://www.googleapis.com/auth/admin.reports.usage.readonly,https://www.googleapis.com/auth/admin.directory.user.security,https://www.googleapis.com/auth/cloud-identity.groups.readonly
+   ```
+
+7. In the [Google Workspace Admin Portal](https://admin.google.com), navigate to **Account -> Account Settings** and record the **Customer ID**.
+
+To test proper configuration, use the cnquery shell to run a sample query:
+
+```text
+$ cnquery shell google-workspace --customer-id 5amp13iD --impersonated-user-email admin@domain.com --credentials-path /home/user/my-project-6646123456789.json
+```
+
+| For...                      | Substitute...                                               |
+| --------------------------- | ----------------------------------------------------------- |
+| `--impersonated-user-email` | The email address of a user that has super admin privileges |
+| `--credentials-path`        | The path to the downloaded JSON credentials file            |
+
+cnquery returns results similar to these:
+
+```
+cnquery> googleworkspace.users
+googleworkspace.users: [
+  0: {
+    primaryEmail: "alice@smith.family"
+  }
+  1: {
+    primaryEmail: "betty@smith.family"
+  }
+  ....
+```
+
+If you prefer, you can use any of these environment variables to provide the credentials file. They're listed in order of precedence:
+
+- `GOOGLE_APPLICATION_CREDENTIALS`
+- `GOOGLEWORKSPACE_CREDENTIALS`
+- `GOOGLEWORKSPACE_CLOUD_KEYFILE_JSON`
+- `GOOGLE_CREDENTIALS`
+
+:::note
+
+If any of the variables above and the `--credentials-path` parameter are both present, the environment variable takes precedence.
+
+:::
+
+## Example queries
+
+Display details for the first user in the workspace:
+
+```coffee
+cnquery> googleworkspace.users[0]{ * }
+googleworkspace.users[0]: {
+  isMailboxSetup: true
+  familyName: "Smith"
+  suspensionReason: ""
+  recoveryEmail: ""
+  archived: false
+  aliases: []
+  isAdmin: false
+  lastLoginTime: 2023-01-03 20:45:12 +0000 UTC
+  agreedToTerms: true
+  suspended: false
+  isEnrolledIn2Sv: false
+  fullName: "Alice Smith"
+  recoveryPhone: ""
+  primaryEmail: "alice@smith.family"
+  givenName: "Alice"
+  id: "1182761XXXXXXXXX"
+  tokens: [
+  0: googleworkspace.token displayText="iOS Account Manager"
+  1: googleworkspace.token displayText="Facetune2"
+  2: googleworkspace.token displayText="YouTube on TV"
+  3: googleworkspace.token displayText="Discord"
+  4: googleworkspace.token displayText="Google Chrome"
+  5: googleworkspace.token displayText="Epic Games, Inc."
+  6: googleworkspace.token displayText="the-game-awards"
+  ]
+  creationTime: 2021-11-30 04:31:25 +0000 UTC
+  isEnforcedIn2Sv: false
+  usageReport: googleworkspace.report.usage id = googleworkspace.report.usage/C013XXXXXX/118276124783XXXXXXXXX/2023-01-03
+}
+```
+
+Notice that `usageReport` is listed in this example output. This provides access to several reports with more useful user data that you can also check.
+
+For example, this retrieves the first user in the workspace's account usage data:
+
+```coffee
+cnquery> googleworkspace.users[0].usageReport.account
+googleworkspace.users[0].usageReport.account: {
+  adminSetName: "Alice Smith"
+  driveUsedQuotaInMb: 231.000000
+  gmailUsedQuotaInMb: 39.000000
+  is2SvEnforced: false
+  isDisabled: false
+  isLessSecureAppsAccessAllowed: false
+  isS2SvEnrolled: false
+  isSuperAdmin: false
+  passwordLengthCompliance: "COMPLIANT"
+  passwordStrength: "STRONG"
+  usedQuotaInMb: 270.000000
+}
+```
+
+## Learn more
+
+- To learn more about how the MQL query language works, read [Write Effective MQL](/mql/mql.write/).
+
+- For more information, explore the complete [Mondoo Google Workspace Resource Pack Reference](/mql/resources/google-workspace-pack/).
+
+---

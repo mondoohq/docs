@@ -1,0 +1,46 @@
+---
+title: Assess AWS Security with cnspec
+id: cnspec-aws-intro
+sidebar_label: Get Started
+displayed_sidebar: cnspec
+sidebar_position: 1
+description: Learn how cnspec can assess the security of your AWS infrastructure
+image: /img/featured_img/mondoo-aws.jpg
+---
+
+cnspec assesses your full AWS environment for misconfigurations that put your organization at risk. You can scan your AWS account for compliance with security policies created by Mondoo or the community, or [create your own policies](/cnspec/cnspec-policies/write/). You also can write individual tests to run on the fly or include in automated tasks.
+
+cnspec can test any aspect of your AWS configuration. For a list of AWS resources you can test, read [Mondoo Amazon Web Services (AWS) Resource Pack Reference](/mql/resources/aws-pack/) and [Mondoo Core Resource Pack Reference](/mql/resources/core-pack/).
+
+## Connect cnspec with your AWS environment
+
+### Requirements
+
+To analyze and explore your AWS environment with cnspec, you must have:
+
+- [cnspec installed on your workstation](/cnspec/).
+- [An AWS account](https://aws.amazon.com/free/).
+- Your AWS credentials. To learn about creating a new access key pair, read [Creating new access keys for an IAM user](https://docs.aws.amazon.com/keyspaces/latest/devguide/access.credentials.html#create.keypair) in the AWS documentation.
+- Your `AWS_REGION` configured. To learn how to set your region, read [How to set environment variables](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html#envvars-set) in the AWS documentation.
+
+### Verify with a quick AWS check
+
+To quickly confirm that cnspec has access to your AWS environment, run this test from your terminal:
+
+```bash
+cnspec run aws -c 'aws.account.id!="foo"'
+```
+
+It asserts that your AWS account ID value is not `foo`.
+
+cnspec returns `[ok]` to indicate that the test passed, and includes the actual value of the AWS account ID:
+
+```coffee
+[ok] value: "123456789000"
+```
+
+## Next step
+
+You've successfully used cnspec to run your first check against your AWS account. Now you're ready to [assess your AWS environment.](/cnspec/cnspec-aws/cnspec-aws-account)
+
+---

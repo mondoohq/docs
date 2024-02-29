@@ -1,0 +1,66 @@
+---
+title: Log into Mondoo Platform for More Capabilities
+id: cnquery-platform
+sidebar_label: Log into Mondoo Platform for More
+displayed_sidebar: cnquery
+sidebar_position: 4
+description: Expand your cnquery capabilities with a free Mondoo Platform account.
+image: /img/featured_img/mondoo-feature.jpg
+---
+
+You can expand your cnquery capabilities with a free Mondoo Platform account. Mondoo Platform includes a web-based UI through which you can:
+
+- See the relationships between different assets in your infrastructure
+- Continuously monitor infrastructure security and compliance
+- Save, review, search, and share scan results
+- Access over 200 free security policies, including specific compliance checks against regional and industry guidelines
+- Manage and share policies across your entire infrastructure
+- Integrate with AWS Lambda, EBS volume scans, Kubernetes controller, and more
+
+This is just a partial list of capabilities. To learn more about what you can accomplish with Mondoo Platform, visit [mondoo.com](https://mondoo.com).
+
+## Log into Mondoo Platform
+
+1. In your web browser, go to [the Mondoo signup page](https://mondoo.com/pricing).
+
+![Sign up for Mondoo Platform](/img/platform/start/mondoo-platform-pricing.png)
+
+2. Register for a free trial. Mondoo sends you email with new account instructions.
+
+3. Follow the steps in the email to create your new account.
+
+## Register cnquery
+
+When you first log in, Mondoo greets you with a landing page.
+
+![Landing Page](/img/platform/start/welcome_to_mondoo.png)
+
+1. Select **Browse Integrations**.
+
+   ![Add cnquery](/img/cnspec/cnspec-add-integration.png)
+
+2. Under Workstation, select **cnquery**. Mondoo provides quick setup commands and a token for registering cnquery.
+
+   ![Register cnquery with Mondoo Platform](/img//cnquery/cnquery-platform-quick-setup.png)
+
+3. Select your operating system and then copy the commands in the box below.
+
+4. In a terminal window, paste and run the copied commands.
+
+cnquery is now registered with Mondoo Platform. The next time you query your infrastructure, you can see your assets in the Mondoo console.
+
+To learn about working in the Mondoo console, see the [Mondoo Platform documentation](/platform/home/).
+
+## Specify a proxy server for communication with Mondoo
+
+You can specify a proxy server for communication between cnquery and Mondoo Platform. This is useful if your default system proxy restricts communication, or if you need to monitor different types of traffic.
+
+1. Find the Mondoo configuration file: `/etc/opt/mondoo/mondoo.yml`.
+
+2. Add this line to `mondoo.yml`:
+
+   ```yaml
+   api_proxy: https://1.1.1.1:8080
+   ```
+
+---

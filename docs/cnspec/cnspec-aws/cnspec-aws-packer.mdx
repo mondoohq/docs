@@ -1,0 +1,309 @@
+---
+title: Build Secure AMIs with cnspec and HashiCorp Packer
+id: cnspec-aws-packer
+sidebar_label: Build Secure AMIs with Packer
+displayed_sidebar: cnspec
+sidebar_position: 60
+description: Learn how to build secure Amazon AMIs with HashiCorp Packer and cnspec
+image: /img/featured_img/mondoo-aws.jpg
+---
+
+You can run security scans during HashiCorp Packer builds using [Packer plugin cnspec by Mondoo](https://github.com/mondoohq/packer-plugin-cnspec). This tutorial includes instructions for using the plugin both with and without an account on Mondoo Platform.
+
+:::caution
+
+This tutorial provisions resources that qualify under the AWS Free Tier. If your account doesn't qualify under the AWS Free Tier, Mondoo is not responsible for charges that you incur.
+
+:::
+
+### Prerequisites
+
+Before you begin, be sure you have:
+
+- An [AWS Account](https://aws.amazon.com/free/)
+- The [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html) installed and configured
+- The latest [HashiCorp Packer](https://developer.hashicorp.com/packer/tutorials/docker-get-started/get-started-install-cli) version installed
+
+## Packer plugin cnspec by Mondoo
+
+[Packer plugin cnspec by Mondoo](https://github.com/mondoohq/packer-plugin-cnspec) scans Linux and Windows [HashiCorp Packer](https://www.packer.io) builds for vulnerabilities and security misconfigurations. The plugin is designed to work with any of the supported Packer builders, including containers.
+
+### Plugin modes
+
+Packer plugin cnspec is designed to work in one of two modes:
+
+- **Unregistered** - In unregistered mode, the plugin works without being registered to Mondoo Platform, and is designed to provide baseline security scanning with minimal configuration. The plugin runs either the [Linux Security by Mondoo](https://github.com/mondoohq/cnspec-policies/blob/main/core/mondoo-linux-security.mql.yaml) policy on Linux builds, or the [Windows Security by Mondoo](https://github.com/mondoohq/cnspec-policies/blob/main/core/mondoo-windows-security.mql.yaml) policy on Windows builds. Each of these policies provides security hardening checks based off of industry standards for Linux and Windows. Scan results are shown in STDOUT during the Packer run.
+- **Registered** - In registered mode, the plugin is registered to your account in Mondoo Platform using a service account. Registered mode allows you to configure and customize any of the policies in Mondoo Platform including CIS benchmarks and more. Scan results are shown in STDOUT and sent back to Mondoo Platform for your records.
+
+:::info
+
+To scan for vulnerabilities, you must register cnspec with Mondoo Platform. [Sign up for a free account](https://mondoo.com/pricing) today.
+
+:::
+
+### AWS authentication
+
+Before you can run Packer, you must configure AWS credentials with appropriate permissions to build AMIs. For more information see [Configuring the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html) in the AWS documentation.
+
+For a full list of IAM permissions required to run the amazon-ebs builder, refer to the [Packer Amazon AMI Builder documentation](https://developer.hashicorp.com/packer/integrations/hashicorp/amazon#authentication#authentication).
+
+:::tip
+If you don't have access to IAM user credentials, use another authentication method described in the [Packer Amazon AMI Builder documentation](https://developer.hashicorp.com/packer/integrations/hashicorp/amazon#authentication#authentication).
+:::
+
+### Plugin configuration
+
+Packer plugin cnspec provides this configuration:
+
+- `score_threshold` - This configuration sets an `int` score threshold for security scans. If the scan produces a score that falls below the threshold, the build will fail.
+- `on_failure = "continue"` - This configuration ensures that the Packer build will not fail even if the scan produces a score that falls below the `score_threshold`.
+- `sudo` - Some of the security configuration checks require elevated permissions to scan a given resource such as the `sshd_config`. Setting the `sudo` option to `active = true` configures the plugin to run in `sudo` mode.
+- `asset_name` - Override the asset name on Mondoo Platform. This configuration is only used in registered mode.
+- `annotations` - Custom annotations can be applied to Packer build assets to provide additional metadata for asset tracking. This configuration is only used in registered mode.
+
+### Register with Mondoo Platform
+
+To configure the plugin to work in registered mode, you must first create a Base64-encoded service account. If you do not wish to use custom policies and store results on Mondoo Platform you can skip this step.
+
+To create a Base64-encoded service account:
+
+1. Navigate to the space you want to create a service account in.
+2. Select **Settings** followed by **Service Accounts**.
+3. Select **ADD ACCOUNT**.
+4. Check the **Base64-encoded** box to Base64-encode the credentials.
+5. Select **GENERATE NEW CREDENTIALS**.
+6. Copy the Base64-encoded credentials to the clipboard.
+7. Open a terminal and run:
+
+```bash
+export MONDOO_CONFIG_BASE64=<paste Base64-encoded token>
+```
+
+## Run Packer
+
+With Packer configured, you are ready to run your first build.
+
+### Amazon Linux 2 template
+
+Create a new directory named `mondoo_packer`, and change to that directory.
+
+```bash
+mkdir mondoo_packer
+cd mondoo_packer
+```
+
+Create a new file called `aws-amazon2.pkr.hcl`, and then copy/paste this code snippet into that file.
+
+```bash
+packer {
+  required_plugins {
+    amazon = {
+      version = ">= 1.1.0"
+      source  = "github.com/hashicorp/amazon"
+    }
+    cnspec = {
+      version = ">= 6.1.3"
+      source  = "github.com/mondoohq/cnspec"
+    }
+  }
+}
+
+variable "aws_region" {
+  default = "us-east-1"
+  type    = string
+}
+
+variable "image_prefix" {
+  type = string
+  description = "Prefix to be applied to image name"
+  default = "cnspec-tested-amazon-linux-2"
+}
+
+locals { timestamp = regex_replace(timestamp(), "[- TZ:]", "") }
+
+source "amazon-ebs" "amazon2" {
+  ami_name      = "${var.image_prefix}-${local.timestamp}"
+  instance_type = "t2.micro"
+  region        = var.aws_region
+  source_ami_filter {
+    filters = {
+      name                = "amzn2-ami-kernel-5.*-x86_64-gp2"
+      root-device-type    = "ebs"
+      virtualization-type = "hvm"
+    }
+    most_recent = true
+    owners      = ["137112412989"]
+  }
+  ssh_username = "ec2-user"
+  tags = {
+    Base_AMI_Name = "{{ .SourceAMIName }}"
+    Name          = "${var.image_prefix}-${local.timestamp}"
+    Source_AMI    = "{{ .SourceAMI }}"
+    Creation_Date = "{{ .SourceAMICreationDate }}"
+  }
+}
+
+build {
+  name = "${var.image_prefix}-${local.timestamp}"
+
+  sources = [
+    "source.amazon-ebs.amazon2"
+  ]
+
+  provisioner "shell" {
+    inline = [
+      "sudo hostnamectl set-hostname ${var.image_prefix}-${local.timestamp}",
+      "sudo yum update -y",
+      "sudo yum upgrade -y"]
+  }
+
+  provisioner "cnspec" {
+    score_threshold = 80
+    on_failure = "continue"
+    sudo {
+      active = true
+    }
+  }
+}
+```
+
+This is a complete Packer template that you will use to build an AWS Amazon 2 Linux AMI in the `us-east-1` region. In these sections, you will review each block of this template in more detail.
+
+### Configure template variables
+
+The template provides a `variables` section used to configure the builds.
+
+:::info
+
+To learn about the various options to override variables set in the Packer template, see [Setting Variables](https://developer.hashicorp.com/packer/docs/templates/legacy_json_templates/user-variables#setting-variables) in the HashiCorp Packer documentation.
+
+:::
+
+**AWS region**
+
+When building AMIs, you must specify which region to build the AMI in. The default region for the template is `us-east-1`:
+
+```bash
+variable "aws_region" {
+  default = "us-east-1"
+  type    = string
+}
+```
+
+:::tip
+
+Use the optional [`ami_regions`](https://developer.hashicorp.com/packer/integrations/hashicorp/amazon#authentication/ebs#ami_regions) to configure a list of regions to copy the AMI to. Tags and attributes are copied along with the AMI.
+
+:::
+
+**Image prefix**
+
+By default the template will create the AMI using a default naming prefix of `cnspec-tested-amazon-linux-2`. You can override this with the `image_prefix` variable:
+
+```bash
+variable "image_prefix" {
+  type = string
+  description = "Prefix to be applied to image name"
+  default = "cnspec-tested-amazon-linux-2"
+}
+```
+
+### Initialize the Packer configuration
+
+Initialize your Packer configuration.
+
+```bash
+packer init aws-amazon2.pkr.hcl
+```
+
+Executing `packer init` instructs Packer to download the plugins defined in the `required_plugins` section in the template. Plugins are typically downloaded to the `~/.packer.d/plugins`directory. You can run `packer init` as many times as you'd like. If you already have the plugins you need, Packer exits without output.
+
+### Build the AMI
+
+Build the image with the `packer build aws-amazon2.pkr.hcl` command. Packer prints output similar to what is shown below.
+
+```bash
+packer build aws-amazon2.pkr.hcl
+<image-name>.amazon-ebs.amazon2: output will be in this color.
+
+==> <image-name>.amazon-ebs.amazon2: Prevalidating any provided VPC information
+==> <image-name>.amazon-ebs.amazon2: Prevalidating AMI Name: <image-name>
+    <image-name>.amazon-ebs.amazon2: Found Image ID: ami-0b0dcb5067f052a63
+==> <image-name>.amazon-ebs.amazon2: Creating temporary keypair: packer_6382573a-e356-c04a-958f-c1ece4083785
+==> <image-name>.amazon-ebs.amazon2: Creating temporary security group for this instance: packer_6382573d-6f07-acc1-f218-df04593a22f1
+...
+==> <image-name>.amazon-ebs.amazon2: Running cnspec packer provisioner by Mondoo (Version: 0.6.0, Build: dev)
+    <image-name>.amazon-ebs.amazon2: activated sudo
+    <image-name>.amazon-ebs.amazon2: detected packer build via ssh
+    <image-name>.amazon-ebs.amazon2: scan packer build
+    <image-name>.amazon-ebs.amazon2: scan completed successfully
+...
+
+    <image-name>.amazon-ebs.amazon2: ✕ Fail:  D  20  Ensure sudo logging is enabled
+    <image-name>.amazon-ebs.amazon2: ✕ Fail:  D  20  Ensure kernel module loading and unloading is collected
+    <image-name>.amazon-ebs.amazon2: ✓ Pass:  Ensure no duplicate UIDs exist
+    <image-name>.amazon-ebs.amazon2: ✕ Fail:  D  20  Ensure unsuccessful unauthorized file access attempts are collected
+    <image-name>.amazon-ebs.amazon2: ✓ Pass:  Ensure prelink is disabled
+    <image-name>.amazon-ebs.amazon2: ✕ Fail:  F   0  Ensure that strong Key Exchange algorithms are used
+    <image-name>.amazon-ebs.amazon2: ✓ Pass:  Ensure Samba is stopped and not enabled
+    <image-name>.amazon-ebs.amazon2:
+    <image-name>.amazon-ebs.amazon2: Vulnerabilities:
+    <image-name>.amazon-ebs.amazon2: ■ No advisories found (passed)
+    <image-name>.amazon-ebs.amazon2:
+    <image-name>.amazon-ebs.amazon2: Overall CVSS score: 0.0
+    <image-name>.amazon-ebs.amazon2:
+    <image-name>.amazon-ebs.amazon2:
+    <image-name>.amazon-ebs.amazon2: Summary (1 assets)
+    <image-name>.amazon-ebs.amazon2: ==================
+    <image-name>.amazon-ebs.amazon2:
+    <image-name>.amazon-ebs.amazon2: Target:     i-0dd30e6f234216dd1
+    <image-name>.amazon-ebs.amazon2: Score:      C    50/100     (100% completed)
+    <image-name>.amazon-ebs.amazon2: ✓ Passed:   ████████ 52% (55)
+    <image-name>.amazon-ebs.amazon2: ✕ Failed:   ███████ 44% (46)
+    <image-name>.amazon-ebs.amazon2: ! Errors:   3% (3)
+    <image-name>.amazon-ebs.amazon2: » Skipped:  1% (1)
+    <image-name>.amazon-ebs.amazon2:
+    <image-name>.amazon-ebs.amazon2: Policies:
+    <image-name>.amazon-ebs.amazon2: F   0  Linux Security by Mondoo
+    <image-name>.amazon-ebs.amazon2: A 100  Platform Vulnerability Policy by Mondoo
+...
+==> Wait completed after 10 minutes 7 seconds
+
+==> Builds finished. The artifacts of successful builds are:
+--> <image-name>.amazon-ebs.amazon2: AMIs were created:
+us-east-1: ami-0b3e9a14e02dd8f37
+```
+
+### View the scan report in Mondoo Platform (registered mode only)
+
+To view the scan report in the Mondoo Console, go to **INVENTORY** and find the report. You might need to refresh your browser.
+
+![Mondoo scan report from HashiCorp Packer build](/img/cnspec/aws/packer-asset.png)
+
+### View the control details
+
+Select the Controls tab.
+
+![Controls tab in a Mondoo scan report from HashiCorp Packer build](/img/cnspec/aws/controls-tab.png)
+
+Expand any of the checks in the policies that ran against your build to show additional documentation, audit, and remediation steps:
+
+![Control details in a Mondoo scan result](/img/cnspec/aws/control-details.png)
+
+## View the image AWS Management Console
+
+![Mondoo secure base image in AWS Management Console](/img/cnspec/aws/aws-packer-image.png)
+
+After running the above example, you can navigate to the [AMIs section](https://us-east-1.console.aws.amazon.com/ec2/v2/home?region=us-east-1#Images:visibility=owned-by-me) of AWS Management Console.
+
+### Remove the image
+
+You can remove the AMI by first deregistering it on the [AWS AMI management page](https://us-east-1.console.aws.amazon.com/ec2/v2/home?region=us-east-1#Images:visibility=owned-by-me). Next, delete the associated snapshot on the [AWS snapshot management page](https://us-east-1.console.aws.amazon.com/ec2/v2/home?region=us-east-1#Snapshots:).
+
+## Next steps
+
+In this tutorial, you built an Amazon AMI and scanned it for vulnerabilities and security misconfigurations with cnspec.
+
+The GitHub repository for Packer plugin cnspec contains [additional templates](https://github.com/mondoohq/packer-plugin-cnspec/tree/main/examples) for building Ubuntu and Windows images.
+
+---

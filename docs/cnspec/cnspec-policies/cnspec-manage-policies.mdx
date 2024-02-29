@@ -1,0 +1,57 @@
+---
+title: Manage Policies
+id: cnspec-manage-policies
+sidebar_label: Manage Policies
+displayed_sidebar: cnspec
+sidebar_position: 2
+description: Scale policies across your infrastructure and store your own policies
+image: /img/featured_img/mondoo-feature.jpg
+---
+
+If you customize or build your own policies, you can store and share access to them using Mondoo Platform.
+
+## Scale cnspec across your infrastructure
+
+The easiest way to scale cnspec across your infrastructure is to have all of your infrastructure pull policies from a central location. One simple approach is to sign up for a free account on [Mondoo Platform](/platform/start/plat-what-is/). The platform is designed for multi-tenancy and provides a secure, private environment that keeps data about your assets in your own account. With Mondoo Platform, all assets can report on policies and you can define custom exceptions for your infrastructure.
+
+To use cnspec with Mondoo Platform, run:
+
+```bash
+cnspec login
+```
+
+Once authenticated, you can scan any target:
+
+```bash
+cnspec scan <target>
+```
+
+cnspec returns the results from the scan to STDOUT and to Mondoo Platform.
+
+## Upload policies to your account
+
+With an account on Mondoo Platform, you can upload policies:
+
+```bash
+cnspec policy upload mypolicy.mql.yaml
+```
+
+## Create a policy bundle
+
+To learn about policies and policy bundles, read [Policies](/cnspec/cnspec-policies/).
+
+To set up a new policy bundle:
+
+```bash
+cnspec bundle init example.mql.yaml
+```
+
+## Validate a policy bundle
+
+Validate a policy bundle to ensure that the bundle compiles and that all queries and references work:
+
+```bash
+cnspec bundle validate example.mql.yaml
+```
+
+---

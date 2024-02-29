@@ -1,0 +1,83 @@
+---
+title: Continuously Scan with a GCP Integration
+sidebar_label: Scan Continuously
+sidebar_position: 2
+description: This document covers the configuration and use of the Mondoo Google Cloud Platform (GCP) Integration to scan GCP projects
+image: /img/featured_img/mondoo-gcp.jpg
+---
+
+The Mondoo Google Cloud Platform (GCP) integration lets you continuously scan your GCP resources, such as compute instances and GKE service clusters.
+
+## Requirements
+
+- Create Service Accounts role in GCP
+- The GCP IAM API enabled
+- The GCP CLI
+
+## Create a service account for your GCP integration
+
+To access the data it needs, your GCP integration needs a GCP service account. To learn about service accounts, read [Understanding service accounts](https://cloud.google.com/iam/docs/understanding-service-accounts) in the Google documentation.
+
+1. Create a new GCP service account for the Mondoo integration to use.
+
+   For instructions, read [Creating and managing service accounts](https://cloud.google.com/iam/docs/creating-managing-service-accounts#iam-service-accounts-create-gcloud) in the Google documentation.
+
+   Note the email address created for the new service account.
+
+2. Assign the project viewer basic role to the service account: `roles/viewer`
+
+   For instructions, read [Grant a single role](https://cloud.google.com/iam/docs/granting-changing-revoking-access#grant-single-role) in the Google documentation.
+
+3. Create a JSON key for the service account.
+
+   For instructions, read [Create and manage service account keys](https://cloud.google.com/iam/docs/creating-managing-service-account-keys#iam-service-account-keys-get-gcloud) in the Google documentation.
+
+   Save the JSON file that downloads to your workstation when you create the key. You need it to configure the integration (in the next section below).
+
+## Add a new GCP integration
+
+1. Access the Integrations > Add > GCP page in one of two ways:
+
+   - New space setup: After creating a new Mondoo account or creating a new space, the initial setup guide welcomes you. Select **BROWSE INTEGRATIONS** and then select **GCP**.
+
+     ![Welcome to Mondoo Page](/img/platform/start/welcome_to_mondoo.png)
+
+   - INTEGRATIONS page: In the side navigation bar, under **INTEGRATIONS**, select **Add New Integration**. Under Cloud Security, select **GCP**.
+
+     ![integration-create-image](/img/platform/infra/cloud/gcp/add-int-gcp-top.png)
+
+2. To integrate your entire GCP organization with Mondoo, select **Organization**.
+
+   OR
+
+   To limit the integration to a single project, select **Project**.
+
+3. In the **Choose an integration name** box, enter a name for the integration. Make it a name that lets you easily recognize the GCP project or organization.
+
+4. Identify the organization or project to integrate with Mondoo.
+
+   - For an organization: In the **Enter the organization resource ID** box, enter your organization's resource ID. To learn how to retrieve this value, read [Getting your organization resource ID](https://cloud.google.com/resource-manager/docs/creating-managing-organization#retrieving_your_organization_id) in the Google documentation.
+
+   - For a project: In the **Enter the project ID** box, enter your project's ID. To learn how to retrieve this value, read [Identifying projects](https://cloud.google.com/resource-manager/docs/creating-managing-projects#identifying_projects) in the Google documentation.
+
+5. Under **Provide your Google Service Account config**, upload the GCP service account's JSON key that you downloaded in the previous section:
+
+   Drag the file and drop it in the **Drag and drop your .json file here** box.
+
+   OR
+
+   In the **Drag and drop your .json file here** box, select the cloud icon and choose the file to upload.
+
+   ![integration-create-image](/img/platform/infra/cloud/gcp/add-int-gcp-bottom.png)
+
+6. To complete the integration, select the **START SCANNING** button.
+
+7. On the Recommended Policies page, enable the policies on which you want to base assessments of your Google Cloud environment. To learn more, read [Manage Policies](/platform/security/posture/policies/).
+
+## Next steps
+
+- [Learn more about Mondoo](/platform/start/plat-what-is/)
+
+- [Integrate Mondoo with other cloud platforms in your infrastructure](/platform/infra/cloud/overview/)
+
+---

@@ -1,0 +1,29 @@
+If you use key vault access policy, this step is required.
+
+A key vault access policy determines whether a given security principal (a user, application or user group) can perform different operations on key vault secrets, keys, and certificates.
+
+1. From the Azure portal home, select **Key vaults**.
+
+2. Select a key vault from the list.
+
+3. In the sidebar under the key vault name, select **Access policies**.
+
+   ![key vault access policies](/img/platform/infra/cloud/azure/key-vault-access.png)
+
+4. In the toolbar, select **+ Create**.
+
+5. Configure the permissions:
+
+   - Under **Key permissions**, select **Get** and **List**.
+
+   - Under **Secret permissions**, select **Get** and **List**.
+
+   - Under **Certificate permissions** , select **Get** and **List**.
+
+6. Select the **Next** button.
+
+7. From the list, select the app registration you created.
+
+8. Select the **Next** button and select the **Next** button again to skip the Application (optional) step.
+
+9. Review the access policy and then select the **Create** button.

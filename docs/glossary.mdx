@@ -1,0 +1,112 @@
+---
+title: "Mondoo Glossary of Terms"
+description: Terminology used in the Mondoo, cnspec, cnquery, and MQL documentation
+sidebar_label: Glossary
+image: /img/featured_img/mondoo-feature.jpg
+---
+
+### advisory
+
+An [advisory](/platform/security/vuln/advisories/) is a notice released by a software vendors that provides recommendations on how to fix or mitigate a vulnerability in their product.
+
+### annotation
+
+Metadata that you add to an asset in Mondoo is called an [annotation](/platform/intel/annotations/). Annotations are key-value pairs that you can use for anything you want.
+
+### API token
+
+An API token gives an application or service access to an application programming interface (API). It's one way to enable different software programs to interact. Some Mondoo integrations rely on API tokens. You can also [create API tokens that provide access to Mondoo's GraphQL API](/platform/maintain/access/api-tokens/).
+
+### asset
+
+An asset is a physical or virtual computing, network, or storage device or other component of the information environment. Workstations, servers, SaaS environments, cloud storage, repositories, and virtual machines are only a few examples.
+
+### check
+
+A check is a verification of information. For example, a check can assert that an asset has a certain setting enabled or a software version installed. To learn more, read [Policy as Code](/platform/security/posture/pac/).
+
+### CI/CD
+
+Continuous integration and continuous delivery/deployment (CI/CD) is a highly automated software development practice in which teams make, test, and deploy frequent, incremental code changes. Mondoo integrates with [major CI/CD platforms](/platform/infra/supply/cicd/overview/) to enable security testing throughout the development process.
+
+### cnquery
+
+[cnquery](/cnquery/cnquery-about/) is Mondoo's open source, cloud-native tool that answers every question about your infrastructure. It integrates with [over 600 resources](/mql/resources) to provide quick insight into your operations and development platforms.
+
+### cnspec
+
+[cnspec](/cnspec/cnspec-about/) is Mondoo's open source, cloud-native tool that evaluates the security of your entire infrastructure. It's also a core component of the [Mondoo Platform](/platform/start/plat-what-is/), serving as both a CLI and an agent for scanning.
+
+### control
+
+A [control](/platform/compliance/monitor/frameworks/#controls-and-checks) is a general guideline in a compliance framework. For example, "Log sensitive data access" and "Maintain secure network architecture" are controls in a framework.
+
+### CVE
+
+A [CVE](/platform/security/vuln/overview/) (common vulnerability and exposure) is a weakness in a computer system that an attacker can exploit to gain access or extract information.
+
+### integration
+
+An [integration](/platform/infra/overview/) is Mondoo's connection and communication with an [asset](#asset). Integrations allow Mondoo to gather inventory details, assess the security of an asset, and measure compliance.
+
+### inventory
+
+An [inventory](/platform/intel/overview) is a collection of all the [assets](#asset) in your infrastructure. Mondoo's inventory gives you visibility into the details of all your assets across multiple platforms.
+
+### Mondoo Platform
+
+[Mondoo Platform](/platform/start/plat-what-is/) is Mondoo's full-stack compliance, security, and asset intelligence solution for the enterprise. It integrates with your infrastructure to continuously monitor security and evaluate compliance with the most common industry frameworks.
+
+### MQL
+
+[MQL](/mql/home/) is a graph-based query language built for searching and checking infrastructure configuration data and building security policies.
+
+### organization
+
+An [organization](/platform/start/organize/organizations/) is a high-level Mondoo entity that can contain one or more [spaces](#space).
+
+### policy
+
+A [policy](/platform/security/posture/policies/) is a codified benchmark used to assess your infrastructure. Policies control what misconfigurations and security issues Mondoo checks for when it evaluates your digital business assets. To learn more, read [Policy as Code](/platform/security/posture/pac/).
+
+### property
+
+A [property](/platform/security/customize/props/) is a variable part of a [check](#check). Properties let you customize the checks in a policy. For example, a policy might include a check to ensure that passwords are at least eight characters. The password length is a property that you can change.
+
+### query
+
+A query is a request for information. The [cnquery](/cnquery/cnquery-about/) CLI tool allows you to query assets in your infrastructure.
+
+### region
+
+A [region](/platform/start/organize/regions/) is the part of the world in which an organization conducts business. Mondoo stores and processes your data in different regions to comply with global regulations.
+
+### registry
+
+Mondoo's [registry](/platform/security/posture/policies/) is the location in the Mondoo Console where you choose and manage the security policies that are the bases for assessing your infrastructure.
+
+### score
+
+Mondoo gives each asset and space a security [score] that represents their ability to withstand attack. Scores are based on the security [policies](#policy) you choose. To learn how Mondoo calculates scores, read [How Mondoo scores policies](/platform/security/posture/monitor/#how-mondoo-scores-policies).
+
+### security posture
+
+Your [security posture](/platform/security/posture/overview/) is your organization's ability to identify, respond to, and recover from security threats and risks.
+
+### service account
+
+A service account is an identity used by a non-human (such as an application or a service) to access a software system. Mondoo relies on service accounts for some [integrations](#integration). You can also [create service accounts that provide access to Mondoo](/platform/maintain/access/service_accounts/).
+
+### space
+
+A [space](/platform/start/organize/spaces/) is a collection of [assets](#asset), policies, and reports that are managed together within Mondoo Platform. Spaces also let you manage which members of your team have access to different information about your infrastructure.
+
+### team member
+
+A [team member](/platform/maintain/access/team_members/) is a person in your organization who has access to Mondoo.
+
+### vulnerability
+
+A [vulnerability](/platform/security/vuln/overview/) is a weakness in a computer system that an attacker can exploit to gain access or extract information. Vulnerabilities are also known as CVEs (common vulnerabilities and exposures).
+
+---

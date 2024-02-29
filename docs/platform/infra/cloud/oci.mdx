@@ -1,0 +1,94 @@
+---
+title: Secure Oracle Cloud Infrastructure (OCI) with Mondoo
+sidebar_label: Oracle Cloud Infrastructure (OCI)
+sidebar_position: 7
+description: Continuously secure your Oracle Cloud Infrastructure (OCI) environment with Mondoo
+image: /img/featured_img/mondoo-oracle.jpg
+---
+
+Rely on Mondoo to continuously secure your Oracle Cloud (OCI) environment. Mondoo regularly checks your OCI tenancy for misconfigurations and vulnerabilities that can put your organization at risk.
+
+Create an OCI integration to give Mondoo the access it needs to assess your tenancy.
+
+## Prerequisites
+
+- Owner or Editor access to the Mondoo space where you want to add the OCI integration
+
+- Access to an OCI tenancy
+
+## Add an OCI integration
+
+1. In the [Mondoo Console](https://console.mondoo.com), access the Integrations > Add > Oracle Cloud Infrastructure page in one of two ways:
+
+   - New space setup: After creating a new Mondoo account or creating a new space, the initial setup guide welcomes you. Select **BROWSE INTEGRATIONS** and then select **Oracle Cloud Infrastructure**.
+
+     ![Welcome to Mondoo Page](/img/platform/start/welcome_to_mondoo.png)
+
+   - INTEGRATIONS page: Navigate to **INTEGRATIONS**. Under Cloud, select **Oracle Cloud Infrastructure**.
+
+     ![Cloud integrations](/img/platform/infra/add-cloud.png)
+
+2. In the **Choose an integration name** box, enter a name for the integration. Make it a name that lets you easily recognize the OCI tenancy.
+
+   ![Add an Oracle Cloud Infrastructure - OCI - Mondoo integration](/img/platform/infra/oci/add-oci-top.png)
+
+3. In a different browser tab, log into the [Oracle Cloud Console](https://cloud.oracle.com).
+
+4. In the top-right corner of the Oracle Cloud Console, select the User Profile icon and select My Profile.
+
+   ![OCI - my profile](/img/platform/infra/oci/my-profile.png)
+
+5. In the bottom-left Resources menu, select **API keys** and select the **Add API key** button.
+
+   ![OCI - API keys](/img/platform/infra/oci/select-api-keys.png)
+
+To learn about API keys, read [Required Keys and OCIDs](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/apisigningkey.htm) in the OCI documentation.
+
+6. Select the **Download private key** button to download a PEM certificate to use for the Mondoo OCI integration.
+
+   ![OCI - Add API key](/img/platform/infra/oci/add-api-key.png)
+
+7. Select the **Add** button.
+
+   OCI shows a configuration file snippet. Select **Copy** to copy the snippet.
+
+   ![OCI configuration file snippet](/img/platform/infra/oci/config-file.png)
+
+8. Return to the tab where you're creating an integration in the Mondoo Console. In the **Provide the config file snippet** box, paste the snippet you copied.
+
+   ![Add a Mondoo OCI integration](/img/platform/infra/oci/add-oci-bottom.png)
+
+9. Upload the PEM certificate that you downloaded when you added an OCI API key: In the **Drag and drop your .pem file here** box, select the cloud icon and choose the file to upload.
+
+10. Select the **START SCANNING** button.
+
+11. On the Recommended Policies page, enable the policies on which you want to base assessments of your OCI environment. To learn more, read [Manage Policies](/platform/security/posture/policies/).
+
+## View your OCI integration
+
+1. In the side navigation bar, under Integrations, select **Oracle Cloud Infrastructure**.
+
+   ![OCI integrations list](/img/platform/infra/oci/oci-int-list.png)
+
+2. In the list of OCI integrations, select the integration you want to view.
+
+   ![OCI integration](/img/platform/infra/oci/view-oci-int.png)
+
+### Statuses
+
+The possible statuses for an OCI integration are:
+
+- **ACTIVE**: The integration is active/healthy.
+- **ERROR**: Mondoo detected an error when attempting to scan.
+
+### Remove an integration
+
+To remove an integration, select the trash can icon. A confirmation prompt displays. Once you confirm the deletion, Mondoo removes the configured integration and stops triggering scans of the OCI tenancy.
+
+## Next steps
+
+- [Learn more about Mondoo](/platform/start/plat-what-is/)
+
+- [Secure other platforms](/platform/infra/overview)
+
+---

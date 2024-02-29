@@ -1,0 +1,53 @@
+/* 
+  The goal of this is to normalize global aspects
+  This file should be loaded on the global level.
+  Based on: normalize.css + custom style
+*/
+
+@import "./base.css";
+@import "~@fontsource/roboto/index.css";
+
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+   ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+
+/**
+ * Remove the margin in all browsers.
+ */
+
+body {
+  margin: 0;
+  font-family:
+    "San Francisco",
+    -apple-system,
+    system-ui,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Ubuntu;
+  color: var(--color-text);
+  background: var(--bg-color);
+  line-height: 1.5rem;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+
+main {
+  display: block;
+}

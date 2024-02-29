@@ -1,0 +1,89 @@
+---
+title: Create and Manage API Tokens
+sidebar_label: Manage API Tokens
+sidebar_position: 5
+description: Generate and manage API tokens for programmatic access to Mondoo Platform.
+image: /img/featured_img/mondoo-feature.jpg
+---
+
+API tokens let you communicate with Mondoo's GraphQL API. With API tokens, programs can authenticate with the Mondoo API, which is useful for incorporating Mondoo in different workflows and automation.
+
+The API token you generate can provide access to a single space or all spaces within an organization.
+
+## Generate an API token for access to a single space
+
+1. [Navigate](/platform/start/navigate/) to the space in which you want to create an API token.
+
+2. In the left navigation, select **Settings**. Then select the **API Tokens** tab.
+
+3. Select the plus symbol on the right of the page.
+
+   ![Add a Mondoo API token](/img/platform/maintain/access/space-token.png)
+
+4. Enter a unique name and description for the token that help you recognize its purpose.
+
+5. Check the Mondoo permissions you want to give to programs that use this token:
+
+   - **Viewer** permissions let the program browse most information in the space but not make changes.
+
+   - **Editor** permissions let the program make all changes possible in the space except deleting the space or reporting scan results.
+
+   - **Owner** permissions let the program make all changes possible in the space except reporting scan results.
+
+   - **Agent** permissions let the program read and use policy bundles and query packs and report the results to the space.
+
+6. Select **GENERATE API TOKEN**.
+
+## Generate an API token for access to all spaces in an organization
+
+1. [Navigate](/platform/start/navigate/) to the organization in which you want to create an API token.
+
+2. In the left navigation, select **Settings**. Then select the **API Tokens** tab.
+
+3. Select the plus symbol on the right of the page.
+
+   ![Add a Mondoo API token](/img/platform/maintain/access/org-token.png)
+
+4. Enter a unique name and description for the token that helps you recognize its purpose.
+
+5. Check the Mondoo permissions you want to give to programs that use this token:
+
+   - **Viewer** permissions let the program browse most information in all spaces in the organization but not make changes.
+
+   - **Editor** permissions let the program make all changes possible in all spaces in the organization except reporting scan results or deleting the organization or spaces.
+
+   - **Owner** permissions let the program make all changes possible in the space except reporting scan results.
+
+   - **Agent** permissions let the program read and use policy bundles and query packs and report the results to spaces in the organization.
+
+6. Select **GENERATE API TOKEN**.
+
+## Change an API token's permissions
+
+1. [Navigate](/platform/start/navigate/) to the organization or space containing the API token.
+
+2. In the left navigation, select **Settings**. Then select the **API Tokens** tab.
+
+3. Search for or scroll to the API token you want to change and select it.
+
+   ![Manage API tokens](/img/platform/maintain/access/select-api-token.png)
+
+4. Select the **PERMISSIONS** button.
+
+   ![Change API token permissions](/img/platform/maintain/access/permissions.png)
+
+5. Change the permissions as desired. To learn about each permission, read the previous sections.
+
+6. Select the **SET PERMISSIONS** button.
+
+## Delete an API token
+
+1. [Navigate](/platform/start/navigate/) to the organization or space containing the API token.
+
+2. In the left navigation, select **Settings**. Then select the **API Tokens** tab.
+
+3. Search for or scroll to the API token you want to delete and select it.
+
+   ![Manage API tokens](/img/platform/maintain/access/select-api-token.png)
+
+4. Select the **DELETE** button and select the **DELETE** button to confirm.

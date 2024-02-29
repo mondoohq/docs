@@ -1,0 +1,42 @@
+---
+title: Secure Okta with Mondoo
+sidebar_label: Okta
+sidebar_position: 6
+description: Set up an Okta integration in Mondoo
+---
+
+The Mondoo Okta integration lets you continuously scan your Okta resources. It finds misconfigurations and vulnerabilities that put your organization at risk. You deploy the integration once and always get the latest security assessments.
+
+To set up an Okta integration:
+
+1. Access the Integrations > Add > Okta page in one of two ways:
+
+   - New space setup: After creating a new Mondoo account or creating a new space, the initial setup guide welcomes you. Select **BROWSE INTEGRATIONS** and then select **Okta**.
+
+     ![Welcome to Mondoo Page](/img/platform/start/welcome_to_mondoo.png)
+
+   - INTEGRATIONS page: In the side navigation bar, under **INTEGRATIONS**, select **Add New Integration**. Under SaaS, select **Okta**.
+
+     ![Add a Okta Integration in Mondoo](/img/platform/infra/saas/okta/okta.png)
+
+2. In the **Choose an integration name** box, enter a name for the integration. Make it a name that lets you easily recognize the Okta organization.
+
+3. In the **Enter the Organization domain** box, enter your Okta domain. To learn how to find this value, read [Find your Okta domain](https://developer.okta.com/docs/guides/find-your-domain/main/) in the Okta Developer Guides.
+
+   Do **not** include `-admin` when you enter your domain. For example, if your Okta URL is 'dev-22556123-admin.okta.com', enter 'dev-22556123.okta.com'.
+
+4. Generate an API token for Mondoo to communicate with the Okta API. To learn how, read [Create an API token](https://developer.okta.com/docs/guides/create-an-api-token/main/) in the Okta documentation.
+
+5. Copy the new API token you created and paste it in the **Enter the API Token\*** box.
+
+6. To complete the integration, select the **START SCANNING** button.
+
+7. On the Recommended Policies page, enable the policies on which you want to base assessments of your Okta environment. To learn more, read [Manage Policies](/platform/security/posture/policies/).
+
+   Mondoo begins scanning your Okta organization and, when completed, presents results on the INVENTORY page.
+
+## Learn more
+
+For more information, explore the complete [Mondoo Okta Resource Pack Reference](/mql/resources/okta-pack/).
+
+---

@@ -1,0 +1,85 @@
+---
+title: Create Atlassian Jira Issues from Mondoo
+sidebar_label: Create Jira Issues from Mondoo
+sidebar_position: 4
+description: With the Mondoo Jira integration you can create a Jira issue directly from the Mondoo Console.
+image: /img/featured_img/mondoo-feature.jpg
+---
+
+Mondoo can create issues directly in Atlassian Jira so you can schedule remediation work within your team's existing project workflows. Without ever leaving the Mondoo console, you can create Jira issues (tickets) that include all the details necessary for infrastructure owners to remediate findings, even if they don't have access to Mondoo.
+
+Once you set up a Jira integration, a Create Jira Issue icon on each asset's page lets team members add an issue to your Jira project:
+
+![Icon to add a Jira issue from Mondoo](/img/platform/ticket/jira-icon-closeup.png)
+
+Mondoo's Jira integration even provides remediation details right in the issues, so the team members fixing issues have all the information they need.
+
+![Add a Jira issue from Mondoo](/img/platform/ticket/add-jira-issue.png)
+
+## Integrate Jira with a Mondoo space
+
+Adding a Mondoo Jira integration to a space allows users in that space to add Jira issues from within the Mondoo Console.
+
+### Prerequisites
+
+- Owner or Editor access to the Mondoo space
+
+- A Jira account with access to the project where you want Mondoo to add issues
+
+- The _project key_ of the project where you want Mondoo to add issues
+
+  A project key is the short name that Jira adds to all issues in a project. For example, you might have a project named Security with the project key SEC. All the issues in the Security project include the key SEC in their issue IDs, such as SEC-233 or SEC-1438.
+
+  You can also view a project key in Jira by selecting the **Projects** menu and then **View all projects**. The table listing all your projects shows the key for each project.
+
+- An API token for Jira account access
+
+  To learn how to create and copy an API token, read [Manage API tokens for your Atlassian account](https://support.atlassian.com/atlassian-account/docs/manage-api-tokens-for-your-atlassian-account/) in the Atlassian documentation.
+
+### Add a Jira integration
+
+1. Access the Integrations > Add > Atlassian Jira page in one of two ways:
+
+   - New space setup: After creating a new Mondoo account or creating a new space, the initial setup guide welcomes you. Select **BROWSE INTEGRATIONS** and then select **Atlassian Jira**.
+
+     ![Welcome to Mondoo Page](/img/platform/start/welcome_to_mondoo.png)
+
+   - INTEGRATIONS page: In the side navigation bar, under **INTEGRATIONS**, select **Add New Integration**. Under Ticket Systems, select **Atlassian Jira**.
+
+     ![Add an integration - ticket system](/img/platform/ticket/add-int-ticket.png)
+
+2. In the **Choose an integration name** box, enter a name for the integration. Make it a name that clearly shows this is a Jira integration.
+
+   ![Add a Jira integration to a Mondoo space](/img/platform/ticket/add-jira-int-top.png)
+
+3. In the **Jira HOST** box, type the domain for your Jira instance. Do not include a slash at the end of the domain. Example: `https://lunalectric-workspace.atlassian.net`
+
+4. In the **Email address** box, enter the email address you use to log into your Jira instance.
+
+5. In the **API Token** box, paste your API token for access to your Jira account. To learn how to create and copy an API token, read [Manage API tokens for your Atlassian account](https://support.atlassian.com/atlassian-account/docs/manage-api-tokens-for-your-atlassian-account/) in the Atlassian documentation.
+
+6. In the **Provide a default project** box, enter the project key for the project where you want Mondoo to add issues. To learn about project keys, read the Prerequisites section above.
+
+7. Select the **CREATE INTEGRATION** button.
+
+## Add a Jira issue from Mondoo
+
+When a Mondoo space has a Jira integration, team members can add Jira issues directly from the Mondoo Console. Any team member can add issues, as long as their email address (in Mondoo) matches the email address they use to log into the Jira instance.
+
+1. In the [Mondoo Console](https://console.mondoo.com), [navigate](/platform/start/navigate) to a space that is integrated with Jira and.
+
+2. [In the Inventory view, access the asset](/platform/security/posture/monitor/) for which you want to create a Jira issue.
+
+   ![Add a Jira issue on a Mondoo asset](/img/platform/ticket/jira-icon-fleet.png)
+
+3. To the right of the asset name, select the Jira icon.
+
+   ![Create a new Jira issue in Mondoo](/img/platform/ticket/add-jira-issue.png)
+
+4. Edit the issue summary and description as you wish and select the **CREATE ISSUE** button.
+
+In the Jira project, you can view the tickets that Mondoo creates on your behalf. It's like any other Jira issue.
+
+![Jira issue created by Mondoo](/img/platform/ticket/issue-in-jira.png)
+
+---

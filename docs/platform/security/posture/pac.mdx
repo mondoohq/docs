@@ -1,0 +1,31 @@
+---
+title: Policy as Code
+sidebar_label: Policy as Code
+sidebar_position: 2
+description: Mondoo's policy as code powers automated and continuous security management
+image: /img/featured_img/mondoo-feature.jpg
+---
+
+Security policies and compliance frameworks typically are documents. Text in these documents describes each guideline and its rationale, and sometimes the consequences of not complying.
+
+But documents don't evaluate your environments. The work to verify that your infrastructure follows security standards is often manual, time intensive, and error prone. For example, if you need to manually demonstrate compliance for an audit, it can take weeks just to provide a snapshot of a single moment in time.
+
+_Policy as code_ lets you automate compliance using security benchmarks and best practices. The code serves two purposes: It documents the security guidelines and it tests your systems to ensure they follow those guidelines.
+
+Each Mondoo policy is a codified collection of _checks_, assertions that test for certain configurations. Each check can be true or false, and has an impact score that determines its importance within the policy. For example, the _Linux Security_ policy might include checks that ensure the asset:
+
+- Doesn't accept ICMP redirects
+
+- Has prelink disabled
+
+- Has reverse path filtering enabled
+
+... and dozens more.
+
+To learn more about policy as code, read [About Policies](/cnspec/cnspec-policies/). To learn more about checks, read [Checks](https://mondoo.love/docs/cnspec/cnspec-policies/write/simple/#checks).
+
+You choose whether to enable the _Linux Security_ policy. If it's enabled, then when Mondoo scans Linux-based assets, it evaluates them based on the checks defined in that policy (as well as any other applicable policies you enable).
+
+Mondoo has hundreds of policies for dozens of different types of platforms. You choose which policies you want to use as a basis to assess the security of your infrastructure. To learn how, read [Manage Policies](/platform/security/posture/policies/).
+
+---

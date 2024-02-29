@@ -1,0 +1,42 @@
+name: Build Static Site
+
+on:
+  workflow_call:
+    inputs:
+      output_dir:
+        description: "The directory to use for static content build output"
+        default: "build"
+        required: false
+        type: string
+    secrets:
+      ALGOLIA_API_KEY:
+        description: "The Algolia API key to use for indexing"
+      ALGOLIA_APP_ID:
+        description: "The Algolia App ID to use for indexing"
+      HS_ACCOUNTID:
+        description: "The HubSpot Account ID to use for tracking"
+
+jobs:
+  build-static:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Setup Node v20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install YARN dependencies
+        run: yarn install
+      - name: Replace secrets
+        run: |
+          sed -i "s/ALGOLIA_API_KEY/${{ secrets.ALGOLIA_API_KEY }}/g" docusaurus.config.js
+          sed -i "s/ALGOLIA_APP_ID/${{ secrets.ALGOLIA_APP_ID }}/g" docusaurus.config.js
+          sed -i "s/HS_ACCOUNTID/${{ secrets.HS_ACCOUNTID }}/g" docusaurus.config.js
+      - name: Build site
+        run: yarn build
+      - name: Cache Content
+        uses: actions/cache@v4
+        with:
+          path: ${{ inputs.output_dir }}/*
+          key: ${{ github.sha }}

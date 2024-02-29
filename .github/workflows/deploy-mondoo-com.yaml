@@ -1,0 +1,19 @@
+name: Publish Mondoo.com/docs (Prod)
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+jobs:
+  build:
+    uses: ./.github/workflows/_build.yaml
+    secrets: inherit
+
+  deploy-production:
+    needs: build
+    uses: ./.github/workflows/_deploy.yaml
+    with:
+      src_dir: build
+      bucket: mondoo-io-docs/docs
+    secrets: inherit

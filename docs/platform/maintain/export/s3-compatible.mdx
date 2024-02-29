@@ -1,0 +1,97 @@
+---
+title: Export Data to an S3-Compatible Storage Service
+sidebar_label: S3-Compatible Service
+sidebar_position: 7
+description: Configure a Mondoo S3-compatible service integration to export Mondoo data to S3-compatible object storage systems such as MinIO or Ceph
+image: /img/featured_img/mondoo-feature.jpg
+---
+
+The Mondoo S3-compatible service integration lets you continuously export your space data, such as assets, vulnerabilities, and scan results to an S3-compatible object store such as MinIO or Ceph. The export runs approximately every 24 hours.
+
+## Requirements
+
+To export data to your S3-compatible object store, you must have:
+
+- Your S3-compatible object storage service up and running.
+
+- The endpoint URL of your S3-compatible object storage service. To learn how to find this URL, read your object storage system documentation or consult your vendor.
+
+- An _access key ID_ and _secret access key_ pair for programmatic access to the S3-compatible object storage service. To learn how to generate an access key pair, read your object storage service documentation or consult your vendor.
+
+## Add a new S3-compatible service integration
+
+1. Access the Integrations > Add > S3 Compatible Service page in one of two ways:
+
+   - New space setup: After creating a new Mondoo account or creating a new space, the initial setup guide welcomes you. Select **BROWSE INTEGRATIONS** and then select **S3 Compatible Service**.
+
+     ![Welcome to Mondoo Page](/img/platform/start/welcome_to_mondoo.png)
+
+   - INTEGRATIONS page: Navigate to **INTEGRATIONS**. Under Exports, select **S3 Compatible Service**.
+
+     ![Add an export integration](/img/platform/maintain/export/add-integration-exports.png)
+
+2. In the **Choose an integration name** box, enter a name for the integration. Make it a name that lets you easily recognize the your S3-compatible service bucket.
+
+   ![your S3-compatible store integration - top](/img/platform/maintain/export/s3-compatible/s3-compatible-add-top.png)
+
+3. In the **S3 compatible endpoint URL** box, enter the URL of your S3-compatible service.
+
+4. In the **Bucket name** box, enter the name of the S3-compatible storage bucket to which you want to export Mondoo data.
+
+5. Under **Export as**, select the file format in which to export Mondoo data:
+
+   - To export as JSON Lines, select **.jsonl**.
+
+   - To export as comma-separated values, select **.csv**.
+
+6. To use the legacy list objects API for the export, select **Use the legacy list objects API**. To learn whether you need this, consult your S3-compatible service vendor.
+
+7. To use path-style bucket addressing instead of virtual hosted addressing, select **Use path style**. To learn whether you need this, consult your S3-compatible service vendor.
+
+8. In the **Access Key ID** box, enter the ID portion of the access key pair you generated for programmatic access to the bucket.
+
+9. In the **Secret Access Key** box, enter the secret portion of the access key pair you generated for programmatic access to the bucket.
+
+10. To complete the integration, select the **CREATE EXPORT** button.
+
+    Mondoo begins exporting information from your space. When this initial export completes, the integration status becomes **ACTIVE**. Mondoo performs an export approximately every 24 hours.
+
+## View an S3-compatible service integration
+
+1. In the side navigation bar, under Integrations, select **S3 Compatible Service**.
+
+   ![your S3-compatible service integrations list](/img/platform/maintain/export/s3/s3-status.png)
+
+2. In the list of your S3-compatible service integrations, select the integration you want to view.
+
+   ![your S3-compatible service integrations list](/img/platform/maintain/export/s3/s3-view-int.png)
+
+### Statuses
+
+The possible statuses for a your S3-compatible service integration are:
+
+- **ACTIVE**: The integration is active/healthy.
+- **PENDING**: Mondoo has not yet attempted to connect to your S3-compatible service.
+- **ERROR**: Mondoo detected an error during export.
+
+### Export data to your S3-compatible service at any time
+
+Mondoo exports your data to your S3-compatible service approximately every 24 hours. You can also manually export data at any time. Use the **SCHEDULE NOW** button to request an export right away. Mondoo begins the export as soon as possible. If Mondoo is processing a lot of data, there can be some delay until Mondoo has sufficient resources.
+
+### Remove an integration
+
+To remove an integration, select the trash can icon. A confirmation prompt displays. Once you confirm the deletion, Mondoo removes the configured integration and stops triggering exports to the your S3-compatible service.
+
+:::info
+
+Mondoo does not delete existing exported data. You must delete the data manually.
+
+:::
+
+## Next steps
+
+- [Learn more about Mondoo](/platform/start/plat-what-is/)
+
+- [Export data to other platforms](/platform/maintain/export/overview)
+
+---

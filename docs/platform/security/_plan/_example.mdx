@@ -1,0 +1,65 @@
+---
+title: Example Security Improvement Plan
+sidebar_label: Example
+sidebar_position: 2
+description: An example of how to to create an achievable plan for improving security posture
+image: /img/featured_img/mondoo-feature.jpg
+---
+
+This topic provides a sample case study of how to create an achievable plan for improving security posture. To learn about planning with Mondoo, read [Plan Security Improvement - Overview]. For instructions on planning security improvement, read [Plan Security Improvement Using Risk Actions](/platform/security/plan/plansteps/).
+
+Suppose our imaginary company, Lunalectric, wants to improve security for the inventory in their Employee Workstations space.
+
+The Employee Workstations space has a current score of 39 based on the enabled policies in the space, which include Mondoo's workstation and OS-specific policies (Linux policies, a macOS policy, and so on). All checks in the policies are currently enabled.
+
+The Lunalectric team's goal for this space is to reach and maintain a score of 99. But scoring 99 right now just isn't possible. They need to make changes to password policies that affect all employees, get dozens of people to upgrade software, and more.
+
+What Lunalectric does is adjust the baseline for the Employee Workstations space so that it scores 99 right now. They plan progressive improvements using achievable milestones. At each milestone, their baseline will rise; Mondoo assesses the security of the space based on an increasing number of checks.
+
+## Lunalectric's adjusted baseline
+
+In the Risk Actions - Establish Your Baseline step, the Lunalectric team uses the slider to set their target score to 99. Based on this selection, Mondoo moves most of the failing checks from the Active list to the Future Goals list.
+
+![Mondoo - establish a security baseline](/img/platform/security/plan/luna-baseline.png)
+
+The suggestion is that in order to achieve the target score right now, Mondoo not use the Future Goals checks when assessing the security of the assets in the Employee Workstations space.
+
+In the next step, the Lunalectric team plans how to address those failing checks in the future.
+
+## Lunalectric's goals
+
+In the Risk Actions - Plan Your Goals step, Mondoo shows all the checks that it moved to Future Goals. Here the Lunalectric team can define exceptions for the checks that don't matter to them and set milestones for passing the checks that do matter.
+
+### Lunalectric's exceptions
+
+There are some checks that Lunalectric doesn't ever want to include in workstation security assessments, such as _Disable printer sharing_ and _Enable "Show Wi-Fi status in menu bar"_.
+
+![Mondoo - select checks to make exceptions](/img/platform/security/plan/luna-select-checks.png)
+
+Because these checks are irrelevant to Lunalectric, they make them exceptions.
+
+![Mondoo - exceptions](/img/platform/security/plan/luna-exceptions.png)
+
+### Lunalectric's milestones
+
+133 checks remain in the Future Goals list. That means that there are 133 checks that the Lunalectric team _wants_ their Employee Workstations space to pass, but they can't pass right now. What they can do is set milestones for when they _can_ pass some of those checks. The team plans batches of improvements and creates a milestone for each batch.
+
+For example, they set one milestone for improving password security. Typing `password` in the Search box filters the lists to show only checks containing the word `password`. This makes it easy to review password-related checks and choose two to batch together under a single milestone.
+
+![Mondoo - move checks to milestone](/img/platform/security/plan/luna-password.png)
+
+They set the milestone for mid-July.
+
+![Mondoo - milestone date](/img/platform/security/plan/create-milestone.png)
+
+And now the milestone appears in the space's future goals.
+
+![Mondoo - show milestones](/img/platform/security/plan/view-milestones.png)
+
+The Lunalectric team creates several milestones to plan the next few months of security progress. Every two weeks, Mondoo will raise their baseline based on the milestones they set in the planning process. If they stay on track and implement security improvements to meet the milestones, their score will remain 99 or higher. If they fail to make the planned improvements, their score will drop (unless they make adjustments to their planning).
+
+The risk actions feature allows the Lunalectric team to hold themselves to a steadily increasing security standard that is based on careful and realistic planning. They avoid the worry and discouragement that low scores can cause, but don't let important security measures slip through the cracks.
+
+For detailed instructions on planning security improvement, read [Plan Security Improvement Using Risk Actions](/platform/security/plan/plansteps/).
+
+---

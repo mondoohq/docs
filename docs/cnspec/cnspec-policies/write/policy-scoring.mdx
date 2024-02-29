@@ -1,0 +1,113 @@
+---
+title: Policy Authoring Guide | Score Policies
+sidebar_label: Score Policies
+displayed_sidebar: cnspec
+sidebar_position: 3
+description: Choose how a Mondoo scores assets based on a policy
+image: /img/featured_img/mondoo-feature.jpg
+---
+
+Now that you've [explored the very basic elements of a policy and a policy bundle](/cnspec/cnspec-policies/write/simple/), you can decide how to calculate asset security based on this policy.
+
+Each scanned target receives a graded score that summarizes how well it compares to the checks in the policy:
+
+```text
+    80  ..  100   A (100 A+ 95 A 85 A- 80)
+    60  ..   79   B ( 79 B+ 75 B 65 B- 60)
+    30  ..   59   C ( 59 C+ 50 C 40 C- 30)
+    10  ..   29   D ( 29 D+ 25 D 15 D- 10)
+     0  ..    9   F
+```
+
+The score is based on the number of checks that return a `true` value (pass) compared to how many return a `false` value (fail).
+
+When assessing the overall security of an asset, some checks may be more important than others. For example, suppose a strong cipher is more important to your organization than SSH using port 22. You can use the `impact` attribute to give more importance to one check and less importance to another check. The `Ensure the port is set to 22` check has an impact of `30` (on line 18) and the `Prevent weaker CBC ciphers from being used` check has an impact of `60` (on line 23):
+
+```yaml showLineNumbers
+policies:
+  - uid: simple-example1
+    name: Simple example policy 1
+    version: "1.0.0"
+    scoring_system: highest impact
+    authors:
+      - name: Lunalectric
+        email: security@lunalectric.com
+    docs:
+      desc: |-
+        Descriptive documentation about this policy
+    groups:
+      - title: group1
+        checks:
+          - uid: sshd-01
+            title: Ensure the port is set to 22
+            mql: sshd.config.params["Port"] == 22
+            impact: 30
+
+          - uid: sshd-02
+            title: Prevent weaker CBC ciphers from being used
+            mql: sshd.config.ciphers.none( /cbc/ )
+            impact: 60
+
+        queries:
+          - uid: sshd-d-1
+            title: Gather SSH config params
+            mql: sshd.config.params
+```
+
+How Mondoo uses these values to calculate an asset's score depends on the `scoring_system` setting (line 5). You can choose the `average` scoring system or the `highest impact` scoring system:
+
+#### Average scoring system
+
+The `average` scoring system considers impact before averaging check scores. Failed checks with higher impact _lower_ an overall score _more_ than checks with lower impact. This is how the `average` scoring system calculates the overall score:
+
+- If a check passes (returns `true`), the asset receives a 100 for that check.
+
+- If a check fails (returns `false`), the asset receives (100-impact) for that check. For example, if an asset fails a check with an impact of 10, it receives a 90 for that check.
+
+Here are possible results of our simple example query, which has a port check and a cipher check:
+
+| Port (impact 30)     | Cipher (impact 60)   | Overall score                       |
+| -------------------- | -------------------- | ----------------------------------- |
+| Pass (100)           | Pass (100)           | (100 + 100) / 2 = **100** or **A+** |
+| Pass (100)           | Fail (100 - 60 = 40) | (100 + 40) / 2 = **70** or **B**    |
+| Fail (100 - 30 = 70) | Pass (100)           | (100 + 70) / 2 = **85** or **A**    |
+| Fail (100 - 30 = 70) | Fail (100 - 60 = 40) | (70 + 40) / 2 = **55** or **C**     |
+
+To use the average scoring system, set the `scoring system` value to `average`:
+
+```yaml
+policies:
+  - uid: simple-example1
+    name: Simple example policy 1
+    version: "1.0.0"
+    scoring_system: average
+```
+
+#### Highest (failed) impact scoring system
+
+The `highest impact` scoring system only considers the highest impact check in the policy. It relies on the same method of subtraction as the `average` scoring system: It subtracts the `impact` value from 100 if a check fails. However, unlike the `average` scoring system, it doesn't average all the check scores to calculate the overall score. Instead, it just takes the score of the highest-impact **failed** check and makes that the overall score.
+
+Here are possible results of our simple example query, which has a port check and a cipher check:
+
+| Port (impact 30)      | Cipher (impact 60)    | Overall score     |
+| --------------------- | --------------------- | ----------------- |
+| True (100)            | True (100)            | **100** or **A+** |
+| True (100)            | False (100 - 60 = 40) | **40** or **C**   |
+| False (100 - 30 = 70) | True (100)            | **70** or **B**   |
+| False (100 - 30 = 70) | False (100 - 60 = 40) | **40** or **C**   |
+
+To use the highest impact scoring system, set the `scoring system` value to `highest impact`:
+
+```yaml
+policies:
+  - uid: simple-example1
+    name: Simple example policy 1
+    version: "1.0.0"
+    scoring_system: highest impact
+```
+
+## Next steps
+
+- To learn how to write more powerful policies, read [Reuse Queries and Checks](/cnspec/cnspec-policies/write/reuse/).
+
+- If you're ready to create your own policy: To learn how to set up, validate, and store policy bundles, read [Manage Policies](/cnspec/cnspec-policies/cnspec-manage-policies/).

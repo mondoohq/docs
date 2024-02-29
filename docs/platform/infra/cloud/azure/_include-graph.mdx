@@ -1,0 +1,46 @@
+1. In the navigation sidebar, select **API permissions**.
+
+   ![API permissions](/img/platform/infra/cloud/azure/api-permissions.png)
+
+   By default, Microsoft grants your new application `User.Read` permission for Microsoft Graph. It's not required for Mondoo, so you can remove it.
+
+2. Select **+ Add a permission**.
+
+   ![Add permission in Entra](/img/platform/infra/cloud/azure/select-add-permission.png)
+
+3. From the list of **Commonly used Microsoft APIs**, select **Microsoft Graph**.
+
+   ![API permissions](/img/platform/infra/cloud/azure/request-api-permission.png)
+
+4. Because Mondoo acts as a service, select **Application permissions**.
+
+5. Select **expand all** to see all permissions. Then select the required API permissions:
+
+   {" "}
+
+<details>
+<summary>Show or hide required API permissions.</summary>
+
+| Microsoft Graph               | Type        | Description                                          |
+| ----------------------------- | ----------- | ---------------------------------------------------- |
+| Application.Read.All          | Application | Read all applications                                |
+| AuditLog.Read.All             | Application | Read all audit log data                              |
+| Directory.Read.All            | Application | Read directory data                                  |
+| Domain.Read.All               | Application | Read domains                                         |
+| IdentityProvider.Read.All     | Application | Read identity providers                              |
+| IdentityRiskEvent.Read.All    | Application | Read all identity risk event information             |
+| IdentityRiskyUser.Read.All    | Application | Read all identity risky user information             |
+| Policy.Read.All               | Application | Read your organization's policies                    |
+| Policy.Read.ConditionalAccess | Application | Read your organization's conditional access policies |
+| Policy.Read.PermissionGrant   | Application | Read consent and permission grant policies           |
+| RoleManagement.Read.All       | Application | Read role management data for all RBAC providers     |
+| SecurityActions.Read.All      | Application | Read your organization's security actions            |
+| SecurityEvents.Read.All       | Application | Read your organization's security events             |
+| ThreatAssessment.Read.All     | Application | Read threat assessment requests                      |
+| ThreatIndicators.Read.All     | Application | Read all threat indicators                           |
+
+</details>
+
+6. Select the **Add permissions** button.
+
+7. To complete the process, select **Grant admin consent for (your tenant name)** and select the **Yes** button to confirm.

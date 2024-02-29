@@ -1,0 +1,36 @@
+name: Publish Mondoo.love (Staging)
+
+on:
+  pull_request:
+    types:
+      - closed
+  workflow_dispatch:
+
+jobs:
+  build:
+    uses: ./.github/workflows/_build.yaml
+    if: github.event.pull_request.merged == true || github.event_name == 'workflow_dispatch'
+    secrets: inherit
+
+  deploy-staging:
+    needs: build
+    uses: ./.github/workflows/_deploy.yaml
+    with:
+      src_dir: build
+      bucket: mondoo-docs-edge/docs
+    secrets: inherit
+
+  notify:
+    needs: deploy-staging
+    runs-on: ubuntu-latest
+    steps:
+      - name: Update PR with Status (Completed Success)
+        if: success()
+        uses: mshick/add-pr-comment@v2
+        with:
+          message: |
+            **Deployment to mondoo.love/docs complete!**
+            [https://mondoo.love/docs](https://mondoo.love/docs)
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          repo-token-user-login: "github-actions[bot]"
+          allow-repeats: false

@@ -1,0 +1,255 @@
+---
+title: Troubleshoot
+sidebar_label: Troubleshoot
+sidebar_position: 1
+image: /img/featured_img/mondoo-feature.jpg
+description: Troubleshoot issues with Mondoo, cnspec, cnquery, and MQL.
+---
+
+This page contains troubleshooting information for Mondoo, cnspec, cnquery, and MQL. It's a growing document.
+
+If you can't find what you're looking for here, try using the search feature in the top-right corner of this page. If you still can't find what you need:
+
+- Open source users: Join our community discussion on <a href="https://github.com/orgs/mondoohq/discussions">GitHub</a>.
+
+- Mondoo Platform users: Join our <a href="https://mondoo.link/slack">community Slack channel</a> to chat with us and other Mondoo users.
+
+## Troubleshoot AWS integrations
+
+If you experience issues with an AWS integration, read [Mondoo AWS Integration Troubleshooting](/platform/infra/cloud/aws/aws-integration-troubleshooting/).
+
+## Update the Mondoo package for cnquery and cnspec
+
+### Problem: When upgrading the Mondoo package, you get "Primary key is not live" errors
+
+YUM and DNF can encounter this error when updating the Mondoo package on Fedora, Red Hat, CentOS, Rocky Linux, or AlmaLinux machines. It occurs when a long time has passed between updates and the signing GPG for the package has expired.
+
+```bash
+cat /etc/os-release
+
+NAME="Fedora Linux"
+VERSION="38 (Workstation Edition)"
+ID=fedora
+VERSION_ID=38
+VERSION_CODENAME=""
+PLATFORM_ID="platform:f38"
+PRETTY_NAME="Fedora Linux 38 (Workstation Edition)"
+ANSI_COLOR="0;38;2;60;110;180"
+LOGO=fedora-logo-icon
+CPE_NAME="cpe:/o:fedoraproject:fedora:38"
+DEFAULT_HOSTNAME="fedora"
+HOME_URL="https://fedoraproject.org/"
+DOCUMENTATION_URL="https://docs.fedoraproject.org/en-US/fedora/f38/system-administrators-guide/"
+SUPPORT_URL="https://ask.fedoraproject.org/"
+BUG_REPORT_URL="https://bugzilla.redhat.com/"
+REDHAT_BUGZILLA_PRODUCT="Fedora"
+REDHAT_BUGZILLA_PRODUCT_VERSION=38
+REDHAT_SUPPORT_PRODUCT="Fedora"
+REDHAT_SUPPORT_PRODUCT_VERSION=38
+SUPPORT_END=2024-05-14
+VARIANT="Workstation Edition"
+VARIANT_ID=workstation
+++++
+
+# actual version
+sudo dnf list --installed | grep mondoo
+
+cnquery.x86_64                                       8.15.0-1                            @mondoo
+cnspec.x86_64                                        8.15.0-1                            @mondoo
+mondoo.noarch                                        8.15.0-1                            @mondoo
++++
+
+# Available packages
+sudo dnf update
+
+Last metadata expiration check: 0:16:58 ago on Fr 30 Jun 2023 16:00:29 CEST.
+Dependencies resolved.
+==============================================================================================================================================================================================================================================
+ Package                                                   Architecture                                             Version                                                    Repository                                                Size
+==============================================================================================================================================================================================================================================
+Upgrading:
+ cnquery                                                   x86_64                                                   8.16.0-1                                                   mondoo                                                    65 M
+ cnspec                                                    x86_64                                                   8.16.0-1                                                   mondoo                                                    66 M
+ mondoo                                                    noarch                                                   8.16.0-1                                                   mondoo                                                   6.7 k
+
+Transaction Summary
+==============================================================================================================================================================================================================================================
+Upgrade  3 Packages
+
+Total size: 130 M
++++
+
+# Result
+Downloading Packages:
+[SKIPPED] cnquery_8.16.0_linux_amd64.rpm: Already downloaded
+[SKIPPED] cnspec_8.16.0_linux_amd64.rpm: Already downloaded
+[SKIPPED] mondoo_8.16.0_linux_amd64.rpm: Already downloaded
+error: Verifying a signature using certificate 4CE909E26AE7439C39CE7647AC69C65100E1C42B (Mondoo Inc <security@mondoo.io>):
+  1. Certificate AC69C65100E1C42B invalid: certificate is not alive
+      because: The primary key is not live
+      because: Expired on 2023-01-18T19:56:07Z
+  2. Key AC69C65100E1C42B invalid: key is not alive
+      because: The primary key is not live
+      because: Expired on 2023-01-18T19:56:07Z
+error: Verifying a signature using certificate 4CE909E26AE7439C39CE7647AC69C65100E1C42B (Mondoo Inc <security@mondoo.io>):
+  1. Certificate AC69C65100E1C42B invalid: certificate is not alive
+      because: The primary key is not live
+      because: Expired on 2023-01-18T19:56:07Z
+  2. Key AC69C65100E1C42B invalid: key is not alive
+      because: The primary key is not live
+      because: Expired on 2023-01-18T19:56:07Z
+Mondoo Repository                                                                                                                                                                                              53 kB/s | 3.9 kB     00:00
+GPG key at https://releases.mondoo.io/rpm/pubkey.gpg (0x00E1C42B) is already installed
+error: Verifying a signature using certificate 4CE909E26AE7439C39CE7647AC69C65100E1C42B (Mondoo Inc <security@mondoo.io>):
+  1. Certificate AC69C65100E1C42B invalid: certificate is not alive
+      because: The primary key is not live
+      because: Expired on 2023-01-18T19:56:07Z
+  2. Key AC69C65100E1C42B invalid: key is not alive
+      because: The primary key is not live
+      because: Expired on 2023-01-18T19:56:07Z
+error: Verifying a signature using certificate 4CE909E26AE7439C39CE7647AC69C65100E1C42B (Mondoo Inc <security@mondoo.io>):
+  1. Certificate AC69C65100E1C42B invalid: certificate is not alive
+      because: The primary key is not live
+      because: Expired on 2023-01-18T19:56:07Z
+  2. Key AC69C65100E1C42B invalid: key is not alive
+      because: The primary key is not live
+      because: Expired on 2023-01-18T19:56:07Z
+error: Verifying a signature using certificate 4CE909E26AE7439C39CE7647AC69C65100E1C42B (Mondoo Inc <security@mondoo.io>):
+  1. Certificate AC69C65100E1C42B invalid: certificate is not alive
+      because: The primary key is not live
+      because: Expired on 2023-01-18T19:56:07Z
+  2. Key AC69C65100E1C42B invalid: key is not alive
+      because: The primary key is not live
+      because: Expired on 2023-01-18T19:56:07Z
+error: Verifying a signature using certificate 4CE909E26AE7439C39CE7647AC69C65100E1C42B (Mondoo Inc <security@mondoo.io>):
+  1. Certificate AC69C65100E1C42B invalid: certificate is not alive
+      because: The primary key is not live
+      because: Expired on 2023-01-18T19:56:07Z
+  2. Key AC69C65100E1C42B invalid: key is not alive
+      because: The primary key is not live
+      because: Expired on 2023-01-18T19:56:07Z
+error: Verifying a signature using certificate 4CE909E26AE7439C39CE7647AC69C65100E1C42B (Mondoo Inc <security@mondoo.io>):
+  1. Certificate AC69C65100E1C42B invalid: certificate is not alive
+      because: The primary key is not live
+      because: Expired on 2023-01-18T19:56:07Z
+  2. Key AC69C65100E1C42B invalid: key is not alive
+      because: The primary key is not live
+      because: Expired on 2023-01-18T19:56:07Z
+error: Verifying a signature using certificate 4CE909E26AE7439C39CE7647AC69C65100E1C42B (Mondoo Inc <security@mondoo.io>):
+  1. Certificate AC69C65100E1C42B invalid: certificate is not alive
+      because: The primary key is not live
+      because: Expired on 2023-01-18T19:56:07Z
+  2. Key AC69C65100E1C42B invalid: key is not alive
+      because: The primary key is not live
+      because: Expired on 2023-01-18T19:56:07Z
+error: Verifying a signature using certificate 4CE909E26AE7439C39CE7647AC69C65100E1C42B (Mondoo Inc <security@mondoo.io>):
+  1. Certificate AC69C65100E1C42B invalid: certificate is not alive
+      because: The primary key is not live
+      because: Expired on 2023-01-18T19:56:07Z
+  2. Key AC69C65100E1C42B invalid: key is not alive
+      because: The primary key is not live
+      because: Expired on 2023-01-18T19:56:07Z
+error: Verifying a signature using certificate 4CE909E26AE7439C39CE7647AC69C65100E1C42B (Mondoo Inc <security@mondoo.io>):
+  1. Certificate AC69C65100E1C42B invalid: certificate is not alive
+      because: The primary key is not live
+      because: Expired on 2023-01-18T19:56:07Z
+  2. Key AC69C65100E1C42B invalid: key is not alive
+      because: The primary key is not live
+      because: Expired on 2023-01-18T19:56:07Z
+The GPG keys listed for the "Mondoo Repository" repository are already installed but they are not correct for this package.
+Check that the correct key URLs are configured for this repository.. Failing package is: cnquery-8.16.0-1.x86_64
+ GPG Keys are configured as: https://releases.mondoo.io/rpm/pubkey.gpg
+Public key for cnspec_8.16.0_linux_amd64.rpm is not trusted. Failing package is: cnspec-8.16.0-1.x86_64
+ GPG Keys are configured as: https://releases.mondoo.io/rpm/pubkey.gpg
+Public key for mondoo_8.16.0_linux_amd64.rpm is not trusted. Failing package is: mondoo-8.16.0-1.noarch
+ GPG Keys are configured as: https://releases.mondoo.io/rpm/pubkey.gpg
+The downloaded packages were saved in cache until the next successful transaction.
+You can remove cached packages by executing 'dnf clean packages'.
+Error: GPG check FAILED
+++++
+```
+
+### Solution: Update GPG
+
+```bash
+rpm -q --qf "%{NAME}-%{VERSION}-%{RELEASE}\t%{SUMMARY}\n" gpg-pubkey | sort -k 2
+gpg-pubkey-00e1c42b-6005e7d7    Mondoo Inc <security@mondoo.com> public key
+
+rpm -e gpg-pubkey-00e1c42b-6005e7d7
+
+rpm --import https://releases.mondoo.com/rpm/pubkey.gpg
+```
+
+## Move servers and endpoints
+
+### Problem: You need to move a server or endpoint to a different space
+
+You might have added assets to Mondoo before developing a plan for your organization, or you might have changed your organization strategy.
+
+### Solution: Unregister the asset and re-register it in the new space
+
+#### For Linux-based assets:
+
+1. Log into the asset and open a Linux root shell.
+
+2. Unregister the asset:
+
+```bash
+cnspec logout --force
+```
+
+3. Open the [Mondoo Console](https://console.mondoo.com).
+
+4. [Navigate](/platform/start/navigate/) to the space where you want to move the asset.
+
+5. In the left navigation, under **Integrations**, select **Add New Integration**.
+
+6. Select your operating system.
+
+7. Copy the registration token (the long, blue string in the text box).
+
+8. Re-register the asset. For `COPIED-TOKEN`, substitute the registration token you copied:
+
+```bash
+cnspec login --token 'COPIED-TOKEN' --config '/etc/opt/mondoo/mondoo.yml'
+```
+
+9. Run an initial cnspec scan to send the results to the new space:
+
+   ```bash
+   cnspec scan
+   ```
+
+#### For Windows assets:
+
+1. Log into the asset and open PowerShell as an administrator.
+
+2. Unregister the asset:
+
+   ```powershell
+   cnspec logout --force
+   ```
+
+3. Open the [Mondoo Console](https://console.mondoo.com).
+
+4. [Navigate](/platform/start/navigate/) to the space where you want to move the asset.
+
+5. In the left navigation, under **Integrations**, select **Add New Integration**.
+
+6. Select your operating system.
+
+7. Copy the registration token (the long, blue string in the text box).
+
+8. Re-register the asset. For `COPIED-TOKEN`, substitute the registration token you copied:
+
+   ```powershell
+   cnspec login --token 'COPIED-TOKEN' --config 'C:\ProgramData\Mondoo\mondoo.yml'
+   ```
+
+9. Run an initial cnspec scan to send the results to the new space:
+
+   ```powershell
+   cnspec scan
+   ```
+
+---

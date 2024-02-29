@@ -1,0 +1,61 @@
+---
+title: Define the Scope of Your Compliance Audit
+sidebar_label: Define Scope
+sidebar_position: 2
+description: Set a control in a framework out of scope if it's not a part of your compliance audit
+image: /img/featured_img/mondoo-feature.jpg
+---
+
+If a certain control in a framework is not part of your compliance audit, you can set it _out of scope_. Mondoo excludes out-of-scope controls when calculating your overall progress toward compliance with the framework and when generating your [compliance report](/platform/compliance/monitor/progress/#generate-a-compliance-report).
+
+All controls in a framework are in scope by default. You set a control out of scope for a [space](/platform/start/organize/spaces/). In all other spaces, the control remains in scope.
+
+:::tip
+
+Setting a control out of scope hides it entirely from your auditor. To exclude a control from your compliance score but include it in the report to your auditor with a justification, [disable or snooze the control](/platform/compliance/customize/exceptions/).
+
+:::
+
+## Set a control out of scope
+
+1. In the [Mondoo Console](https://console.mondoo.com), [navigate](/platform/start/navigate/) to the space you want to customize.
+
+   ![Space in the Mondoo Console](/img/platform/security/monitor-org.png)
+
+2. In the side navigation bar, under **Compliance**, select **Frameworks**.
+
+   ![Compliance in the Mondoo Console](/img/platform/compliance/home.png)
+
+3. Select the framework you want to customize and scroll down to the list of controls.
+
+   ![Compliance framework in the Mondoo Console](/img/platform/compliance/controls.png)
+
+4. Check the box beside the control you want to set out of scope.
+
+   ![Compliance framework in the Mondoo Console with a control selected](/img/platform/compliance/control-selected.png)
+
+5. Select the **SET OUT OF SCOPE** button. Mondoo removes the control from the scope of your compliance framework for the space.
+
+   ![Compliance framework in the Mondoo Console with a control out of scope](/img/platform/compliance/out-of-scope.png)
+
+## Set an out-of-scope control back in scope
+
+1. In the [Mondoo Console](https://console.mondoo.com), [navigate](/platform/start/navigate/) to the space you want to customize.
+
+   ![Space in the Mondoo Console](/img/platform/security/monitor-org.png)
+
+2. In the side navigation bar, under **Compliance**, select **Frameworks**.
+
+   ![Compliance in the Mondoo Console](/img/platform/compliance/home.png)
+
+3. Select the framework you want to customize and scroll down to the list of controls.
+
+   ![Compliance framework in the Mondoo Console with a control out of scope](/img/platform/compliance/out-of-scope.png)
+
+4. Check the box beside the out-of-scope control you want to set in scope.
+
+   ![Compliance framework in the Mondoo Console with an out-of-scope control selected](/img/platform/compliance/set-in-scope.png)
+
+5. Select the **SET IN SCOPE** button. Mondoo restores the control to the scope of your compliance framework for the space.
+
+---

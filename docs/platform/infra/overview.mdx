@@ -1,0 +1,95 @@
+---
+title: Integrate Your Infrastructure with Mondoo - Overview
+sidebar_label: Overview
+sidebar_position: 1
+description: Add the assets in your infrastructure to Mondoo to assess their security and compliance
+image: /img/featured_img/mondoo-feature.jpg
+---
+
+To assess and improve the security and compliance of your infrastructure, you must first integrate it with Mondoo. The Mondoo integration for each platform is unique, whether it's a Kubernetes controller, a Lambda function for deep AWS integration, or a simple client installed on an operating system.
+
+Find your platform and start integrating Mondoo across your systems.
+
+### [Cloud](/platform/infra/cloud/overview/)
+
+- [Amazon Web Services (AWS)](/platform/infra/cloud/aws/aws-overview/)
+
+- [Microsoft Azure](/platform/infra/cloud/azure/overview/)
+
+- [Google Cloud Platform (GCP)](/platform/infra/cloud/gcp/overview/)
+
+- [Kubernetes](/platform/infra/cloud/kubernetes/overview/)
+
+- [VMware](/platform/infra/cloud/vmware/)
+
+### [SaaS](/platform/infra/saas/overview/)
+
+- [GitHub](/platform/infra/saas/github/)
+
+- [GitLab](/platform/infra/saas/gitlab/)
+
+- [Google Workspace](/platform/infra/saas/google_workspace/)
+
+- [Microsoft 365](/platform/infra/saas/ms365/ms365-auto/)
+
+- [Okta](/platform/infra/saas/okta/)
+
+- [Slack](/platform/infra/saas/slack/)
+
+### [Network](/platform/infra/networking/overview/)
+
+- [Host (Domain or IP Address)](/platform/infra/networking/domain-ip/)
+
+### [Operating systems](/platform/infra/opsys/osoverview/)
+
+Mondoo's cross-platform CLI, [cnspec](/cnspec/cnspec-about/), is a core Mondoo component that finds misconfigurations and vulnerabilities in Linux, macOS, and Windows assets. You install cnspec on your servers and endpoints and register them with Mondoo so that you can continuously monitor their security.
+
+Integrate with a single server or endpoint:
+
+- [Install cnspec a single asset](/cnspec/)
+
+- [Register a single asset with Mondoo](/cnspec/cnspec-adv-install/registration/)
+
+Automate deployment of cnspec across your infrastructure:
+
+- [Ansible](/platform/infra/opsys/automation/ansible/)
+
+- [Chef Infra](/platform/infra/opsys/automation/chef/)
+
+- [cloud-init](/platform/infra/opsys/automation/cloudinit/)
+
+### [Supply chain](/platform/infra/supply/overview/)
+
+[Integrate with CI/CD testing:](/platform/infra/supply/cicd/overview/)
+
+- [Azure Pipelines](/platform/infra/supply/cicd/azure-pipelines/)
+
+- [CircleCI](/platform/infra/supply/cicd/circleci/)
+
+- [GitHub Actions](/platform/infra/supply/cicd/github-actions/)
+
+- [GitLab CI/CD](/platform/infra/supply/cicd/gitlab/)
+
+- [Jenkins](/platform/infra/supply/cicd/jenkins/)
+
+Use cnspec to ensure you build virtual instances that are free of security vulnerabilities:
+
+- [Docker](/cnspec/supplychain/docker/)
+
+- [HashiCorp Packer](/cnspec/supplychain/packer/)
+
+- [HashiCorp Terraform](/cnspec/supplychain/terraform/)
+
+Use cnspec to test containers for security vulnerabilities during development on your workstation before publishing to container registries:
+
+- [AWS Elastic Container Registry](/cnspec/supplychain/registry/aws_ecr/)
+
+- [Azure Container Registry](/cnspec/supplychain/registry/azure_acr/)
+
+- [Google Container Registry](/cnspec/supplychain/registry/gcp_gcr/)
+
+- [Docker Hub](/cnspec/supplychain/registry/docker_hub/)
+
+- [Harbor Container Registry](/cnspec/supplychain/registry/harbor/)
+
+---

@@ -1,0 +1,32 @@
+---
+title: Overview of AWS and Mondoo
+sidebar_label: Overview
+sidebar_position: 1
+image: /img/featured_img/mondoo-aws.jpg
+description: This page describes how you can use Mondoo to assess security configurations and risk for your infrastructure running in AWS.
+---
+
+Rely on Mondoo to secure all aspects of your Amazon cloud environment. Mondoo finds vulnerabilities and misconfigurations in instances, Kubernetes, buckets, APIs, and more.
+
+Mondoo offers a variety of approaches to evaluating your AWS infrastructure security. You can continuously scan your AWS accounts, evaluate builds before they go to production, and run ad hoc scans.
+
+## Continuously scan
+
+Continuously evaluate the security of your AWS accounts and resources, such as EC2 instances, so that you always have an up-to-date view of your environment's security posture.
+
+The [Mondoo AWS Integration](/platform/infra/cloud/aws/aws-integration-scan) provides cron-scheduled and [event-based](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-service-event.html) continuous scanning of your AWS accounts and EC2 instances using a Lambda function. Deploy the integration once and always get the latest security assessments for new accounts and resources.
+
+## Scan during build time
+
+[Build Secure AMIs with cnspec and HashiCorp Packer](/cnspec/cnspec-aws/cnspec-aws-packer/): Scan Linux and Windows HashiCorp Packer builds for vulnerabilities and security misconfigurations. Mondoo's plugin works with any of the supported Packer builders, including containers.
+
+## Scan during run time
+
+Ad hoc, agentless scans are a great way to get started evaluating your AWS security with Mondoo. There's no agent to install or manage on instances in your infrastructure, so you can get started scanning in just minutes.
+
+- [Scan an AWS account from your workstation](/platform/infra/cloud/aws/aws-workstation-scan/): Scan your AWS accounts and instances using cnspec, the open source security scanning component of Mondoo.
+- [Instance scan with AWS SSM](/platform/infra/cloud/aws/aws-ssm-scan/): Perform agentless scans of your instances using AWS Systems Manager.
+- [Instance scan with EC2 Instance Connect](/platform/infra/cloud/aws/aws-ec2-ic-scan/): Use EC2 Instance Connect to assess configuration without an agent.
+- [Instance scan with EBS snapshots](/platform/infra/cloud/aws/aws-ebs-snapshot-scan): To prevent impact on running instances, you can conduct a jump-host-based scan of EC2 instance EBS snapshots.
+
+---

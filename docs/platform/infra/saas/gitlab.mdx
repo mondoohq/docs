@@ -1,0 +1,98 @@
+---
+title: Secure GitLab with Mondoo
+sidebar_label: GitLab
+sidebar_position: 3
+description: Assess the security of your GitLab groups with Mondoo
+---
+
+You can configure Mondoo to continuously scan your GitLab groups. Mondoo scans find misconfigurations and vulnerabilities that put your organization at risk. You deploy the integration once and always get the latest security assessments.
+
+:::tip
+
+You can also use Mondoo to automatically scan Kubernetes manifests, Terraform configuration files, and Docker containers in GitLab CI/CD. To learn more, read [Scan in GitLab CI/CD](/platform/infra/supply/cicd/gitlab/).
+
+:::
+
+## Prerequisite
+
+- [A Mondoo account](/platform/start/plat-start-acct/)
+
+- Access to a GitLab group
+
+## Create a personal access token to give Mondoo access to the GitLab group
+
+A _personal access token_ gives Mondoo the ability to access GitLab resources on your behalf. For Mondoo to continuously monitor your GitLab groups, you must create a personal access token.
+
+1. Log into GitLab.
+
+2. In the upper-left corner of any GitLab page, select your profile photo and then select **Edit Profile**.
+
+3. In the left sidebar, select **Access Tokens**.
+
+4. In the **Token name** box, enter a name for the token, such as `mondoo-frontend-repo`.
+
+5. Under **Expiration date**, specify the date on which to expire the token.
+
+6. Under **Select scopes**, check these scopes:
+
+   - read_api
+
+   - read_user
+
+   - read_repository
+
+   - read_registry
+
+7. Select the **Create a personal access token** button.
+
+8. Scroll to the top of the page.
+
+9. When GitLab finishes creating the token, it displays this message: "Your new personal access token has been created." Below the message, locate the **Your new personal access token** box.
+
+10. Use the copy icon to the right of the box to copy **Your new personal access token**.
+
+To learn more, read [Create a personal access token](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html#create-a-personal-access-token) in the GitLab documentation.
+
+## Set up a GitLab integration
+
+1. In a new browser tab, access the Integrations > Add > GitLab page in one of two ways:
+
+   - New space setup: After creating a new Mondoo account or creating a new space, the initial setup guide welcomes you. Select **BROWSE INTEGRATIONS** and then under **SaaS**, select **GitLab**.
+
+     ![Welcome to Mondoo Page](/img/platform/start/welcome_to_mondoo.png)
+
+   - INTEGRATIONS page: In the side navigation bar, under **INTEGRATIONS**, select **Add New Integration**. Under SaaS, select **GitLab**.
+
+     ![Add a GitLab Integration in Mondoo](/img/platform/infra/saas/gitlab/gitlab.png)
+
+2. In the **Choose an integration name** box, enter a name for the integration. Make it a name that lets you easily recognize the GitLab group.
+
+3. If you self-host GitLab, enter your custom GitLab URL in the **Provide a GitLab base URL** box. If you don't self-host GitLab, leave the box empty.
+
+4. In the **Define the GitLab group to scan** box, enter the name of the GitLab group you want to monitor. Find this value in the URL path to the group landing page. For example, this group's name is _lunalectric_:
+
+   ![GitLab group name](/img/platform/infra/saas/gitlab/group.png)
+
+5. In the **Provide your personal access token** box, paste the GitLab token you generated in the previous section.
+
+6. Choose **Discovery options** to determine the extent of Mondoo scanning:
+
+   ![GitLab discovery options](/img/platform/infra/saas/gitlab/discovery.png)
+
+   - To scan all the GitLab groups to which your token provides access, enable **Discover all groups the token can access**.
+
+   - To scan all the GitLab projects to which your token provides access, enable **Discover all projects the token can access**.
+
+   - To scan all Terraform files in the projects to which your token provides access, enable **Discover all Terraform files in projects**.
+
+7. Select the **START SCANNING** button.
+
+8. On the Recommended Policies page, enable the policies on which you want to base assessments of your GitLab group. To learn more, read [Manage Policies](/platform/security/posture/policies/).
+
+   Mondoo begins scanning your GitLab group and, when completed, presents results on the INVENTORY page.
+
+## Learn more
+
+For more information, explore the complete [Mondoo GitLab Resource Pack Reference](/mql/resources/gitlab-pack/).
+
+---

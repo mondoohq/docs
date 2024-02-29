@@ -1,0 +1,53 @@
+---
+title: Change Check Properties in Policies
+sidebar_label: Change Check Properties
+sidebar_position: 3
+description: Change the values Mondoo uses to assess your infrastructure
+image: /img/featured_img/mondoo-feature.jpg
+---
+
+Many policies have _properties_ that you can customize to suit your organization's needs. Properties are the ideal values that policies check against.
+
+For example, the ideal value for AWS users' minimum password lengths is 14 characters. The "Amazon Web Services (AWS) Best Practices for NIST 1800 25" policy checks that users are required to have passwords 14 characters or longer. The property `iamPasswordPolicyMinimumPasswordLength` tells Mondoo what the ideal value is. By default, that value is `14`. If your organization has a different requirement for minimum password length, you can change this value.
+
+Some other examples of properties are:
+
+- Whether to require an alert when certain events occur
+
+- Maximum time between password or key rotations
+
+- What SSL or TLS ciphers to allow
+
+- Allowed domains
+
+- Allowed algorithms
+
+- Blocked ports
+
+When you change a property in a policy, that change is for the current space only. It doesn't apply to other spaces in your organization.
+
+To change a property in a policy:
+
+1. Access the registry for the space as instructed above.
+
+2. Locate the policy in which you want to change a property: Scroll through the list of available policies or use the **Filter** search box.
+
+3. Select the policy to see its details.
+
+   If the policy has properties, you see a Properties tab.
+
+4. Select the Properties tab to view all the properties in the policy.
+
+   ![Mondoo - properties in a policy](/img/platform/security/registry-properties.png)
+
+5. Select the property you want to change.
+
+   ![Mondoo - change a policy property](/img/platform/security/customize-props.png)
+
+6. Type the new property value over the old one and then press **Command + Return**.
+
+   A popup message confirms the change.
+
+The change takes effect immediately. The next time Mondoo scans applicable assets in the space, it uses the new value.
+
+---

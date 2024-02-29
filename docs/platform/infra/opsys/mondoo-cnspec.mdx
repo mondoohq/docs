@@ -1,0 +1,91 @@
+---
+title: Mondoo and cnspec
+sidebar_label: Mondoo and cnspec
+sidebar_position: 2
+description: This page provides an overview of how cnspec works with Mondoo
+image: /img/featured_img/mondoo-feature.jpg
+---
+
+[cnspec](/cnspec/cnspec-about/) is a core component of Mondoo Platform. Think of it as both the CLI for Mondoo and part of its engine. This cross-platform binary evaluates systems and exposes misconfigurations and vulnerabilities that put your organization at risk. It's what enables Mondoo to assess and secure the IT infrastructure that powers your critical business systems.
+
+You can invoke cnspec directly from the command line to assess the local host, perform agentless scans of remote assets, or remotely query IT infrastructure using MQL. It can also run automatically as a background service.
+
+When combined with Mondoo Platform's management capabilities, cnspec can continuously assess your business-critical systems according to the policies you apply. Mondoo reports any deviation from those policies so that you can take immediate action.
+
+```bash
+$ cnspec scan
+
+→ no provider specified, defaulting to local. Use --help to see all providers.
+→ loaded configuration from /Users/tsmith/.config/mondoo/mondoo.yml using source default
+→ using service account credentials
+→ discover related assets for 1 asset(s)
+→ synchronize assets
+
+ MacBook.localdomain ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% score
+
+
+Asset: MacBook.localdomain
+----------------------------
+
+Data queries:
+asset.title: "macOS, bare metal"
+packages.list.length: 428
+title: "macOS, bare metal"
+asset: {
+  kind: "baremetal"
+  version: "14.0"
+  title: "macOS, bare metal"
+  arch: "arm64"
+  platform: "macos"
+  runtime: ""
+  name: "MacBook.localdomain"
+}
+
+Checks:
+✕ Fail:  C  50  Ensure AirDrop Is Disabled
+✓ Pass:  A 100  Disable Internet Sharing
+✓ Pass:  A 100  Ensure automatic checking of software updates enabled
+✓ Pass:  A 100  Enable security auditing
+✓ Pass:  A 100  Disable Remote Login
+✓ Pass:  A 100  Ensure automatic download of software updates enabled
+✓ Pass:  A 100  Enable Firewall
+
+....
+
+Scanned 1 assets
+
+macOS
+    A MacBook.localdomain
+
+For detailed output, run this scan with "-o full".
+```
+
+## Communication matrix, IPs, and DNS names
+
+For Mondoo to function properly in your environment, these communications must be allowed.
+
+| From         | To                                                | Port      |
+| ------------ | ------------------------------------------------- | --------- |
+| Command Line | Mondoo Backend (\*.api.mondoo.com)                | https/443 |
+| Command Line | Mondoo Install Scripts (install.mondoo.com)       | https/443 |
+| Command Line | Mondoo Package Repositories (releases.mondoo.com) | https/443 |
+| Your Browser | Mondoo Console (console.mondoo.com)               | https/443 |
+
+DNS names and static IP addresses for Mondoo environment:
+
+| DNS name            | IP-Address     |
+| :------------------ | -------------- |
+| us.api.mondoo.com   | 34.160.242.34  |
+| eu.api.mondoo.com   | 34.102.168.217 |
+| releases.mondoo.com | 34.110.159.213 |
+| install.mondoo.com  | 216.239.34.21  |
+| install.mondoo.com  | 216.239.38.21  |
+| install.mondoo.com  | 216.239.36.21  |
+| install.mondoo.com  | 216.239.32.21  |
+
+### Learn more
+
+- To learn more about cnspec, read [What Is cnspec?](/cnspec/cnspec-about/).
+- To learn how to register cnspec, read [Register cnspec](/cnspec/cnspec-adv-install/registration/).
+
+---

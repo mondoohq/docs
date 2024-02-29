@@ -1,0 +1,75 @@
+---
+slug: /
+title: "Mondoo Docs"
+hide_title: true
+id: intro
+description: Mondoo documentation home
+image: /img/featured_img/mondoo-feature.jpg
+hide_table_of_contents: true
+---
+
+![Welcome to the Mondoo docs](/img/docs-welcome.png)
+
+With Mondoo's fully integrated suite of tools and services, you can reach compliance, secure your cloud and on-premises infrastructure, and gain unlimited insight into your environments.
+
+[Read what's new in our latest release!](releases)
+
+## [Mondoo Platform](/platform/home/)
+
+Mondoo's flagship SaaS platform provides full-stack security, asset intelligence, and compliance for your entire infrastructure.
+
+- [What Is Mondoo?](/platform/start/plat-what-is/)
+
+- [Get Started](/platform/start/plat-start-acct/)
+
+#### [Integrate Your Infrastructure with Mondoo](/platform/infra/overview/)
+
+- [Servers and Endpoints](/platform/infra/opsys/osoverview/)
+
+- [Cloud](/platform/infra/cloud/overview/)
+
+- [SaaS](/platform/infra/saas/overview/)
+
+- [Network](/platform/infra/networking/overview/)
+
+- [Software Supply Chain](/platform/infra/supply/overview/)
+
+#### [Security](/platform/security/overview/)
+
+#### [Compliance](/platform/compliance/overview/)
+
+#### [Asset Intelligence](/platform/intel/overview/)
+
+#### [Manage Mondoo](/platform/maintain/overview/)
+
+## [cnspec](/cnspec/home/)
+
+cnspec is an open source, cloud-native tool that evaluates the security of your entire infrastructure. It's also a core component of the Mondoo Platform, serving as both a CLI and an agent for scanning.
+
+- [Get Started with cnspec](cnspec/)
+
+- [Command Line Reference](/cnspec/cli/cnspec/)
+
+## [cnquery](/cnquery/home)
+
+cnquery is an open source, cloud-native tool that answers every question about your infrastructure.
+
+- [Get Started with cnquery](cnquery/)
+
+- [Command Line Reference](/cnquery/cli/cnquery/)
+
+## [MQL](/mql/home/)
+
+MQL is a graph-based query language built for searching and checking infrastructure configuration data and building security policies.
+
+- [MQL Resources](/mql/resources/)
+
+- [Write Effective MQL](/mql/mql.write/)
+
+## Can't find what you need?
+
+- Open source users: Join our community discussion on <a href="https://github.com/orgs/mondoohq/discussions">GitHub</a>.
+
+- Mondoo Platform users: Join our <a href="https://mondoo.link/slack">community Slack channel</a> to chat with us and other Mondoo users.
+
+---

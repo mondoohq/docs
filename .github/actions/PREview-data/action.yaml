@@ -1,0 +1,38 @@
+## NOTE: THIS IS A COMPOSABLE ACTION, NOT A WORKFLOW.
+name: "PREview: Data"
+description: "Caluculate branch, bucket, and PREview URL."
+
+outputs:
+  url:
+    description: "PREview URL"
+    value: ${{ steps.data.outputs.url }}
+  branch:
+    description: "Branch Name"
+    value: ${{ steps.data.outputs.branch }}
+  bucket:
+    description: "Bucket for PREview"
+    value: ${{ steps.data.outputs.bucket }}
+
+runs:
+  using: "composite"
+  steps:
+    - name: Determine branch shortname, bucket name and URL.
+      id: data
+      shell: bash
+      run: |
+        BRANCH=`echo ${GITHUB_HEAD_REF} | sed 's/.*\///'`
+        echo "::set-output name=branch::${BRANCH}"
+        echo "::set-output name=bucket::mondoo-pre-docs-${BRANCH}/docs"
+        echo "::set-output name=url::https://mondoo-pre-docs-${BRANCH}.storage.googleapis.com/docs/index.html"
+    - name: Determine branch shortname and bucket name
+      shell: bash
+      run: |
+        BRANCH=`echo ${GITHUB_HEAD_REF} | sed 's/.*\///'`
+        echo BRANCH=${BRANCH} >> $GITHUB_ENV
+        echo BUCKET=mondoo-pre-docs-${BRANCH} >> $GITHUB_ENV
+        echo URL=https://mondoo-pre-docs-${BRANCH}.storage.googleapis.com/docs/index.html >> $GITHUB_ENV
+    - name: Verify env variables
+      shell: bash
+      id: env
+      run: |
+        env

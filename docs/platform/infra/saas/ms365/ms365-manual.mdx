@@ -1,0 +1,230 @@
+---
+title: Manual Setup - MS 365 Continuous Scanning
+sidebar_label: Manual Setup - MS 365 Continuous Scanning
+sidebar_position: 2
+description: Take the manual approach to configuring the Mondoo MS365 integration to scan Microsoft 365 resources.
+image: /img/featured_img/mondoo-365.jpg
+---
+
+## Prerequisites
+
+Before you integrate Microsoft 365 with Mondoo, be sure you:
+
+- Have a [Mondoo account](/platform/start/plat-start-acct/) with Editor or Owner permissions for the space in which you want to add the integration.
+
+- Have an [Azure account](https://azure.microsoft.com/free/?WT.mc_id=A261C142F) with an active subscription and permission to manage applications in Microsoft Entra ID (formerly Active Directory). Any of these [Microsoft Entra ID roles](https://learn.microsoft.com/en-us/azure/active-directory/roles/permissions-reference) include the required permissions:
+
+  - [Global Administrator](https://learn.microsoft.com/en-us/azure/active-directory/roles/permissions-reference#global-administrator) - Create and manage all aspects of app registrations and enterprise apps.
+
+  - [Application administrator](https://learn.microsoft.com/en-us/azure/active-directory/roles/permissions-reference#application-administrator) - Create and manage all aspects of app registrations and enterprise apps.
+
+  - [Cloud application administrator](https://learn.microsoft.com/en-us/azure/active-directory/roles/permissions-reference#cloud-application-administrator) - Create and manage all aspects of app registrations and enterprise apps except App Proxy.
+
+- Are logged into Azure using the Azure CLI.
+
+  - If you use the Azure Cloud Shell, you don't need to also log into the Azure CLI. To learn more, read the [Quick start for Azure Cloud Shell](https://learn.microsoft.com/en-us/azure/cloud-shell/quickstart?tabs=azurecli).
+
+  - If you use a Linux shell or macOS shell, log into the Azure CLI.
+
+  <details>
+    <summary>If you're not already an Azure CLI user: </summary>
+    <div>
+      <ol>
+        <li>
+          <a href="https://learn.microsoft.com/en-us/cli/azure/install-azure-cli">
+            Install the Azure CLI.
+          </a>
+        </li>
+        <li>
+          Log into the Azure CLI from PowerShell or a Linux/macOS CLI by
+          entering:
+          <br />
+          <tt>az login --allow-no-subscriptions</tt>
+          <br />
+          Azure opens your web browser and prompts you to log in. After you do
+          so, you can return to the CLI.
+        </li>
+      </ol>
+    </div>
+  </details>
+
+## Register an Azure app
+
+Continuous scanning of Microsoft 365 requires a Microsoft Entra ID app registration in your Azure tenant. Registering Mondoo with Azure establishes a trust relationship between Mondoo and the Microsoft identity platform. The trust is unidirectional: Mondoo trusts the Microsoft identity platform, and not the other way around. The Azure app registration creates a [service principal](https://learn.microsoft.com/en-us/azure/active-directory/develop/active-directory-how-applications-are-added#what-are-service-principals-and-where-do-they-come-from) to represent Mondoo in any tenants and subscriptions in which it acts.### Manual app registration option
+
+To configure your Azure resources, you must:
+
+Step A: Register an app with Azure and create a service principal
+
+Step B: Grant permissions to access Microsoft Graph (API permissions)
+
+Step C: Assign the Global Reader role
+
+Step D: Upload the application certificate
+
+### Step A: Register an app with Azure and create a service principal
+
+Like any service that integrates with Azure, Mondoo must have an app registration. To learn more about creating a new app registration, read [App registration, app objects, and service principals](https://learn.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#app-registration-app-objects-and-service-principals) in the Azure documentation.
+
+1. Log into the [Azure portal](https://portal.azure.com/) as a global administrator, application administrator or cloud application administrator.
+
+2. Find and select **Microsoft Entra ID**.
+
+3. In the navigation sidebar, select **App registrations**.
+
+![Azure app registrations](/img/platform/infra/cloud/azure/app-regs.png)
+
+4. Select **+ New registration**.
+
+![create a new app registration in Azure](/img/platform/infra/cloud/azure/new-app-reg.png)
+
+5. Enter the application name `mondoo-ms365` and select **Accounts in this organizational directory only** as the supported account type. Mondoo does not require an application redirect URI.
+
+6. Select the **Register** button.
+
+Microsoft creates the application ID and displays it in the application registration overview.
+
+![new app registration in Azure](/img/platform/infra/cloud/azure/after-new-app-reg.png)
+
+Keep this page open as you continue to the next step.
+
+### Step B: Grant permissions to access Microsoft Graph (API permissions)
+
+import Graph from "./_include-graph.mdx";
+
+<Graph />{" "}
+
+### Step C: Assign the Global Reader" role
+
+1. In the Entra ID portal, go to **Identity (Roles & admins)**.
+
+2. Use the search box to find the Global Reader role. Select the name of the role (not the check box). THe Assignments page opens.
+
+3. Select **+ Add assignments**.
+
+4. Find and select the newly created app, **mondoo-ms365**.
+
+5. Assign the **mondoo-ms365** app the **Global Reader** role.
+
+6. When you return to the Assignments page, select **Refresh** and verify that the mondoo-ms365 app has been assigned the Global Reader role.
+
+### Step D: Upload the application certificate.
+
+The app registration and your Mondoo integration must share a [PEM](https://aboutssl.org/what-is-pem-certificate-file/) (privacy-enhanced mail) certificate for secure authentication. The certificate must not be password protected.
+
+Create a PEM certificate using the method approved by your organization's security team. You need two files:
+
+- The file you upload to Azure must have only the certificate, not the private key.
+
+- The file you upload to Mondoo Console (in the [Add a new Azure integration in the Mondoo Console](#add-a-new-microsoft-365-integration-in-the-mondoo-console) section below) must have both the private key and the certificate. It must have a `.pem` extension and must use this format and order of information:
+
+```
+-----BEGIN PRIVATE KEY-----
+key goes here
+-----END PRIVATE KEY-----
+-----BEGIN CERTIFICATE-----
+certificate goes here
+-----END CERTIFICATE-----
+```
+
+<details>
+<summary>Generate a self-signed certificate for testing</summary>
+
+For testing purposes only, you can use OpenSSL toolkit together with req to generate a certificate. Run this command in Linux shell, macOS shell, or Azure Cloud shell (bash):
+
+```shell
+openssl req -newkey rsa:4096  -x509  -sha512  -days 365 -nodes -out certificate.pem -keyout privatekey.key
+```
+
+Add the private key to the beginning of the PEM file:
+
+```shell
+cat privatekey.key certificate.pem > certificate.combo.pem
+```
+
+</details>
+
+Upload the certificate to Azure:
+
+1. From the Azure portal home, select **Microsoft Entra ID**.
+
+2. In the navigation sidebar, select **App registrations**.
+
+3. Select the app you created.
+
+4. In the sidebar under the app name, select **Certificate & secrets**.
+
+5. Select **Certificates** and then select **Upload certificate**.
+
+6. Select the PEM certificate and enter a description, such as `Mondoo certificate`.
+
+:::info
+
+Be sure to choose the file containing only the certificate, not the private key.
+
+:::
+
+7. Select the **Add** button.
+
+## Add a new Microsoft 365 integration in the Mondoo Console
+
+After you've created and granted permissions to a new app registration, you can create a Mondoo Microsoft 365 integration. You need some values from the app registration you created in the instructions above.
+
+1. Access the Integrations > Add > Microsoft 365 page in one of two ways:
+
+   - New space setup: After creating a new Mondoo account or creating a new space, the initial setup guide welcomes you. Select **BROWSE INTEGRATIONS** and then select **Microsoft 365**.
+
+     ![Welcome to Mondoo Page](/img/platform/start/welcome_to_mondoo.png)
+
+   - INTEGRATIONS page: In the side navigation bar, under **INTEGRATIONS**, select **Add New Integration**. Under Cloud Security, select **Microsoft 365**.
+
+     ![integration-create-image](/img/platform/infra/saas/ms365/add-int-ms365-top.png)
+
+2. In the **Choose an integration name** box, enter a name for the integration. Make it a name that lets you easily recognize the Microsoft 365 tenant.
+
+3. In the **Enter Application (client) ID** box, enter the value from the app registration's **Application (client) ID** box.
+
+4. In the **Enter the Directory (tenant) ID** box, enter the value from the app registration's **Directory (tenant) ID** box.
+
+5. Specify the subscriptions for Mondoo to continuously scan.
+
+   - To continuously scan all subscriptions in the tenant, leave the **Scan all subscriptions connected to the Directory (tenant) ID** toggle enabled.
+
+   - To choose the subscriptions to scan, disable the **Scan all subscriptions connected to the Directory (tenant) ID** toggle, select Allowlist, and enter the subscription ID to scan.
+
+   - To scan **all** subscriptions except those you specify, disable the **Scan all subscriptions connected to the Directory (tenant) ID** toggle, select Denylist, and enter the names of the subscriptions you don't want Mondoo to scan.
+
+6. Provide a certificate (a [PEM](https://aboutssl.org/what-is-pem-certificate-file/) (privacy-enhanced mail) file) for Mondoo to securely authenticate with the app (service principal) you created.
+
+The certificate file must have the `.pem` extension and must contain both the private key and the certificate in this order:
+
+```
+-----BEGIN PRIVATE KEY-----
+key goes here
+-----END PRIVATE KEY-----
+-----BEGIN CERTIFICATE-----
+certificate goes here
+-----END CERTIFICATE-----
+```
+
+Upload the certificate to Mondoo: In the **Drag and drop your .pem file here** box, select the cloud icon and choose the file to upload.
+
+![integration-create-image](/img/platform/infra/saas/ms365/add-int-ms365-bottom.png)
+
+7. To complete the integration, select the **START SCANNING** button.
+
+8. On the Recommended Policies page, enable the policies on which you want to base assessments of your ms365 environment. To learn more, read [Manage Policies](/platform/security/posture/policies/).
+
+Mondoo begins scanning your Microsoft 365 resources. When it completes, you can see results on the INVENTORY page. To learn more, read [Monitor Your Infrastructure Security](/platform/security/posture/monitor/).
+
+:::info Didn't get the expected results?
+
+Read [Test and Troubleshoot Microsoft 365 Configuration](/platform/infra/saas/ms365/troubleshoot/).
+
+:::
+
+## Next steps
+
+- [Learn more about Mondoo](/platform/start/plat-what-is/)
+
+- [Integrate Mondoo with other cloud platforms in your infrastructure](/platform/infra/cloud/overview/)

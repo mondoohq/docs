@@ -1,0 +1,89 @@
+---
+title: Manage Policies
+sidebar_label: Manage Policies
+sidebar_position: 3
+description: Mondoo security policies.
+image: /img/featured_img/mondoo-feature.jpg
+---
+
+Mondoo comes stocked with a constantly growing collection of policies, which are codified benchmarks used to assess your infrastructure. Policies control what misconfigurations and security issues Mondoo checks for when it evaluates your digital business assets. Mondoo's built-in policies are production ready, simple to deploy and customize in any environment, and actionable.
+
+Mondoo continuously assesses your systems according to the policies _you enable_. The **registry** is where you control which policies Mondoo uses to assess your infrastructure.
+
+In Mondoo, you manage policies separately for each space in your organization. When you create a new space, it contains a default set of policies. Each space in your account can have a unique set of policies, which you manage in the registry for that space.
+
+Managing policies involves:
+
+- **Enabling a policy** to use it as a basis for scanning assets in the space
+
+- **Disabling a policy** to stop using it in the space
+
+- **Previewing a policy** to use it as a basis for scanning but exclude it from scoring
+
+Any policies you enable, disable, preview in a space's registry affect only that space.
+
+To learn more about Mondoo policies, read [Policy as Code](/platform/security/posture/pac/)
+
+## Access the registry for a space
+
+1. In the [Mondoo Console](https://console.mondoo.com), [navigate](/platform/start/navigate) to the space.
+
+2. In the side navigation bar, select **Registry**.
+
+   ![Mondoo - navigate to the security registry for a space](/img/platform/security/registry-nav.png)
+
+## Enable policies
+
+Enable a policy to use that policy as a basis for evaluating assets in the space.
+
+1. Access the registry for the space as instructed above.
+
+2. Locate the policy you want to enable by scrolling through the list of available policies or using the **Filter** search box.
+
+3. To enable a policy, select the enable icon (a bar chart) on that policy's row.
+
+   ![Mondoo - enable the policy for a space](/img/platform/security/enable-a-policy.png)
+
+Changes take effect immediately. The next time Mondoo scans applicable assets in the space, it includes this policy.
+
+## Disable policies
+
+Disable a policy to stop using that policy as a basis for assessing the security of assets in the space.
+
+:::caution
+
+Disabling a policy deletes any existing reports from that policy in the space.
+
+:::
+
+1. Access the registry for the space as instructed above.
+
+2. Locate the policy you want to enable by scrolling through the list of available policies or using the **Filter** search box.
+
+3. To disable the policy, select the disable icon (a moon with Zs) on that policy's row.
+
+   ![Mondoo - disable a policy for a space](/img/platform/security/disable-a-policy.png)
+
+Changes take effect immediately. The next time Mondoo scans applicable assets in the space, it does not include this policy.
+
+## Preview policies
+
+Preview a policy to use the policy as a basis for evaluating assets in the space but **not score** the policy. When Mondoo calculates an asset's overall score, it doesn't factor in how the asset performs in the scan based on this policy. When Mondoo calculates a space's or an organization's overall score, it doesn't factor in how any assets perform in a scan based on this policy.
+
+1. Access the registry for the space as instructed above.
+
+2. Locate the policy you want to enable by scrolling through the list of available policies or using the **Filter** search box.
+
+3. To preview the policy, select the preview icon (a light bulb) on that policy's row.
+
+   ![Mondoo - preview a policy for a space](/img/platform/security/preview-a-policy.png)
+
+Changes take effect immediately. The next time Mondoo scans applicable assets in the space, it includes this policy's results but not its scores.
+
+#### See also
+
+- [Monitor Your Infrastructure Security](/platform/security/posture/monitor/)
+
+- [Customize Security](/platform/security/customize/overview/)
+
+---

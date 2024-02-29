@@ -1,0 +1,78 @@
+---
+title: Test or troubleshoot an Azure Integration
+sidebar_label: Troubleshoot Azure
+sidebar_position: 4
+description: Troubleshoot integrations between Mondoo and Microsoft Azure.
+image: /img/featured_img/mondoo-azure.jpg
+---
+
+Test your Azure configuration to ensure that the app registration and all the permissions are configured properly. You can do so using Mondoo's open source security scanning CLI, cnspec.
+
+## Scan with cnspec
+
+1. From your terminal, download the latest cnspec package from here: [https://releases.mondoo.com/cnspec/](https://releases.mondoo.com/cnspec/)
+
+   Example:
+
+   ```bash
+   wget https://releases.mondoo.com/cnspec/8.9.0/cnspec_8.9.0_linux_amd64.tar.gz
+   tar -xvf cnspec_8.9.0_linux_amd64.tar.gz
+   ```
+
+2. Scan your Azure platform:
+
+```bash
+./cnspec scan azure --subscription YOUR-SUBSCRIPTION-ID --tenant-id YOUR-TENANT-ID --client-id YOUR-CLIENT-ID  --certificate-path certificate.combo.pem --policy-bundle mondoo-azure-security.mql.yaml
+```
+
+For `YOUR-SUBSCRIPTION-ID`, `YOUR-TENANT-ID`, and `YOUR-CLIENT-ID`, substitute your Azure information. The client ID is also called the application ID or app ID.
+
+Pay special attention to the queries showing `Error` results; they can result from improper permissions.
+
+## Troubleshoot: Scan with cnspec using a client secret
+
+If the scan above is unsuccessful, try using a client secret to authenticate and scan.
+
+1. Create a client secret:
+
+   a. From the Azure portal home, select **Microsoft Entra ID**.
+
+   b. In the navigation sidebar, select **App registrations**.
+
+   c. Select the app you created for Mondoo.
+
+   d. In the sidebar under the app name, select **Certificate & secrets**.
+
+   e. Select **New client secret**.
+
+   f. Enter a description for the client secret.
+
+   g. For **Duration**, specify a time after which the secret expires.
+
+   h. Select **Add** and quickly record the `Value`; it will disappear shortly.
+
+2. Scan with cnspec using the client secret:
+
+   ```bash
+   ./cnspec scan azure --subscription YOUR-SUBSCRIPTION-ID --tenant-id YOUR-TENANT-ID --client-id YOUR-CLIENT-ID  --client-secret YOUR-CLIENT-SECRET-VALUE  --policy-bundle mondoo-azure-security.mql.yaml
+   ```
+
+   For `YOUR-SUBSCRIPTION-ID`, `YOUR-TENANT-ID`, and `YOUR-CLIENT-ID`, substitute your Azure information.
+
+   For `YOUR-CLIENT-SECRET-VALUE`, substitute the value you recorded above.
+
+   If this scan is successful after the first scan was unsuccessful, then the issue is with your certificate. Follow the steps above again to provide a new certificate.
+
+## Troubleshoot: Scan with cnspec using direct authentication
+
+If you suspect that the problem is related to the app, it's helpful to scan using direct authentication. This only works if your current user account has adequate privileges.
+
+```bash
+./cnspec scan azure --subscription YOUR-SUBSCRIPTION-ID --policy-bundle mondoo-azure-security.mql.yaml
+```
+
+For `YOUR-SUBSCRIPTION-ID`, substitute your Azure subscription ID.
+
+## Troubleshoot: Manually register and configure a new app
+
+If you're unsuccessful with these troubleshooting approaches, try using the Microsoft's "manual" method for creating and configuring an app registration: read [Manually Set up an Azure Integration](/platform/infra/cloud/azure/manual-reg-path/).

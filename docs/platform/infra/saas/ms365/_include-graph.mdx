@@ -1,0 +1,50 @@
+1. In the navigation sidebar, select **API permissions**.
+
+![API permissions](/img/platform/infra/cloud/azure/api-permissions.png)
+
+By default, Microsoft grants your new application `User.Read` permission for Microsoft Graph. It's not required for Mondoo, so you can remove it.
+
+2. Select **+ Add a permission**.
+
+![Add permission in Azure](/img/platform/infra/cloud/azure/select-add-permission.png)
+
+3. From the list of **Commonly used Microsoft APIs**, select **Microsoft Graph**.
+
+![API permissions](/img/platform/infra/cloud/azure/request-api-permission.png)
+
+4. Because Mondoo acts as a service, select **Application permissions**.
+
+5. Select **expand all** to see all permissions. Then select the required API permissions:
+
+<details>
+<summary>Show or hide required API permissions.</summary>
+
+| Microsoft Graph                        | Type        | Description                                             |
+| -------------------------------------- | ----------- | ------------------------------------------------------- |
+| IdentityProvider.Read.All              | Application | Read identity providers                                 |
+| Policy.Read.All                        | Application | Read your organization's policies                       |
+| Policy.Read.ConditionalAccess          | Application | Read your organization's conditional access policies    |
+| Policy.Read.PermissionGrant            | Application | Read consent and permission grant policies              |
+| SecurityActions.Read.All               | Application | Read your organization's security actions               |
+| SecurityEvents.Read.All                | Application | Read your organization's security events                |
+| DeviceManagementConfiguration.Read.All | Application | Read Microsoft Intune device configuration and policies |
+
+</details>
+
+6. Select the **Add permissions** button.
+
+7. Grant Mondoo read permissions for **SharePoint**.
+
+   | SharePoint APIs       | Type        | Description                        |
+   | --------------------- | ----------- | ---------------------------------- |
+   | Sites.FullControl.All | Application | Read items in all site collections |
+
+8. Select the **Add permissions** button.
+
+9. Grant Mondoo read permissions for **Office 365 Exchange Online**. You need to search in **APIs my organization uses**
+
+   | Office 365 Exchange Online | Type        | Description                               |
+   | -------------------------- | ----------- | ----------------------------------------- |
+   | Exchange.ManageAsApp       | Application | Have full control of all site collections |
+
+10. To complete the process, select **Grant admin consent for (your tenant name)** and select the **Yes** button to confirm.

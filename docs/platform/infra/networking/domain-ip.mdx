@@ -1,0 +1,32 @@
+---
+title: Secure a Host (Domain or IP Address)
+sidebar_label: Secure a Domain or IP Address
+sidebar_position: 2
+description: Use Mondoo to ensure that your HTTP or HTTPS hosts are secure
+---
+
+Mondoo can continuously scan a domain or IP address to ensure that your hosts follow best security practices. You can choose to monitor HTTP or HTTPS security.
+
+To set up continuous scanning for a host:
+
+1. Access the Integrations > Add > Domain or IP Address page in one of two ways:
+
+   - New space setup: After creating a new Mondoo account or creating a new space, the initial setup guide welcomes you. Select **BROWSE INTEGRATIONS** and then select **Domain/IP Address**.
+
+     ![Welcome to Mondoo Page](/img/platform/start/welcome_to_mondoo.png)
+
+   - INTEGRATIONS page: In the side navigation bar, under **INTEGRATIONS**, select **Add New Integration**. Under Network Security, select **Domain/IP Address**.
+
+     ![Continuously scan domain or IP address](/img/platform/infra/networking/domain-ip.png)
+
+2. In the **Enter the domain or IP address to scan** box, enter the domain name (such as www.lunalectric.com) or IP address (such as 123.45.67.89) of the host to scan.
+
+3. Under **Select ports to scan** box, choose to scan for HTTP or HTTPS security.
+
+4. Select the **CREATE** button.
+
+5. On the Recommended Policies page, enable the policies on which you want to base scans of the host. To learn more, read [Manage Policies](/platform/security/posture/policies/).
+
+6. To complete the integration, select the **FINALIZE SETUP** button.
+
+---

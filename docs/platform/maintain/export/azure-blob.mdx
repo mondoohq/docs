@@ -1,0 +1,123 @@
+---
+title: Export Data to Azure Blob Storage
+sidebar_label: Azure Blob Storage
+sidebar_position: 3
+description: Configure a Mondoo Azure Blob Storage integration to export data to an Azure storage blob
+image: /img/featured_img/mondoo-azure.jpg
+---
+
+The Mondoo Azure Blob Storage integration lets you continuously export your space data, such as assets and vulnerabilities, to Azure storage blobs. The export runs approximately every 24 hours. An integration exports data only from the space where you add the integration.
+
+## Requirements
+
+- A [Microsoft Azure account](https://azure.microsoft.com/free/?WT.mc_id=A261C142F) with an active subscription
+
+- Permission to manage storage containers in the Azure account
+
+- An existing storage container where you want to export data from the Mondoo space
+
+## Create a container access token
+
+Mondoo relies on a _shared access token_ to export data to Azure storage blobs. Create a shared access token for the container where you want Mondoo to export data from the Mondoo space.
+
+1. Log into the [Azure portal](https://portal.azure.com/) as a global administrator, application administrator or cloud application administrator.
+
+2. Select or search for **Storage accounts**.
+
+3. Select the storage account that holds the container where you want to export Mondoo data.
+
+4. In the left navigation, select **Containers**.
+
+   ![Azure containers](/img/platform/maintain/export/azure-blob/containers.png)
+
+5. Select the container where you want to export Mondoo data.
+
+6. In the left navigation, select **Shared access tokens**.
+
+   ![Add a shared access token in Azure](/img/platform/maintain/export/azure-blob/add-token.png)
+
+7. In the **Permissions** drop-down list, select:
+
+   - Read
+
+   - Add
+
+   - Create
+
+   - Write
+
+   - List
+
+8. Under **Expiry**, set a date far in the future so that your Mondoo export continues working.
+
+9. Select the **Generate SAS token and URL** button.
+
+   ![Copy Blob SAS URL](/img/platform/maintain/export/azure-blob/copy-url.png)
+
+10. In the **Blob SAS URL** box, select the copy icon to copy the URL to your clipboard. You need this for your next steps below.
+
+## Add a new Azure Blob Storage integration
+
+1. In a new browser tab, access the Integrations > Add > Azure Blob Storage page in one of two ways:
+
+   - New space setup: After creating a new Mondoo account or creating a new space, the initial setup guide welcomes you. Select **BROWSE INTEGRATIONS** and then select **Azure Blob Storage**.
+
+     ![Welcome to Mondoo Page](/img/platform/start/welcome_to_mondoo.png)
+
+   - INTEGRATIONS page: Navigate to **INTEGRATIONS**. Under Exports, select **Azure Blob Storage**.
+
+     ![Add new export integration in Mondoo](/img/platform/maintain/export/add-integration-exports.png)
+
+2. In the **Choose an integration name** box, enter a name for the integration. Make it a name that lets you easily recognize the Azure storage container.
+
+   ![Add an Azure Blob Storage export integration in Mondoo](/img/platform/maintain/export/azure-blob/add-blob.png)
+
+3. In the **Blob SAS URL** box, paste the URL you copied in the previous section.
+
+4. In the **Export as** box, select whether to export Mondoo data to Azure blobs in JSON or CSV format.
+
+5. To complete the integration, select the **CREATE EXPORT** button.
+
+   Mondoo begins exporting information from your space. When this initial export completes, the integration status becomes **ACTIVE**. Mondoo performs an export approximately every 24 hours.
+
+## View your Azure Blob Storage integration
+
+1. In the side navigation bar, under Integrations, select **Azure Blob Storage**.
+
+   ![View a list of Azure Blob Storage integrations](/img/platform/maintain/export/azure-blob/view-list.png)
+
+2. In the list of Azure Blob Storage integrations, select the integration you want to view.
+
+   ![View an Azure Blob Storage integration](/img/platform/maintain/export/azure-blob/view.png)
+
+### Statuses
+
+The possible statuses for an Azure Blob Storage integration are:
+
+- **pending**: The export hasn't run yet.
+
+- **active**: The export integration is healthy.
+
+- **error**: Mondoo detected an error during export.
+
+### Export data to Azure Blob Storage at any time
+
+Mondoo exports your data to Azure Blob Storage approximately every 24 hours. You can also manually export data at any time. Use the **SCHEDULE NOW** button to request an export right away. Mondoo begins the export as soon as possible.
+
+### Remove an integration
+
+To remove an integration, select the trash can icon. A confirmation prompt displays. Once you confirm the deletion, Mondoo removes the configured integration and stops triggering exports from this space to Azure storage blobs.
+
+:::info
+
+Mondoo does not delete the blobs or the exported data in them. You must delete the data manually.
+
+:::
+
+## Next steps
+
+- [Learn more about Mondoo](/platform/start/plat-what-is/)
+
+- [Export data to other platforms](/platform/maintain/export/overview)
+
+---

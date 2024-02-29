@@ -1,0 +1,387 @@
+/* stylelint-disable docusaurus/copyright-header */
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+
+@import "./global.css";
+@import "./normalize.css";
+@import "./todo.css";
+@import "./typography.css";
+
+:root {
+  --ifm-color-text: #fff;
+  --ifm-color-text-light: #ddd;
+  --ifm-color-text-lighter: #aaa;
+
+  --ifm-color-border: rgba(200, 200, 200, 0.8);
+  --ifm-color-border-lighter: rgba(200, 200, 200, 0.5);
+
+  --ifm-bg-color: #1e1d46;
+  --ifm-bg-color-light: rgb(58, 57, 57);
+  --ifm-bg-color-lighter: rgb(88, 88, 88);
+
+  --ifm-shadow-color: rgba(200, 200, 200, 0.2);
+  --ifm-shadow-color2: rgba(200, 200, 200, 0.14);
+  --ifm-shadow-color3: rgba(200, 200, 200, 0.12);
+  --ifm-shadow: 0 3px 1px -2px var(--ifm-shadow-color),
+    0 2px 2px 0 var(--ifm-shadow-color2), 0 1px 5px 0 var(--ifm-shadow-color3);
+  --ifm-shadow-selected: 0 2px 4px -1px var(--ifm-shadow-color),
+    0 4px 5px 0 var(--ifm-shadow-color2), 0 1px 10px 0 var(--ifm-shadow-color3);
+
+  --ifm-color-primary: #9147ff;
+  --ifm-color-primary2: #6b1fd6;
+  --ifm-color-primary3: #a07aff;
+  --ifm-color-secondary: #2fc089;
+  --ifm-color-secondary2: #238b66;
+  --ifm-color-error: #ff5252;
+
+  --ifm-color-cat1: #039cd8;
+  --ifm-color-cat2: #fbd153;
+  --ifm-color-cat3: #ff5252;
+  --ifm-color-cat4: #fc3779;
+  --ifm-color-unknown: #aaa;
+
+  --ifm-color-bg-note: #9147ff;
+
+  --ifm-border-radius: 4px;
+  --ifm-border-radius-rounded: 24px 4px;
+  --ifm-padding: 24px;
+  --ifm-margin: 48px;
+
+  --ra-color-text-dark: #1e1d46;
+
+  --bg-color: #ffffff;
+}
+
+html[data-theme="dark"] {
+  --ifm-color-primary: #a07aff;
+  --ifm-color-primary2: #a07aff;
+  --ifm-color-secondary: #6cd9af;
+  --ifm-color-secondary2: #6cd9af;
+
+  --ifm-color-bg-note: #3d1e50;
+
+  --ra-color-text-dark: #ffffff;
+
+  --bg-color: #18191a;
+}
+
+/* link styles */
+a {
+  color: var(--ifm-color-primary2);
+}
+
+a.button {
+  background: var(--ifm-color-primary);
+  color: var(--ifm-color-text);
+  border-radius: var(--ifm-border-radius);
+  text-transform: uppercase;
+  font-weight: normal;
+  transition: all 0.2s ease;
+  border: 0;
+}
+
+a.button:hover {
+  background: var(--ifm-color-primary2);
+  color: var(--ifm-color-text);
+}
+
+.admonition-heading {
+  padding: 10px 0 0 0;
+}
+.admonition-heading h5 {
+  margin-bottom: 0;
+}
+.admonition-icon {
+  margin-right: 0.5em;
+}
+
+.footer,
+.footer--dark {
+  --ifm-footer-background-color: var(--ifm-bg-color);
+  --ifm-footer-color: var(--ifm-color-text);
+  --ifm-footer-link-color: var(--ifm-color-text);
+  --ifm-footer-title-color: var(--ifm-color-text);
+}
+
+.navbar {
+  font-family:
+    "San Francisco",
+    -apple-system,
+    system-ui,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Ubuntu;
+}
+
+.navbar strong {
+  font-weight: 600;
+}
+
+.docusaurus-highlight-code-line {
+  background-color: rgb(72, 77, 91);
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+}
+
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  text-align: center;
+  font-weight: bold;
+  column-gap: 15px;
+  row-gap: 10px;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 750px) {
+  .button-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.button-grid img {
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+.button-grid img:hover {
+  opacity: 0.3;
+}
+
+.button-grid span {
+  font-size: 1.5em;
+  grid-column: span 20;
+}
+
+.tile {
+  display: block;
+  height: 200px;
+  width: 100%;
+  border: none;
+  background-color: #1e1d46 !important;
+  color: white !important;
+  font-size: 20px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  line-height: 200px;
+  text-align: center;
+}
+
+.tile:last-child {
+  margin-right: 0px;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.intro-item {
+  padding: 1em 3em 0 0;
+}
+.first {
+  grid-area: first;
+  border: none;
+}
+.gettingstarted {
+  grid-area: gettingstarted;
+}
+.server {
+  grid-area: server;
+}
+.cloud {
+  grid-area: cloud;
+}
+
+.policies {
+  grid-area: policies;
+}
+.supply-chain {
+  grid-area: supply-chain;
+}
+
+.mql {
+  grid-area: mql;
+}
+
+.help {
+  grid-area: help;
+}
+.intro-container {
+  display: grid;
+  grid-template-columns: repeat(2);
+  grid-template-rows: auto;
+  grid-row-gap: 10px;
+  grid-column-gap: 0px;
+  grid-template-areas:
+    "first first"
+    "gettingstarted server"
+    "cloud policies"
+    "supply-chain mql"
+    "help help";
+}
+
+.intro-container a {
+  color: var(--ifm-color-primary2);
+  text-decoration: none;
+}
+
+.intro-container-alert {
+  position: relative;
+  width: auto;
+  color: var(--ifm-color-emphasis-900);
+  border-radius: 5px;
+  background-color: var(--ifm-color-bg-note);
+  border-color: #00000000;
+  padding: 4px 10px 10px 10px;
+  margin: 0 0 16px;
+  overflow: hidden;
+}
+
+.intro-container-alert::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 4px;
+  left: 0;
+  top: 0;
+  background: var(--ifm-color-primary2);
+}
+
+.intro-container-alert p {
+  padding: 4px;
+  margin-bottom: 0px;
+}
+
+/* Admonition Alert Styles */
+
+/* .alert--info {
+  --ifm-alert-background-color: var(--ifm-color-bg-note);
+  --ifm-alert-border-color: var(--ifm-color-primary2);
+} */
+
+.service-screenshot {
+  border: 1px solid #000;
+}
+
+/* Tutorial Styling */
+
+.styles_tutorial_description {
+  max-width: 60em;
+  margin: 0 0 24px;
+}
+
+.type-body-large {
+  font-size: 1.188rem;
+  letter-spacing: 0.01em;
+  line-height: 1.579em;
+}
+
+.tutorials-number {
+  margin-left: 1em;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.tutorial {
+  position: relative;
+}
+
+.tutorial::before {
+  content: "";
+  width: 1px;
+  position: absolute;
+  top: -20px;
+  left: 45px;
+  bottom: 20px;
+  z-index: 1;
+  background: var(--ifm-color-border);
+}
+
+.tutorial-item {
+  position: relative;
+  z-index: 5;
+  display: block;
+  margin-bottom: 20px;
+  padding: 26px 82px 26px 28px;
+  color: inherit;
+  border: 1px solid var(--ifm-color-border);
+  border-radius: var(--ifm-border-radius);
+  background-color: var(--bg-color);
+  text-decoration: none;
+  box-shadow: var(--ifm-shadow);
+}
+
+.tutorial-item:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.tutorial-item::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  bottom: -1px;
+  width: 8px;
+  background: #fc3779;
+  border-radius: var(--ifm-border-radius) 0 0 var(--ifm-border-radius);
+}
+
+.tutorial-item::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 16px;
+  width: 48px;
+  height: 48px;
+  background: transparent url("/static/img/icons/chevron-icon.svg") no-repeat;
+  transition: all 0.2s ease;
+}
+
+.tutorial-item:hover::after {
+  right: 10px;
+}
+
+.tutorial-heading {
+  display: inline-block;
+  margin-top: 0;
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+  font-weight: bold;
+}
+
+.tutorial-time {
+  display: inline-block;
+  padding: 4px 7px 3px;
+  margin: 0 0 0 0.75rem;
+  font-size: 0.75rem;
+  line-height: 0.75rem;
+  background: var(--ifm-color-primary3);
+  color: #fff;
+  border-radius: 0.9rem;
+  text-transform: uppercase;
+  vertical-align: top;
+}
+
+.tutorial-time::before {
+  content: "";
+  display: inline-block;
+  width: 0.8rem;
+  height: 0.8rem;
+  margin-right: 3px;
+  background: transparent url("/static/img/icons/clock-icon.svg") no-repeat;
+  vertical-align: middle;
+}
+
+.tutorial-description {
+  margin: 0;
+}

@@ -1,0 +1,98 @@
+---
+title: Secure Slack Workspaces with Mondoo
+sidebar_label: Slack
+sidebar_position: 7
+description: Assess the security of your Slack workspace with Mondoo
+---
+
+You can configure Mondoo to continuously monitor your Slack workspace security. Mondoo scans find misconfigurations and vulnerabilities that put your organization at risk. You deploy the Mondoo Slack integration once and always get the latest security assessments.
+
+## Prerequisite
+
+- [A Mondoo account](/platform/start/plat-start-acct/)
+
+- A Slack account and access to a Slack workspace
+
+## Create an API token to give Mondoo access to the Slack workspace
+
+To access the configuration details of your Slack workspace, Mondoo needs an API token. You create this token on the Slack website and provide it to Mondoo when you set up your integration.
+
+1. On the Slack API website, go to [Your Apps](https://api.slack.com/apps/).
+
+2. Select the **Create an App** button.
+
+![Slack Create an app dialog](/img/platform/infra/saas/slack/create-app.png)
+
+3. Select **From scratch**.
+
+![Slack Name app & choose workspace dialog](/img/platform/infra/saas/slack/name-app.png)
+
+4. In the **App Name** box, enter a name for your new app, such as `mondoo-security`.
+
+5. In the **Pick a workspace to develop your app in** list, choose the workspace you want to secure with Mondoo.
+
+6. Select the **Create App** button. The Basic Information page for the new app opens.
+
+![Slack app settings - Basic Information page](/img/platform/infra/saas/slack/basic-info.png)
+
+7. Under **Add features and functionality**, select **Permissions**. The OAuth & Permissions page for the new app opens.
+
+![Slack app settings - OAuth and permissions page](/img/platform/infra/saas/slack/oauth.png)
+
+8. Scroll down to **Scopes** and locate **User Token Scopes**.
+
+![Slack app settings - user token scopes](/img/platform/infra/saas/slack/scopes.png)
+
+9. Add all of these permissions by repeating the tasks of (a) selecting the **Add an OAuth Scope** button and (b) selecting a permission:
+
+   - channels:read
+
+   - groups:read
+
+   - im:read
+
+   - mpim:read
+
+   - team:read
+
+   - usergroups:read
+
+   - users:read
+
+10. Once you have added all the permissions, scroll up to **OAuth Tokens for Your Workspace** and select the **Install to Workspace** button. Slack confirms the permissions.
+
+![Slack app permissions confirmation](/img/platform/infra/saas/slack/confirm.png)
+
+11. Select the **Allow** button. The OAuth & Permissions page displays again and now there is a token under **OAuth Tokens for Your Workspace**.
+
+![Slack OAuth token](/img/platform/infra/saas/slack/token.png)
+
+12. In the **User OAuth Token** box, select the **Copy** button. You need this token in the next section; save it somewhere handy.
+
+## Set up a Slack integration
+
+1. Access the Integrations > Add > Slack page in one of two ways:
+
+   - New space setup: After creating a new Mondoo account or creating a new space, the initial setup guide welcomes you. Select **BROWSE INTEGRATIONS** and then under **SaaS**, select **Slack**.
+
+     ![Welcome to Mondoo Page](/img/platform/start/welcome_to_mondoo.png)
+
+   - INTEGRATIONS page: In the side navigation bar, under **INTEGRATIONS**, select **Add New Integration**. Under SaaS, select **Slack**.
+
+     ![Add a Slack Integration in Mondoo](/img/platform/infra/saas/slack/slack.png)
+
+2. In the **Choose an integration name** box, enter a name for the integration. Make it a name that lets you easily recognize the Slack repository.
+
+3. In the **Enter the API token** box, paste the Slack token you generated in the previous section.
+
+4. Select the **START SCANNING** button.
+
+5. On the Recommended Policies page, enable the policies on which you want to base assessments of your Slack workspace. To learn more, read [Manage Policies](/platform/security/posture/policies/).
+
+   Mondoo begins scanning your Slack workspace and, when completed, presents results on the INVENTORY page.
+
+## Learn more
+
+For more information, explore the complete [Mondoo Slack Resource Pack Reference](/mql/resources/slack-pack/).
+
+---

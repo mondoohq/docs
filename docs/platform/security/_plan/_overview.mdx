@@ -1,0 +1,29 @@
+---
+title: Plan Security Improvement - Overview
+sidebar_label: Overview
+sidebar_position: 1
+description: Use Mondoo to create an achievable plan for improving security posture.
+image: /img/featured_img/mondoo-feature.jpg
+---
+
+Once you've used Mondoo to reveal the misconfigurations and vulnerabilities in your infrastructure, you can fix the problems you've uncovered. Mondoo's _risk actions_ feature helps you create an achievable plan to boost your security posture. It provides a structure for you to incrementally improve security one milestone at a time.
+
+The combined assets in your space have a score that represents their security posture based on all the [checks in the enabled policies](/platform/security/posture/policies/). When you first integrate your infrastructure with Mondoo, your score is likely to be low. A low score shows opportunity for great improvement! However, in some cases, reporting a low score can alarm upper management and discourage your team. You can prevent this negative impact by adjusting your security baseline and planning progressive improvement.
+
+You plan improvements in three steps:
+
+A. **Set a target score.** You choose the security score you want this space to achieve. Based on this target score, Mondoo creates a baseline for you, excluding less important failing checks so that the space's current scan results reach the target score.
+
+B. **Plan your goals.** You determine what to do with each excluded check. You can:
+
+- _Set a milestone_, a date when Mondoo adds the check to the baseline. Beginning on the milestone date, the becomes part of the basis by which Mondoo measures the security of the space. By that date, the assets in the space must pass the check, or the space score drops. You can set multiple milestones, each with one or more added checks, to steadily raise the security standard for the space.
+
+- _Define exceptions_, checks that aren't relevant to the your organization or to the assets in the space. An exception is a security standard that you don't need to meet and will never meet.
+
+C. **Review and apply your plan.** Verify the space's current score based on your new baseline, the milestones you defined for raising the baseline, and the checks that you chose to ignore. Then apply the plan to begin your new basis for measuring the space's security posture.
+
+For a detailed example, read [Example Security Improvement Plan](/platform/security/plan/example/).
+
+For instructions on planning, read [Plan Security Improvement Using Risk Actions](/platform/security/plan/plansteps/).
+
+---

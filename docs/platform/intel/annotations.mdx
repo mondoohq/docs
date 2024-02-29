@@ -1,0 +1,68 @@
+---
+title: Annotate (Tag) Assets
+sidebar_label: Annotate (Tag) Assets
+sidebar_position: 4
+description: Add annotations
+image: /img/featured_img/mondoo-feature.jpg
+---
+
+Use Mondoo annotations to add metadata to an asset. Annotations are key-value pairs that let you tag or categorize your assets. Add whatever metadata you need. Some examples are:
+
+| Example key | Example value         |
+| ----------- | --------------------- |
+| owner       | cosmo@lunalectric.com |
+| build       | terraform             |
+| asset-tag   | luna000262            |
+| team        | 01research            |
+
+You can reuse key-value pairs or you can reuse only the key and give each asset a unique value.
+
+For example, suppose you want to create annotations that match the physical asset tags on your company's workstations. You'd give every workstation in your inventory an `asset-tag` key, but give each workstation a unique value to match the unique physical tags.
+
+As another example, you might assign the key `build` and the value `terraform` to every asset in your inventory that is built using Terraform.
+
+Annotations display in the Mondoo Console when you view an asset. When you export data from Mondoo, annotations are included. You can search for assets based on their annotations. To learn how, read [Search Your Inventory](/platform/intel/search/)
+
+## Annotate an asset
+
+You can annotate an asset in the Mondoo Console.
+
+:::tip
+
+You can also add an annotation from the command line or using automation. To learn how, read [Annotate (tag) an asset during registration](/cnspec/cnspec-adv-install/registration/#annotate-tag-an-asset-during-registration).
+
+:::
+
+1. In the [Mondoo Console](https://console.mondoo.com), [navigate](/platform/start/navigate/) to the asset you want to annotate.
+
+2. In the bottom-right corner of the asset page, locate **MONDOO ANNOTATIONS**.
+
+   ![Find MONDOO ANNOTATIONS on the Mondoo asset page](/img/platform/intel/asset-no-annotations.png)
+
+3. Select the **+** icon.
+
+   ![Add and annotation to a Mondoo asset](/img/platform/intel/add-annotation.png)
+
+4. Enter a key and a value, then select the :heavy_check_mark: icon to add the annotation.
+
+   ![Annotation on a Mondoo asset](/img/platform/intel/existing-annotation.png)
+
+## Change or remove an annotation
+
+1. In the [Mondoo Console](https://console.mondoo.com), [navigate](/platform/start/navigate/) to the asset containing the annotation you want to change or remove.
+
+2. In the bottom-right corner of the asset page, locate **MONDOO ANNOTATIONS**.
+
+   ![Annotation on a Mondoo asset](/img/platform/intel/existing-annotation.png)
+
+3. Select the pencil icon.
+
+   ![Add and annotation to a Mondoo asset](/img/platform/intel/add-annotation.png)
+
+4. Change the key and/or the value, then select the :heavy_check_mark: icon to save the changes.
+
+   ![Annotation on a Mondoo asset](/img/platform/intel/existing-annotation.png)
+
+   To remove the annotation, select the trash can icon.
+
+---

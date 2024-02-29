@@ -1,0 +1,147 @@
+---
+title: AWS Integration FAQ
+sidebar_label: Integration FAQ
+image: /img/featured_img/mondoo-aws.jpg
+description: This document covers how the Mondoo AWS integration works. It includes permissions and billing details.
+sidebar_position: 3
+---
+
+## How does the Mondoo AWS integration work?
+
+Mondoo Platform never has credentials to your AWS account.
+
+We install a Lambda function in your AWS account via the CloudFormation template, and communicate with that Lambda function over AWS EventBridge. The Lambda function communicates with Mondoo using service credentials stored in the SSM Parameter Store.
+
+## Why does the Mondoo integration need to create resources in my AWS account?
+
+The resources created in your AWS account are used to run and schedule configuration and EC2 instance scans. Those resources are low-cost, limited to a Lambda function, SNS topic, SQS Queues, some IAM roles, EventBridge rules, and SSM parameters. If using the EBS volume scanning feature, an Autoscaling Group and launch template will also be created.
+
+## How does the integration communicate from my AWS account to Mondoo Platform?
+
+On CloudFormation stack creation, a short-lived token is exchanged for Mondoo credentials. Those credentials are stored in the SSM Parameter store and used by the Lambda function and SSM instances in the AWS account to communicate with Mondoo Platform over HTTPS.
+
+## Choose to integrate an organization or an account
+
+If you've set up your AWS organization according to [AWS standard practices](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tutorials_basic.html), create an organization integration for ease of use.
+
+Before deploying, check the configuration of your AWS organization as described in [Requirements for deploying the Mondoo StackSet at the organization level](/platform/infra/cloud/aws/aws-integration-troubleshooting#requirements-for-deploying-the-mondoo-stackset-at-the-organization-level).
+
+## What information will leave my AWS Account?
+
+Scan report results only.
+
+## What information will Mondoo Platform store about my AWS resources?
+
+Mondoo Platform stores the latest report for all scanned assets in the AWS account (the reports viewable under **Inventory**) as well as the total counts of various resources in the AWS account, displayed on the Integration detail page.
+
+## Is the communication channel between Mondoo Platform and my AWS account secure?
+
+Yes, Mondoo communicates with your AWS account using [AWS EventBridge](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-cross-account.html). The Eventbus policy and rule are created as part of the CloudFormation stack.
+
+## What permissions will the resources created by Mondoo request?
+
+There are three IAM roles created during the CloudFormation install:
+
+- MondooLambdaRole
+  Lambda function role enable AWS account scanning, includes:
+
+  - managed policy: arn:aws:iam::aws:policy/ReadOnlyAccess
+  - managed policy: arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole
+  - managed policy: arn:aws:iam::aws:policy/AmazonEC2FullAccess
+  - limited to resources tagged with `Created By: Mondoo`:
+  - events:PutRule,
+    events:DeleteRule,
+    events:TagResource,
+    iam:CreateRole,
+    iam:CreateServiceLinkedRole,
+    iam:PutRolePolicy,
+    iam:AttachRolePolicy,iam:DetachRolePolicy,iam:DeleteRolePolicy,iam:TagRole
+  - unrestricted: cloudformation:UpdateStack,events:PutTargets, events:RemoveTargets,iam:PassRole,secretsmanager:GetSecretValue,ssm:GetParameter
+  - limited to RunShellScript and RunPowershellScript documents: ssm:SendCommand
+  - limited to Mondoo-\* SSM parameters: ssm:PutParameter,ssm:DeleteParameter,ssm:AddTagsToResource
+  - limited to Mondoo-created SQS queue:sqs:SendMessage,sqs:DeleteMessage,sqs:SetQueueAttributes
+  - limited to Mondoo-created SNS topic:sns:SetTopicAttributes,sns:TagResource
+  - limited to Mondoo Lambda function: lambda:UpdateFunctionConfiguration,lambda:GetFunctionConfiguration,lambda:AddPermission,lambda:UpdateFunctionCode,lambda:InvokeFunction
+
+- MondooEventBusRole
+  Eventbus role to allow Mondoo AWS account to send messages to your AWS account, includes:
+
+  - events:PutEvents on the default event bus
+  - sts:AssumeRole on events.amazonaws.com
+
+- EBSVolumeScanningInstancePolicy
+  Role to be used by the scanner instances in the autoscaling group if EBS volume scanning is active, includes:
+  - limited to resources tagged with `Created By: Mondoo`: ec2:AttachVolume,ec2:DetachVolume,ec2:DeleteVolume,ec2:DeleteSnapshot
+  - unrestricted: ec2:CreateSnapshot,ec2:CreateVolume,ec2:CopySnapshot,ec2:CreateTags,ec2:DescribeInstances,ec2:DescribeVolumes,ec2:DescribeSnapshots,kms:Decrypt,kms:ReEncryptTo,kms:GenerateDataKeyWithoutPlaintext,kms:DescribeKey,kms:ReEncryptFrom
+
+## What specific resources will the Mondoo integration create in my AWS account?
+
+During install (CloudFormation):
+
+The Mondoo AWS CloudFormation stack creates these resources:
+
+- Lambda function
+- SNS topic/subscription (tells Mondoo about CloudFormation stack status)
+- EventBridge rule (lets Mondoo AWS talk to your AWS)
+- IAM roles/policies (for the Lambda function, the ASG instances, and the EventBridge bus)
+- SQS queue (for queueing scan jobs)
+
+All resources are tagged with:
+
+```
+Created By: Mondoo
+Mondoo Integration Mrn: <mrn-value>
+```
+
+Created by the Lambda function:
+
+- SSM parameters (to store the env configuration and credentials to communicate with Mondoo Platform)
+- EventBridge rules (to track aws events and set up cron events)
+- Launch configuration template & autoscaling group (only if using ebs volume scanning)
+
+## How do I update to the latest Lambda version?
+
+The Lambda function updates itself every 24 hours. It updates the AWS CloudFormation stack and the Lambda function code to the latest available from the Mondoo S3 bucket.
+
+There is a safeguard in place to ensure that the Lambda function only updates itself to the expected build: When new versions of the Lambda function and CloudFormation JSON files are uploaded to S3 during the release process, the SHA-256 of those files is recorded and stored in a place accessible to the Mondoo server.
+
+Every time the Lambda function updates, it first reads the SHA-256 of each file in the target S3 bucket and compares that to the expected (stored) hash. If the SHA-256 doesn't match, the Lambda doesn't update. Mondoo support receives an alert when this occurs.
+
+## What happens if I delete the CloudFormation stack?
+
+When the CloudFormation stack is deleted, the lambda function receives a notification and immediately deletes all AWS resources created by Mondoo. Mondoo Platform UI will display the integration as deleted. No data will be lost in Mondoo Platform. A CloudFormation stack can be deleted and recreated multiple times.
+
+## How much will operating the Mondoo AWS Integration cost?
+
+Most of the costs associated with the Mondoo AWS Integration fall into the free tier category. Over the course of a month, an example AWS Integration incurred this resource usage:
+
+- CloudWatch PutLogs: 1GB (First 5GB per month of log data ingested is free)
+- CloudWatch TimedStorage: 0.16GB (First 5GB-mo per month of logs storage is free)
+- CloudWatch Events: 8,000 64k chunk events ($1.00 per million EventBridge custom events received)
+- Lambda-GB-Seconds: 76,000 seconds (Compute Free Tier - 400,000 GB-Seconds)
+- Lambda Request: 11,000 requests (Requests Free Tier - 1,000,000 Requests)
+- SNS HTTP: 2,000 notifications (First 100,000 Amazon SNS HTTP/HTTPS Notifications per month are free)
+- SNS requests: 3,000 requests (First 1,000,000 Amazon SNS API Requests per month are free)
+- SQS requests: 626,000 requests (First 1,000,000 Amazon SQS Requests per month are free)
+- Simple Storage Service--Tier1: 257 requests ($0.00 per request - PUT, COPY, POST, or LIST requests under the monthly global free tier)
+- Simple Storage Service--Tier2: 41 requests ($0.00 per request - GET and all other requests under the monthly global free tier)
+
+## What do you about rate limiting?
+
+We spread out scan jobs to prevent too many calls to the EC2 and SSM apis. If the Lambda function encounters a rate limiting error, it automatically pauses all scan jobs for 15 minutes.
+
+## Can I see what runs?
+
+The AWS CloudFormation JSON and Lambda zip are available as part of the Mondoo S3 bucket:
+
+- [Mondoo StackSet CloudFormation](https://s3.amazonaws.com/mondoo-dev.us-east-1/mondoo-lambda-stackset-cf.json) (applies only to AWS Organization-level installations)
+- [Mondoo Stack CloudFormation](https://s3.amazonaws.com/mondoo.us-east-1/mondoo-root-cf.json) (applies only to single-account installations)
+- [Nested Stack CloudFormation](https://s3.amazonaws.com/mondoo.us-east-1/mondoo-lambda-cf.json) (applies only to single-account installations)
+- [Lambda Zip](https://s3.amazonaws.com/mondoo-dev.us-east-1/mondoo-lambda.zip)
+
+## Learn more
+
+- [AWS Integration Troubleshooting](/docs/platform/infra/cloud/aws/aws-integration-troubleshooting)
+- [Scan Continuously with an AWS Integration](/docs/platform/infra/cloud/aws/aws-integration-scan)
+
+---

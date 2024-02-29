@@ -1,0 +1,37 @@
+name: "PREview: Delete"
+
+on:
+  pull_request:
+    types: [closed]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - uses: mshick/add-pr-comment@v2
+        with:
+          message: |
+            **Cleaning up PREview environment...**
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          repo-token-user-login: "github-actions[bot]"
+          allow-repeats: true
+      - name: Obtain Bucket Name
+        uses: ./.github/actions/PREview-data
+      - name: Authenticate with Google Cloud
+        uses: "google-github-actions/auth@v2"
+        with:
+          credentials_json: "${{secrets.GCP_SERVICE_ACCOUNT}}"
+      - name: "Set up Cloud SDK"
+        uses: "google-github-actions/setup-gcloud@v2"
+      - name: Delete PReview bucket
+        run: gsutil rm -r gs://${BUCKET}
+      - uses: mshick/add-pr-comment@v2
+        if: success()
+        with:
+          message: |
+            **PREview environment deleted.**
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          repo-token-user-login: "github-actions[bot]"
+          allow-repeats: true

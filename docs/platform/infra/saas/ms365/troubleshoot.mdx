@@ -1,0 +1,84 @@
+---
+title: Test and Troubleshoot Microsoft 365 Configuration
+sidebar_label: Test and Troubleshoot
+sidebar_position: 3
+description: Test configuration of the Mondoo Microsoft 365 integration.
+image: /img/featured_img/mondoo-365.jpg
+---
+
+## Test the Microsoft 365 configuration
+
+Once you've configured Microsoft 365 to communicate with Mondoo, it's a good idea to test and ensure that the app registration and the permissions work as expected. You test using Mondoo's open source security scanning CLI, cnspec.## Download and install cnspec and an Azure policy bundle
+
+1. From your terminal (Linux shell, macOS shell, or Azure Cloud Shell), download the latest cnspec package from here: [https://releases.mondoo.com/cnspec/](https://releases.mondoo.com/cnspec/)
+
+Example:
+
+(This is just an example; be sure to use the latest version.)
+
+```bash
+wget https://releases.mondoo.com/cnspec/8.9.0/cnspec_8.9.0_linux_amd64.tar.gz
+tar -xvf cnspec_8.9.0_linux_amd64.tar.gz
+```
+
+2. From https://github.com/mondoohq/cnspec-policies/tree/main/core, download the open source Azure policy bundle (mondoo-ms365-security.mql.yaml):
+
+```bash
+git clone https://github.com/mondoohq/cnspec-policies.git
+```
+
+## Scan with cnspec
+
+Scan the platform using the downloaded policy bundle:
+
+```bash
+./cnspec scan ms365 --certificate-path certificate.combo.pem --tenant-id YOUR-TENANT-ID --client-id YOUR-CLIENT-ID --policy-bundle mondoo-ms365-security.mql.yaml
+```
+
+You can also run a specific policy:
+
+```bash
+./cnspec run ms365 -c 'microsoft.policies.identitySecurityDefaultsEnforcementPolicy["isEnabled"] == false' --certificate-path certificate.combo.pem --tenant-id YOUR-TENANT-ID --client-id YOUR-CLIENT-ID
+
+./cnspec run ms365 -c "microsoft.security.latestSecureScores.controlScores.one( _['controlName'] == 'MFARegistrationV2' &&  _['score'] == 9)" --certificate-path certificate.combo.pem --tenant-id YOUR-TENANT-ID --client-id YOUR-CLIENT-ID
+```
+
+For `YOUR-TENANT-ID`, and `YOUR-CLIENT-ID`, substitute your information.
+
+Pay special attention to the queries showing `Error` results; they can result from improper permissions.
+
+## Troubleshoot: Scan with cnspec using a client secret
+
+If the scan above is unsuccessful, try using a client secret to authenticate and scan.
+
+Create a client secret:
+
+1. From the Azure portal home, select **Microsoft Entra ID**.
+
+2. In the navigation sidebar, select **App registrations**.
+
+3. Select the app you created for Mondoo.
+
+4. In the sidebar under the app name, select **Certificate & secrets**.
+
+5. Select **New client secret**.
+
+6. Enter a description for the client secret.
+
+7. For Duration, specify a time after which the secret expires.
+
+8. Select **Add** and quickly record the `Value`; it will disappear shortly.
+
+Scan with cnspec using the client secret:
+
+```bash
+./cnspec scan ms365 --client-secret YOUR-CLIENT-SECRET-VALUE --tenant-id YOUR-TENANT-ID --client-id YOUR-CLIENT-ID --policy-bundle mondoo-ms365-security.mql.yaml
+```
+
+For `YOUR-TENANT-ID`, and `YOUR-CLIENT-ID`, substitute your Azure information.
+
+For `YOUR-CLIENT-SECRET-VALUE`, substitute the value you recorded above.
+
+If this scan is successful, then the issue is with your certificate. Follow the steps above again to provide a new certificate.
+
+---

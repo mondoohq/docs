@@ -1,0 +1,139 @@
+---
+title: Get Started with cnspec
+id: cnspec-get-started
+sidebar_label: Get Started
+displayed_sidebar: cnspec
+sidebar_position: 2
+description: Install and use cnspec, an open source, cloud-native tool for securing your full stack
+image: /img/featured_img/mondoo-feature.jpg
+---
+
+Welcome to cnspec, an open source project created by [Mondoo](https://mondoo.com)!
+
+:::note Learn about cnspec
+
+To discover cnspec's capabilities, read [What Is cnspec?](/cnspec/cnspec-about)
+
+:::
+
+import Partial from "./_include-install.mdx";
+
+<Partial />{" "}
+
+## Scan locally​
+
+Use the `cnspec scan` subcommand to check local and remote targets for misconfigurations and vulnerabilities. cnspec detects the target platform and runs policy checks specific to that system.
+
+This command evaluates the security of your local machine:
+
+```
+cnspec scan local
+```
+
+This (truncated) sample result shows the individual checks that cnspec performs according to the policy. It includes a summary of the scan with a letter grade:
+
+```
+Checks:
+✓ Pass:  Disable Media Sharing
+✓ Pass:  Do not enable the "root" account
+✓ Pass:  Disable Bluetooth Sharing
+✕ Fail:  Enable security auditing
+✓ Pass:  Enable Firewall
+...
+✕ Fail:  Ensure Firewall is configured to log
+✓ Pass:  Ensure nfs server is not running.
+✓ Pass:  Disable Content Caching
+✕ Fail:  Ensure AirDrop Is Disabled
+✓ Pass:  Control access to audit records
+
+
+Summary
+========================
+
+Target:     user-macbook-pro
+Score:      A    80/100     (100% completed)
+✓ Passed:   ███████████ 70% (21)
+✕ Failed:   ███ 17% (5)
+! Errors:   ██ 13% (4)
+» Skipped:  0% (0)
+
+Policies:
+A  80  macOS Security by Mondoo
+
+
+Scanned 1 assets
+
+macOS
+    B Stella.home
+
+For detailed output, run this scan with "-o full".
+```
+
+## Scan remote targets​
+
+You can also specify remote targets to scan.
+
+This example scans a docker image:
+
+```
+cnspec scan docker image ubuntu:22.04
+```
+
+This scans an aws account using the local AWS config:
+
+```
+cnspec scan aws
+```
+
+This scans a Kubernetes cluster using your local kubectl config:
+
+```
+cnspec scan k8s
+```
+
+This scans a GitHub repository:
+
+```
+export GITHUB_TOKEN=<personal_access_token>
+cnspec scan github repo <org/repo>
+```
+
+## Create a JSON report
+
+To save the results of your scan to a JSON file, append your scan command with the `-o` flag:
+
+```
+-o json > FILENAME.json
+```
+
+For `FILENAME`, substitute the name you want to give the file. For example, this scans a Kubernetes cluster and reports the results to a file named `k8s-test-results.json`:
+
+```
+cnspec scan k8s -o json > k8s-test-results.json
+```
+
+## Save, review, and share reports with Mondoo Platform​
+
+To save, review, and share reports, sign up for a free Mondoo account. [Mondoo's web-based console](https://console.mondoo.com/) allows you to navigate, search, and inspect all of your reports.
+
+To learn about more of Mondoo Platform's capabilities, visit [mondoo.com](https://mondoo.com/).
+
+To learn how to sign up for a free Mondoo account and register cnspec, read [Log into Mondoo Platform for More Capabilities](/cnspec/cnspec-platform/).
+
+## Learn more​
+
+- To get started with AWS, read [Assess AWS Security](/cnspec/cnspec-aws/).
+
+- To get started with Google Cloud, read [Assess Google Cloud Security](/cnspec/cnspec-gcp/).
+
+- To get started with Kubernetes, read [Assess Kubernetes Security](/cnspec/cnspec-k8s/).
+
+- To explore cnspec commands, read the [CLI Reference](/cnspec/cli/cnspec).
+
+- To learn more about policies, read [Manage Policies](/cnspec/cnspec-policies).
+
+- To learn how to structure and build your own policies, read the Mondoo [Policy Authoring Guide](/cnspec/cnspec-policies/write/).
+
+- To learn what technologies cnspec integrates with, read [Supported Scan Targets](/cnspec/cnspec-supported).
+
+---

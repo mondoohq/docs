@@ -1,0 +1,91 @@
+---
+title: Export Data to Amazon S3
+sidebar_label: Amazon S3
+sidebar_position: 2
+description: Configure a Mondoo S3 integration to export Mondoo data to S3 storage
+image: /img/featured_img/mondoo-aws.jpg
+---
+
+The Mondoo Amazon S3 integration lets you continuously export your space data, such as assets, vulnerabilities, and scan results to an Amazon S3 bucket. The export runs approximately every 24 hours.
+
+## Requirements
+
+To export data to Amazon S3, you must have:
+
+- An Amazon account with an S3 bucket. To learn more, read the [Amazon S3 documentation](https://docs.aws.amazon.com/s3/index.html).
+
+- An _access key ID_ and _secret access key_ pair for programmatic access to the S3 bucket. To learn more, read [Programmatic Access](https://docs.aws.amazon.com/IAM/latest/UserGuide/security-creds.html#sec-access-keys-and-secret-access-keys) in the AWS documentation.
+
+## Add a new Amazon S3 integration
+
+1. Access the Integrations > Add > Amazon S3 page in one of two ways:
+
+   - New space setup: After creating a new Mondoo account or creating a new space, the initial setup guide welcomes you. Select **BROWSE INTEGRATIONS** and then select **Amazon S3**.
+
+     ![Welcome to Mondoo Page](/img/platform/start/welcome_to_mondoo.png)
+
+   - INTEGRATIONS page: Navigate to **INTEGRATIONS**. Under Exports, select **Amazon S3**.
+
+     ![Add an export integration](/img/platform/maintain/export/add-integration-exports.png)
+
+2. In the **Choose an integration name** box, enter a name for the integration. Make it a name that lets you easily recognize the Amazon S3 data warehouse.
+
+   ![Amazon S3 integration - top](/img/platform/maintain/export/s3/s3-add-top.png)
+
+3. In the **Bucket name** box, enter the name of the S3 storage bucket to which you want to export Mondoo data.
+
+4. In the **Region** box, enter the region ID of the bucket to which you want to export Mondoo data.
+
+5. Under **Export as**, select the file format in which to export Mondoo data:
+
+   - To export as JSON Lines, select **.jsonl**.
+
+   - To export as comma-separated values, select **.csv**.
+
+6. In the **Access Key ID** box, enter the ID portion of the access key pair you generated for programmatic access to the S3 bucket.
+
+7. In the **Secret Access Key** box, enter the secret portion of the access key pair you generated for programmatic access to the S3 bucket.
+
+8. To complete the integration, select the **CREATE EXPORT** button.
+
+   Mondoo begins exporting information from your space. When this initial export completes, the integration status becomes **ACTIVE**. Mondoo performs an export approximately every 24 hours.
+
+## View your Amazon S3 integration
+
+1. In the side navigation bar, under Integrations, select **Amazon S3**.
+
+   ![Amazon S3 integrations list](/img/platform/maintain/export/s3/s3-status.png)
+
+2. In the list of Amazon S3 integrations, select the integration you want to view.
+
+   ![Amazon S3 integrations list](/img/platform/maintain/export/s3/s3-view-int.png)
+
+### Statuses
+
+The possible statuses for a Amazon S3 integration are:
+
+- **ACTIVE**: The integration is active/healthy.
+- **PENDING**: Mondoo has not yet attempted to connect to Amazon S3.
+- **ERROR**: Mondoo detected an error during export.
+
+### Export data to Amazon S3 at any time
+
+Mondoo exports your data to Amazon S3 approximately every 24 hours. You can also manually export data at any time. Use the **SCHEDULE NOW** button to request an export right away. Mondoo begins the export as soon as possible. If Mondoo is processing a lot of data, there can be some delay until Mondoo has sufficient resources.
+
+### Remove an integration
+
+To remove an integration, select the trash can icon. A confirmation prompt displays. Once you confirm the deletion, Mondoo removes the configured integration and stops triggering exports to the Amazon S3 database.
+
+:::info
+
+Mondoo does not delete existing exported data. You must delete the data manually.
+
+:::
+
+## Next steps
+
+- [Learn more about Mondoo](/platform/start/plat-what-is/)
+
+- [Export data to other platforms](/platform/maintain/export/overview)
+
+---

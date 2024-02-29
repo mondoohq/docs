@@ -1,0 +1,28 @@
+## Download and install cnspec
+
+Install cnspec with our installation script:
+
+### Linux and macOS
+
+```bash
+bash -c "$(curl -sSL https://install.mondoo.com/sh)"
+```
+
+(You can read the [Linux/macOS installation script](https://install.mondoo.com/sh).)
+
+### Windows
+
+```powershell
+Set-ExecutionPolicy Unrestricted -Scope Process -Force;
+[System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072;
+iex ((New-Object System.Net.WebClient).DownloadString('https://install.mondoo.com/ps1/cnspec'));
+Install-Mondoo -Product cnspec;
+```
+
+(You can read the [Windows installation script](https://install.mondoo.com/ps1/cnspec).)
+
+### Installation options
+
+Manual installation packages are available on [GitHub releases](https://github.com/mondoohq/cnspec/releases/latest).
+
+To learn about other installation methods, versioning, and other considerations, read [Extended Installation Options for cnspec](/cnspec/cnspec-adv-install/overview/).

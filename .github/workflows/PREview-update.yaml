@@ -1,0 +1,51 @@
+name: "PREview: Update"
+
+on:
+  pull_request:
+    types: [synchronize]
+
+jobs:
+  data:
+    runs-on: ubuntu-latest
+    outputs:
+      branch: ${{ steps.data.outputs.branch }}
+      bucket: ${{ steps.data.outputs.bucket }}
+      url: ${{ steps.data.outputs.url }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Determine branch shortname, bucket name and URL.
+        id: data
+        shell: bash
+        run: |
+          BRANCH=`echo ${GITHUB_HEAD_REF} | sed 's/.*\///'`
+          echo "::set-output name=branch::${BRANCH}"
+          echo "::set-output name=bucket::mondoo-pre-docs-${BRANCH}/docs"
+          echo "::set-output name=url::https://mondoo-pre-docs-${BRANCH}.storage.googleapis.com/docs/index.html"
+
+  build:
+    uses: ./.github/workflows/_build.yaml
+    with:
+      output_dir: build
+    secrets: inherit
+
+  deploy-update:
+    needs: [data, build]
+    uses: ./.github/workflows/_deploy.yaml
+    with:
+      src_dir: build
+      bucket: ${{ needs.data.outputs.bucket }}
+    secrets: inherit
+
+  notify:
+    runs-on: ubuntu-latest
+    needs: [deploy-update, data]
+    steps:
+      - uses: mshick/add-pr-comment@v2
+        if: success()
+        with:
+          message: |
+            **PREview has been updated at ${{ needs.data.outputs.url }}**
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          repo-token-user-login: "github-actions[bot]"
+          allow-repeats: true

@@ -1,0 +1,103 @@
+---
+title: Gather Evidence of Compliance
+sidebar_label: Gather Evidence
+sidebar_position: 3
+description: Mondoo always shows your level of compliance with major frameworks
+image: /img/featured_img/mondoo-feature.jpg
+---
+
+Mondoo continuously assesses your compliance. At any time, you can:
+
+- View up-to-date information on whether your infrastructure complies with your chosen [frameworks](/platform/compliance/monitor/frameworks/)
+
+- See a space's overall compliance and drill down into the details for different [controls, checks](/platform/compliance/monitor/frameworks/), and assets
+
+- Generate a report to export or print evidence of (or progress toward) compliance
+
+## View a space's compliance progress
+
+Mondoo expresses overall compliance as a percentage. A space is compliant with a framework only when it reaches 100%. Lower percentages show _progress_ toward full compliance.
+
+View a space's progress toward compliance with all available frameworks on the Compliance page:
+
+1.  In the [Mondoo Console](https://console.mondoo.com), [navigate](/platform/start/navigate/) to the space where you want to enable the policies.
+
+    ![Space in the Mondoo Console](/img/platform/security/monitor-org.png)
+
+2.  In the side navigation bar, under **Compliance**, select **Frameworks**.
+
+    ![Compliance in the Mondoo Console](/img/platform/compliance/home.png)
+
+    The Compliance page shows all available frameworks and the space's progress toward compliance with each of them.
+
+## View evidence of compliance
+
+From the Compliance Frameworks page, you can select a framework to learn more about the space's compliance with that framework.
+
+![Compliance in the Mondoo Console](/img/platform/compliance/framework.png)
+
+**COMPLETION** shows overall progress toward compliance.
+
+**CONTROL DISTRIBUTION** shows a high-level view of the state of controls in the framework: enabled, snoozed, and disabled. To learn about control states, read [Customize Compliance](/platform/compliance/customize/overview/).
+
+Using the tabs in the lower portion of the framework page, you can drill down into different details.
+
+- The **Controls** tab lists all the controls in the framework. You can see your progress on each control and select a control to see details on the checks it maps to.
+
+- The **Policies** tab lists all the policies that contain the checks this framework maps to. You can enable, snooze, and disable policies.
+
+- The **Assets** tab shows the compliance progress of all the assets in the space. You can select an asset to view its details.
+
+- The **Exceptions** tab shows any customization you've created for the framework. To learn more, read [Customize Compliance](/platform/compliance/customize/overview/).
+
+## Generate a compliance report
+
+To provide evidence to auditors, you can generate a report on a space's compliance with an entire framework or an individual control. Mondoo creates reports in PDF format.
+
+![Mondoo compliance report - framework](/img/platform/compliance/report-framework.png)
+
+![Mondoo compliance report - controls](/img/platform/compliance/report-controls.png)
+
+1. In the [Mondoo Console](https://console.mondoo.com), [navigate](/platform/start/navigate/) to the space for which you want to generate a compliance report.
+
+   ![Space in the Mondoo Console](/img/platform/security/monitor-org.png)
+
+2. In the side navigation bar, under **Compliance**, select **Frameworks**.
+
+   ![Compliance in the Mondoo Console](/img/platform/compliance/home.png)
+
+3. Select the framework for which you want to create a compliance report.
+
+   If you want to create a report on a single control, select the control in the **Controls** table.
+
+4. To the right of the framework or control title, select the **Generate Report** (download symbol) icon.
+
+   ![Generate a Mondoo compliance report](/img/platform/compliance/report-icon.png)
+
+5. Enter a name for the report and select the **GENERATE REPORT** button.
+
+   ![Name a Mondoo compliance report](/img/platform/compliance/report-dialog.png)
+
+6. Select the **VIEW REPORTS** button to go to the Compliance Reports page. It can take some time for Mondoo to generate a PDF with all the requested compliance data. If the new report is still in progress, you can leave and return to the Compliance Reports page later to retrieve it.
+
+   ![Mondoo compliance reports](/img/platform/compliance/reports-page.png)
+
+## Delete compliance reports
+
+1. In the [Mondoo Console](https://console.mondoo.com), [navigate](/platform/start/navigate/) to the space for which you want to delete a compliance report.
+
+   ![Space in the Mondoo Console](/img/platform/security/monitor-org.png)
+
+2. In the side navigation bar, under **Compliance**, select **Reports**.
+
+   ![Mondoo compliance reports](/img/platform/compliance/reports-page.png)
+
+3. Select the trash can icon on the row of the report you want to delete.
+
+:::tip
+
+To delete multiple reports at once, check the boxes next to the reports and then select the **DELETE** button.
+
+:::
+
+---

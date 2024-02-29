@@ -1,0 +1,199 @@
+---
+title: Register cnspec
+sidebar_label: Register cnspec with Mondoo
+sidebar_position: 7
+displayed_sidebar: cnspec
+description: This page provides details on registering cnspec with Mondoo Platform.
+image: /img/featured_img/mondoo-feature.jpg
+---
+
+If you install cnspec on an asset using a system package instead of Mondoo’s automated installation script, you must register the asset manually.
+
+:::note
+
+If you need to _automate_ registering cnspec, read [Registering cnspec Using a Credentials File](registration-keys.md).
+
+:::
+
+1. Log into the [Mondoo Console](https://console.mondoo.com).
+
+2. [Navigate](/platform/start/navigate/) to the [region](/docs/platform/start/organize/regions.md), [organization](/docs/platform/start/organize/organizations.md), and [space](/docs/platform/start/organize/spaces.md) where you want to see the new asset's scan results.
+
+3. In the left navigation, under **Integrations**, select **Add New Integration**.
+
+4. Select your operating system and copy the registration token.
+
+5. Open a terminal and run this command:
+
+   ```bash title="Register cnspec"
+   cnspec login --token "<PASTE_YOUR_TOKEN_HERE>"
+   ```
+
+   This command uses the token to create a service account that lets cnspec report results to Mondoo Platform.
+
+:::note IMPORTANT
+
+For cnspec to continuously transmit results to the Mondoo Platform, the Mondoo configuration must be stored in a specific location. To do this, use the cnspec `--config` parameter:
+
+- Windows:
+  `cnspec login --token "<PASTE_YOUR_TOKEN_HERE>" --config "C:\ProgramData\Mondoo\mondoo.yml"`
+- Linux:
+  `cnspec login --token "<PASTE_YOUR_TOKEN_HERE>" --config "/etc/opt/mondoo/mondoo.yml"`
+
+:::
+
+:::info
+
+Communication with Mondoo Platform is encrypted using HTTPS. The payload is signed to ensure it has not been tampered with.
+
+:::
+
+## Validate registration
+
+The `cnspec status` command validates cnspec registration and ensures that communication with Mondoo Platform is successful.
+
+```bash title="Unregistered cnspec"
+cnspec status
+→ loaded configuration from /Users/stella/.config/mondoo/mondoo.yml using source default
+→ Platform:		macos
+→ Version:		13.4.1
+→ Hostname:		stella.home
+→ IP:			192.168.254.21
+→ Time:			2024-02-27T12:07:41-08:00
+→ Version:		10.5.0 (API Version: 10)
+→ Latest Version:	10.5.0
+→ Installed Providers:	 core | mock | os
+→ API ConnectionConfig:	https://api.edge.mondoo.com
+→ API Status:		SERVING
+→ API Time:		2024-02-27T20:07:42Z
+→ API Version:		10
+x client is not registered
+x could not connect to mondoo platform
+```
+
+```bash title="Correctly registered client"
+cnspec status
+→ loaded configuration from /Users/mwezi/.config/mondoo/mondoo.yml using source default
+→ Platform:		macos
+→ Version:		13.4.1
+→ Hostname:		mwezi.home
+→ IP:			192.168.254.21
+→ Time:			2024-02-27T12:07:41-08:00
+→ Version:		10.5.0 (API Version: 10)
+→ Latest Version:	10.5.0
+→ Installed Providers:	arista | aws | azure | core | mock | os
+→ API ConnectionConfig:	https://api.edge.mondoo.com
+→ API Status:		SERVING
+→ API Time:		2024-02-27T20:07:42Z
+→ API Version:		10
+→ Owner:		//captain.api.mondoo.app/spaces/lunalectric-team-workstations
+→ Client:		//agents.api.mondoo.app/spaces/lunalectric-team-workstations/agents/2SARlZgQnFLAzj7jfiS1Fx2HBz8
+→ Service Account:      //agents.api.mondoo.app/spaces/lunalectric-team-workstations/serviceaccounts/2bMtksUk9EjrI5MC3tTf6UmhNC2
+→ client is registered
+→ client authenticated successfully
+```
+
+```bash title="Invalid cnspec registration"
+cnspec status
+→ loaded configuration from /Users/cosmo/.config/mondoo/mondoo.yml using source default
+→ Platform:		macos
+→ Version:		13.4.1
+→ Hostname:		cosmo.home
+→ IP:			192.168.254.21
+→ Time:			2024-02-27T12:07:41-08:00
+→ Version:		10.5.0 (API Version: 10)
+→ Latest Version:	10.5.0
+→ Installed Providers:	arista | aws | azure | core | mock | os
+→ API ConnectionConfig:	https://api.edge.mondoo.com
+→ API Status:		SERVING
+→ API Time:		2024-02-27T20:07:42Z
+→ API Version:		10
+→ Owner:		//captain.api.mondoo.app/spaces/lunalectric-team-workstations
+→ Client:		//agents.api.mondoo.app/spaces/lunalectric-team-workstations/agents/2SARlZgQnFLAzj7jfiS1Fx2HBz8
+→ Service Account:      //agents.api.mondoo.app/spaces/lunalectric-team-workstations/serviceaccounts/2bMtksUk9EjrI5MC3tTf6UmhNC2
+→ client is registered
+x could not connect to mondoo platform error="rpc error: code = Unauthenticated desc = request permission unauthenticated"permission unauthenticated"
+```
+
+```bash title="No current system time (clock skew detected)"
+cnspec status
+cnspec status
+→ loaded configuration from /Users/cosmo/.config/mondoo/mondoo.yml using source default
+→ Platform:		macos
+→ Version:		13.4.1
+→ Hostname:		tsuki.home
+→ IP:			192.168.254.21
+→ Time:			2024-02-27T12:07:41-08:00
+→ Version:		10.5.0 (API Version: 10)
+→ Latest Version:	10.5.0
+→ Installed Providers:	 aws | azure | core | mock | os
+→ API ConnectionConfig:	https://api.edge.mondoo.com
+→ API Status:		SERVING
+→ API Time:		2024-02-27T20:07:42Z
+→ API Version:		10
+→ Owner:		//captain.api.mondoo.app/spaces/lunalectric-team-workstations
+→ Client:		//agents.api.mondoo.app/spaces/lunalectric-team-workstations/agents/2SARlZgQnFLAzj7jfiS1Fx2HBz8
+→ Service Account:      //agents.api.mondoo.app/spaces/lunalectric-team-workstations/serviceaccounts/2bMtksUk9EjrI5MC3tTf6UmhNC2
+→ client is registered
+→ client authenticated successfully
+! possible clock skew detected: 72h0m6.277868s
+```
+
+## Annotate (tag) an asset during registration
+
+Use Mondoo annotations to add metadata to an asset. Annotations are key-value pairs that let you identify, tag, or categorize your assets. Add whatever metadata you need. Some examples are:
+
+| Example key | Example value         |
+| ----------- | --------------------- |
+| owner       | cosmo@lunalectric.com |
+| build       | terraform             |
+| asset-tag   | luna000262            |
+| team        | 01research            |
+
+You can reuse key-value pairs or you can reuse only the key and give each asset a unique value.
+
+For example, suppose you're matching annotations to the physical asset tags on your company's workstations. You'd give every workstation in your infrastructure an `asset tag` key, but give each workstation a unique value to match the unique physical tags.
+
+As another example, you might assign the key `build` and the value `terraform` to every asset in your infrastructure that is built using Terraform.
+
+To include an annotation when you register an asset, include the `--annotation` flag in the `cnspec login` command and provide the key and value:
+
+```bash
+cnspec login --token "PASTE_YOUR_TOKEN_HERE" --annotation KEY=VALUE --config "/etc/opt/mondoo/mondoo.yml"
+```
+
+For example:
+
+```bash
+cnspec login --token 'eyJh9vLmFwcC9zcGFjZXMvdGhpcnN0eS1tZWl0bmVyLTU5OTIyNSIsInNwYWNlIjoiLy9jYXB0YWluLmFwaS5tb25kb28uYXBwL3NwYWNlcy90aGlyc3R5LW1laXRuZXItNTk5MjI1Iiwic3ViIjoiLy9jYXB0YWluLmFwaS5tb25kb28uYXBwL3VzZXJzLzI3ZkVlc2hzMHNyT0ZzdWExWTY0ajRoblFmWiJ9.le5xx5sp5Qb7WoK0vWUS1wpeSOgpWR8cNjCBYqFfImDxRh_m2KpMFx3MN4K4Gv2DeEKfj4S4wWWEsoDLkenBGhgF2cZlPG7kidguLqcNOFxoRRQoMUgX-78DH8sUaTpi' --annotation owner=cosmo@lunalectric.org --config "/etc/opt/mondoo/mondoo.yml"
+```
+
+:::tip
+
+You can also add an annotation when you scan an asset. Include the `--annotation` flag in the `cnspec scan` command and provide the key and value:
+
+```bash
+cnspec scan local --annotation KEY=VALUE
+```
+
+For example:
+
+```bash
+cnspec scan local --annotation asset-tag=luna0003644
+```
+
+:::
+
+## Specify a proxy server for communication with Mondoo
+
+You can specify a proxy server for communication between cnspec and Mondoo Platform. This is useful if your default system proxy restricts communication, or if you need to monitor different types of traffic.
+
+1. Find the Mondoo configuration file: `/etc/opt/mondoo/mondoo.yml`.
+
+2. Add this line to `mondoo.yml`:
+
+   ```yaml
+   api_proxy: https://1.1.1.1:8080
+   ```
+
+---

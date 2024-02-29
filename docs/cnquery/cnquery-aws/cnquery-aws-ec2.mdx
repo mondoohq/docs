@@ -1,0 +1,134 @@
+---
+title: Query EC2 Instances
+id: cnquery-aws-ec2
+sidebar_label: Query AWS EC2 Instances
+displayed_sidebar: cnquery
+sidebar_position: 30
+description: Explore and analyze the configuration of AWS EC2 instances
+image: /img/featured_img/mondoo-aws.jpg
+---
+
+Now that you have an introduction to [querying your AWS account](/cnquery/cnquery-aws/cnquery-aws-account/) with cnquery, let's dive deeper and explore EC2 instances.
+
+We'll continue working in the cnquery shell, which makes running individual queries easy. If it's not already open, enter `cnquery shell aws` in your terminal. To learn about accessing your AWS account with cnquery, read [Query AWS Infrastructure](/cnquery/cnquery-aws/).
+
+## EC2 resources
+
+cnquery provides answers to any question about your EC2 instances. To discover all the resources and fields you can query, read [aws.ec2](/mql/resources/aws-pack/aws.ec2/). You can also use the `help` command in the shell:
+
+```coffee
+help aws.ec2
+```
+
+In this tutorial we'll explore just a few of the possibilities.
+
+## Run simple queries on EC2 instances
+
+This query gathers all your EC2 instances:
+
+```coffee
+aws.ec2.instances
+```
+
+It returns each instance's ARN and current state:
+
+```coffee
+aws.ec2.instances: [
+  0: aws.ec2.instance arn="arn:aws:ec2:us-east-1:921877552404:instance/i-06e2eaa19a4fa883e" state="stopped"
+  1: aws.ec2.instance arn="arn:aws:ec2:us-east-1:921877552404:instance/i-0facc86d89af823af" state="stopped"
+  2: aws.ec2.instance arn="arn:aws:ec2:us-east-1:921877552404:instance/i-0b24443c8d18fdbab" state="running"
+  3: aws.ec2.instance arn="arn:aws:ec2:us-west-1:921877552404:instance/i-020eed3b1e4965d8d" state="running"
+  4: aws.ec2.instance arn="arn:aws:ec2:us-west-1:921877552404:instance/i-08f2ba2424027454a" state="running"
+]
+```
+
+## Specify fields to include in results
+
+You can request specific data by including the field names. For example, this query collects the ARN and any assigned tags for each instance:
+
+```coffee
+aws.ec2.instances { arn tags }
+```
+
+It returns a list with only the information you asked for:
+
+```coffee
+aws.ec2.instances: [
+  0: {
+    tags: {
+      Name: "k8s-operator01"
+      owner: "suki@lunalectric.com"
+    }
+    arn: "arn:aws:ec2:us-east-1:921877552404:instance/i-06e2eaa19a4fa883e"
+  }
+  1: {
+    tags: {
+      Name: "vm-with-ebs-iam-role"
+    }
+    arn: "arn:aws:ec2:us-east-1:921877552404:instance/i-0facc86d89af823af"
+  }
+  2: {
+    tags: {
+      Name: "amazonlinux2-for-ebs-volume-scan"
+      owner: "kembe@lunalectric.com"
+    }
+    arn: "arn:aws:ec2:us-east-1:921877552404:instance/i-0b24443c8d18fdbab"
+  }
+  3: {
+    tags: {}
+    arn: "arn:aws:ec2:us-west-1:921877552404:instance/i-020eed3b1e4965d8d"
+  }
+  4: {
+    tags: {
+      Name: "amos-linux"
+    }
+    arn: "arn:aws:ec2:us-west-1:921877552404:instance/i-08f2ba2424027454a"
+  }
+]
+```
+
+## Filter results
+
+You can filter results based on any fields. Specify the criteria using the `where` function and standard boolean operators.
+
+For example, this query requests only EC2 instances that do not have an `owner` tag:
+
+```coffee
+aws.ec2.instances.where(tags['owner'] == null)
+```
+
+It lists each instance's ARN and status:
+
+```coffee
+aws.ec2.instances.where: [
+  0: aws.ec2.instance arn="arn:aws:ec2:us-east-1:921877552404:instance/i-06e2eaa19a4fa883e" state="stopped"
+  1: aws.ec2.instance arn="arn:aws:ec2:us-east-1:921877552404:instance/i-0facc86d89af823af" state="stopped"
+  2: aws.ec2.instance arn="arn:aws:ec2:us-west-1:921877552404:instance/i-020eed3b1e4965d8d" state="running"
+  3: aws.ec2.instance arn="arn:aws:ec2:us-west-1:921877552404:instance/i-08f2ba2424027454a" state="running"
+]
+```
+
+This finds large (more expensive) EC2 instances:
+
+```coffee
+aws.ec2.instances.where(instanceType == /^.*.large$/) { arn instanceType }
+```
+
+It returns a list of all instances that have an `instanceType` with `large` in the name.
+
+This similar query finds T-type instances (such as T2, or T4g):
+
+```coffee
+aws.ec2.instances.where(instanceType == /^[t].*/) { instanceType }
+```
+
+## Learn more about querying EC2 instances
+
+- To learn more about how the MQL query language works, read [Write Effective MQL](/mql/mql.write/).
+- For a list of all the AWS resources and fields you can query, read [aws.ec2](/mql/resources/aws-pack/aws.ec2/).
+
+## Next step
+
+To discover more of cnquery's AWS capabilities, [query your EKS clusters](/cnquery/cnquery-aws/cnquery-aws-eks/).
+
+---

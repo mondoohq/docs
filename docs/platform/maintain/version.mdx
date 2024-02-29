@@ -1,0 +1,28 @@
+---
+title: Releases and Versions
+sidebar_label: Releases and Versions
+sidebar_position: 6
+description: Learn about Mondoo's versioning policy and how to make sure you have the latest release
+---
+
+Mondoo Platform is web-based SaaS, so you never need to upgrade to get the latest Mondoo Console and administrative software. However, [cnspec](/platform/infra/opsys/mondoo-cnspec/), Mondoo's CLI that powers some Mondoo integrations, is a binary that you manage on your assets.
+
+:::note
+
+You're responsible for updating cnspec across your infrastructure. To learn how, read [Update cnspec](/cnspec/cnspec-adv-install/update/).
+
+:::
+
+## How Mondoo versioning works
+
+Mondoo's versioning policy is _based on_ the semantic versioning standard. For example, in version 6.3.2, 6 is the major version, 3 is the minor version, and 2 is the patch. When we release a new version, we increment one of these three version components depending on the type of changes we introduce.
+
+### Breaking changes
+
+Major version releases of Mondoo contain _soft-breaking_ changes. These may require you to update your integrations, policies, or automation scripts in order to avoid disruption, but you have a long time to make those updates. We provide advanced warning before we make these changes, and they don't become _hard-breaking_ changes until the next major release.
+
+## Get help
+
+Can't find what you need? Join our <a href="https://mondoo.link/slack">community Slack channel</a> to chat with us and other Mondoo users.
+
+---

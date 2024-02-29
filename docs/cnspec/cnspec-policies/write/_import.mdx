@@ -1,0 +1,106 @@
+---
+title: Policy Authoring Guide | Import Policies
+sidebar_label: Import Policies
+displayed_sidebar: cnspec
+sidebar_position: 6
+description: Import a policy from one bundle into another bundle
+image: /img/featured_img/mondoo-feature.jpg
+---
+
+THIS TOPIC IS NOT VISIBLE TO READERS
+
+Now that you've learned how to [break policies into chapters](/cnspec/cnspec-policies/write/chapters/), you can learn how to import policies into a policy bundle.
+
+Importing policies is another organizational tactic that can also save time. You can import a policy from a Mondoo policy bundle or from another one of your own policy bundles.
+
+Here's a simple example of a policy bundle containing one policy:
+
+```yaml showLineNumbers
+policies:
+  - uid: simple-example1
+    mrn: //policies/simple-example1
+    name: Simple example policy 1
+    version: "1.0.0"
+    scoring_system: highest impact
+    authors:
+      - name: Lunalectric
+        email: security@lunalectric.com
+    groups:
+      - checks:
+          - uid: sshd-01
+            title: Ensure the port is set to 22
+            mql: sshd.config.params["Port"] == 22
+            impact: 30
+
+          - uid: sshd-02
+            title: Prevent weaker CBC ciphers from being used
+            mql: sshd.config.ciphers.none( /cbc/ )
+            impact: 60
+
+        queries:
+          - uid: sshd-d-1
+            title: Gather SSH config params
+            mql: sshd.config.params
+```
+
+Notice the `mrn` on line 3. This value allows you to import the policy into other policies or policy bundles.
+
+Here's an example of a policy that imports `Simple example policy 1`.
+
+```yaml showLineNumbers
+policies:
+  - uid: example-with-chapters
+    name: Simple example with chapters
+    version: "1.0.0"
+    scoring_system: highest impact
+    authors:
+      - name: Lunalectric
+        email: security@lunalectric.com
+    groups:
+      - type: chapter
+        title: SSH
+        checks:
+          - uid: sshd-01
+            title: Ensure the port is set to 22
+            mql: sshd.config.params["Port"] == 22
+            impact: 30
+
+          - uid: sshd-02
+            title: Prevent weaker CBC ciphers from being used
+            mql: sshd.config.ciphers.none( /cbc/ )
+            impact: 60
+        queries:
+          - uid: sshd-d-1
+            title: Gather SSH config params
+            mql: sshd.config.params
+            - type: chapter
+
+        type: chapter
+        title: Packages
+        checks:
+          - uid: pkg-01
+            title: Ensure AIDE is installed
+            mql: package("aide").installed
+            impact: 70
+
+          - uid: pkg-02
+            title: Ensure prelink is disabled
+            mql: package("prelink").installed == false
+            impact: 70
+```
+
+The policy contains two chapters:
+
+- The `SSH` chapter begins on line 10. It has two checks and one query, all concerning SSH parameters.
+
+- The `Packages`chapter begins on line 28. It has two checks, both of which concern installed packages.
+
+A policy can have as many chapters as you need.
+
+## Next steps
+
+- To learn about controlling the types of assets a policy applies to, read [Limit Target Assets with Filters](/cnspec/cnspec-policies/write/filters/).
+
+- If you're ready to create your own policy: To learn how to set up, validate, and store policy bundles, read [Manage Policies](/cnspec/cnspec-policies/cnspec-manage-policies/).
+
+---

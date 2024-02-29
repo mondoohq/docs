@@ -23,13 +23,12 @@ jobs:
     needs: [deploy-update]
     steps:
       - name: Obtain URL
-        id: data
         uses: ./.github/actions/PREview-data
       - uses: mshick/add-pr-comment@v2
         if: success()
         continue-on-error: true
         with:
           message: |
-            **PREview has been updated at ${{ steps.data.outputs.url }}**
+            **PREview has been updated at ${{ env.URL }}**
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           allow-repeats: true

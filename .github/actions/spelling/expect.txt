@@ -90,6 +90,7 @@ dbf
 dcea
 Ddos
 debconf
+deliverychannel
 dfw
 dgrrz
 DHE

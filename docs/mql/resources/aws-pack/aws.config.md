@@ -20,10 +20,11 @@ Use the `aws.config` resource to assess the configuration of the AWS Config serv
 
 **Fields**
 
-| ID        | TYPE                                                    | DESCRIPTION                                                    |
-| --------- | ------------------------------------------------------- | -------------------------------------------------------------- |
-| recorders | &#91;&#93;[aws.config.recorder](aws.config.recorder.md) | List of configuration recorders for each region in the account |
-| rules     | &#91;&#93;[aws.config.rule](aws.config.rule.md)         | List of AWS Config rules                                       |
+| ID               | TYPE                                                                  | DESCRIPTION                                                    |
+| ---------------- | --------------------------------------------------------------------- | -------------------------------------------------------------- |
+| recorders        | &#91;&#93;[aws.config.recorder](aws.config.recorder.md)               | List of configuration recorders for each region in the account |
+| rules            | &#91;&#93;[aws.config.rule](aws.config.rule.md)                       | List of AWS Config rules                                       |
+| deliveryChannels | &#91;&#93;[aws.config.deliverychannel](aws.config.deliverychannel.md) | List of delivery channels for each region in the account       |
 
 **Examples**
 

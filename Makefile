@@ -18,16 +18,12 @@ build: yarn fmt
 serve: yarn fmt build
 	yarn run serve
 
-###
 ### Caddy
-###
 .PHONY: caddy/run
 caddy/run: build
 	PORT=8080 ROOT_DIR=./build caddy run
 
-###
 ### Dockerized for Cloud Run
-###
 .PHONY: container/build
 container/build: build
 	docker build --no-cache --platform linux/amd64 -t mondoo/docs .

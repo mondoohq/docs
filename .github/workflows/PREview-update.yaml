@@ -16,7 +16,6 @@ jobs:
     uses: ./.github/workflows/_deploy.yaml
     with:
       src_dir: build
-      bucket: ${{ needs.data.outputs.bucket }}
     secrets: inherit
 
   notify:

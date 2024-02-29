@@ -32,6 +32,7 @@ jobs:
         run: gsutil web set -m index.html -e 404.html gs://${BUCKET}
       - uses: mshick/add-pr-comment@v2
         if: success()
+        continue-on-error: true
         with:
           message: |
             **PREview environment has been created at [${{ env.URL }}](${{ env.URL }})**
@@ -77,6 +78,7 @@ jobs:
     steps:
       - uses: mshick/add-pr-comment@v2
         if: success()
+        continue-on-error: true
         with:
           message: |
             **PREview has been updated at ${{ needs.data.outputs.url }}**

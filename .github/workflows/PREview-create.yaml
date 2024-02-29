@@ -15,7 +15,6 @@ jobs:
           message: |
             **Starting creation of the PREview environment...**
           repo-token: ${{ secrets.GITHUB_TOKEN }}
-          repo-token-user-login: "github-actions[bot]"
           allow-repeats: true
       - name: Obtain Bucket Name
         uses: ./.github/actions/PREview-data
@@ -35,9 +34,8 @@ jobs:
         if: success()
         with:
           message: |
-            **PREview is ready at [${{ env.URL }}](${{ env.URL }})**
+            **PREview environment has been created at [${{ env.URL }}](${{ env.URL }})**
           repo-token: ${{ secrets.GITHUB_TOKEN }}
-          repo-token-user-login: "github-actions[bot]"
           allow-repeats: true
 
   data:
@@ -83,5 +81,4 @@ jobs:
           message: |
             **PREview has been updated at ${{ needs.data.outputs.url }}**
           repo-token: ${{ secrets.GITHUB_TOKEN }}
-          repo-token-user-login: "github-actions[bot]"
           allow-repeats: true

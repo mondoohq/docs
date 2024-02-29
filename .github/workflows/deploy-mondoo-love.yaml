@@ -32,5 +32,4 @@ jobs:
             **Deployment to mondoo.love/docs complete!**
             [https://mondoo.love/docs](https://mondoo.love/docs)
           repo-token: ${{ secrets.GITHUB_TOKEN }}
-          repo-token-user-login: "github-actions[bot]"
           allow-repeats: false

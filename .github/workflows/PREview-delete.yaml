@@ -15,7 +15,6 @@ jobs:
           message: |
             **Cleaning up PREview environment...**
           repo-token: ${{ secrets.GITHUB_TOKEN }}
-          repo-token-user-login: "github-actions[bot]"
           allow-repeats: true
       - name: Obtain Bucket Name
         uses: ./.github/actions/PREview-data
@@ -33,5 +32,4 @@ jobs:
           message: |
             **PREview environment deleted.**
           repo-token: ${{ secrets.GITHUB_TOKEN }}
-          repo-token-user-login: "github-actions[bot]"
           allow-repeats: true

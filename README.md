@@ -21,7 +21,7 @@ Note: Make sure to follow the instructions to update your shell's profile for No
 
 ### Install Docusaurus and other dependencies
 
-To set up Docusaurus and its dependencies, clone this repo and, in your local branch, run this command:
+To set up Docusaurus and its dependencies, clone this repo and run this command in the local copy:
 
 ```bash
 yarn install

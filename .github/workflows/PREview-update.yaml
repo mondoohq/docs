@@ -47,5 +47,4 @@ jobs:
           message: |
             **PREview has been updated at ${{ needs.data.outputs.url }}**
           repo-token: ${{ secrets.GITHUB_TOKEN }}
-          repo-token-user-login: "github-actions[bot]"
           allow-repeats: true

@@ -8,6 +8,10 @@ on:
         default: "build"
         required: false
         type: string
+      bucket:
+        description: "The GCS bucket to deploy to"
+        required: true
+        type: string
 
 jobs:
   deploy:
@@ -26,7 +30,5 @@ jobs:
           credentials_json: "${{ secrets.GCP_SERVICE_ACCOUNT }}"
       - name: "Set up Cloud SDK"
         uses: "google-github-actions/setup-gcloud@v2"
-      - name: Obtain Bucket Name
-        uses: ./.github/actions/PREview-data
       - name: Upload static content to buckets
-        run: gsutil -m -h "Cache-control:public, max-age=60" rsync -r -c -C -d ${{ inputs.src_dir }}/ gs://${BUCKET}
+        run: gsutil -m -h "Cache-control:public, max-age=60" rsync -r -c -C -d ${{ inputs.src_dir }}/ gs://${{ inputs.bucket }}

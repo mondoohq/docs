@@ -39,6 +39,19 @@ jobs:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           allow-repeats: true
 
+  data:
+    runs-on: ubuntu-latest
+    outputs:
+      URL: ${{ steps.data.outputs.URL }}
+      BUCKET: ${{ steps.data.outputs.BUCKET }}
+      BRANCH: ${{ steps.data.outputs.BRANCH }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Obtain URL
+        id: data
+        uses: ./.github/actions/PREview-data
+
   build:
     uses: ./.github/workflows/_build.yaml
     with:
@@ -46,10 +59,11 @@ jobs:
     secrets: inherit
 
   deploy-update:
-    needs: [build]
+    needs: [data, build]
     uses: ./.github/workflows/_deploy.yaml
     with:
       src_dir: build
+      bucket: ${{ needs.data.outputs.BUCKET }}
     secrets: inherit
 
   notify:

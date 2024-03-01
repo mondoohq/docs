@@ -26,6 +26,7 @@ jobs:
     steps:
       - name: Update PR with Status (Completed Success)
         if: success()
+        continue-on-error: true
         uses: mshick/add-pr-comment@v2
         with:
           message: |

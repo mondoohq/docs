@@ -104,7 +104,7 @@ module.exports = {
   ],
   themeConfig: {
     hubspot: {
-      accountId: HS_ACCOUNTID,
+      accountId: "HS_ACCOUNTID",
     },
     docs: {
       sidebar: {
@@ -239,12 +239,8 @@ module.exports = {
               href: "https://github.com/mondoohq",
             },
             {
-              label: "Twitter",
-              href: "https://twitter.com/MondooHQ",
-            },
-            {
-              label: "Mastodon",
-              href: "https://infosec.exchange/@mondoo",
+              label: "Contribute to Mondoo docs",
+              href: "https://github.com/mondoohq/docs",
             },
           ],
         },

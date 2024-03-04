@@ -18,6 +18,7 @@ runs:
   steps:
     - name: Determine branch shortname and bucket name
       shell: bash
+      id: names
       run: |
         BRANCH=`echo ${GITHUB_HEAD_REF} | cksum | cut -d" " -f1`  # Use checksum of branch name to avoid invalid bucket names
         echo BRANCH=${BRANCH} >> $GITHUB_OUTPUT
@@ -31,3 +32,7 @@ runs:
       id: env
       run: |
         env
+    - name: Verify outputs
+      shell: bash
+      id: out
+      run: echo ${{ steps.names.outputs.BUCKET }}

@@ -20,9 +20,9 @@ runs:
       shell: bash
       run: |
         BRANCH=`echo ${GITHUB_HEAD_REF} | cksum | cut -d" " -f1`  # Use checksum of branch name to avoid invalid bucket names
-        echo BRANCH=${BRANCH} >> $GITHUB_ENV
-        echo BUCKET=mondoo-pre-docs-${BRANCH} >> $GITHUB_ENV
-        echo URL=https://mondoo-pre-docs-${BRANCH}.storage.googleapis.com/docs/index.html >> $GITHUB_ENV
+        echo BRANCH=${BRANCH} >> $GITHUB_OUTPUT
+        echo BUCKET=mondoo-pre-docs-${BRANCH} >> $GITHUB_OUTPUT
+        echo URL=https://mondoo-pre-docs-${BRANCH}.storage.googleapis.com/docs/index.html >> $GITHUB_OUTPUT
     - name: Verify env variables
       shell: bash
       id: env

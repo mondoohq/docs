@@ -3,22 +3,22 @@ name: "PREview: Data"
 description: "Caluculate branch, bucket, and PREview URL."
 
 outputs:
-  url:
+  URL:
     description: "PREview URL"
-    value: ${{ steps.data.outputs.url }}
-  branch:
+    value: ${{ steps.data.outputs.URL }}
+  BRANCH:
     description: "Branch Name"
-    value: ${{ steps.data.outputs.branch }}
-  bucket:
+    value: ${{ steps.data.outputs.BRANCH }}
+  BUCKET:
     description: "Bucket for PREview"
-    value: ${{ steps.data.outputs.bucket }}
+    value: ${{ steps.data.outputs.BUCKET }}
 
 runs:
   using: "composite"
   steps:
     - name: Determine branch shortname and bucket name
       shell: bash
-      id: names
+      id: data
       run: |
         BRANCH=`echo ${GITHUB_HEAD_REF} | cksum | cut -d" " -f1`  # Use checksum of branch name to avoid invalid bucket names
         echo BRANCH=${BRANCH} >> $GITHUB_OUTPUT
@@ -35,4 +35,4 @@ runs:
     - name: Verify outputs
       shell: bash
       id: out
-      run: echo ${{ steps.names.outputs.BUCKET }}
+      run: echo ${{ steps.data.outputs.BUCKET }}

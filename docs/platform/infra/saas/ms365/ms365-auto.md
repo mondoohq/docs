@@ -1,6 +1,6 @@
 ---
-title: Quick Setup - MS 365 Continuous Scanning
-sidebar_label: Quick Setup - MS 365 Continuous Scanning
+title: Quick Setup - Microsoft 365 (MS 365) Continuous Scanning
+sidebar_label: Quick Setup - Continuous Scanning
 sidebar_position: 1
 description: Set up Mondoo to assess Microsoft 365 for security misconfigurations.
 image: /img/featured_img/mondoo-365.jpg

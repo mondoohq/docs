@@ -1,6 +1,6 @@
 // @type {import('@docusaurus/types').DocusaurusConfig};
 
-const { themes } = require("prism-react-renderer");
+const { themes } = require("prism-react-renderer")
 
 const legacyRedirects = [
   // NOTE: Path / is equivalent to https://mondoo.com/docs/
@@ -45,7 +45,7 @@ const legacyRedirects = [
     from: "/references/cli/mondoo",
     to: "/cnspec/cli/cnspec_scan",
   },
-];
+]
 
 module.exports = {
   title: "Mondoo Docs",
@@ -71,27 +71,27 @@ module.exports = {
           if (existingPath.includes("/platform/infra/cloud")) {
             return [
               existingPath.replace("/platform/infra/cloud", "/platform/cloud"),
-            ];
+            ]
           } else if (existingPath.includes("/platform/infra/opsys")) {
             return [
               existingPath.replace(
                 "/platform/infra/opsys",
-                "/platform/operating_systems",
+                "/platform/operating_systems"
               ),
-            ];
+            ]
           } else if (existingPath.includes("/platform/infra/saas")) {
             return [
               existingPath.replace("/platform/infra/saas", "/platform/saas"),
-            ];
+            ]
           } else if (existingPath.includes("/platform/infra/supply")) {
             return [
               existingPath.replace(
                 "/platform/infra/supply",
-                "/platform/supplychain",
+                "/platform/supplychain"
               ),
-            ];
+            ]
           }
-          return undefined; // Return a falsy value: no redirect created
+          return undefined // Return a falsy value: no redirect created
         },
       },
     ],
@@ -104,7 +104,7 @@ module.exports = {
   ],
   themeConfig: {
     hubspot: {
-      accountId: HS_ACCOUNTID,
+      accountId: "HS_ACCOUNTID",
     },
     docs: {
       sidebar: {
@@ -296,4 +296,4 @@ module.exports = {
       },
     ],
   ],
-};
+}

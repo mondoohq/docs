@@ -17,6 +17,10 @@ jobs:
       - name: Obtain URL
         id: data
         uses: ./.github/actions/PREview-data
+      - name: Verify outputs
+        shell: bash
+        id: out
+        run: echo ${{ steps.data.outputs.BUCKET }}
 
   build:
     uses: ./.github/workflows/_build.yaml

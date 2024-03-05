@@ -104,7 +104,7 @@ module.exports = {
   ],
   themeConfig: {
     hubspot: {
-      accountId: HS_ACCOUNTID,
+      accountId: "HS_ACCOUNTID",
     },
     docs: {
       sidebar: {

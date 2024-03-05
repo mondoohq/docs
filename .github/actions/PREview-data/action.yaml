@@ -3,13 +3,13 @@ name: "PREview: Data"
 description: "Caluculate branch, bucket, and PREview URL."
 
 outputs:
-  url:
+  URL:
     description: "PREview URL"
     value: ${{ steps.data.outputs.URL }}
-  branch:
+  BRANCH:
     description: "Branch Name"
     value: ${{ steps.data.outputs.BRANCH }}
-  bucket:
+  BUCKET:
     description: "Bucket for PREview"
     value: ${{ steps.data.outputs.BUCKET }}
 

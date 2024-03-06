@@ -36,6 +36,7 @@ jobs:
         with:
           message: |
             **PREview environment has been created at [${{ env.URL }}](${{ env.URL }})**
+            *Please allow a few minutes for the environment to be fully deployed.*
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           allow-repeats: true
 

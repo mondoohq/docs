@@ -20,7 +20,7 @@ import Partial from "./_include-install.mdx";
 
 <Partial />{" "}
 
-## Scan locally​
+## Scan locally
 
 Use the `cnspec scan` subcommand to check local and remote targets for misconfigurations and vulnerabilities. cnspec detects the target platform and runs policy checks specific to that system.
 
@@ -69,7 +69,7 @@ macOS
 For detailed output, run this scan with "-o full".
 ```
 
-## Scan remote targets​
+## Scan remote targets
 
 You can also specify remote targets to scan.
 
@@ -79,7 +79,7 @@ This example scans a docker image:
 cnspec scan docker image ubuntu:22.04
 ```
 
-This scans an aws account using the local AWS config:
+This scans an aws account using the local AWS configuration profile:
 
 ```
 cnspec scan aws
@@ -112,7 +112,7 @@ For `FILENAME`, substitute the name you want to give the file. For example, this
 cnspec scan k8s -o json > k8s-test-results.json
 ```
 
-## Save, review, and share reports with Mondoo Platform​
+## Save, review, and share reports with Mondoo Platform
 
 To save, review, and share reports, sign up for a free Mondoo account. [Mondoo's web-based console](https://console.mondoo.com/) allows you to navigate, search, and inspect all of your reports.
 
@@ -120,7 +120,7 @@ To learn about more of Mondoo Platform's capabilities, visit [mondoo.com](https:
 
 To learn how to sign up for a free Mondoo account and register cnspec, read [Log into Mondoo Platform for More Capabilities](/cnspec/cnspec-platform/).
 
-## Learn more​
+## Learn more
 
 - To get started with AWS, read [Assess AWS Security](/cnspec/cnspec-aws/).
 

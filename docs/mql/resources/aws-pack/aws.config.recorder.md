@@ -3,7 +3,7 @@ title: aws.config.recorder
 id: aws.config.recorder
 sidebar_label: aws.config.recorder
 displayed_sidebar: MQL
-description: AWS config recorder
+description: AWS Config recorder
 ---
 
 # aws.config.recorder
@@ -14,7 +14,7 @@ description: AWS config recorder
 
 **Description**
 
-AWS config recorder
+AWS Config recorder
 
 The `aws.config.recorder` resource provides fields representing an individual AWS Config recorder configured within an account. For usage, read the `aws.config` resource documentation.
 

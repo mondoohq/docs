@@ -3,7 +3,7 @@ title: aws.config.rule
 id: aws.config.rule
 sidebar_label: aws.config.rule
 displayed_sidebar: MQL
-description: AWS config rule
+description: AWS Config rule
 ---
 
 # aws.config.rule
@@ -14,7 +14,7 @@ description: AWS config rule
 
 **Description**
 
-AWS config rule
+AWS Config rule
 
 The `aws.config.rule` resource provides fields representing an individual AWS Config rule configured within an account. For usage, read the `aws.config` resource documentation.
 

@@ -3,7 +3,7 @@ title: aws.config
 id: aws.config
 sidebar_label: aws.config
 displayed_sidebar: MQL
-description: AWS config
+description: AWS Config
 ---
 
 # aws.config
@@ -14,7 +14,7 @@ description: AWS config
 
 **Description**
 
-AWS config
+AWS Config
 
 Use the `aws.config` resource to assess the configuration of the AWS Config service. The resource provides the `.recorders` field, which returns a list of `aws.config.recorder` resources representing all AWS Config recorders configured across all enabled regions, as well as the `.rules` field, which returns a list of `aws.config.rule` resources representing all AWS Config rules configured across all enabled regions in the account.
 

@@ -1,12 +1,11 @@
 # Detect common combinations of valid words that are in fact invalid.
 # Useful for brand capitalizations
 
-
 #
 # Catch placeholder text
 #
 
-\b[Lo]orem [Ii]psum\
+\b[Ll]orem [Ii]psum\b
 
 # PR links left in the release notes
 \bhttps:\/\/github.com\/mondoohq\/.*\/pull\/\d*
@@ -40,6 +39,16 @@
 
 # s.b. Compliance Hub
 \s[Cc]ompliance hub\b
+
+#
+# Compliance Terms
+#
+
+# s.b. SOC 2
+\bSOC2\b
+
+# s.b. ISO 270001
+\bISO270001\b
 
 #
 # Industry Terms
@@ -335,6 +344,9 @@
 
 # s.b. CodeStar
 \bCodestar\b
+
+# s.b. AWS Config
+# \bAWS config\b disabled due to false positives on resource names
 
 # s.b. Copilot
 \bCoPilot\b

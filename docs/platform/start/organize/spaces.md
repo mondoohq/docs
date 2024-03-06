@@ -12,7 +12,7 @@ A space is a collection of assets, policies, and reports that you manage togethe
 
 Spaces allow for a great degree of flexibility in managing shared resources. For example, teams may organize their deployments in spaces, setting their own policies and quickly gaining insights for everything they manage.
 
-Furthermore, users may decide to configure separate spaces for development, staging, and production environments, or specific compliance requirements such as HIPAA or SOC2.
+Furthermore, users may decide to configure separate spaces for development, staging, and production environments, or specific compliance requirements such as HIPAA or SOC 2.
 
 ## Manage spaces
 

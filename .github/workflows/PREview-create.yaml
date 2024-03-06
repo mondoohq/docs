@@ -36,6 +36,7 @@ jobs:
         with:
           message: |
             **PREview environment has been created at [${{ env.URL }}](${{ env.URL }})**
+            *Please allow a few minutes for the environment to be fully deployed.*
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           allow-repeats: true
 
@@ -63,7 +64,7 @@ jobs:
     uses: ./.github/workflows/_deploy.yaml
     with:
       src_dir: build
-      bucket: ${{ needs.data.outputs.BUCKET }}
+      bucket: ${{ needs.data.outputs.BUCKET }}/docs
     secrets: inherit
 
   notify:

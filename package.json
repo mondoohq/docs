@@ -64,7 +64,7 @@
     "@types/react-helmet": "^6.1.11",
     "@types/react-router-dom": "^5.1.7",
     "prettier": "3.2.5",
-    "typescript": "^5.3.2"
+    "typescript": "^5.4.2"
   },
   "engines": {
     "node": ">=20.0"

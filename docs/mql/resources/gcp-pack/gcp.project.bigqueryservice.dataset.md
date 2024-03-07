@@ -31,9 +31,9 @@ GCP BigQuery dataset
 | tags        | map[string]string                                                                                               | Tags associated with this dataset                                    |
 | kmsName     | string                                                                                                          | Cloud KMS encryption key that will be used to protect BigQuery table |
 | access      | &#91;&#93;[gcp.project.bigqueryService.dataset.accessEntry](gcp.project.bigqueryservice.dataset.accessentry.md) | Access permissions                                                   |
-| tables      | &#91;&#93;[gcp.project.bigqueryService.table](gcp.project.bigqueryservice.table.md)                             | Returns tables in the Dataset                                        |
-| models      | &#91;&#93;[gcp.project.bigqueryService.model](gcp.project.bigqueryservice.model.md)                             | Returns models in the Dataset                                        |
-| routines    | &#91;&#93;[gcp.project.bigqueryService.routine](gcp.project.bigqueryservice.routine.md)                         | Returns routines in the Dataset                                      |
+| tables      | &#91;&#93;[gcp.project.bigqueryService.table](gcp.project.bigqueryservice.table.md)                             | Returns tables in the dataset                                        |
+| models      | &#91;&#93;[gcp.project.bigqueryService.model](gcp.project.bigqueryservice.model.md)                             | Returns models in the dataset                                        |
+| routines    | &#91;&#93;[gcp.project.bigqueryService.routine](gcp.project.bigqueryservice.routine.md)                         | Returns routines in the dataset                                      |
 
 **References**
 

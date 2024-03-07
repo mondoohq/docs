@@ -20,11 +20,12 @@ The `aws.iam.role` provides fields for assessing the configuration of individual
 
 **Fields**
 
-| ID          | TYPE              | DESCRIPTION                    |
-| ----------- | ----------------- | ------------------------------ |
-| arn         | string            | ARN of the role                |
-| id          | string            | ID of the role                 |
-| name        | string            | Name of the role               |
-| description | string            | Description of the role        |
-| tags        | map[string]string | Tags associated with the role  |
-| createDate  | time              | Time when the role was created |
+| ID                       | TYPE              | DESCRIPTION                                                             |
+| ------------------------ | ----------------- | ----------------------------------------------------------------------- |
+| arn                      | string            | ARN of the role                                                         |
+| id                       | string            | ID of the role                                                          |
+| name                     | string            | Name of the role                                                        |
+| description              | string            | Description of the role                                                 |
+| tags                     | map[string]string | Tags associated with the role                                           |
+| createDate               | time              | Time when the role was created                                          |
+| assumeRolePolicyDocument | dict              | The policy document that grants an entity permission to assume the role |

@@ -3,15 +3,103 @@ id: cnspec_shell
 title: cnspec shell
 ---
 
-Interactive query shell for MQL.
+Run an interactive shell to make easy queries and assertions.
+
+To learn more, read [Get Started with cnspec](/cnspec/).
 
 ### Synopsis
 
-Run an interactive shell in which you can explore MQL queries.
+Open an interactive shell in which you can explore [MQL](/mql/home/) queries and assertions. Auto-complete and help make it easy.
 
 ```
 cnspec shell [flags]
 ```
+
+### Examples: cloud
+
+#### Query AWS
+
+```bash
+cnspec shell aws
+```
+
+To learn more, read [Assess AWS Security with cnspec](/cnspec/cnspec-aws/).
+
+#### Query Azure
+
+```bash
+cnspec shell azure --subscription SUBSCRIPTION_ID --group GROUP_NAME
+```
+
+To learn more, read [Assess Azure Security with cnspec](/cnspec/cnspec-azure/).
+
+#### Query Google Cloud (GCP)
+
+```bash
+cnspec shell gcp project PROJECT_ID
+```
+
+To learn more, read [Assess Google Cloud Security with cnspec](/cnspec/cnspec-gcp/).
+
+#### Query Kubernetes
+
+```bash
+cnspec shell k8s
+```
+
+To learn more, read [Assess Kubernetes Security with cnspec](/cnspec/cnspec-k8s/).
+
+#### Query Oracle Cloud Infrastructure (OCI)
+
+```bash
+cnspec shell oci
+```
+
+To learn more, read [Assess Oracle Cloud Infrastructure (OCI) Security with cnspec](/cnspec/cnspec-oci/).
+
+### Examples: SAAS
+
+#### Query GitHub
+
+```bash
+export GITHUB_TOKEN=YOUR_PERSONAL_ACCESS_TOKEN
+cnspec shell github repo ORG/REPO
+```
+
+To learn more, read [Assess GitHub Security with cnspec](/cnspec/saas/github/).
+
+#### Query Google Workspace
+
+```bash
+export GOOGLEWORKSPACE_CLOUD_KEYFILE_JSON=/home/user/my-project-6646123456789.json
+cnspec shell google-workspace --customer-id 5amp13iD --impersonated-user-email admin@domain.com
+```
+
+To learn more, read [Assess Google Workspace Security with cnspec](/cnspec/saas/google_workspace/).
+
+#### Query Microsoft 365 (MS 365)
+
+```bash
+cnspec shell ms365 --certificate-path certificate.combo.pem --tenant-id YOUR_TENANT_ID --client-id YOUR_CLIENT_ID
+```
+
+To learn more, read [Assess Microsoft 365 Security with cnspec](/cnspec/saas/ms365/).
+
+#### Query Okta
+
+```bash
+cnspec shell okta --organization your_org.okta.com --token API_TOKEN
+```
+
+To learn more, read [Assess Okta Security with cnspec](/cnspec/saas/okta/).
+
+#### Query Slack
+
+```bash
+cnspec shell slack --token API_TOKEN
+```
+
+To learn more, read [Assess Slack Security with cnspec](/cnspec/saas/slack/).
 
 ### Options
 

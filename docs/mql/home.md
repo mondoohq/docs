@@ -1,5 +1,5 @@
 ---
-title: "MQL Docs"
+title: MQL Docs
 sidebar_label: MQL Docs Home
 displayed_sidebar: MQL
 sidebar_position: 1

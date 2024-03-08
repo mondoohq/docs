@@ -15,7 +15,7 @@ This command triggers a new policy-based scan on an asset. By default, cnspec sc
 cnspec scan local
 ```
 
-You can also specify a local policy and run it without storing results in the server:
+You can also specify a local policy and run it without storing results in Mondoo Platform:
 
 ```bash
 cnspec scan local --policy-bundle POLICYFILE.yaml --incognito

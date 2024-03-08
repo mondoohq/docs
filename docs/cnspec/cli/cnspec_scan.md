@@ -116,7 +116,7 @@ To learn more, read [Assess Okta Security with cnspec](/cnspec/saas/okta/).
 #### Scan Slack
 
 ```bash
-cnspec shell slack --token API_TOKEN
+cnspec scan slack --token API_TOKEN
 ```
 
 To learn more, read [Assess Slack Security with cnspec](/cnspec/saas/slack/).

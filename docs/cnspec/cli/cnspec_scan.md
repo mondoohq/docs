@@ -88,6 +88,12 @@ cnspec scan github repo ORG/REPO
 
 To learn more, read [Assess GitHub Security with cnspec](/cnspec/saas/github/).
 
+#### Scan GitLab
+
+```bash
+cnspec scan gitlab --group YOUR_GROUP_NAME --token YOUR_TOKEN
+```
+
 #### Scan Google Workspace
 
 ```bash
@@ -96,6 +102,12 @@ cnspec scan google-workspace --customer-id 5amp13iD --impersonated-user-email ad
 ```
 
 To learn more, read [Assess Google Workspace Security with cnspec](/cnspec/saas/google_workspace/).
+
+#### Scan Jira
+
+```bash
+cnspec scan atlassian jira --host HOST_URL --user USER@DOMAIN --user-token YOUR_TOKEN
+```
 
 #### Scan Microsoft 365 (MS 365)
 

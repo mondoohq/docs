@@ -9,7 +9,7 @@ To learn more, read [Get Started with cnspec](/cnspec/).
 
 ### Synopsis
 
-This command triggers a new policy-based scan on an asset. By default, cnspec scans the local system with the default [policies](/cnspec/cnspec-policies/) built specifically for the platform:
+This command triggers a new policy-based scan on an asset. By default, cnspec scans the local system with the default [policies](/cnspec/cnspec-policies/) built specifically for the platform. If you [register cnspec with Mondoo](/cnspec/cnspec-adv-install/registration/), this command scans using the applicable [enabled policies](/platform/security/posture/policies/).
 
 ```bash
 cnspec scan local

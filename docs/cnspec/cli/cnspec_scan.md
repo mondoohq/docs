@@ -77,7 +77,7 @@ cnspec scan oci
 
 To learn more, read [Assess Oracle Cloud Infrastructure (OCI) Security with cnspec](/cnspec/cnspec-oci/).
 
-### Examples: SAAS
+### Examples: SaaS
 
 #### Scan GitHub
 

@@ -54,7 +54,21 @@ policies:
             mql: sshd.config.params
 ```
 
-How Mondoo uses these values to calculate an asset's score depends on the `scoring_system` setting (line 5). You can choose the `average` scoring system or the `highest impact` scoring system:
+How Mondoo uses these values to calculate an asset's score depends on the `scoring_system` setting (line 5). You can choose the `average` scoring system or the `highest impact` scoring system.
+
+:::note Experimental scoring systems
+
+We created two new scoring systems to better reflect an asset's security evaluation. They're currently in the experimental phase:
+
+- Specify `banded` to test our banded scoring system.
+
+- Specify `decayed` to test our decayed scoring system.
+
+To learn about how these systems calculate scores, read the [GitHub PR](https://github.com/mondoohq/cnspec/pull/1150).
+
+We're grateful for feedback while we refine these systems. To learn more or tell us what you think, join our community discussion on <a href="https://github.com/orgs/mondoohq/discussions">GitHub</a>.
+
+:::
 
 #### Average scoring system
 

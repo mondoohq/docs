@@ -83,20 +83,6 @@ cnspec> gitlab.group.visibility=="private"
 [ok] value: "private"
 ```
 
-Ensure the GitLab organization default permissions is set to _read_:
-
-```coffee
-cnspec> gitlab.organization.defaultRepositoryPermission == "read"
-[ok] value: "read"
-```
-
-Ensure the default branch is configured with branch protection:
-
-```coffee
-cnspec> gitlab.repository.branches.where( isDefault == true ).all( protected == true )
-[ok] value: true
-```
-
 ## Learn more
 
 - To learn about all the GitLab resources and properties, read the [Mondoo GitLab Resource Pack Reference](/mql/resources/gitlab-pack/).

@@ -11,61 +11,45 @@ Rely on cnspec to ensure your GitLab groups and projects follow recommended secu
 
 ## Give cnspec access using a GitLab personal access token
 
-To scan GitLab groups and projects, cnspec needs access. You give cnspec the access it needs through the GitLab API. First, you create GitLab personal access token. Then you share that token with cnspec using an environment variable. The token's level of access determines how much information cnspec can retrieve.
+To scan GitLab groups and projects, cnspec needs access. You give cnspec the access it needs through the GitLab API. First, you create GitLab personal access token. Then you provide that token with cnspec commands. The token's level of access determines how much information cnspec can retrieve.
 
 To learn how to create a personal access token, read [Personal access tokens](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html) in the GitLab documentation.
-
-### Configure a GitLab_TOKEN environment variable
-
-You supply your personal access token to cnspec using the `GITLAB_TOKEN` environment variable.
-
-#### Linux / macOS
-
-```bash
-export GITLAB_TOKEN=<your personal access token>
-```
-
-#### Windows
-
-```powershell
-$Env:GITLAB_TOKEN = "<personal-access-token>"
-```
 
 ## Scan GitLab groups and projects
 
 To scan the configuration of a GitLab group, run this command:
 
 ```bash
-cnspec scan gitlab --group <GROUP_NAME>
+cnspec scan gitlab --group <GROUP_NAME> --token <YOUR_TOKEN>
 ```
 
 To scan all the groups you have access to, run this command:
 
 ```bash
-cnspec scan gitlab --discover projects
+cnspec scan gitlab --discover projects --token <YOUR_TOKEN>
 ```
 
 To scan a project, run this command:
 
 ```bash
-cnspec scan gitlab --group <GROUP_NAME> --project <PROJECT_NAME>
+cnspec scan gitlab --group <GROUP_NAME> --project <PROJECT_NAME> --token <YOUR_TOKEN>
 ```
 
 To scan all projects in a group, run this command:
 
 ```bash
-cnspec scan gitlab --group <GROUP_NAME> --discover projects
+cnspec scan gitlab --group <GROUP_NAME> --discover projects --token <YOUR_TOKEN>
 ```
 
 To scan all Terraform files in all the projects discovered in all the groups you have access to, run this command:
 
 ```bash
-cnspec scan gitlab --discover terraform
+cnspec scan gitlab --discover terraform --token <YOUR_TOKEN>
 ```
 
 ## Example checks
 
-Run `cnspec shell` to open the cnspec interactive shell. From there you can make checks like the examples below.
+Run `cnspec shell --token <YOUR_TOKEN>` to open the cnspec interactive shell. From there you can make checks like the examples below.
 
 Ensure group email notifications are disabled for a GitLab group:
 

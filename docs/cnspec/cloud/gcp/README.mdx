@@ -1,6 +1,5 @@
 ---
 title: Assess Google Cloud Security with cnspec
-id: cnspec-gcp-intro
 sidebar_label: Get Started
 displayed_sidebar: cnspec
 sidebar_position: 1
@@ -14,7 +13,7 @@ cnspec can test any aspect of your GCP configuration. For a list of GCP resource
 
 :::info
 
-You can also use cnspec with HashiCorp Packer to [build secure VM images in Google Cloud](/cnspec/cnspec-gcp/cnspec-gcp-packer/).
+You can also use cnspec with HashiCorp Packer to [build secure VM images in Google Cloud](/cnspec/cloud/gcp/packer/).
 
 :::
 
@@ -90,7 +89,7 @@ cnspec returns `[ok]` to indicate that the test passed, and includes the actual 
 
 You've successfully used cnspec to run your first check on your GCP environment. Now you're ready to explore.
 
-Once you've ensured that [cnspec can access your GCP environment](/cnspec/cnspec-gcp/), you can begin testing. The method you choose depends on your goals:
+Once you've ensured that [cnspec can access your GCP environment](/cnspec/cloud/gcp/), you can begin testing. The method you choose depends on your goals:
 
 - For widescale assessment of your GCP infrastructure, scan using policy bundles. These collections of tests work together to present a broad picture of your GCP security posture.
 - To run ad hoc checks against your GCP environment, use cnspec's interactive shell. It has auto-complete to guide you, which is especially helpful when you're new to cnspec and learning MQL.
@@ -273,6 +272,6 @@ To exit the cnspec shell, either press `Ctrl + D` or type `exit`.
 
 ## Next step
 
-Learn how to use [snapshot scanning](/cnspec/cnspec-gcp/gcp-snapshot/) to assess GCP instances without affecting your production workload.
+Learn how to use [snapshot scanning](/cnspec/cloud/gcp/snapshot/) to assess GCP instances without affecting your production workload.
 
 ---

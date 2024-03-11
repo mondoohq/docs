@@ -16,9 +16,9 @@ Learn how to:
 
 - [Continuously Scan Kubernetes with the Mondoo Kubernetes Operator](/platform/infra/cloud/kubernetes/scan-kubernetes-with-operator)
 
-- [Run ad hoc security Kubernetes scans from your workstation](/cnspec/cnspec-k8s/)
+- [Run ad hoc security Kubernetes scans from your workstation](/cnspec/cloud/k8s/)
 
-- [Scan Kubernetes manifests](/cnspec/cnspec-k8s/cnspec-k8s-manifest)
+- [Scan Kubernetes manifests](/cnspec/cloud/k8s/manifest)
 
 - [Integrate Mondoo with CI/CD systems](/platform/infra/supply/cicd/overview)
 

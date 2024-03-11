@@ -5,6 +5,85 @@ const { themes } = require("prism-react-renderer");
 const legacyRedirects = [
   // NOTE: Path / is equivalent to https://mondoo.com/docs/
   //
+  // march 2024 moved cnspec cloud content into one dir
+  {
+    from: "/cnspec/cnspec-aws/cnspec-aws-account",
+    to: "/cnspec/cloud/aws/account",
+  },
+  {
+    from: "/cnspec/cnspec-aws/cnspec-aws-cloudshell",
+    to: "/cnspec/cloud/aws/cloudshell",
+  },
+  {
+    from: "/cnspec/cnspec-aws/cnspec-aws-ec2",
+    to: "/cnspec/cloud/aws/ec2",
+  },
+  {
+    from: "/cnspec/cnspec-aws/cnspec-aws-eks",
+    to: "/cnspec/cloud/aws/eks",
+  },
+  {
+    from: "/cnspec/cnspec-aws/cnspec-aws-packer",
+    to: "/cnspec/cloud/aws/packer",
+  },
+  {
+    from: "/cnspec/cnspec-aws/cnspec-aws-intro",
+    to: "/cnspec/cloud/aws",
+  },
+  {
+    from: "/cnspec/cnspec-aws",
+    to: "/cnspec/cloud/aws",
+  },
+  {
+    from: "/cnspec/cnspec-azure",
+    to: "/cnspec/cloud/azure",
+  },
+  {
+    from: "/cnspec/cnspec-azure/cnspec-azure-intro",
+    to: "/cnspec/cloud/azure",
+  },
+  {
+    from: "/cnspec/cnspec-gcp",
+    to: "/cnspec/cloud/gcp",
+  },
+  {
+    from: "/cnspec/cnspec-gcp/cnspec-gcp-intro",
+    to: "/cnspec/cloud/gcp",
+  },
+  {
+    from: "/cnspec/cnspec-gcp/cnspec-gcp-packer",
+    to: "/cnspec/cloud/gcp/packer",
+  },
+  {
+    from: "/cnspec/cnspec-gcp/cnspec-gcp-snapshot",
+    to: "/cnspec/cloud/gcp/snapshot",
+  },
+  {
+    from: "/cnspec/cnspec-k8s",
+    to: "/cnspec/cloud/k8s",
+  },
+  {
+    from: "/cnspec/cnspec-k8s/cnspec-k8s-cluster",
+    to: "/cnspec/cloud/k8s/cluster",
+  },
+  {
+    from: "/cnspec/cnspec-k8s/cnspec-k8s-intro",
+    to: "/cnspec/cloud/k8s",
+  },
+  {
+    from: "/cnspec/cnspec-k8s/cnspec-k8s-manifest",
+    to: "/cnspec/cloud/k8s/manifest",
+  },
+  {
+    from: "/cnspec/cnspec-oci",
+    to: "/cnspec/cloud/oci",
+  },
+  {
+    from: "/cnspec/cnspec-oci/cnspec-oci-intro",
+    to: "/cnspec/cloud/oci",
+  },
+  //
+  // and march 2024 move
   {
     from: "/getstarted/quickstart",
     to: "/platform/start/plat-start-acct",

@@ -13,7 +13,7 @@ The Mondoo Kubernetes Operator is Mondoo software that runs in your Kubernetes e
 
 - Scan new nodes as they come online
 
-The operator includes a Kubernetes admission controller that performs a security scan on each deployment introduced into the cluster and reports the results. [Learn more.](/cnspec/cnspec-k8s/)
+The operator includes a Kubernetes admission controller that performs a security scan on each deployment introduced into the cluster and reports the results. [Learn more.](/cnspec/cloud/k8s/)
 
 ### Add a Mondoo Kubernetes integration
 

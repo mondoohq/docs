@@ -72,9 +72,9 @@ If you prefer to build the plugin from sources, clone the GitHub repository loca
 
 ## Learn more
 
-- AWS users can [build secure AMIs with Mondoo and Packer](/cnspec/cnspec-aws/cnspec-aws-packer/).
+- AWS users can [build secure AMIs with Mondoo and Packer](/cnspec/cloud/aws/packer/).
 
-- Google Cloud users can [build secure VMs with Mondoo and Packer](/cnspec/cnspec-gcp/cnspec-gcp-packer)
+- Google Cloud users can [build secure VMs with Mondoo and Packer](/cnspec/cloud/gcp/packer)
 
 - To learn more about how the MQL query language works, read [Write Effective MQL](/mql/mql.write/).
 

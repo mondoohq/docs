@@ -2,7 +2,6 @@
 title: Assess AWS Security from AWS CloudShell
 description: Learn how to install and configure cnspec in AWS CloudShell to run security scans against your AWS account.
 displayed_sidebar: cnspec
-id: cnspec-aws-cloudshell
 sidebar_label: Assess AWS from CloudShell
 sidebar_position: 50
 image: /img/featured_img/mondoo-aws.jpg

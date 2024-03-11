@@ -23,7 +23,7 @@ cnspec shell [flags]
 cnspec shell aws
 ```
 
-To learn more, read [Assess AWS Security with cnspec](/cnspec/cnspec-aws/).
+To learn more, read [Assess AWS Security with cnspec](/cnspec/cloud/aws).
 
 #### Query Azure
 
@@ -31,7 +31,7 @@ To learn more, read [Assess AWS Security with cnspec](/cnspec/cnspec-aws/).
 cnspec shell azure --subscription SUBSCRIPTION_ID --group GROUP_NAME
 ```
 
-To learn more, read [Assess Azure Security with cnspec](/cnspec/cnspec-azure/).
+To learn more, read [Assess Azure Security with cnspec](/cnspec/cloud/azure/).
 
 #### Query Google Cloud (GCP)
 
@@ -39,7 +39,7 @@ To learn more, read [Assess Azure Security with cnspec](/cnspec/cnspec-azure/).
 cnspec shell gcp project PROJECT_ID
 ```
 
-To learn more, read [Assess Google Cloud Security with cnspec](/cnspec/cnspec-gcp/).
+To learn more, read [Assess Google Cloud Security with cnspec](/cnspec/cloud/gcp/).
 
 #### Query Kubernetes
 
@@ -47,7 +47,7 @@ To learn more, read [Assess Google Cloud Security with cnspec](/cnspec/cnspec-gc
 cnspec shell k8s
 ```
 
-To learn more, read [Assess Kubernetes Security with cnspec](/cnspec/cnspec-k8s/).
+To learn more, read [Assess Kubernetes Security with cnspec](/cnspec/cloud/k8s/).
 
 #### Query Oracle Cloud Infrastructure (OCI)
 
@@ -55,7 +55,7 @@ To learn more, read [Assess Kubernetes Security with cnspec](/cnspec/cnspec-k8s/
 cnspec shell oci
 ```
 
-To learn more, read [Assess Oracle Cloud Infrastructure (OCI) Security with cnspec](/cnspec/cnspec-oci/).
+To learn more, read [Assess Oracle Cloud Infrastructure (OCI) Security with cnspec](/cnspec/cloud/oci/).
 
 ### Examples: SaaS
 

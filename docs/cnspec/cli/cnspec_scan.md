@@ -39,7 +39,7 @@ cnspec scan ssh ec2-user@52.51.185.215:2222
 cnspec scan aws --region us-east-1
 ```
 
-To learn more, read [Assess AWS Security with cnspec](/cnspec/cnspec-aws/).
+To learn more, read [Assess AWS Security with cnspec](/cnspec/cloud/aws).
 
 #### Scan Azure
 
@@ -47,7 +47,7 @@ To learn more, read [Assess AWS Security with cnspec](/cnspec/cnspec-aws/).
 cnspec scan azure --subscription SUBSCRIPTION_ID --group GROUP_NAME
 ```
 
-To learn more, read [Assess Azure Security with cnspec](/cnspec/cnspec-azure/).
+To learn more, read [Assess Azure Security with cnspec](/cnspec/cloud/azure/).
 
 #### Scan Google Cloud (GCP)
 
@@ -55,7 +55,7 @@ To learn more, read [Assess Azure Security with cnspec](/cnspec/cnspec-azure/).
 cnspec scan gcp project PROJECT_ID
 ```
 
-To learn more, read [Assess Google Cloud Security with cnspec](/cnspec/cnspec-gcp/).
+To learn more, read [Assess Google Cloud Security with cnspec](/cnspec/cloud/gcp/).
 
 #### Scan Kubernetes
 
@@ -67,7 +67,7 @@ cnspec scan k8s
 cnspec scan k8s MANIFEST_FILE
 ```
 
-To learn more, read [Assess Kubernetes Security with cnspec](/cnspec/cnspec-k8s/).
+To learn more, read [Assess Kubernetes Security with cnspec](/cnspec/cloud/k8s/).
 
 #### Scan Oracle Cloud Infrastructure (OCI)
 
@@ -75,7 +75,7 @@ To learn more, read [Assess Kubernetes Security with cnspec](/cnspec/cnspec-k8s/
 cnspec scan oci
 ```
 
-To learn more, read [Assess Oracle Cloud Infrastructure (OCI) Security with cnspec](/cnspec/cnspec-oci/).
+To learn more, read [Assess Oracle Cloud Infrastructure (OCI) Security with cnspec](/cnspec/cloud/oci/).
 
 ### Examples: SaaS
 

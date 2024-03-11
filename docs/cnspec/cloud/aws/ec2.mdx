@@ -1,6 +1,5 @@
 ---
 title: Assess an AWS EC2 Instance
-id: cnspec-aws-ec2
 sidebar_label: Assess an AWS EC2 Instance
 displayed_sidebar: cnspec
 sidebar_position: 30
@@ -8,9 +7,9 @@ description: Assess the security and compliance of an AWS EC2 instance
 image: /img/featured_img/mondoo-aws.jpg
 ---
 
-Now that you have an introduction to [assessing your AWS security](/cnspec/cnspec-aws/cnspec-aws-account/) with cnspec, let's dive deeper and test EC2 instances.
+Now that you have an introduction to [assessing your AWS security](/cnspec/cloud/aws/account/) with cnspec, let's dive deeper and test EC2 instances.
 
-We'll continue working in the cnspec shell, which makes running individual queries easy. If it's not already open, enter `cnspec shell aws` in your terminal. To learn about accessing your AWS account with cnspec, read [Assess AWS Security](/cnspec/cnspec-aws/).
+We'll continue working in the cnspec shell, which makes running individual queries easy. If it's not already open, enter `cnspec shell aws` in your terminal. To learn about accessing your AWS account with cnspec, read [Assess AWS Security](/cnspec/cloud/aws).
 
 ## EC2 resources
 
@@ -67,6 +66,6 @@ aws.ec2.snapshots.all(createVolumePermission.none(_['Group'] == "all" ))
 
 ## Next step
 
-To discover more of cnspec's AWS capabilities, [test your EKS clusters](/cnspec/cnspec-aws/cnspec-aws-eks/).
+To discover more of cnspec's AWS capabilities, [test your EKS clusters](/cnspec/cloud/aws/eks/).
 
 ---

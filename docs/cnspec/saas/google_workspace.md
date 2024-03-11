@@ -1,7 +1,7 @@
 ---
 title: Assess Google Workspace Security with cnspec
 sidebar_label: Google Workspace
-sidebar_position: 3
+sidebar_position: 4
 displayed_sidebar: cnspec
 description: Set up cnspec to perform security scans of Google Workspace
 ---

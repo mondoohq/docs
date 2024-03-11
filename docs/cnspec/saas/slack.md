@@ -1,7 +1,7 @@
 ---
 title: Asses Slack Security with cnspec
 sidebar_label: Slack
-sidebar_position: 6
+sidebar_position: 7
 displayed_sidebar: cnspec
 description: Secure and enforce policy for your Slack workspaces
 image: /img/featured_img/mondoo-feature.jpg

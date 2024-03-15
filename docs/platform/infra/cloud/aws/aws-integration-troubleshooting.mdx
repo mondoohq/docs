@@ -6,7 +6,7 @@ image: /img/featured_img/mondoo-aws.jpg
 description: This document covers how to debug and troubleshoot problems that may come up with the AWS Integration.
 ---
 
-Troubleshoot problems that may come up deploying, running, and updating the Mondoo AWS Integration.
+Troubleshoot problems that may come up deploying, running, and updating the Mondoo AWS integration.
 
 ## CloudFormation
 
@@ -67,9 +67,9 @@ StackSets with SERVICE_MANAGED permission model can only have OrganizationalUnit
 
 You must remove these StackSet instances manually from an account using the AWS CLI.
 
-### Remove a faulty StackSet from the Organization root using the AWS CLI
+### Remove a faulty StackSet from the organization root using the AWS CLI
 
-To remove a faulty StackSet with the AWS CLI , use the `aws cloudformation delete-stack-instances` [command](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/delete-stack-instances.html).
+To remove a faulty StackSet with the AWS CLI, use the `aws cloudformation delete-stack-instances` [command](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/delete-stack-instances.html).
 
 :::danger WARNING
 Read the [full documentation on this command in the AWS CLI Command Reference](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/delete-stack-instances.html) before you run it in your infrastructure.
@@ -109,11 +109,23 @@ Depending on how you configured your deployment, not all of the roles above may 
 
 :::
 
-### Updates
+## Updates
 
 The CloudFormation stack and Lambda function update themselves to the latest available every 8 hours. These updates are independent of each other, meaning that if the CloudFormation stack fails to update, the Lambda code will still be updated.
 
 On occasion, one of these CloudFormation updates may result in an `Update Failed` state on the stack. Sometimes this is a chicken/egg issue that will resolve on the next auto-update. In some cases, a stack will remain in `Update Failed` state until a user manually updates the stack to give it the required extra permissions.
+
+### Force a Lambda update
+
+You can manually force an update to the AWS Lambda from within the Mondoo console:
+
+![Mondoo Platform - force AWS Lambda update](/img/platform/infra/cloud/aws/dotmenu.png)
+
+1. Open the AWS integration.
+
+2. Near the top-right corner of the integration page, select the **...** menu.
+
+3. Select **Force Lambda Update**.
 
 ## VPC
 
@@ -125,7 +137,7 @@ Should your Lambda function require VPC access to be able to scan instances, ple
 
 Security groups for all AWS SSM managed instances must include an egress rule to allow outbound traffic on port 443 (HTTPS) to [Mondoo Platform](https://console.mondoo.com) at IP address `34.98.71.94` to send results back to your account.
 
-## Logging
+## Logging and metrics
 
 All lambda logs are stored in CloudWatch Logs, under a log group calls `/aws/lambda/MondooLambda` in the region where the CloudFormation was installed.
 
@@ -135,6 +147,18 @@ You can search for specific log messages or view a specific time frame of activi
 ### Debug logging
 
 To enable debug logging, add the debug environment variable to the MondooLambda function: `DEBUG=1` by visiting the AWS Mondoo Lambda Console Configuration tab. ![Lambda Console](/img/platform/infra/cloud/aws/lambda-envvars.png)
+
+### Send logging data or metrics to Mondoo
+
+If you're working with the Mondoo team to troubleshoot your AWS integration, you can send diagnostic data and Lambda metrics from within the Mondoo console:
+
+![Mondoo Platform - send AWS information to Mondoo](/img/platform/infra/cloud/aws/dotmenu.png)
+
+1. Open the AWS integration.
+
+2. Near the top-right corner of the integration page, select the **...** menu.
+
+3. Select the information you want to share with the Mondoo team: **Send Lambda Metrics** or **Send Diagnotics Data**.
 
 ## 403 errors and Terraform
 
@@ -173,3 +197,5 @@ And of course, please contact support@mondoo.com and join us in the [Mondoo Comm
 - [Scan Continuously with an AWS Integration](/docs/platform/infra/cloud/aws/aws-integration-scan)
 
 ---
+
+import { updateApiKey } from "@algolia/client-search";

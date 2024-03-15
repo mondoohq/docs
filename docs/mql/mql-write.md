@@ -736,6 +736,27 @@ tfblock {
 }
 ```
 
+### Helpers for data type conversions
+
+Helpers let you convert data to the type you need:
+
+```coffee
+> int(1.23)
+1
+
+> bool(1)
+true
+
+> float(12)
+12
+
+> string(1.89)
+"1.89"
+
+> regex("w.r.d") == "world 🌎"
+/w.r.d/
+```
+
 ## Error handling
 
 For values that cannot be accessed, MQL provides errors:

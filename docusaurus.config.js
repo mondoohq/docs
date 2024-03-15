@@ -135,8 +135,8 @@ module.exports = {
   onBrokenMarkdownLinks: "warn",
   trailingSlash: "true",
   favicon: "img/favicon.ico",
-  organizationName: "Mondoo", // Usually your GitHub org/user name.
-  projectName: "Docs", // Usually your repo name.
+  organizationName: "Mondoo",
+  projectName: "Docs",
 
   plugins: [
     [
@@ -174,6 +174,7 @@ module.exports = {
         },
       },
     ],
+    require.resolve("docusaurus-lunr-search"),
     [
       require.resolve("docusaurus-gtm-plugin"),
       {
@@ -189,12 +190,6 @@ module.exports = {
       sidebar: {
         hideable: true,
       },
-    },
-    algolia: {
-      apiKey: "ALGOLIA_API_KEY",
-      indexName: "mondoo",
-      contextualSearch: false, // activate if we use versionized docs
-      appId: "ALGOLIA_APP_ID",
     },
     prism: {
       theme: themes.nightOwl,

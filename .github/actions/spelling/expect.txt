@@ -12,7 +12,6 @@ AKIAI
 AKIAIOSFODNN
 alswrv
 amazonses
-AMIIBCg
 ampl
 anya
 APK
@@ -32,14 +31,12 @@ autoscaler
 backupconfiguration
 badssm
 baf
-BAQEFAAOCAQ
 bba
 bbeb
 bccbcb
 bdc
 bdn
 BGhg
-Bgkqhki
 bigquery
 BJHy
 BMDH
@@ -60,7 +57,6 @@ cdzrr
 Ceph
 certificatechains
 cfee
-cffae
 cim
 classname
 clientid
@@ -86,7 +82,6 @@ cyclonedx
 CYEXAMPLEKEY
 datacompute
 datapath
-dbf
 dcea
 Ddos
 debconf
@@ -106,13 +101,11 @@ efc
 efcfc
 Ehd
 eig
-EIP
 EKfj
 ekm
 Ekoslaq
 enableforcedlogoff
 enablesecuritysignature
-ENM
 ERXy
 Eso
 euleros
@@ -123,7 +116,6 @@ externalsender
 EZel
 FAgb
 falsey
-fbcaaa
 FBTJf
 FCAHd
 fcb
@@ -155,7 +147,6 @@ hostkeys
 hvm
 iac
 iap
-Iavfv
 Iiwic
 Ijoi
 IKTK
@@ -173,11 +164,9 @@ jglt
 Jhb
 jira
 Jivv
-jjnhz
 joq
 jsonbody
 JTi
-KCAQEAx
 kembe
 KEYFILE
 keyout
@@ -214,7 +203,6 @@ Metasploit
 mfs
 MFx
 MHNy
-MIIBIj
 Mjk
 MKGQ
 mmvv
@@ -304,14 +292,12 @@ sbom
 scim
 scsd
 Scz
-sdc
 SECRETID
 SECRETVALUE
 securetty
 securityimages
 SEfirewall
 serviceprincipals
-shm
 singlequeryargument
 sizeconstraintstatement
 skype
@@ -337,7 +323,6 @@ testname
 testring
 testsuite
 tfblock
-tmg
 tmpkqyme
 toplevel
 tpu
@@ -380,7 +365,6 @@ xmna
 Xnp
 xoxb
 XPgk
-xrl
 XRu
 Xsf
 xssmatchstatement
@@ -407,4 +391,3 @@ ZXIt
 ZXJz
 zxkk
 Zzd
-zzg

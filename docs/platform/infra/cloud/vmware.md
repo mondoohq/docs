@@ -119,7 +119,7 @@ If you are using GitHub, you can quickly fetch your public keys with this comman
 
 When you log in using your ssh key, you see this welcome screen:
 
-```
+```text
                         .-.
                         : :
 ,-.,-.,-. .--. ,-.,-. .-' : .--.  .--. ™

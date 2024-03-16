@@ -10,7 +10,7 @@ hide_table_of_contents: true
 
 Mondoo's flagship SaaS platform provides full-stack security, compliance, and asset intelligence for your entire cloud and on-premises infrastructure.
 
-#### Get started
+### Get started
 
 - [What Is Mondoo?](/platform/start/plat-what-is/)
 
@@ -18,7 +18,7 @@ Mondoo's flagship SaaS platform provides full-stack security, compliance, and as
 
 - [Plan your Mondoo Organization](/platform/start/organize/overview/)
 
-#### [Integrate Your Infrastructure with Mondoo](/platform/infra/overview/)
+### [Integrate Your Infrastructure with Mondoo](/platform/infra/overview/)
 
 - [Cloud and Kubernetes](/platform/infra/cloud/overview/)
 

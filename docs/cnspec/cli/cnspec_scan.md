@@ -174,13 +174,13 @@ cnspec scan vagrant HOST
 #### Scan an inventory file
 
 ```bash
-cnspec scan --inventory-file inventory.yml
+cnspec scan --inventory-file FILENAME
 ```
 
-#### Scan Ansible
+#### Scan an Ansible inventory file
 
 ```bash
-ansible-inventory -i hosts.ini --list | cnspec scan --inventory-ansible
+cnspec scan --inventory-ansible --inventory-file FILENAME
 ```
 
 ### Options
@@ -192,8 +192,8 @@ ansible-inventory -i hosts.ini --list | cnspec scan --inventory-ansible
       --discover strings            Enable the discovery of nested assets. Supports: all,auto,container,container-images
   -h, --help                        help for scan
       --incognito                   Run in incognito mode. Do not report scan results to  Mondoo Platform.
-      --inventory-ansible           Set the inventory format to Ansible.
-      --inventory-domainlist        Set the inventory format to domain list.
+      --inventory-format-ansible    Set the inventory format to Ansible.
+      --inventory-format-domainlist Set the inventory format to domain list.
       --inventory-file string       Set the path to the inventory file.
   -j, --json                        Run the query and return the object in a JSON structure.
   -o, --output string               Set output format: compact, csv, full, json, junit, report, summary, yaml (default "compact")

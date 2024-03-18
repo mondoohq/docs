@@ -22,7 +22,7 @@ Managing policies involves:
 
 Any policies you enable, disable, preview in a space's registry affect only that space.
 
-To learn more about Mondoo policies, read [Policy as Code](/platform/security/posture/pac/)
+To learn more about Mondoo policies, read [Policy as Code](/platform/security/posture/pac/).
 
 ## Access the registry for a space
 
@@ -31,6 +31,12 @@ To learn more about Mondoo policies, read [Policy as Code](/platform/security/po
 2. In the side navigation bar, select **Registry**.
 
    ![Mondoo - navigate to the security registry for a space](/img/platform/security/registry-nav.png)
+
+:::tip
+
+You can also see enabled policies from the cnspec command line. To learn more, read [cnspec policy list](/cnspec/cli/cnspec_policy_list/).
+
+:::
 
 ## Enable policies
 
@@ -45,6 +51,12 @@ Enable a policy to use that policy as a basis for evaluating assets in the space
    ![Mondoo - enable the policy for a space](/img/platform/security/enable-a-policy.png)
 
 Changes take effect immediately. The next time Mondoo scans applicable assets in the space, it includes this policy.
+
+:::tip
+
+You can also enable a policy from the cnspec command line. To learn more, read [cnspec policy enable](/cnspec/cli/cnspec_policy_enable/).
+
+:::
 
 ## Disable policies
 
@@ -65,6 +77,12 @@ Disabling a policy deletes any existing reports from that policy in the space.
    ![Mondoo - disable a policy for a space](/img/platform/security/disable-a-policy.png)
 
 Changes take effect immediately. The next time Mondoo scans applicable assets in the space, it does not include this policy.
+
+:::tip
+
+You can also disable a policy from the cnspec command line. To learn more, read [cnspec policy disable](/cnspec/cli/cnspec_policy_disable/).
+
+:::
 
 ## Preview policies
 

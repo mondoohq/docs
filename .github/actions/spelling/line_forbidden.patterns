@@ -643,3 +643,7 @@
 
 # s.b. understand
 \bunder stand\b
+
+# find spaces before a comma
+# Enable this once https://github.com/check-spelling/check-spelling/wiki/Feature%3A-Block-Ignore ships
+# ( )+,

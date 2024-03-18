@@ -370,6 +370,7 @@ module.exports = {
         },
         sitemap: {
           changefreq: "weekly",
+          ignorePatterns: ["**/releases/tags/**"],
           priority: 0.5,
         },
       },

@@ -251,7 +251,7 @@ module.exports = {
           items: [
             {
               label: "GitHub Discussions",
-              href: "https://github.com/orgs/mondoohq/discussions",
+              href: "https://github.com/orgs/mondoohq/discussions/",
             },
             {
               label: "Slack",
@@ -298,11 +298,11 @@ module.exports = {
             },
             {
               label: "cnquery",
-              href: "https://mondoo.com/cnquery",
+              href: "https://mondoo.com/cnquery/",
             },
             {
               label: "cnqspec",
-              href: "https://mondoo.com/cnspec",
+              href: "https://mondoo.com/cnspec/",
             },
           ],
         },
@@ -315,11 +315,11 @@ module.exports = {
             },
             {
               label: "GitHub",
-              href: "https://github.com/mondoohq",
+              href: "https://github.com/mondoohq/",
             },
             {
               label: "Contribute to Mondoo docs",
-              href: "https://github.com/mondoohq/docs",
+              href: "https://github.com/mondoohq/docs/",
             },
           ],
         },

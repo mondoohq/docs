@@ -58,6 +58,7 @@ cdzrr
 Ceph
 certificatechains
 cfee
+cgr
 chainguard
 cim
 classname

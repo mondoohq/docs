@@ -41,7 +41,7 @@
     "search-insights": "^2.13.0",
     "terser": "5.29.2",
     "url-loader": "^4.1.1",
-    "webpack": "^5.90.3",
+    "webpack": "^5.91.0",
     "ws": "^8.16.0"
   },
   "browserslist": {

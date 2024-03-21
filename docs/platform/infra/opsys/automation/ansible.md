@@ -177,7 +177,7 @@ Mondoo supports on-demand scanning of an Ansible inventory in two ways:
 
 - Create an Ansible task that uses cnspec to scan your infrastructure.
 
-With both of these approaches (), your assets:
+With both of these approaches, your assets:
 
 1. Authenticate with your Mondoo Platform account using the cnspec configuration on your local workstation
 
@@ -185,7 +185,7 @@ With both of these approaches (), your assets:
 
 3. Return the results to Mondoo Platform so you can view reports and asset scores for all assets in the Mondoo Console
 
-With these approaches, Mondoo doesn't install anything on your infrastructure. Every time you want to see fresh results, you must scan the assets.
+Mondoo doesn't install anything on your infrastructure. Every time you want to see fresh results, you must scan the assets.
 
 ### Scan an Ansible inventory on demand
 

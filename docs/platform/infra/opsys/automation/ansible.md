@@ -173,22 +173,22 @@ While you can easily configure Mondoo's cnspec to run as a service to continuous
 
 Mondoo supports on-demand scanning of an Ansible inventory in two ways:
 
-- **Run cnspec scan --ansible-inventory** - Use the `cnspec scan --ansible-inventory` command to parse the output of `ansible-inventory -i <host_file.ini> --list` command, and scan with Mondoo.
-- **Run cnspec scan as an Ansible Task** - Create an Ansible task to scan your infrastructure.
+- Use the `cnspec scan --inventory-ansible --inventory-file FILENAME` command to parse the output of `ansible-inventory -i <host_file.ini> --list` command, and scan with Mondoo.
+- Create an Ansible task that runs `cnspec scan` to scan your infrastructure.
 
 With both of the scenarios above, your assets:
 
-1.  Authenticates with your Mondoo Platform account using the cnspec configuration on your local workstation
+1. Authenticate with your Mondoo Platform account using the cnspec configuration on your local workstation
 
-2.  Run any policies enabled in that space
+2. Run any policies enabled in that space
 
-3.  Report the results back to Mondoo Platform so you can view reports and asset scores for all assets in the Mondoo Console
+3. Return the results to Mondoo Platform so you can view reports and asset scores for all assets in the Mondoo Console
 
 With these approaches, Mondoo doesn't install anything on your infrastructure. Every time you want to see fresh results, you must scan the assets.
 
 The next section provides hands-on tutorials for running both on-demand scenarios.
 
-### On-demand scan of Ansible inventory with cnspec scan --ansible-inventory
+### On-demand scan of Ansible inventory
 
 This section is a hands-on guide on how to trigger an on-demand scan of an Ansible inventory. When you finish, you will have fresh asset scores and reports for all of your Ansible inventory in your Mondoo Platform account.
 
@@ -250,14 +250,14 @@ instance1 | SUCCESS => {
 
 #### Step 2: Scan the Ansible inventory
 
-cnspec provides the `cnspec scan --ansible-inventory` command to scan existing Ansible inventories. There are two main ways to use this command.
+cnspec provides the `cnspec scan --inventory-ansible` command to scan existing Ansible inventories. There are two main ways to use this command.
 
 ##### Option 1: Pipe the Ansible inventory to cnspec scan
 
-The first option if you are using a shell such as `bash` or `zsh` that supports `|` redirects is to pipe the outputs of the `ansible-inventory -i hosts.ini --list` command to `cnspec scan --ansible-inventory`.
+The first option if you are using a shell such as `bash` or `zsh` that supports `|` redirects is to pipe the outputs of the `ansible-inventory -i hosts.ini --list` command to `cnspec scan --inventory-ansible`. For `FILENAME`, substitute the name of the inventory file.
 
-```bash title="Pipe the contents of an Ansible inventory to the cnspec scan --ansible-inventory command"
-ansible-inventory -i hosts.ini --list | cnspec scan --inventory-file - --ansible-inventory --insecure
+```bash title="Pipe the contents of an Ansible inventory to the cnspec scan --inventory-ansible command"
+ansible-inventory -i hosts.ini --list | cnspec scan --inventory-ansible --inventory-file FILENAME --insecure
 ```
 
 :::info
@@ -276,7 +276,7 @@ If your shell does not support pipes, you can generate a `hosts.json` from the `
 
 ```bash title="Generate hosts.json and scan with cnspec scan command"
 ansible-inventory -i hosts.ini --list > hosts.json
-cnspec scan --inventory-file hosts.json --ansible-inventory
+cnspec scan --inventory-file hosts.json --inventory-ansible
 ```
 
 Both cnspec and the Mondoo Console show results from each policy that runs against your assets.

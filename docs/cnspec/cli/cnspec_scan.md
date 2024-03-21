@@ -180,7 +180,7 @@ cnspec scan --inventory-file FILENAME
 #### Scan an Ansible inventory file
 
 ```bash
-cnspec scan --inventory-ansible --inventory-file FILENAME
+ansible-inventory -i hosts.ini --list | cnspec scan --inventory-ansible --inventory-file FILENAME
 ```
 
 ### Options

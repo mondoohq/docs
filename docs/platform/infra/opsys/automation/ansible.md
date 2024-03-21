@@ -240,7 +240,7 @@ The method for scanning an Ansible inventory depends on whether your shell suppo
 The first option if you are using a shell such as `bash` or `zsh` that supports `|` redirects is to pipe the output of the `ansible-inventory -i hosts.ini --list` command to `cnspec scan --inventory-format-ansible`. For `FILENAME`, substitute the name of the inventory file.
 
 ```bash title="Pipe the contents of an Ansible inventory to the cnspec scan command"
-ansible-inventory -i hosts.ini --list | cnspec scan --inventory-format-ansible --inventory-file FILENAME --insecure
+ansible-inventory -i hosts.ini --list | cnspec scan --inventory-format-ansible --insecure
 ```
 
 :::info

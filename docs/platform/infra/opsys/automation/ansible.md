@@ -8,9 +8,7 @@ image: /img/featured_img/mondoo-feature.jpg
 
 Mondoo works seamlessly with configuration management tools in the DevOps ecosystem. For businesses already using Ansible to automate their environments, there are two primary ways to use Mondoo and Ansible together:
 
-[**Continuously assess host configuration**](#continuous-configuration-assessments-with-mondoo-and-ansible)
-
-Use Ansible to:
+[**Continuously assess host configuration**](#run-continuous-configuration-assessments-with-mondoo-and-ansible): Use Ansible to:
 
 - Install and configure [cnspec](/platform/infra/opsys/mondoo-cnspec/) on supported Linux and Windows hosts
 
@@ -18,9 +16,7 @@ Use Ansible to:
 
 - Configure hosts to continuously scan with Mondoo policies and report scan results to Mondoo Platform
 
-[**Scan Ansible inventories on demand**](#on-demand-scanning-of-ansible-inventories)
-
-Perform on-demand scans of Ansible inventories without installing cnspec as a service on the host.
+[**Scan Ansible inventories on demand**](#scan-ansible-inventories-on-demand): Perform on-demand scans of Ansible inventories without installing cnspec as a service on the host.
 
 Hosts from your Ansible inventory authenticate with your Mondoo Platform account so that cnspec can retrieve policies you've enabled. cnspec sends scan results from the host to Mondoo Platform, where you can see asset scores and reports.
 
@@ -39,11 +35,11 @@ import Partial from "./_automation-providers-note.mdx";
 
 - All hosts in your inventory must allow outbound traffic on port 443 (HTTPS) to Mondoo Platform at `https://us.api.mondoo.com:443` (IP address `34.98.71.94`) to send results to your account.
 
-## Continuous configuration assessments with Mondoo and Ansible
+## Run continuous configuration assessments with Mondoo and Ansible
 
 Use Ansible to install and configure cnspec on supported Linux and Windows hosts so that Mondoo runs continuously as a service.
 
-Mondoo maintains and publishes an official <a href="https://galaxy.ansible.com/mondoo/client" target="_blank">Mondoo/cnspec Role</a>, which is available on Ansible Galaxy. The code for the role is open source and available in our <a href="https://github.com/mondoohq/ansible-mondoo" target="_blank">GitHub repo</a>.
+Mondoo maintains and publishes an official <a href="https://galaxy.ansible.com/mondoo/client" target="_blank">Mondoo/cnspec role</a>, which is available on Ansible Galaxy. The code for the role is open source and available in our <a href="https://github.com/mondoohq/ansible-mondoo" target="_blank">GitHub repo</a>.
 
 Our Ansible Role lets you:
 
@@ -57,11 +53,9 @@ Our Ansible Role lets you:
 
 Once configured, cnspec authenticates with Mondoo Platform every 60 minutes, running every policy enabled in the registry. It sends results from the scan to Mondoo Platform so you can see the generated scores and reports in the Mondoo Console.
 
-### Hands-on: Continuous configuration assessments with Mondoo & Ansible
+### Set up continuous configuration assessments with Mondoo and Ansible
 
-> This section provides a hands-on guide for using the Mondoo Ansible role.
-
-This guide covers how to set up continuous configuration assessments on Linux and Windows hosts with Ansible. After completing this guide, you will have an Ansible inventory running cnspec as a service, registered with your Mondoo Platform account, running policy scans, and reporting the findings to Mondoo Platform.
+This section covers how to set up continuous configuration assessments on Linux and Windows hosts with Ansible. After completing this section, you will have an Ansible inventory running cnspec as a service, registered with your Mondoo Platform account, running policy scans, and reporting the findings to Mondoo Platform.
 
 #### Step 1: Generate a registration token
 
@@ -75,15 +69,15 @@ The Mondoo Ansible role provides a `registration_token` variable to specify a Mo
 
 :::info
 
-By default, tokens expire every 600 seconds, but expiration time can be extended by selecting **Token Options** and setting the expiration time (max: 86400 seconds).
+By default, tokens expire every 600 seconds. You can extend expiration time by selecting **Token Options** and setting the expiration time (max: 86400 seconds).
 
 :::
 
 4. Copy the registration token to the clipboard.
 
-#### Step 2: Install Mondoo role and create playbook
+#### Step 2: Install the Mondoo role and create a playbook
 
-Next you must install the Mondoo Ansible role from Ansible Galaxy on your local workstation, and create an Ansible playbook to call that role on your inventory.
+Next you must install the Mondoo Ansible role from Ansible Galaxy on your local workstation and create an Ansible playbook to call that role on your inventory.
 
 1. Download the Ansible Mondoo role on your workstation:
 
@@ -91,7 +85,7 @@ Next you must install the Mondoo Ansible role from Ansible Galaxy on your local 
    ansible-galaxy install mondoo.client
    ```
 
-2. Create a `playbook.yaml` file to run the Ansible Mondoo role on your inventory of hosts. You must update the `registration_token` value with your registration token from _Step 1: Generate a registration token_ above. This example has both Linux and Windows hosts, and should be updated accordingly if only using one platform or another:
+2. Create a `playbook.yaml` file to run the Ansible Mondoo role on your inventory of hosts. You must update the `registration_token` value with your registration token from _Step 1: Generate a registration token_ above. This example has both Linux and Windows hosts. If you're only using one of these platforms, remove the unneeded section:
 
    ```yaml title="Example playbook.yml"
     ---
@@ -146,9 +140,9 @@ ansible-playbook -i hosts.ini playbook.yml
 
 Once Ansible runs the `playbook.yaml` against your inventory, you can view the scan results in Mondoo Platform.
 
-1. In the [Mondoo Console](https://console.mondoo.com) navigate to the **INVENTORY** page.
+1. In the [Mondoo Console](https://console.mondoo.com), navigate to the **INVENTORY** page.
 
-2. All servers should now be reporting in and have received an asset score for the policies executed.
+2. All servers should now be reporting in and have an asset score for the policies executed.
 
 3. To view the policies that ran on a given asset, and detailed information, select an asset in the list.
    ![Ansible asset details in Mondoo Platform](/img/platform/infra/opsys/automation/ansible_asset_details.png)
@@ -161,13 +155,9 @@ To learn more about how Mondoo generates asset scores, read [Manage Policies](/p
 
 :::
 
-#### You're done!
+cnspec is now running as a service on your Ansible inventory. It continues to scan your assets every 60 minutes and report findings back to your account.
 
-cnspec is now running as a service on your Ansible inventory. It will continue to scan your assets every 60 minutes and report findings back to your account.
-
-## On-demand scanning of Ansible inventories
-
-> This section covers how to use cnspec for on-demand scans of Ansible inventories without needing to install and configure cnspec as a service on the host.
+## Scan Ansible inventories on demand
 
 While you can easily configure Mondoo's cnspec to run as a service to continuously scan your infrastructure, there may be times when you just want to scan an Ansible inventory without having to install and configure cnspec on your infrastructure.
 
@@ -187,15 +177,13 @@ With both of these approaches, your assets:
 
 Mondoo doesn't install anything on your infrastructure. Every time you want to see fresh results, you must scan the assets.
 
-### Scan an Ansible inventory on demand
-
-This section is a hands-on guide on how to trigger an on-demand scan of an Ansible inventory. When you finish, you will have fresh asset scores and reports for all of your Ansible inventory in your Mondoo Platform account.
-
 :::caution
 
 Because on-demand scans of Ansible inventories run serially, we don't recommend them for large inventories. If you want to run on-demand scans that execute in parallel, please reach out to us in the [Mondoo Community Slack](https://mondoo.link/slack) channel.
 
 :::
+
+### Scan the output of the `ansible-inventory` command
 
 #### Step 1: Set up or validate your Ansible inventory
 
@@ -253,10 +241,10 @@ The method for scanning an Ansible inventory depends on whether your shell suppo
 
 ##### Option A: Pipe the Ansible inventory to cnspec scan
 
-The first option if you are using a shell such as `bash` or `zsh` that supports `|` redirects is to pipe the outputs of the `ansible-inventory -i hosts.ini --list` command to `cnspec scan --inventory-format-ansible`. For `FILENAME`, substitute the name of the inventory file.
+The first option if you are using a shell such as `bash` or `zsh` that supports `|` redirects is to pipe the output of the `ansible-inventory -i hosts.ini --list` command to `cnspec scan --inventory-format-ansible`. For `FILENAME`, substitute the name of the inventory file.
 
 ```bash title="Pipe the contents of an Ansible inventory to the cnspec scan command"
-ansible-inventory -i FILENAME --list | cnspec scan --inventory-format-ansible --inventory-file FILENAME --insecure
+ansible-inventory -i hosts.ini --list | cnspec scan --inventory-format-ansible --inventory-file FILENAME --insecure
 ```
 
 :::info
@@ -397,27 +385,25 @@ Once Ansible completes, cnspec sends scan results to Mondoo Platform so you can 
 
 To view the reports in the Mondoo Console:
 
-1. In the [Mondoo Console](https://console.mondoo.com) navigate to the **INVENTORY** page. All servers should be reporting in and have an asset score for the policies executed.
+1. In the [Mondoo Console](https://console.mondoo.com) navigate to the **INVENTORY** page. All servers should be reported and have an asset score for the policies executed.
 
-2. To see detailed results and the policies that ran on an asset, select an asset in the list. You can use the
+2. To view detailed results and the policies that ran on an asset, select the asset in the list. If you don't see the asset you want, use the search bar to filter assets.
 
-   ![Ansible asset details in Mondoo Platform](/img/platform/infra/opsys/automation/ansible_asset_details.png)
+Tabs for policies, checks, and data queries let you dive into greater detail.
 
-This view shows each policy that ran against an asset, and the individual score for each policy. Select any policy in the list to view the results from each query.
-
-We rely on [ansible-inventory](https://docs.ansible.com/ansible/latest/cli/ansible-inventory.html) command to be able to support various inventory formats and to be able to re-use [dynamic inventory](https://docs.ansible.com/ansible/latest/user_guide/intro_dynamic_inventory.html) too. This command outputs a standardized format independently if a `ini` or `yaml` inventory is used.
+We rely on the [ansible-inventory](https://docs.ansible.com/ansible/latest/cli/ansible-inventory.html) command to support various inventory formats and re-use [dynamic inventory](https://docs.ansible.com/ansible/latest/user_guide/intro_dynamic_inventory.html). This command outputs a standardized format independently if a `ini` or `yaml` inventory is used.
 
 :::info
 
-Note: At this point, we do not support group [patterns](https://docs.ansible.com/ansible/latest/user_guide/intro_patterns.html). If you need additional support, please do not hesitate to contact us.
+Currently Mondoo does not support group [patterns](https://docs.ansible.com/ansible/latest/user_guide/intro_patterns.html). If you need additional support, please contact us.
 
 :::
 
-### Hands-On: On-demand scan of Ansible inventory using an Ansible task
+### Scan on demand using an Ansible task
 
-As an alternative, you can use the `cnspec scan` command in an Ansible task. Mondoo uses the ssh-agent so you do not need to set up additional credentials configuration.
+You can use the `cnspec scan` command in an Ansible task. Mondoo uses the ssh-agent so you do not need to set up additional credentials configuration.
 
-#### Step 1: Set up or validate your Ansible Inventory
+#### Step 1: Set up or validate your Ansible inventory
 
 An Ansible inventory is a list of hosts that is mostly stored in the two common formats `ini` and `yaml`. These examples illustrate their structure. The ini format allows grouping and easy configuration of additional properties.
 
@@ -469,7 +455,7 @@ instance1 | SUCCESS => {
 
 #### Step 2: Set up playbook.yaml to run cnspec scan
 
-Next, you must create a playbook to run the `cnspec scan` against your inventory. This is an example `playbook.yaml` used to execute `cnspec scan` locally with a playbook against Linux hosts:
+Create a playbook to run a cnspec scan against your inventory. This is an example `playbook.yaml` used to execute the scan locally with a playbook against Linux hosts:
 
 ```yaml title="Example playbook.yml for executing cnspec scan against Linux hosts"
 ---

@@ -8,17 +8,17 @@ image: /img/featured_img/mondoo-feature.jpg
 
 Mondoo works seamlessly with configuration management tools in the DevOps ecosystem. For businesses already using Ansible to automate their environments, there are two primary ways to use Mondoo and Ansible together:
 
-[**Continuously assess host configuration**](#run-continuous-configuration-assessments-with-mondoo-and-ansible): Use Ansible to:
+- [**Continuously assess host configuration**](#run-continuous-configuration-assessments-with-mondoo-and-ansible): Use Ansible to:
 
-- Install and configure [cnspec](/platform/infra/opsys/mondoo-cnspec/) on supported Linux and Windows hosts
+  - Install and configure [cnspec](/platform/infra/opsys/mondoo-cnspec/) on supported Linux and Windows hosts
 
-- Register hosts with Mondoo Platform
+  - Register hosts with Mondoo Platform
 
-- Configure hosts to continuously scan with Mondoo policies and report scan results to Mondoo Platform
+  - Configure hosts to continuously scan with Mondoo policies and report results to Mondoo Platform
 
-[**Scan Ansible inventories on demand**](#scan-ansible-inventories-on-demand): Perform on-demand scans of Ansible inventories without installing cnspec as a service on the host.
+- [**Scan Ansible inventories on demand**](#scan-ansible-inventories-on-demand): Perform on-demand scans of Ansible inventories without installing cnspec as a service on the host.
 
-Hosts from your Ansible inventory authenticate with your Mondoo Platform account so that cnspec can retrieve policies you've enabled. cnspec sends scan results from the host to Mondoo Platform, where you can see asset scores and reports.
+  Hosts from your Ansible inventory authenticate with your Mondoo Platform account so that cnspec can retrieve policies you've enabled. cnspec sends scan results from the host to Mondoo Platform, where you can see asset scores and reports.
 
 <!-- prettier-ignore -->
 import Partial from "./_automation-providers-note.mdx";
@@ -27,7 +27,7 @@ import Partial from "./_automation-providers-note.mdx";
 
 ## Requirements
 
-- In your Mondoo Platform account, enable all the policies you want to run against your Ansible inventory. To learn how to enable policies, read [Monitor Your Infrastructure Security](/platform/security/posture/monitor).
+- In your Mondoo Platform account, enable all the policies you want to run against your Ansible inventory. To learn how to enable policies, read [Manage Policies](/platform/security/posture/policies/).
 
 - You must have root or administrator access for each host in the Ansible inventory you want to scan.
 
@@ -41,7 +41,7 @@ Use Ansible to install and configure cnspec on supported Linux and Windows hosts
 
 Mondoo maintains and publishes an official <a href="https://galaxy.ansible.com/mondoo/client" target="_blank">Mondoo/cnspec role</a>, which is available on Ansible Galaxy. The code for the role is open source and available in our <a href="https://github.com/mondoohq/ansible-mondoo" target="_blank">GitHub repo</a>.
 
-Our Ansible Role lets you:
+Mondoo's Ansible role lets you:
 
 - Install cnspec on supported Linux and Windows hosts
 
@@ -61,11 +61,9 @@ This section covers how to set up continuous configuration assessments on Linux 
 
 The Mondoo Ansible role provides a `registration_token` variable to specify a Mondoo registration token to use to register the client with Mondoo Platform.
 
-1. In the [Mondoo Console](https://console.mondoo.com) navigate to the **INTEGRATIONS** page.
+1. In the [Mondoo Console](https://console.mondoo.com) side navigation bar, under **INTEGRATIONS**, select **Add New Integration**.
 
-2. Select "Add Another Integration".
-
-3. Select **Workstation**.
+2. Select **Workstation**.
 
 :::info
 
@@ -73,13 +71,13 @@ By default, tokens expire every 600 seconds. You can extend expiration time by s
 
 :::
 
-4. Copy the registration token to the clipboard.
+3. Copy the registration token to the clipboard.
 
 #### Step 2: Install the Mondoo role and create a playbook
 
-Next you must install the Mondoo Ansible role from Ansible Galaxy on your local workstation and create an Ansible playbook to call that role on your inventory.
+Install the Mondoo Ansible role from Ansible Galaxy on your local workstation and create an Ansible playbook to call that role on your inventory:
 
-1. Download the Ansible Mondoo role on your workstation:
+1. Download the Ansible Mondoo role to your workstation:
 
    ```bash title="Download Mondoo role on your workstation"
    ansible-galaxy install mondoo.client
@@ -140,14 +138,13 @@ ansible-playbook -i hosts.ini playbook.yml
 
 Once Ansible runs the `playbook.yaml` against your inventory, you can view the scan results in Mondoo Platform.
 
-1. In the [Mondoo Console](https://console.mondoo.com), navigate to the **INVENTORY** page.
+1. In the [Mondoo Console](https://console.mondoo.com) side navigation bar, under **Inventory**, select **Operating Systems**. All your assets should now be reported and have asset scores for the policies executed.
 
-2. All servers should now be reporting in and have an asset score for the policies executed.
+2. To view detailed results and the policies that ran on an asset, select the asset in the list. If you don't see the asset you want, use the search bar to filter assets.
 
-3. To view the policies that ran on a given asset, and detailed information, select an asset in the list.
-   ![Ansible asset details in Mondoo Platform](/img/platform/infra/opsys/automation/ansible_asset_details.png)
+   ![Mondoo scan results of an asset from an Ansible inventory](/img/platform/infra/opsys/automation/ansible_asset_details.png)
 
-This view shows each policy that ran against an asset, and the individual score for each policy. Select any policy in the list to view the results from each query.
+   Tabs for policies, checks, and data queries let you dive into greater detail.
 
 :::info
 
@@ -385,11 +382,13 @@ Once Ansible completes, cnspec sends scan results to Mondoo Platform so you can 
 
 To view the reports in the Mondoo Console:
 
-1. In the [Mondoo Console](https://console.mondoo.com) navigate to the **INVENTORY** page. All servers should be reported and have an asset score for the policies executed.
+1. In the [Mondoo Console](https://console.mondoo.com) side navigation bar, under **Inventory**, select **Operating Systems**. All your assets should now be reported and have asset scores for the policies executed.
 
 2. To view detailed results and the policies that ran on an asset, select the asset in the list. If you don't see the asset you want, use the search bar to filter assets.
 
-Tabs for policies, checks, and data queries let you dive into greater detail.
+   ![Mondoo scan results of an asset from an Ansible inventory](/img/platform/infra/opsys/automation/ansible_asset_details.png)
+
+   Tabs for policies, checks, and data queries let you dive into greater detail.
 
 We rely on the [ansible-inventory](https://docs.ansible.com/ansible/latest/cli/ansible-inventory.html) command to support various inventory formats and re-use [dynamic inventory](https://docs.ansible.com/ansible/latest/user_guide/intro_dynamic_inventory.html). This command outputs a standardized format independently if a `ini` or `yaml` inventory is used.
 
@@ -500,11 +499,13 @@ Once Ansible completes, scan results are sent to Mondoo Platform so you can view
 
 To view the reports in the Mondoo Console:
 
-1. In the [Mondoo Console](https://console.mondoo.com) navigate to the **INVENTORY** page. All servers should be reported and have an asset score for the policies executed.
+1. In the [Mondoo Console](https://console.mondoo.com) side navigation bar, under **Inventory**, select **Operating Systems**. All your assets should now be reported and have asset scores for the policies executed.
 
 2. To view detailed results and the policies that ran on an asset, select the asset in the list. If you don't see the asset you want, use the search bar to filter assets.
 
-Tabs for policies, checks, and data queries let you dive into greater detail.
+   ![Mondoo scan results of an asset from an Ansible inventory](/img/platform/infra/opsys/automation/ansible_asset_details.png)
+
+   Tabs for policies, checks, and data queries let you dive into greater detail.
 
 :::info
 

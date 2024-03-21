@@ -79,7 +79,7 @@ By default, tokens expire every 600 seconds, but expiration time can be extended
 
 :::
 
-3. Copy the registration token to the clipboard.
+4. Copy the registration token to the clipboard.
 
 #### Step 2: Install Mondoo role and create playbook
 
@@ -173,10 +173,11 @@ While you can easily configure Mondoo's cnspec to run as a service to continuous
 
 Mondoo supports on-demand scanning of an Ansible inventory in two ways:
 
-- Use the `cnspec scan --inventory-ansible --inventory-file FILENAME` command to parse the output of `ansible-inventory -i <host_file.ini> --list` command, and scan with Mondoo.
-- Create an Ansible task that runs `cnspec scan` to scan your infrastructure.
+- Parse the output of the `ansible-inventory` command and scan with Mondoo.
 
-With both of the scenarios above, your assets:
+- Create an Ansible task that uses cnspec to scan your infrastructure.
+
+With both of these approaches (), your assets:
 
 1. Authenticate with your Mondoo Platform account using the cnspec configuration on your local workstation
 
@@ -186,9 +187,7 @@ With both of the scenarios above, your assets:
 
 With these approaches, Mondoo doesn't install anything on your infrastructure. Every time you want to see fresh results, you must scan the assets.
 
-The next section provides hands-on tutorials for running both on-demand scenarios.
-
-### On-demand scan of Ansible inventory
+### Scan an Ansible inventory on demand
 
 This section is a hands-on guide on how to trigger an on-demand scan of an Ansible inventory. When you finish, you will have fresh asset scores and reports for all of your Ansible inventory in your Mondoo Platform account.
 
@@ -250,14 +249,14 @@ instance1 | SUCCESS => {
 
 #### Step 2: Scan the Ansible inventory
 
-cnspec provides the `cnspec scan --inventory-ansible` command to scan existing Ansible inventories. There are two main ways to use this command.
+The method for scanning an Ansible inventory depends on whether your shell supports `|`.
 
-##### Option 1: Pipe the Ansible inventory to cnspec scan
+##### Option A: Pipe the Ansible inventory to cnspec scan
 
-The first option if you are using a shell such as `bash` or `zsh` that supports `|` redirects is to pipe the outputs of the `ansible-inventory -i hosts.ini --list` command to `cnspec scan --inventory-ansible`. For `FILENAME`, substitute the name of the inventory file.
+The first option if you are using a shell such as `bash` or `zsh` that supports `|` redirects is to pipe the outputs of the `ansible-inventory -i hosts.ini --list` command to `cnspec scan --inventory-format-ansible`. For `FILENAME`, substitute the name of the inventory file.
 
-```bash title="Pipe the contents of an Ansible inventory to the cnspec scan --inventory-ansible command"
-ansible-inventory -i hosts.ini --list | cnspec scan --inventory-ansible --inventory-file FILENAME --insecure
+```bash title="Pipe the contents of an Ansible inventory to the cnspec scan command"
+ansible-inventory -i FILENAME --list | cnspec scan --inventory-format-ansible --inventory-file FILENAME --insecure
 ```
 
 :::info
@@ -270,18 +269,19 @@ Use the `--insecure` flag for:
 
 :::
 
-##### Option 2: Scan Ansible inventory hosts.json
+##### Option B: Scan Ansible inventory hosts.json
 
-If your shell does not support pipes, you can generate a `hosts.json` from the `ansible-inventory` command and then pass that file to `cnspec scan` using the `--inventory` flag.
+If your shell does not support pipes, you can generate a `hosts.json` from the `ansible-inventory` command and then pass that file to `cnspec scan` using the `--inventory-file` flag.
 
 ```bash title="Generate hosts.json and scan with cnspec scan command"
 ansible-inventory -i hosts.ini --list > hosts.json
-cnspec scan --inventory-file hosts.json --inventory-ansible
+cnspec scan --inventory-file hosts.json --inventory-format-ansible
 ```
 
 Both cnspec and the Mondoo Console show results from each policy that runs against your assets.
 
-**Example shell output**
+<details>
+<summary>Show or hide example CLI scan output.</summary>
 
 ```
 Checks:
@@ -389,15 +389,18 @@ For detailed output, run this scan with "-o full".
 See more scan results and asset relationships on the Mondoo Console: https://console.mondoo.com/space/inventory/12ejfpX1SbxfrNf6bq8f8gCCgMb?spaceId=ansible-hosts
 ```
 
+</details>
+
 #### Step 3: View scan reports in the Mondoo Console
 
-Once Ansible completes, scan results are sent to Mondoo Platform so you can see the generated scores and reports in the Mondoo Console..
+Once Ansible completes, cnspec sends scan results to Mondoo Platform so you can see the generated scores and reports in the Mondoo Console..
 
 To view the reports in the Mondoo Console:
 
-1. In the [Mondoo Console](https://console.mondoo.com) navigate to the **INVENTORY** page.
-2. All servers should now be reporting in and have received a asset score for the policies executed.
-3. To view the policies that ran on a given asset, and detailed information, select an asset in the list.
+1. In the [Mondoo Console](https://console.mondoo.com) navigate to the **INVENTORY** page. All servers should be reporting in and have an asset score for the policies executed.
+
+2. To see detailed results and the policies that ran on an asset, select an asset in the list. You can use the
+
    ![Ansible asset details in Mondoo Platform](/img/platform/infra/opsys/automation/ansible_asset_details.png)
 
 This view shows each policy that ran against an asset, and the individual score for each policy. Select any policy in the list to view the results from each query.
@@ -511,14 +514,11 @@ Once Ansible completes, scan results are sent to Mondoo Platform so you can view
 
 To view the reports in the Mondoo Console:
 
-1. In the [Mondoo Console](https://console.mondoo.com) navigate to the **INVENTORY** page.
+1. In the [Mondoo Console](https://console.mondoo.com) navigate to the **INVENTORY** page. All servers should be reported and have an asset score for the policies executed.
 
-2. All servers should now be reporting in and have received an asset score for the policies executed.
+2. To view detailed results and the policies that ran on an asset, select the asset in the list. If you don't see the asset you want, use the search bar to filter assets.
 
-3. To view the policies that ran on a given asset, and detailed information, select an asset in the list.
-   ![Ansible asset details in Mondoo Platform](/img/platform/infra/opsys/automation/ansible_asset_details.png)
-
-This view shows each policy that ran against an asset, as well as the individual score for each policy. Select any policy in the list to view the results from each query.
+Tabs for policies, checks, and data queries let you dive into greater detail.
 
 :::info
 

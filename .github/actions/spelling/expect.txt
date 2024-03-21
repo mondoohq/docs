@@ -31,6 +31,7 @@ autoscaler
 backupconfiguration
 badssm
 baf
+baselayout
 bba
 bbeb
 bccbcb
@@ -57,6 +58,8 @@ cdzrr
 Ceph
 certificatechains
 cfee
+cgr
+chainguard
 cim
 classname
 clientid
@@ -358,6 +361,7 @@ wil
 winhttp
 winsock
 WNl
+wolfi
 wordpress
 wpe
 WTY

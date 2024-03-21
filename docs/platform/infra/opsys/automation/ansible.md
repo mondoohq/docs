@@ -170,9 +170,7 @@ With both of these approaches, your assets:
 
 2. Run any policies enabled in that space
 
-3. Return the results to Mondoo Platform so you can view reports and asset scores for all assets in the Mondoo Console
-
-Mondoo doesn't install anything on your infrastructure. Every time you want to see fresh results, you must scan the assets.
+3. Return the results to Mondoo Platform so you can view reports and asset scores for all assets in the Mondoo Console.
 
 :::caution
 
@@ -238,6 +236,7 @@ The method for scanning an Ansible inventory depends on whether your shell suppo
 
 ##### Option A: Pipe the Ansible inventory to cnspec scan
 
+
 The first option if you are using a shell such as `bash` or `zsh` that supports `|` redirects is to pipe the output of the `ansible-inventory -i hosts.ini --list` command to `cnspec scan --inventory-format-ansible`. For `FILENAME`, substitute the name of the inventory file.
 
 ```bash title="Pipe the contents of an Ansible inventory to the cnspec scan command"
@@ -260,7 +259,9 @@ If your shell does not support pipes, you can generate a `hosts.json` from the `
 
 ```bash title="Generate hosts.json and scan with cnspec scan command"
 ansible-inventory -i hosts.ini --list > hosts.json
+
 cnspec scan --inventory-file hosts.json --inventory-format-ansible
+
 ```
 
 Both cnspec and the Mondoo Console show results from each policy that runs against your assets.

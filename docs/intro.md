@@ -24,13 +24,13 @@ Mondoo's flagship SaaS platform provides full-stack security, asset intelligence
 
 #### [Integrate Your Infrastructure with Mondoo](/platform/infra/overview/)
 
-- [Servers and Endpoints](/platform/infra/opsys/osoverview/)
-
 - [Cloud](/platform/infra/cloud/overview/)
 
 - [SaaS](/platform/infra/saas/overview/)
 
 - [Network](/platform/infra/networking/overview/)
+
+- [Servers and Endpoints](/platform/infra/opsys/osoverview/)
 
 - [Software Supply Chain](/platform/infra/supply/overview/)
 

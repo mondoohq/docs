@@ -24,6 +24,8 @@ Mondoo's flagship SaaS platform provides full-stack security, compliance, and as
 
 - [SaaS](/platform/infra/saas/overview/)
 
+- [Network](/platform/infra/networking/overview/)
+
 - [Software Supply Chain](/platform/infra/supply/overview/)
 
 - [Servers and Endpoints](/platform/infra/opsys/osoverview/)

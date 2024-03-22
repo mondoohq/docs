@@ -103,7 +103,7 @@ Created by the Lambda function:
 
 The Lambda function updates itself every 24 hours. It updates the AWS CloudFormation stack and the Lambda function code to the latest available from the Mondoo S3 bucket.
 
-There is a safeguard in place to ensure that the Lambda function only updates itself to the expected build: When new versions of the Lambda function and CloudFormation JSON files are uploaded to S3 during the release process, the SHA-256 of those files is recorded and stored in a place accessible to the Mondoo server.
+There is a safeguard in place to ensure that the Lambda function only updates itself to the expected build: When new versions of the Lambda function and CloudFormation JSON files are uploaded to S3 during the release process, the SHA-256 of those files is recorded and stored in a place accessible to the Mondoo Platform.
 
 Every time the Lambda function updates, it first reads the SHA-256 of each file in the target S3 bucket and compares that to the expected (stored) hash. If the SHA-256 doesn't match, the Lambda doesn't update. Mondoo support receives an alert when this occurs.
 

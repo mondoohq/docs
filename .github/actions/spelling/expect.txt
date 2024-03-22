@@ -8,6 +8,7 @@ activitylog
 adduser
 aea
 afe
+AIy
 AKIAI
 AKIAIOSFODNN
 alswrv
@@ -24,6 +25,7 @@ ashburn
 assetid
 ASUSTe
 atlassian
+auditlog
 auths
 autodisconnect
 autoremove
@@ -64,6 +66,7 @@ cim
 classname
 clientid
 cloudlinux
+Clox
 Clw
 cmek
 CODENAME
@@ -109,6 +112,7 @@ ekm
 Ekoslaq
 enableforcedlogoff
 enablesecuritysignature
+Eqn
 ERXy
 Eso
 euleros
@@ -139,6 +143,7 @@ gistfile
 gmail
 googleusercontent
 gpu
+Gsqmfj
 guncl
 gvnic
 hashs
@@ -150,6 +155,7 @@ hostkeys
 hvm
 iac
 iap
+IFXx
 Iiwic
 Ijoi
 IKTK
@@ -161,6 +167,7 @@ ipsetreferencestatement
 Jalr
 JDAOZ
 jdata
+JDdt
 jdiaz
 jdp
 jglt
@@ -168,6 +175,7 @@ Jhb
 jira
 Jivv
 joq
+joxg
 jsonbody
 JTi
 kembe
@@ -212,6 +220,7 @@ mmvv
 moids
 mpim
 MSsqm
+MTJZLw
 multani
 multistring
 mwezi
@@ -262,6 +271,7 @@ postgre
 PROFILENAME
 PROJECTID
 pushconfig
+Pxbx
 pytz
 QHONv
 QIDAQAB
@@ -274,6 +284,7 @@ ratebasedstatement
 regexmatchstatement
 regexpatternsetreferencestatement
 requiresecuritysignature
+RERS
 resourcegroup
 restrictnullsessaccess
 Rfi
@@ -364,9 +375,11 @@ WNl
 wolfi
 wordpress
 wpe
+Wrhxh
 WTY
 xmna
 Xnp
+XOOO
 xoxb
 XPgk
 XRu
@@ -380,6 +393,7 @@ YAMLFILE
 yast
 yescrypt
 yiesxpwx
+YNji
 YOHu
 YWlu
 YWNl

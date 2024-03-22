@@ -35,11 +35,17 @@ Mondoo tracks administrative events, such as organization and access management 
 
 3. Select **Audit Log**.
 
-## Using the Audit Log API
+## Retrieve audit logs using the API
 
-Organization audit logs are available via our GraphQL API.  To access the API, you must have created an [API token](/platform/maintain/access/api-tokens).
+Organization audit logs are available via Mondoo's GraphQL API. To access an organization's logs using the API, you must have:
 
-The GraphQL query to get the audit log for an organization is:
+- An [API token](/platform/maintain/access/api-tokens).
+
+- The organization's ID. Find it on the organization page, under the organization name.
+
+  ![Mondoo organization ID](/img/platform/maintain/org-id.png)
+
+Use this GraphQL query to get the audit log for an organization, providing the organization's ID:
 
 ```
 {
@@ -78,7 +84,13 @@ The GraphQL query to get the audit log for an organization is:
 }
 ```
 
-To test this using cURL, store the query in file named "query.json" and execute like so, being sure to have sepcified your organization ID in the query:
+To test this task using cURL, store the query in a file named "query.json" and execute as shown below. Be sure to specify your organization ID in the query.
+
+:::info EU region
+
+If you're operating in the EU region, replace the `https://api.mondoo.com/query` URL with `https://eu.api.mondoo.com/query`.
+
+:::
 
 ```
 $ cat query.json
@@ -151,8 +163,6 @@ $ curl -g -X POST -H "Authorization: Bearer $API_TOKEN" -H "Content-Type: applic
         },
 ...
 ```
-
-Please note that the GraphQL API URL for the EU region is https://eu.api.mondoo.com/query.
 
 ## Get help
 

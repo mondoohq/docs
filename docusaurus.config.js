@@ -9,7 +9,7 @@ const legacyRedirects = [
   // Don't delete it unless the product changes:
   {
     from: "/cloud/aws/overview",
-    to: "platform/cloud/aws/aws-overview",
+    to: "platform/infra/cloud/aws/aws-overview",
   },
   // march 2024 moved cnspec cloud content into one dir
   {

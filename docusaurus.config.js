@@ -5,6 +5,12 @@ const { themes } = require("prism-react-renderer");
 const legacyRedirects = [
   // NOTE: Path / is equivalent to https://mondoo.com/docs/
   //
+  // This is a URL that Mondoo adds to new integrations
+  // Don't delete it unless the product changes:
+  {
+    from: "/cloud/aws/overview",
+    to: "platform/cloud/aws/aws-overview",
+  },
   // march 2024 moved cnspec cloud content into one dir
   {
     from: "/cnspec/cnspec-aws/cnspec-aws-account",

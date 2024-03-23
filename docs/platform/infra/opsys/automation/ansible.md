@@ -366,7 +366,7 @@ Overall CVSS score: 0.0
 
 Scanned 1 assets
 
-Ubuntu 18.04.6 LTS
+Ubuntu 22.04 LTS
     C mysystem.internal.dmz
 
 For detailed output, run this scan with "-o full".

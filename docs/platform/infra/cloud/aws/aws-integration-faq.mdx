@@ -113,7 +113,7 @@ When the CloudFormation stack is deleted, the lambda function receives a notific
 
 ## How much will operating the Mondoo AWS Integration cost?
 
-Most of the costs associated with the Mondoo AWS Integration fall into the free tier category. Over the course of a month, an example AWS Integration incurred this resource usage:
+Most of the costs associated with the Mondoo AWS Integration fall into the AWS Free Tier category. Over the course of a month, an example AWS integration incurred this resource usage:
 
 - CloudWatch PutLogs: 1GB (First 5GB per month of log data ingested is free)
 - CloudWatch TimedStorage: 0.16GB (First 5GB-mo per month of logs storage is free)
@@ -123,12 +123,12 @@ Most of the costs associated with the Mondoo AWS Integration fall into the free 
 - SNS HTTP: 2,000 notifications (First 100,000 Amazon SNS HTTP/HTTPS Notifications per month are free)
 - SNS requests: 3,000 requests (First 1,000,000 Amazon SNS API Requests per month are free)
 - SQS requests: 626,000 requests (First 1,000,000 Amazon SQS Requests per month are free)
-- Simple Storage Service--Tier1: 257 requests ($0.00 per request - PUT, COPY, POST, or LIST requests under the monthly global free tier)
-- Simple Storage Service--Tier2: 41 requests ($0.00 per request - GET and all other requests under the monthly global free tier)
+- Simple Storage Service--Tier1: 257 requests ($0.00 per request - PUT, COPY, POST, or LIST requests under the monthly global Free Tier)
+- Simple Storage Service--Tier2: 41 requests ($0.00 per request - GET and all other requests under the monthly global Free Tier)
 
-## What do you about rate limiting?
+## What do you about rate-limiting?
 
-We spread out scan jobs to prevent too many calls to the EC2 and SSM apis. If the Lambda function encounters a rate limiting error, it automatically pauses all scan jobs for 15 minutes.
+We spread out scan jobs to prevent too many calls to the EC2 and SSM APIs. If the Lambda function encounters a rate-limiting error, it automatically pauses all scan jobs for 15 minutes.
 
 ## Can I see what runs?
 

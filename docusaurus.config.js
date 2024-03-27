@@ -277,7 +277,7 @@ module.exports = {
             { to: "releases", label: "Releases" },
             {
               label: "Blog",
-              href: "https://blog.mondoo.com/",
+              href: "https://mondoo.com/blog",
             },
           ],
         },

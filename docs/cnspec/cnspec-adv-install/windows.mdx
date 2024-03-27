@@ -29,7 +29,7 @@ import Partial from "./_providers-note.mdx";
 
 :::info
 
-If your organization's [region](/platform/start/organize/regions/) (in the Mondoo Console) is US, you must be able to access to us.api.mondoo.com. If your region is EU, you must be able to access to eu.api.mondoo.com.
+If your organization's [region](/platform/start/organize/regions/) (in the Mondoo Console) is US, you must be able to access us.api.mondoo.com. If your region is EU, you must be able to access eu.api.mondoo.com.
 
 :::
 
@@ -54,9 +54,9 @@ Be sure you have access to these systems from PowerShell or CMD Terminal:
 ```powershell title="Check the Internet connectivity"
 install.mondoo.com                   Port 443/https
 releases.mondoo.com                  Port 443/https
-eu.api.mondoo.com         			 Port 443/https
-us.api.mondoo.com         			 Port 443/https
-registry.api.mondoo.com 			 Port 443/https
+eu.api.mondoo.com                 Port 443/https
+us.api.mondoo.com                 Port 443/https
+registry.api.mondoo.com           Port 443/https
 ```
 
 To check connectivity, follow the approach in the previous section.
@@ -89,9 +89,9 @@ Make sure TLS 1.2 is enabled (it's enabled by default in modern Windows systems)
 
 Install cnspec by downloading a PowerShell script to memory and running it:
 
-If you wish later the scan happens by loading the configured Policy from your Mondoo Console space, you need to register by having a Registration Token which will be given to you during Integration from https://console.mondoo.com/.
+If you wish later the scan happens by loading the configured Policy from your Mondoo Console space, you need to register by having a registration token which will be given to you during integration from https://console.mondoo.com/.
 
-Without RegistrationToken, the policies will be automatically loaded from our Registry (https://mondoo.com/registry). It is only included the Open Source policies.
+Without RegistrationToken set, the policies will be automatically loaded from our registry of open source policies.
 
 ```powershell title="Automated installation script"
 # $MONDOO_REGISTRATION_TOKEN="YOUR_TOKEN_HERE"
@@ -131,7 +131,7 @@ If you enter a registration token during the installation wizard, cnspec registe
 You can also register by token later if needed:
 
 ```powershell title="CMD Terminal"
-start /wait msiexec /i mondoo_8.9.1_windows_amd64.msi  REGISTRATIONTOKEN="XXXXXXXXXXXXXXXXX"
+start /wait msiexec /i mondoo_10.9.1_windows_amd64.msi  REGISTRATIONTOKEN="XXXXXXXXXXXXXXXXX"
 ```
 
 ## Test and troubleshoot
@@ -172,7 +172,7 @@ Scan the local system:
 cnspec scan local
 ```
 
-Here the cnspec will automatically load the policies from Mondoo Console spaces provided you have registered the mondoo with the Token. Otherwise, the policies will be loaded from our Registry.
+Here the cnspec will automatically load the policies from Mondoo Console spaces provided you have registered the mondoo with the token. Otherwise, the policies will be loaded from our registry.
 
 You can also force the cnspec to load the policies only from registry:
 

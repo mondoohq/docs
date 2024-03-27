@@ -57,7 +57,7 @@
     ]
   },
   "devDependencies": {
-    "@tsconfig/docusaurus": "^2.0.1",
+    "@tsconfig/docusaurus": "^2.0.3",
     "@types/react": "^18.2.73",
     "@types/react-helmet": "^6.1.11",
     "@types/react-router-dom": "^5.1.7",

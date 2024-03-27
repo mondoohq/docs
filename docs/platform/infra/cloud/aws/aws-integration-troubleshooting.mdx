@@ -50,7 +50,7 @@ A common misconfiguration seen in AWS Organizations that interferes with success
 
 To ensure your Organizations are configured as needed, go to the [AWS Organizations console](https://console.aws.amazon.com/organizations/v2) and check your structure:
 
-- The top level entity of the Organization is 'root', assigned an ID that uses this format: `r-ab12`
+- The top-level entity of the Organization is 'root', assigned an ID that uses this format: `r-ab12`
 
 - The 'root' spans a tree of one or more OUs with IDs that use this format: `ou-ab12-1234abcd`
 
@@ -135,7 +135,7 @@ The [AWSLambdaVPCAccessExecutionRole](https://docs.aws.amazon.com/lambda/latest/
 
 Should your Lambda function require VPC access to be able to scan instances, please refer to AWS documentation on [Configuring a Lambda function to access resources in a VPC](https://docs.aws.amazon.com/lambda/latest/dg/configuration-vpc.html#vpc-configuring) to grant the Lambda function access to the appropriate VPC.
 
-Security groups for all AWS SSM managed instances must include an egress rule to allow outbound traffic on port 443 (HTTPS) to [Mondoo Platform](https://console.mondoo.com) at IP address `34.98.71.94` to send results back to your account.
+Security groups for all AWS SSM-managed instances must include an egress rule to allow outbound traffic on port 443 (HTTPS) to [Mondoo Platform](https://console.mondoo.com) at IP address `34.98.71.94` to send results back to your account.
 
 ## Logging and metrics
 

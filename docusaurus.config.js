@@ -140,7 +140,7 @@ module.exports = {
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "throw",
   trailingSlash: "true",
-  favicon: "img/favicon.ico",
+  favicon: "img/favicon.png",
   organizationName: "Mondoo", // Usually your GitHub org/user name.
   projectName: "Docs", // Usually your repo name.
 

@@ -59,16 +59,16 @@ cnspec status
 → Version:		13.4.1
 → Hostname:		stella.home
 → IP:			192.168.254.21
-→ Time:			2024-02-27T12:07:41-08:00
-→ Version:		10.5.0 (API Version: 10)
-→ Latest Version:	10.5.0
-→ Installed Providers:	 core | mock | os
-→ API ConnectionConfig:	https://api.edge.mondoo.com
+→ Time:			2024-03-23T12:07:41-08:00
+→ Version:		10.8.4 (API Version: 10)
+→ Latest Version:	10.8.4
+→ Installed Providers:	core | os | mock
+→ API ConnectionConfig:	https://us.api.mondoo.com
 → API Status:		SERVING
-→ API Time:		2024-02-27T20:07:42Z
+→ API Time:		2024-03-23T20:07:42Z
 → API Version:		10
 x client is not registered
-x could not connect to mondoo platform
+x The Mondoo Platform credentials provided at /root/.config/mondoo/mondoo.yml didn't successfully authenticate with Mondoo Platform. Please re-authenticate with Mondoo Platform. To learn how, read https://mondoo.com/docs/cnspec/cnspec-adv-install/registration/.
 ```
 
 ```bash title="Correctly registered client"
@@ -78,13 +78,13 @@ cnspec status
 → Version:		13.4.1
 → Hostname:		mwezi.home
 → IP:			192.168.254.21
-→ Time:			2024-02-27T12:07:41-08:00
-→ Version:		10.5.0 (API Version: 10)
-→ Latest Version:	10.5.0
+→ Time:			2024-03-23T12:07:41-08:00
+→ Version:		10.8.4 (API Version: 10)
+→ Latest Version:	10.8.4
 → Installed Providers:	arista | aws | azure | core | mock | os
 → API ConnectionConfig:	https://api.edge.mondoo.com
 → API Status:		SERVING
-→ API Time:		2024-02-27T20:07:42Z
+→ API Time:		2024-03-23T20:07:42Z
 → API Version:		10
 → Owner:		//captain.api.mondoo.app/spaces/lunalectric-team-workstations
 → Client:		//agents.api.mondoo.app/spaces/lunalectric-team-workstations/agents/2SARlZgQnFLAzj7jfiS1Fx2HBz8
@@ -100,13 +100,13 @@ cnspec status
 → Version:		13.4.1
 → Hostname:		cosmo.home
 → IP:			192.168.254.21
-→ Time:			2024-02-27T12:07:41-08:00
-→ Version:		10.5.0 (API Version: 10)
-→ Latest Version:	10.5.0
+→ Time:			2024-03-23T12:07:41-08:00
+→ Version:		10.8.4 (API Version: 10)
+→ Latest Version:	10.8.4
 → Installed Providers:	arista | aws | azure | core | mock | os
 → API ConnectionConfig:	https://api.edge.mondoo.com
 → API Status:		SERVING
-→ API Time:		2024-02-27T20:07:42Z
+→ API Time:		2024-03-23T20:07:42Z
 → API Version:		10
 → Owner:		//captain.api.mondoo.app/spaces/lunalectric-team-workstations
 → Client:		//agents.api.mondoo.app/spaces/lunalectric-team-workstations/agents/2SARlZgQnFLAzj7jfiS1Fx2HBz8
@@ -123,13 +123,13 @@ cnspec status
 → Version:		13.4.1
 → Hostname:		tsuki.home
 → IP:			192.168.254.21
-→ Time:			2024-02-27T12:07:41-08:00
-→ Version:		10.5.0 (API Version: 10)
-→ Latest Version:	10.5.0
+→ Time:			2024-03-23T12:07:41-08:00
+→ Version:		10.8.4 (API Version: 10)
+→ Latest Version:	10.8.4
 → Installed Providers:	 aws | azure | core | mock | os
 → API ConnectionConfig:	https://api.edge.mondoo.com
 → API Status:		SERVING
-→ API Time:		2024-02-27T20:07:42Z
+→ API Time:		2024-03-23T20:07:42Z
 → API Version:		10
 → Owner:		//captain.api.mondoo.app/spaces/lunalectric-team-workstations
 → Client:		//agents.api.mondoo.app/spaces/lunalectric-team-workstations/agents/2SARlZgQnFLAzj7jfiS1Fx2HBz8

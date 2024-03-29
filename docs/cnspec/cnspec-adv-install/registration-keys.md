@@ -15,9 +15,9 @@ The credentials file includes a private key. Keep this credential safe!
 
 :::
 
-1. Open the [Mondoo Console](https://console.mondoo.com).
+1. Log into the [Mondoo Console](https://console.mondoo.com).
 
-2. [Navigate](/platform/start/navigate/) to the space where you want to view results.
+2. [Navigate](/platform/start/navigate/) to the [region](/docs/platform/start/organize/regions.md), [organization](/docs/platform/start/organize/organizations.md), and [space](/docs/platform/start/organize/spaces.md) where you want to see the new asset's scan results.
 
 3. In the left navigation, under **Integrations**, select **Add New Integration**.
 
@@ -33,58 +33,86 @@ The `cnspec status` command validates cnspec registration and ensures that commu
 
 ```bash title="Unregistered cnspec"
 cnspec status
-→ Time:		2023-01-13T16:12:44-08:00
-→ Version:	7.12.1 (API Version: 7)
+→ loaded configuration from /Users/stella/.config/mondoo/mondoo.yml using source default
+→ Platform:		macos
+→ Version:		13.4.1
+→ Hostname:		stella.home
+→ IP:			192.168.254.21
+→ Time:			2024-03-23T12:07:41-08:00
+→ Version:		10.8.4 (API Version: 10)
+→ Latest Version:	10.8.4
+→ Installed Providers:	core | os | mock
 → API ConnectionConfig:	https://us.api.mondoo.com
-→ API Status:	SERVING
-→ API Time:	2023-01-14T00:12:45Z
-→ API Version:	7
-→ Space:
+→ API Status:		SERVING
+→ API Time:		2024-03-23T20:07:42Z
+→ API Version:		10
 x client is not registered
-x could not connect to mondoo platform
+x The Mondoo Platform credentials provided at /root/.config/mondoo/mondoo.yml didn't successfully authenticate with Mondoo Platform. Please re-authenticate with Mondoo Platform. To learn how, read https://mondoo.com/docs/cnspec/cnspec-adv-install/registration/.
 ```
 
 ```bash title="Correctly registered client"
 cnspec status
-→ Time:		2023-01-13T16:12:44-08:00
-→ Version:	7.12.1 (API Version: 7)
-→ API ConnectionConfig:	https://us.api.mondoo.com
-→ API Status:	SERVING
-→ API Time:	2023-01-14T00:11:18Z
-→ API Version:	7
-→ Space:	//captain.api.mondoo.app/spaces/lunalectric-prod-eks
-→ Client:	//agents.api.mondoo.app/spaces/lunalectric-prod-eks/agents/1N9EGTzvlizF1n7vPtz21y7XFA3
-→ Service Account:	//agents.api.mondoo.app/spaces/lunalectric-prod-eks/serviceaccounts/1N9EGTzvlizF1n7vPtz21y7XFA3
+→ loaded configuration from /Users/mwezi/.config/mondoo/mondoo.yml using source default
+→ Platform:		macos
+→ Version:		13.4.1
+→ Hostname:		mwezi.home
+→ IP:			192.168.254.21
+→ Time:			2024-03-23T12:07:41-08:00
+→ Version:		10.8.4 (API Version: 10)
+→ Latest Version:	10.8.4
+→ Installed Providers:	arista | aws | azure | core | mock | os
+→ API ConnectionConfig:	https://api.edge.mondoo.com
+→ API Status:		SERVING
+→ API Time:		2024-03-23T20:07:42Z
+→ API Version:		10
+→ Owner:		//captain.api.mondoo.app/spaces/lunalectric-team-workstations
+→ Client:		//agents.api.mondoo.app/spaces/lunalectric-team-workstations/agents/2SARlZgQnFLAzj7jfiS1Fx2HBz8
+→ Service Account:      //agents.api.mondoo.app/spaces/lunalectric-team-workstations/serviceaccounts/2bMtksUk9EjrI5MC3tTf6UmhNC2
 → client is registered
 → client authenticated successfully
 ```
 
 ```bash title="Invalid cnspec registration"
 cnspec status
-→ Time:		2023-01-13T16:17:50-08:00
-→ Version:	7.12.1 (API Version: 7)
-→ API ConnectionConfig:	https://us.api.mondoo.com
-→ API Status:	SERVING
-→ API Time:	2023-01-14T00:17:50Z
-→ API Version:	7
-→ Space:	//captain.api.mondoo.app/spaces/lunalectric-prod-eks
-→ Client:	//agents.api.mondoo.app/spaces/lunalectric-prod-eks/agents/1N9EGTzvlizF1n7vPtz21y7XFA3
-→ Service Account:	//agents.api.mondoo.app/spaces/lunalectric-prod-eks/serviceaccounts/1N9EGTzvlizF1n7vPtz21y7XFA3
+→ loaded configuration from /Users/cosmo/.config/mondoo/mondoo.yml using source default
+→ Platform:		macos
+→ Version:		13.4.1
+→ Hostname:		cosmo.home
+→ IP:			192.168.254.21
+→ Time:			2024-03-23T12:07:41-08:00
+→ Version:		10.8.4 (API Version: 10)
+→ Latest Version:	10.8.4
+→ Installed Providers:	arista | aws | azure | core | mock | os
+→ API ConnectionConfig:	https://api.edge.mondoo.com
+→ API Status:		SERVING
+→ API Time:		2024-03-23T20:07:42Z
+→ API Version:		10
+→ Owner:		//captain.api.mondoo.app/spaces/lunalectric-team-workstations
+→ Client:		//agents.api.mondoo.app/spaces/lunalectric-team-workstations/agents/2SARlZgQnFLAzj7jfiS1Fx2HBz8
+→ Service Account:      //agents.api.mondoo.app/spaces/lunalectric-team-workstations/serviceaccounts/2bMtksUk9EjrI5MC3tTf6UmhNC2
 → client is registered
 x could not connect to mondoo platform error="rpc error: code = Unauthenticated desc = request permission unauthenticated"permission unauthenticated"
 ```
 
 ```bash title="No current system time (clock skew detected)"
 cnspec status
-→ Time:		2023-01-10T16:19:39-08:00
-→ Version:	7.12.1 (API Version: 7)
-→ API ConnectionConfig:	https://us.api.mondoo.com
-→ API Status:	SERVING
-→ API Time:	2023-01-14T00:19:46Z
-→ API Version:	7
-→ Space:	//captain.api.mondoo.app/spaces/lunalectric-prod-eks
-→ Client:	//agents.api.mondoo.app/spaces/lunalectric-prod-eks/agents/1N9EGTzvlizF1n7vPtz21y7XFA3
-→ Service Account:	//agents.api.mondoo.app/spaces/lunalectric-prod-eks/serviceaccounts/1N9EGTzvlizF1n7vPtz21y7XFA3
+cnspec status
+→ loaded configuration from /Users/cosmo/.config/mondoo/mondoo.yml using source default
+→ Platform:		macos
+→ Version:		13.4.1
+→ Hostname:		tsuki.home
+→ IP:			192.168.254.21
+→ Time:			2024-03-23T12:07:41-08:00
+→ Version:		10.8.4 (API Version: 10)
+→ Latest Version:	10.8.4
+→ Installed Providers:	 aws | azure | core | mock | os
+→ API ConnectionConfig:	https://api.edge.mondoo.com
+→ API Status:		SERVING
+→ API Time:		2024-03-23T20:07:42Z
+→ API Version:		10
+→ Owner:		//captain.api.mondoo.app/spaces/lunalectric-team-workstations
+→ Client:		//agents.api.mondoo.app/spaces/lunalectric-team-workstations/agents/2SARlZgQnFLAzj7jfiS1Fx2HBz8
+→ Service Account:      //agents.api.mondoo.app/spaces/lunalectric-team-workstations/serviceaccounts/2bMtksUk9EjrI5MC3tTf6UmhNC2
 → client is registered
 → client authenticated successfully
 ! possible clock skew detected: 72h0m6.277868s

@@ -296,7 +296,7 @@ module.exports = {
           items: [
             {
               label: "Mondoo Home",
-              href: "https://mondoo.com/",
+              href: "https://mondoo.com",
             },
             {
               label: "Mondoo Console",
@@ -304,11 +304,11 @@ module.exports = {
             },
             {
               label: "cnquery",
-              href: "https://mondoo.com/cnquery/",
+              href: "https://mondoo.com/cnquery",
             },
             {
               label: "cnqspec",
-              href: "https://mondoo.com/cnspec/",
+              href: "https://mondoo.com/cnspec",
             },
           ],
         },

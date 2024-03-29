@@ -376,6 +376,7 @@ module.exports = {
         },
         sitemap: {
           changefreq: "weekly",
+          lastmod: "date",
           ignorePatterns: ["**/releases/tags/**"],
           priority: 0.5,
         },

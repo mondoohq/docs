@@ -104,7 +104,7 @@ cnquery help run
 
 To more easily explore your infrastructure, sign up for a free Mondoo Platform account. Mondoo's web-based console allows you to navigate, search, and inspect all of your assets.
 
-To learn about Mondoo Platform, read the [Mondoo Platform docs](../intro.md) or visit [mondoo.com](https://mondoo.com).
+To learn about Mondoo Platform, read the [Mondoo Platform docs](../platform/home.md) or visit [mondoo.com](https://mondoo.com).
 
 To learn how to sign up for a free Mondoo account and register cnquery, read [Log into Mondoo Platform for More Capabilities](/cnquery/cnquery-platform/).
 

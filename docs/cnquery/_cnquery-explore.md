@@ -38,6 +38,6 @@ To more easily explore your infrastructure, sign up for a free Mondoo Platform a
 
 Go to [console.mondoo.com](https://console.mondoo.com) to sign up.
 
-To learn about Mondoo Platform, read the [Mondoo Platform docs](../intro.md) or visit [mondoo.com](https://mondoo.com).
+To learn about Mondoo Platform, read the [Mondoo Platform docs](../platform/home.md) or visit [mondoo.com](https://mondoo.com).
 
 ---

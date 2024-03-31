@@ -67,6 +67,7 @@ clientid
 cloudlinux
 Clw
 cmek
+cnames
 CODENAME
 codeql
 computeservice

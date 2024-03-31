@@ -30,3 +30,4 @@ Amazon CloudFront distribution
 | isIPV6Enabled        | bool                                                                                  | Is the distribution IPV6 enabled            |
 | enabled              | bool                                                                                  | Is the distribution enabled                 |
 | priceClass           | string                                                                                | The price class of the distribution         |
+| cnames               | &#91;&#93;string                                                                      | CNAMEs aliases if any for this distribution |

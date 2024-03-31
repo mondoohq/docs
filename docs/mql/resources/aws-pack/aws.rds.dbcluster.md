@@ -46,3 +46,6 @@ The `aws.rds.dbcluster` provides fields for assessing the configuration of AWS R
 | availabilityZones       | &#91;&#93;string                                            | List of Availability Zones (AZs) where instances in the DB cluster can be created |
 | port                    | int                                                         | The port that the database engine is listening on                                 |
 | endpoint                | string                                                      | The connection endpoint for the primary instance of the DB cluster                |
+| hostedZoneId            | string                                                      | The cluster hosted zone ID                                                        |
+| masterUsername          | string                                                      | The master username for the DB instance                                           |
+| latestRestorableTime    | time                                                        | The latest time to which a database can be restored with point-in-time restore    |

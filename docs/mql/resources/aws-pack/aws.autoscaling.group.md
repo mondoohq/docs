@@ -34,3 +34,5 @@ The `aws.autoscaling.group` resource provides fields representing an individual 
 | launchConfigurationName | string            | The name of the launch configuration                                                        |
 | healthCheckGracePeriod  | int               | The grace period in seconds before an instance with a failing health check will be replaced |
 | createdAt               | time              | Time when the autoscaling group was created                                                 |
+| maxInstanceLifetime     | int               | The maximum amount of time, in seconds, that an instance can be in service                  |
+| desiredCapacity         | int               | The desired size of the group                                                               |

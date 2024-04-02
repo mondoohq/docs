@@ -222,7 +222,7 @@ Follow these steps, substituting the subscription ID(s) you copied in Step A for
 3. Make sure you successfully created the role:
 
    ```bash
-   az role assignment list --role mondoo-role --scope /subscriptions/YOUR-SUBSCRIPTION-ID
+   az role definition list --output json --query '[].{roleName:roleName, description:description}' --name "mondoo-role"
    ```
 
 4. Assign the created custom role to the app you registered:

@@ -190,7 +190,7 @@ Follow these steps, substituting the management group ID(s) you copied in Step A
 3. Make sure you successfully created the role:
 
    ```
-   az role assignment list --role mondoo-role --scope /providers/Microsoft.Management/managementGroups/YOUR-GROUP-ID
+   az role definition list --output json --query '[].{roleName:roleName, description:description}' --name "mondoo-role"
    ```
 
 4. Assign the created custom role to the app you registered:

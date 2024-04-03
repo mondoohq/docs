@@ -128,28 +128,31 @@ In the Azure portal, you can make sure that the created application has the requ
 
 :::
 
+
+
 ### Step C: Grant web app and key vault READ permissions to the registered app
 
 :::note
 
-The key vault permissions below are from Microsoft's "Key Vault Reader" role. The [Microsoft documentation](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles) describes this role:
+The Key Vault permissions outlined below are based on Microsoft's "Key Vault Reader" role. The [Microsoft documentation](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles) describes this role:
 
-> _Read metadata of key vaults and its certificates, keys, and secrets. Cannot read sensitive values such as secret contents or key material. Only works for key vaults that use the 'Azure role-based access control' permission model._
+> _Read metadata of key vaults and its certificates, keys, and secrets. Cannot read sensitive values such as secret contents or key material. This role is only functional for key vaults that utilize the 'Azure role-based access control' permission model (RBAC)._
 
 :::
 
-Follow these steps, substituting the management group ID(s) you copied in Step A for YOUR-GROUP-ID:
+To assign this role across all subscriptions under a management group, follow these steps, replacing YOUR-GROUP-ID with your actual management group ID:
 
-1. Copy this content and paste it into a new file named `mondoo-role.json`:
+
+1. Create the Custom Role Definition
+
+  Save the following JSON content into a file named `mondoo-role.json`:
 
    ```json
    {
      "Name": "mondoo-role",
      "IsCustom": true,
      "description": "Custom role for Mondoo integration",
-     "assignableScopes": [
-       "/providers/Microsoft.Management/managementGroups/YOUR-GROUP-ID"
-     ],
+     "assignableScopes": ["/"],
      "actions": [
        "Microsoft.Authorization/*/read",
        "Microsoft.ResourceHealth/availabilityStatuses/read",
@@ -181,23 +184,79 @@ Follow these steps, substituting the management group ID(s) you copied in Step A
    }
    ```
 
-2. Create a custom role:
+2. Create a Custom Role:
 
    ```
    az role definition create --role-definition mondoo-role.json
    ```
 
-3. Make sure you successfully created the role:
+3. Verify the custom role creation:
 
    ```
    az role definition list --output json --query '[].{roleName:roleName, description:description}' --name "mondoo-role"
    ```
 
-4. Assign the created custom role to the app you registered:
+4. Check Permissions to List Subscriptions:
+
+  Confirm if your account has the required permissions to list subscriptions within the management group:
+
+  ```
+  az account management-group subscription show-sub-under-mg --name "YOUR-GROUP-ID"
+  ```
+
+  If you encounter authorization issues, grant the necessary permissions:
+
+
+  ```
+  az role assignment create --assignee "YourAccountName@Domain.name" --role "Management Group Reader" --scope "/providers/Microsoft.Management/managementGroups/YOUR-GROUP-ID"
+  ```
+
+  Replace YOUR-GROUP-ID with the actual ID of your management group. Then, re-execute the command to list subscriptions and confirm access.
+
+
+5. Assign the Custom Role Using a Script:
+
+  Use an automated script (Save the file with the name assign_role_to_subscriptions.sh) to assign this custom role to your app across all subscriptions under the management group:
+
 
    ```
-   az role assignment create --role mondoo-role --assignee <APP-ID> --scope /providers/Microsoft.Management/managementGroups/YOUR-GROUP-ID
+  #!/bin/bash
+
+  # Management Group ID
+  MGMT_GROUP_ID="f013cf7c-a1d7-46ef-8438-45f8ed7e09ec"
+  # Principal ID to assign the role to (e.g., your application ID)
+  PRINCIPAL_ID="APP-ID"
+
+  # List all subscriptions under the management group and read them line by line
+  SUBSCRIPTIONS=$(az account management-group subscription show-sub-under-mg --name "$MGMT_GROUP_ID" --query "[].name" -o tsv)
+
+  for SUBSCRIPTION_ID in $SUBSCRIPTIONS; do
+      echo "Assigning 'mondoo-role' to subscription $SUBSCRIPTION_ID"
+      # Set the context to the current subscription
+      az account set --subscription "$SUBSCRIPTION_ID"
+      # Assign the role to the principal for the current subscription
+      az role assignment create --role "mondoo-role" --assignee $PRINCIPAL_ID --scope "/subscriptions/$SUBSCRIPTION_ID"
+  done
    ```
+
+  Don't forget to replace YOUR-GROUP-ID with your management group ID and APP-ID with the principal ID.
+
+  Make the Script Executable:
+
+   ```
+   chmod +x assign_role_to_subscriptions.sh
+   ```
+
+   and then run the script:
+
+   ```
+   ./assign_role_to_subscriptions.sh
+   ```
+
+  These steps ensure that the custom role is systematically assigned to all subscriptions within your specified management group.
+
+
+
 
 ### Step D: Grant permissions to access Microsoft Graph (API permissions)
 

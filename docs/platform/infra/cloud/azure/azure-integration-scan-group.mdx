@@ -128,6 +128,8 @@ In the Azure portal, you can make sure that the created application has the requ
 
 :::
 
+
+
 ### Step C: Grant web app and key vault READ permissions to the registered app
 
 :::note
@@ -182,13 +184,13 @@ To assign this role across all subscriptions under a management group, follow th
    }
    ```
 
-2. Create a custom role:
+2. Create a Custom Role:
 
    ```
    az role definition create --role-definition mondoo-role.json
    ```
 
-3. Make sure you successfully created the role:
+3. Verify the custom role creation:
 
    ```
    az role definition list --output json --query '[].{roleName:roleName, description:description}' --name "mondoo-role"

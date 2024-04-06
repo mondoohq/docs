@@ -17,7 +17,6 @@ GitHub repository branch
 | ID              | TYPE                                                  | DESCRIPTION                              |
 | --------------- | ----------------------------------------------------- | ---------------------------------------- |
 | name            | string                                                | Repository branch name                   |
-| protected       | bool                                                  | Deprecated; use isProtected instead      |
 | isProtected     | bool                                                  | Whether branch protection is enabled     |
 | headCommit      | [github.commit](github.commit.md)                     | Repository branch HEAD commit            |
 | protectionRules | [github.branchprotection](github.branchprotection.md) | Repository branch protection rules       |

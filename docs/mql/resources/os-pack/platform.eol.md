@@ -3,14 +3,14 @@ title: platform.eol
 id: platform.eol
 sidebar_label: platform.eol
 displayed_sidebar: MQL
-description: Deprecated; will be removed in version 10.0
+description: Deprecated; will be removed in version 12.0
 ---
 
 # platform.eol
 
 **Description**
 
-Deprecated; will be removed in version 10.0
+Deprecated; will be removed in version 12.0
 
 **Fields**
 

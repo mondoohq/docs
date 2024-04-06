@@ -96,7 +96,7 @@ A single command in the Azure CLI performs these tasks:
 
 - Creates a certificate and assigns it to the newly created app
 
-In the Azure CLI, enter:
+1. In the Azure CLI, enter:
 
 ```bash
 az ad sp create-for-rbac --name mondoo-security --role Reader --scopes /providers/Microsoft.Management/managementGroups/YOUR-GROUP-ID --create-cert
@@ -118,9 +118,9 @@ When successful, the Azure CLI returns results like these:
 "tenant": "e4e2600a-2d3d-2600-aa70-b9d8c8ec2600"
 ```
 
-Copy your results and paste them somewhere handy; you'll need them in later steps.
+2. Copy your results and paste them somewhere handy; you'll need them in later steps.
 
-Copy the created PEM file (in the example above, it's named tmpkqyme3rm.pem) and save it; you'll need it in later steps.
+3. Copy the created PEM file (in the example above, it's named tmpkqyme3rm.pem) and save it; you'll need it in later steps.
 
 :::tip
 
@@ -139,7 +139,6 @@ The Key Vault permissions below are based on Microsoft's "Key Vault Reader" role
 :::
 
 To assign this role across all subscriptions under a management group, follow these steps, replacing YOUR-GROUP-ID with your actual management group ID:
-
 
 1. Create the custom role definition.
 
@@ -208,12 +207,12 @@ To assign this role across all subscriptions under a management group, follow th
   ```
 
   Replace YOUR-GROUP-ID with the actual ID of your management group. Then, re-execute the command to list subscriptions and confirm access.
+
 5. Assign the custom role using a script:
 
   Create a new file named `assign_role_to_subscriptions.sh` and paste this script in the file:
 
-
-   ```
+  ```
   #!/bin/bash
 
   MGMT_GROUP_ID="Mang-Group-ID"
@@ -229,7 +228,7 @@ To assign this role across all subscriptions under a management group, follow th
       # Assign the role to the principal for the current subscription
       az role assignment create --role "mondoo-role" --assignee $PRINCIPAL_ID --scope "/subscriptions/$SUBSCRIPTION_ID"
   done
-   ```
+  ```
 
   Be sure to replace YOUR-GROUP-ID with your management group ID and APP-ID with the principal ID.
 
@@ -243,6 +242,8 @@ To assign this role across all subscriptions under a management group, follow th
 
    ```
    ./assign_role_to_subscriptions.sh
+   ```
+
   These steps ensure that the custom role is systematically assigned to all subscriptions within your specified management group.
 
 ### Step D: Grant permissions to access Microsoft Graph (API permissions)

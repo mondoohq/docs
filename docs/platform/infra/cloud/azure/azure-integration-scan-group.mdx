@@ -96,37 +96,37 @@ A single command in the Azure CLI performs these tasks:
 
 - Creates a certificate and assigns it to the newly created app
 
-In the Azure CLI, enter:
+1. In the Azure CLI, enter:
 
-```bash
-az ad sp create-for-rbac --name mondoo-security --role Reader --scopes /providers/Microsoft.Management/managementGroups/YOUR-GROUP-ID --create-cert
-```
+  ```bash
+  az ad sp create-for-rbac --name mondoo-security --role Reader --scopes /providers/Microsoft.Management/managementGroups/YOUR-GROUP-ID --create-cert
+  ```
 
-For `YOUR-GROUP-ID`, substitute the management group ID value you copied in the step above. For example, this command creates a service principal and an application named `mondoo-security` that provides access to a management group with the ID `e4e2600a-2d3d-2600-aa70-b9d8c8ec2600`:
+  For `YOUR-GROUP-ID`, substitute the management group ID value you copied in the step above. For example, this command creates a service principal and an application named `mondoo-security` that provides access to a management group with the ID `e4e2600a-2d3d-2600-aa70-b9d8c8ec2600`:
 
-```bash
-az ad sp create-for-rbac --name mondoo-security --role Reader --scopes /providers/Microsoft.Management/managementGroups/e4e2600a-2d3d-2600-aa70-b9d8c8ec2600 --create-cert
-```
+  ```bash
+  az ad sp create-for-rbac --name mondoo-security --role Reader --scopes /providers/Microsoft.Management/managementGroups/e4e2600a-2d3d-2600-aa70-b9d8c8ec2600 --create-cert
+  ```
 
-When successful, the Azure CLI returns results like these:
+    When successful, the Azure CLI returns results like these:
 
-```bash
-"appId": "63c35483-c62f-2600-a097-a6e44d8dcdf6",
-"displayName": "Mondoo",
-"fileWithCertAndPrivateKey": "/Users/stella/tmpkqyme3rm.pem",
-"password": null,
-"tenant": "e4e2600a-2d3d-2600-aa70-b9d8c8ec2600"
-```
+    ```bash
+    "appId": "63c35483-c62f-2600-a097-a6e44d8dcdf6",
+    "displayName": "Mondoo",
+    "fileWithCertAndPrivateKey": "/Users/stella/tmpkqyme3rm.pem",
+    "password": null,
+    "tenant": "e4e2600a-2d3d-2600-aa70-b9d8c8ec2600"
+    ```
 
-Copy your results and paste them somewhere handy; you'll need them in later steps.
+2. Copy your results and paste them somewhere handy; you'll need them in later steps.
 
-Copy the created PEM file (in the example above, it's named tmpkqyme3rm.pem) and save it; you'll need it in later steps.
+3. Copy the created PEM file (in the example above, it's named tmpkqyme3rm.pem) and save it; you'll need it in later steps.
 
-:::tip
+  :::tip
 
-In the Azure portal, you can make sure that the created application has the required READ access at the subscription level: Go to **Azure portal > [your subscription] > Access control (IAM) > Roles (choose Reader and View) > Assessments**. If you see the `mondoo-security` application, you've succeeded.
+  In the Azure portal, you can make sure that the created application has the required READ access at the subscription level: Go to **Azure portal > [your subscription] > Access control (IAM) > Roles (choose Reader and View) > Assessments**. If you see the `mondoo-security` application, you've succeeded.
 
-:::
+  :::
 
 ### Step C: Grant web app and key vault READ permissions to the registered app
 
@@ -140,47 +140,46 @@ The Key Vault permissions below are based on Microsoft's "Key Vault Reader" role
 
 To assign this role across all subscriptions under a management group, follow these steps, replacing YOUR-GROUP-ID with your actual management group ID:
 
-
 1. Create the custom role definition.
 
   Save this JSON content into a file named `mondoo-role.json`:
 
-   ```json
-   {
-     "Name": "mondoo-role",
-     "IsCustom": true,
-     "description": "Custom role for Mondoo integration",
-     "assignableScopes": ["/"],
-     "actions": [
-       "Microsoft.Authorization/*/read",
-       "Microsoft.ResourceHealth/availabilityStatuses/read",
-       "Microsoft.Insights/alertRules/*",
-       "Microsoft.Resources/deployments/*",
-       "Microsoft.Resources/subscriptions/resourceGroups/read",
-       "Microsoft.Support/*",
-       "Microsoft.Web/listSitesAssignedToHostName/read",
-       "Microsoft.Web/serverFarms/read",
-       "Microsoft.Web/sites/config/read",
-       "Microsoft.Web/sites/config/web/appsettings/read",
-       "Microsoft.Web/sites/config/web/connectionstrings/read",
-       "Microsoft.Web/sites/config/appsettings/read",
-       "Microsoft.web/sites/config/snapshots/read",
-       "Microsoft.Web/sites/config/list/action",
-       "Microsoft.Web/sites/read",
-       "Microsoft.KeyVault/checkNameAvailability/read",
-       "Microsoft.KeyVault/deletedVaults/read",
-       "Microsoft.KeyVault/locations/*/read",
-       "Microsoft.KeyVault/vaults/*/read",
-       "Microsoft.KeyVault/operations/read"
-     ],
-     "notActions": [],
-     "dataActions": [
-       "Microsoft.KeyVault/vaults/*/read",
-       "Microsoft.KeyVault/vaults/secrets/readMetadata/action"
-     ],
-     "notDataActions": []
-   }
-   ```
+  ```json
+  {
+    "Name": "mondoo-role",
+    "IsCustom": true,
+    "description": "Custom role for Mondoo integration",
+    "assignableScopes": ["/"],
+    "actions": [
+      "Microsoft.Authorization/*/read",
+      "Microsoft.ResourceHealth/availabilityStatuses/read",
+      "Microsoft.Insights/alertRules/*",
+      "Microsoft.Resources/deployments/*",
+      "Microsoft.Resources/subscriptions/resourceGroups/read",
+      "Microsoft.Support/*",
+      "Microsoft.Web/listSitesAssignedToHostName/read",
+      "Microsoft.Web/serverFarms/read",
+      "Microsoft.Web/sites/config/read",
+      "Microsoft.Web/sites/config/web/appsettings/read",
+      "Microsoft.Web/sites/config/web/connectionstrings/read",
+      "Microsoft.Web/sites/config/appsettings/read",
+      "Microsoft.web/sites/config/snapshots/read",
+      "Microsoft.Web/sites/config/list/action",
+      "Microsoft.Web/sites/read",
+      "Microsoft.KeyVault/checkNameAvailability/read",
+      "Microsoft.KeyVault/deletedVaults/read",
+      "Microsoft.KeyVault/locations/*/read",
+      "Microsoft.KeyVault/vaults/*/read",
+      "Microsoft.KeyVault/operations/read"
+    ],
+    "notActions": [],
+    "dataActions": [
+      "Microsoft.KeyVault/vaults/*/read",
+      "Microsoft.KeyVault/vaults/secrets/readMetadata/action"
+    ],
+    "notDataActions": []
+  }
+  ```
 
 2. Create a custom role:
 
@@ -203,121 +202,125 @@ To assign this role across all subscriptions under a management group, follow th
   ```
 
   If you encounter authorization issues, grant the necessary permissions:
+
   ```
   az role assignment create --assignee "YourAccountName@Domain.name" --role "Management Group Reader" --scope "/providers/Microsoft.Management/managementGroups/YOUR-GROUP-ID"
   ```
 
-  Replace YOUR-GROUP-ID with the actual ID of your management group. Then, re-execute the command to list subscriptions and confirm access.
+  Replace YOUR-GROUP-ID with the ID of your management group. Then re-execute the command to list subscriptions and confirm access.
+
 5. Assign the custom role using a script:
 
   Create a new file named `assign_role_to_subscriptions.sh` and paste this script in the file:
 
-
-   ```
+  ```
   #!/bin/bash
 
   MGMT_GROUP_ID="Mang-Group-ID"
   PRINCIPAL_ID="APP-ID"
 
   # List all subscriptions under the management group and read them line by line
+
   SUBSCRIPTIONS=$(az account management-group subscription show-sub-under-mg --name "$MGMT_GROUP_ID" --query "[].name" -o tsv)
 
   for SUBSCRIPTION_ID in $SUBSCRIPTIONS; do
       echo "Assigning 'mondoo-role' to subscription $SUBSCRIPTION_ID"
       # Set the context to the current subscription
-      az account set --subscription "$SUBSCRIPTION_ID"
-      # Assign the role to the principal for the current subscription
-      az role assignment create --role "mondoo-role" --assignee $PRINCIPAL_ID --scope "/subscriptions/$SUBSCRIPTION_ID"
+      az account set --subscription "$SUBSCRIPTION_ID" # Assign the role to the principal for the current subscription
+  az role assignment create --role "mondoo-role" --assignee $PRINCIPAL_ID --scope "/subscriptions/$SUBSCRIPTION_ID"
   done
-   ```
+
+  ```
 
   Be sure to replace YOUR-GROUP-ID with your management group ID and APP-ID with the principal ID.
 
-  Make the script executable:
+6. Make the script executable:
 
-   ```
-   chmod +x assign_role_to_subscriptions.sh
-   ```
+  ```
+  chmod +x assign_role_to_subscriptions.sh
+  ```
 
-   Run the script to assign this custom role to your app across all subscriptions under the management group:
+7. Run the script to assign this custom role to your app across all subscriptions under the management group:
 
-   ```
-   ./assign_role_to_subscriptions.sh
-  These steps ensure that the custom role is systematically assigned to all subscriptions within your specified management group.
+  ```
+  ./assign_role_to_subscriptions.sh
+  ```
+
+These steps ensure that the custom role is systematically assigned to all subscriptions within your specified management group.
 
 ### Step D: Grant permissions to access Microsoft Graph (API permissions)
 
 1. Copy this content and paste it into a new file on your local system named `app-manifest.json`:
 
-   ```json
-   [
-     {
-       "resourceAppId": "00000003-0000-0000-c000-000000000000",
-       "resourceAccess": [
-         {
-           "id": "246dd0d5-5bd0-4def-940b-0421030a5b68",
-           "type": "Role"
-         },
-         {
-           "id": "e321f0bb-e7f7-481e-bb28-e3b0b32d4bd0",
-           "type": "Role"
-         },
-         {
-           "id": "5e0edab9-c148-49d0-b423-ac253e121825",
-           "type": "Role"
-         },
-         {
-           "id": "bf394140-e372-4bf9-a898-299cfc7564e5",
-           "type": "Role"
-         },
-         {
-           "id": "6e472fd1-ad78-48da-a0f0-97ab2c6b769e",
-           "type": "Role"
-         },
-         {
-           "id": "dc5007c0-2d7d-4c42-879c-2dab87571379",
-           "type": "Role"
-         },
-         {
-           "id": "b0afded3-3588-46d8-8b3d-9842eff778da",
-           "type": "Role"
-         },
-         {
-           "id": "7ab1d382-f21e-4acd-a863-ba3e13f7da61",
-           "type": "Role"
-         },
-         {
-           "id": "197ee4e9-b993-4066-898f-d6aecc55125b",
-           "type": "Role"
-         },
-         {
-           "id": "9a5d68dd-52b0-4cc2-bd40-abcf44ac3a30",
-           "type": "Role"
-         },
-         {
-           "id": "f8f035bb-2cce-47fb-8bf5-7baf3ecbee48",
-           "type": "Role"
-         },
-         {
-           "id": "dbb9058a-0e50-45d7-ae91-66909b5d4664",
-           "type": "Role"
-         },
-         {
-           "id": "9e640839-a198-48fb-8b9a-013fd6f6cbcd",
-           "type": "Role"
-         },
-         {
-           "id": "37730810-e9ba-4e46-b07e-8ca78d182097",
-           "type": "Role"
-         },
-         {
-           "id": "c7fbd983-d9aa-4fa7-84b8-17382c103bc4",
-           "type": "Role"
-         }
-       ]
-     }
-   ]
-   ```
+  ```json
+  [
+    {
+      "resourceAppId": "00000003-0000-0000-c000-000000000000",
+      "resourceAccess": [
+        {
+          "id": "246dd0d5-5bd0-4def-940b-0421030a5b68",
+          "type": "Role"
+        },
+        {
+          "id": "e321f0bb-e7f7-481e-bb28-e3b0b32d4bd0",
+          "type": "Role"
+        },
+        {
+          "id": "5e0edab9-c148-49d0-b423-ac253e121825",
+          "type": "Role"
+        },
+        {
+          "id": "bf394140-e372-4bf9-a898-299cfc7564e5",
+          "type": "Role"
+        },
+        {
+          "id": "6e472fd1-ad78-48da-a0f0-97ab2c6b769e",
+          "type": "Role"
+        },
+        {
+          "id": "dc5007c0-2d7d-4c42-879c-2dab87571379",
+          "type": "Role"
+        },
+        {
+          "id": "b0afded3-3588-46d8-8b3d-9842eff778da",
+          "type": "Role"
+        },
+        {
+          "id": "7ab1d382-f21e-4acd-a863-ba3e13f7da61",
+          "type": "Role"
+        },
+        {
+          "id": "197ee4e9-b993-4066-898f-d6aecc55125b",
+          "type": "Role"
+        },
+        {
+          "id": "9a5d68dd-52b0-4cc2-bd40-abcf44ac3a30",
+          "type": "Role"
+        },
+        {
+          "id": "f8f035bb-2cce-47fb-8bf5-7baf3ecbee48",
+          "type": "Role"
+        },
+        {
+          "id": "dbb9058a-0e50-45d7-ae91-66909b5d4664",
+          "type": "Role"
+        },
+        {
+          "id": "9e640839-a198-48fb-8b9a-013fd6f6cbcd",
+          "type": "Role"
+        },
+        {
+          "id": "37730810-e9ba-4e46-b07e-8ca78d182097",
+          "type": "Role"
+        },
+        {
+          "id": "c7fbd983-d9aa-4fa7-84b8-17382c103bc4",
+          "type": "Role"
+        }
+      ]
+    }
+  ]
+  ```
 
 2. Execute these commands to grant the permissions in the JSON file and give administrator consent. For YOUR-APP-ID, substitute the `appId` value from the results you copied in Step B:
 

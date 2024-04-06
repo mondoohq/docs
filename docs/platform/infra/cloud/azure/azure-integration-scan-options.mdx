@@ -1,0 +1,28 @@
+---
+title: Set up Continuous Azure Scanning
+sidebar_label: Set up Continuous Scanning
+sidebar_position: 2
+description: Configure the Mondoo Azure integration to continuously scan Azure
+image: /img/featured_img/mondoo-azure.jpg
+pagination_next: null
+---
+
+Integrate your Azure subscription or management group with Mondoo to continuously evaluate the resources in the subscription, such as compute instances, storage, and network services.
+
+## Continuously scan an Azure subscription
+
+There are two options for setting up an Azure subscription integration:
+
+- **Quick setup:** This command-line approach to integrating a subscription with Mondoo has helpful shortcuts. We recommend it for typical, small-to-large Azure environments.
+
+  [Learn how :arrow_forward:](/platform/infra/cloud/azure/azure-integration-scan-subscription/)
+
+- **Manual setup:** Follow this approach if you want to use your own certificates for authentication, if you use the [_key vault access policy_ permission model](https://learn.microsoft.com/en-us/azure/key-vault/general/rbac-access-policy), or if your Azure environment is unusually large.
+
+  [Learn how :arrow_forward:](/platform/infra/cloud/azure/manual-reg-path/)
+
+## Continuously scan an Azure management group
+
+You can integrate an entire management group with Mondoo. This lets you continuously scan all the Azure subscriptions within the management group.
+
+[Learn how :arrow_forward:](/platform/infra/cloud/azure/azure-integration-scan-group/)

@@ -57,7 +57,7 @@ Before you integrate Microsoft Azure with Mondoo, be sure you have:
 
 Like every service that integrates with Azure, Mondoo must have Microsoft Entra ID app registration and service principal. To learn more about creating a new app registration and service principal, read [App registration, app objects, and service principals](https://learn.microsoft.com/en-us/entra/identity-platform/howto-create-service-principal-portal#app-registration-app-objects-and-service-principals) in the Entra documentation.
 
-Registering Mondoo with Entra establishes a trust relationship between Mondoo and the Microsoft identity platform. The trust is unidirectional: Mondoo trusts the Microsoft identity platform, and not the other way around. The Entra app registration creates a [service principal](https://learn.microsoft.com/en-us/entra/identity-platform/how-applications-are-added#what-are-service-principals-and-where-do-they-come-from){:target="\_blank"} to represent Mondoo in any tenants and subscriptions.
+Registering Mondoo with Entra establishes a trust relationship between Mondoo and the Microsoft identity platform. The trust is unidirectional: Mondoo trusts the Microsoft identity platform, and not the other way around. The Entra app registration creates a [service principal](https://learn.microsoft.com/en-us/entra/identity-platform/how-applications-are-added#what-are-service-principals-and-where-do-they-come-from) to represent Mondoo in any tenants and subscriptions.
 
 The app registration you create gives Mondoo read-only access to Azure resources, web apps, key vaults, and Graph API.
 

@@ -68,7 +68,7 @@ This example has two stages:
 
 The pipeline must have access to the image (have adequate permissions) so it can pull and scan the image with cnspec. There are two approaches:
 
-- **Directly from the pipeline login to the registry - ** Because this example uses Azure Container Registry with multi-factor authentication activated, it relies on a service principal by registering an application in Azure. To learn how to register an app in Azure, read [the Azure documentation](https://learn.microsoft.com/en-us/azure/container-registry/container-registry-auth-service-principal#authenticate-with-the-service-principal)) and the [Mondoo Azure manual app registration option documentation](/platform/infra/cloud/azure/azure-integration-scan-subscription/). It's easier to set up a client secret for the created application instead of a certificate.
+- **Directly from the pipeline login to the registry - ** Because this example uses Azure Container Registry with multi-factor authentication activated, it relies on a service principal by registering an application in Azure. To learn how to register an app in Azure, read [the Azure documentation](https://learn.microsoft.com/en-us/azure/container-registry/container-registry-auth-service-principal#authenticate-with-the-service-principal) and the [Mondoo Azure manual app registration option documentation](/platform/infra/cloud/azure/continuous/overview/). It's easier to set up a client secret for the created application instead of a certificate.
 
 You then execute this login command in the pipeline:
 

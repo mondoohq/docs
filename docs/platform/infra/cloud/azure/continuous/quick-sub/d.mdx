@@ -1,0 +1,93 @@
+---
+title: Quick Setup - Azure Subscription Continuous Scanning - Step D
+sidebar_label: Step D
+sidebar_position: 5
+description: Configure the Mondoo Azure integration to scan Azure subscriptions. Step D is to grant permissions to access Microsoft Graph (API permissions).
+image: /img/featured_img/mondoo-azure.jpg
+---
+
+This is the fourth step in the quick setup for an Azure subscription.
+
+### Step D: Grant permissions to access Microsoft Graph (API permissions)
+
+1. Copy this content and paste it into a new file on your local system named `app-manifest.json`:
+
+  ```json
+  [
+    {
+      "resourceAppId": "00000003-0000-0000-c000-000000000000",
+      "resourceAccess": [
+        {
+          "id": "246dd0d5-5bd0-4def-940b-0421030a5b68",
+          "type": "Role"
+        },
+        {
+          "id": "e321f0bb-e7f7-481e-bb28-e3b0b32d4bd0",
+          "type": "Role"
+        },
+        {
+          "id": "5e0edab9-c148-49d0-b423-ac253e121825",
+          "type": "Role"
+        },
+        {
+          "id": "bf394140-e372-4bf9-a898-299cfc7564e5",
+          "type": "Role"
+        },
+        {
+          "id": "6e472fd1-ad78-48da-a0f0-97ab2c6b769e",
+          "type": "Role"
+        },
+        {
+          "id": "dc5007c0-2d7d-4c42-879c-2dab87571379",
+          "type": "Role"
+        },
+        {
+          "id": "b0afded3-3588-46d8-8b3d-9842eff778da",
+          "type": "Role"
+        },
+        {
+          "id": "7ab1d382-f21e-4acd-a863-ba3e13f7da61",
+          "type": "Role"
+        },
+        {
+          "id": "197ee4e9-b993-4066-898f-d6aecc55125b",
+          "type": "Role"
+        },
+        {
+          "id": "9a5d68dd-52b0-4cc2-bd40-abcf44ac3a30",
+          "type": "Role"
+        },
+        {
+          "id": "f8f035bb-2cce-47fb-8bf5-7baf3ecbee48",
+          "type": "Role"
+        },
+        {
+          "id": "dbb9058a-0e50-45d7-ae91-66909b5d4664",
+          "type": "Role"
+        },
+        {
+          "id": "9e640839-a198-48fb-8b9a-013fd6f6cbcd",
+          "type": "Role"
+        },
+        {
+          "id": "37730810-e9ba-4e46-b07e-8ca78d182097",
+          "type": "Role"
+        },
+        {
+          "id": "c7fbd983-d9aa-4fa7-84b8-17382c103bc4",
+          "type": "Role"
+        }
+      ]
+    }
+  ]
+  ```
+
+2. Execute these commands to grant the permissions in the JSON file and give administrator consent. For YOUR-APP-ID, substitute the `appId` value from the results you copied in Step B:
+
+   ```
+   az ad app update --id YOUR-APP-ID --required-resource-accesses @app-manifest.json
+
+   az ad app permission admin-consent --id YOUR-APP-ID
+   ```
+
+---

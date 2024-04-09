@@ -1,0 +1,68 @@
+---
+title: Manual Setup - Azure Subscription Continuous Scanning - Step F
+sidebar_label: Step F
+sidebar_position: 7
+description: Configure the Mondoo Azure integration to scan Azure subscriptions. Step F is to upload the application certificate.
+image: /img/featured_img/mondoo-azure.jpg
+---
+
+This is the sixth step in the manual setup for an Azure subscription.
+
+## Step F: Upload the application certificate.
+
+The app registration and your Mondoo integration must share a [PEM](https://aboutssl.org/what-is-pem-certificate-file/) (privacy-enhanced mail) certificate for secure authentication. The certificate must not be password protected.
+
+Create a PEM certificate using the method approved by your organization's security team. You need two files:
+
+- The file you upload to Azure must have only the certificate, not the private key.
+
+- The file you upload to Mondoo Console (in the [Add a new Azure integration in the Mondoo Console](#add-a-new-azure-integration-in-the-mondoo-console) section below) must have both the private key and the certificate. It must have a `.pem` extension and must use this format and order of information:
+
+  ```
+  -----BEGIN PRIVATE KEY-----
+  key goes here
+  -----END PRIVATE KEY-----
+  -----BEGIN CERTIFICATE-----
+  certificate goes here
+  -----END CERTIFICATE-----
+  ```
+
+<details>
+<summary>Generate a self-signed certificate for testing</summary>
+
+For testing purposes only, you can use OpenSSL toolkit together with req to generate a certificate. Run this command in Linux shell, macOS shell, or Azure Cloud shell (bash):
+
+```
+openssl req -newkey rsa:4096  -x509  -sha512  -days 365 -nodes -out certificate.pem -keyout privatekey.key
+```
+
+Add the private key to the beginning of the PEM file:
+
+```
+cat privatekey.key certificate.pem > certificate.combo.pem
+```
+
+</details>
+
+Upload the certificate to Azure:
+
+1. From the Azure portal home, select **Microsoft Entra ID**.
+
+2. In the navigation sidebar, select **App registrations**.
+
+3. Select the app you created.
+
+4. In the sidebar under the app name, select **Certificate & secrets**.
+
+5. Select **Certificates** and then select **Upload certificate**.
+
+6. Select the PEM certificate and enter a description, such as `Mondoo certificate`.
+
+:::info
+
+Be sure to choose the file containing only the certificate, not the private key.
+
+:::
+
+7. Select the **Add** button.
+

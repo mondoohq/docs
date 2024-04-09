@@ -1,0 +1,31 @@
+---
+title: Quick Setup - Azure Subscription Continuous Scanning - Step A
+sidebar_label: Step A
+sidebar_position: 2
+description: Configure the Mondoo Azure integration to scan Azure subscriptions. Step A is to retrieve your subscription ID and tenant ID.
+image: /img/featured_img/mondoo-azure.jpg
+---
+
+This is the first step in the quick setup for an Azure subscription.
+
+## Step A: Retrieve your subscription ID and tenant ID
+
+You can give your app READ access to one or several subscriptions.
+
+1. In the Azure CLI, find the ID(s) of the subscription(s) you want to monitor by entering:
+
+   ```bash
+   az account subscription list
+   ```
+
+   OR
+
+   ```bash
+   az account list
+   ```
+
+The Azure CLI provides information about all your subscriptions across all tenants. Each entry has an `id` value.
+
+2. Copy the `id` value for each of the subscriptions you want to integrate with Mondoo. Paste the value(s) somewhere handy to use later.
+
+3. Copy the `tenantId` value and paste it somewhere handy to use later.

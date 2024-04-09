@@ -1,0 +1,34 @@
+---
+title: Manual Setup - Azure Subscription Continuous Scanning - Step A
+sidebar_label: Step A
+sidebar_position: 2
+description: Configure the Mondoo Azure integration to scan Azure subscriptions. Step A is to register an app with Microsoft Entra ID and create a service principal.
+image: /img/featured_img/mondoo-azure.jpg
+---
+
+This is the first step in the manual setup for an Azure subscription.
+
+
+## Step A: Register an app with Microsoft Entra ID and create a service principal
+
+1. Log into the [Azure portal](https://portal.azure.com/) as a global administrator, application administrator or cloud application administrator.
+
+2. Find and select **Microsoft Entra ID**.
+
+3. In the navigation sidebar, select **App registrations**.
+
+   ![Azure app registrations](/img/platform/infra/cloud/azure/app-regs.png)
+
+4. Select **+ New registration**.
+
+   ![Create a new app registration in Azure](/img/platform/infra/cloud/azure/new-app-reg.png)
+
+5. Enter an application name (such as `mondoo-security`) and select **Accounts in this organizational directory only** as the supported account type. Mondoo does not require an application redirect URI.
+
+6. Select the **Register** button.
+
+   Microsoft creates the application ID and displays it in the application registration overview.
+
+   ![new app registration in Azure](/img/platform/infra/cloud/azure/after-new-app-reg.png)
+
+Keep the page open as you continue to the next step.

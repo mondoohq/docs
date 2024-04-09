@@ -1,0 +1,63 @@
+---
+title: Quick Setup - Azure Subscription Continuous Scanning - Step B
+sidebar_label: Step B
+sidebar_position: 3
+description: Configure the Mondoo Azure integration to scan Azure subscriptions. Step B is to create the app, service principal, and certificate and grant READ access.
+image: /img/featured_img/mondoo-azure.jpg
+---
+
+This is the second step in the quick setup for an Azure subscription.
+
+## Step B: Create the app, service principal, and certificate and grant READ access
+
+A single command in the Azure CLI performs these tasks:
+
+- Creates the application registration and service principal in Microsoft Entra ID
+
+- Grants READ access (using RBAC) to the new application at the defined level
+
+- Creates a certificate and assigns it to the newly created app
+
+1. In the Azure CLI, enter:
+
+   ```bash
+   az ad sp create-for-rbac --name mondoo-security --role Reader --scopes /subscriptions/YOUR-SUBSCRIPTION-ID --create-cert
+   ```
+
+   For `YOUR-SUBSCRIPTION-ID`, substitute the `subscriptionId` value you copied in the instruction above. For example, this command creates a service principal and an application named `mondoo-security` that provides access to a subscription with the ID `e4e2600a-2d3d-2600-aa70-b9d8c8ec2600`:
+
+   ```bash
+   az ad sp create-for-rbac --name mondoo-security --role Reader --scopes /subscriptions/e4e2600a-2d3d-2600-aa70-b9d8c8ec2600 --create-cert
+   ```
+
+   :::tip
+
+   To scan multiple subscriptions, in the Azure CLI, provide multiple subscription IDs:
+
+   ```bash
+   az ad sp create-for-rbac --name mondoo-security --role Reader --scopes /subscriptions/YOUR-SUBSCRIPTION-ID-1 /subscriptions/YOUR-SUBSCRIPTION-ID-2 /subscriptions/YOUR-SUBSCRIPTION-ID-3 --create-cert
+   ```
+
+   :::
+
+   When successful, the Azure CLI returns results like these:
+
+   ```bash
+   "appId": "63c35483-c62f-2600-a097-a6e44d8dcdf6",
+   "displayName": "Mondoo",
+   "fileWithCertAndPrivateKey": "/Users/stella/tmpkqyme3rm.pem",
+   "password": null,
+   "tenant": "e4e2600a-2d3d-2600-aa70-b9d8c8ec2600"
+   ```
+
+2. Copy your results and paste them somewhere handy; you'll need them in later steps.
+
+3. Copy the created PEM file (in the example above, it's named tmpkqyme3rm.pem) and save it; you'll need it in later steps.
+
+   :::tip
+
+   In the Azure portal, you can make sure that the created application has the required READ access at the subscription level: Go to **Azure portal > [your subscription] > Access control (IAM) > Roles (choose Reader and View) > Assessments**. If you see the `mondoo-security` application, you've succeeded.
+
+   :::
+
+---

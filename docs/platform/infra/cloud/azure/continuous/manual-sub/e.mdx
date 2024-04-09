@@ -1,0 +1,27 @@
+---
+title: Manual Setup - Azure Subscription Continuous Scanning - Step E
+sidebar_label: Step E
+sidebar_position: 6
+description: Configure the Mondoo Azure integration to scan Azure subscriptions. Step E is to grant permissions to access Azure key vault.
+image: /img/featured_img/mondoo-azure.jpg
+---
+
+This is the fifth step in the manual setup for an Azure subscription.
+
+## Step E: Grant permissions to access Azure key vault
+
+:::note
+
+There are two permission models for key vaults: role-based access control (RBAC) and key vault access policy.
+
+See what permission model your key vault uses: In the Azure portal, view the key vault's **Access configuration** settings. (You can easily change it to RBAC.)
+
+:::
+
+If you are using the RBAC for the key vault, there is no need for further actions; the READ permissions on the key vault will be applied by the "Key Vault Reader" subscription permissions applied in Step C.
+
+import Keyvault from "./_include-keyvault.mdx";
+
+<Keyvault />{" "}
+
+---

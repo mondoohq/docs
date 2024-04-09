@@ -5,6 +5,19 @@ const { themes } = require("prism-react-renderer");
 const legacyRedirects = [
   // NOTE: Path / is equivalent to https://mondoo.com/docs/
   //
+  // These are from the Azure integration change in April 2024
+  {
+    from: "/platform/infra/cloud/azure/azure-integration-scan-group",
+    to: "platform/infra/cloud/azure/continuous/group/overview",
+  },
+  {
+    from: "/platform/infra/cloud/azure/azure-integration-scan-subscription",
+    to: "platform/infra/cloud/azure/continuous/quick-sub/overview",
+  },
+  {
+    from: "/platform/infra/cloud/azure/manual-reg-path",
+    to: "platform/infra/cloud/azure/continuous/manual-sub/overview",
+  },
   // This is a URL that Mondoo added to AWS resources via the AWS integration CloudFormation
   // Don't delete it unless the product changes:
   {

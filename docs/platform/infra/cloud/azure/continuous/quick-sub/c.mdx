@@ -1,0 +1,94 @@
+---
+title: Quick Setup - Azure Subscription Continuous Scanning - Step C
+sidebar_label: Step C
+sidebar_position: 4
+description: Configure the Mondoo Azure integration to scan Azure subscriptions. Step C is to grant web app and key vault READ permissions to the registered app.
+image: /img/featured_img/mondoo-azure.jpg
+---
+
+This is the third step in the quick setup for an Azure subscription.
+
+## Step C: Grant web app and key vault READ permissions to the registered app
+
+:::note
+
+The key vault permissions below are from Microsoft's "Key Vault Reader" role. The [Microsoft documentation](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles) describes this role:
+
+> _Read metadata of key vaults and its certificates, keys, and secrets. Cannot read sensitive values such as secret contents or key material. Only works for key vaults that use the 'Azure role-based access control' permission model._
+
+:::
+
+Follow these steps, substituting the subscription ID(s) you copied in Step A for YOUR-SUBSCRIPTION-ID:
+
+1. Copy this content and paste it into a new file named `mondoo-role.json`:
+
+   ```json
+   {
+     "Name": "mondoo-role",
+     "IsCustom": true,
+     "description": "Custom role for Mondoo integration",
+     "assignableScopes": ["/subscriptions/YOUR-SUBSCRIPTION-ID"],
+     "actions": [
+       "Microsoft.Authorization/*/read",
+       "Microsoft.ResourceHealth/availabilityStatuses/read",
+       "Microsoft.Insights/alertRules/*",
+       "Microsoft.Resources/deployments/*",
+       "Microsoft.Resources/subscriptions/resourceGroups/read",
+       "Microsoft.Support/*",
+       "Microsoft.Web/listSitesAssignedToHostName/read",
+       "Microsoft.Web/serverFarms/read",
+       "Microsoft.Web/sites/config/read",
+       "Microsoft.Web/sites/config/web/appsettings/read",
+       "Microsoft.Web/sites/config/web/connectionstrings/read",
+       "Microsoft.Web/sites/config/appsettings/read",
+       "Microsoft.web/sites/config/snapshots/read",
+       "Microsoft.Web/sites/config/list/action",
+       "Microsoft.Web/sites/read",
+       "Microsoft.KeyVault/checkNameAvailability/read",
+       "Microsoft.KeyVault/deletedVaults/read",
+       "Microsoft.KeyVault/locations/*/read",
+       "Microsoft.KeyVault/vaults/*/read",
+       "Microsoft.KeyVault/operations/read"
+     ],
+     "notActions": [],
+     "dataActions": [
+       "Microsoft.KeyVault/vaults/*/read",
+       "Microsoft.KeyVault/vaults/secrets/readMetadata/action"
+     ],
+     "notDataActions": []
+   }
+   ```
+
+   To integrate with more than one subscription, list them:
+
+   ```bash
+   "assignableScopes": [
+
+     "/subscriptions/YOUR-SUBSCRIPTION-ID-1"
+
+     "/subscriptions/YOUR-SUBSCRIPTION-ID-2"
+
+     "/subscriptions/YOUR-SUBSCRIPTION-ID-3"
+
+   ]
+   ```
+
+2. Create a custom role in the specified subscription:
+
+   ```bash
+   az role definition create --role-definition mondoo-role.json
+   ```
+
+3. Make sure you successfully created the role:
+
+   ```bash
+   az role definition list --output json --query '[].{roleName:roleName, description:description}' --name "mondoo-role"
+   ```
+
+4. Assign the created custom role to the app you registered:
+
+   ```bash
+   az role assignment create --role mondoo-role --assignee <APP-ID> --scope /subscriptions/YOUR-SUBSCRIPTION-ID
+   ```
+
+---

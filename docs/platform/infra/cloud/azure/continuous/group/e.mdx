@@ -1,0 +1,71 @@
+---
+title: Quick Setup - Azure Group Continuous Scanning - Step E
+sidebar_label: Step E
+sidebar_position: 6
+description: Configure the Mondoo Azure integration to scan an Azure management group. Step E is to add the integration in Mondoo.
+image: /img/featured_img/mondoo-azure.jpg
+---
+
+This is the final step in the quick setup for an Azure management group.
+
+## Add a new Azure integration in the Mondoo Console
+
+After you've created, granted permissions to, and tested a new app registration, you can create a Mondoo Azure integration. You need some values from the app registration you created in the instructions above.
+
+1. Access the Integrations > Add > Azure page in one of two ways:
+
+   - New space setup: After creating a new Mondoo account or creating a new space, the initial setup guide welcomes you. Select **BROWSE INTEGRATIONS** and then select **Azure**.
+
+     ![Welcome to Mondoo Page](/img/platform/start/welcome_to_mondoo.png)
+
+   - INTEGRATIONS page: In the side navigation bar, under **INTEGRATIONS**, select **Add New Integration**. Under Cloud Security, select **Azure**.
+
+     ![integration-create-image](/img/platform/infra/cloud/azure/add-int-azure-top.png)
+
+2. In the **Choose an integration name** box, enter a name for the integration. Make it a name that lets you easily recognize the Azure tenant.
+
+3. In the **Enter Application (client) ID** box, enter the value from the `appId` value you copied in Step B.
+
+4. In the **Enter the Directory (tenant) ID** box, enter the `tenantId` value you copied in Step A.
+
+5. Specify the subscriptions for Mondoo to continuously scan. You copied at least one subscription ID in step A.
+
+   - To continuously scan all subscriptions in the tenant, leave the **Scan all subscriptions connected to the Directory (tenant) ID** toggle enabled.
+
+   - To choose the subscriptions to scan, disable the **Scan all subscriptions connected to the Directory (tenant) ID** toggle, select Allowlist, and enter the subscription ID to scan.
+
+   - To scan **all** subscriptions except those you specify, disable the **Scan all subscriptions connected to the Directory (tenant) ID** toggle, select Denylist, and enter the names of the subscriptions you don't want Mondoo to scan.
+
+6. To automatically discover all Linux and Windows VMs in your subscription and scan them using Azure Run Command, select **Scan Azure VMs using Run Command**.
+
+7. Provide the certificate (a [PEM](https://aboutssl.org/what-is-pem-certificate-file/) (privacy-enhanced mail) file) for Mondoo to securely authenticate with the app (service principal) you created. You created this certificate in Step B.
+
+   The certificate file must have the `.pem` extension and must contain both the private key and the certificate in this order:
+
+   ```
+   -----BEGIN PRIVATE KEY-----
+   key goes here
+   -----END PRIVATE KEY-----
+   -----BEGIN CERTIFICATE-----
+   certificate goes here
+   -----END CERTIFICATE-----
+   ```
+
+   Upload the certificate to Mondoo: In the **Drag and drop your .pem file here** box, select the cloud icon and choose the file to upload.
+
+   ![integration-create-image](/img/platform/infra/cloud/azure/add-int-azure-bottom.png)
+
+8. To automatically scan all VMs in your subscription, enable **Scan Azure VMs using RunCommand**.
+
+9. Select the **START SCANNING** button.
+
+10. On the Recommended Policies page, enable the policies on which you want to base assessments of your Azure environment. To learn more, read [Manage Policies](/platform/security/posture/policies/).
+
+11. Select **FINALIZE SETUP**.
+
+Mondoo begins scanning your Azure resources. When it completes, you can see results on the INVENTORY page. To learn more, read [Monitor Your Infrastructure Security](/platform/security/posture/monitor/).
+
+If your integration is unsuccessful, read [Troubleshoot an Azure Configuration](/platform/infra/cloud/azure/troubleshoot/).
+
+
+---

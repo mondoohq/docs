@@ -1,0 +1,21 @@
+---
+title: Quick Setup - Azure Subscription Continuous Scanning - Step A
+sidebar_label: Step A
+sidebar_position: 2
+description: Configure the Mondoo Azure integration to scan an Azure management group. Step A is to retrieve your subscription ID and tenant ID.
+image: /img/featured_img/mondoo-azure.jpg
+---
+
+This is the first step in the quick setup for an Azure management group.
+
+## Step A: Retrieve your management group ID
+
+If you want Mondoo to continuously scan all the resources in a management group, retrieve the group's ID in the Azure CLI:
+
+1. Run this command:
+
+```bash
+az account management-group list
+```
+
+2. Copy the ID of the group you want and paste it somewhere handy to use in later steps.

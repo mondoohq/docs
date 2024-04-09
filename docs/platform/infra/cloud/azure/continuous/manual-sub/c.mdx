@@ -1,0 +1,45 @@
+---
+title: Manual Setup - Azure Subscription Continuous Scanning - Step C
+sidebar_label: Step C
+sidebar_position: 4
+description: Configure the Mondoo Azure integration to scan Azure subscriptions. Step C is to grant required READ permissions to the app.
+image: /img/featured_img/mondoo-azure.jpg
+---
+
+This is the third step in the manual setup for an Azure subscription.
+
+## Step C: Grant required READ permissions to the app
+
+These steps guide you through setting the READ permissions and "Key Vault Reader" permissions for a single subscription. If you want to scan several subscriptions, you must repeat the same steps for each subscription.
+
+If you want Mondoo to monitor an entire management group, you can perform these steps at the management group level: Search for "management groups" in the Azure portal and then select the management group you want to monitor. To monitor the entire directory, select the **tenant root** group.
+
+Set subscription-level permissions for your new app registration:
+
+1. From the Azure portal home, select **Subscriptions**.
+
+   ![Azure subscriptions](/img/platform/infra/cloud/azure/subscriptions.png)
+
+2. Select the subscription you want to integrate with Mondoo.
+
+   ![Azure subscription](/img/platform/infra/cloud/azure/add-int-azure-subscription.png)
+
+3. In the sidebar under the subscription name, select **Access control (IAM)**.
+
+4. Select the **Add role assignment** button.
+
+5. Select the **Reader** role and then select the Members tab (or Next button).
+
+   ![Azure Subscription Role Assignment](/img/platform/infra/cloud/azure/add-int-azure-role-member.png)
+
+6. Select **+ Select Members**, find and select your Mondoo app registration, and select the **Select** button.
+
+   ![Azure Subscription Role Member Assignment](/img/platform/infra/cloud/azure/add-int-azure-select-member.png)
+
+7. Select the **Review + assign** button (or Next button), check your work, and then select the **Review + assign** button again to assign the Reader role to your Mondoo app registration.
+
+8. Repeat steps 4-7 and this time choose the **"Key Vault Reader"** role in step 5.
+
+   Keep the Access control (IAM) page open as you continue to Step D.
+
+---

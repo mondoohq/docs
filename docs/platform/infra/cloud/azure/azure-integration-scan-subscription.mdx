@@ -1,0 +1,383 @@
+---
+title: Quick Setup - Azure Subscription Continuous Scanning
+sidebar_label: Quick Setup - Azure Subscription Continuous Scanning
+sidebar_position: 2
+description: Configure the Mondoo Azure Integration to scan Azure subscriptions
+image: /img/featured_img/mondoo-azure.jpg
+---
+
+The Mondoo Azure integration lets you continuously scan Azure resources, such as compute instances and databases, in one or more Azure subscriptions.
+
+You can also scan an Azure management group. For instructions, read [Continuously Scan an Azure Management Group](/platform/infra/cloud/azure/azure-integration-scan-group/).
+
+## Prerequisites
+
+Before you integrate Microsoft Azure with Mondoo, be sure you have:
+
+- A [Mondoo account](/platform/start/plat-start-acct/) with Editor or Owner permissions for the space in which you want to add the integration.
+
+- An [Azure account](https://azure.microsoft.com/free/?WT.mc_id=A261C142F) with an active subscription and permission to manage applications in Microsoft Entra ID (formerly Active Directory). Any of these [Entra built-in roles](https://learn.microsoft.com/en-us/azure/active-directory/roles/permissions-reference) include the required permissions:
+
+  - [Global Administrator](https://learn.microsoft.com/en-us/azure/active-directory/roles/permissions-reference#global-administrator)
+
+  - [Application administrator](https://learn.microsoft.com/en-us/azure/active-directory/roles/permissions-reference#application-administrator)
+
+  - [Cloud application administrator](https://learn.microsoft.com/en-us/azure/active-directory/roles/permissions-reference#cloud-application-administrator)
+
+  In the Azure portal you can see what roles your user account has: Go to **Microsoft Entra ID > Users > (your user account) > Assigned roles**.
+
+- Command-line access to Azure using either:
+
+  - [Azure Cloud Shell](https://learn.microsoft.com/en-us/azure/cloud-shell/quickstart?tabs=azurecli)
+
+  - <details>
+      <summary>
+        The Azure CLI in either the Linux shell or the macOS shell
+      </summary>
+      <div>
+        <ol>
+          <li>
+            <a href="https://learn.microsoft.com/en-us/cli/azure/install-azure-cli">
+              Install the Azure CLI.
+            </a>
+          </li>
+          <li>
+            Log into the Azure CLI from PowerShell or a Linux/macOS CLI by
+            entering:
+            <br />
+            <tt>az login</tt>
+            <br />
+            Azure opens your web browser and prompts you to log in. After you do
+            so, you can return to the CLI.
+          </li>
+        </ol>
+      </div>
+    </details>
+
+## Register and grant permissions to an Azure app
+
+Like any service that integrates with Azure, Mondoo must have Microsoft Entra ID app registration in your Azure tenant. To learn more about creating a new app registration and service principal, read [App registration, app objects, and service principals](https://learn.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#app-registration-app-objects-and-service-principals) in the Azure documentation.
+
+Registering Mondoo with Entra establishes a trust relationship between Mondoo and the Microsoft identity platform. The trust is unidirectional: Mondoo trusts the Microsoft identity platform, and not the other way around. The Entra app registration creates a [service principal](https://learn.microsoft.com/en-us/azure/active-directory/develop/active-directory-how-applications-are-added#what-are-service-principals-and-where-do-they-come-from) to represent Mondoo in any tenants and subscriptions.
+
+The app registration you create gives Mondoo read-only access to Azure resources, web apps, key vault, and Graph API.
+
+These instructions describe how to use Microsoft's "automatic" method of registering an Azure app. If you want to use your own certificates for authentication, if you use the [_key vault access policy_ permission model](https://learn.microsoft.com/en-us/azure/key-vault/general/rbac-access-policy), or if your Azure environment is unusually large, follow the instructions in [Manually Set up an Azure Integration](/platform/infra/cloud/azure/manual-reg-path/) instead.
+
+To configure your Azure resources, you must:
+
+Step A. Retrieve the subscription ID
+
+Step B. Create the app registration and certificate and grant READ access
+
+Step C. Grant web app and key vault READ permissions to the registered app
+
+Step D. Grant permissions to access Microsoft Graph (API permissions)
+
+### Step A: Retrieve your subscription ID and tenant ID
+
+You can give your app READ access to one or several subscriptions.
+
+1. In the Azure CLI, find the ID(s) of the subscription(s) you want to monitor by entering:
+
+   ```bash
+   az account subscription list
+   ```
+
+   OR
+
+   ```bash
+   az account list
+   ```
+
+The Azure CLI provides information about all your subscriptions across all tenants. Each entry has an `id` value.
+
+2. Copy the `id` value for each of the subscriptions you want to integrate with Mondoo. Paste the value(s) somewhere handy to use later.
+
+3. Copy the `tenantId` value and paste it somewhere handy to use later.
+
+### Step B: Create the app, service principal, and certificate and grant READ access
+
+A single command in the Azure CLI performs these tasks:
+
+- Creates the application registration and service principal in Microsoft Entra ID
+
+- Grants READ access (using RBAC) to the new application at the defined level
+
+- Creates a certificate and assigns it to the newly created app
+
+In the Azure CLI, enter:
+
+```bash
+az ad sp create-for-rbac --name mondoo-security --role Reader --scopes /subscriptions/YOUR-SUBSCRIPTION-ID --create-cert
+```
+
+For `YOUR-SUBSCRIPTION-ID`, substitute the `subscriptionId` value you copied in the instruction above. For example, this command creates a service principal and an application named `mondoo-security` that provides access to a subscription with the ID `e4e2600a-2d3d-2600-aa70-b9d8c8ec2600`:
+
+```bash
+az ad sp create-for-rbac --name mondoo-security --role Reader --scopes /subscriptions/e4e2600a-2d3d-2600-aa70-b9d8c8ec2600 --create-cert
+```
+
+:::tip
+
+To scan multiple subscriptions, in the Azure CLI, provide multiple subscription IDs:
+
+```bash
+az ad sp create-for-rbac --name mondoo-security --role Reader --scopes /subscriptions/YOUR-SUBSCRIPTION-ID-1 /subscriptions/YOUR-SUBSCRIPTION-ID-2 /subscriptions/YOUR-SUBSCRIPTION-ID-3 --create-cert
+```
+
+:::
+
+When successful, the Azure CLI returns results like these:
+
+```bash
+"appId": "63c35483-c62f-2600-a097-a6e44d8dcdf6",
+"displayName": "Mondoo",
+"fileWithCertAndPrivateKey": "/Users/stella/tmpkqyme3rm.pem",
+"password": null,
+"tenant": "e4e2600a-2d3d-2600-aa70-b9d8c8ec2600"
+```
+
+Copy your results and paste them somewhere handy; you'll need them in later steps.
+
+Copy the created PEM file (in the example above, it's named tmpkqyme3rm.pem) and save it; you'll need it in later steps.
+
+:::tip
+
+In the Azure portal, you can make sure that the created application has the required READ access at the subscription level: Go to **Azure portal > [your subscription] > Access control (IAM) > Roles (choose Reader and View) > Assessments**. If you see the `mondoo-security` application, you've succeeded.
+
+:::
+
+### Step C: Grant web app and key vault READ permissions to the registered app
+
+:::note
+
+The key vault permissions below are from Microsoft's "Key Vault Reader" role. The [Microsoft documentation](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles) describes this role:
+
+> _Read metadata of key vaults and its certificates, keys, and secrets. Cannot read sensitive values such as secret contents or key material. Only works for key vaults that use the 'Azure role-based access control' permission model._
+
+:::
+
+Follow these steps, substituting the subscription ID(s) you copied in Step A for YOUR-SUBSCRIPTION-ID:
+
+1. Copy this content and paste it into a new file named `mondoo-role.json`:
+
+   ```json
+   {
+     "Name": "mondoo-role",
+     "IsCustom": true,
+     "description": "Custom role for Mondoo integration",
+     "assignableScopes": ["/subscriptions/YOUR-SUBSCRIPTION-ID"],
+     "actions": [
+       "Microsoft.Authorization/*/read",
+       "Microsoft.ResourceHealth/availabilityStatuses/read",
+       "Microsoft.Insights/alertRules/*",
+       "Microsoft.Resources/deployments/*",
+       "Microsoft.Resources/subscriptions/resourceGroups/read",
+       "Microsoft.Support/*",
+       "Microsoft.Web/listSitesAssignedToHostName/read",
+       "Microsoft.Web/serverFarms/read",
+       "Microsoft.Web/sites/config/read",
+       "Microsoft.Web/sites/config/web/appsettings/read",
+       "Microsoft.Web/sites/config/web/connectionstrings/read",
+       "Microsoft.Web/sites/config/appsettings/read",
+       "Microsoft.web/sites/config/snapshots/read",
+       "Microsoft.Web/sites/config/list/action",
+       "Microsoft.Web/sites/read",
+       "Microsoft.KeyVault/checkNameAvailability/read",
+       "Microsoft.KeyVault/deletedVaults/read",
+       "Microsoft.KeyVault/locations/*/read",
+       "Microsoft.KeyVault/vaults/*/read",
+       "Microsoft.KeyVault/operations/read",
+       "Microsoft.Compute/virtualMachines/runCommands/read",
+       "Microsoft.Compute/virtualMachines/runCommands/write"
+     ],
+     "notActions": [],
+     "dataActions": [
+       "Microsoft.KeyVault/vaults/*/read",
+       "Microsoft.KeyVault/vaults/secrets/readMetadata/action"
+     ],
+     "notDataActions": []
+   }
+   ```
+
+   To integrate with more than one subscription, list them:
+
+   ```bash
+   "assignableScopes": [
+
+     "/subscriptions/YOUR-SUBSCRIPTION-ID-1"
+
+     "/subscriptions/YOUR-SUBSCRIPTION-ID-2"
+
+     "/subscriptions/YOUR-SUBSCRIPTION-ID-3"
+
+   ]
+   ```
+
+2. Create a custom role in the specified subscription:
+
+   ```bash
+   az role definition create --role-definition mondoo-role.json
+   ```
+
+3. Make sure you successfully created the role:
+
+   ```bash
+   az role definition list --output json --query '[].{roleName:roleName, description:description}' --name "mondoo-role"
+   ```
+
+4. Assign the created custom role to the app you registered:
+
+   ```bash
+   az role assignment create --role mondoo-role --assignee <APP-ID> --scope /subscriptions/YOUR-SUBSCRIPTION-ID
+   ```
+
+### Step D: Grant permissions to access Microsoft Graph (API permissions)
+
+1. Copy this content and paste it into a new file on your local system named `app-manifest.json`:
+
+```json
+[
+  {
+    "resourceAppId": "00000003-0000-0000-c000-000000000000",
+    "resourceAccess": [
+      {
+        "id": "246dd0d5-5bd0-4def-940b-0421030a5b68",
+        "type": "Role"
+      },
+      {
+        "id": "e321f0bb-e7f7-481e-bb28-e3b0b32d4bd0",
+        "type": "Role"
+      },
+      {
+        "id": "5e0edab9-c148-49d0-b423-ac253e121825",
+        "type": "Role"
+      },
+      {
+        "id": "bf394140-e372-4bf9-a898-299cfc7564e5",
+        "type": "Role"
+      },
+      {
+        "id": "6e472fd1-ad78-48da-a0f0-97ab2c6b769e",
+        "type": "Role"
+      },
+      {
+        "id": "dc5007c0-2d7d-4c42-879c-2dab87571379",
+        "type": "Role"
+      },
+      {
+        "id": "b0afded3-3588-46d8-8b3d-9842eff778da",
+        "type": "Role"
+      },
+      {
+        "id": "7ab1d382-f21e-4acd-a863-ba3e13f7da61",
+        "type": "Role"
+      },
+      {
+        "id": "197ee4e9-b993-4066-898f-d6aecc55125b",
+        "type": "Role"
+      },
+      {
+        "id": "9a5d68dd-52b0-4cc2-bd40-abcf44ac3a30",
+        "type": "Role"
+      },
+      {
+        "id": "f8f035bb-2cce-47fb-8bf5-7baf3ecbee48",
+        "type": "Role"
+      },
+      {
+        "id": "dbb9058a-0e50-45d7-ae91-66909b5d4664",
+        "type": "Role"
+      },
+      {
+        "id": "9e640839-a198-48fb-8b9a-013fd6f6cbcd",
+        "type": "Role"
+      },
+      {
+        "id": "37730810-e9ba-4e46-b07e-8ca78d182097",
+        "type": "Role"
+      },
+      {
+        "id": "c7fbd983-d9aa-4fa7-84b8-17382c103bc4",
+        "type": "Role"
+      }
+    ]
+  }
+]
+```
+
+2. Execute these commands to grant the permissions in the JSON file and give administrator consent. For YOUR-APP-ID, substitute the `appId` value from the results you copied in Step B:
+
+   ```
+   az ad app update --id YOUR-APP-ID --required-resource-accesses @app-manifest.json
+
+   az ad app permission admin-consent --id YOUR-APP-ID
+   ```
+
+## Add a new Azure integration in the Mondoo Console
+
+After you've created, granted permissions to, and tested a new app registration, you can create a Mondoo Azure integration. You need some values from the app registration you created in the instructions above.
+
+1. Access the Integrations > Add > Azure page in one of two ways:
+
+   - New space setup: After creating a new Mondoo account or creating a new space, the initial setup guide welcomes you. Select **BROWSE INTEGRATIONS** and then select **Azure**.
+
+     ![Welcome to Mondoo Page](/img/platform/start/welcome_to_mondoo.png)
+
+   - INTEGRATIONS page: In the side navigation bar, under **INTEGRATIONS**, select **Add New Integration**. Under Cloud Security, select **Azure**.
+
+     ![integration-create-image](/img/platform/infra/cloud/azure/add-int-azure-top.png)
+
+2. In the **Choose an integration name** box, enter a name for the integration. Make it a name that lets you easily recognize the Azure tenant.
+
+3. In the **Enter Application (client) ID** box, enter the value from the `appId` value you copied in Step B.
+
+4. In the **Enter the Directory (tenant) ID** box, enter the `tenantId` value you copied in Step A.
+
+5. Specify the subscriptions for Mondoo to continuously scan. You copied at least one subscription ID in step A.
+
+   - To continuously scan all subscriptions in the tenant, leave the **Scan all subscriptions connected to the Directory (tenant) ID** toggle enabled.
+
+   - To choose the subscriptions to scan, disable the **Scan all subscriptions connected to the Directory (tenant) ID** toggle, select Allowlist, and enter the subscription ID to scan.
+
+   - To scan **all** subscriptions except those you specify, disable the **Scan all subscriptions connected to the Directory (tenant) ID** toggle, select Denylist, and enter the names of the subscriptions you don't want Mondoo to scan.
+
+6. To automatically discover all Linux and Windows VMs in your subscription and scan them using Azure Run Command, select **Scan Azure VMs using Run Command**.
+
+7. Provide the certificate (a [PEM](https://aboutssl.org/what-is-pem-certificate-file/) (privacy-enhanced mail) file) for Mondoo to securely authenticate with the app (service principal) you created. You created this certificate in Step B.
+
+   The certificate file must have the `.pem` extension and must contain both the private key and the certificate in this order:
+
+   ```
+   -----BEGIN PRIVATE KEY-----
+   key goes here
+   -----END PRIVATE KEY-----
+   -----BEGIN CERTIFICATE-----
+   certificate goes here
+   -----END CERTIFICATE-----
+   ```
+
+   Upload the certificate to Mondoo: In the **Drag and drop your .pem file here** box, select the cloud icon and choose the file to upload.
+
+   ![integration-create-image](/img/platform/infra/cloud/azure/add-int-azure-bottom.png)
+
+8. To automatically scan all VMs in your subscription, enable **Scan Azure VMs using RunCommand**.
+
+9. Select the **START SCANNING** button.
+
+10. On the Recommended Policies page, enable the policies on which you want to base assessments of your Azure environment. To learn more, read [Manage Policies](/platform/security/posture/policies/).
+
+11. Select **FINALIZE SETUP**.
+
+Mondoo begins scanning your Azure resources. When it completes, you can see results on the INVENTORY page. To learn more, read [Monitor Your Infrastructure Security](/platform/security/posture/monitor/).
+
+If your integration is unsuccessful, read [Troubleshoot an Azure Configuration](/platform/infra/cloud/azure/troubleshoot/).
+
+## Next steps
+
+- [Learn more about Mondoo](/platform/start/plat-what-is/)
+
+- [Integrate Mondoo with other cloud platforms in your infrastructure](/platform/infra/cloud/overview/)
+
+---

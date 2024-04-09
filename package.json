@@ -15,10 +15,10 @@
   },
   "dependencies": {
     "@algolia/client-search": "^4.23.2",
-    "@docusaurus/core": "^3.0.0",
-    "@docusaurus/plugin-client-redirects": "^3.0.0",
-    "@docusaurus/preset-classic": "^3.0.0",
-    "@docusaurus/theme-search-algolia": "^3.0.0",
+    "@docusaurus/core": "^3.2.1",
+    "@docusaurus/plugin-client-redirects": "^3.2.1",
+    "@docusaurus/preset-classic": "^3.2.1",
+    "@docusaurus/theme-search-algolia": "^3.2.1",
     "@fontsource/roboto": "^5.0.7",
     "@mdx-js/react": "^3.0.1",
     "@stackql/docusaurus-plugin-hubspot": "^1.0.0",
@@ -62,7 +62,7 @@
     "@types/react-helmet": "^6.1.11",
     "@types/react-router-dom": "^5.1.7",
     "prettier": "3.2.5",
-    "typescript": "^5.4.3"
+    "typescript": "^5.4.4"
   },
   "engines": {
     "node": ">=20.0"

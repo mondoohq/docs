@@ -1,0 +1,30 @@
+---
+title: Mondoo Azure Integration Setup Guide
+sidebar: azure
+sidebar_label: Overview
+sidebar_position: 1
+description: Use Mondoo to assess your Microsoft Azure configurations and identify risks to your infrastructure. Mondoo can continuously scan an Azure subscription or an entire Azure management group.
+image: /img/featured_img/mondoo-azure.jpg
+---
+
+Welcome to the Mondoo setup guide for Azure continuous scanning. There are multiple approaches to setting up a Mondoo Azure integration:
+
+- [**Quick setup for an Azure subscription**](/platform/infra/cloud/azure/continuous/quick-sub/overview/) provides efficient command line instructions to efficiently integrate an Azure subscription with Mondoo. We recommend this approach for most users.
+
+  [Get started :arrow_forward:](/platform/infra/cloud/azure/continuous/quick-sub/overview/)
+
+- [**Quick setup for an entire Azure management group**](/platform/infra/cloud/azure/continuous/group/overview/) provides efficient command line instructions to efficiently integrate all the subscriptions in an Azure management group with Mondoo. We recommend this approach if you want to monitor security of all your Azure subscriptions in a single [space](/platform/start/organize/spaces/).
+
+  [Get started :arrow_forward:](/platform/infra/cloud/azure/continuous/group/overview/)
+
+- [**Manual setup for an Azure subscription**](/platform/infra/cloud/azure/continuous/manual-sub/overview/) guides you through using Microsoft's web-based user interface to integration an Azure subscription with Mondoo. This approach is best if any of these are true:
+
+  - You want to use your own certificates for authentication
+
+  - You use the [key vault access policy](https://learn.microsoft.com/en-us/azure/key-vault/general/rbac-access-policy) permission model for your key vaults
+
+  - Your unique Azure infrastructure doesn't support Microsoft's "automatic" app registration method
+
+  - You followed the quick setup approach and didn't successfully integrate Mondoo with Azure
+
+  [Get started :arrow_forward:](/platform/infra/cloud/azure/continuous/group/overview/)

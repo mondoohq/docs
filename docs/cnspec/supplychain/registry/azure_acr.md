@@ -44,12 +44,6 @@ hello-world
 ubuntu
 ```
 
-Log into Docker to ensure the Azure CLI creates the correct docker configuration. Mondoo uses the Docker configuration to connect to Azure as well.
-
-```bash
-az acr login --name <acrName>
-```
-
 ## Scan
 
 Once you log in, cnspec can scan the registry:

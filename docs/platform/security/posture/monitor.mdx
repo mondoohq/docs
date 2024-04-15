@@ -8,21 +8,69 @@ image: /img/featured_img/mondoo-feature.jpg
 
 Mondoo provides continuous security monitoring of the assets in your digital infrastructure. In the [Mondoo Console](https://console.mondoo.com), you can always see up-to-date scan results for all the assets registered with your account.
 
-The **Inventory** view in the Mondoo Console provides many ways to monitor your infrastructure security, from overall scores for spaces in your organization down to how an individual asset scores on different checks in a policy.
+The **Organization Overview**, **Dashboard** and **Security Overview** in the Mondoo Console provide many ways to monitor your overall infrastructure security. From these pages, you can drill down into the security of individual assets, and even how they score on different checks in a policy.
 
-## Access the Inventory view and monitor assets
+## Assess your security posture
+
+The **Dashboard** of a space gives you a quick understanding of your security posture. To access a space's dashboard:
 
 1. In the [Mondoo Console](https://console.mondoo.com), [navigate](/platform/start/navigate/) to the organization containing the space you want to view.
 
-   ![Monitor organization security in the Mondoo Console](/img/platform/security/monitor-org.png)
+   ![Monitor organization security in the Mondoo Console](/img/platform/security/org-overview.png)
+
+   The Organization Overview shows trends in your security scores and important vulnerability information.
 
 2. In the side navigation bar, select **Spaces**.
 
-3. To drill down into a space, select the box representing the space. To drill down into the assets in the space, select the **INVENTORY** box.
+   ![Spaces in the Mondoo Console](/img/platform/security/monitor-org.png)
 
-   ![Space view in the Mondoo Console](/img/platform/security/monitor-space.png)
+3. To view security for a space, select the box representing the space.
 
-4. Filter the list of assets:
+   ![Space dashboard in the Mondoo Console](/img/platform/security/dashboard.png)
+
+   The Space Dashboard shows:
+
+      - An interactive circle chart of all the assets in the space
+
+      - A list of the most important vulnerabilities to fix (based on risk and the number of affected assets)
+
+      - A list of the most important security findings (such as configuration settings that put your organization at risk)
+
+4. Use the interactive circle chart to explore the space:
+
+   - The main, inside circle shows the distribution of types of assets in the space.
+
+      ![Explore a space](/img/platform/security/fidget-hover.png)
+
+      Hover over a section to see the distribution of security scores in that section.
+
+   - The outer circle shows subsections of assets in the space.
+
+      ![Explore a space](/img/platform/security/fidget-hover-2.png)
+
+      Hover over a subsection to see the distribution of security scores in that subsection.
+
+   - Select a section to zoom into the chart and see details of the section.
+
+   - To see a list of all assets in the current chart view, select **VIEW AS LIST**. From that list, you can select an asset to see its detailed security information.
+
+      ![List of assets in Mondoo](/img/platform/security/list.png)
+
+## Find an asset's security details in the Inventory view
+
+Another way to access an asset's security details is via the **Inventory** view.
+
+1. In the [Mondoo Console](https://console.mondoo.com), [navigate](/platform/start/navigate/) to the organization containing the space you want to view.
+
+2. In the side navigation bar, select **Spaces**.
+
+   ![Monitor organization security in the Mondoo Console](/img/platform/security/monitor-org.png)
+
+3. Select the box representing the space you want to drill into.
+
+4. In the left navigation, under **INVENTORY**, select **All Assets**.
+
+5. Filter the list of assets:
 
    - If there are multiple types of assets in the space, you can select a type to show only assets of that type. For example, select AWS to show only AWS assets. To stop filtering by integration type, select the integration type again.
 
@@ -32,9 +80,24 @@ The **Inventory** view in the Mondoo Console provides many ways to monitor your 
 
    - To remove a filter, select the **x** next to the filter.
 
-5. To see details on an asset's most recent security scan, select the asset.
+6. To see details on an asset's most recent security scan, select the asset.
 
    ![View security detail in the Mondoo Console](/img/platform/security/monitor-asset.png)
+
+### Choose asset details to view
+
+The tabs on the asset detail page show different details:
+
+| To see...                                                                               | Select this tab... |
+|-----------------------------------------------------------------------------------------|--------------------|
+| General security and configuration                                                      | Overview           |
+| The [policies](/platform/security/posture/policies/) that apply to the asset, plus how the asset scores on those policies       | Policies           |
+| All the [checks](/platform/security/posture/pac/) in all the policies that apply to the asset, plus scores on those checks | Checks             |
+| All queries that retrieve data on the asset, plus the results of those queries                  | Queries            |
+| Known [vulnerabilities](/platform/security/vuln/vulnerabilities/) discovered on the asset                                           | Vulnerabilities    |
+| Publicly announced [advisories](/platform/security/vuln/advisories/) discovered on the asset                                   | Advisories         |
+| Resources connected with the asset                                                      | Resources          |
+| Any [exceptions](/platform/security/customize/checks/) that apply to the asset                                                  | Exceptions         |
 
 ## How Mondoo scores policies
 

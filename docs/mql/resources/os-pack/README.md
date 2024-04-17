@@ -77,7 +77,7 @@ In this pack:
 | [platform](platform.md)                                 |                                                            |
 | [platform.advisories](platform.advisories.md)           | All platform/package advisories                            |
 | [platform.cves](platform.cves.md)                       | All platform/package CVEs                                  |
-| [platform.eol](platform.eol.md)                         | Deprecated; will be removed in version 10.0                |
+| [platform.eol](platform.eol.md)                         | Deprecated; will be removed in version 12.0                |
 | [port](port.md)                                         | TCP/IP port on the system                                  |
 | [ports](ports.md)                                       | TCP/IP ports on the system                                 |
 | [powershell](powershell.md)                             | Results of running a PowerShell script on the system       |

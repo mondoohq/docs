@@ -32,11 +32,12 @@ cnquery scan [flags]
       --inventory-format-ansible      Set the inventory format to Ansible.
       --inventory-format-domainlist   Set the inventory format to domain list.
   -j, --json                          Run the query and return the object in a JSON structure.
-  -o, --output string                 Set output format: compact, csv, full, json, summary, yaml (default "compact")
+  -o, --output string                 Set output format: compact, csv, full, json, json-v1, json-v2, summary, yaml (default "compact")
       --platform-id string            Select a specific target asset by providing its platform ID.
       --props stringToString          Custom values for properties (default [])
       --querypack querypack-bundle    Set the query packs to execute. This requires querypack-bundle. You can specify multiple UIDs.
   -f, --querypack-bundle strings      Path to local query pack file
+      --trace-id string               Trace identifier
 ```
 
 ### Options inherited from parent commands

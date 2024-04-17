@@ -11,4 +11,4 @@ displayed_sidebar: MQL
 
 | ID                  | TYPE | DESCRIPTION                                                       |
 | ------------------- | ---- | ----------------------------------------------------------------- |
-| vulnerabilityReport | dict | Deprecated; will be removed in version 10.0, use vulnmgmt instead |
+| vulnerabilityReport | dict | Deprecated; will be removed in version 12.0, use vulnmgmt instead |

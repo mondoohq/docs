@@ -65,6 +65,7 @@ cim
 classname
 clientid
 cloudlinux
+cloudtrails
 Clw
 cmek
 cnames

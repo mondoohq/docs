@@ -44,11 +44,27 @@ Find vulnerabilities for assets in a space:
 
 ## Assess a CVE's risk and impact
 
-Mondoo provides extensive details about a CVE to help you understand the risk it presents to (and the impact it could have on) your organization. The simplest of these are the CVSS score and the EXPLOITABLE flag.
+Mondoo provides extensive details about a CVE to help you understand the risk it presents to (and the impact it could have on) your organization. The simplest of these are the CVSS score and the risk factors flags.
 
 ![Vulnerability in Mondoo](/img/platform/security/vulnerability-top.png)
 
-At the top of a CVE's detail page (accessed as described above) you find general information about the CVE. If there are any known exploits of the CVE in the wild, an EXPLOITABLE flag displays beside the CVE number. To the right is the CVSS base score (8.8 in the image above).
+At the top of a CVE's detail page (accessed as described above) you find general information about the CVE. If the CVE (or the assets that contain the CVE) include any special risk factors, icons representing those risk factors display beside the CVE number. To the right is the CVSS base score (8.8 in the image above).
+
+### Risk factors
+
+Risk factors are attributes that can elevate the risk that a CVE poses to your organization. CVEs can have their own risk factors:
+
+| Icon                                                            | Risk factor                                                                                                                                                 |
+|------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ![Exploitable icon](/img/platform/security/exploitable.png)      | **Exploitable** CVEs have known exploits in the wild. Attackers know how to breach a system using this vulnerability and have already shown it can be done. |
+| ![Remote execution icon](/img/platform/security/remote-exec.png) | **Remote execution** CVEs are known to present remote code execution over the network. They let an attacker run malicious code on a target system.          |
+
+Mondoo also flags a CVE if the _assets_ that contain the CVE present their own risk factors:
+
+| Icon                                          | Risk factor                                                                              |
+|-----------------------------------------------|------------------------------------------------------------------------------------------|
+| ![Keys icon](/img/platform/security/keys.png) | **Accessible keys** indicates that key or credential information is exposed.             |
+| ![EOL icon](/img/platform/security/eol.png)   | **End-of-life (EOL)** indicates an operating system version that is no longer supported. |
 
 ### CVSS score and metrics
 

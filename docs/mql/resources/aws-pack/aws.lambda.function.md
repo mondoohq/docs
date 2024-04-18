@@ -28,6 +28,6 @@ The `aws.lambda.function` provides fields for assessing the configuration of ind
 | concurrency  | int               | Concurrency limit for the function         |
 | dlqTargetArn | string            | Target ARN of the dead-letter queue config |
 | policy       | dict              | Policy for the function                    |
-| vpcConfig    | dict              | VPC configuration for the lambda function  |
+| vpcConfig    | dict              | VPC configuration for the Lambda function  |
 | region       | string            | Region where the function exists           |
 | tags         | map[string]string | Tags for the function                      |

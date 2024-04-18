@@ -24,5 +24,5 @@ The `aws.ec2.instance.device` resource provides fields for assessing the configu
 | ------------------- | ------ | -------------------------------------------------------------------------- |
 | deleteOnTermination | bool   | Boolean to denote whether volume should be deleted on instance termination |
 | status              | string | Status of the device                                                       |
-| volumeId            | string | Volume id for the device                                                   |
+| volumeId            | string | Volume ID for the device                                                   |
 | deviceName          | string | Name for the device                                                        |

@@ -28,4 +28,4 @@ General asset information
 | fqdn        | string            | Fully qualified domain name (optional)                                                                                     |
 | build       | string            | Build version of the platform (optional)                                                                                   |
 | labels      | map[string]string | Optional platform information                                                                                              |
-| annotations | map[string]string | Custom annotiations (tags) on the asset                                                                                    |
+| annotations | map[string]string | Custom annotations (tags) on the asset                                                                                     |

@@ -22,4 +22,4 @@ Use the `aws.lambda` resource to assess the configuration of AWS Lambda.
 
 | ID        | TYPE                                                    | DESCRIPTION                                                |
 | --------- | ------------------------------------------------------- | ---------------------------------------------------------- |
-| functions | &#91;&#93;[aws.lambda.function](aws.lambda.function.md) | List of lambda functions across all regions in the account |
+| functions | &#91;&#93;[aws.lambda.function](aws.lambda.function.md) | List of Lambda functions across all regions in the account |

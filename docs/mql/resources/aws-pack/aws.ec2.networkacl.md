@@ -20,11 +20,12 @@ The `aws.ec2.networkacl` resource provides fields for assessing the configuratio
 
 **Fields**
 
-| ID        | TYPE                                                              | DESCRIPTION                                            |
-| --------- | ----------------------------------------------------------------- | ------------------------------------------------------ |
-| arn       | string                                                            | ARN for the network ACL                                |
-| id        | string                                                            | ID for the network ACL                                 |
-| region    | string                                                            | Region for the network ACL                             |
-| entries   | &#91;&#93;[aws.ec2.networkacl.entry](aws.ec2.networkacl.entry.md) | Entries for the network ACL                            |
-| isDefault | bool                                                              | Whether the ACL is the default network ACL for the VPC |
-| tags      | map[string]string                                                 | Tags for the network ACL                               |
+| ID           | TYPE                                                                          | DESCRIPTION                                            |
+| ------------ | ----------------------------------------------------------------------------- | ------------------------------------------------------ |
+| arn          | string                                                                        | ARN for the network ACL                                |
+| id           | string                                                                        | ID for the network ACL                                 |
+| region       | string                                                                        | Region for the network ACL                             |
+| entries      | &#91;&#93;[aws.ec2.networkacl.entry](aws.ec2.networkacl.entry.md)             | Entries for the network ACL                            |
+| isDefault    | bool                                                                          | Whether the ACL is the default network ACL for the VPC |
+| tags         | map[string]string                                                             | Tags for the network ACL                               |
+| associations | &#91;&#93;[aws.ec2.networkacl.association](aws.ec2.networkacl.association.md) | Associations for the network ACL                       |

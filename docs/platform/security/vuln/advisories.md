@@ -34,15 +34,15 @@ Find advisories for assets in a space:
 
 Risk factors are attributes that can elevate the risk that an advisory poses to your organization. Advisories can have their own risk factors:
 
-| Icon                                                            | Risk factor                                                                                                                                                 |
-|------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Icon                                                             | Risk factor                                                                                                                                                |
+| ---------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ![Exploitable icon](/img/platform/security/exploitable.png)      | **Exploitable** advisories have known exploits in the wild. Attackers know how to breach a system using this defect and have already shown it can be done. |
-| ![Remote execution icon](/img/platform/security/remote-exec.png) | **Remote execution** advisories are known to present remote code execution over the network. They let an attacker run malicious code on a target system.          |
+| ![Remote execution icon](/img/platform/security/remote-exec.png) | **Remote execution** advisories are known to present remote code execution over the network. They let an attacker run malicious code on a target system.   |
 
 Mondoo also flags an advisory if the _assets_ that contain the advisory present their own risk factors:
 
 | Icon                                          | Risk factor                                                                              |
-|-----------------------------------------------|------------------------------------------------------------------------------------------|
+| --------------------------------------------- | ---------------------------------------------------------------------------------------- |
 | ![Keys icon](/img/platform/security/keys.png) | **Accessible keys** indicates that key or credential information is exposed.             |
 | ![EOL icon](/img/platform/security/eol.png)   | **End-of-life (EOL)** indicates an operating system version that is no longer supported. |
 

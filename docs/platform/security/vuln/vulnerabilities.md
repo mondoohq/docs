@@ -54,15 +54,15 @@ At the top of a CVE's detail page (accessed as described above) you find general
 
 Risk factors are attributes that can elevate the risk that a CVE poses to your organization. CVEs can have their own risk factors:
 
-| Icon                                                            | Risk factor                                                                                                                                                 |
-|------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Icon                                                             | Risk factor                                                                                                                                                 |
+| ---------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ![Exploitable icon](/img/platform/security/exploitable.png)      | **Exploitable** CVEs have known exploits in the wild. Attackers know how to breach a system using this vulnerability and have already shown it can be done. |
 | ![Remote execution icon](/img/platform/security/remote-exec.png) | **Remote execution** CVEs are known to present remote code execution over the network. They let an attacker run malicious code on a target system.          |
 
 Mondoo also flags a CVE if the _assets_ that contain the CVE present their own risk factors:
 
 | Icon                                          | Risk factor                                                                              |
-|-----------------------------------------------|------------------------------------------------------------------------------------------|
+| --------------------------------------------- | ---------------------------------------------------------------------------------------- |
 | ![Keys icon](/img/platform/security/keys.png) | **Accessible keys** indicates that key or credential information is exposed.             |
 | ![EOL icon](/img/platform/security/eol.png)   | **End-of-life (EOL)** indicates an operating system version that is no longer supported. |
 

@@ -33,5 +33,5 @@ Amazon ECS container
 | region            | string           | Region where the ECS Container is located                     |
 | command           | &#91;&#93;string | Command used to start the container                           |
 | taskArn           | string           | ARN for the task used to create the container                 |
-| runtimeId         | string           | Runtime id for the container                                  |
+| runtimeId         | string           | Runtime ID for the container                                  |
 | containerName     | string           | Name of the ECS container                                     |

@@ -15,7 +15,7 @@ displayed_sidebar: MQL
 
 | ID       | TYPE                              | DESCRIPTION                            |
 | -------- | --------------------------------- | -------------------------------------- |
-| platform | string                            | Platform for the ec2 instance          |
-| tags     | map[string]string                 | Tags associated with the ec2 instance  |
-| image    | [aws.ec2.image](aws.ec2.image.md) | Image associated with the ec2 instance |
-| region   | string                            | Region where the ec2 instance is found |
+| platform | string                            | Platform for the EC2 instance          |
+| tags     | map[string]string                 | Tags associated with the EC2 instance  |
+| image    | [aws.ec2.image](aws.ec2.image.md) | Image associated with the EC2 instance |
+| region   | string                            | Region where the EC2 instance is found |

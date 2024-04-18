@@ -24,7 +24,7 @@ Use the `aws.ec2` resource to assess the configuration of AWS EC2 instances.
 | ---------------------- | --------------------------------------------------------------- | ------------------------------------------------------------------------------- |
 | securityGroups         | &#91;&#93;[aws.ec2.securitygroup](aws.ec2.securitygroup.md)     | List of security groups available to the account                                |
 | instances              | &#91;&#93;[aws.ec2.instance](aws.ec2.instance.md)               | List of instances across the AWS account (all regions)                          |
-| ebsEncryptionByDefault | map[string]bool                                                 | map[region]boolean used to denote if ebs encryption is on by default per region |
+| ebsEncryptionByDefault | map[string]bool                                                 | map[region]boolean used to denote if EBS encryption is on by default per region |
 | volumes                | &#91;&#93;[aws.ec2.volume](aws.ec2.volume.md)                   | List of volumes across the AWS account                                          |
 | snapshots              | &#91;&#93;[aws.ec2.snapshot](aws.ec2.snapshot.md)               | List of snapshots across the account                                            |
 | internetGateways       | &#91;&#93;[aws.ec2.internetgateway](aws.ec2.internetgateway.md) | List of internet gateways                                                       |

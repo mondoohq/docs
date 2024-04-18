@@ -17,4 +17,4 @@ displayed_sidebar: MQL
 | ------------- | ------ | ---------------------------------- |
 | name          | string | Name of the ECR repository         |
 | scanFrequency | string | Scan frequency of the ECR repo     |
-| region        | string | Region where the ecr repo is found |
+| region        | string | Region where the ECR repo is found |

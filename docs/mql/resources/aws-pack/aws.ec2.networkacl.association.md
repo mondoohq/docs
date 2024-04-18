@@ -15,6 +15,6 @@ displayed_sidebar: MQL
 
 | ID            | TYPE   | DESCRIPTION                        |
 | ------------- | ------ | ---------------------------------- |
-| associationId | string | Id for the association             |
-| networkAclId  | string | Network ACL id for the association |
-| subnetId      | string | Subnet id for the association      |
+| associationId | string | ID for the association             |
+| networkAclId  | string | Network ACL ID for the association |
+| subnetId      | string | Subnet ID for the association      |

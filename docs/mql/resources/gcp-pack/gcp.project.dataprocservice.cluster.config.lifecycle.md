@@ -3,7 +3,7 @@ title: gcp.project.dataprocService.cluster.config.lifecycle
 id: gcp.project.dataprocService.cluster.config.lifecycle
 sidebar_label: gcp.project.dataprocService.cluster.config.lifecycle
 displayed_sidebar: MQL
-description: GCP Dataproc cluster lifecycle config
+description: Google Cloud (GCP) Dataproc cluster lifecycle config
 ---
 
 # gcp.project.dataprocService.cluster.config.lifecycle
@@ -14,7 +14,7 @@ description: GCP Dataproc cluster lifecycle config
 
 **Description**
 
-GCP Dataproc cluster lifecycle config
+Google Cloud (GCP) Dataproc cluster lifecycle config
 
 **Fields**
 

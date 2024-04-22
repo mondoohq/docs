@@ -3,7 +3,7 @@ title: gcp.folder
 id: gcp.folder
 sidebar_label: gcp.folder
 displayed_sidebar: MQL
-description: GCP folder
+description: Google Cloud (GCP) folder
 ---
 
 # gcp.folder
@@ -14,7 +14,7 @@ description: GCP folder
 
 **Description**
 
-GCP folder
+Google Cloud (GCP) folder
 
 **Fields**
 

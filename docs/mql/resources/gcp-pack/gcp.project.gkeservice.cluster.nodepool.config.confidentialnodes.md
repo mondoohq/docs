@@ -3,7 +3,7 @@ title: gcp.project.gkeService.cluster.nodepool.config.confidentialNodes
 id: gcp.project.gkeService.cluster.nodepool.config.confidentialNodes
 sidebar_label: gcp.project.gkeService.cluster.nodepool.config.confidentialNodes
 displayed_sidebar: MQL
-description: GCP GKE node pool confidential nodes configuration
+description: Google Kubernetes Engine (GKE) node pool confidential nodes configuration
 ---
 
 # gcp.project.gkeService.cluster.nodepool.config.confidentialNodes
@@ -14,7 +14,7 @@ description: GCP GKE node pool confidential nodes configuration
 
 **Description**
 
-GCP GKE node pool confidential nodes configuration
+Google Kubernetes Engine (GKE) node pool confidential nodes configuration
 
 **Fields**
 

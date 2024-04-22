@@ -3,7 +3,7 @@ title: gcp.project.gkeService.cluster.nodepool.networkConfig.performanceConfig
 id: gcp.project.gkeService.cluster.nodepool.networkConfig.performanceConfig
 sidebar_label: gcp.project.gkeService.cluster.nodepool.networkConfig.performanceConfig
 displayed_sidebar: MQL
-description: GCP GKE node pool network performance configuration
+description: Google Kubernetes Engine (GKE) node pool network performance configuration
 ---
 
 # gcp.project.gkeService.cluster.nodepool.networkConfig.performanceConfig
@@ -14,7 +14,7 @@ description: GCP GKE node pool network performance configuration
 
 **Description**
 
-GCP GKE node pool network performance configuration
+Google Kubernetes Engine (GKE) node pool network performance configuration
 
 **Fields**
 

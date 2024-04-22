@@ -3,7 +3,7 @@ title: gcp.project.sqlService.instance.settings.passwordValidationPolicy
 id: gcp.project.sqlService.instance.settings.passwordValidationPolicy
 sidebar_label: gcp.project.sqlService.instance.settings.passwordValidationPolicy
 displayed_sidebar: MQL
-description: GCP Cloud SQL instance settings password validation policy
+description: Google Cloud (GCP) SQL instance settings password validation policy
 ---
 
 # gcp.project.sqlService.instance.settings.passwordValidationPolicy
@@ -14,7 +14,7 @@ description: GCP Cloud SQL instance settings password validation policy
 
 **Description**
 
-GCP Cloud SQL instance settings password validation policy
+Google Cloud (GCP) SQL instance settings password validation policy
 
 **Fields**
 

@@ -3,7 +3,7 @@ title: gcp.project.pubsubService.snapshot
 id: gcp.project.pubsubService.snapshot
 sidebar_label: gcp.project.pubsubService.snapshot
 displayed_sidebar: MQL
-description: GCP Pub/Sub snapshot
+description: Google Cloud (GCP) Pub/Sub snapshot
 ---
 
 # gcp.project.pubsubService.snapshot
@@ -14,7 +14,7 @@ description: GCP Pub/Sub snapshot
 
 **Description**
 
-GCP Pub/Sub snapshot
+Google Cloud (GCP) Pub/Sub snapshot
 
 **Fields**
 

@@ -3,7 +3,7 @@ title: gcp.project.dnsService.policy
 id: gcp.project.dnsService.policy
 sidebar_label: gcp.project.dnsService.policy
 displayed_sidebar: MQL
-description: Cloud DNS rules applied to one or more Virtual Private Cloud resources
+description: Google Cloud (GCP) DNS rules applied to one or more Virtual Private Cloud resources
 ---
 
 # gcp.project.dnsService.policy
@@ -14,7 +14,7 @@ description: Cloud DNS rules applied to one or more Virtual Private Cloud resour
 
 **Description**
 
-Cloud DNS rules applied to one or more Virtual Private Cloud resources
+Google Cloud (GCP) DNS rules applied to one or more Virtual Private Cloud resources
 
 **Fields**
 

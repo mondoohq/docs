@@ -3,7 +3,7 @@ title: gcp.project
 id: gcp.project
 sidebar_label: gcp.project
 displayed_sidebar: MQL
-description: Google Cloud Platform project
+description: Google Cloud (GCP) project
 ---
 
 # gcp.project
@@ -14,7 +14,7 @@ description: Google Cloud Platform project
 
 **Description**
 
-Google Cloud Platform project
+Google Cloud (GCP) project
 
 **Fields**
 

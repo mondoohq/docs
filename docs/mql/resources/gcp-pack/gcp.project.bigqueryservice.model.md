@@ -3,7 +3,7 @@ title: gcp.project.bigqueryService.model
 id: gcp.project.bigqueryService.model
 sidebar_label: gcp.project.bigqueryService.model
 displayed_sidebar: MQL
-description: GCP BigQuery ML model
+description: Google Cloud (GCP) BigQuery ML model
 ---
 
 # gcp.project.bigqueryService.model
@@ -14,7 +14,7 @@ description: GCP BigQuery ML model
 
 **Description**
 
-GCP BigQuery ML model
+Google Cloud (GCP) BigQuery ML model
 
 **Fields**
 

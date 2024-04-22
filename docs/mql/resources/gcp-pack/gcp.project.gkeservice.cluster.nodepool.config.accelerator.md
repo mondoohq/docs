@@ -3,7 +3,7 @@ title: gcp.project.gkeService.cluster.nodepool.config.accelerator
 id: gcp.project.gkeService.cluster.nodepool.config.accelerator
 sidebar_label: gcp.project.gkeService.cluster.nodepool.config.accelerator
 displayed_sidebar: MQL
-description: GCP GKE node pool hardware accelerators configuration
+description: Google Kubernetes Engine (GKE) node pool hardware accelerators configuration
 ---
 
 # gcp.project.gkeService.cluster.nodepool.config.accelerator
@@ -14,7 +14,7 @@ description: GCP GKE node pool hardware accelerators configuration
 
 **Description**
 
-GCP GKE node pool hardware accelerators configuration
+Google Kubernetes Engine (GKE) node pool hardware accelerators configuration
 
 **Fields**
 

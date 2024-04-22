@@ -3,7 +3,7 @@ title: gcp.project.gkeService.cluster.nodepool.config.gcfsConfig
 id: gcp.project.gkeService.cluster.nodepool.config.gcfsConfig
 sidebar_label: gcp.project.gkeService.cluster.nodepool.config.gcfsConfig
 displayed_sidebar: MQL
-description: GCP GKE node pool GCFS configuration
+description: Google Kubernetes Engine (GKE) node pool GCFS configuration
 ---
 
 # gcp.project.gkeService.cluster.nodepool.config.gcfsConfig
@@ -14,7 +14,7 @@ description: GCP GKE node pool GCFS configuration
 
 **Description**
 
-GCP GKE node pool GCFS configuration
+Google Kubernetes Engine (GKE) node pool GCFS configuration
 
 **Fields**
 

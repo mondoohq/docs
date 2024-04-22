@@ -3,7 +3,7 @@ title: gcp.project.sqlService
 id: gcp.project.sqlService
 sidebar_label: gcp.project.sqlService
 displayed_sidebar: MQL
-description: GCP Cloud SQL resources
+description: Google Cloud (GCP) SQL resources
 ---
 
 # gcp.project.sqlService
@@ -14,7 +14,7 @@ description: GCP Cloud SQL resources
 
 **Description**
 
-GCP Cloud SQL resources
+Google Cloud (GCP) SQL resources
 
 **Fields**
 

@@ -3,7 +3,7 @@ title: gcp.project.gkeService.cluster.nodepool.config
 id: gcp.project.gkeService.cluster.nodepool.config
 sidebar_label: gcp.project.gkeService.cluster.nodepool.config
 displayed_sidebar: MQL
-description: GCP GKE node pool configuration
+description: Google Kubernetes Engine (GKE) node pool configuration
 ---
 
 # gcp.project.gkeService.cluster.nodepool.config
@@ -14,7 +14,7 @@ description: GCP GKE node pool configuration
 
 **Description**
 
-GCP GKE node pool configuration
+Google Kubernetes Engine (GKE) node pool configuration
 
 **Fields**
 

@@ -3,7 +3,7 @@ title: gcp.project.computeService.serviceaccount
 id: gcp.project.computeService.serviceaccount
 sidebar_label: gcp.project.computeService.serviceaccount
 displayed_sidebar: MQL
-description: GCP Compute service account
+description: Google Cloud (GCP) Compute service account
 ---
 
 # gcp.project.computeService.serviceaccount
@@ -14,7 +14,7 @@ description: GCP Compute service account
 
 **Description**
 
-GCP Compute service account
+Google Cloud (GCP) Compute service account
 
 **Fields**
 

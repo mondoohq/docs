@@ -3,7 +3,7 @@ title: gcp.project.computeService.backendService.backend
 id: gcp.project.computeService.backendService.backend
 sidebar_label: gcp.project.computeService.backendService.backend
 displayed_sidebar: MQL
-description: GCP Compute backend service backend
+description: Google Cloud (GCP) Compute backend service backend
 ---
 
 # gcp.project.computeService.backendService.backend
@@ -14,7 +14,7 @@ description: GCP Compute backend service backend
 
 **Description**
 
-GCP Compute backend service backend
+Google Cloud (GCP) Compute backend service backend
 
 **Fields**
 

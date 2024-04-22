@@ -3,7 +3,7 @@ title: gcp.project.gkeService.cluster.nodepool.config.sandboxConfig
 id: gcp.project.gkeService.cluster.nodepool.config.sandboxConfig
 sidebar_label: gcp.project.gkeService.cluster.nodepool.config.sandboxConfig
 displayed_sidebar: MQL
-description: GCP GKE node pool sandbox configuration
+description: Google Kubernetes Engine (GKE) node pool sandbox configuration
 ---
 
 # gcp.project.gkeService.cluster.nodepool.config.sandboxConfig
@@ -14,7 +14,7 @@ description: GCP GKE node pool sandbox configuration
 
 **Description**
 
-GCP GKE node pool sandbox configuration
+Google Kubernetes Engine (GKE) node pool sandbox configuration
 
 **Fields**
 

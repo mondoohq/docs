@@ -3,7 +3,7 @@ title: gcp.project.gkeService.cluster
 id: gcp.project.gkeService.cluster
 sidebar_label: gcp.project.gkeService.cluster
 displayed_sidebar: MQL
-description: GCP GKE cluster
+description: Google Kubernetes Engine (GKE) cluster
 ---
 
 # gcp.project.gkeService.cluster
@@ -14,7 +14,7 @@ description: GCP GKE cluster
 
 **Description**
 
-GCP GKE cluster
+Google Kubernetes Engine (GKE) cluster
 
 **Fields**
 

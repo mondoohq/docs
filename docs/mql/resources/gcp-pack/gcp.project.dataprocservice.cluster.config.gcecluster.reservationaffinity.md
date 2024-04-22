@@ -3,7 +3,7 @@ title: gcp.project.dataprocService.cluster.config.gceCluster.reservationAffinity
 id: gcp.project.dataprocService.cluster.config.gceCluster.reservationAffinity
 sidebar_label: gcp.project.dataprocService.cluster.config.gceCluster.reservationAffinity
 displayed_sidebar: MQL
-description: GCP Dataproc cluster GCE cluster reservation affinity config
+description: Google Cloud (GCP) Dataproc cluster GCE cluster reservation affinity config
 ---
 
 # gcp.project.dataprocService.cluster.config.gceCluster.reservationAffinity
@@ -14,7 +14,7 @@ description: GCP Dataproc cluster GCE cluster reservation affinity config
 
 **Description**
 
-GCP Dataproc cluster GCE cluster reservation affinity config
+Google Cloud (GCP) Dataproc cluster GCE cluster reservation affinity config
 
 **Fields**
 

@@ -3,7 +3,7 @@ title: gcp.project.iamService
 id: gcp.project.iamService
 sidebar_label: gcp.project.iamService
 displayed_sidebar: MQL
-description: GCP IAM resources
+description: Google Cloud (GCP) IAM resources
 ---
 
 # gcp.project.iamService
@@ -14,7 +14,7 @@ description: GCP IAM resources
 
 **Description**
 
-GCP IAM resources
+Google Cloud (GCP) IAM resources
 
 **Fields**
 

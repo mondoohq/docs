@@ -3,7 +3,7 @@ title: gcp.projects
 id: gcp.projects
 sidebar_label: gcp.projects
 displayed_sidebar: MQL
-description: GCP projects
+description: Google Cloud (GCP) projects
 ---
 
 # gcp.projects
@@ -14,7 +14,7 @@ description: GCP projects
 
 **Description**
 
-GCP projects
+Google Cloud (GCP) projects
 
 **List**
 

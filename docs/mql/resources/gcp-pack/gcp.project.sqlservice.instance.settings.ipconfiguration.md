@@ -3,7 +3,7 @@ title: gcp.project.sqlService.instance.settings.ipConfiguration
 id: gcp.project.sqlService.instance.settings.ipConfiguration
 sidebar_label: gcp.project.sqlService.instance.settings.ipConfiguration
 displayed_sidebar: MQL
-description: GCP Cloud SQL instance settings IP configuration
+description: Google Cloud (GCP) SQL instance settings IP configuration
 ---
 
 # gcp.project.sqlService.instance.settings.ipConfiguration
@@ -14,7 +14,7 @@ description: GCP Cloud SQL instance settings IP configuration
 
 **Description**
 
-GCP Cloud SQL instance settings IP configuration
+Google Cloud (GCP) SQL instance settings IP configuration
 
 **Fields**
 

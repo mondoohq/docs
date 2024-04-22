@@ -3,7 +3,7 @@ title: gcp.project.kmsService.keyring
 id: gcp.project.kmsService.keyring
 sidebar_label: gcp.project.kmsService.keyring
 displayed_sidebar: MQL
-description: GCP KMS keyring
+description: Google Cloud (GCP) KMS keyring
 ---
 
 # gcp.project.kmsService.keyring
@@ -14,7 +14,7 @@ description: GCP KMS keyring
 
 **Description**
 
-GCP KMS keyring
+Google Cloud (GCP) KMS keyring
 
 **Fields**
 

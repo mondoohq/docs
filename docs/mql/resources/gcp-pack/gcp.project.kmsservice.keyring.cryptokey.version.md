@@ -3,7 +3,7 @@ title: gcp.project.kmsService.keyring.cryptokey.version
 id: gcp.project.kmsService.keyring.cryptokey.version
 sidebar_label: gcp.project.kmsService.keyring.cryptokey.version
 displayed_sidebar: MQL
-description: GCP KMS crypto key version
+description: Google Cloud (GCP) KMS crypto key version
 ---
 
 # gcp.project.kmsService.keyring.cryptokey.version
@@ -14,7 +14,7 @@ description: GCP KMS crypto key version
 
 **Description**
 
-GCP KMS crypto key version
+Google Cloud (GCP) KMS crypto key version
 
 **Fields**
 

@@ -3,7 +3,7 @@ title: gcp.project.dataprocService.cluster.config.instance
 id: gcp.project.dataprocService.cluster.config.instance
 sidebar_label: gcp.project.dataprocService.cluster.config.instance
 displayed_sidebar: MQL
-description: GCP Dataproc cluster instance config
+description: Google Cloud (GCP) Dataproc cluster instance config
 ---
 
 # gcp.project.dataprocService.cluster.config.instance
@@ -14,7 +14,7 @@ description: GCP Dataproc cluster instance config
 
 **Description**
 
-GCP Dataproc cluster instance config
+Google Cloud (GCP) Dataproc cluster instance config
 
 **Fields**
 

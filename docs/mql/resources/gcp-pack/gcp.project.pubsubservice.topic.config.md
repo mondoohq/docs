@@ -3,7 +3,7 @@ title: gcp.project.pubsubService.topic.config
 id: gcp.project.pubsubService.topic.config
 sidebar_label: gcp.project.pubsubService.topic.config
 displayed_sidebar: MQL
-description: GCP Pub/Sub topic configuration
+description: Google Cloud (GCP) Pub/Sub topic configuration
 ---
 
 # gcp.project.pubsubService.topic.config
@@ -14,7 +14,7 @@ description: GCP Pub/Sub topic configuration
 
 **Description**
 
-GCP Pub/Sub topic configuration
+Google Cloud (GCP) Pub/Sub topic configuration
 
 **Fields**
 

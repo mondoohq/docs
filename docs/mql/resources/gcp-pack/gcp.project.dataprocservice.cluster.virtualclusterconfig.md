@@ -3,7 +3,7 @@ title: gcp.project.dataprocService.cluster.virtualClusterConfig
 id: gcp.project.dataprocService.cluster.virtualClusterConfig
 sidebar_label: gcp.project.dataprocService.cluster.virtualClusterConfig
 displayed_sidebar: MQL
-description: GCP Dataproc cluster virtual cluster config
+description: Google Cloud (GCP) Dataproc cluster virtual cluster config
 ---
 
 # gcp.project.dataprocService.cluster.virtualClusterConfig
@@ -14,7 +14,7 @@ description: GCP Dataproc cluster virtual cluster config
 
 **Description**
 
-GCP Dataproc cluster virtual cluster config
+Google Cloud (GCP) Dataproc cluster virtual cluster config
 
 **Fields**
 

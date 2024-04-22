@@ -3,7 +3,7 @@ title: gcp.project.computeService.zone
 id: gcp.project.computeService.zone
 sidebar_label: gcp.project.computeService.zone
 displayed_sidebar: MQL
-description: GCP Compute zone
+description: Google Cloud (GCP) Compute zone
 ---
 
 # gcp.project.computeService.zone
@@ -14,7 +14,7 @@ description: GCP Compute zone
 
 **Description**
 
-GCP Compute zone
+Google Cloud (GCP) Compute zone
 
 **Fields**
 

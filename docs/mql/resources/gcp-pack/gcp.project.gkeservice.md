@@ -3,7 +3,7 @@ title: gcp.project.gkeService
 id: gcp.project.gkeService
 sidebar_label: gcp.project.gkeService
 displayed_sidebar: MQL
-description: GCP GKE
+description: Google Kubernetes Engine (GKE)
 ---
 
 # gcp.project.gkeService
@@ -14,7 +14,7 @@ description: GCP GKE
 
 **Description**
 
-GCP GKE
+Google Kubernetes Engine (GKE)
 
 **Fields**
 

@@ -3,7 +3,7 @@ title: gcp.project.bigqueryService.routine
 id: gcp.project.bigqueryService.routine
 sidebar_label: gcp.project.bigqueryService.routine
 displayed_sidebar: MQL
-description: GCP BigQuery routine
+description: Google Cloud (GCP) BigQuery routine
 ---
 
 # gcp.project.bigqueryService.routine
@@ -14,7 +14,7 @@ description: GCP BigQuery routine
 
 **Description**
 
-GCP BigQuery routine
+Google Cloud (GCP) BigQuery routine
 
 **Fields**
 

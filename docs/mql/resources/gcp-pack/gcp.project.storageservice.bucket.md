@@ -3,7 +3,7 @@ title: gcp.project.storageService.bucket
 id: gcp.project.storageService.bucket
 sidebar_label: gcp.project.storageService.bucket
 displayed_sidebar: MQL
-description: GCP Cloud Storage bucket
+description: Google Cloud (GCP) Storage bucket
 ---
 
 # gcp.project.storageService.bucket
@@ -14,7 +14,7 @@ description: GCP Cloud Storage bucket
 
 **Description**
 
-GCP Cloud Storage bucket
+Google Cloud (GCP) Storage bucket
 
 **Fields**
 

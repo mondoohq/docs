@@ -3,7 +3,7 @@ title: gcp.project.kmsService.keyring.cryptokey
 id: gcp.project.kmsService.keyring.cryptokey
 sidebar_label: gcp.project.kmsService.keyring.cryptokey
 displayed_sidebar: MQL
-description: GCP KMS crypto key
+description: Google Cloud (GCP) KMS crypto key
 ---
 
 # gcp.project.kmsService.keyring.cryptokey
@@ -14,7 +14,7 @@ description: GCP KMS crypto key
 
 **Description**
 
-GCP KMS crypto key
+Google Cloud (GCP) KMS crypto key
 
 **Fields**
 

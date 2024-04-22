@@ -3,7 +3,7 @@ title: gcp.project.bigqueryService.dataset.accessEntry
 id: gcp.project.bigqueryService.dataset.accessEntry
 sidebar_label: gcp.project.bigqueryService.dataset.accessEntry
 displayed_sidebar: MQL
-description: GCP BigQuery dataset access entry
+description: Google Cloud (GCP) BigQuery dataset access entry
 ---
 
 # gcp.project.bigqueryService.dataset.accessEntry
@@ -14,7 +14,7 @@ description: GCP BigQuery dataset access entry
 
 **Description**
 
-GCP BigQuery dataset access entry
+Google Cloud (GCP) BigQuery dataset access entry
 
 **Fields**
 

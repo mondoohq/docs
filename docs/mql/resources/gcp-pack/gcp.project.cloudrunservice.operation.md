@@ -3,7 +3,7 @@ title: gcp.project.cloudRunService.operation
 id: gcp.project.cloudRunService.operation
 sidebar_label: gcp.project.cloudRunService.operation
 displayed_sidebar: MQL
-description: GCP Cloud Run operation
+description: Google Cloud (GCP) Run operation
 ---
 
 # gcp.project.cloudRunService.operation
@@ -14,7 +14,7 @@ description: GCP Cloud Run operation
 
 **Description**
 
-GCP Cloud Run operation
+Google Cloud (GCP) Run operation
 
 **Fields**
 

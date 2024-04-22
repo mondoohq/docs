@@ -3,7 +3,7 @@ title: gcp.project.computeService.router
 id: gcp.project.computeService.router
 sidebar_label: gcp.project.computeService.router
 displayed_sidebar: MQL
-description: GCP Compute cloud router
+description: Google Cloud (GCP) Compute cloud router
 ---
 
 # gcp.project.computeService.router
@@ -14,7 +14,7 @@ description: GCP Compute cloud router
 
 **Description**
 
-GCP Compute cloud router
+Google Cloud (GCP) Compute cloud router
 
 **Fields**
 

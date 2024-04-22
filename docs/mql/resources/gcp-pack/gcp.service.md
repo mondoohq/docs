@@ -3,7 +3,7 @@ title: gcp.service
 id: gcp.service
 sidebar_label: gcp.service
 displayed_sidebar: MQL
-description: GCP service
+description: Google Cloud (GCP) service
 ---
 
 # gcp.service
@@ -14,7 +14,7 @@ description: GCP service
 
 **Description**
 
-GCP service
+Google Cloud (GCP) service
 
 **Fields**
 

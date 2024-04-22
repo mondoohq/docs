@@ -3,7 +3,7 @@ title: gcp.project.cloudRunService
 id: gcp.project.cloudRunService
 sidebar_label: gcp.project.cloudRunService
 displayed_sidebar: MQL
-description: GCP Cloud Run resources
+description: Google Cloud (GCP) Run resources
 ---
 
 # gcp.project.cloudRunService
@@ -14,7 +14,7 @@ description: GCP Cloud Run resources
 
 **Description**
 
-GCP Cloud Run resources
+Google Cloud (GCP) Run resources
 
 **Fields**
 

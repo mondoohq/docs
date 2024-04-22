@@ -3,7 +3,7 @@ title: gcp.project.sqlService.instance.settings.backupconfiguration
 id: gcp.project.sqlService.instance.settings.backupconfiguration
 sidebar_label: gcp.project.sqlService.instance.settings.backupconfiguration
 displayed_sidebar: MQL
-description: GCP Cloud SQL instance settings backup configuration
+description: Google Cloud (GCP) SQL instance settings backup configuration
 ---
 
 # gcp.project.sqlService.instance.settings.backupconfiguration
@@ -14,7 +14,7 @@ description: GCP Cloud SQL instance settings backup configuration
 
 **Description**
 
-GCP Cloud SQL instance settings backup configuration
+Google Cloud (GCP) SQL instance settings backup configuration
 
 **Fields**
 

@@ -3,7 +3,7 @@ title: gcp.project.dnsService.recordset
 id: gcp.project.dnsService.recordset
 sidebar_label: gcp.project.dnsService.recordset
 displayed_sidebar: MQL
-description: Cloud DNS record set
+description: Google Cloud (GCP) DNS record set
 ---
 
 # gcp.project.dnsService.recordset
@@ -14,7 +14,7 @@ description: Cloud DNS record set
 
 **Description**
 
-Cloud DNS record set
+Google Cloud (GCP) DNS record set
 
 **Fields**
 

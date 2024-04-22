@@ -3,7 +3,7 @@ title: gcp.project.gkeService.cluster.ipAllocationPolicy
 id: gcp.project.gkeService.cluster.ipAllocationPolicy
 sidebar_label: gcp.project.gkeService.cluster.ipAllocationPolicy
 displayed_sidebar: MQL
-description: GKE cluster IP allocation policy
+description: Google Kubernetes Engine (GKE) cluster IP allocation policy
 ---
 
 # gcp.project.gkeService.cluster.ipAllocationPolicy
@@ -14,7 +14,7 @@ description: GKE cluster IP allocation policy
 
 **Description**
 
-GKE cluster IP allocation policy
+Google Kubernetes Engine (GKE) cluster IP allocation policy
 
 **Fields**
 

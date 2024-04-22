@@ -3,7 +3,7 @@ title: gcp.project.dnsService.managedzone
 id: gcp.project.dnsService.managedzone
 sidebar_label: gcp.project.dnsService.managedzone
 displayed_sidebar: MQL
-description: Cloud DNS managed zone (a resource that represents a DNS zone hosted by the Cloud DNS service)
+description: Google Cloud (GCP) DNS managed zone (a resource that represents a DNS zone hosted by the Cloud DNS service)
 ---
 
 # gcp.project.dnsService.managedzone
@@ -14,7 +14,7 @@ description: Cloud DNS managed zone (a resource that represents a DNS zone hoste
 
 **Description**
 
-Cloud DNS managed zone (a resource that represents a DNS zone hosted by the Cloud DNS service)
+Google Cloud (GCP) DNS managed zone (a resource that represents a DNS zone hosted by the Cloud DNS service)
 
 **Fields**
 

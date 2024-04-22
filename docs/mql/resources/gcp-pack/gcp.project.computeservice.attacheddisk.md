@@ -3,7 +3,7 @@ title: gcp.project.computeService.attachedDisk
 id: gcp.project.computeService.attachedDisk
 sidebar_label: gcp.project.computeService.attachedDisk
 displayed_sidebar: MQL
-description: GCP Compute attached disk
+description: Google Cloud (GCP) Compute attached disk
 ---
 
 # gcp.project.computeService.attachedDisk
@@ -14,7 +14,7 @@ description: GCP Compute attached disk
 
 **Description**
 
-GCP Compute attached disk
+Google Cloud (GCP) Compute attached disk
 
 **Fields**
 

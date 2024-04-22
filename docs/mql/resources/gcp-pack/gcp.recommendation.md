@@ -3,7 +3,7 @@ title: gcp.recommendation
 id: gcp.recommendation
 sidebar_label: gcp.recommendation
 displayed_sidebar: MQL
-description: GCP recommendation and suggested action
+description: Google Cloud (GCP) recommendation and suggested action
 ---
 
 # gcp.recommendation
@@ -14,7 +14,7 @@ description: GCP recommendation and suggested action
 
 **Description**
 
-GCP recommendation and suggested action
+Google Cloud (GCP) recommendation and suggested action
 
 **Fields**
 

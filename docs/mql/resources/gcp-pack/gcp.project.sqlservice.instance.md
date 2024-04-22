@@ -3,7 +3,7 @@ title: gcp.project.sqlService.instance
 id: gcp.project.sqlService.instance
 sidebar_label: gcp.project.sqlService.instance
 displayed_sidebar: MQL
-description: GCP Cloud SQL instance
+description: Google Cloud (GCP) SQL instance
 ---
 
 # gcp.project.sqlService.instance
@@ -14,7 +14,7 @@ description: GCP Cloud SQL instance
 
 **Description**
 
-GCP Cloud SQL instance
+Google Cloud (GCP) SQL instance
 
 **Fields**
 

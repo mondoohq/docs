@@ -3,7 +3,7 @@ title: gcp.project.computeService.subnetwork.logConfig
 id: gcp.project.computeService.subnetwork.logConfig
 sidebar_label: gcp.project.computeService.subnetwork.logConfig
 displayed_sidebar: MQL
-description: GCP Compute VPC network partitioning log configuration
+description: Google Cloud (GCP) Compute VPC network partitioning log configuration
 ---
 
 # gcp.project.computeService.subnetwork.logConfig
@@ -14,7 +14,7 @@ description: GCP Compute VPC network partitioning log configuration
 
 **Description**
 
-GCP Compute VPC network partitioning log configuration
+Google Cloud (GCP) Compute VPC network partitioning log configuration
 
 **Fields**
 

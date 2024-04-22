@@ -3,7 +3,7 @@ title: gcp.project.iamService.serviceAccount.key
 id: gcp.project.iamService.serviceAccount.key
 sidebar_label: gcp.project.iamService.serviceAccount.key
 displayed_sidebar: MQL
-description: GCP service account keys
+description: Google Cloud (GCP) service account keys
 ---
 
 # gcp.project.iamService.serviceAccount.key
@@ -14,7 +14,7 @@ description: GCP service account keys
 
 **Description**
 
-GCP service account keys
+Google Cloud (GCP) service account keys
 
 **Fields**
 

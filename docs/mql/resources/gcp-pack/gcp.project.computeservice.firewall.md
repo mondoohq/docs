@@ -3,7 +3,7 @@ title: gcp.project.computeService.firewall
 id: gcp.project.computeService.firewall
 sidebar_label: gcp.project.computeService.firewall
 displayed_sidebar: MQL
-description: GCP Compute firewall
+description: Google Cloud (GCP) Compute firewall
 ---
 
 # gcp.project.computeService.firewall
@@ -14,7 +14,7 @@ description: GCP Compute firewall
 
 **Description**
 
-GCP Compute firewall
+Google Cloud (GCP) Compute firewall
 
 **Fields**
 

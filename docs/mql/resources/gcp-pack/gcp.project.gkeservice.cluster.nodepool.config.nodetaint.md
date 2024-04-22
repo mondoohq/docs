@@ -3,7 +3,7 @@ title: gcp.project.gkeService.cluster.nodepool.config.nodeTaint
 id: gcp.project.gkeService.cluster.nodepool.config.nodeTaint
 sidebar_label: gcp.project.gkeService.cluster.nodepool.config.nodeTaint
 displayed_sidebar: MQL
-description: GCP GKE Kubernetes node taint
+description: Google Kubernetes Engine (GKE) Kubernetes node taint
 ---
 
 # gcp.project.gkeService.cluster.nodepool.config.nodeTaint
@@ -14,7 +14,7 @@ description: GCP GKE Kubernetes node taint
 
 **Description**
 
-GCP GKE Kubernetes node taint
+Google Kubernetes Engine (GKE) Kubernetes node taint
 
 **Fields**
 

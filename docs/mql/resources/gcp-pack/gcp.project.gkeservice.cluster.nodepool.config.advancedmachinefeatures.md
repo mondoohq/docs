@@ -3,7 +3,7 @@ title: gcp.project.gkeService.cluster.nodepool.config.advancedMachineFeatures
 id: gcp.project.gkeService.cluster.nodepool.config.advancedMachineFeatures
 sidebar_label: gcp.project.gkeService.cluster.nodepool.config.advancedMachineFeatures
 displayed_sidebar: MQL
-description: GCP GKE node pool advanced machine features configuration
+description: Google Kubernetes Engine (GKE) node pool advanced machine features configuration
 ---
 
 # gcp.project.gkeService.cluster.nodepool.config.advancedMachineFeatures
@@ -14,7 +14,7 @@ description: GCP GKE node pool advanced machine features configuration
 
 **Description**
 
-GCP GKE node pool advanced machine features configuration
+Google Kubernetes Engine (GKE) node pool advanced machine features configuration
 
 **Fields**
 

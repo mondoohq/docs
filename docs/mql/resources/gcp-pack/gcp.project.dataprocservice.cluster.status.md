@@ -3,7 +3,7 @@ title: gcp.project.dataprocService.cluster.status
 id: gcp.project.dataprocService.cluster.status
 sidebar_label: gcp.project.dataprocService.cluster.status
 displayed_sidebar: MQL
-description: GCP Dataproc cluster status
+description: Google Cloud (GCP) Dataproc cluster status
 ---
 
 # gcp.project.dataprocService.cluster.status
@@ -14,7 +14,7 @@ description: GCP Dataproc cluster status
 
 **Description**
 
-GCP Dataproc cluster status
+Google Cloud (GCP) Dataproc cluster status
 
 **Fields**
 

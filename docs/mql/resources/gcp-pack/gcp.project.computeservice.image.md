@@ -3,7 +3,7 @@ title: gcp.project.computeService.image
 id: gcp.project.computeService.image
 sidebar_label: gcp.project.computeService.image
 displayed_sidebar: MQL
-description: GCP Compute
+description: Google Cloud (GCP) Compute
 ---
 
 # gcp.project.computeService.image
@@ -14,7 +14,7 @@ description: GCP Compute
 
 **Description**
 
-GCP Compute
+Google Cloud (GCP) Compute
 
 **Fields**
 

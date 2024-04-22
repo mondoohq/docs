@@ -3,7 +3,7 @@ title: gcp.project.cloudRunService.condition
 id: gcp.project.cloudRunService.condition
 sidebar_label: gcp.project.cloudRunService.condition
 displayed_sidebar: MQL
-description: GCP Cloud Run condition
+description: Google Cloud (GCP) Run condition
 ---
 
 # gcp.project.cloudRunService.condition
@@ -14,7 +14,7 @@ description: GCP Cloud Run condition
 
 **Description**
 
-GCP Cloud Run condition
+Google Cloud (GCP) Run condition
 
 **Fields**
 

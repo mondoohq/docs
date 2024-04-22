@@ -3,7 +3,7 @@ title: gcp.project.apiKey
 id: gcp.project.apiKey
 sidebar_label: gcp.project.apiKey
 displayed_sidebar: MQL
-description: GCP project API key
+description: Google Cloud (GCP) project API key
 ---
 
 # gcp.project.apiKey
@@ -14,7 +14,7 @@ description: GCP project API key
 
 **Description**
 
-GCP project API key
+Google Cloud (GCP) project API key
 
 **Fields**
 

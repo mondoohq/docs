@@ -3,7 +3,7 @@ title: gcp.project.gkeService.cluster.nodepool.config.accelerator.gpuSharingConf
 id: gcp.project.gkeService.cluster.nodepool.config.accelerator.gpuSharingConfig
 sidebar_label: gcp.project.gkeService.cluster.nodepool.config.accelerator.gpuSharingConfig
 displayed_sidebar: MQL
-description: GPU sharing configuration
+description: Google Kubernetes Engine (GKE) GPU sharing configuration
 ---
 
 # gcp.project.gkeService.cluster.nodepool.config.accelerator.gpuSharingConfig
@@ -14,7 +14,7 @@ description: GPU sharing configuration
 
 **Description**
 
-GPU sharing configuration
+Google Kubernetes Engine (GKE) GPU sharing configuration
 
 **Fields**
 

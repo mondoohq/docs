@@ -3,7 +3,7 @@ title: gcp.project.computeService
 id: gcp.project.computeService
 sidebar_label: gcp.project.computeService
 displayed_sidebar: MQL
-description: GCP Compute Engine
+description: Google Cloud (GCP) Compute Engine
 ---
 
 # gcp.project.computeService
@@ -14,7 +14,7 @@ description: GCP Compute Engine
 
 **Description**
 
-GCP Compute Engine
+Google Cloud (GCP) Compute Engine
 
 **Fields**
 

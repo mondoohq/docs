@@ -3,7 +3,7 @@ title: gcp.project.computeService.backendService.cdnPolicy
 id: gcp.project.computeService.backendService.cdnPolicy
 sidebar_label: gcp.project.computeService.backendService.cdnPolicy
 displayed_sidebar: MQL
-description: GCP Compute backend service CDN policy
+description: Google Cloud (GCP) Compute backend service CDN policy
 ---
 
 # gcp.project.computeService.backendService.cdnPolicy
@@ -14,7 +14,7 @@ description: GCP Compute backend service CDN policy
 
 **Description**
 
-GCP Compute backend service CDN policy
+Google Cloud (GCP) Compute backend service CDN policy
 
 **Fields**
 

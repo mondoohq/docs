@@ -3,7 +3,7 @@ title: gcp.project.kmsService.keyring.cryptokey.version.externalProtectionLevelO
 id: gcp.project.kmsService.keyring.cryptokey.version.externalProtectionLevelOptions
 sidebar_label: gcp.project.kmsService.keyring.cryptokey.version.externalProtectionLevelOptions
 displayed_sidebar: MQL
-description: GCP KMS crypto key version external protection level options
+description: Google Cloud (GCP) KMS crypto key version external protection level options
 ---
 
 # gcp.project.kmsService.keyring.cryptokey.version.externalProtectionLevelOptions
@@ -14,7 +14,7 @@ description: GCP KMS crypto key version external protection level options
 
 **Description**
 
-GCP KMS crypto key version external protection level options
+Google Cloud (GCP) KMS crypto key version external protection level options
 
 **Fields**
 

@@ -3,7 +3,7 @@ title: gcp.project.apiKey.restrictions
 id: gcp.project.apiKey.restrictions
 sidebar_label: gcp.project.apiKey.restrictions
 displayed_sidebar: MQL
-description: GCP project API key restrictions
+description: Google Cloud (GCP) project API key restrictions
 ---
 
 # gcp.project.apiKey.restrictions
@@ -14,7 +14,7 @@ description: GCP project API key restrictions
 
 **Description**
 
-GCP project API key restrictions
+Google Cloud (GCP) project API key restrictions
 
 **Fields**
 

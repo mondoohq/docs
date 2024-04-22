@@ -3,7 +3,7 @@ title: gcp.accessApprovalSettings
 id: gcp.accessApprovalSettings
 sidebar_label: gcp.accessApprovalSettings
 displayed_sidebar: MQL
-description: GCP access approval settings
+description: Google Cloud (GCP) access approval settings
 ---
 
 # gcp.accessApprovalSettings
@@ -14,7 +14,7 @@ description: GCP access approval settings
 
 **Description**
 
-GCP access approval settings
+Google Cloud (GCP) access approval settings
 
 **Fields**
 

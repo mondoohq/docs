@@ -3,7 +3,7 @@ title: gcp.project.cloudRunService.service.revisionTemplate
 id: gcp.project.cloudRunService.service.revisionTemplate
 sidebar_label: gcp.project.cloudRunService.service.revisionTemplate
 displayed_sidebar: MQL
-description: GCP Cloud Run service revision template
+description: Google Cloud (GCP) Run service revision template
 ---
 
 # gcp.project.cloudRunService.service.revisionTemplate
@@ -14,7 +14,7 @@ description: GCP Cloud Run service revision template
 
 **Description**
 
-GCP Cloud Run service revision template
+Google Cloud (GCP) Run service revision template
 
 **Fields**
 

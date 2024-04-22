@@ -3,7 +3,7 @@ title: gcp.project.dataprocService
 id: gcp.project.dataprocService
 sidebar_label: gcp.project.dataprocService
 displayed_sidebar: MQL
-description: GCP Dataproc resources
+description: Google Cloud (GCP) Dataproc resources
 ---
 
 # gcp.project.dataprocService
@@ -14,7 +14,7 @@ description: GCP Dataproc resources
 
 **Description**
 
-GCP Dataproc resources
+Google Cloud (GCP) Dataproc resources
 
 **Fields**
 

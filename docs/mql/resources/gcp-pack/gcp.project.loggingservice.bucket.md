@@ -3,7 +3,7 @@ title: gcp.project.loggingservice.bucket
 id: gcp.project.loggingservice.bucket
 sidebar_label: gcp.project.loggingservice.bucket
 displayed_sidebar: MQL
-description: GCP Logging bucket
+description: Google Cloud (GCP) Logging bucket
 ---
 
 # gcp.project.loggingservice.bucket
@@ -14,7 +14,7 @@ description: GCP Logging bucket
 
 **Description**
 
-GCP Logging bucket
+Google Cloud (GCP) Logging bucket
 
 **Fields**
 

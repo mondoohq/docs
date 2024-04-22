@@ -3,7 +3,7 @@ title: gcp.project.computeService.disk
 id: gcp.project.computeService.disk
 sidebar_label: gcp.project.computeService.disk
 displayed_sidebar: MQL
-description: GCP Compute persistent disk
+description: Google Cloud (GCP) Compute persistent disk
 ---
 
 # gcp.project.computeService.disk
@@ -14,7 +14,7 @@ description: GCP Compute persistent disk
 
 **Description**
 
-GCP Compute persistent disk
+Google Cloud (GCP) Compute persistent disk
 
 **Fields**
 

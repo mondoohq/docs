@@ -3,7 +3,7 @@ title: gcp.project.gkeService.cluster.nodepool.config.linuxNodeConfig
 id: gcp.project.gkeService.cluster.nodepool.config.linuxNodeConfig
 sidebar_label: gcp.project.gkeService.cluster.nodepool.config.linuxNodeConfig
 displayed_sidebar: MQL
-description: GCP GKE node pool parameters that can be configured on Linux nodes
+description: Google Kubernetes Engine (GKE) node pool parameters that can be configured on Linux nodes
 ---
 
 # gcp.project.gkeService.cluster.nodepool.config.linuxNodeConfig
@@ -14,7 +14,7 @@ description: GCP GKE node pool parameters that can be configured on Linux nodes
 
 **Description**
 
-GCP GKE node pool parameters that can be configured on Linux nodes
+Google Kubernetes Engine (GKE) node pool parameters that can be configured on Linux nodes
 
 **Fields**
 

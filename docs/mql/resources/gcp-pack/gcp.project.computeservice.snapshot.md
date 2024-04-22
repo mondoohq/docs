@@ -3,7 +3,7 @@ title: gcp.project.computeService.snapshot
 id: gcp.project.computeService.snapshot
 sidebar_label: gcp.project.computeService.snapshot
 displayed_sidebar: MQL
-description: GCP Compute persistent disk snapshot
+description: Google Cloud (GCP) Compute persistent disk snapshot
 ---
 
 # gcp.project.computeService.snapshot
@@ -14,7 +14,7 @@ description: GCP Compute persistent disk snapshot
 
 **Description**
 
-GCP Compute persistent disk snapshot
+Google Cloud (GCP) Compute persistent disk snapshot
 
 **Fields**
 

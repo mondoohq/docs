@@ -3,7 +3,7 @@ title: gcp.project.dataprocService.cluster
 id: gcp.project.dataprocService.cluster
 sidebar_label: gcp.project.dataprocService.cluster
 displayed_sidebar: MQL
-description: GCP Dataproc cluster
+description: Google Cloud (GCP) Dataproc cluster
 ---
 
 # gcp.project.dataprocService.cluster
@@ -14,7 +14,7 @@ description: GCP Dataproc cluster
 
 **Description**
 
-GCP Dataproc cluster
+Google Cloud (GCP) Dataproc cluster
 
 **Fields**
 

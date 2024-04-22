@@ -3,7 +3,7 @@ title: gcp.project.gkeService.cluster.addonsConfig
 id: gcp.project.gkeService.cluster.addonsConfig
 sidebar_label: gcp.project.gkeService.cluster.addonsConfig
 displayed_sidebar: MQL
-description: GKE cluster addons config
+description: Google Kubernetes Engine (GKE) cluster addons config
 ---
 
 # gcp.project.gkeService.cluster.addonsConfig
@@ -14,7 +14,7 @@ description: GKE cluster addons config
 
 **Description**
 
-GKE cluster addons config
+Google Kubernetes Engine (GKE) cluster addons config
 
 **Fields**
 

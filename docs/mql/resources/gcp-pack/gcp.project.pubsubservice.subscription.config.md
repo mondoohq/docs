@@ -3,7 +3,7 @@ title: gcp.project.pubsubService.subscription.config
 id: gcp.project.pubsubService.subscription.config
 sidebar_label: gcp.project.pubsubService.subscription.config
 displayed_sidebar: MQL
-description: GCP Pub/Sub subscription configuration
+description: Google Cloud (GCP) Pub/Sub subscription configuration
 ---
 
 # gcp.project.pubsubService.subscription.config
@@ -14,7 +14,7 @@ description: GCP Pub/Sub subscription configuration
 
 **Description**
 
-GCP Pub/Sub subscription configuration
+Google Cloud (GCP) Pub/Sub subscription configuration
 
 **Fields**
 

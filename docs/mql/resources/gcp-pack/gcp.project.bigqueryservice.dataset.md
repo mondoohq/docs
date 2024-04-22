@@ -3,7 +3,7 @@ title: gcp.project.bigqueryService.dataset
 id: gcp.project.bigqueryService.dataset
 sidebar_label: gcp.project.bigqueryService.dataset
 displayed_sidebar: MQL
-description: GCP BigQuery dataset
+description: Google Cloud (GCP) BigQuery dataset
 ---
 
 # gcp.project.bigqueryService.dataset
@@ -14,7 +14,7 @@ description: GCP BigQuery dataset
 
 **Description**
 
-GCP BigQuery dataset
+Google Cloud (GCP) BigQuery dataset
 
 **Fields**
 

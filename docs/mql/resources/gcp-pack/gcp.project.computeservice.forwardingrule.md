@@ -3,7 +3,7 @@ title: gcp.project.computeService.forwardingRule
 id: gcp.project.computeService.forwardingRule
 sidebar_label: gcp.project.computeService.forwardingRule
 displayed_sidebar: MQL
-description: GCP Compute forwarding rules
+description: Google Cloud (GCP) Compute forwarding rules
 ---
 
 # gcp.project.computeService.forwardingRule
@@ -14,7 +14,7 @@ description: GCP Compute forwarding rules
 
 **Description**
 
-GCP Compute forwarding rules
+Google Cloud (GCP) Compute forwarding rules
 
 **Fields**
 

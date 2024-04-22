@@ -3,7 +3,7 @@ title: gcp.project.loggingservice.bucket.indexConfig
 id: gcp.project.loggingservice.bucket.indexConfig
 sidebar_label: gcp.project.loggingservice.bucket.indexConfig
 displayed_sidebar: MQL
-description: GCP Logging bucket index config
+description: Google Cloud (GCP) Logging bucket index config
 ---
 
 # gcp.project.loggingservice.bucket.indexConfig
@@ -14,7 +14,7 @@ description: GCP Logging bucket index config
 
 **Description**
 
-GCP Logging bucket index config
+Google Cloud (GCP) Logging bucket index config
 
 **Fields**
 

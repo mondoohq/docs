@@ -3,7 +3,7 @@ title: gcp.project.dnsService
 id: gcp.project.dnsService
 sidebar_label: gcp.project.dnsService
 displayed_sidebar: MQL
-description: GCP Cloud DNS
+description: Google Cloud (GCP) DNS
 ---
 
 # gcp.project.dnsService
@@ -14,7 +14,7 @@ description: GCP Cloud DNS
 
 **Description**
 
-GCP Cloud DNS
+Google Cloud (GCP) DNS
 
 **Fields**
 

@@ -3,7 +3,7 @@ title: gcp.project.sqlService.instance.settings.denyMaintenancePeriod
 id: gcp.project.sqlService.instance.settings.denyMaintenancePeriod
 sidebar_label: gcp.project.sqlService.instance.settings.denyMaintenancePeriod
 displayed_sidebar: MQL
-description: GCP Cloud SQL instance settings deny maintenance period
+description: Google Cloud (GCP) SQL instance settings deny maintenance period
 ---
 
 # gcp.project.sqlService.instance.settings.denyMaintenancePeriod
@@ -14,7 +14,7 @@ description: GCP Cloud SQL instance settings deny maintenance period
 
 **Description**
 
-GCP Cloud SQL instance settings deny maintenance period
+Google Cloud (GCP) SQL instance settings deny maintenance period
 
 **Fields**
 

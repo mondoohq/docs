@@ -3,7 +3,7 @@ title: gcp.project.computeService.region
 id: gcp.project.computeService.region
 sidebar_label: gcp.project.computeService.region
 displayed_sidebar: MQL
-description: GCP Compute region
+description: Google Cloud (GCP) Compute region
 ---
 
 # gcp.project.computeService.region
@@ -14,7 +14,7 @@ description: GCP Compute region
 
 **Description**
 
-GCP Compute region
+Google Cloud (GCP) Compute region
 
 **Fields**
 

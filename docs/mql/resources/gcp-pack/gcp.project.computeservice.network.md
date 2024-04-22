@@ -3,7 +3,7 @@ title: gcp.project.computeService.network
 id: gcp.project.computeService.network
 sidebar_label: gcp.project.computeService.network
 displayed_sidebar: MQL
-description: GCP Compute VPC network resource
+description: Google Cloud (GCP) Compute VPC network resource
 ---
 
 # gcp.project.computeService.network
@@ -14,7 +14,7 @@ description: GCP Compute VPC network resource
 
 **Description**
 
-GCP Compute VPC network resource
+Google Cloud (GCP) Compute VPC network resource
 
 **Fields**
 

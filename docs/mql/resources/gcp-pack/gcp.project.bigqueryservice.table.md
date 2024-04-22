@@ -3,7 +3,7 @@ title: gcp.project.bigqueryService.table
 id: gcp.project.bigqueryService.table
 sidebar_label: gcp.project.bigqueryService.table
 displayed_sidebar: MQL
-description: GCP BigQuery table
+description: Google Cloud (GCP) BigQuery table
 ---
 
 # gcp.project.bigqueryService.table
@@ -14,7 +14,7 @@ description: GCP BigQuery table
 
 **Description**
 
-GCP BigQuery table
+Google Cloud (GCP) BigQuery table
 
 **Fields**
 

@@ -3,7 +3,7 @@ title: gcp.organization
 id: gcp.organization
 sidebar_label: gcp.organization
 displayed_sidebar: MQL
-description: GCP cloud organization
+description: Google Cloud (GCP) organization
 ---
 
 # gcp.organization
@@ -14,7 +14,7 @@ description: GCP cloud organization
 
 **Description**
 
-GCP cloud organization
+Google Cloud (GCP) organization
 
 **Fields**
 

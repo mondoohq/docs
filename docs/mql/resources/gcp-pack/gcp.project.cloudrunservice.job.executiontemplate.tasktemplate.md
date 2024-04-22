@@ -3,7 +3,7 @@ title: gcp.project.cloudRunService.job.executionTemplate.taskTemplate
 id: gcp.project.cloudRunService.job.executionTemplate.taskTemplate
 sidebar_label: gcp.project.cloudRunService.job.executionTemplate.taskTemplate
 displayed_sidebar: MQL
-description: GCP Cloud Run job execution template task template
+description: Google Cloud (GCP) Run job execution template task template
 ---
 
 # gcp.project.cloudRunService.job.executionTemplate.taskTemplate
@@ -14,7 +14,7 @@ description: GCP Cloud Run job execution template task template
 
 **Description**
 
-GCP Cloud Run job execution template task template
+Google Cloud (GCP) Run job execution template task template
 
 **Fields**
 

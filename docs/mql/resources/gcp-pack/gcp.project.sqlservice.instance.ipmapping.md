@@ -3,7 +3,7 @@ title: gcp.project.sqlService.instance.ipMapping
 id: gcp.project.sqlService.instance.ipMapping
 sidebar_label: gcp.project.sqlService.instance.ipMapping
 displayed_sidebar: MQL
-description: GCP Cloud SQL instance IP mapping
+description: Google Cloud (GCP) SQL instance IP mapping
 ---
 
 # gcp.project.sqlService.instance.ipMapping
@@ -14,7 +14,7 @@ description: GCP Cloud SQL instance IP mapping
 
 **Description**
 
-GCP Cloud SQL instance IP mapping
+Google Cloud (GCP) SQL instance IP mapping
 
 **Fields**
 

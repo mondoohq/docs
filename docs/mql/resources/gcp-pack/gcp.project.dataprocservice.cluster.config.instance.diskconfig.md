@@ -3,7 +3,7 @@ title: gcp.project.dataprocService.cluster.config.instance.diskConfig
 id: gcp.project.dataprocService.cluster.config.instance.diskConfig
 sidebar_label: gcp.project.dataprocService.cluster.config.instance.diskConfig
 displayed_sidebar: MQL
-description: GCP Dataproc cluster instance disk config
+description: Google Cloud (GCP) Dataproc cluster instance disk config
 ---
 
 # gcp.project.dataprocService.cluster.config.instance.diskConfig
@@ -14,7 +14,7 @@ description: GCP Dataproc cluster instance disk config
 
 **Description**
 
-GCP Dataproc cluster instance disk config
+Google Cloud (GCP) Dataproc cluster instance disk config
 
 **Fields**
 

@@ -3,7 +3,7 @@ title: gcp.project.gkeService.cluster.nodepool.config.shieldedInstanceConfig
 id: gcp.project.gkeService.cluster.nodepool.config.shieldedInstanceConfig
 sidebar_label: gcp.project.gkeService.cluster.nodepool.config.shieldedInstanceConfig
 displayed_sidebar: MQL
-description: GCP GKE node pool shielded instance configuration
+description: Google Kubernetes Engine (GKE) node pool shielded instance configuration
 ---
 
 # gcp.project.gkeService.cluster.nodepool.config.shieldedInstanceConfig
@@ -14,7 +14,7 @@ description: GCP GKE node pool shielded instance configuration
 
 **Description**
 
-GCP GKE node pool shielded instance configuration
+Google Kubernetes Engine (GKE) node pool shielded instance configuration
 
 **Fields**
 

@@ -3,7 +3,7 @@ title: gcp.project.loggingservice
 id: gcp.project.loggingservice
 sidebar_label: gcp.project.loggingservice
 displayed_sidebar: MQL
-description: GCP Logging resources
+description: Google Cloud (GCP) Logging resources
 ---
 
 # gcp.project.loggingservice
@@ -14,7 +14,7 @@ description: GCP Logging resources
 
 **Description**
 
-GCP Logging resources
+Google Cloud (GCP) Logging resources
 
 **Fields**
 

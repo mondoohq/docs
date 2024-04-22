@@ -3,7 +3,7 @@ title: gcp.project.pubsubService.topic.config.messagestoragepolicy
 id: gcp.project.pubsubService.topic.config.messagestoragepolicy
 sidebar_label: gcp.project.pubsubService.topic.config.messagestoragepolicy
 displayed_sidebar: MQL
-description: GCP Pub/Sub topic message storage policy
+description: Google Cloud (GCP) Pub/Sub topic message storage policy
 ---
 
 # gcp.project.pubsubService.topic.config.messagestoragepolicy
@@ -14,7 +14,7 @@ description: GCP Pub/Sub topic message storage policy
 
 **Description**
 
-GCP Pub/Sub topic message storage policy
+Google Cloud (GCP) Pub/Sub topic message storage policy
 
 **Fields**
 

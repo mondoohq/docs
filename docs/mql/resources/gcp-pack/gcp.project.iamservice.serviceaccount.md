@@ -3,7 +3,7 @@ title: gcp.project.iamService.serviceAccount
 id: gcp.project.iamService.serviceAccount
 sidebar_label: gcp.project.iamService.serviceAccount
 displayed_sidebar: MQL
-description: GCP service account
+description: Google Cloud (GCP) service account
 ---
 
 # gcp.project.iamService.serviceAccount
@@ -14,7 +14,7 @@ description: GCP service account
 
 **Description**
 
-GCP service account
+Google Cloud (GCP) service account
 
 **Fields**
 

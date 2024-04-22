@@ -3,7 +3,7 @@ title: gcp.project.dataprocService.cluster.config.gkeCluster
 id: gcp.project.dataprocService.cluster.config.gkeCluster
 sidebar_label: gcp.project.dataprocService.cluster.config.gkeCluster
 displayed_sidebar: MQL
-description: GCP Dataproc cluster GKE cluster config
+description: Google Cloud (GCP) Dataproc cluster GKE cluster config
 ---
 
 # gcp.project.dataprocService.cluster.config.gkeCluster
@@ -14,7 +14,7 @@ description: GCP Dataproc cluster GKE cluster config
 
 **Description**
 
-GCP Dataproc cluster GKE cluster config
+Google Cloud (GCP) Dataproc cluster GKE cluster config
 
 **Fields**
 

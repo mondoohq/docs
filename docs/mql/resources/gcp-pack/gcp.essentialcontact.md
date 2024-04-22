@@ -3,7 +3,7 @@ title: gcp.essentialContact
 id: gcp.essentialContact
 sidebar_label: gcp.essentialContact
 displayed_sidebar: MQL
-description: GCP contact
+description: Google Cloud (GCP) contact
 ---
 
 # gcp.essentialContact
@@ -14,7 +14,7 @@ description: GCP contact
 
 **Description**
 
-GCP contact
+Google Cloud (GCP) contact
 
 **Fields**
 

@@ -3,7 +3,7 @@ title: gcp.project.computeService.machineType
 id: gcp.project.computeService.machineType
 sidebar_label: gcp.project.computeService.machineType
 displayed_sidebar: MQL
-description: GCP machine type
+description: Google Cloud (GCP) machine type
 ---
 
 # gcp.project.computeService.machineType
@@ -14,7 +14,7 @@ description: GCP machine type
 
 **Description**
 
-GCP machine type
+Google Cloud (GCP) machine type
 
 **Fields**
 

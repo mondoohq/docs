@@ -3,7 +3,7 @@ title: gcp.project.pubsubService
 id: gcp.project.pubsubService
 sidebar_label: gcp.project.pubsubService
 displayed_sidebar: MQL
-description: GCP Pub/Sub resources
+description: Google Cloud (GCP) Pub/Sub resources
 ---
 
 # gcp.project.pubsubService
@@ -14,7 +14,7 @@ description: GCP Pub/Sub resources
 
 **Description**
 
-GCP Pub/Sub resources
+Google Cloud (GCP) Pub/Sub resources
 
 **Fields**
 

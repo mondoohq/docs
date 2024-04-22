@@ -3,7 +3,7 @@ title: gcp.project.monitoringService.alertPolicy
 id: gcp.project.monitoringService.alertPolicy
 sidebar_label: gcp.project.monitoringService.alertPolicy
 displayed_sidebar: MQL
-description: GCP monitoring alert policy
+description: Google Cloud (GCP) monitoring alert policy
 ---
 
 # gcp.project.monitoringService.alertPolicy
@@ -14,7 +14,7 @@ description: GCP monitoring alert policy
 
 **Description**
 
-GCP monitoring alert policy
+Google Cloud (GCP) monitoring alert policy
 
 **Fields**
 

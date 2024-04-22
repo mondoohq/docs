@@ -3,7 +3,7 @@ title: gcp.project.pubsubService.subscription
 id: gcp.project.pubsubService.subscription
 sidebar_label: gcp.project.pubsubService.subscription
 displayed_sidebar: MQL
-description: GCP Pub/Sub subscription
+description: Google Cloud (GCP) Pub/Sub subscription
 ---
 
 # gcp.project.pubsubService.subscription
@@ -14,7 +14,7 @@ description: GCP Pub/Sub subscription
 
 **Description**
 
-GCP Pub/Sub subscription
+Google Cloud (GCP) Pub/Sub subscription
 
 **Fields**
 

@@ -3,7 +3,7 @@ title: gcp.project.kmsService.keyring.cryptokey.version.attestation.certificatec
 id: gcp.project.kmsService.keyring.cryptokey.version.attestation.certificatechains
 sidebar_label: gcp.project.kmsService.keyring.cryptokey.version.attestation.certificatechains
 displayed_sidebar: MQL
-description: GCP KMS crypto key version attestation certificate chains
+description: Google Cloud (GCP) KMS crypto key version attestation certificate chains
 ---
 
 # gcp.project.kmsService.keyring.cryptokey.version.attestation.certificatechains
@@ -14,7 +14,7 @@ description: GCP KMS crypto key version attestation certificate chains
 
 **Description**
 
-GCP KMS crypto key version attestation certificate chains
+Google Cloud (GCP) KMS crypto key version attestation certificate chains
 
 **Fields**
 

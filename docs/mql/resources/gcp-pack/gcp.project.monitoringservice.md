@@ -3,7 +3,7 @@ title: gcp.project.monitoringService
 id: gcp.project.monitoringService
 sidebar_label: gcp.project.monitoringService
 displayed_sidebar: MQL
-description: GCP monitoring resources
+description: Google Cloud (GCP) monitoring resources
 ---
 
 # gcp.project.monitoringService
@@ -14,7 +14,7 @@ description: GCP monitoring resources
 
 **Description**
 
-GCP monitoring resources
+Google Cloud (GCP) monitoring resources
 
 **Fields**
 

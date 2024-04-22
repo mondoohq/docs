@@ -3,7 +3,7 @@ title: gcp.project.gkeService.cluster.nodepool.networkConfig
 id: gcp.project.gkeService.cluster.nodepool.networkConfig
 sidebar_label: gcp.project.gkeService.cluster.nodepool.networkConfig
 displayed_sidebar: MQL
-description: GCP GKE node pool-Level network configuration
+description: Google Kubernetes Engine (GKE) node pool-Level network configuration
 ---
 
 # gcp.project.gkeService.cluster.nodepool.networkConfig
@@ -14,7 +14,7 @@ description: GCP GKE node pool-Level network configuration
 
 **Description**
 
-GCP GKE node pool-Level network configuration
+Google Kubernetes Engine (GKE) node pool-Level network configuration
 
 **Fields**
 

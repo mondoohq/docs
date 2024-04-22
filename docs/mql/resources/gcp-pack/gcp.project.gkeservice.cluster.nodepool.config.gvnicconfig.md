@@ -3,7 +3,7 @@ title: gcp.project.gkeService.cluster.nodepool.config.gvnicConfig
 id: gcp.project.gkeService.cluster.nodepool.config.gvnicConfig
 sidebar_label: gcp.project.gkeService.cluster.nodepool.config.gvnicConfig
 displayed_sidebar: MQL
-description: GCP GKE node pool gVNIC configuration
+description: Google Kubernetes Engine (GKE) node pool gVNIC configuration
 ---
 
 # gcp.project.gkeService.cluster.nodepool.config.gvnicConfig
@@ -14,7 +14,7 @@ description: GCP GKE node pool gVNIC configuration
 
 **Description**
 
-GCP GKE node pool gVNIC configuration
+Google Kubernetes Engine (GKE) node pool gVNIC configuration
 
 **Fields**
 

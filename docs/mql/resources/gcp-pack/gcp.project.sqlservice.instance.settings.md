@@ -3,7 +3,7 @@ title: gcp.project.sqlService.instance.settings
 id: gcp.project.sqlService.instance.settings
 sidebar_label: gcp.project.sqlService.instance.settings
 displayed_sidebar: MQL
-description: GCP Cloud SQL instance settings
+description: Google Cloud (GCP) SQL instance settings
 ---
 
 # gcp.project.sqlService.instance.settings
@@ -14,7 +14,7 @@ description: GCP Cloud SQL instance settings
 
 **Description**
 
-GCP Cloud SQL instance settings
+Google Cloud (GCP) SQL instance settings
 
 **Fields**
 

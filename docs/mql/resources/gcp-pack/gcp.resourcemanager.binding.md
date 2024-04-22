@@ -3,7 +3,7 @@ title: gcp.resourcemanager.binding
 id: gcp.resourcemanager.binding
 sidebar_label: gcp.resourcemanager.binding
 displayed_sidebar: MQL
-description: GCP Resource Manager binding
+description: Google Cloud (GCP) Resource Manager binding
 ---
 
 # gcp.resourcemanager.binding
@@ -14,7 +14,7 @@ description: GCP Resource Manager binding
 
 **Description**
 
-GCP Resource Manager binding
+Google Cloud (GCP) Resource Manager binding
 
 **Fields**
 

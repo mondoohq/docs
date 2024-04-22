@@ -3,7 +3,7 @@ title: gcp.project.dataprocService.cluster.config.gceCluster.shieldedInstanceCon
 id: gcp.project.dataprocService.cluster.config.gceCluster.shieldedInstanceConfig
 sidebar_label: gcp.project.dataprocService.cluster.config.gceCluster.shieldedInstanceConfig
 displayed_sidebar: MQL
-description: GCP Dataproc cluster GCE cluster shielded instance config
+description: Google Cloud (GCP) Dataproc cluster GCE cluster shielded instance config
 ---
 
 # gcp.project.dataprocService.cluster.config.gceCluster.shieldedInstanceConfig
@@ -14,7 +14,7 @@ description: GCP Dataproc cluster GCE cluster shielded instance config
 
 **Description**
 
-GCP Dataproc cluster GCE cluster shielded instance config
+Google Cloud (GCP) Dataproc cluster GCE cluster shielded instance config
 
 **Fields**
 

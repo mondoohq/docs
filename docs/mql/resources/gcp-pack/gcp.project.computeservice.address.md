@@ -3,7 +3,7 @@ title: gcp.project.computeService.address
 id: gcp.project.computeService.address
 sidebar_label: gcp.project.computeService.address
 displayed_sidebar: MQL
-description: GCP Compute address
+description: Google Cloud (GCP) Compute address
 ---
 
 # gcp.project.computeService.address
@@ -14,7 +14,7 @@ description: GCP Compute address
 
 **Description**
 
-GCP Compute address
+Google Cloud (GCP) Compute address
 
 **Fields**
 

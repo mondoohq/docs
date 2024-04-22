@@ -3,7 +3,7 @@ title: gcp.project.cloudRunService.container.probe
 id: gcp.project.cloudRunService.container.probe
 sidebar_label: gcp.project.cloudRunService.container.probe
 displayed_sidebar: MQL
-description: GCP Cloud Run service revision template container probe
+description: Google Cloud (GCP) Run service revision template container probe
 ---
 
 # gcp.project.cloudRunService.container.probe
@@ -14,7 +14,7 @@ description: GCP Cloud Run service revision template container probe
 
 **Description**
 
-GCP Cloud Run service revision template container probe
+Google Cloud (GCP) Run service revision template container probe
 
 **Fields**
 

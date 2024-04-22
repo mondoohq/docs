@@ -3,7 +3,7 @@ title: gcp.project.computeService.subnetwork
 id: gcp.project.computeService.subnetwork
 sidebar_label: gcp.project.computeService.subnetwork
 displayed_sidebar: MQL
-description: GCP Compute VPC network partitioning
+description: Google Cloud (GCP) Compute VPC network partitioning
 ---
 
 # gcp.project.computeService.subnetwork
@@ -14,7 +14,7 @@ description: GCP Compute VPC network partitioning
 
 **Description**
 
-GCP Compute VPC network partitioning
+Google Cloud (GCP) Compute VPC network partitioning
 
 **Fields**
 

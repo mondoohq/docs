@@ -3,7 +3,7 @@ title: gcp.project.gkeService.cluster.networkConfig
 id: gcp.project.gkeService.cluster.networkConfig
 sidebar_label: gcp.project.gkeService.cluster.networkConfig
 displayed_sidebar: MQL
-description: GKE cluster network config
+description: Google Kubernetes Engine (GKE) cluster network config
 ---
 
 # gcp.project.gkeService.cluster.networkConfig
@@ -14,7 +14,7 @@ description: GKE cluster network config
 
 **Description**
 
-GKE cluster network config
+Google Kubernetes Engine (GKE) cluster network config
 
 **Fields**
 

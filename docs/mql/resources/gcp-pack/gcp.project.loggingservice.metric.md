@@ -3,7 +3,7 @@ title: gcp.project.loggingservice.metric
 id: gcp.project.loggingservice.metric
 sidebar_label: gcp.project.loggingservice.metric
 displayed_sidebar: MQL
-description: GCP Logging metric
+description: Google Cloud (GCP) Logging metric
 ---
 
 # gcp.project.loggingservice.metric
@@ -14,7 +14,7 @@ description: GCP Logging metric
 
 **Description**
 
-GCP Logging metric
+Google Cloud (GCP) Logging metric
 
 **Fields**
 

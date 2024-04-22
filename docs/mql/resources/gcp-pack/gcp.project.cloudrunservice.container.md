@@ -3,7 +3,7 @@ title: gcp.project.cloudRunService.container
 id: gcp.project.cloudRunService.container
 sidebar_label: gcp.project.cloudRunService.container
 displayed_sidebar: MQL
-description: GCP Cloud Run service revision template container
+description: Google Cloud (GCP) Run service revision template container
 ---
 
 # gcp.project.cloudRunService.container
@@ -14,7 +14,7 @@ description: GCP Cloud Run service revision template container
 
 **Description**
 
-GCP Cloud Run service revision template container
+Google Cloud (GCP) Run service revision template container
 
 **Fields**
 

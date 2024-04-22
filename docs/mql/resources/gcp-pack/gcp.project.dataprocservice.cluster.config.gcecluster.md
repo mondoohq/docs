@@ -3,7 +3,7 @@ title: gcp.project.dataprocService.cluster.config.gceCluster
 id: gcp.project.dataprocService.cluster.config.gceCluster
 sidebar_label: gcp.project.dataprocService.cluster.config.gceCluster
 displayed_sidebar: MQL
-description: GCP Dataproc cluster endpoint config
+description: Google Cloud (GCP) Dataproc cluster endpoint config
 ---
 
 # gcp.project.dataprocService.cluster.config.gceCluster
@@ -14,7 +14,7 @@ description: GCP Dataproc cluster endpoint config
 
 **Description**
 
-GCP Dataproc cluster endpoint config
+Google Cloud (GCP) Dataproc cluster endpoint config
 
 **Fields**
 

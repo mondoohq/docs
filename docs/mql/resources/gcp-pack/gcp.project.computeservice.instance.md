@@ -3,7 +3,7 @@ title: gcp.project.computeService.instance
 id: gcp.project.computeService.instance
 sidebar_label: gcp.project.computeService.instance
 displayed_sidebar: MQL
-description: GCP Compute instances
+description: Google Cloud (GCP) Compute instances
 ---
 
 # gcp.project.computeService.instance
@@ -14,7 +14,7 @@ description: GCP Compute instances
 
 **Description**
 
-GCP Compute instances
+Google Cloud (GCP) Compute instances
 
 **Fields**
 

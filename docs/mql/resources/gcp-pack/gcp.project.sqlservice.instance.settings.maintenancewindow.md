@@ -3,7 +3,7 @@ title: gcp.project.sqlService.instance.settings.maintenanceWindow
 id: gcp.project.sqlService.instance.settings.maintenanceWindow
 sidebar_label: gcp.project.sqlService.instance.settings.maintenanceWindow
 displayed_sidebar: MQL
-description: GCP Cloud SQL instance settings maintenance window
+description: Google Cloud (GCP) SQL instance settings maintenance window
 ---
 
 # gcp.project.sqlService.instance.settings.maintenanceWindow
@@ -14,7 +14,7 @@ description: GCP Cloud SQL instance settings maintenance window
 
 **Description**
 
-GCP Cloud SQL instance settings maintenance window
+Google Cloud (GCP) SQL instance settings maintenance window
 
 **Fields**
 

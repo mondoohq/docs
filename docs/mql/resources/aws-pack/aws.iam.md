@@ -78,4 +78,5 @@ aws.iam.credentialReport.
 
 **References**
 
+- [AWS Identity and Access Management User Guide](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html)
 - [Security in IAM and AWS STS](https://docs.aws.amazon.com/IAM/latest/UserGuide/security.html)

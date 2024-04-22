@@ -16,7 +16,7 @@ description: Entry in AWS IAM credential report
 
 Entry in AWS IAM credential report
 
-The `aws.iam.credentialreportentry` provides fields for assessing the metadata for individual IAM Credential Report entries. For usage, read the `aws.iam` resource documentation.
+The `aws.iam.credentialreportentry` resource provides fields for assessing the metadata for individual IAM Credential Report entries. For usage, read the `aws.iam` resource documentation.
 
 **Init**
 

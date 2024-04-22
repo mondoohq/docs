@@ -16,7 +16,7 @@ description: Amazon Elasticsearch service domain
 
 Amazon Elasticsearch service domain
 
-The `aws.es.domain` provides fields for assessing the configuration of individual Amazon Elasticsearch domains. For usage, read the `aws.es` resource documentation
+The `aws.es.domain` resource provides fields for assessing the configuration of individual Amazon Elasticsearch domains. For usage, read the `aws.es` resource documentation
 
 **Fields**
 

@@ -26,6 +26,12 @@ In this pack:
 | [container.repository](container.repository.md)         | Container registry repository                              |
 | [docker](docker.md)                                     | Docker host resource                                       |
 | [docker.container](docker.container.md)                 | Docker container                                           |
+| [docker.file](docker.file.md)                           | Dockerfile resource                                        |
+| [docker.file.add](docker.file.add.md)                   | Dockerfile ADD instructions                                |
+| [docker.file.copy](docker.file.copy.md)                 | Dockerfile COPY instructions                               |
+| [docker.file.from](docker.file.from.md)                 | Dockerfile from instructions                               |
+| [docker.file.run](docker.file.run.md)                   | Dockerfile RUN instructions                                |
+| [docker.file.stage](docker.file.stage.md)               | Dockerfile stages                                          |
 | [docker.image](docker.image.md)                         | Docker image                                               |
 | [file](file.md)                                         | File on the system                                         |
 | [file.permissions](file.permissions.md)                 | Access permissions for a given file                        |

@@ -1,0 +1,26 @@
+---
+title: docker.file.stage
+id: docker.file.stage
+sidebar_label: docker.file.stage
+displayed_sidebar: MQL
+description: Dockerfile stages
+---
+
+# docker.file.stage
+
+**Description**
+
+Dockerfile stages
+
+**Fields**
+
+| ID         | TYPE                                              | DESCRIPTION                                                    |
+| ---------- | ------------------------------------------------- | -------------------------------------------------------------- |
+| from       | [docker.file.from](docker.file.from.md)           | The source of this stage, specified via `FROM` in Dockerfiles  |
+| file       | [docker.file](docker.file.md)                     | Contains the reference to the Dockerfile this stage belongs to |
+| env        | map[string]string                                 | Environment variables configured in the Dockerfile             |
+| run        | &#91;&#93;[docker.file.run](docker.file.run.md)   | RUN instructions in this Dockerfile                            |
+| cmd        | [docker.file.run](docker.file.run.md)             | CMD instructions in this Dockerfile                            |
+| entrypoint | [docker.file.run](docker.file.run.md)             | ENTRYPOINT instructions in this Dockerfile                     |
+| add        | &#91;&#93;[docker.file.add](docker.file.add.md)   | ADD instructions in this Dockerfile                            |
+| copy       | &#91;&#93;[docker.file.copy](docker.file.copy.md) | COPY instructions in this Dockerfile                           |

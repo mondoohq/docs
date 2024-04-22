@@ -46,4 +46,5 @@ aws.guardduty.detectors.all( status == "ENABLED" )
 
 **References**
 
+- [Amazon GuardDuty User Guide](https://docs.aws.amazon.com/guardduty/latest/ug/what-is-guardduty.html)
 - [Security in Amazon GuardDuty](https://docs.aws.amazon.com/guardduty/latest/ug/security.html)

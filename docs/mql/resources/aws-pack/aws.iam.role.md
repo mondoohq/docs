@@ -16,7 +16,7 @@ description: AWS IAM role
 
 AWS IAM role
 
-The `aws.iam.role` provides fields for assessing the configuration of individual IAM Roles. For usage, read the `aws.iam` resource documentation.
+The `aws.iam.role` resource provides fields for assessing the configuration of individual IAM Roles. For usage, read the `aws.iam` resource documentation.
 
 **Fields**
 

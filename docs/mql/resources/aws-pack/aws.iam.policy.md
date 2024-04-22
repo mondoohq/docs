@@ -16,7 +16,7 @@ description: AWS IAM policy
 
 AWS IAM policy
 
-The `aws.iam.policy` provides fields for assessing the configuration of individual IAM Policies. For usage, read the `aws.iam` resource documentation.
+The `aws.iam.policy` resource provides fields for assessing the configuration of individual IAM Policies. For usage, read the `aws.iam` resource documentation.
 
 **Fields**
 

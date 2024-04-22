@@ -3,6 +3,7 @@ title: aws.inspector.coverage.instance
 id: aws.inspector.coverage.instance
 sidebar_label: aws.inspector.coverage.instance
 displayed_sidebar: MQL
+description: Amazon Inspector instance coverage group
 ---
 
 # aws.inspector.coverage.instance
@@ -10,6 +11,10 @@ displayed_sidebar: MQL
 **Supported platform**
 
 - aws
+
+**Description**
+
+Amazon Inspector instance coverage group
 
 **Fields**
 

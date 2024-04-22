@@ -16,7 +16,7 @@ description: Amazon RDS database cluster
 
 Amazon RDS database cluster
 
-The `aws.rds.dbcluster` provides fields for assessing the configuration of AWS RDS Clusters.
+The `aws.rds.dbcluster` resource provides fields for assessing the configuration of AWS RDS Clusters.
 
 **Fields**
 

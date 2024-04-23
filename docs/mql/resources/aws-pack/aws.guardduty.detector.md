@@ -16,7 +16,7 @@ description: Amazon GuardDuty detector
 
 Amazon GuardDuty detector
 
-The `aws.guardduty.detector` provides fields for assessing the configuration of individual Amazon GuardDuty Detectors. For usage, read the `aws.guardduty` resource documentation
+The `aws.guardduty.detector` resource provides fields for assessing the configuration of individual Amazon GuardDuty Detectors. For usage, read the `aws.guardduty` resource documentation
 
 **Fields**
 

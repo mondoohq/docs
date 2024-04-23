@@ -16,7 +16,7 @@ description: AWS IAM group
 
 AWS IAM group
 
-The `aws.iam.group` provides fields for assessing the configuration of IAM Groups. For usage, read the `aws.iam` resource documentation.
+The `aws.iam.group` resource provides fields for assessing the configuration of IAM Groups. For usage, read the `aws.iam` resource documentation.
 
 **Fields**
 

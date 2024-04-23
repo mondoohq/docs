@@ -16,7 +16,7 @@ description: Amazon RDS snapshot
 
 Amazon RDS snapshot
 
-The `aws.rds.snapshot` provides fields for assessing the configuration of RDS snapshots. For usage, read the `aws.rds` resource documentation.
+The `aws.rds.snapshot` resource provides fields for assessing the configuration of RDS snapshots. For usage, read the `aws.rds` resource documentation.
 
 **Fields**
 

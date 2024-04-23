@@ -16,7 +16,7 @@ description: AWS IAM virtual MFA device
 
 AWS IAM virtual MFA device
 
-The `aws.iam.virtualmfadevice` provides fields for assessing the metadata for individual virtual MFA devices associated with IAM users. For usage, read the `aws.iam` resource documentation.
+The `aws.iam.virtualmfadevice` resource provides fields for assessing the metadata for individual virtual MFA devices associated with IAM users. For usage, read the `aws.iam` resource documentation.
 
 **Fields**
 

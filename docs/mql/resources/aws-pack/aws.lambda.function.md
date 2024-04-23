@@ -16,7 +16,7 @@ description: AWS Lambda function
 
 AWS Lambda function
 
-The `aws.lambda.function` provides fields for assessing the configuration of individual AWS Lambda functions. For usage, read the `aws.lambda` resource documentation.
+The `aws.lambda.function` resource provides fields for assessing the configuration of individual AWS Lambda functions. For usage, read the `aws.lambda` resource documentation.
 
 **Fields**
 

@@ -3,6 +3,7 @@ title: aws.inspector.coverage.repository
 id: aws.inspector.coverage.repository
 sidebar_label: aws.inspector.coverage.repository
 displayed_sidebar: MQL
+description: Amazon Inspector container registry coverage group
 ---
 
 # aws.inspector.coverage.repository
@@ -10,6 +11,10 @@ displayed_sidebar: MQL
 **Supported platform**
 
 - aws
+
+**Description**
+
+Amazon Inspector container registry coverage group
 
 **Fields**
 

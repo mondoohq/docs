@@ -3,6 +3,7 @@ title: aws.inspector.coverage.image
 id: aws.inspector.coverage.image
 sidebar_label: aws.inspector.coverage.image
 displayed_sidebar: MQL
+description: Amazon Inspector container image coverage group
 ---
 
 # aws.inspector.coverage.image
@@ -10,6 +11,10 @@ displayed_sidebar: MQL
 **Supported platform**
 
 - aws
+
+**Description**
+
+Amazon Inspector container image coverage group
 
 **Fields**
 

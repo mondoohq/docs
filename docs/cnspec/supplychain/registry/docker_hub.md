@@ -27,27 +27,27 @@ docker login
 Once you log in, you can run `cnspec scan` to asses security:
 
 ```bash
-$ cnspec scan container registry index.docker.io/mondoolabs/mondoo
+$ cnspec scan container registry index.docker.io/mondoo/cnspec
 
   →  loaded configuration from /Users/username/.config/mondoo/mondoo.yml
 Start the vulnerability scan:
   →  resolve asset connections
   →  verify platform access to cf5442b2d681
   →  gather platform details
-  →  detected alpine 3.10.1
+  →  detected alpine 3.18.6
   →  gather platform packages for vulnerability scan
   →  found 38 packages
   ✔  completed analysis for cf5442b2d681
   →  verify platform access to 23ae745857f8
   →  gather platform details
-  →  detected alpine 3.10.1
+  →  detected alpine 3.18.6
   →  gather platform packages for vulnerability scan
   →  found 38 packages
   ✔  completed analysis for 23ae745857f8
 ...
   →  verify platform access to b419fd9f16ae
   →  gather platform details
-  →  detected alpine 3.10.2
+  →  detected alpine 3.18.5
   →  gather platform packages for vulnerability scan
   →  found 38 packages
   ✔  completed analysis for b419fd9f16ae

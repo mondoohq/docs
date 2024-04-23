@@ -16,7 +16,7 @@ description: AWS IAM user
 
 AWS IAM user
 
-The `aws.iam.user` provides fields for assessing the configuration of individual IAM users. For usage, read the `aws.iam` resource documentation.
+The `aws.iam.user` resource provides fields for assessing the configuration of individual IAM users. For usage, read the `aws.iam` resource documentation.
 
 **Fields**
 

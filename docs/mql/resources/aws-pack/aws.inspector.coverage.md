@@ -3,6 +3,7 @@ title: aws.inspector.coverage
 id: aws.inspector.coverage
 sidebar_label: aws.inspector.coverage
 displayed_sidebar: MQL
+description: Amazon Inspector environment coverage
 ---
 
 # aws.inspector.coverage
@@ -10,6 +11,10 @@ displayed_sidebar: MQL
 **Supported platform**
 
 - aws
+
+**Description**
+
+Amazon Inspector environment coverage
 
 **Fields**
 

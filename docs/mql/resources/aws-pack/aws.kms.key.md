@@ -16,7 +16,7 @@ description: AWS Key Management Service (KMS) key
 
 AWS Key Management Service (KMS) key
 
-The `aws.kms.key` provides fields for assessing the configuration of individual KMS keys. For usage, read the `aws.kms` resource documentation.
+The `aws.kms.key` resource provides fields for assessing the configuration of individual KMS keys. For usage, read the `aws.kms` resource documentation.
 
 **Fields**
 

@@ -16,7 +16,7 @@ description: Amazon RDS database instance
 
 Amazon RDS database instance
 
-The `aws.rds.dbinstance` provides fields for assessing the configuration of RDS instances. For usage, read the `aws.rds` resource documentation.
+The `aws.rds.dbinstance` resource provides fields for assessing the configuration of RDS instances. For usage, read the `aws.rds` resource documentation.
 
 **Fields**
 

@@ -16,7 +16,7 @@ description: AWS IAM policy version
 
 AWS IAM policy version
 
-The `aws.iam.policyversion` provides fields for assessing the metadata for IAM Policy versions. For usage, read the `aws.iam` resource documentation.
+The `aws.iam.policyversion` resource provides fields for assessing the metadata for IAM Policy versions. For usage, read the `aws.iam` resource documentation.
 
 **Fields**
 

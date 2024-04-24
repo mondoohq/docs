@@ -32,3 +32,13 @@ yum.repo(id string)
 | size     | string           | File size of this repository                                |
 | mirrors  | string           | Mirrors for this repository                                 |
 | enabled  | bool             | Whether the repository is used as package source            |
+
+**Examples**
+
+Check if a yum repo is enabled
+
+```coffee
+yum.repo('salt-latest') {
+  enabled
+}
+```

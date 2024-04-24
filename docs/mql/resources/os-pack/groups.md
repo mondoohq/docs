@@ -21,3 +21,11 @@ Groups configured on this system
 | ID   | TYPE                        | DESCRIPTION |
 | ---- | --------------------------- | ----------- |
 | list | &#91;&#93;[group](group.md) |             |
+
+**Examples**
+
+Ensure the user is not part of group
+
+```coffee
+groups.where(name == 'wheel').list { members.all( name != 'username')}
+```

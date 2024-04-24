@@ -59,3 +59,7 @@ azure.subscription {
   managedByTenants
 }
 ```
+
+**References**
+
+- [Subscriptions, licenses, accounts, and tenants for Microsoft's cloud offerings](https://learn.microsoft.com/en-us/microsoft-365/enterprise/subscriptions-licenses-accounts-and-tenants-for-microsoft-cloud-offerings)

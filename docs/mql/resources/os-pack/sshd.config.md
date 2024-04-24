@@ -30,3 +30,11 @@ sshd.config(path string)
 | kexs            | &#91;&#93;string                                              | Key exchange algorithms configured for this SSH server                  |
 | hostkeys        | &#91;&#93;string                                              | Host keys configured for this SSH server                                |
 | permitRootLogin | &#91;&#93;string                                              | PermitRootLogin setting in SSH server                                   |
+
+**Examples**
+
+Check that the SSH banner is sourced from /etc/ssh/sshd-banner
+
+```coffee
+sshd.config.params['Banner'] == '/etc/ssh/sshd-banner'
+```

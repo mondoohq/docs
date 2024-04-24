@@ -30,3 +30,7 @@ Azure disk resource
 | zones             | &#91;&#93;string  | The logical zone list for disk                                                  |
 | sku               | dict              | The disk SKU name and tier                                                      |
 | properties        | dict              | Disk resource properties                                                        |
+
+**References**
+
+- [Introduction to Azure managed disks](https://learn.microsoft.com/en-us/azure/virtual-machines/managed-disks-overview)

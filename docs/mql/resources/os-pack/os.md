@@ -24,3 +24,17 @@ Operating system information
 | rebootpending | bool                                | Whether a reboot is pending                              |
 | hostname      | string                              | Hostname for this OS                                     |
 | machineid     | string                              | Machine ID for this OS                                   |
+
+**Examples**
+
+Show all environment variables
+
+```coffee
+os.env
+```
+
+Retrieve a single environment variable
+
+```coffee
+os.env['windir']
+```

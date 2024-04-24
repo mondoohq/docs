@@ -21,3 +21,19 @@ Windows audit policies
 | ID   | TYPE                                          | DESCRIPTION |
 | ---- | --------------------------------------------- | ----------- |
 | list | &#91;&#93;[auditpol.entry](auditpol.entry.md) |             |
+
+**Examples**
+
+List all audit policies
+
+```coffee
+auditpol { inclusionsetting exclusionsetting subcategory }
+```
+
+Check a specific auditpol configuration
+
+```coffee
+auditpol.where(subcategory == 'Sensitive Privilege Use') {
+  inclusionsetting == 'Success and Failure'
+}
+```

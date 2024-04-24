@@ -40,3 +40,8 @@ Azure Kubernetes Service cluster
 | httpProxyConfig           | dict              | The HTTP proxy config of the AKS cluster           |
 | addonProfiles             | &#91;&#93;dict    | The add-on profiles of the AKS cluster             |
 | agentPoolProfiles         | &#91;&#93;dict    | The agent pool profiles of the AKS cluster         |
+
+**References**
+
+- [What is Azure Kubernetes Service (AKS)?](https://learn.microsoft.com/en-us/azure/aks/what-is-aks)
+- [Azure Kubernetes Service (AKS) documentation](https://learn.microsoft.com/en-us/azure/aks/)

@@ -26,3 +26,11 @@ User on this system
 | authorizedkeys | [authorizedkeys](authorizedkeys.md)   | List of authorized keys              |
 | sshkeys        | &#91;&#93;[privatekey](privatekey.md) | List of SSH keys                     |
 | group          | [group](group.md)                     | Group of which user is a member      |
+
+**Examples**
+
+Display a specific user's home directory and UID
+
+```coffee
+user(name: 'vagrant') { home uid }
+```

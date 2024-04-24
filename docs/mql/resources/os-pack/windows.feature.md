@@ -26,3 +26,17 @@ windows.feature(name string)
 | description  | string | Feature description                           |
 | installed    | bool   | Whether the feature is installed              |
 | installState | int    | Feature installation state                    |
+
+**Examples**
+
+Check that a Windows features is installed
+
+```coffee
+windows.feature('SNMP-Service').installed
+```
+
+Check that a specific feature is not installed
+
+```coffee
+windows.feature('Windows-Defender').installed == false
+```

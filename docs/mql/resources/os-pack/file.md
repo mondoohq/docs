@@ -30,3 +30,14 @@ file(path string)
 | user        | [user](user.md)                         | Ownership information about the user        |
 | group       | [group](group.md)                       | Ownership information about the group       |
 | empty       | bool                                    | Whether the path is empty                   |
+
+**Examples**
+
+Test if a directory exists
+
+```coffee
+file('/etc') {
+  exists
+  permissions.isDirectory
+}
+```

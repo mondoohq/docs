@@ -27,3 +27,13 @@ registrykey.property(name string)
 | value  | string | Deprecated; use `data` instead |
 | type   | string | Registry key type              |
 | data   | dict   | Registry key data              |
+
+**Examples**
+
+Verify a registry key property
+
+```coffee
+registrykey.property(path: 'HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\EventLog\System', name: 'MaxSize') {
+  value >= 32768
+}
+```

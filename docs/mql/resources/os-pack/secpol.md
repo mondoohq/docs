@@ -20,3 +20,11 @@ Windows local security policy
 | eventaudit      | map[string]string           | Event audit      |
 | registryvalues  | map[string]string           | Registry values  |
 | privilegerights | map[string]&#91;&#93;string | Privilege rights |
+
+**Examples**
+
+Check that a specific SID is included in the privilege rights
+
+```coffee
+secpol.privilegerights['SeRemoteShutdownPrivilege'].contains( _ == 'S-1-5-32-544')
+```

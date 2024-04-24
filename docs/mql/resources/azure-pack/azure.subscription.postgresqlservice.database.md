@@ -28,4 +28,4 @@ Azure Database for PostgreSQL database
 
 **References**
 
-- [Virtual Network documentation](https://learn.microsoft.com/en-us/azure/postgresql/)
+- [Azure Database for PostgreSQL - Flexible Server documentation](https://learn.microsoft.com/en-us/azure/postgresql/)

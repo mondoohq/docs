@@ -23,3 +23,7 @@ Azure compute
 | subscriptionId | string                                                                                        | Subscription identifier                    |
 | vms            | &#91;&#93;[azure.subscription.computeService.vm](azure.subscription.computeservice.vm.md)     | All compute instances under a subscription |
 | disks          | &#91;&#93;[azure.subscription.computeService.disk](azure.subscription.computeservice.disk.md) | All the disks under a subscription         |
+
+**References**
+
+- [Virtual machines in Azure](https://learn.microsoft.com/en-us/azure/virtual-machines/)

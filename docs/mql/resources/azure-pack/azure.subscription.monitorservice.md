@@ -28,4 +28,4 @@ Azure Monitor
 
 **References**
 
-- [Azure Database for MariaDB documentation](https://learn.microsoft.com/en-us/azure/azure-monitor/)
+- [Azure Monitor documentation](https://learn.microsoft.com/en-us/azure/azure-monitor/)

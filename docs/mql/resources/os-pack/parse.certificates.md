@@ -28,3 +28,17 @@ parse.certificates(path string)
 | file    | [file](file.md)               | Certificate file         |
 | content | string                        | Certificate file content |
 | list    | &#91;&#93;network.certificate |                          |
+
+**Examples**
+
+Parse Certificates from target file system
+
+```coffee
+parse.certificates('/etc/ssl/cert.pem').list { issuer.dn }
+```
+
+Parse Certificates from content
+
+```coffee
+parse.certificates(content: 'PEM CONTENT').list { issuer.dn }
+```

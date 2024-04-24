@@ -34,3 +34,11 @@ package(name string)
 | installed   | bool                                    | Whether the package is installed                            |
 | outdated    | bool                                    | Whether the package is outdated                             |
 | files       | &#91;&#93;[pkgFileInfo](pkgfileinfo.md) | Package files                                               |
+
+**Examples**
+
+Check if a package is installed
+
+```coffee
+package('git').installed
+```

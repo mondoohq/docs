@@ -8,7 +8,9 @@ description: The OPC-UA resource pack lets you use MQL to query and assess the s
 
 # Mondoo OPC UA Resource Pack Reference
 
-In this pack:
+The OPC-UA resource pack lets you use MQL to query and assess the security of your OPC-UA servers.
+
+Resources included in this pack:
 
 | ID                                    | DESCRIPTION      |
 | ------------------------------------- | ---------------- |

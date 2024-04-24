@@ -8,7 +8,9 @@ description: The Slack resource pack lets you use MQL to query and assess the se
 
 # Mondoo Slack Resource Pack Reference
 
-In this pack:
+The Slack resource pack lets you use MQL to query and assess the security of your Slack identities and configuration.
+
+Resources included in this pack:
 
 | ID                                              | DESCRIPTION                                                         |
 | ----------------------------------------------- | ------------------------------------------------------------------- |

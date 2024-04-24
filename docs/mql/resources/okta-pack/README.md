@@ -8,7 +8,9 @@ description: The Okta resource pack lets you use MQL to query and assess the sec
 
 # Mondoo Okta Resource Pack Reference
 
-In this pack:
+The Okta resource pack lets you use MQL to query and assess the security of your Okta identities and configuration.
+
+Resources included in this pack:
 
 | ID                                                        | DESCRIPTION                 |
 | --------------------------------------------------------- | --------------------------- |

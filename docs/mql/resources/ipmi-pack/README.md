@@ -8,7 +8,9 @@ description: The IPMI resource pack lets you use MQL to query and assess the sec
 
 # Mondoo IPMI Resource Pack Reference
 
-In this pack:
+The IPMI resource pack lets you use MQL to query and assess the security of your IPMI devices.
+
+Resources included in this pack:
 
 | ID                              | DESCRIPTION                                               |
 | ------------------------------- | --------------------------------------------------------- |

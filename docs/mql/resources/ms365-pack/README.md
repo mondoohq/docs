@@ -8,7 +8,9 @@ description: The Microsoft 365 (MS365) resource pack lets you use MQL to query a
 
 # Mondoo Microsoft 365 (MS365) Resource Pack Reference
 
-In this pack:
+The Microsoft 365 (MS365) resource pack lets you use MQL to query and assess the security of your Microsoft 365 identities and configuration.
+
+Resources included in this pack:
 
 | ID                                                                                                        | DESCRIPTION                                         |
 | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------- |

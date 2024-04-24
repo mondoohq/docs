@@ -8,7 +8,9 @@ description: The Kubernetes resource pack lets you use MQL to query and assess t
 
 # Mondoo Kubernetes (K8s) Resource Pack Reference
 
-In this pack:
+The Kubernetes resource pack lets you use MQL to query and assess the security of your Kubernetes cluster and workloads.
+
+Resources included in this pack:
 
 | ID                                                            | DESCRIPTION                                                      |
 | ------------------------------------------------------------- | ---------------------------------------------------------------- |

@@ -63,8 +63,8 @@ Mondoo also flags a CVE if the _assets_ that contain the CVE present their own r
 
 | Icon                                          | Risk factor                                                                              |
 | --------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| ![Keys icon](/img/platform/security/keys.png) | **Accessible keys** indicates that key or credential information is exposed.             |
-| ![EOL icon](/img/platform/security/eol.png)   | **End-of-life (EOL)** indicates an operating system version that is no longer supported. |
+| ![Keys icon](/img/platform/security/keys.png) | **Accessible keys** indicates that key or credential information is exposed on at least one asset with this CVE.             |
+| ![EOL icon](/img/platform/security/eol.png)   | **End-of-life (EOL)** indicates that at least one asset with this CVE is running an operating system version that is no longer supported. |
 
 ### CVSS score and metrics
 

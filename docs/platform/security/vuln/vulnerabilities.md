@@ -42,7 +42,7 @@ Find vulnerabilities for assets in a space:
 
    The summary on the CVE detail page shows the number of assets affected by this CVE. Select that information to jump to a list of affected assets.
 
-## Assess a CVE's risk and impact
+## View risk and impact data
 
 Mondoo provides extensive details about a CVE to help you understand the risk it presents to (and the impact it could have on) your organization. The simplest of these are the CVSS score and the risk factors flags.
 
@@ -64,9 +64,9 @@ Mondoo also flags a CVE if the _assets_ that contain the CVE have factors that i
 | Icon                                          | Risk factor                                                                              |
 | --------------------------------------------- | ---------------------------------------------------------------------------------------- |
 | ![Keys icon](/img/platform/security/keys.png) | **Accessible keys** indicates that key or credential information is exposed on at least one asset with this CVE.             |
-| ![EOL icon](/img/platform/security/eol.png)   | **End-of-life (EOL)** indicates that at least one asset with this CVE is running an operating system version that is no longer supported. |
-| ![Database icon](/img/platform/security/db.png) | **Database** indicates that at least one asset with this CVE hosts a running database.              |
-| ![In use icon](/img/platform/security/use.png) | **In use** indicates that at least one asset with this CVE has a running service or is in active use. Examples are assets running SSHD, OpenSSH, NGINX, or Apache, or assets with open or listening ports. |
+| ![EOL icon](/img/platform/security/eol.png)   | **End-of-life (EOL)** indicates that at least one asset with this CVE is running an operating system version that is approaching or has reached EOL (no longer supported). |
+| ![Database icon](/img/platform/security/db.png) | **Database** indicates that at least one asset with this CVE hosts a running database (MySQL or PostgreSQL).              |
+| ![In use icon](/img/platform/security/use.png) | **In use** indicates that at least one asset with this CVE has a running service or is in active use. Examples are assets running sshd, OpenSSH, NGINX, or Apache, or assets with open or listening ports. |
 | ![Defensive icon](/img/platform/security/defensive.png) | **Defensive** indicates that at least one asset with this CVE has defensive countermeasures in place (SELinux or AppArmor). |
 
 ### CVSS score and metrics

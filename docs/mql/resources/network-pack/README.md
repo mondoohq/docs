@@ -8,7 +8,7 @@ description: The network resource pack lets you use MQL to query and assess the 
 
 # Mondoo Network Resource Pack Reference
 
-The network resource pack lets you use MQL to query and assess the security of domains and network services.
+The Network resource pack lets you use MQL to query and assess the security of domains and network services.
 
 Resources included in this pack:
 

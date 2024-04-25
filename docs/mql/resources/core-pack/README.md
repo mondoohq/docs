@@ -3,7 +3,7 @@ title: Core Resource Pack - MQL Resources
 id: core.pack
 sidebar_label: Core Resource Pack
 displayed_sidebar: MQL
-description: The Core pack provides basic MQL resources that let you query and assess the security.
+description: The Core pack provides basic MQL resources that let you query and assess the security of assets in your infrastructure.
 ---
 
 # Mondoo Core Resource Pack Reference

@@ -3,12 +3,12 @@ title: GitHub Resource Pack - MQL Resources
 id: github.pack
 sidebar_label: GitHub Resource Pack
 displayed_sidebar: MQL
-description: The GitHub resource pack lets you use MQL to query and assess the security of your GitHub organization and repositories.
+description: The GitHub resource pack lets you use MQL to query and assess the security of your GitHub organizations and repositories.
 ---
 
 # Mondoo GitHub Resource Pack Reference
 
-The GitHub resource pack lets you use MQL to query and assess the security of your GitHub organization and repositories.
+The GitHub resource pack lets you use MQL to query and assess the security of your GitHub organizations and repositories.
 
 Resources included in this pack:
 

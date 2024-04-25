@@ -3,12 +3,12 @@ title: Equinix Resource Pack - MQL Resources
 id: equinix.pack
 sidebar_label: Equinix Resource Pack
 displayed_sidebar: MQL
-description: The Equinix resource pack lets you use MQL to query and assess the security of your Equinix Metal services.
+description: The Equinix resource pack lets you use MQL to query and assess the security of your Equinix Metal assets.
 ---
 
 # Mondoo Equinix Resource Pack Reference
 
-The Equinix resource pack lets you use MQL to query and assess the security of your Equinix Metal services.
+The Equinix resource pack lets you use MQL to query and assess the security of your Equinix Metal assets.
 
 Resources included in this pack:
 

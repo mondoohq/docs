@@ -58,20 +58,18 @@ Risk factors are attributes that can raise or lower the risk that a CVE poses to
 
 | Icon                                                             | Risk factor                                                                                                                                                 |
 | ---------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![Exploitable icon](/img/platform/security/exploitable.png)      | **Exploitable** CVEs have known exploits in the wild. Attackers know how to breach a system using this vulnerability and have already shown it can be done. |
-| ![Remote execution icon](/img/platform/security/remote-exec.png) | **Remote execution** CVEs are known to present remote code execution over the network. They let an attacker run malicious code on a target system.          |
+| ![Exploitable icon](/img/platform/security/exploitable.svg)      | **Exploitable** CVEs have known exploits in the wild. Attackers know how to breach a system using this vulnerability and have already shown it can be done. |
+| ![Remote execution icon](/img/platform/security/remote-exec.svg) | **Remote execution** CVEs are known to present remote code execution over the network. They let an attacker run malicious code on a target system.          |
 
 Mondoo also flags a CVE if the _assets_ that contain the CVE have factors that increase or decrease risk. These are _contextual_ risk factors for a CVE:
 
 | Icon                                          | Risk factor                                                                              |
 | --------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| ![Keys icon](/img/platform/security/keys.png) | **Accessible keys** indicates that key or credential information is exposed on at least one asset with this CVE.             |
-| ![EOL icon](/img/platform/security/eol.png)   | **End-of-life (EOL)** indicates that at least one asset with this CVE is running an operating system version that is approaching or has reached EOL (no longer supported). |
-| ![Database icon](/img/platform/security/db.png) | **Database** indicates that at least one asset with this CVE hosts a running database (MySQL or PostgreSQL).              |
-| ![In use icon](/img/platform/security/use.png) | **In use** indicates that at least one asset with this CVE has a running service or is in active use. Examples are assets running sshd, OpenSSH, NGINX, or Apache, or assets with open or listening ports. |
-| ![Defensive icon](/img/platform/security/defensive.png) | **Defensive** indicates that at least one asset with this CVE has defensive countermeasures in place (SELinux or AppArmor). |
-
-(More factors are coming in May 2024!)
+| ![Keys icon](/img/platform/security/keys.svg) | **Accessible keys** indicates that key or credential information is exposed on at least one asset with this CVE.             |
+| ![EOL icon](/img/platform/security/eol.svg)   | **End-of-life (EOL)** indicates that at least one asset with this CVE is running an operating system version that is approaching or has reached EOL (no longer supported). |
+| ![Database icon](/img/platform/security/db.svg) | **Database** indicates that at least one asset with this CVE hosts a running database (MySQL or PostgreSQL).              |
+| ![In use icon](/img/platform/security/use.svg) | **In use** indicates that at least one asset with this CVE has a running service or is in active use. Examples are assets running sshd, OpenSSH, NGINX, or Apache, or assets with open or listening ports. |
+| ![Defensive icon](/img/platform/security/defensive.svg) | **Defensive** indicates that at least one asset with this CVE has defensive countermeasures in place (SELinux or AppArmor). |
 
 ### CVSS score and metrics
 

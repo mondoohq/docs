@@ -202,6 +202,7 @@ managedzone
 MANIFESTFILE
 manjaro
 marsrover
+mati
 maxbackup
 maxsize
 Mbeze
@@ -331,6 +332,7 @@ testname
 testring
 testsuite
 tfblock
+thm
 tmpkqyme
 toplevel
 tpu

@@ -21,3 +21,7 @@ Docker image
 | virtualsize | int               | Virtual image size in kilobytes |
 | tags        | &#91;&#93;string  | Tag key value pairs             |
 | labels      | map[string]string | Labels key value pairs          |
+
+**References**
+
+- [What is an image?](https://docs.docker.com/guides/docker-concepts/the-basics/what-is-an-image/)

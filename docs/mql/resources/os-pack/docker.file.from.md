@@ -3,14 +3,14 @@ title: docker.file.from
 id: docker.file.from
 sidebar_label: docker.file.from
 displayed_sidebar: MQL
-description: Dockerfile from instructions
+description: Dockerfile FROM instructions
 ---
 
 # docker.file.from
 
 **Description**
 
-Dockerfile from instructions
+Dockerfile FROM instructions
 
 **Fields**
 
@@ -21,3 +21,7 @@ Dockerfile from instructions
 | tag      | string |             |
 | digest   | string |             |
 | name     | string |             |
+
+**References**
+
+- [Dockerfile FROM reference](https://docs.docker.com/reference/dockerfile/#from)

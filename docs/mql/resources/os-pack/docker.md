@@ -18,3 +18,7 @@ Docker host resource
 | ---------- | ------------------------------------------------- | -------------------------- |
 | images     | &#91;&#93;[docker.image](docker.image.md)         | List all Docker images     |
 | containers | &#91;&#93;[docker.container](docker.container.md) | List all Docker containers |
+
+**References**
+
+- [Docker overview](https://docs.docker.com/get-started/overview/)

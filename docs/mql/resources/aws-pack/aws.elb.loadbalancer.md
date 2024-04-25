@@ -28,8 +28,11 @@ The `aws.elb.loadbalancer` resource provides fields for assessing the configurat
 | name                 | string                                                      | User-specified name for the load balancer                                   |
 | scheme               | string                                                      | Scheme for the load balancer: internet-facing or internal                   |
 | attributes           | &#91;&#93;dict                                              | A list of attributes for the load balancer                                  |
-| vpcId                | string                                                      | The ID of the VPC where the load balancer is located                        |
+| vpcId                | string                                                      | Deprecated. Use vpc instead                                                 |
 | createdTime          | time                                                        | Date and time when the load balancer was created                            |
 | availabilityZones    | &#91;&#93;string                                            | Availability zone where the load balancer runs                              |
 | securityGroups       | &#91;&#93;[aws.ec2.securitygroup](aws.ec2.securitygroup.md) | VPC security groups for the load balancer                                   |
 | hostedZoneId         | string                                                      | The ID of the Amazon Route 53 hosted zone associated with the load balancer |
+| region               | string                                                      | Region where the load balancer exists                                       |
+| elbType              | string                                                      | The type of ELB. Possible values are `network`, `application`, or `gateway` |
+| vpc                  | [aws.vpc](aws.vpc.md)                                       | VPC where the load balancer is located                                      |

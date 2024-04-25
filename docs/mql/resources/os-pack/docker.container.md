@@ -12,6 +12,8 @@ description: Docker container
 
 Docker container
 
+The `docker.container` resource provides fields for assessing running Docker containers.
+
 **Fields**
 
 | ID      | TYPE                    | DESCRIPTION           |
@@ -25,3 +27,7 @@ Docker container
 | state   | string                  | Container state       |
 | status  | string                  | Status message        |
 | labels  | map[string]string       | Label key value pairs |
+
+**References**
+
+- [What is a container?](https://docs.docker.com/guides/walkthroughs/what-is-a-container/)

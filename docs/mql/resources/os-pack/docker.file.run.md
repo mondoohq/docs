@@ -17,3 +17,7 @@ Dockerfile RUN instructions
 | ID     | TYPE   | DESCRIPTION |
 | ------ | ------ | ----------- |
 | script | string |             |
+
+**References**
+
+- [Dockerfile RUN reference](https://docs.docker.com/reference/dockerfile/#run)

@@ -20,3 +20,7 @@ Dockerfile ADD instructions
 | dst   | string           |             |
 | chown | string           |             |
 | chmod | string           |             |
+
+**References**
+
+- [Dockerfile ADD reference](https://docs.docker.com/reference/dockerfile/#add)

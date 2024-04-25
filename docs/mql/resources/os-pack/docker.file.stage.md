@@ -14,13 +14,19 @@ Dockerfile stages
 
 **Fields**
 
-| ID         | TYPE                                              | DESCRIPTION                                                    |
-| ---------- | ------------------------------------------------- | -------------------------------------------------------------- |
-| from       | [docker.file.from](docker.file.from.md)           | The source of this stage, specified via `FROM` in Dockerfiles  |
-| file       | [docker.file](docker.file.md)                     | Contains the reference to the Dockerfile this stage belongs to |
-| env        | map[string]string                                 | Environment variables configured in the Dockerfile             |
-| run        | &#91;&#93;[docker.file.run](docker.file.run.md)   | RUN instructions in this Dockerfile                            |
-| cmd        | [docker.file.run](docker.file.run.md)             | CMD instructions in this Dockerfile                            |
-| entrypoint | [docker.file.run](docker.file.run.md)             | ENTRYPOINT instructions in this Dockerfile                     |
-| add        | &#91;&#93;[docker.file.add](docker.file.add.md)   | ADD instructions in this Dockerfile                            |
-| copy       | &#91;&#93;[docker.file.copy](docker.file.copy.md) | COPY instructions in this Dockerfile                           |
+| ID         | TYPE                                                  | DESCRIPTION                                                    |
+| ---------- | ----------------------------------------------------- | -------------------------------------------------------------- |
+| from       | [docker.file.from](docker.file.from.md)               | The source of this stage, specified via `FROM` in Dockerfiles  |
+| file       | [docker.file](docker.file.md)                         | Contains the reference to the Dockerfile this stage belongs to |
+| env        | map[string]string                                     | Environment variables configured in the Dockerfile             |
+| run        | &#91;&#93;[docker.file.run](docker.file.run.md)       | RUN instructions in this Dockerfile                            |
+| cmd        | [docker.file.run](docker.file.run.md)                 | CMD instructions in this Dockerfile                            |
+| entrypoint | [docker.file.run](docker.file.run.md)                 | ENTRYPOINT instructions in this Dockerfile                     |
+| add        | &#91;&#93;[docker.file.add](docker.file.add.md)       | ADD instructions in this Dockerfile                            |
+| copy       | &#91;&#93;[docker.file.copy](docker.file.copy.md)     | COPY instructions in this Dockerfile                           |
+| expose     | &#91;&#93;[docker.file.expose](docker.file.expose.md) | EXPOSE instructions in this Dockerfile                         |
+
+**References**
+
+- [Dockerfile Reference](https://docs.docker.com/reference/dockerfile/)
+- [Multi-stage builds](https://docs.docker.com/build/building/multi-stage/)

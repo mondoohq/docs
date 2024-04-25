@@ -12,6 +12,8 @@ description: Dockerfile resource
 
 Dockerfile resource
 
+The `docker.file` resource provides fields for assessing Dockerfiles.
+
 **Init**
 
 docker.file(path string)
@@ -23,3 +25,7 @@ docker.file(path string)
 | file         | [file](file.md)                                     | File information about this Dockerfile        |
 | instructions | dict                                                | List of instructions in the order they appear |
 | stages       | &#91;&#93;[docker.file.stage](docker.file.stage.md) | All stages included in this Dockerfile        |
+
+**References**
+
+- [Dockerfile Reference](https://docs.docker.com/reference/dockerfile/)

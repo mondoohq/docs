@@ -3,12 +3,14 @@ title: Oracle Cloud Infrastructure (OCI) Resource Pack - MQL Resources
 id: oracle.cloud.infrastructure.oci.pack
 sidebar_label: Oracle Cloud Infrastructure (OCI) Resource Pack
 displayed_sidebar: MQL
-description: The Oracle Cloud Infrastructure (OCI) resource pack lets you use MQL to query and assess the security of your OCI cloud services.
+description: The Oracle Cloud Infrastructure (OCI) resource pack lets you use MQL to query and assess the security of your OCI services.
 ---
 
 # Mondoo Oracle Cloud Infrastructure (OCI) Resource Pack Reference
 
-In this pack:
+The Oracle Cloud Infrastructure (OCI) resource pack lets you use MQL to query and assess the security of your OCI services.
+
+Resources included in this pack:
 
 | ID                                                                  | DESCRIPTION                                                                            |
 | ------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |

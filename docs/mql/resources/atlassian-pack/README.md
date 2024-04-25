@@ -8,7 +8,9 @@ description: The Atlassian resource pack lets you use MQL to query and assess th
 
 # Mondoo Atlassian Resource Pack Reference
 
-In this pack:
+The Atlassian resource pack lets you use MQL to query and assess the security of your Atlassian services.
+
+Resources included in this pack:
 
 | ID                                                                                      | DESCRIPTION                               |
 | --------------------------------------------------------------------------------------- | ----------------------------------------- |

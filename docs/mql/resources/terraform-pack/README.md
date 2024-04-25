@@ -3,12 +3,14 @@ title: Terraform IaC Resource Pack - MQL Resources
 id: terraform.iac.pack
 sidebar_label: Terraform IaC Resource Pack
 displayed_sidebar: MQL
-description: The Terraform IaC resource pack lets you use MQL to query and assess the security of your Terraform HCL, plan and state resources.
+description: The Terraform IaC resource pack lets you use MQL to query and assess the security of your Terraform HCL, plan, and state resources.
 ---
 
 # Mondoo Terraform IaC Resource Pack Reference
 
-In this pack:
+The Terraform IaC resource pack lets you use MQL to query and assess the security of your Terraform HCL, plan, and state resources.
+
+Resources included in this pack:
 
 | ID                                                                | DESCRIPTION                                               |
 | ----------------------------------------------------------------- | --------------------------------------------------------- |

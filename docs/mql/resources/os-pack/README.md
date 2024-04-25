@@ -31,7 +31,8 @@ Resources included in this pack:
 | [docker.file](docker.file.md)                           | Dockerfile resource                                        |
 | [docker.file.add](docker.file.add.md)                   | Dockerfile ADD instructions                                |
 | [docker.file.copy](docker.file.copy.md)                 | Dockerfile COPY instructions                               |
-| [docker.file.from](docker.file.from.md)                 | Dockerfile from instructions                               |
+| [docker.file.expose](docker.file.expose.md)             | Dockerfile EXPOSE instruction                              |
+| [docker.file.from](docker.file.from.md)                 | Dockerfile FROM instructions                               |
 | [docker.file.run](docker.file.run.md)                   | Dockerfile RUN instructions                                |
 | [docker.file.stage](docker.file.stage.md)               | Dockerfile stages                                          |
 | [docker.image](docker.image.md)                         | Docker image                                               |

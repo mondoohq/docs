@@ -20,3 +20,7 @@ Dockerfile COPY instructions
 | dst   | string           | The destination in the image for the file(s)                                  |
 | chown | string           | Ownership of the file(s)                                                      |
 | chmod | string           | Octal permissions of the file(s)                                              |
+
+**References**
+
+- [Dockerfile COPY reference](https://docs.docker.com/reference/dockerfile/#copy)

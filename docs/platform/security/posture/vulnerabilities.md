@@ -1,7 +1,7 @@
 ---
 title: Find Vulnerabilities (CVEs) and Assess Their Risk
 sidebar_label: Find Vulnerabilities (CVEs)
-sidebar_position: 2
+sidebar_position: 4
 description: Use Mondoo to find  vulnerabilities that put your infrastructure at risk
 image: /img/featured_img/mondoo-feature.jpg
 ---
@@ -12,7 +12,7 @@ A _vulnerability_ is a weakness in a computer system that an attacker can exploi
 
 :::note
 
-Vendors often release _advisories_ that provide recommendations on how to fix or mitigate vulnerabilities in their products. To learn more, read [Find Advisories](/platform/security/vuln/advisories).
+Vendors often release _advisories_ that provide recommendations on how to fix or mitigate vulnerabilities in their products. To learn more, read [Find Advisories](/platform/security/posture/advisories).
 
 :::
 
@@ -26,7 +26,9 @@ Find vulnerabilities for assets in a space:
 
    ![Find vulnerabilities](/img/platform/security/cves.png)
 
-   The list shows CVEs found in your infrastructure.
+   The list shows CVEs found in your infrastructure. For each CVE, Mondoo shows a rank (priority compared to other CVEs), score (CRITICAL, HIGH, MEDIUM, OR LOW), blast radius (calculated based on the affected assets), any [risk factors](#risk-factors), and when the vulnerability was first found in your infrastructure.
+
+   To learn how Mondoo calculates risk and rank, read [Security Findings](/platform/security/posture/findings/).
 
 3. To filter the list, enter text in the search bar. These are some examples:
 
@@ -52,14 +54,14 @@ At the top of a CVE's detail page (accessed as described above) you find general
 
 ### Risk factors
 
-Risk factors are attributes that can elevate the risk that a CVE poses to your organization. CVEs can have their own risk factors:
+Risk factors are attributes that can raise or lower the risk that a CVE poses to your organization. CVEs can have their own risk factors:
 
 | Icon                                                             | Risk factor                                                                                                                                                 |
 | ---------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ![Exploitable icon](/img/platform/security/exploitable.png)      | **Exploitable** CVEs have known exploits in the wild. Attackers know how to breach a system using this vulnerability and have already shown it can be done. |
 | ![Remote execution icon](/img/platform/security/remote-exec.png) | **Remote execution** CVEs are known to present remote code execution over the network. They let an attacker run malicious code on a target system.          |
 
-Mondoo also flags a CVE if the _assets_ that contain the CVE have factors that increase or decrease risk:
+Mondoo also flags a CVE if the _assets_ that contain the CVE have factors that increase or decrease risk. These are _contextual_ risk factors for a CVE:
 
 | Icon                                          | Risk factor                                                                              |
 | --------------------------------------------- | ---------------------------------------------------------------------------------------- |
@@ -68,6 +70,8 @@ Mondoo also flags a CVE if the _assets_ that contain the CVE have factors that i
 | ![Database icon](/img/platform/security/db.png) | **Database** indicates that at least one asset with this CVE hosts a running database (MySQL or PostgreSQL).              |
 | ![In use icon](/img/platform/security/use.png) | **In use** indicates that at least one asset with this CVE has a running service or is in active use. Examples are assets running sshd, OpenSSH, NGINX, or Apache, or assets with open or listening ports. |
 | ![Defensive icon](/img/platform/security/defensive.png) | **Defensive** indicates that at least one asset with this CVE has defensive countermeasures in place (SELinux or AppArmor). |
+
+(More factors are coming in May 2024!)
 
 ### CVSS score and metrics
 

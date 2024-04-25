@@ -1,12 +1,18 @@
 ---
 title: Find Advisories
 sidebar_label: Find Advisories
-sidebar_position: 3
+sidebar_position: 5
 description: Use Mondoo to find  advisories that put your infrastructure at risk
 image: /img/featured_img/mondoo-feature.jpg
 ---
 
 Software vendors often release _advisories_ that provide recommendations on how to fix or mitigate vulnerabilities in their products. Advisories may or may not be released before vulnerabilities are disclosed. Sometimes advisories provide workarounds or other steps that users can take to mitigate a security weakness in the vendor’s products.
+
+:::note
+
+Not every known software issue has an advisory. Be sure to monitor vulnerabilities (CVEs) to find potential exploits in your infrastructure. To learn more, read [Find Vulnerabilities](/platform/security/posture/vulnerabilities).
+
+:::
 
 ## Find advisories in your infrastructure
 
@@ -48,6 +54,6 @@ Mondoo also flags an advisory if the _assets_ that contain the advisory present 
 
 #### See also
 
-[Find Vulnerabilities (CVEs)](/platform/security/vuln/vulnerabilities)
+[Find Vulnerabilities (CVEs)](/platform/security/posture/vulnerabilities)
 
 ---

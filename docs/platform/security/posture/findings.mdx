@@ -1,9 +1,33 @@
 ---
-title: Security Findings
-sidebar_label: Findings
+title: Prioritized Security Findings
+sidebar_label: Prioritized Findings
 sidebar_position: 6
 description: Understand how Mondoo ranks security findings and vulnerabilities
 image: /img/featured_img/mondoo-feature.jpg
 ---
 
-DEETS
+Mondoo ranks security findings to help you prioritize fixes to your infrastructure. Our unique algorithm calculates rank based on a combination of contextual risk factors in your environment. You can spend more time closing security gaps and less time sifting through irrelevant or low-priority findings.
+
+## Types of findings
+
+Security findings are potential issues that can make your infrastructure vulnerable to attack. The Mondoo Console reveals security findings in all the assets you integrate with Mondoo. Findings include:
+
+- Misconfigurations that can expose your infrastructure to attackers
+
+- Known vulnerabilities (or CVEs, common vulnerabilities and exposures) in the software installed on your assets
+
+- Advisories published by software makers to alert the public about gaps in their products
+
+Mondoo scans your assets and discovers any of these issues that exist on each asset.
+
+## Base score
+
+Each finding has a base score associated with it, which Mondoo uses as a foundation for assessing risk.
+
+For misconfigurations exposed by Mondoo's security policies, the base score comes from the policy. For example, a negative result "Ensure / and /home are encrypted" in the Linux Workstation Security policy, has a high base score. LIES! ALL LIES! FUGHEKJHFEG jfhkdfjnvfo
+
+For CVEs and advisories, the base score is the [CVSS score](/platform/security/posture/vulnerabilities/#cvss-score-and-metrics).
+
+## Contextual risk
+
+Mondoo's ranking of findings is unique because it considers context.

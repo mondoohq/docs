@@ -172,4 +172,10 @@ Mondoo provides three EPSS data points for each CVE:
 
 The likelihood of a CVE being exploited in the next 30 days and the CVSS base score are strong metrics to help you decide which CVEs are your highest priorities. To learn how the EPSS score is calculated and what it means for your organization, read the [FIRST EPSS documentation](https://www.first.org/epss/).
 
+#### See also
+
+- [Find Advisories](/platform/security/posture/advisories/)
+
+- [Security Findings](/platform/security/posture/findings/)
+
 ---

@@ -24,7 +24,9 @@ Find advisories for assets in a space:
 
    ![Find Advisories](/img/platform/security/advisories.png)
 
-   The list shows advisories found in your infrastructure.
+   The list shows CVEs found in your infrastructure. For each CVE, Mondoo shows a rank (priority compared to other CVEs), score (CRITICAL, HIGH, MEDIUM, OR LOW), blast radius (calculated based on the affected assets), any [risk factors](#risk-factors), and when the vulnerability was first found in your infrastructure.
+
+   To learn how Mondoo calculates risk and rank, read [Security Findings](/platform/security/posture/findings/).
 
 3. To filter the list, enter text in the search bar. These are some examples:
 
@@ -45,15 +47,20 @@ Risk factors are attributes that can elevate the risk that an advisory poses to 
 | ![Exploitable icon](/img/platform/security/exploitable.svg)      | **Exploitable** advisories have known exploits in the wild. Attackers know how to breach a system using this defect and have already shown it can be done. |
 | ![Remote execution icon](/img/platform/security/remote-exec.svg) | **Remote execution** advisories are known to present remote code execution over the network. They let an attacker run malicious code on a target system.   |
 
-Mondoo also flags an advisory if the _assets_ that contain the advisory present their own risk factors:
+Mondoo also flags an advisory if the _assets_ that contain the advisory have factors that increase or decrease risk. These are _contextual_ risk factors for an advisory:
 
 | Icon                                          | Risk factor                                                                              |
 | --------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| ![Keys icon](/img/platform/security/keys.svg) | **Accessible keys** indicates that key or credential information is exposed.             |
-| ![EOL icon](/img/platform/security/eol.svg)   | **End-of-life (EOL)** indicates an operating system version that is no longer supported. |
+| ![Keys icon](/img/platform/security/keys.svg) | **Accessible keys** indicates that key or credential information is exposed on at least one asset with this advisory.             |
+| ![EOL icon](/img/platform/security/eol.svg)   | **End-of-life (EOL)** indicates that at least one asset with this advisory is running an operating system version that is approaching or has reached EOL (no longer supported). |
+| ![Database icon](/img/platform/security/db.svg) | **Database** indicates that at least one asset with this advisory hosts a running database (MySQL or PostgreSQL).              |
+| ![In use icon](/img/platform/security/use.svg) | **In use** indicates that at least one asset with this advisory has a running service or is in active use. Examples are assets running sshd, OpenSSH, NGINX, or Apache, or assets with open or listening ports. |
+| ![Defensive icon](/img/platform/security/defensive.svg) | **Defensive** indicates that at least one asset with this advisory has defensive countermeasures in place (SELinux or AppArmor). |
 
 #### See also
 
-[Find Vulnerabilities (CVEs)](/platform/security/posture/vulnerabilities)
+- [Find Vulnerabilities (CVEs)](/platform/security/posture/vulnerabilities/)
+
+- [Security Findings](/platform/security/posture/findings/)
 
 ---

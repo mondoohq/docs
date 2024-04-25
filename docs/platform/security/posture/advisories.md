@@ -42,8 +42,8 @@ Risk factors are attributes that can elevate the risk that an advisory poses to 
 
 | Icon                                                             | Risk factor                                                                                                                                                |
 | ---------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![Exploitable icon](/img/platform/security/exploitable.png)      | **Exploitable** advisories have known exploits in the wild. Attackers know how to breach a system using this defect and have already shown it can be done. |
-| ![Remote execution icon](/img/platform/security/remote-exec.png) | **Remote execution** advisories are known to present remote code execution over the network. They let an attacker run malicious code on a target system.   |
+| ![Exploitable icon](/img/platform/security/exploitable.svg)      | **Exploitable** advisories have known exploits in the wild. Attackers know how to breach a system using this defect and have already shown it can be done. |
+| ![Remote execution icon](/img/platform/security/remote-exec.svg) | **Remote execution** advisories are known to present remote code execution over the network. They let an attacker run malicious code on a target system.   |
 
 Mondoo also flags an advisory if the _assets_ that contain the advisory present their own risk factors:
 

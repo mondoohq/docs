@@ -49,8 +49,8 @@ Mondoo also flags an advisory if the _assets_ that contain the advisory present 
 
 | Icon                                          | Risk factor                                                                              |
 | --------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| ![Keys icon](/img/platform/security/keys.png) | **Accessible keys** indicates that key or credential information is exposed.             |
-| ![EOL icon](/img/platform/security/eol.png)   | **End-of-life (EOL)** indicates an operating system version that is no longer supported. |
+| ![Keys icon](/img/platform/security/keys.svg) | **Accessible keys** indicates that key or credential information is exposed.             |
+| ![EOL icon](/img/platform/security/eol.svg)   | **End-of-life (EOL)** indicates an operating system version that is no longer supported. |
 
 #### See also
 

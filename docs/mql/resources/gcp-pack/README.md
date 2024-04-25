@@ -8,7 +8,7 @@ description: The Google Cloud Platform (GCP) resource pack lets you use MQL to q
 
 # Mondoo Google Cloud Platform (GCP) Resource Pack Reference
 
-The Google Cloud Platform (GCP) resource pack lets you use MQL to query and assess the security of your GCP cloud services.
+The Google Cloud Platform (GCP) resource pack lets you use MQL to query and assess the security of your Google Cloud services.
 
 Resources included in this pack:
 

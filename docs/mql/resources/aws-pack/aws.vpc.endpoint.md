@@ -23,7 +23,7 @@ Amazon Virtual Private Cloud (VPC) endpoint
 | id                | string           | Unique ID of the endpoint                                         |
 | type              | string           | Type of the endpoint                                              |
 | vpc               | string           | VPC in which the endpoint exists                                  |
-| region            | string           | Region in which the VPC exists                                    |
+| region            | string           | Region in which the VPC endpoint exists                           |
 | serviceName       | string           | The name of the endpoint service                                  |
 | policyDocument    | string           | The policy document associated with the endpoint, if applicable   |
 | subnets           | &#91;&#93;string | The subnets for the (interface) endpoint                          |

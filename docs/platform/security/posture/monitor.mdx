@@ -5,6 +5,7 @@ sidebar_position: 4
 description: Use Mondoo to monitor the security of your entire infrastructure
 image: /img/featured_img/mondoo-feature.jpg
 ---
+
 import fidget1 from "/img/platform/security/fidget-hover.png";
 import fidget2 from "/img/platform/security/fidget-hover-2.png";
 
@@ -32,33 +33,37 @@ The **Dashboard** of a space gives you a quick understanding of your security po
 
    The Space Dashboard shows:
 
-      - An interactive chart of all the assets in the space
+   - An interactive chart of all the assets in the space
 
-      - A list of the most important vulnerabilities to fix (based on risks and affected assets)
+   - A list of the most important vulnerabilities to fix (based on risks and affected assets)
 
-      - A list of the most important security findings (such as configuration settings that put your organization at risk)
+   - A list of the most important security findings (such as configuration settings that put your organization at risk)
 
-      To learn how Mondoo ranks the top vulnerabilities and findings, read [Security Findings](/platform/security/posture/findings/).
+   To learn how Mondoo ranks the top vulnerabilities and findings, read [Prioritize Security Findings](/platform/security/posture/findings/).
 
 4. Use the interactive chart to explore the space:
 
    - The main, inside circle shows the distribution of types of assets in the space.
 
-      Hover over a section to see the distribution of security scores in that section.
+     Hover over a section to see the distribution of security scores in that section.
 
-      <img src={fidget1} width="500" />
+     {" "}
+
+     <img src={fidget1} width="500" />
 
    - The outer circle shows subsections of assets in the space.
 
-      Hover over a subsection to see the distribution of security scores in that subsection.
+     Hover over a subsection to see the distribution of security scores in that subsection.
 
-      <img src={fidget2} width="500" />
+     {" "}
+
+     <img src={fidget2} width="500" />
 
    - Select a section to zoom into the chart and see details of the section. To zoom back out, select the center of the chart.
 
    - To see a list of all assets in the current chart view, select **VIEW AS LIST**. From that list, you can select an asset to see its detailed security information.
 
-      ![List of assets in Mondoo](/img/platform/security/list.png)
+     ![List of assets in Mondoo](/img/platform/security/list.png)
 
 ## Find an asset's security details in the Inventory view
 
@@ -98,8 +103,8 @@ The tabs on the asset detail page show different details:
 | The [policies](/platform/security/posture/policies/) that apply to the asset, plus how the asset scores on those policies  | Policies           |
 | All the [checks](/platform/security/posture/pac/) in all the policies that apply to the asset, plus scores on those checks | Checks             |
 | All queries that retrieve data on the asset, plus the results of those queries                                             | Queries            |
-| Known [vulnerabilities](/platform/security/posture/vulnerabilities/) discovered on the asset                                  | Vulnerabilities    |
-| Publicly announced [advisories](/platform/security/posture/advisories/) discovered on the asset                               | Advisories         |
+| Known [vulnerabilities](/platform/security/posture/vulnerabilities/) discovered on the asset                               | Vulnerabilities    |
+| Publicly announced [advisories](/platform/security/posture/advisories/) discovered on the asset                            | Advisories         |
 | Resources connected with the asset                                                                                         | Resources          |
 | Any [exceptions](/platform/security/customize/checks/) that apply to the asset                                             | Exceptions         |
 

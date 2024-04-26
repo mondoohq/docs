@@ -49,18 +49,18 @@ Risk factors are attributes that can elevate the risk that an advisory poses to 
 
 Mondoo also flags an advisory if the _assets_ that contain the advisory have factors that increase or decrease risk. These are _contextual_ risk factors for an advisory:
 
-| Icon                                          | Risk factor                                                                              |
-| --------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| ![Keys icon](/img/platform/security/keys.svg) | **Accessible keys** indicates that key or credential information is exposed on at least one asset with this advisory.             |
-| ![EOL icon](/img/platform/security/eol.svg)   | **End-of-life (EOL)** indicates that at least one asset with this advisory is running an operating system version that is approaching or has reached EOL (no longer supported). |
-| ![Database icon](/img/platform/security/db.svg) | **Database** indicates that at least one asset with this advisory hosts a running database (MySQL or PostgreSQL).              |
-| ![In use icon](/img/platform/security/use.svg) | **In use** indicates that at least one asset with this advisory has a running service or is in active use. Examples are assets running sshd, OpenSSH, NGINX, or Apache, or assets with open or listening ports. |
-| ![Defensive icon](/img/platform/security/defensive.svg) | **Defensive** indicates that at least one asset with this advisory has defensive countermeasures in place (SELinux or AppArmor). |
+| Icon                                                    | Risk factor                                                                                                                                                                                                     |
+| ------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![Keys icon](/img/platform/security/keys.svg)           | **Accessible keys** indicates that key or credential information is exposed on at least one asset with this advisory.                                                                                           |
+| ![EOL icon](/img/platform/security/eol.svg)             | **End-of-life (EOL)** indicates that at least one asset with this advisory is running an operating system version that is approaching or has reached EOL (no longer supported).                                 |
+| ![Database icon](/img/platform/security/db.svg)         | **Database** indicates that at least one asset with this advisory hosts a running database (MySQL or PostgreSQL).                                                                                               |
+| ![In use icon](/img/platform/security/use.svg)          | **In use** indicates that at least one asset with this advisory has a running service or is in active use. Examples are assets running sshd, OpenSSH, NGINX, or Apache, or assets with open or listening ports. |
+| ![Defensive icon](/img/platform/security/defensive.svg) | **Defensive** indicates that at least one asset with this advisory has defensive countermeasures in place (SELinux or AppArmor).                                                                                |
 
 #### See also
 
 - [Find Vulnerabilities (CVEs)](/platform/security/posture/vulnerabilities/)
 
-- [Security Findings](/platform/security/posture/findings/)
+- [Prioritize Security Findings](/platform/security/posture/findings/)
 
 ---

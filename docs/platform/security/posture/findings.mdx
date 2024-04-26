@@ -1,14 +1,12 @@
 ---
-title: Prioritized Security Findings
-sidebar_label: Prioritized Findings
+title: Prioritize Security Findings
+sidebar_label: Prioritize Findings
 sidebar_position: 6
-description: Understand how Mondoo ranks security findings and vulnerabilities
+description: Understand how Mondoo scores and ranks security findings and vulnerabilities
 image: /img/featured_img/mondoo-feature.jpg
 ---
 
-Mondoo ranks security findings to help you prioritize fixes to your infrastructure. Our unique algorithm calculates rank based on a combination of contextual risk factors in your environment. You can spend more time closing security gaps and less time sifting through irrelevant or low-priority findings.
-
-## Types of findings
+Mondoo scores and ranks security findings to help you prioritize fixes to your infrastructure. Our unique algorithms calculates score and rank based on a combination of contextual risk factors in your environment. You can spend more time closing security gaps and less time sifting through irrelevant or low-priority findings.
 
 Security findings are potential issues that can make your infrastructure vulnerable to attack. The Mondoo Console reveals security findings in all the assets you integrate with Mondoo. Findings include:
 
@@ -18,16 +16,50 @@ Security findings are potential issues that can make your infrastructure vulnera
 
 - Advisories published by software makers to alert the public about gaps in their products
 
-Mondoo scans your assets and discovers any of these issues that exist on each asset.
+Mondoo scans your assets and discovers any of these issues that exist on each asset, assigns each one a **risk score** and **blast radius** unique to your environment, and **ranks** them compared to other findings. This rank helps you decide which findings are most important to fix.
 
-## Base score
+## Risk score
 
-Each finding has a base score associated with it, which Mondoo uses as a foundation for assessing risk.
+Mondoo assigns a risk score of Low, Medium, High, or Critical to each finding. The risk score is calculated from using a base score and contextual risks.
 
-For misconfigurations exposed by Mondoo's security policies, the base score comes from the policy. For example, a negative result "Ensure / and /home are encrypted" in the Linux Workstation Security policy, has a high base score. LIES! ALL LIES! FUGHEKJHFEG jfhkdfjnvfo
+### Begin with a base score
+
+Each finding has a base score associated with it, which Mondoo uses as a foundation for calculating the risk score.
+
+For misconfigurations exposed by Mondoo's security policies, the base score comes from the policy. Each finding is the result of a _check_ in a policy. The base score is based on the _impact score_ of a check. For example, if an asset fails the check "Ensure / and /home are encrypted" in the Linux Workstation Security policy, that finding has a high base score because of its high impact score in the policy.
+
+To learn about policies and checks, read [Policy as Code](/platform/security/posture/pac/).
 
 For CVEs and advisories, the base score is the [CVSS score](/platform/security/posture/vulnerabilities/#cvss-score-and-metrics).
 
-## Contextual risk
+### Factor contextual risk
 
-Mondoo's ranking of findings is unique because it considers context.
+Base scores essentially evaluate _in a vacuum_ the threat of a finding. They don't take into consideration any properties of the asset or environment. For example, they don't consider whether an asset is internet-facing or has enhanced security measures in place. These are _contextual risk factors_, and they're Mondoo's second consideration when calculating a finding's risk score.
+
+These are the contextual risk factors that Mondoo uses when calculating risk:
+
+| Risk factor           | Description                                                                                                                                               | Affect on risk score |
+| --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | --- |
+| **Accessible keys**   | Key or credential information is exposed on the asset.                                                                                                    | Raise |
+| **End-of-life (EOL)** | The asset is running an operating system version that is approaching or has reached EOL (no longer supported).                                            | Raise |
+| **Database**          | The asset hosts a running database (MySQL or PostgreSQL).                                                                                                 | Raise |
+| **In use**            | The asset has a running service or is in active use. Examples are assets running sshd, OpenSSH, NGINX, or Apache, or assets with open or listening ports. | Raise |
+| **Defensive**         | The asset has defensive countermeasures in place (SELinux or AppArmor).                                                                                   | Lower |
+
+Contextual risk factors allow Mondoo to more accurately assess the risk of a finding because they consider the asset, the environment in which the finding exists.
+
+## Blast radius
+
+The _blast radius_ of a finding is the impact that the finding has on a space. Mondoo can expose the same finding on multiple assets in a space. It calculates blast radius of the finding using the risk scores of all of the assets in the space that have that finding.
+
+If Mondoo discovers a finding on many assets in a space and the risk scores of that finding on those assets is high, then the blast radius is high. If Mondoo discovers a finding on many assets but the risk score of the finding on those assets is low, then the blast radius is lower.
+
+## Rank
+
+Even with contextual risks considered, there can be many findings scored as Critical&mdash;enough to be overwhelming. Mondoo addresses this by ranking the highest-priority findings in a space. You can find lists of the top-ranked [security findings](/platform/security/posture/monitor/) and [vulnerabilities](/platform/security/posture/vulnerabilities/) on the Space Dashboard and Security Overview.
+
+![Space dashboard in the Mondoo Console](/img/platform/security/dashboard.png)
+
+Mondoo ranks findings based on a combination of their risk scores and blast radii. The highest-ranked findings for a space have both high risks scores and high blast radii. By considering the ideal calculation of CVSS score, priority, contextual risks on affected assets, and number of affected assets, Mondoo is able to provide lists of the top important issues to resolve in your infrastructure.
+
+---

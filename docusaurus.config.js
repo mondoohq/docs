@@ -5,6 +5,21 @@ const { themes } = require("prism-react-renderer");
 const legacyRedirects = [
   // NOTE: Path / is equivalent to https://mondoo.com/docs/
   //
+  // April 2024 removed separate Find Vulnerabilities subsection from Security section
+  // part of Firewatch effort
+  {
+    from: "/platform/security/vuln/overview",
+    to: "/platform/security/overview",
+  },
+  {
+    from: "/platform/security/vuln/vulnerabilities",
+    to: "/platform/security/posture/vulnerabilities",
+  },
+  {
+    from: "/platform/security/vuln/advisories",
+    to: "/platform/security/posture/advisories",
+  },
+  //
   // This is a URL that Mondoo added to AWS resources via the AWS integration CloudFormation
   // Don't delete it unless the product changes:
   {

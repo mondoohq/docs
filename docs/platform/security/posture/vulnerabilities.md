@@ -1,7 +1,7 @@
 ---
 title: Find Vulnerabilities (CVEs) and Assess Their Risk
 sidebar_label: Find Vulnerabilities (CVEs)
-sidebar_position: 2
+sidebar_position: 4
 description: Use Mondoo to find  vulnerabilities that put your infrastructure at risk
 image: /img/featured_img/mondoo-feature.jpg
 ---
@@ -12,7 +12,7 @@ A _vulnerability_ is a weakness in a computer system that an attacker can exploi
 
 :::note
 
-Vendors often release _advisories_ that provide recommendations on how to fix or mitigate vulnerabilities in their products. To learn more, read [Find Advisories](/platform/security/vuln/advisories).
+Vendors often release _advisories_ that provide recommendations on how to fix or mitigate vulnerabilities in their products. To learn more, read [Find Advisories](/platform/security/posture/advisories).
 
 :::
 
@@ -26,7 +26,9 @@ Find vulnerabilities for assets in a space:
 
    ![Find vulnerabilities](/img/platform/security/cves.png)
 
-   The list shows CVEs found in your infrastructure.
+   The list shows CVEs found in your infrastructure. For each CVE, Mondoo shows a rank (priority compared to other CVEs), score (CRITICAL, HIGH, MEDIUM, OR LOW), blast radius (calculated based on the affected assets), any [risk factors](#risk-factors), and when the vulnerability was first found in your infrastructure.
+
+   To learn how Mondoo calculates risk and rank, read [Security Findings](/platform/security/posture/findings/).
 
 3. To filter the list, enter text in the search bar. These are some examples:
 
@@ -42,7 +44,7 @@ Find vulnerabilities for assets in a space:
 
    The summary on the CVE detail page shows the number of assets affected by this CVE. Select that information to jump to a list of affected assets.
 
-## Assess a CVE's risk and impact
+## View risk and impact data
 
 Mondoo provides extensive details about a CVE to help you understand the risk it presents to (and the impact it could have on) your organization. The simplest of these are the CVSS score and the risk factors flags.
 
@@ -52,19 +54,22 @@ At the top of a CVE's detail page (accessed as described above) you find general
 
 ### Risk factors
 
-Risk factors are attributes that can elevate the risk that a CVE poses to your organization. CVEs can have their own risk factors:
+Risk factors are attributes that can raise or lower the risk that a CVE poses to your organization. CVEs can have their own risk factors:
 
 | Icon                                                             | Risk factor                                                                                                                                                 |
 | ---------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![Exploitable icon](/img/platform/security/exploitable.png)      | **Exploitable** CVEs have known exploits in the wild. Attackers know how to breach a system using this vulnerability and have already shown it can be done. |
-| ![Remote execution icon](/img/platform/security/remote-exec.png) | **Remote execution** CVEs are known to present remote code execution over the network. They let an attacker run malicious code on a target system.          |
+| ![Exploitable icon](/img/platform/security/exploitable.svg)      | **Exploitable** CVEs have known exploits in the wild. Attackers know how to breach a system using this vulnerability and have already shown it can be done. |
+| ![Remote execution icon](/img/platform/security/remote-exec.svg) | **Remote execution** CVEs are known to present remote code execution over the network. They let an attacker run malicious code on a target system.          |
 
-Mondoo also flags a CVE if the _assets_ that contain the CVE present their own risk factors:
+Mondoo also flags a CVE if the _assets_ that contain the CVE have factors that increase or decrease risk. These are _contextual_ risk factors for a CVE:
 
-| Icon                                          | Risk factor                                                                              |
-| --------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| ![Keys icon](/img/platform/security/keys.png) | **Accessible keys** indicates that key or credential information is exposed.             |
-| ![EOL icon](/img/platform/security/eol.png)   | **End-of-life (EOL)** indicates an operating system version that is no longer supported. |
+| Icon                                                    | Risk factor                                                                                                                                                                                                |
+| ------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![Keys icon](/img/platform/security/keys.svg)           | **Accessible keys** indicates that key or credential information is exposed on at least one asset with this CVE.                                                                                           |
+| ![EOL icon](/img/platform/security/eol.svg)             | **End-of-life (EOL)** indicates that at least one asset with this CVE is running an operating system version that is approaching or has reached EOL (no longer supported).                                 |
+| ![Database icon](/img/platform/security/db.svg)         | **Database** indicates that at least one asset with this CVE hosts a running database (MySQL or PostgreSQL).                                                                                               |
+| ![In use icon](/img/platform/security/use.svg)          | **In use** indicates that at least one asset with this CVE has a running service or is in active use. Examples are assets running sshd, OpenSSH, NGINX, or Apache, or assets with open or listening ports. |
+| ![Defensive icon](/img/platform/security/defensive.svg) | **Defensive** indicates that at least one asset with this CVE has defensive countermeasures in place (SELinux or AppArmor).                                                                                |
 
 ### CVSS score and metrics
 
@@ -73,6 +78,9 @@ The CVSS base score is a single number representing the severity of a vulnerabil
 ![CVSS score in Mondoo](/img/platform/security/vuln-cvss.png)
 
 The CVSS base score is calculated based on exploitability metrics, a scope metric, and impact metrics. The sections below describe these metrics. To learn more about the CVSS base score and what it means for your infrastructure, read the [FIRST CVSS documentation](https://www.first.org/cvss/).
+
+<details>
+   <summary>Show or hide CVSS score details.</summary>
 
 #### Exploitability metrics
 
@@ -146,6 +154,8 @@ These metrics reflect the possible results of the exploit:
 
   - None (no impact on availability)
 
+</details>
+
 ### EPSS score
 
 Another scoring system from [FIRST](https://www.first.org), the Exploit Prediction Scoring System (EPSS) estimates the probability that a vulnerability will be exploited in the wild in the next 30 days. Because this system focuses on likelihood of an exploit actually occurring, it provides important data to help you prioritize software updates in your environment.
@@ -161,5 +171,11 @@ Mondoo provides three EPSS data points for each CVE:
 - **CVSS3 score** is the CVSS base score described in the section above.
 
 The likelihood of a CVE being exploited in the next 30 days and the CVSS base score are strong metrics to help you decide which CVEs are your highest priorities. To learn how the EPSS score is calculated and what it means for your organization, read the [FIRST EPSS documentation](https://www.first.org/epss/).
+
+#### See also
+
+- [Find Advisories](/platform/security/posture/advisories/)
+
+- [Prioritize Security Findings](/platform/security/posture/findings/)
 
 ---

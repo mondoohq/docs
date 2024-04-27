@@ -37,12 +37,12 @@ Base scores essentially evaluate _in a vacuum_ the threat of a finding. They don
 These are the contextual risk factors that Mondoo uses when calculating risk:
 
 | Risk factor           | Description                                                                                                                                               | Affect on risk score |
-| --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | --- |
-| **Accessible keys**   | Key or credential information is exposed on the asset.                                                                                                    | Raise |
-| **End-of-life (EOL)** | The asset is running an operating system version that is approaching or has reached EOL (no longer supported).                                            | Raise |
-| **Database**          | The asset hosts a running database (MySQL or PostgreSQL).                                                                                                 | Raise |
-| **In use**            | The asset has a running service or is in active use. Examples are assets running sshd, OpenSSH, NGINX, or Apache, or assets with open or listening ports. | Raise |
-| **Defensive**         | The asset has defensive countermeasures in place (SELinux or AppArmor).                                                                                   | Lower |
+| --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------- |
+| **Accessible keys**   | Key or credential information is exposed on the asset.                                                                                                    | Raise                |
+| **End-of-life (EOL)** | The asset is running an operating system version that is approaching or has reached EOL (no longer supported).                                            | Raise                |
+| **Database**          | The asset hosts a running database (MySQL or PostgreSQL).                                                                                                 | Raise                |
+| **In use**            | The asset has a running service or is in active use. Examples are assets running sshd, OpenSSH, NGINX, or Apache, or assets with open or listening ports. | Raise                |
+| **Defensive**         | The asset has defensive countermeasures in place (SELinux or AppArmor).                                                                                   | Lower                |
 
 Contextual risk factors allow Mondoo to more accurately assess the risk of a finding because they consider the asset, the environment in which the finding exists.
 

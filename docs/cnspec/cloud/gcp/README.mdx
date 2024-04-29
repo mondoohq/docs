@@ -166,21 +166,19 @@ You can also create your own policies to meet your specific needs. To learn more
 
 The cnspec shell is handy for quick checks and tests, or for developing your MQL skills. Its auto-complete and help features guide you in writing checks.
 
-To launch a shell into your GCP environment to run queries and checks, run:
+To launch a shell into your GCP environment to run queries and checks, substitute ORGANIZATION-ID with the ID of the organization you want to access and run:
 
 ```bash
 cnspec shell gcp org ORGANIZATION-ID
 ```
 
-For `PROJECT-ID`, substitute the ID of the project you want to explore.
-
-To launch a shell into your GCP environment on the project level, substitute PROJECT-ID with the ID of the project you want to access and run the following command:
+To launch a shell into your GCP environment on the project level, substitute PROJECT-ID with the ID of the project you want to access and run:
 
 ```bash
 cnspec shell gcp project PROJECT-ID
 ```
 
-To launch a shell into your GCP environment on the folder level, substitute FOLDER-ID with the ID of the folder you want to access and run the following command:
+To launch a shell into your GCP environment on the folder level, substitute FOLDER-ID with the ID of the folder you want to access and run:
 
 ```bash
 cnspec shell gcp folder FOLDER-ID

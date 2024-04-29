@@ -65,10 +65,10 @@ Your active configuration is: [default]
 
 ### Verify with a quick GCP query
 
-To quickly confirm that cnquery has access to your GCP environment, run this query from your terminal:
+To quickly confirm that cnquery has access to your GCP environment, run this query from your terminal, substituting your project ID for YOUR_PROJECT_ID:
 
 ```bash
-cnquery run gcp -c gcp.project
+cnquery run gcp project YOUR_PROJECT_ID -c gcp.project
 ```
 
 cnquery returns the name of the project:
@@ -85,10 +85,22 @@ You've successfully used cnquery to answer your first question about your GCP en
 
 To answer any question about your environment, use cnquery's interactive shell. It has auto-complete to guide you, which is especially helpful when you're new to cnquery and learning MQL.
 
-To launch a shell into your GCP environment, enter:
+To launch a shell into your GCP environment to run queries, substitute ORGANIZATION-ID with the ID of the organization you want to access and run:
 
 ```bash
-cnquery shell gcp
+cnquery shell gcp org ORGANIZATION-ID
+```
+
+To launch a shell into your GCP environment on the project level, substitute PROJECT-ID with the ID of the project you want to access and run:
+
+```bash
+cnquery shell gcp project PROJECT-ID
+```
+
+To launch a shell into your GCP environment on the folder level, substitute FOLDER-ID with the ID of the folder you want to access and run:
+
+```bash
+cnquery shell gcp folder FOLDER-ID
 ```
 
 ### Discover capabilities with the `help` command

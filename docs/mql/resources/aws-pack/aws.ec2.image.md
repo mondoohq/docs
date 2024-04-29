@@ -28,3 +28,4 @@ The `aws.ec2.image` resource provides fields for assessing AMIs within an accoun
 | architecture | string | Architecture associated with the image |
 | ownerId      | string | AWS account ID of the image owner      |
 | ownerAlias   | string | Alias for the image owner              |
+| createdAt    | time   | Date the image was created             |

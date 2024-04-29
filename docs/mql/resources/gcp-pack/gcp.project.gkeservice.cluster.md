@@ -52,6 +52,11 @@ Google Kubernetes Engine (GKE) cluster
 | masterAuthorizedNetworksConfig | dict                                                                                                      | Master authorized networks configuration                                                           |
 | privateClusterConfig           | dict                                                                                                      | Private cluster configuration                                                                      |
 | databaseEncryption             | dict                                                                                                      | Etcd encryption configuration                                                                      |
+| shieldedNodesConfig            | dict                                                                                                      | Configuration for Shielded Nodes feature                                                           |
+| costManagementConfig           | dict                                                                                                      | Configuration for the fine-grained cost management feature                                         |
+| confidentialNodesConfig        | dict                                                                                                      | Configuration of Confidential Nodes                                                                |
+| identityServiceConfig          | dict                                                                                                      | Configuration for Identity Service component                                                       |
+| networkPolicyConfig            | dict                                                                                                      | Configuration options for the NetworkPolicy feature                                                |
 
 **References**
 

@@ -28,3 +28,4 @@ Amazon Virtual Private Cloud (VPC) subnet
 | defaultForAvailabilityZone  | bool   | Whether this is the default subnet for the availability zone                                                                         |
 | assignIpv6AddressOnCreation | bool   | Whether a network interface created in this subnet (including a network interface created by RunInstances ) receives an IPv6 address |
 | state                       | string | The state of the subnet: pending or available                                                                                        |
+| region                      | string | Region in which the VPC subnet exists                                                                                                |

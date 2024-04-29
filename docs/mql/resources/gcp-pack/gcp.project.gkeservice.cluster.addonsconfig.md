@@ -31,3 +31,5 @@ Google Kubernetes Engine (GKE) cluster addons config
 | gcePersistentDiskCsiDriverConfig | dict   | Configuration for the Compute Engine Persistent Disk CSI driver      |
 | gcpFilestoreCsiDriverConfig      | dict   | Configuration for the GCP Filestore CSI driver                       |
 | gkeBackupAgentConfig             | dict   | Configuration for the backup for GKE agent addon                     |
+| gcsFuseCsiDriverConfig           | dict   | Configuration for the Cloud Storage Fuse CSI driver                  |
+| statefulHaConfig                 | dict   | Configuration for the StatefulHA add-on.                             |

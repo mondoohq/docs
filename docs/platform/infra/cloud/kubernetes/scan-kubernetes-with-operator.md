@@ -37,7 +37,7 @@ To set up a Mondoo Kubernetes operator integration, access the Integrations > Ad
 
    - To create a CronJob for each node every time you scan, select **CronJob-based**. This is the recommended method. It doesn't permanently allocate resources to the integration.
 
-   - If your nodes tend to be constantly in use, you can select **DaemonSet-based** scanning. This approach assures that Mondoo scans the nodes continuously, even during high-traffic times.
+   - If your nodes tend to be constantly in use, you can select **Deployment-based** scanning. This approach relies on a DaemonSet to assure that Mondoo scans the nodes continuously, even during high-traffic times.
 
 3. To continuously assess the security posture of workloads and resources in your cluster, enable **Scan workloads**.
 

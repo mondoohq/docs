@@ -22,8 +22,8 @@ const legacyRedirects = [
   //
   // This old CLI topic hang around surprisingly long in the Platform k8s docs
   {
-    from: "platform/infra/cloud/kubernetes/cli",
-    to: "cnspec/cloud/k8s",
+    from: "/platform/infra/cloud/kubernetes/cli",
+    to: "/cnspec/cloud/k8s",
   },
   // This is a URL that Mondoo added to AWS resources via the AWS integration CloudFormation
   // Don't delete it unless the product changes:

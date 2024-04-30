@@ -33,13 +33,25 @@ To set up a Mondoo Kubernetes operator integration, access the Integrations > Ad
 
 2. To continuously assess the security posture of nodes in your Kubernetes cluster, enable **Scan nodes**.
 
+   Choose how to scan cluster nodes:
+
+   - We strongly recommend that you leave **CronJob-based** selected. It's ideal for most infrastructures. A CronJob executes regularly to run the scans without permanently allocating any resources for Mondoo on cluster nodes.
+
+   - If your nodes tend to run near 100% resource utilization, that leaves no resources available for a CronJob to run a Mondoo scan. If you experience consistently failing Mondoo node scans, select **Deployment-based** scanning instead. This approach reserves resources for Mondoo on each cluster node. It relies on a DaemonSet to assure that Mondoo scans the nodes continuously, even during high-traffic times.
+
 3. To continuously assess the security posture of workloads and resources in your cluster, enable **Scan workloads**.
 
-4. To assess the security of every change applied to your Kubernetes cluster and display the results in the CI/CD view, enable **Scan incoming deployments**.
+   ![Kubernetes integration](/img/platform/infra/cloud/kubernetes/integration-setup-2.png)
 
-5. If you enable **Scan incoming deployments**, choose the tool to use for managing the Mondoo admission controller's certificates: **cert-manager** or **OpenShift**.
+4. To scan container images, enable **Workload image scanning**.
 
-### Scanning incoming deployments
+5. To control which namespaces Mondoo scans, enable **Namespace filtering** and list the namespaces to which you want to allow or deny access.
+
+6. To assess the security of every change applied to your Kubernetes cluster and display the results in the CI/CD view, enable **Scan incoming deployments**.
+
+7. If you enable **Scan incoming deployments**, choose the tool to use for managing the Mondoo admission controller's certificates: **CertManager** or **OpenShift**.
+
+### Scan incoming deployments
 
 Whenever a supported workload type is created or updated, the Kubernetes admission controller scans it.
 Currently, the admission controller can scan these workload types:

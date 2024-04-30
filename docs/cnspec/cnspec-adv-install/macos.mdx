@@ -54,16 +54,13 @@ To install the PKG non-interactively use the _installer_ utility in a Terminal:
 installer -pkg ./mondoo_(version)_darwin_universal.pkg -target /Library
 ```
 
-## Mitigating Hostname Changes
+## Mitigate hostname changes
 
-Sometimes under MacOS, when changing locations and having different networks, the Mac can change its hostname, resulting in two or more entries for the same workstation in the Mondoo dashboard when a test is run. To mitigate this problem, you can edit the Mondoo configuration file (`mondoo.yml`) and add the following line:
+Sometimes when changing locations and networks, macOS devices can change their hostnames. When this happens, you see two or more entries for the same workstation in the Mondoo Console. To mitigate this problem, open the Mondoo configuration file located at ~/.config/mondoo/mondoo.yml and add this line:
 
 ```yaml
 id-detector: machine-id
 ```
-
-The CLI configuration file is located at ~/.config/mondoo/mondoo.yml on Linux and macOS, and %HomePath%\mondoo\mondoo.yml on Windows.
-
 
 ## Learn more
 

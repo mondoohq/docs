@@ -12,6 +12,6 @@ Give people and software access to your Mondoo organizations and spaces:
 
 - Integrate Mondoo with [Microsoft Entra ID](/platform/maintain/access/saml) to enable single sign-on with SAML.
 
-- Use [service accounts](/platform/maintain/access/service_accounts) or [API tokens](/platform/maintain/access/api-tokens) to authenticate external services (such as CI pipelines) with the Mondoo Platform APIs.
+- Use [service accounts](/platform/maintain/access/service_accounts) or [API tokens](/platform/maintain/access/api-tokens) to authenticate external services (such as CI pipelines) with Mondoo Platform APIs.
 
 ---

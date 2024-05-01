@@ -56,7 +56,7 @@ installer -pkg ./mondoo_(version)_darwin_universal.pkg -target /Library
 
 ## Mitigate hostname changes
 
-Sometimes when changing locations and networks, macOS devices can change their hostnames. When this happens, you see two or more entries for the same workstation in the Mondoo Console. To mitigate this problem, open the Mondoo configuration file located at ~/.config/mondoo/mondoo.yml and add this line:
+Sometimes when changing locations and networks, macOS devices can change their hostname. When this happens, you see two or more entries for the same workstation in the Mondoo Console. To mitigate this problem, open the Mondoo configuration file located at ~/.config/mondoo/mondoo.yml and add this line:
 
 ```yaml
 id-detector: machine-id

@@ -327,7 +327,7 @@ module.exports = {
               href: "https://mondoo.com/cnquery",
             },
             {
-              label: "cnqspec",
+              label: "cnspec",
               href: "https://mondoo.com/cnspec",
             },
           ],

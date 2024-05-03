@@ -5,7 +5,7 @@ title: cnspec policy disable
 
 Disables a policy in the connected space
 
-```
+```bash
 cnspec policy disable UID/MRN [flags]
 ```
 

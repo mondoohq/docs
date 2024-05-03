@@ -5,7 +5,7 @@ title: cnspec policy lint
 
 Lint a policy bundle
 
-```
+```bash
 cnspec policy lint [path] [flags]
 ```
 

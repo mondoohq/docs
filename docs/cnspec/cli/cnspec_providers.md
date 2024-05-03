@@ -9,7 +9,7 @@ Providers add connectivity to all assets
 
 Manage your providers. List and install new ones or update existing ones.
 
-```
+```bash
 cnspec providers [flags]
 ```
 

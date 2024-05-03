@@ -5,7 +5,7 @@ title: cnspec policy info
 
 Show more info about a policy from the connected space
 
-```
+```bash
 cnspec policy info UID/MRN [flags]
 ```
 

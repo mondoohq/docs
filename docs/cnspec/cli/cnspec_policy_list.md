@@ -5,7 +5,7 @@ title: cnspec policy list
 
 List enabled policies in the connected space
 
-```
+```bash
 cnspec policy list [-f bundle] [flags]
 ```
 

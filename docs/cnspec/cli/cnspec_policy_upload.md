@@ -5,7 +5,7 @@ title: cnspec policy upload
 
 Upload a policy to the connected space
 
-```
+```bash
 cnspec policy upload my.mql.yaml [flags]
 ```
 

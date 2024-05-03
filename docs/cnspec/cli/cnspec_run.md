@@ -9,7 +9,7 @@ Run an MQL query
 
 Run an MQL query on the CLI and displays its results.
 
-```
+```bash
 cnspec run [flags]
 ```
 

@@ -5,7 +5,7 @@ title: cnspec migrate
 
 Migrate cnspec CLI configuration to the latest version
 
-```
+```bash
 cnspec migrate [flags]
 ```
 

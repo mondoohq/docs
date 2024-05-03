@@ -5,7 +5,7 @@ title: cnspec policy enable
 
 Enables a policy in the connected space
 
-```
+```bash
 cnspec policy enable UID/MRN [flags]
 ```
 

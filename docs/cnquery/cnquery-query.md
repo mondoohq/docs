@@ -116,7 +116,7 @@ Each resource has _fields_ that you use to return the value of a specific config
 
 You can filter results and return multiple fields at once:
 
-```
+```bash
 RESOURCE {FIELD1 FIELD2 FIELD3 }
 ```
 

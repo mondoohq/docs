@@ -41,7 +41,7 @@ Google Workspace environment rely on Google Cloud (GCP) even if you aren't other
 
 To test proper configuration, use the cnspec shell to run a sample query:
 
-```text
+```bash
 cnspec shell google-workspace --customer-id 5amp13iD --impersonated-user-email admin@domain.com --credentials-path /home/user/my-project-6646123456789.json
 ```
 

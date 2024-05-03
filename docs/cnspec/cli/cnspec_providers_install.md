@@ -5,7 +5,7 @@ title: cnspec providers install
 
 Install or update a provider.
 
-```
+```bash
 cnspec providers install <NAME[@VERSION]> [flags]
 ```
 

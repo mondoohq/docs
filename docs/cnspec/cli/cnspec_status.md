@@ -9,7 +9,7 @@ Verify access to Mondoo Platform
 
 Status sends a ping to Mondoo Platform to verify the credentials.
 
-```
+```bash
 cnspec status [flags]
 ```
 

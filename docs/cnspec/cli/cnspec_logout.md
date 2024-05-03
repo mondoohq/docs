@@ -10,7 +10,7 @@ Log out from Mondoo Platform
 This process also revokes the Mondoo Platform service account to
 ensure the credentials cannot be used in the future.
 
-```
+```bash
 cnspec logout [flags]
 ```
 

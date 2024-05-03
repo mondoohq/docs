@@ -5,7 +5,7 @@ title: cnspec policy format
 
 Apply style formatting to one or more policy bundles
 
-```
+```bash
 cnspec policy format [path] [flags]
 ```
 

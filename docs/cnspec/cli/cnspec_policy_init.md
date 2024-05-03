@@ -9,7 +9,7 @@ Create an example policy bundle
 
 Create an example policy bundle that you can use as a starting point. If you don't provide a filename, cnspec uses `example-policy.mql.yml`.
 
-```
+```bash
 cnspec policy init [path] [flags]
 ```
 

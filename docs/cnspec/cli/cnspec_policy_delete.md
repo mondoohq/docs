@@ -5,7 +5,7 @@ title: cnspec policy delete
 
 Delete a policy from the connected space
 
-```
+```bash
 cnspec policy delete UID/MRN [flags]
 ```
 

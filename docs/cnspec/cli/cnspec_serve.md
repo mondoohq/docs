@@ -5,7 +5,7 @@ title: cnspec serve
 
 Start cnspec in background mode
 
-```
+```bash
 cnspec serve [flags]
 ```
 

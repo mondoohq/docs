@@ -11,7 +11,7 @@ To learn more, read [Get Started with cnspec](/cnspec/).
 
 Open an interactive shell in which you can explore [MQL](/mql/home/) queries and assertions. Auto-complete and help make it easy.
 
-```
+```bash
 cnspec shell [flags]
 ```
 

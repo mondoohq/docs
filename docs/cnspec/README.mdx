@@ -26,7 +26,7 @@ Use the `cnspec scan` subcommand to check local and remote targets for misconfig
 
 This command evaluates the security of your local machine:
 
-```
+```bash
 cnspec scan local
 ```
 
@@ -75,25 +75,25 @@ You can also specify remote targets to scan.
 
 This example scans a docker image:
 
-```
+```bash
 cnspec scan docker image ubuntu:22.04
 ```
 
 This scans an aws account using the local AWS configuration profile:
 
-```
+```bash
 cnspec scan aws
 ```
 
 This scans a Kubernetes cluster using your local kubectl config:
 
-```
+```bash
 cnspec scan k8s
 ```
 
 This scans a GitHub repository:
 
-```
+```bash
 export GITHUB_TOKEN=<personal_access_token>
 cnspec scan github repo <org/repo>
 ```
@@ -108,7 +108,7 @@ To save the results of your scan to a JSON file, append your scan command with t
 
 For `FILENAME`, substitute the name you want to give the file. For example, this scans a Kubernetes cluster and reports the results to a file named `k8s-test-results.json`:
 
-```
+```bash
 cnspec scan k8s -o json > k8s-test-results.json
 ```
 

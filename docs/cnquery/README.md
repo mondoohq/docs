@@ -49,13 +49,13 @@ If you install cnquery on machines that can't download and install updates (beca
 
 The easiest way to discover cnquery's capabilities is to use the interactive shell, which has auto-complete to guide you:
 
-```
+```bash
 cnquery shell
 ```
 
 Once inside the shell, you can enter MQL queries. For example, this query returns the name of the current machine and the platform it's running:
 
-```coffee
+```bash
 asset { name title }
 ```
 

@@ -5,7 +5,7 @@ title: cnspec policy download
 
 download a policy to a local bundle file
 
-```
+```bash
 cnspec policy download UID/MRN [flags]
 ```
 

@@ -8,41 +8,16 @@ description: Query Google Workspace configuration
 
 Use cnquery to inventory and query your Google Workspace environment.
 
-## Configure access to the Google Workspace API
+import Partial from "../../platform/infra/saas/_google-workspace-inc.mdx";
 
-:::note
+<Partial />{" "}
 
-These steps for configuring [Admin SDK API](https://developers.google.com/admin-sdk) access to your
-Google Workspace environment rely on Google Cloud (GCP) even if you aren't otherwise using GCP.
-
-:::
-
-1. [Create a Google Workspace service account](https://support.google.com/a/answer/7378726).
-   - In addition to the APIs that Google requires, also enable:
-     - Cloud Identity API
-     - Google Drive API
-   - After creating the service account, be sure to record the **Unique ID** on the details page. This is the Client ID to use in the next step.
-   - Be sure to download and protect the JSON credentials file.
-2. Log into the [Google Workspace Admin Portal](https://admin.google.com).
-
-3. In the left-side navigation, select **Security -> Access and data controls -> API controls**.
-
-4. Select [**Domain-wide Delegation**](https://developers.google.com/workspace/guides/create-credentials#delegate_domain-wide_authority_to_your_service_account) and then select **Add new**.
-
-5. For the **Client ID** enter the **Unique ID** of the service account you created.
-
-6. Paste this comma-delimited list to add all 17 read-only OAuth scopes:
-
-   ```text
-   https://www.googleapis.com/auth/admin.chrome.printers.readonly,https://www.googleapis.com/auth/admin.directory.customer.readonly,https://www.googleapis.com/auth/admin.directory.device.chromeos.readonly,https://www.googleapis.com/auth/admin.directory.device.mobile.readonly,https://www.googleapis.com/auth/admin.directory.domain.readonly,https://www.googleapis.com/auth/admin.directory.group.member.readonly,https://www.googleapis.com/auth/admin.directory.group.readonly,https://www.googleapis.com/auth/admin.directory.orgunit.readonly,https://www.googleapis.com/auth/admin.directory.resource.calendar.readonly,https://www.googleapis.com/auth/admin.directory.rolemanagement.readonly,https://www.googleapis.com/auth/admin.directory.user.alias.readonly,https://www.googleapis.com/auth/admin.directory.user.readonly,https://www.googleapis.com/auth/admin.directory.userschema.readonly,https://www.googleapis.com/auth/admin.reports.audit.readonly,https://www.googleapis.com/auth/admin.reports.usage.readonly,https://www.googleapis.com/auth/admin.directory.user.security,https://www.googleapis.com/auth/cloud-identity.groups.readonly
-   ```
-
-7. In the [Google Workspace Admin Portal](https://admin.google.com), navigate to **Account -> Account Settings** and record the **Customer ID**.
+## Use cnquery shell to test your configuration
 
 To test proper configuration, use the cnquery shell to run a sample query:
 
 ```text
-$ cnquery shell google-workspace --customer-id 5amp13iD --impersonated-user-email admin@domain.com --credentials-path /home/user/my-project-6646123456789.json
+cnquery shell google-workspace --customer-id 5amp13iD --impersonated-user-email admin@domain.com --credentials-path /home/user/my-project-6646123456789.json
 ```
 
 | For...                      | Substitute...                                               |
@@ -140,6 +115,6 @@ googleworkspace.users[0].usageReport.account: {
 
 - To learn more about how the MQL query language works, read [Write Effective MQL](/mql/mql.write/).
 
-- For more information, explore the complete [Mondoo Google Workspace Resource Pack Reference](/mql/resources/google-workspace-pack/).
+- To learn more about the information Mondoo can retrieve from Google Workspace, explore the complete [Mondoo Google Workspace Resource Pack Reference](/mql/resources/google-workspace-pack/).
 
 ---

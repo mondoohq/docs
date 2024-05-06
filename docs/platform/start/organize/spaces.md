@@ -21,15 +21,14 @@ You can create new spaces as needed and use them to manage cloud account integra
 ### Create a new space
 
 1. [Navigate](/platform/start/navigate) to the organization in which you want to create a space.
-2. Select **CREATE NEW SPACE**
-3. Provide a name for the space
-4. Select **CREATE SPACE**
 
-:::info
+2. Select **CREATE NEW SPACE**.
 
-Space IDs are unique namespaces separate from the space display name. You can't edit a space ID after you create the space. The ID must consist of lowercase letters, digits, or hyphens. It must start with a lowercase letter and end with a letter or number.
+3. Enter a name for the space.  The name must be between 4 and 29 characters long and can include letters, numbers, single quotes, hyphens, spaces, and exclamation points.
 
-:::
+4. Mondoo picks a space ID. To customize the ID, select **EDIT** and enter a new ID. The ID must be between 7 and 34 characters and can include lowercase letters, numbers, single quotes, hyphens, spaces, and exclamation points. It must start with a lowercase letter and end with a letter or number.
+
+5. Select **CREATE SPACE**.
 
 ### Delete a space
 

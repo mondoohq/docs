@@ -24,7 +24,7 @@ You can create new spaces as needed and use them to manage cloud account integra
 
 2. Select **CREATE NEW SPACE**.
 
-3. Enter a name for the space.  The name must be between 4 and 29 characters long and can include letters, numbers, single quotes, hyphens, spaces, and exclamation points.
+3. Enter a name for the space. The name must be between 4 and 29 characters long and can include letters, numbers, single quotes, hyphens, spaces, and exclamation points.
 
 4. Mondoo picks a space ID. To customize the ID, select **EDIT** and enter a new ID. The ID must be between 7 and 34 characters and can include lowercase letters, numbers, single quotes, hyphens, spaces, and exclamation points. It must start with a lowercase letter and end with a letter or number.
 

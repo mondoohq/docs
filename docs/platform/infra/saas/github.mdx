@@ -5,7 +5,7 @@ sidebar_position: 2
 description: Assess the security of your GitHub repositories and organization with Mondoo
 ---
 
-You can configure Mondoo to continuously scan your GitHub organization and repositories. Mondoo scans find misconfigurations and vulnerabilities that put your organization at risk. You deploy the integration once and always get the latest security assessments.
+You can configure Mondoo to continuously scan an entire GitHub organization or individual repositories. Mondoo scans find misconfigurations and vulnerabilities that put your business at risk. You deploy the integration once and always get the latest security assessments.
 
 :::tip
 
@@ -17,11 +17,13 @@ You can also use Mondoo to automatically scan Kubernetes manifests, Terraform co
 
 - [A Mondoo account](/platform/start/plat-start-acct/)
 
-- Access to a GitHub repository
+- Access to a GitHub organization or repository
 
 ## Create a GitHub personal access token to give Mondoo access to the repository
 
 A _personal access token_ gives Mondoo the ability to access GitHub resources on your behalf. For Mondoo to continuously monitor your GitHub repository, you must create a personal access token.
+
+To learn more about personal access tokens, read [Managing your personal access tokens](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) in the GitHub documentation.
 
 1. Log into GitHub. If you haven't verified your email address with GitHub, do that now.
 
@@ -29,31 +31,24 @@ A _personal access token_ gives Mondoo the ability to access GitHub resources on
 
 3. In the left sidebar, select **Developer settings**.
 
-4. In the left sidebar, under **Personal access tokens**, select **Fine-grained tokens**.
+4. In the left sidebar, under **Personal access tokens**, select **Tokens (classic)**.
 
-5. Select **Generate new token**.
+5. Near the top-right corner of the page, select the **Generate new token** drop-down and select **Generate new token (classic)**.
 
-6. Under **Token name**, enter a name for the token, such as `mondoo-frontend-repo`.
+6. Under **Note**, explain the purpose of the token, such as `Mondoo security scan access`.
 
-7. Under **Expiration**, specify the many days after which the token expires.
+7. Under **Expiration**, specify the number of days before the token expires.
 
-8. Under **Description**, explain the purpose of the token, such as `Gives Mondoo read-only access to the frontend repo`.
+8. Under **Select scopes**, check these boxes:
 
-9. Under **Resource owner**, the owner of the repository you want to monitor. The token you create can only access resources owned by the selected resource owner.
+   - read:org
+   - read:repo_hook
+   - admin:org_hook
+   - read:project
 
-   If your organization requires approval for fine-grained personal access tokens, you see a box below the **Resource owner** drop-down list. In that box, enter your justification for the new token.
+9. Select the **Generate token** button.
 
-   If you don't see the owner of the repository you want to monitor, it's likely that they don't support fine-grained personal access tokens. To learn more, read [Setting a personal access token policy for your organization](https://docs.github.com/en/organizations/managing-programmatic-access-to-your-organization/setting-a-personal-access-token-policy-for-your-organization).
-
-10. Under Repository access, select **Only select repositories**.
-
-11. In the **Selected repositories** list, choose the repository you want to monitor with Mondoo.
-
-12. Under **Permissions**, select **Repository permissions** and give the token **Read-only** access to every permission that has a Read-only option.
-
-13. Select the **Generate token** button. (If your resource owner requires approval for tokens, the button reads **Generate token and request access**.)
-
-To learn more, read [Creating a fine-grained personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#creating-a-fine-grained-personal-access-token) in the GitHub documentation.
+10. Copy the token that GitHub generates. You need in in the next steps.
 
 ## Set up a GitHub integration
 
@@ -67,17 +62,23 @@ To learn more, read [Creating a fine-grained personal access token](https://docs
 
      ![Add a GitHub Integration in Mondoo](/img/platform/infra/saas/github/github.png)
 
-2. In the **Choose an integration name** box, enter a name for the integration. Make it a name that lets you easily recognize the GitHub repository.
+2. In the **Choose an integration name** box, enter a name for the integration. Make it a name that lets you easily recognize the GitHub organization or repository.
 
-3. In the **Organization** box, enter the name of the GitHub organization containing the repository you want to monitor. In the **Repository** box, enter the name of the repository. Find these values in the URL path to the repository landing page. For example, this organization's name is _Lunalectric_ and the repository is _frontend_:
+3. Under **Select your integration type**, choose whether to continuously scan an entire organization or a single repository.
+
+4. Specify the organization or repository to scan:
+
+   - If you're scanning an organization, type its name in the **Organization** box.
+
+   - If you're scanning a repository, in the **Owner** box, enter the name of the GitHub user or organization that owns the repository you want to monitor. In the **Repository** box, enter the name of the repository. Find these values in the URL path to the repository landing page. For example, this owner's name is _Lunalectric_ and the repository is _frontend_:
 
    ![GitHub organization name](/img/platform/infra/saas/github/repo.png)
 
-4. In the **Provide your personal access token** box, paste the GitHub token you generated in the previous section.
+5. In the **Provide your personal access token** box, paste the GitHub token you generated in the previous section.
 
-5. Select the **START SCANNING** button.
+6. Select the **START SCANNING** button.
 
-6. On the Recommended Policies page, enable the policies on which you want to base assessments of your GitHub repository. To learn more, read [Manage Policies](/platform/security/posture/policies/).
+7. On the Recommended Policies page, enable the policies on which you want to base assessments of your GitHub repository. To learn more, read [Manage Policies](/platform/security/posture/policies/).
 
    Mondoo begins scanning your GitHub repository and, when completed, presents results on the INVENTORY page.
 

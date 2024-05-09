@@ -22,6 +22,7 @@ Dockerfile stages
 | labels     | map[string]string                                     | LABEL instructions in the Dockerfile                           |
 | run        | &#91;&#93;[docker.file.run](docker.file.run.md)       | RUN instructions in this Dockerfile                            |
 | cmd        | [docker.file.run](docker.file.run.md)                 | CMD instructions in this Dockerfile                            |
+| user       | [docker.file.user](docker.file.user.md)               | USER instruction in this Dockerfile                            |
 | entrypoint | [docker.file.run](docker.file.run.md)                 | ENTRYPOINT instructions in this Dockerfile                     |
 | add        | &#91;&#93;[docker.file.add](docker.file.add.md)       | ADD instructions in this Dockerfile                            |
 | copy       | &#91;&#93;[docker.file.copy](docker.file.copy.md)     | COPY instructions in this Dockerfile                           |

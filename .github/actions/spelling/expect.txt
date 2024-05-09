@@ -108,6 +108,7 @@ efc
 efcfc
 Ehd
 eig
+eip
 EKfj
 ekm
 Ekoslaq
@@ -229,6 +230,7 @@ mysystem
 mytarget
 myuser
 nameterraform
+natgateway
 NDdh
 NDgz
 netsh

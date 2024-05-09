@@ -31,6 +31,7 @@ Use the `aws.ec2` resource to assess the configuration of AWS EC2 instances.
 | vpnConnections         | &#91;&#93;[aws.ec2.vpnconnection](aws.ec2.vpnconnection.md)     | List of VPN connections                                                         |
 | networkAcls            | &#91;&#93;[aws.ec2.networkacl](aws.ec2.networkacl.md)           | List of network ACLs                                                            |
 | keypairs               | &#91;&#93;[aws.ec2.keypair](aws.ec2.keypair.md)                 | List of keypairs for the account                                                |
+| eips                   | &#91;&#93;[aws.ec2.eip](aws.ec2.eip.md)                         | List of Elastic IPs (EIPs)                                                      |
 
 **Examples**
 

@@ -35,6 +35,7 @@ Resources included in this pack:
 | [docker.file.from](docker.file.from.md)                 | Dockerfile FROM instructions                               |
 | [docker.file.run](docker.file.run.md)                   | Dockerfile RUN instructions                                |
 | [docker.file.stage](docker.file.stage.md)               | Dockerfile stages                                          |
+| [docker.file.user](docker.file.user.md)                 | Dockerfile USER instructions                               |
 | [docker.image](docker.image.md)                         | Docker image                                               |
 | [file](file.md)                                         | File on the system                                         |
 | [file.permissions](file.permissions.md)                 | Access permissions for a given file                        |

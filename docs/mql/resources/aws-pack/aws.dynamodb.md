@@ -26,6 +26,7 @@ Use the `aws.dynamodb` resource to assess the configuration of the AWS DynamoDB.
 | globalTables | &#91;&#93;[aws.dynamodb.globaltable](aws.dynamodb.globaltable.md) | List of global tables for DynamoDB           |
 | tables       | &#91;&#93;[aws.dynamodb.table](aws.dynamodb.table.md)             | List of tables for DynamoDB                  |
 | limits       | &#91;&#93;[aws.dynamodb.limit](aws.dynamodb.limit.md)             | List of DynamoDB settings across all regions |
+| exports      | &#91;&#93;[aws.dynamodb.export](aws.dynamodb.export.md)           | List of exports for DynamoDB                 |
 
 **Examples**
 

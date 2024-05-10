@@ -1,16 +1,16 @@
 ---
-title: Use SAML (Microsoft Entra ID) for Mondoo Access
-sidebar_label: SAML (Microsoft Entra ID)
+title: Manage Mondoo Access with Microsoft Entra ID and SAML
+sidebar_label: Microsoft Entra ID - SAML
 sidebar_position: 3
-description: Configure SAML support in for Mondoo Platform, including Microsoft Entra ID.
+description: Configure SAML/Microsoft Entra ID support for Mondoo Platform.
 image: /img/featured_img/mondoo-feature.jpg
 ---
 
-The integration of Mondoo with Microsoft Entra ID (formerly Active Directory) provides you with single sign-on (SSO), which has these advantages:
+The integration of Mondoo with Microsoft Entra ID (formerly Active Directory) provides you with single sign-on (SSO), which lets you:
 
 - Control who has access to Mondoo using Entra
 - Enable users to log into Mondoo with their Entra account
-- Central user management using Entra
+- Centrally manage users with Entra
 
 ## Prerequisites
 

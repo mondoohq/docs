@@ -1,0 +1,65 @@
+---
+title: Manage Mondoo Access with Okta and SCIM
+sidebar_label: Okta - SCIM
+sidebar_position: 5
+description: Configure Okta support for Mondoo Platform.
+image: /img/featured_img/mondoo-feature.jpg
+---
+
+Integrate Mondoo with Okta so you can:
+
+- Enable users to log into Mondoo with their Okta account
+- Control who has access to Mondoo using Okta
+- Centrally manage users with Okta
+
+## Prerequisites
+
+To configure the integration, you need:
+
+- An Okta account
+- A privately hosted Mondoo [Enterprise account](https://mondoo.com/pricing)
+
+## Configure Okta single sign-on for Mondoo
+
+To allow users to log into the Mondoo Console with their Okta-provided credentials, you create an Okta app integration for Mondoo.
+
+1. Log into your Okta Admin Console.
+
+2. In the left menu, select **Applications**.
+
+   ![Okta applications](/img/platform/maintain/access/okta/applications.png)
+
+3. Select the **Create App Integration** button.
+
+   ![Okta new app integration](/img/platform/maintain/access/okta/create-app.png)
+
+4. For the **Sign-in method**, select **OIDC - OpenID Connect** and for the **Application type**, select **Single-Page Application**. Then select the **Next** button.
+
+5. For the **App integration name**, enter **Mondoo**.
+
+6. For **Grant type**, select **Authorization Code** and **Refresh Token**.
+
+7. For the **Sign-in redirect URI** and **Sign-out redirect URI**, enter the private domain you type to access the Mondoo Console, such as `https://console.YOUR-COMPANY-NAME.mondoo.com/`.
+
+8. For **Assignments**, choose whether to give access to this new app integration for everyone in your Okta org, limit access to selected groups (and  enter the specific groups names), or defer assignments until later.
+
+9. Select the **Save** button.
+
+   Okta creates the app integration.
+
+   ![Okta applications](/img/platform/maintain/access/okta/app-props.png)
+
+10. On the **General** tab of the app integration properties, copy the **Client ID**.
+
+   Give the Client ID to your Mondoo representative, along with your Issuer URL, which is typically based on your company name: `https://YOUR-COMPANY-NAME.okta.com`
+
+   For example, note the company **lunalectric** in the image above (in the top-right corner). The Issuer URL is `https://lunalectric.okta.com`.
+
+## Enable Okta user management with SCIM
+
+
+### Identify your Mondoo API and SCIM URLs
+
+To integrate Mondoo with Okta, you need your Mondoo API URL and Mondoo SCIM URL.
+
+

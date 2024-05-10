@@ -47,7 +47,7 @@ Organization audit logs are available via Mondoo's GraphQL API. To access an org
 
 Use this GraphQL query to get the audit log for an organization, providing the organization's ID:
 
-```
+```json
 {
   "variables": {
     "first": 25,
@@ -92,7 +92,7 @@ If you're operating in the EU region, replace the `https://api.mondoo.com/query`
 
 :::
 
-```
+```json
 $ cat query.json
 {
   "variables": {
@@ -169,3 +169,58 @@ $ curl -g -X POST -H "Authorization: Bearer $API_TOKEN" -H "Content-Type: applic
 Can't find what you need? Join our <a href="https://mondoo.link/slack">community Slack channel</a> to chat with us and other Mondoo users.
 
 ---
+
+### Filtering audit logs based on their timestamp
+
+It is possible to filter the audit logs based on their timestamp. To do so, add a timestamp filter to your query:
+
+```graphql
+query AuditLogForwardPagination(
+  $first: Int
+  $after: String
+  $orderBy: AuditLogOrder = { direction: DESC, field: TIMESTAMP }
+  $resourceMrn: String!
+  $timestampFilter: TimestampFilter
+) {
+  auditlog(
+    first: $first
+    after: $after
+    orderBy: $orderBy
+    resourceMrn: $resourceMrn
+    timestampFilter: $timestampFilter
+  ) {
+    totalCount
+    edges {
+      cursor
+      node {
+        identity {
+          name
+          mrn
+        }
+        resource
+        action
+        timestamp
+        msg
+      }
+    }
+    pageInfo {
+      startCursor
+      endCursor
+      hasNextPage
+    }
+  }
+}
+```
+
+For example, to retrieve the audit logs for an organization that occurred after a a specific timestamp, add the following variables to your query:
+
+```json
+"variables": {
+  "first": 25,
+  "resourceMrn": "//captain.api.mondoo.app/organizations/<REPLACE_WITH_ORGANIZATION_ID>",
+  "timestampFilter": {
+    "timestamp": "2024-05-06T13:48:33+03:00",
+    "operator": "LT"
+  }
+}
+```

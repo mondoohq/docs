@@ -68,7 +68,7 @@ It asserts that your tenancy does not have the ID `foo`.
 
 cnspec indicates that the check is true, that your tenancy is not named `foo`:
 
-```coffee
+```coffeescript
 oci.tenancy: {
   id != "foo": true
 }
@@ -156,7 +156,7 @@ oci.identity.users.all( mfaActivated )
 
 If the test passes, that means all users have MFA enabled. If the test fails, cnspec lists all the user accounts that don't have MFA enabled.
 
-```coffee
+```coffeescript
 [failed] [].all()
   actual:   [
     0: oci.identity.user {

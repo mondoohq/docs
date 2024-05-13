@@ -28,13 +28,13 @@ The `aws.accessAnalyzer` resource returns a list AWS IAM Access Analyzers config
 
 Return a list of AWS IAM Access Analyzers configured across the AWS account
 
-```coffee
+```coffeescript
 aws.accessAnalyzer.analyzers
 ```
 
 Return a list of `aws.accessAnalyzer.analyzer` resources and the value for specified fields
 
-```coffee
+```coffeescript
 aws.accessAnalyzer.analyzers {
   arn
   name
@@ -45,7 +45,7 @@ aws.accessAnalyzer.analyzers {
 
 Ensure that IAM Access analyzer is enabled for all regions
 
-```coffee
+```coffeescript
 aws.accessAnalyzer.analyzers.all(
   status == "ACTIVE"
 )

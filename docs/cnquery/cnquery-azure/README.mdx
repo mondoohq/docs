@@ -52,13 +52,13 @@ cnquery shell azure
 
 Once inside the shell, use the `help` command to learn what Azure subscription resources you can query. This command lists all the Azure subscription resources:
 
-```coffee
+```coffeescript
 help azure.subscription
 ```
 
 From the resulting list, you can drill down further. For example, enter this command to list all the Azure PostgreSQL resources you can query:
 
-```coffee
+```coffeescript
 help azure.subscription.postgreSql
 ```
 
@@ -70,7 +70,7 @@ Now that you know how to discover what's possible with cnquery, let's run some a
 
 This query lists all the storage accounts in the project:
 
-```coffee
+```coffeescript
 azure.subscription.storage.accounts
 ```
 
@@ -78,7 +78,7 @@ azure.subscription.storage.accounts
 
 For a more detailed report, you can specify that you want all fields:
 
-```coffee
+```coffeescript
 azure.subscription.storage.accounts { * }
 ```
 
@@ -88,7 +88,7 @@ For every account, cnquery provides information about their status and settings.
 
 If you're interested in only some details, specify the fields you want in braces. For example, this query asks for each user's ARN, when they last changed their password, and whether they have MFA enabled:
 
-```coffee
+```coffeescript
 azure.subscription.storage.accounts { id type properties }
 ```
 
@@ -98,7 +98,7 @@ You can filter results based on any fields. Specify the criteria using the `wher
 
 For example, this filters results based on status:
 
-```coffee
+```coffeescript
 azure.subscription.storage.accounts.where(kind == "BlobStorage") { id name type }
 ```
 

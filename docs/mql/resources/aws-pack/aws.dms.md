@@ -28,13 +28,13 @@ Use the `aws.dms` resource to assess the configuration of the AWS Database Migra
 
 Return a list of AWS Database Migration service replication instances
 
-```coffee
+```coffeescript
 aws.dms.replicationInstances
 ```
 
 Check whether AWS Database Migration Service replication instances are public
 
-```coffee
+```coffeescript
 aws.dms.replicationInstances.none(
   _['PubliclyAccessible'] == true
 )

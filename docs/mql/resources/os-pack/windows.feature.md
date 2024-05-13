@@ -31,12 +31,12 @@ windows.feature(name string)
 
 Check that a Windows features is installed
 
-```coffee
+```coffeescript
 windows.feature('SNMP-Service').installed
 ```
 
 Check that a specific feature is not installed
 
-```coffee
+```coffeescript
 windows.feature('Windows-Defender').installed == false
 ```

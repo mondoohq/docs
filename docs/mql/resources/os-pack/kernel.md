@@ -25,24 +25,24 @@ System kernel information
 
 List all kernel modules
 
-```coffee
+```coffeescript
 kernel.modules { name loaded size }
 ```
 
 List all loaded kernel modules
 
-```coffee
+```coffeescript
 kernel.modules.where( loaded == true ) { name }
 ```
 
 List all information from running kernel
 
-```coffee
+```coffeescript
 kernel { info }
 ```
 
 List version from running kernel
 
-```coffee
+```coffeescript
 kernel { info['version'] }
 ```

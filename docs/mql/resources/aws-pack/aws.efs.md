@@ -28,7 +28,7 @@ Use the `aws.efs` resource to assess the configuration of Amazon Elastic File Sy
 
 Return a list of `aws.efs.filesystem` resources representing any EFS deployments across all enabled regions in the account
 
-```coffee
+```coffeescript
 aws.efs.filesystems {
   name
   id
@@ -42,7 +42,7 @@ aws.efs.filesystems {
 
 Check whether all EFS systems are configured to encrypt file data using KMS
 
-```coffee
+```coffeescript
 aws.efs.filesystems.all(
   encrypted == true && kmsKey.arn == /^arn:aws:kms:.*/
 )

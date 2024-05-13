@@ -34,7 +34,7 @@ The `esxi.host` and `esxi.vm` resource is deprecated. Please use `vsphere.host` 
 
 Check that all kernel modules are signed
 
-```coffee
+```coffeescript
 esxi.host {
   kernelModules {
     signedStatus == "Signed"

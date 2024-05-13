@@ -16,7 +16,7 @@ We'll continue working in the cnquery shell, which makes running individual quer
 
 cnquery provides answers to any question about your EC2 instances. To discover all the resources and fields you can query, read [aws.ec2](/mql/resources/aws-pack/aws.ec2/). You can also use the `help` command in the shell:
 
-```coffee
+```coffeescript
 help aws.ec2
 ```
 
@@ -26,13 +26,13 @@ In this tutorial we'll explore just a few of the possibilities.
 
 This query gathers all your EC2 instances:
 
-```coffee
+```coffeescript
 aws.ec2.instances
 ```
 
 It returns each instance's ARN and current state:
 
-```coffee
+```coffeescript
 aws.ec2.instances: [
   0: aws.ec2.instance arn="arn:aws:ec2:us-east-1:921877552404:instance/i-06e2eaa19a4fa883e" state="stopped"
   1: aws.ec2.instance arn="arn:aws:ec2:us-east-1:921877552404:instance/i-0facc86d89af823af" state="stopped"
@@ -46,13 +46,13 @@ aws.ec2.instances: [
 
 You can request specific data by including the field names. For example, this query collects the ARN and any assigned tags for each instance:
 
-```coffee
+```coffeescript
 aws.ec2.instances { arn tags }
 ```
 
 It returns a list with only the information you asked for:
 
-```coffee
+```coffeescript
 aws.ec2.instances: [
   0: {
     tags: {
@@ -93,13 +93,13 @@ You can filter results based on any fields. Specify the criteria using the `wher
 
 For example, this query requests only EC2 instances that do not have an `owner` tag:
 
-```coffee
+```coffeescript
 aws.ec2.instances.where(tags['owner'] == null)
 ```
 
 It lists each instance's ARN and status:
 
-```coffee
+```coffeescript
 aws.ec2.instances.where: [
   0: aws.ec2.instance arn="arn:aws:ec2:us-east-1:921877552404:instance/i-06e2eaa19a4fa883e" state="stopped"
   1: aws.ec2.instance arn="arn:aws:ec2:us-east-1:921877552404:instance/i-0facc86d89af823af" state="stopped"
@@ -110,7 +110,7 @@ aws.ec2.instances.where: [
 
 This finds large (more expensive) EC2 instances:
 
-```coffee
+```coffeescript
 aws.ec2.instances.where(instanceType == /^.*.large$/) { arn instanceType }
 ```
 
@@ -118,7 +118,7 @@ It returns a list of all instances that have an `instanceType` with `large` in t
 
 This similar query finds T-type instances (such as T2, or T4g):
 
-```coffee
+```coffeescript
 aws.ec2.instances.where(instanceType == /^[t].*/) { instanceType }
 ```
 

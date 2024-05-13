@@ -31,6 +31,6 @@ User on this system
 
 Display a specific user's home directory and UID
 
-```coffee
+```coffeescript
 user(name: 'vagrant') { home uid }
 ```

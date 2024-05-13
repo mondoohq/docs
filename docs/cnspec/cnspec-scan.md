@@ -34,7 +34,7 @@ The shell features auto-complete, which makes it easy to explore.
 
 Once inside the shell, you can enter MQL checks like this:
 
-```coffee
+```coffeescript
 ports.listening.none( port == 23 )
 ```
 

@@ -28,7 +28,7 @@ Use the `aws.guardduty` resource to assess the configuration of the AWS GuardDut
 
 Return a list of Amazon GuardDuty Detectors along with the values for specified fields
 
-```coffee
+```coffeescript
 aws.guardduty.detectors {
   id
   region
@@ -40,7 +40,7 @@ aws.guardduty.detectors {
 
 Check that guardduty is enabled in all regions
 
-```coffee
+```coffeescript
 aws.guardduty.detectors.all( status == "ENABLED" )
 ```
 

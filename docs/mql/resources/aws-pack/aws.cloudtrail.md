@@ -28,7 +28,7 @@ Use the `aws.cloudtrail` resource to assess the configuration of AWS CloudTrails
 
 Return a list of `aws.cloudtrail.trail` resources representing all AWS Cloud Trails configured across all enabled regions and the values for specified fields
 
-```coffee
+```coffeescript
 aws.cloudtrail.trails {
   arn
   name
@@ -48,7 +48,7 @@ aws.cloudtrail.trails {
 }
 ```
 
-```coffee
+```coffeescript
 aws.cloudtrail.trails.any(
   isMultiRegionTrail && status['IsLogging']
 )

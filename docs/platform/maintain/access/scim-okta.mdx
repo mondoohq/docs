@@ -17,11 +17,14 @@ Integrate Mondoo with Okta so you can:
 To configure the integration, you need:
 
 - An Okta account
+
 - A privately hosted Mondoo [Enterprise account](https://mondoo.com/pricing)
 
-## Configure Okta single sign-on for Mondoo
 
-To allow users to log into the Mondoo Console with their Okta-provided credentials, you create an Okta app integration for Mondoo.
+
+## Configure Okta single sign-on for Mondoo (using OIDC)
+
+To allow users to log into the Mondoo Console with their Okta-provided credentials, you create an Okta app integration for Mondoo. This implementation relies on [OpenID Connect (OIDC)](https://openid.net/developers/how-connect-works/) to authenticate users.
 
 1. Log into your Okta Admin Console.
 
@@ -57,11 +60,62 @@ To allow users to log into the Mondoo Console with their Okta-provided credentia
 
    For example, note the company **lunalectric** in the image above (in the top-right corner). The Issuer URL is `https://lunalectric.okta.com`.
 
-## Enable Okta user management with SCIM
+## Manage Mondoo users with Okta (using SCIM)
 
+To centralize user management for your organization, give your Okta account full control over who can use Mondoo. This implementation relies on the System for Cross-domain Identity Management (SCIM) protocol.
 
-### Identify your Mondoo API and SCIM URLs
+### Step A: Identify your Mondoo API and SCIM base URLs
 
 To integrate Mondoo with Okta, you need your Mondoo API URL and Mondoo SCIM URL.
+
+You can determine your Mondoo API URL based on the URL you use to access the Mondoo Console: Replace `console` with `api`. So if your Mondoo Console URL is `https://console.YOUR-COMPANY-NAME.mondoo.com` then your Mondoo API URL is `https://api.YOUR-COMPANY-NAME.mondoo.com`.
+
+Add `/scim/v2` to the API URL to determine your SCIM base URL. So if your Mondoo API URL is `https://api.YOUR-COMPANY-NAME.mondoo.com` then your SCIM base URL is `https://api.YOUR-COMPANY-NAME.mondoo.com/scim/v2`.
+
+### Step B: Create a Mondoo API token for your organization
+
+To manage Mondoo users, Okta needs an API token from Mondoo that gives Okta **edit** permission for the Mondoo organization.
+
+1. [Create a new organization API token with edit permission.](https://mondoo.com/docs/platform/maintain/access/api-tokens/#generate-an-api-token-for-access-to-all-spaces-in-an-organization)
+
+2. Keep the Mondoo Console open with your new token. You need it in the next step.
+
+### Step C: FOO BAR FOO FOO FOO
+
+DEETS
+
+1. Log into your Okta Admin Console.
+
+2. In the left menu, select **Applications**.
+
+   ![Okta applications](/img/platform/maintain/access/okta/applications.png)
+
+3. Select the **Browse App Catalog** button.
+
+   ![Okta catalog search](/img/platform/maintain/access/okta/search-scim.png)
+
+4. Use the catalog search box to search for “SCIM 2.0 Bearer” and select the “SCIM 2.0 Test App (OAuth Bearer Token)” application.
+
+   ![Okta SCIM application](/img/platform/maintain/access/okta/scim-info.png)
+
+5. Select the **Add Integration** button.
+
+   ![Add Okta SCIM application](/img/platform/maintain/access/okta/add-start.png)
+
+6. On the **General Settings** tab, keep the default options and select the **Next** button.
+
+7. Your Mondoo-Okta integration doesn't use any of that information on the **Sign-On Options: Required** tab, so just select the **Done** button.
+
+8. Select the **Provisioning** tab, select **Configure API Integration**, and check the **Enable API Integration** box.
+
+   ![Okta provisioning](/img/platform/maintain/access/okta/provisioning.png)
+
+9. In the **SCIM 2.0 Base Url** box, enter the SCIM base URL you identified in Step A.
+
+10. In the **OAuth Bearer Token** box, paste the token you generated in Step B.
+
+11. Select the **Test API Credentials** button to ensure that the token and URL you provided are correct.
+
+12. Select the **Save** button.
 
 

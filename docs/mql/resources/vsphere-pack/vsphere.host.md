@@ -42,7 +42,7 @@ vSphere ESXi host resource
 
 Verify the Software AcceptanceLevel for ESXi host
 
-```coffee
+```coffeescript
 // targeting a single ESXi host
 esxi.host {
   acceptanceLevel == 'VMwareCertified' || acceptanceLevel == 'VMwareAccepted' || acceptanceLevel == 'PartnerSupported'
@@ -58,7 +58,7 @@ vsphere.datacenters {
 
 Verify that each vib is "VMwareCertified" or "VMwareAccepted"
 
-```coffee
+```coffeescript
 esxi.host {
   packages {
     acceptanceLevel == 'VMwareCertified' || acceptanceLevel == 'VMwareAccepted' || acceptanceLevel == 'PartnerSupported'

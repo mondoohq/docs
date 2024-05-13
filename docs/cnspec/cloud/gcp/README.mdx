@@ -83,7 +83,7 @@ It asserts that your GCP project ID value is not `foo`.
 
 cnspec returns `[ok]` to indicate that the test passed, and includes the actual value of the GCP project ID, similar to this:
 
-```coffee
+```coffeescript
 [ok] value: "luna-dev-262317"
 ```
 
@@ -208,19 +208,19 @@ Now that you know how to discover what's possible with cnspec, let's run some ac
 
 This test assures that all Cloud Storage buckets have uniform bucket-level access enabled:
 
-```coffee
+```coffeescript
 gcp.project.storageService.buckets.all( iamConfiguration['UniformBucketLevelAccess']['Enabled'] == true )
 ```
 
 If the test passes (all Cloud Storage buckets have uniform bucket-level access enabled) then cnspec returns `ok`:
 
-```coffee
+```coffeescript
 [ok] value: true
 ```
 
 If the test fails, (one or more Cloud Storage buckets don't use uniform bucket-level access) then cnspec provides details about the failure:
 
-```coffee
+```coffeescript
 [failed] [].all()
   actual:   [
     0: gcp.project.storageService.bucket id = luna-bucket-3
@@ -233,13 +233,13 @@ The sample results above show that the `luna-bucket-3` storage bucket doesn't us
 
 This test asserts that all Compute Engine instances have OS Login enabled:
 
-```coffee
+```coffeescript
 gcp.project.computeService.instances.all( metadata['enable-oslogin'] == true )
 ```
 
 If one or more instance aren't using OS Login, cnspec lists them:
 
-```coffee
+```coffeescript
 [failed] [].all()
   actual:   [
     0: gcp.project.computeService.instance id = gcp.project.computeService.instance/luna-dev-262313/5894326198680570314

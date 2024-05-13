@@ -23,7 +23,7 @@ cnquery shell k8s
 
 cnquery automatically discovers all the Kubernetes assets available to query:
 
-```coffee
+```coffeescript
 → resolved assets resolved-assets=20
 
     Available assets
@@ -45,13 +45,13 @@ Arrow through the list and select Enter to choose the asset you want to explore.
 
 Once inside the shell, use the `help` command to learn what Kubernetes resources you can query. This command lists all the Kubernetes resources:
 
-```coffee
+```coffeescript
 help k8s
 ```
 
 From the resulting list, you can drill down further. For example, enter this command to list all the Kubernetes IAM resources you can query:
 
-```coffee
+```coffeescript
 help k8s.pod
 ```
 
@@ -65,13 +65,13 @@ Now that you know how to discover what's possible with cnquery, let's run some a
 
 This query asks for a list of namespaces in the cluster:
 
-```coffee
+```coffeescript
 k8s.namespaces
 ```
 
 cnquery returns a list of all the namespaces in the cluster and their creation dates.
 
-```coffee
+```coffeescript
 k8s.namespaces: [
   0: k8s.namespace name="default" created=2022-12-14 15:17:35 -0800 PST
   1: k8s.namespace name="kube-node-lease" created=2022-12-14 15:17:34 -0800 PST
@@ -83,13 +83,13 @@ k8s.namespaces: [
 
 Add `{ * }` to request a full report that includes all the data available for each namespace:
 
-```coffee
+```coffeescript
 k8s.namespaces { * }
 ```
 
 cnquery groups the information by namespace:
 
-```coffee
+```coffeescript
 k8s.namespaces: [
   0: {
     uid: "2cf29aad-c9cd-47fc-98fa-1fbc80b64ccb"
@@ -185,13 +185,13 @@ k8s.namespaces: [
 
 You can also request specific data for each namespace:
 
-```coffee
+```coffeescript
 k8s.namespaces { uid name }
 ```
 
 cnquery returns only the information you requested:
 
-```coffee
+```coffeescript
 k8s.namespaces: [
   0: {
     uid: "2cf29aad-c9cd-47fc-98fa-1fbc80b64ccb"
@@ -222,7 +222,7 @@ You can filter results based on any fields. Specify the criteria using the `wher
 
 For example, this filters results based on namespace:
 
-```coffee
+```coffeescript
 k8s.services.where(namespace == "luna"){
         name
         spec['type']
@@ -235,7 +235,7 @@ k8s.services.where(namespace == "luna"){
 
 cnquery returns the requested details for each service in the `luna` namespace:
 
-```coffee
+```coffeescript
 k8s.services.where: [
   0: {
     spec[ports]: [

@@ -107,13 +107,13 @@ cnquery shell gcp folder FOLDER-ID
 
 Once inside the shell, use the `help` command to learn what GCP resources you can query. This command lists all the GCP resources:
 
-```coffee
+```coffeescript
 help gcp
 ```
 
 From the resulting list, you can drill down further. For example, enter this command to list all the GCP DNS resources you can query:
 
-```coffee
+```coffeescript
 help gcp.dns
 ```
 
@@ -125,13 +125,13 @@ Now that you know how to discover what's possible with cnquery, let's run some a
 
 This query lists all the Compute Engine instances in the project:
 
-```coffee
+```coffeescript
 gcp.project.computeService.instances
 ```
 
 cnquery returns a list of instances:
 
-```coffee
+```coffeescript
 gcp.project.computeService.instances: [
   0: gcp.project.computeService.instance name="amos-test-instance1"
   1: gcp.project.computeService.instance name="ansible-centos"
@@ -150,13 +150,13 @@ gcp.project.computeService.instances: [
 
 For a more detailed report, you can specify that you want all fields:
 
-```coffee
+```coffeescript
 gcp.project.computeService.instances { * }
 ```
 
 For every instance, cnquery provides information about their status and settings:
 
-```coffee
+```coffeescript
   0: {
     lastStopTimestamp: 2022-07-04 08:33:12.127 -0700 PDT
     fingerprint: "Qls1P6_JjQE="
@@ -231,13 +231,13 @@ For every instance, cnquery provides information about their status and settings
 
 If you're interested in only some details, specify the fields you want in braces. For example, this query asks for each user's ARN, when they last changed their password, and whether they have MFA enabled:
 
-```coffee
+```coffeescript
 gcp.project.computeService.instances { name status scheduling }
 ```
 
 cnquery returns results like this:
 
-```coffee
+```coffeescript
 gcp.project.computeService.instances: [
 
 ...
@@ -272,13 +272,13 @@ You can filter results based on any fields. Specify the criteria using the `wher
 
 For example, this filters results based on status:
 
-```coffee
+```coffeescript
 gcp.project.computeService.instances.where(status == "RUNNING") { name lastStartTimestamp }
 ```
 
 cnquery returns all running instances. It includes the name and last start for each one.
 
-```coffee
+```coffeescript
 gcp.project.computeService.instances.where: [
   0: {
     name: "luna-edge"

@@ -24,7 +24,7 @@ cnspec scan aws
 
 cnspec finds the default policy for AWS and runs a scan based on that policy. It returns a report summarizing the scan results:
 
-```coffee
+```coffeescript
 → discover related assets for 1 asset(s)
 → resolved assets resolved-assets=1
 → connecting to asset AWS Account lunalectric-management (177043759486) (api)
@@ -133,13 +133,13 @@ aws.cloudtrail.trails.all(kmsKey != null)
 
 If the test passes (all CloudTrails have KMS keys) then cnspec returns `ok`:
 
-```coffee
+```coffeescript
 [ok] value: true
 ```
 
 If the test fails, (one or more CloudTrails do not have KMS keys) then cnspec provides details about the failure:
 
-```coffee
+```coffeescript
 [failed] [].all()
   actual:   [
     0: aws.cloudtrail.trail id = arn:aws:cloudtrail:us-east-1:921877552404:trail/s3-events
@@ -158,7 +158,7 @@ aws.iam.credentialReport.all ( mfaActive == true )
 
 If one or more users aren't using MFA, cnspec lists them:
 
-```coffee
+```coffeescript
 [failed] [].all()
   actual:   [
     0: aws.iam.usercredentialreportentry id = aws/iam/credentialreport/arn:aws:iam::921000052404:user/abel

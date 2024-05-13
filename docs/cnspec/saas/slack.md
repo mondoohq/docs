@@ -71,7 +71,7 @@ slack.team: {
 
 Here is an example of all the data available for a single user:
 
-```coffee
+```coffeescript
 > slack.users[1]{ \* }
 > slack.users.list[1]: {
 > profile: {
@@ -118,7 +118,7 @@ color: "9f69e7"
 
 You can create a policy to ensure that all users have 2FA enabled:
 
-```coffee
+```coffeescript
 slack.users{
   has2FA == true
 }
@@ -126,7 +126,7 @@ slack.users{
 
 You can also return the user's `realName` in the results if the `has2FA` value is not true.
 
-```coffee
+```coffeescript
 slack.users{
   if ( has2FA != true ){
     has2FA == true
@@ -141,7 +141,7 @@ The `conversations` resource lets you inspect channels and direct message metada
 
 Suppose you want to ensure all channels have a set purpose. You can write this policy:
 
-```coffee
+```coffeescript
 slack.conversations.where( isChannel == true ){
   name
   purpose['value'] != ""
@@ -150,7 +150,7 @@ slack.conversations.where( isChannel == true ){
 
 Example result:
 
-```coffee
+```coffeescript
 slack.conversations.where: [
   0: {
     name: "general"

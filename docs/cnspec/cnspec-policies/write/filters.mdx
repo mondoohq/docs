@@ -99,13 +99,13 @@ import Partial from "./_include-lint.mdx";
 
 This filter limits scans to only GCP projects:
 
-```coffee
+```coffeescript
 asset.platform == "gcp-project"
 ```
 
 This filter limits scans to only kubelets:
 
-```coffee
+```coffeescript
 asset.family.contains('linux')
 processes.where( executable == /kubelet/ ).list != []
 ```

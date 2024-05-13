@@ -29,7 +29,7 @@ Use the `aws.elasticache` resource to assess the configuration of Amazon ElastiC
 
 Check if the ElastiCache Redis clusters have automatic backup turned on
 
-```coffee
+```coffeescript
 aws.elasticache.clusters.all(
   _['SnapshotRetentionLimit'] > _['SnapshotRetentionPeriod']
 )

@@ -53,7 +53,7 @@ Run `cnspec shell --token <YOUR_TOKEN>` to open the cnspec interactive shell. Fr
 
 Ensure group email notifications are disabled for a GitLab group:
 
-```coffee
+```coffeescript
 cnspec> gitlab.group.emailsDisabled
 [failed] gitlab.group.emailsDisabled
   expected: == true
@@ -62,7 +62,7 @@ cnspec> gitlab.group.emailsDisabled
 
 Ensure the GitLab group is private:
 
-```coffee
+```coffeescript
 cnspec> gitlab.group.visibility=="private"
 [ok] value: "private"
 ```

@@ -29,7 +29,7 @@ powershell(script string)
 
 Run custom powershell command
 
-```coffee
+```coffeescript
 powershell('Get-WmiObject -Class Win32_volume -Filter "DriveType=3"| Select Label') {
   stdout == /PAGEFILE/
   stderr == ''
@@ -38,7 +38,7 @@ powershell('Get-WmiObject -Class Win32_volume -Filter "DriveType=3"| Select Labe
 
 Check the timezone
 
-```coffee
+```coffeescript
 powershell('tzutil /g') {
   stdout.trim == 'GMT Standard Time'
   stderr == ''

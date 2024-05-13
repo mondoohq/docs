@@ -24,6 +24,6 @@ Windows-specific resource to get operating system details
 
 Check the OS Edition
 
-```coffee
+```coffeescript
 windows.computerInfo['WindowsInstallationType'] == 'Server Core'
 ```

@@ -59,7 +59,7 @@ slack.team: {
 
 Here is an example of all the data available for a single user:
 
-```coffee
+```coffeescript
 > slack.users[1]{ * }
 slack.users.list[1]: {
   profile: {
@@ -104,7 +104,7 @@ slack.users.list[1]: {
 
 You can find which users have 2FA enabled:
 
-```coffee
+```coffeescript
 slack.users.where{ has2FA == true }
 ```
 
@@ -114,7 +114,7 @@ The `conversations` resource lets you inspect channels and direct message metada
 
 This query asks the purpose of each channel:
 
-```coffee
+```coffeescript
 slack.conversations.where( isChannel == true ) { name purpose }
 ```
 

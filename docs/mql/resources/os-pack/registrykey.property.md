@@ -32,7 +32,7 @@ registrykey.property(name string)
 
 Verify a registry key property
 
-```coffee
+```coffeescript
 registrykey.property(path: 'HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\EventLog\System', name: 'MaxSize') {
   value >= 32768
 }

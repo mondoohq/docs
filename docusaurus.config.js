@@ -225,10 +225,11 @@ module.exports = {
     prism: {
       theme: themes.nightOwl,
       additionalLanguages: [
-        "powershell",
         "bash",
-        "json",
+        "coffeescript",
         "graphql",
+        "json",
+        "powershell",
         "python",
         "yaml",
       ],

@@ -29,13 +29,13 @@ aws.eks.clusters.all( encryptionConfig != null )
 
 If the test passes (all EKS clusters use encryption) then cnspec returns `ok`:
 
-```coffee
+```coffeescript
 [ok] value: true`
 ```
 
 If the test fails (one or more EKS clusters do not use encryption) then cnspec provides details about the failure:
 
-```coffee
+```coffeescript
 [failed] [].all()
   actual:   [
     0: aws.ec2.instance id = arn:aws:ec2:us-east-1:177043751234:instance/i-0fde6c8e0210b7i26

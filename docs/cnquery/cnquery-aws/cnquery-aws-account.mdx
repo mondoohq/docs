@@ -25,13 +25,13 @@ cnquery shell aws
 
 Once inside the shell, use the `help` command to learn what AWS resources you can query. This command lists all the AWS resources:
 
-```coffee
+```coffeescript
 help aws
 ```
 
 From the resulting list, you can drill down further. For example, enter this command to list all the AWS IAM resources you can query:
 
-```coffee
+```coffeescript
 help aws.iam
 ```
 
@@ -45,13 +45,13 @@ Now that you know how to discover what's possible with cnquery, let's run some a
 
 This query identifies which (potentially expensive) configuration recorders are turned on:
 
-```coffee
+```coffeescript
 aws.config { recorders { * } rules { * } }
 ```
 
 cnquery returns complete and detailed lists of rules and recorders:
 
-```coffee
+```coffeescript
 aws.config: {
   rules: [
     0: {
@@ -92,13 +92,13 @@ aws.config: {
 
 When we explored the help for `aws.iam`, we learned that cnquery can access your account's IAM credential report. To gather basic information from the report, enter:
 
-```coffee
+```coffeescript
 aws.iam.credentialReport
 ```
 
 cnquery lists the ARNs of all users, like this:
 
-```coffee
+```coffeescript
 aws.iam.credentialReport: [
   0: aws.iam.usercredentialreportentry arn="arn:aws:iam::921877552404:root"
   1: aws.iam.usercredentialreportentry arn="arn:aws:iam::921877552404:user/shiro"
@@ -114,13 +114,13 @@ aws.iam.credentialReport: [
 
 For a more detailed report, you can specify that you want all fields:
 
-```coffee
+```coffeescript
 aws.iam.credentialReport { * }
 ```
 
 For every user, cnquery provides information about their IAM activity and settings:
 
-```coffee
+```coffeescript
     {
     accessKey1LastUsedRegion: "eu-north-1"
     passwordNextRotation: Never
@@ -175,13 +175,13 @@ For every user, cnquery provides information about their IAM activity and settin
 
 If you're interested in only some details, specify the fields you want in braces. For example, this query asks for each user's ARN, when they last changed their password, and whether they have MFA enabled:
 
-```coffee
+```coffeescript
 aws.iam.credentialReport { arn passwordLastChanged mfaActive }
 ```
 
 cnquery returns results like this:
 
-```coffee
+```coffeescript
 aws.iam.credentialReport: [
   0: {
     passwordLastChanged: 2022-11-30 12:15:58 +0000 +0000
@@ -212,7 +212,7 @@ You can filter results based on any fields. Specify the criteria using the `wher
 
 For example, this filters results based on ARN:
 
-```coffee
+```coffeescript
 aws.iam.credentialReport.where(arn == /hanna/) { * }
 ```
 

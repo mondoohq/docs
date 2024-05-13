@@ -37,7 +37,7 @@ Use the `aws.ec2` resource to assess the configuration of AWS EC2 instances.
 
 Return a list of all EC2 instances across all enabled regions in the account and the values for specified fields
 
-```coffee
+```coffeescript
 aws.ec2.instances {
   arn
   instanceId
@@ -65,7 +65,7 @@ aws.ec2.instances {
 
 Return a list of security groups across every enabled region and the value for specified fields
 
-```coffee
+```coffeescript
 aws.ec2.securityGroups {
   arn
   region
@@ -76,7 +76,7 @@ aws.ec2.securityGroups {
 
 Return a list of all EBS volumes along with the associated ARN and the region the volume exists in
 
-```coffee
+```coffeescript
 aws.ec2.volumes {
   arn
   region
@@ -85,7 +85,7 @@ aws.ec2.volumes {
 
 Ensure the default security group of every VPC restricts all traffic
 
-```coffee
+```coffeescript
 aws.ec2.securityGroups.where(name == "default") {
   ipPermissions.all(ipRanges.length == 0 && ipv6Ranges.length == 0 && fromPort == 0 && toPort == 0)
   ipPermissionsEgress.all(ipRanges.length == 0 && ipv6Ranges.length == 0 && fromPort == 0 && toPort == 0)

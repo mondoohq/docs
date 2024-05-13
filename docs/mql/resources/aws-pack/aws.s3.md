@@ -28,7 +28,7 @@ Amazon Simple Storage Service (Amazon S3) is an object storage service
 
 Return a list of AWS S3 buckets and the values for specified fields
 
-```coffee
+```coffeescript
 aws.s3.buckets {
   arn
   name
@@ -52,7 +52,7 @@ aws.s3.buckets {
 
 Return a list of AWS S3 buckets that are public and return the values for the `arn` `name` `location` `tags` and `publicAccessBlock`
 
-```coffee
+```coffeescript
 aws.s3.buckets.where( public == true ) {
   arn
   name
@@ -64,7 +64,7 @@ aws.s3.buckets.where( public == true ) {
 
 Check whether S3 buckets have cross-region replication enabled
 
-```coffee
+```coffeescript
 aws.s3.buckets.all(
   replication['Rules'] { _['Status'] == "Enabled" }
 )
@@ -72,7 +72,7 @@ aws.s3.buckets.all(
 
 Check that all buckets are encrypted with kms
 
-```coffee
+```coffeescript
 aws.s3.buckets.all(
   encryption['Rules'] { _['ApplyServerSideEncryptionByDefault']['KMSMasterKeyID'] == /^arn:aws:kms:.*/}
 )

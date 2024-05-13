@@ -51,7 +51,7 @@ cnquery run local -c "services.list { name running }"
 
 This query finds all AWS EC2 instances, across every enabled region within an AWS account, that are configured with a public IP address, and returns the values for the fields `instanceId`, `region`, `state`, `tags`, and `publicIp`:
 
-```coffee
+```coffeescript
 aws.ec2.instances.where( publicIp != '' ) {
   instanceId
   region
@@ -63,13 +63,13 @@ aws.ec2.instances.where( publicIp != '' ) {
 
 This lists all users and returns the values for every field available for the `user` resource:
 
-```coffee
+```coffeescript
 users.list { * }
 ```
 
 This finds all container repositories used for images in a Kubernetes cluster:
 
-```coffee
+```coffeescript
 k8s.pods {
  name
  containers.map( containerImage.repository.fullName )
@@ -129,7 +129,7 @@ RESOURCE {FIELD1 FIELD2 FIELD3 }
 
 For example, this command retrieves the name of the running platform, its release number, and the architecture it's running on:
 
-```coffee
+```coffeescript
 platform { name release arch }
 ```
 

@@ -27,7 +27,7 @@ cnspec shell google-workspace --customer-id 5amp13iD --impersonated-user-email a
 
 cnspec returns results similar to these:
 
-```coffee
+```coffeescript
 cnspec> googleworkspace.users
 googleworkspace.users: [
   0: {
@@ -75,7 +75,7 @@ googleworkspace.users: [
 
 Display details for the first user in the workspace:
 
-```coffee
+```coffeescript
 cnspec> googleworkspace.users[0]{ * }
 googleworkspace.users[0]: {
   isMailboxSetup: true
@@ -113,7 +113,7 @@ Notice that `usageReport` is listed in this example output. This provides access
 
 For example, this retrieves the first user in the workspace's account usage data:
 
-```coffee
+```coffeescript
 cnspec> googleworkspace.users[0].usageReport.account
 googleworkspace.users[0].usageReport.account: {
   adminSetName: "Alice Smith"
@@ -134,7 +134,7 @@ You can also create checks against the Google Workspace data.
 
 This checks assures all users have passwords that Google considers strong and compliant:
 
-```coffee
+```coffeescript
 googleworkspace.users{
   usageReport.account {
     _['passwordStrength'] == "STRONG"
@@ -145,7 +145,7 @@ googleworkspace.users{
 
 Example response data:
 
-```coffee
+```coffeescript
 googleworkspace.users: [
   0: {
     usageReport.account: {

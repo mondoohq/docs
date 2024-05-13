@@ -70,7 +70,7 @@ Want a place to experiment? Okta makes it easy to obtain Developer Accounts. Sig
 
 Example query:
 
-```coffee
+```coffeescript
 okta.users{
     profile
     status
@@ -81,7 +81,7 @@ okta.users{
 
 Example shell output:
 
-```coffee
+```coffeescript
 okta.users: [
   0: {
     status: "PROVISIONED"
@@ -109,7 +109,7 @@ okta.users: [
 
 This query will output the name, status, label, and sign-on mode for each configuration application:
 
-```coffee
+```coffeescript
 okta.applications {
     status
     name
@@ -120,7 +120,7 @@ okta.applications {
 
 Example shell output:
 
-```coffee
+```coffeescript
 okta.applications: [
   0: {
     status: "ACTIVE"
@@ -153,7 +153,7 @@ okta.applications: [
 
 This query finds all access policies. For each access policy found, cnquery returns the name, priority, and status. It asserts that each rule's status should be active:
 
-```coffee
+```coffeescript
 okta.policies{
     accessPolicy {
         name
@@ -168,7 +168,7 @@ okta.policies{
 
 Example output:
 
-```coffee
+```coffeescript
 okta.policies: {
   accessPolicy: [
     0: {

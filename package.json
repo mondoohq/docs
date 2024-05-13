@@ -2,6 +2,7 @@
   "name": "mondoo-docs",
   "version": "0.0.0",
   "private": true,
+  "license": "MPL-2.0",
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
@@ -57,7 +58,7 @@
     ]
   },
   "devDependencies": {
-    "@tsconfig/docusaurus": "^2.0.3",
+    "@docusaurus/tsconfig": "^3.0.0",
     "@types/react": "^18.3.1",
     "@types/react-helmet": "^6.1.11",
     "@types/react-router-dom": "^5.1.7",

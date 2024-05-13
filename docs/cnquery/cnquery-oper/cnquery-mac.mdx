@@ -41,13 +41,13 @@ For `IP_ADDRESS`, substitute the IP address of the remote macOS asset.
 
 Once inside the shell, use the `help` command to learn what macOS resources you can query. This command lists all the macOS resources:
 
-```coffee
+```coffeescript
 help macos
 ```
 
 From the resulting list, you can drill down further. For example, enter this command to list all the macOS machine settings you can query:
 
-```coffee
+```coffeescript
 help macos.systemsetup
 ```
 
@@ -59,7 +59,7 @@ Now that you know how to discover what's possible with cnquery, let's run some a
 
 This query ask whether the firewall is enabled:
 
-```coffee
+```coffeescript
 macos.alf.globalState
 ```
 
@@ -69,7 +69,7 @@ cnquery returns `0` for no and `1` for yes.
 
 To request a list of all users on a machine, enter this query in the shell:
 
-```coffee
+```coffeescript
 users
 ```
 
@@ -81,7 +81,7 @@ In this query, you don't specify `macos`. That's because the `user` resource is 
 
 cnquery returns a list of all users on the system:
 
-```coffee
+```coffeescript
 users.list: [
   0: user name="_nsurlsessiond" uid=242 gid=242
   1: user name="_logd" uid=272 gid=272
@@ -105,13 +105,13 @@ users.list: [
 
 For a more detailed report, you can specify that you want all fields:
 
-```coffee
+```coffeescript
 users { * }
 ```
 
 For every user, cnquery provides information about their settings:
 
-```coffee
+```coffeescript
 users.list: [
   0: {
     sid: ""
@@ -159,13 +159,13 @@ users.list: [
 
 If you're interested in only some details, specify the fields you want in braces. For example, this query asks for each user's name, group, and whether it's a shell user:
 
-```coffee
+```coffeescript
 users { name group shell }
 ```
 
 cnquery returns results like this:
 
-```coffee
+```coffeescript
 users.list: [
   0: {
     shell: "/usr/bin/false"
@@ -194,13 +194,13 @@ You can filter results based on any fields. Specify the criteria using the `wher
 
 For example, this filters results based on group name:
 
-```coffee
+```coffeescript
 users.where(group.name == "nobody") { name uid home }
 ```
 
 cnquery returns all users in the `nobody` group. It includes the name, UID, and home directory for each user.
 
-```coffee
+```coffeescript
 users.where.list: [
   0: {
     uid: 98

@@ -32,7 +32,7 @@ cnspec run k8s -c 'k8s.deployment.uid != "foo"'
 
 This asserts that none of your deployments are named `foo`. cnspec returns a report listing your deployments. For each, it indicates whether the deployment meets the requirement (not named `foo`):
 
-```coffee
+```coffeescript
 [passed] k8s.deployment.uid != "foo"
 
 [ok] value: "057e7351-5738-4d3b-bd5f-46d86403c563"

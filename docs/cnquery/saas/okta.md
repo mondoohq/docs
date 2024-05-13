@@ -64,7 +64,7 @@ Want a place to experiment? Okta makes it easy to obtain Developer Accounts. Sig
 
 Example query:
 
-```coffee
+```coffeescript
 okta.users{
     profile
     status
@@ -75,7 +75,7 @@ okta.users{
 
 Example shell output:
 
-```coffee
+```coffeescript
 okta.users: [
   0: {
     status: "PROVISIONED"
@@ -103,7 +103,7 @@ okta.users: [
 
 This query requests the name, status, label, and sign-on mode for each configuration application:
 
-```coffee
+```coffeescript
 okta.applications {
     status
     name
@@ -114,7 +114,7 @@ okta.applications {
 
 Example shell output:
 
-```coffee
+```coffeescript
 okta.applications: [
   0: {
     status: "ACTIVE"

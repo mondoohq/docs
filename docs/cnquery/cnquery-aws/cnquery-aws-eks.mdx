@@ -16,7 +16,7 @@ We'll continue working in the cnquery shell, which makes running individual quer
 
 cnquery provides answers to any question about your EKS clusters. To discover all the resources and fields you can query, read [aws.eks](/mql/resources/aws-pack/aws.eks/). You can also use the `help` command in the shell:
 
-```coffee
+```coffeescript
 help aws.eks
 ```
 
@@ -26,13 +26,13 @@ In this tutorial we'll explore just a few of the possibilities.
 
 This query gathers all your EKS clusters:
 
-```coffee
+```coffeescript
 aws.eks.clusters
 ```
 
 It returns each cluster's ARN and current state:
 
-```coffee
+```coffeescript
 aws.eks.clusters: [
   0: aws.eks.cluster arn="arn:aws:eks:us-east-1:177043759486:cluster/eks-cluster" version="1.22" status="FAILED"
   1: aws.eks.cluster arn="arn:aws:eks:us-east-2:177043759486:cluster/online-shop-eks-cluster-byh8" version="1.22" status="ACTIVE"
@@ -41,13 +41,13 @@ aws.eks.clusters: [
 
 For all details on a single cluster, specify the cluster's number in the output sequence and include `{ * }`:
 
-```coffee
+```coffeescript
 aws.eks.clusters[1] { * }
 ```
 
 cnquery returns the cluster's version, logging, encryption, and more:
 
-```coffee
+```coffeescript
 aws.eks.clusters[1]: {
   logging: {
     ClusterLogging: [
@@ -121,13 +121,13 @@ aws.eks.clusters[1]: {
 
 You can request specific data by including the field names. For example, this query collects the ARN and any assigned tags for each cluster:
 
-```coffee
+```coffeescript
 aws.eks.clusters { arn createdAt }
 ```
 
 It returns a list with only the information you asked for:
 
-```coffee
+```coffeescript
 aws.eks.clusters: [
   0: {
     arn: "arn:aws:eks:us-east-1:177043759486:cluster/eks-cluster"
@@ -146,13 +146,13 @@ You can filter results based on any fields. Specify the criteria using the `wher
 
 For example, this query requests only EKS clusters created more than 60 days ago:
 
-```coffee
+```coffeescript
 aws.eks.clusters.where(createdAt < time.today - 60*time.day) { arn createdAt }
 ```
 
 It lists each cluster's ARN and creation date:
 
-```coffee
+```coffeescript
 aws.eks.clusters.where: [
   0: {
     createdAt: 2022-09-08 09:41:11.26 +0000 UTC

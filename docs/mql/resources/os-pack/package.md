@@ -39,6 +39,6 @@ package(name string)
 
 Check if a package is installed
 
-```coffee
+```coffeescript
 package('git').installed
 ```

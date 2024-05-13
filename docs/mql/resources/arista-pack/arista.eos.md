@@ -35,30 +35,30 @@ Arista EOS resource
 
 Arista EOS Version
 
-```coffee
+```coffeescript
 arista.eos.version
 ```
 
 Verify that Arista EOS Version is 18.x
 
-```coffee
+```coffeescript
 arista.eos.version['version'] == /18\./
 ```
 
 Display EOS interfaces
 
-```coffee
+```coffeescript
 arista.eos.interfaces { name mtu bandwidth status }
 ```
 
 Display all connected EOS interfaces
 
-```coffee
+```coffeescript
 arista.eos.interfaces.where ( status['linkStatus'] == "connected") {  name mtu bandwidth status }
 ```
 
 EOS Hostname
 
-```coffee
+```coffeescript
 arista.eos.hostname
 ```

@@ -18,6 +18,7 @@ Amazon Systems Manager
 
 **Fields**
 
-| ID        | TYPE                                              | DESCRIPTION |
-| --------- | ------------------------------------------------- | ----------- |
-| instances | &#91;&#93;[aws.ssm.instance](aws.ssm.instance.md) |             |
+| ID         | TYPE                                                | DESCRIPTION            |
+| ---------- | --------------------------------------------------- | ---------------------- |
+| instances  | &#91;&#93;[aws.ssm.instance](aws.ssm.instance.md)   | List of SSM instances  |
+| parameters | &#91;&#93;[aws.ssm.parameter](aws.ssm.parameter.md) | List of SSM parameters |

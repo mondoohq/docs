@@ -1,6 +1,6 @@
 ---
-title: Manage Mondoo Access with Okta and SCIM
-sidebar_label: Okta - SCIM
+title: Manage Mondoo Access with Okta
+sidebar_label: Okta
 sidebar_position: 5
 description: Configure Okta support for Mondoo Platform.
 image: /img/featured_img/mondoo-feature.jpg
@@ -16,8 +16,7 @@ Integrate Mondoo with Okta so you can:
 
 To configure the integration, you need:
 
-- An Okta account
-
+- An Okta administrator account
 - A privately hosted Mondoo [Enterprise account](https://mondoo.com/pricing)
 
 ## Configure Okta single sign-on for Mondoo (using OIDC)
@@ -94,7 +93,7 @@ To centralize user management for your organization, give your Okta account full
 
 2. In the **SCIM 2.0 Base Url** box, enter your Mondoo SCIM base URL.
 
-   Determine your SCIM base URL from on the URL you use to access the Mondoo Console: Replace `console` with `api` and add `/scim/v2`. So if your Mondoo Console URL is:
+   Determine your SCIM base URL using the URL you use to access the Mondoo Console: Replace `console` with `api` and add `/scim/v2`. So if your Mondoo Console URL is:
 
    `https://console.YOUR-COMPANY-NAME.mondoo.com`
 
@@ -103,11 +102,13 @@ To centralize user management for your organization, give your Okta account full
    `https://api.YOUR-COMPANY-NAME.mondoo.com/scim/v2`
 
 
-3. In a different browser tab, open the Mondoo Console and [create a new API token with **edit** permission to your Mondoo **organization**.](https://mondoo.com/docs/platform/maintain/access/api-tokens/#generate-an-api-token-for-access-to-all-spaces-in-an-organization).
+3. Provide a token that gives Entra access to manage users:
 
-   Copy the generated token.
+   a. In a different browser tab, open the Mondoo Console and [create a new API token with **edit** permission to your Mondoo **organization**.](https://mondoo.com/docs/platform/maintain/access/api-tokens/#generate-an-api-token-for-access-to-all-spaces-in-an-organization).
 
-   Return to the Okta Admin Console tab and paste the token in the **OAuth Bearer Token** box.
+   b. Copy the generated token.
+
+   c. Return to the Okta Admin Console tab and paste the token in the **OAuth Bearer Token** box.
 
 4. Select the **Test API Credentials** button to ensure that the token and URL you provided are correct.
 

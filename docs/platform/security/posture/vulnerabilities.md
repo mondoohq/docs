@@ -50,7 +50,7 @@ Mondoo provides extensive details about a CVE to help you understand the risk it
 
 ![Vulnerability in Mondoo](/img/platform/security/vulnerability-top.png)
 
-At the top of a CVE's detail page (accessed as described above) you find general information about the CVE. If the CVE (or the assets that contain the CVE) include any special risk factors, icons representing those risk factors display beside the CVE number. To the right is the CVSS base score (8.8 in the image above).
+At the top of a CVE's detail page (accessed as described above) you find general information about the CVE. If the CVE (or the assets that contain the CVE) include any special risk factors, icons representing those risk factors display beside the CVE number. To the right is a box with a summary of the most important CVE information. Details are lower on the page.
 
 ### Risk factors
 

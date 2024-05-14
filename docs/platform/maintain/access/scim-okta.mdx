@@ -134,7 +134,7 @@ then your playground URL is:
 
 `https://api.YOUR-COMPANY-NAME.mondoo.com`
 
-Copy and paste this query, replacing
+Copy and paste this query, replacing FOO FOO FOO
 
 ```coffeescript
 mutation {
@@ -159,5 +159,13 @@ mutation {
   ) {
     group
   }
+}
+```
+
+Set the authentication to headers: (Get token by typing “info” in the dashboard)
+
+```
+{
+  "authorization":"Bearer TOKEN"
 }
 ```

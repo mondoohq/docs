@@ -61,7 +61,49 @@ To configure the integration, you need:
 
 9. SOMETHING ABOUT GROUP MAPPING IN SETTINGS THAT I CAN'T GET TO
 
+| Mondoo Attribute | Microsoft Entra ID Attribute |
+|------------------|------------------------------|
+| userName         | userPrincipalName            |
+| displayName      | displayName                  |
+| externalId       | objectId                     |
+
 10.
 
 ### Manage Mondoo organization and space access using your Mondoo API playground
 
+Your Mondoo API playground is a GraphQL environment unique to your Mondoo Enterprise account. Determine your the URL for your playground based on the URL you use to access the Mondoo Console: Replace `console` with `api`. So if your Mondoo Console URL is:
+
+`https://console.YOUR-COMPANY-NAME.mondoo.com`
+
+then your playground URL is:
+
+`https://api.YOUR-COMPANY-NAME.mondoo.com`
+
+Copy and paste this query, replacing FOO FOO FOO
+
+```coffeescript
+
+mutation {
+  setScimGroupMapping(
+    input: {
+      orgMrn: "//captain.api.mondoo.app/organizations/dreamy-bartik-265385",
+      group: "API Admins",
+      mappings: [{
+        orgMrn: "//captain.api.mondoo.app/organizations/dreamy-bartik-265385",
+        #spaceMrn: "//captain.api.mondoo.app/spaces/pedantic-mestorf-965815",
+        iamRole: "//iam.api.mondoo.app/roles/editor"
+      }]
+    }
+  ) {
+    group
+  }
+}
+```
+
+Set the authentication to headers: (Get token by typing “info” in the dashboard)
+
+```
+{
+  "authorization":"Bearer TOKEN"
+}
+```

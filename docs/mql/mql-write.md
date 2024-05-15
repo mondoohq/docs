@@ -50,14 +50,15 @@ This page describes the conventions for writing queries and checks in MQL. It co
 
 These are other helpful resources in the Mondoo docs:
 
-| Page                                                  | Purpose                                                                                                     |
-| ----------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| [MQL Resources](/mql/resources/)                      | Lists all of the information that MQL can retrieve from infrastructure assets and describes how to use them |
-| [Get Started with cnquery](/cnquery/)                 | Describes how to use the cnquery shell for ad hoc MQL queries                                               |
-| [Query Your Infrastructure](/cnquery/cnquery-query)   | Describes how to write queries to execute from the command line or to use in automation                     |
-| [cnquery CLI commands](/cnquery/cli/cnquery/)         | Details all commands in the cnquery command line interface                                                  |
-| [Create Checks in cnspec Shell](/cnspec/cnspec-scan/) | Describes how to use the cnspec shell for ad hoc MQL assertions                                             |
-| [cnspec CLI commands](/cnspec/cli/cnspec/)            | Details all commands in the cnspec command line interface                                                   |
+| Page                                                     | Purpose                                                                                                     |
+| -------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| [Policy Authoring Guide](/cnspec/cnspec-policies/write/) | Describes how to write Mondoo security policies                                                             |
+| [MQL Resources](/mql/resources/)                         | Lists all of the information that MQL can retrieve from infrastructure assets and describes how to use them |
+| [Get Started with cnquery](/cnquery/)                    | Describes how to use the cnquery shell for ad hoc MQL queries                                               |
+| [Query Your Infrastructure](/cnquery/cnquery-query)      | Describes how to write queries to execute from the command line or to use in automation                     |
+| [cnquery CLI commands](/cnquery/cli/cnquery/)            | Details all commands in the cnquery command line interface                                                  |
+| [Create Checks in cnspec Shell](/cnspec/cnspec-scan/)    | Describes how to use the cnspec shell for ad hoc MQL assertions                                             |
+| [cnspec CLI commands](/cnspec/cli/cnspec/)               | Details all commands in the cnspec command line interface                                                   |
 
 ## Basic structure
 

@@ -12,12 +12,18 @@ Integrate Mondoo with Okta so you can:
 - Control who has access to Mondoo using Okta
 - Centrally manage users with Okta
 
+Configuring single sign-on allows Okta to handle authentication (verifying that a user is who they say they are) for Mondoo. Configuring user management allows Okta to handle authorization (which users can do what) for Mondoo.
+
+You can choose to set up Okta single sign-on but not Okta user management. However, you can't use Okta for Mondoo user management without first setting up Okta single sign-on.
+
 ## Prerequisites
 
 To configure the integration, you need:
 
 - An Okta administrator account
 - A privately hosted Mondoo [Enterprise account](https://mondoo.com/pricing)
+
+Let your Mondoo representative know that you want to enable Okta single sign-on for your Mondoo Enterprise account. The Mondoo team executes the final step in configuring Okta single sign-on using information you provide.
 
 ## Configure Okta single sign-on for Mondoo (using OIDC)
 
@@ -43,7 +49,7 @@ To allow users to log into the Mondoo Console with their Okta-provided credentia
 
 7. For the **Sign-in redirect URI** and **Sign-out redirect URI**, enter the private domain you type to access the Mondoo Console, such as `https://console.YOUR-COMPANY-NAME.mondoo.com/`.
 
-8. For **Assignments**, choose whether to give access to this new app integration for everyone in your Okta org, limit access to selected groups (and  enter the specific groups names), or defer assignments until later.
+8. For **Assignments**, choose to limit access to selected groups and enter the specific groups names.
 
 9. Select the **Save** button.
 
@@ -51,15 +57,21 @@ To allow users to log into the Mondoo Console with their Okta-provided credentia
 
    ![Okta applications](/img/platform/maintain/access/okta/app-props.png)
 
-10. On the **General** tab of the app integration properties, copy the **Client ID**.
+10. On the **General** tab of the app integration properties, copy the **Client ID**. Share this with your Mondoo representative.
 
-   Give the Client ID to your Mondoo representative, along with your Issuer URL, which is typically based on your company name: `https://YOUR-COMPANY-NAME.okta.com`
+11. In the top-right corner of the the Okta Admin Console, select the drop-down beside your user ID.
 
-   For example, note the company **lunalectric** in the image above (in the top-right corner). The Issuer URL is `https://lunalectric.okta.com`.
+   ![Okta issuer ID](/img/platform/maintain/access/okta/issuer-id.png)
+
+   Below your name and email address is an **Issuer ID**. Select the Copy to Clipboard icon beside the issuer ID and share the issuer ID with your Mondoo representative.
+
+The Mondoo team uses the Client ID and Issuer ID to enable Okta single sign-on for your Mondoo Enterprise account. After we let you know we've executed this final step, it can take 10-20 minutes before users can log into Mondoo using Okta single sign-on.
 
 ## Manage Mondoo users with Okta (using SCIM)
 
-To centralize user management for your organization, give your Okta account full control over who can use Mondoo. This implementation relies on the System for Cross-domain Identity Management (SCIM) protocol.
+To centralize user management for your organization, give your Okta account full control over who can access organizations and spaces and perform different tasks in Mondoo. This implementation relies on the System for Cross-domain Identity Management (SCIM) protocol.
+
+Before you set up Okta user management for Mondoo, you must first configure Okta single sign-on by following the steps above. Make sure a user can log into Mondoo using Okta single sign-on before you continue.
 
 ### Create a SCIM application in Okta
 

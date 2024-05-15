@@ -35,9 +35,11 @@ Resources included in this pack:
 | [ms365.exchangeonline](ms365.exchangeonline.md)                                                           | Microsoft 365 Exchange Online                       |
 | [ms365.exchangeonline.exoMailbox](ms365.exchangeonline.exomailbox.md)                                     | Microsoft 365 Exchange Online Mailbox               |
 | [ms365.exchangeonline.externalSender](ms365.exchangeonline.externalsender.md)                             | Microsoft 365 Exchange Online External Sender       |
+| [ms365.exchangeonline.reportSubmissionPolicy](ms365.exchangeonline.reportsubmissionpolicy.md)             | Report Submission Policy configuration              |
 | [ms365.exchangeonline.teamsProtectionPolicy](ms365.exchangeonline.teamsprotectionpolicy.md)               | Teams Protection Policy configuration               |
 | [ms365.sharepointonline](ms365.sharepointonline.md)                                                       | Microsoft 365 SharePoint Online                     |
 | [ms365.sharepointonline.site](ms365.sharepointonline.site.md)                                             | Microsoft 365 SharePoint Site                       |
 | [ms365.teams](ms365.teams.md)                                                                             | Microsoft 365 Teams                                 |
-| [ms365.teams.teamsMeetingPolicyConfig](ms365.teams.teamsmeetingpolicyconfig.md)                           | Teams meeting policy configuration                  |
+| [ms365.teams.teamsMeetingPolicyConfig](ms365.teams.teamsmeetingpolicyconfig.md)                           | Microsoft 365 Teams meeting policy configuration    |
+| [ms365.teams.teamsMessagingPolicyConfig](ms365.teams.teamsmessagingpolicyconfig.md)                       | Teams meeting policy configuration                  |
 | [ms365.teams.tenantFederationConfig](ms365.teams.tenantfederationconfig.md)                               | Microsoft 365 Teams tenant federation configuration |

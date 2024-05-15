@@ -30,6 +30,7 @@ autodisconnect
 autoremove
 autoscaler
 backupconfiguration
+backupsetting
 badssm
 baf
 baselayout
@@ -239,6 +240,7 @@ newkey
 nginx
 Nlcy
 noarch
+nodegroup
 nodepool
 NSIs
 NSUl

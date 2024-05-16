@@ -1,0 +1,129 @@
+---
+title: Continuously Scan AWS - Mondoo-Hosted Integration
+sidebar_label: Scan Continuously (Hosted)
+sidebar_position: 1
+description: This document covers the configuration and use of the Mondoo-hosted AWS integration to scan AWS accounts and EC2 instances
+---
+
+FOO FOO FOO
+
+
+
+## Set up a new AWS integration
+
+1. Access the Integrations > Add > AWS page in one of two ways:
+
+   - **New space setup**: After creating a new Mondoo account or creating a new space, the initial setup guide welcomes you. Select **BROWSE INTEGRATIONS** and then select **AWS**.
+
+     ![Welcome to Mondoo Page](/img/platform/start/welcome_to_mondoo.png)
+
+   - **INTEGRATIONS page**: In the side navigation bar, under **INTEGRATIONS**, select **Add New Integration**. Near the top of the page, select **AWS**.
+
+   ![AWS integration options](/img/platform/infra/cloud/aws/hosted-or-serverless.png)
+
+2. Select **Mondoo-Hosted**.
+
+   ![integration-create-image](/img/platform/infra/cloud/aws/add-hosted-top.png)
+
+3.
+
+
+
+
+
+
+11. Select the **CREATE** button.
+
+12. Follow the instructions to launch the AWS CloudFormation stack (for an account) or StackSet (for an Organization).
+
+:::caution IMPORTANT
+
+Selecting **Create** does not finalize the integration between Mondoo and AWS. You must launch the AWS CloudFormation stack or StackSet to complete the setup.
+
+:::
+
+## Manage an AWS integration
+
+You can view the status of an AWS integration, change its configuration options, and more on its integration page.
+
+To access an existing integration:
+
+1. In the [Mondoo Console](https://console.mondoo.com), [navigate](/platform/start/navigate) to the space containing the integration.
+
+2. In the side navigation bar, under **Integrations**, select **AWS**.
+
+   ![integration-list-image](/img/platform/infra/cloud/aws/list.png)
+
+3. Select the integration you want to view or manage.
+
+   ![integration-detail-image](/img/platform/infra/cloud/aws/integration-overview.png)
+
+### View an integration's status
+
+Mondoo shows the status at the top of the integration page, beside the integration name.
+
+![Mondoo AWS integration status and actions](/img/platform/infra/cloud/aws/integration-scan-now.png)
+
+Theses are the possible statuses for an AWS integration:
+
+| Status          | Meaning                                                                                                          |
+| --------------- | ---------------------------------------------------------------------------------------------------------------- |
+| **configuring** | Mondoo is sending the scan configuration options to the integration and the integration is saving those options. |
+| **active**      | The integration is active and healthy.                                                                           |
+| **error**       | Mondoo detected an error during installation.                                                                    |
+| **missing**     | Mondoo hasn't received a check-in from the Lambda function for over an hour.                                     |
+| **deleted**     | CloudFormation for the integration has been deleted.                                                             |
+
+### Ping an integration
+
+At the top of the integration page, below the integration name, Mondoo shows the time of the last ping.
+
+To ping the integration now, select the ping icon (a heartbeat to the left of the **SCAN NOW** button).
+
+### Request a fresh scan
+
+To see fresh scan results, select the **SCAN NOW** button. Mondoo retrieves new scan results as soon as possible.
+
+### Stop all running scans
+
+To stop all currently running AWS scans, on the ellipsis menu of the integration page, select **Cancel Scans**.
+
+![Stop an AWS scan in Mondoo](/img/platform/infra/cloud/aws/cancel-scan.png)
+
+### Retry a failed integration setup
+
+If an error occurred during setup and the CloudFormation stack is now up and running but the integration is unhealthy, you can try to return it to a healthy state: Select the ellipsis to the right of the integration name and select **Retry Setup**.
+
+### Enable and disable policies for an AWS integration
+
+The **RECOMMENDED POLICIES** tab on the integration page lists policies that can help you protect your AWS environment. It shows which policies are enabled and disabled.
+
+![Policies for a Mondoo AWS integration](/img/platform/infra/cloud/aws/integration-policies.png)
+
+Use the toggle on the right side of each policy's row to enable or disable the policy.
+
+To learn more about policies, read [Policy as Code](/platform/security/posture/pac/).
+
+### Reconfigure an AWS integration
+
+The **CONFIGURATION** tab on the integration page shows the current settings and lets you make changes.
+
+![Reconfigure a Mondoo AWS integration](/img/platform/infra/cloud/aws/integration-config.png)
+
+To learn about individual settings, read the sections under the _Set up a new AWS integration_ section above.
+
+### Remove an integration
+
+To remove an integration, select the Remove (trash can) icon at the top of the integration page.
+
+![Remove an AWS Mondoo integration](/img/platform/infra/cloud/aws/integration-scan-now.png)
+
+A notification displays with a link to the CloudFormation Stacks list in the AWS console. Select the link and, in the AWS console, delete the stack. This removes the configured integration from Mondoo Platform and deletes the rule allowing the Mondoo AWS account to send events to the target account.
+
+## Learn more
+
+- [AWS Integration FAQ](/docs/platform/infra/cloud/aws/aws-integration-faq)
+
+- [AWS Integration Troubleshooting](/docs/platform/infra/cloud/aws/aws-integration-troubleshooting)
+
+---

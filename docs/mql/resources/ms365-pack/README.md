@@ -35,6 +35,7 @@ Resources included in this pack:
 | [ms365.exchangeonline](ms365.exchangeonline.md)                                                           | Microsoft 365 Exchange Online                       |
 | [ms365.exchangeonline.exoMailbox](ms365.exchangeonline.exomailbox.md)                                     | Microsoft 365 Exchange Online Mailbox               |
 | [ms365.exchangeonline.externalSender](ms365.exchangeonline.externalsender.md)                             | Microsoft 365 Exchange Online External Sender       |
+| [ms365.exchangeonline.teamsProtectionPolicy](ms365.exchangeonline.teamsprotectionpolicy.md)               | Teams Protection Policy configuration               |
 | [ms365.sharepointonline](ms365.sharepointonline.md)                                                       | Microsoft 365 SharePoint Online                     |
 | [ms365.sharepointonline.site](ms365.sharepointonline.site.md)                                             | Microsoft 365 SharePoint Site                       |
 | [ms365.teams](ms365.teams.md)                                                                             | Microsoft 365 Teams                                 |

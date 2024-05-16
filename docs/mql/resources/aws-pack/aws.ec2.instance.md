@@ -56,3 +56,4 @@ The `aws.ec2.instance` resource provides fields for assessing the configuration 
 | rootDeviceType        | string                                                          | The root device type used by the AMI: ebs or instance-store                                 |
 | rootDeviceName        | string                                                          | The device name of the root device volume, such as /dev/sda1                                |
 | architecture          | string                                                          | The architecture of the instance                                                            |
+| tpmSupport            | string                                                          | The TPM version supported. NitroTPM is enabled if this value is `2.0`                       |

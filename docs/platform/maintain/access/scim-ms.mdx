@@ -120,11 +120,19 @@ If this test is unsuccessful, contact your Mondoo representative.
 
    ![Entra automatic provisioning](/img/platform/maintain/access/entra-scim/provisioning.png)
 
-7. In the **Tenant URL** box, enter your SCIM base URL.
+7. In the **Tenant URL** box, enter the SCIM base URL you identified in the step above.
 
-8. In the **Secret Token** box, paste your Mondoo API token.
+8. In the **Secret Token** box, paste the Mondoo API token you created in the step above.
 
-9. SOMETHING ABOUT GROUP MAPPING IN SETTINGS THAT I CAN'T GET TO
+9. On the Provisioning toolbar, select **Save**.
+
+10. Select the **Mappings** drop-down.
+
+   ![Entra mappings](/img/platform/maintain/access/entra-scim/mappings.png)
+
+11. Select **Provision Microsoft Entra ID Groups**.
+
+12. Scroll down to the **Attribute Mappings** and make sure that these attributes are mapped:
 
 | Mondoo Attribute | Microsoft Entra ID Attribute |
 |------------------|------------------------------|
@@ -132,13 +140,8 @@ If this test is unsuccessful, contact your Mondoo representative.
 | displayName      | displayName                  |
 | externalId       | objectId                     |
 
-10.
 
-### Step E: Provision users in Entra
-
-1.
-
-### Step F: Identify Mondoo organization and space IDs
+### Step E: Identify Mondoo organization and space IDs
 
 To find the ID of an organization and a space:
 
@@ -184,9 +187,5 @@ $ curl -i -X POST -H "content-type: application/json" \
 
 ## Learn more
 
-- To learn more about OIDC, read [How OpenID Connect Works](https://openid.net/developers/how-connect-works/).
 - To learn more about SCIM, read [System for Cross-domain Identity Management](https://scim.cloud/).
-- To learn more about applications in Entra, read [Build Flows](https://help.okta.com/wf/en-us/content/topics/workflows/build/build-flows.htm).
-
-
-
+- To learn more about app registrations and enterprise apps in Microsoft Entra, read Microsoft's [Application management documentation](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/).

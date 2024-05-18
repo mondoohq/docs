@@ -1,0 +1,192 @@
+---
+title: Manage Mondoo Access with Microsoft Entra ID and SCIM
+sidebar_label: Microsoft Entra ID - SCIM
+sidebar_position: 4
+description: Configure SCIM/Microsoft Entra ID support for Mondoo Platform.
+image: /img/featured_img/mondoo-feature.jpg
+---
+
+Integrate Mondoo with Microsoft Entra ID with the System for Cross-domain Identity Management (SCIM) protocol so you can:
+
+- Enable users to log into Mondoo with their Entra ID account
+- Control who has access to Mondoo using Entra ID
+- Centrally manage users with Entra ID
+
+## Prerequisites
+
+To configure the integration, you need:
+
+- Administrator access to your Entra ID account
+- A privately hosted Mondoo [Enterprise account](https://mondoo.com/pricing)
+
+## Register a new application in Entra
+
+1. Log into the Microsoft Entra admin center.
+
+2. In the left menu, select **App registrations** and, in the toolbar, select **+ New application**.
+
+   ![New Entra app registration for Mondoo](/img/platform/maintain/access/entra-scim/reg-app.png)
+
+3. In the **Name** box, enter a name for the app registration, such as Mondoo.
+
+4. Under **Supported account types**, leave **Accounts in this organizational directory only (mondoo only - Single tenant)** selected.
+
+5. Under **Redirect URI (Optional)**, select **Single-page Application (SPA)** and type the URL that you use to access the Mondoo console for your Mondoo Enterprise instance, such as `https://console.YOUR-COMPANY.mondoo.com`.
+
+6. Select the **Register** button.
+
+   ![Register an Entra app Mondoo](/img/platform/maintain/access/entra-scim/client-id.png)
+
+7. Copy the **Application (client) ID** and share it with your Mondoo representative.
+
+8. In the toolbar, select **Endpoints**.
+
+   ![Register an Entra app Mondoo](/img/platform/maintain/access/entra-scim/oauth.png)
+
+9. Copy the **OAuth 2.0 token endpoint (v2)** and share it with your Mondoo representative.
+
+The Mondoo team uses the **Application (client) ID** and **OAuth 2.0 token endpoint (v2)** to enable Entra single sign-on for your Mondoo Enterprise account and prepare your instance for SCIM compatibility.
+
+## Manage Mondoo users with Entra (using SCIM)
+
+To centralize user management for your organization, give your Entra account full control over who can access organizations and spaces and perform different tasks in Mondoo. This implementation relies on the System for Cross-domain Identity Management (SCIM) protocol. Mondoo's SCIM support lets you give Entra groups access to organizations and spaces in your Mondoo Enterprise instance.
+
+:::note
+
+Before you set up Entra user management for Mondoo, you must first configure Entra single sign-on by following the steps above.
+
+:::
+
+### Step A: Create a new Mondoo API token
+
+1. In the Mondoo Console, [create a new API token with **edit** permission to your Mondoo **organization**.](https://mondoo.com/docs/platform/maintain/access/api-tokens/#generate-an-api-token-for-access-to-all-spaces-in-an-organization).
+
+2. Copy the generated token and save it. You need it for many of the steps below.
+
+### Step B: Identify your SCIM base URL
+
+Determine your SCIM base URL using the URL you use to access the Mondoo Console: Replace `console` with `api` and add `/scim/v2`. So if your Mondoo Console URL is:
+
+`https://console.YOUR-COMPANY-NAME.mondoo.com`
+
+then your SCIM base URL is:
+
+`https://api.YOUR-COMPANY-NAME.mondoo.com/scim/v2`
+
+### Step C: Verify that SCIM is enabled for your Mondoo instance
+
+Confirm that the Mondoo team has successfully enabled SCIM support for your Mondoo Enterprise instance.
+
+- For `YOUR-API-TOKEN`, substitute the token you created in the step above.
+
+- For `YOUR-SCIM-BASE-URL`, substitute the SCIM base URL you identified in the step above.
+
+```bash
+$ TOKEN='YOUR-API-TOKEN'
+$ curl -i -X GET -H "authorization: Bearer $TOKEN" YOUR-SCIM-BASE-URL/Users
+HTTP/2 200
+content-type: application/scim+json
+vary: Origin
+vary: Accept-Encoding
+date: Thu, 16 May 2024 21:09:36 GMT
+content-length: 130
+via: 1.1 google
+alt-svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+
+{"schemas":["urn:ietf:params:scim:api:messages:2.0:ListResponse"],"totalResults":0,"itemsPerPage":0,"startIndex":0,"Resources":[]}
+```
+
+If this test is unsuccessful, contact your Mondoo representative.
+
+### Step D: Create a SCIM application in Entra
+
+1. Log into the Microsoft Entra admin center.
+
+2. In the left menu, under **Applications**, select **Enterprise Applications**.
+
+   ![Entra enterprise applications](/img/platform/maintain/access/entra-scim/entra-apps.png)
+
+3. In the toolbar, select **+ New Application** and then select **Create your own application**.
+
+   ![Create Entra enterprise application](/img/platform/maintain/access/entra-scim/create-app.png)
+
+4. Type the name `Mondoo SCIM`, leave **Integrate any other application you don't find in the gallery (Non-gallery)** selected, and select the **Next** button.
+
+5. In the left menu, select **Provisioning** and again in the left menu select **Provisioning**.
+
+   ![Entra provisioning](/img/platform/maintain/access/entra-scim/automatic.png)
+
+6. In the **Provisioning Mode** box, select **Automatic**.
+
+   ![Entra automatic provisioning](/img/platform/maintain/access/entra-scim/provisioning.png)
+
+7. In the **Tenant URL** box, enter your SCIM base URL.
+
+8. In the **Secret Token** box, paste your Mondoo API token.
+
+9. SOMETHING ABOUT GROUP MAPPING IN SETTINGS THAT I CAN'T GET TO
+
+| Mondoo Attribute | Microsoft Entra ID Attribute |
+|------------------|------------------------------|
+| userName         | userPrincipalName            |
+| displayName      | displayName                  |
+| externalId       | objectId                     |
+
+10.
+
+### Step E: Provision users in Entra
+
+1.
+
+### Step F: Identify Mondoo organization and space IDs
+
+To find the ID of an organization and a space:
+
+1. In the top navigation bar of the Mondoo Console, select your region. Mondoo displays all organizations in the region.
+
+   ![Mondoo organization ID](/img/platform/maintain/access/okta/org-id.png)
+
+   Note each organization's ID in smaller text below the organization name. In the image above, the organization IDs are `blissful-mcnulty-255959` and `dewey-marzipan`.
+
+2. Select the organization containing the space you want and, in the side navigation bar, select **Spaces**.
+
+   ![Mondoo spaces](/img/platform/security/monitor-org.png)
+
+3. Select the space you want and, in the side navigation bar, select **Settings**.
+
+   ![Mondoo space ID](/img/platform/maintain/access/okta/space-id.png)
+
+   On the **General Settings** tab, note the ID of the space in the first field, **Name (A unique ID used to identify this space)**. In the image above, the space ID is `bunny-ears-chopsticks`.
+
+### Step G: Grant Mondoo organization and space access using cURL
+
+Create a new file named ‘scim-mapping.gql’ and containing a GraphQL request based on this sample:
+
+```
+{
+  "query": "mutation {\n  setScimGroupMapping(\n    input: {\n      orgMrn: \"//captain.api.mondoo.app/organizations/YOUR-ORG-ID\",\n      group: \"YOUR-OKTA-GROUP\",\n      mappings: [{\n        orgMrn: \"//captain.api.mondoo.app/organizations/YOUR-ORG-ID\",\n        #spaceMrn: \"//captain.api.mondoo.app/spaces/YOUR-SPACE-ID\",\n        iamRole: \"//iam.api.mondoo.app/roles/editor\"\n      },{\n        #orgMrn: \"//captain.api.mondoo.app/organizations/YOUR-ORG-ID\",\n        spaceMrn: \"//captain.api.mondoo.app/spaces/YOUR-SPACE-ID\",\n        iamRole: \"//iam.api.mondoo.app/roles/editor\"\n      },{\n        #orgMrn: \"//captain.api.mondoo.app/organizations/YOUR-ORG-ID\",\n        spaceMrn: \"//captain.api.mondoo.app/spaces/YOUR-SPACE-ID\",\n        iamRole: \"//iam.api.mondoo.app/roles/viewer\"\n      }]\n    }\n  ) {\n    group\n  }\n}"
+}
+```
+
+| For...         | Substitute...                                                        |
+| -------------- | -------------------------------------------------------------------- |
+| YOUR-ORG-ID    | The ID of the organization to which you want to grant a group access |
+| YOUR-SPACE-ID  | The ID of the space to which you want to grant a group access        |
+
+Execute the query:
+
+```bash
+$ export TOKEN='eyJhbGciOiJF...'
+$ curl -i -X POST -H "content-type: application/json" \
+  -H "authorization: Bearer $TOKEN" -d @scim-mapping.gql \
+  https://api.spacecat.mondoo.com/query
+```
+
+## Learn more
+
+- To learn more about OIDC, read [How OpenID Connect Works](https://openid.net/developers/how-connect-works/).
+- To learn more about SCIM, read [System for Cross-domain Identity Management](https://scim.cloud/).
+- To learn more about applications in Entra, read [Build Flows](https://help.okta.com/wf/en-us/content/topics/workflows/build/build-flows.htm).
+
+
+

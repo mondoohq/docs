@@ -12,9 +12,7 @@ Give people and software access to your Mondoo organizations and spaces:
 
 - Integrate Mondoo with Microsoft Entra ID to enable single sign-on with [SAML](/platform/maintain/access/saml).
 
-- Integrate Mondoo with Microsoft Entra ID to provision users with [SCIM](/platform/maintain/access/scim-ms).
-
-- Integrate Mondoo with [Okta](/platform/maintain/access/scim-okta) to provision users with SCIM.
+- Integrate Mondoo with [Okta](/platform/maintain/access/scim-okta) to provide single-sign-on with OIDC and manage user access with SCIM.
 
 - Use [service accounts](/platform/maintain/access/service_accounts) or [API tokens](/platform/maintain/access/api-tokens) to authenticate external services (such as CI pipelines) with the Mondoo Platform APIs.
 

@@ -1,6 +1,6 @@
 ---
-title: Manage Mondoo Access with Microsoft Entra ID and SAML
-sidebar_label: Manage Access with Entra/SAML
+title: Enable Single Sign-on with Microsoft Entra ID and SAML
+sidebar_label: Single Sign-on with Entra (SAML)
 sidebar_position: 3
 description: Configure SAML/Microsoft Entra ID support for Mondoo Platform.
 image: /img/featured_img/mondoo-feature.jpg

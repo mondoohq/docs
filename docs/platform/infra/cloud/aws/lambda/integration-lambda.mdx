@@ -82,7 +82,7 @@ Before creating a serverless Mondoo deployment on an AWS Organization, make sure
    | ----------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
    | **Discover EC2 instances**                                                                                                    | Include EC2 instances in asset discovery. By default, this applies across all regions.                                             |
    | **Trigger on instance state change [events](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-service-event.html)** | Trigger a scan of all EC2 instances whenever an instance changes state.                                                            |
-   | [**Use SSM for instance connectivity**](/docs/platform/infra/cloud/aws/aws-ssm-scan)                                          | Use the AWS SSM service to trigger scans for EC2 instances (when it's available).                                                  |
+   | [**Use SSM for instance connectivity**](/docs/cnspec/cloud/aws/aws-ssm-scan)                                          | Use the AWS SSM service to trigger scans for EC2 instances (when it's available).                                                  |
    | **Use EC2 Instance Connect for instance connectivity**                                                                        | If an EC2 instance has a public IP, connect using EC2 Instance Connect.                                                            |
    | **Use EBS volume scanning for instance connectivity**                                                                         | Use _EBS volume scanning_ to scan the filesystems of instances that Mondoo otherwise can't reach. This includes stopped instances. |
 
@@ -208,8 +208,8 @@ A notification displays with a link to the CloudFormation Stacks list in the AWS
 
 ## Learn more
 
-- [AWS Integration FAQ](/docs/platform/infra/cloud/aws/aws-integration-faq)
+- [AWS Integration FAQ](/docs/platform/infra/cloud/aws/lambda/aws-integration-faq/)
 
-- [AWS Integration Troubleshooting](/docs/platform/infra/cloud/aws/aws-integration-troubleshooting)
+- [AWS Integration Troubleshooting](/docs/platform/infra/cloud/aws/lambda/aws-integration-troubleshooting/)
 
 ---

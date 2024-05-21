@@ -9,9 +9,15 @@ The Mondoo serverless AWS integration enables continuous cron-scheduled and [eve
 
 To learn about how an integration runs and its required permissions, read [AWS Integration FAQ](/platform/infra/cloud/aws/aws-integration-faq/).
 
+:::info
+
+Mondoo also offers a Mondoo-hosted method for assessing AWS security. It requires no agent in AWS and is easier to set up. To compare the two approaches, read [Continuously Scan with an AWS Integration](/platform/infra/clous/aws/aws-integration-scan/).
+
+:::
+
 ## Integrate with an entire organization or single account
 
-The Mondoo AWS integration supports scanning multiple AWS accounts. To do this, you install Mondoo across an AWS Organization using CloudFormation StackSets. All scan configuration options you choose apply to every AWS account in the AWS Organization.
+The serverless Mondoo AWS integration supports scanning multiple AWS accounts. To do this, you install Mondoo across an AWS Organization using CloudFormation StackSets. All scan configuration options you choose apply to every AWS account in the AWS Organization.
 
 If you choose to integrate an entire Organization, be sure your AWS Organization meets the requirements described in [AWS Integration Troubleshooting](/platform/infra/cloud/aws/aws-integration-troubleshooting/#requirements-for-deploying-the-mondoo-stackset-at-the-organization-level).
 
@@ -50,7 +56,7 @@ This is intentional and reflects the [architectural concepts of AWS StackSets](h
 
 :::caution
 
-Before creating a Mondoo deployment on an AWS organization, make sure to check if the configuration of your AWS organization meets the [requirements](/platform/infra/cloud/aws/aws-integration-troubleshooting/#requirements-for-deploying-the-mondoo-stackset-at-the-organization-level).
+Before creating a serverless Mondoo deployment on an AWS Organization, make sure to check if the configuration of your AWS organization meets the [requirements](/platform/infra/cloud/aws/aws-integration-troubleshooting/#requirements-for-deploying-the-mondoo-stackset-at-the-organization-level).
 
 :::
 
@@ -112,7 +118,7 @@ Before creating a Mondoo deployment on an AWS organization, make sure to check i
    | **Trigger on S3 bucket [events](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-service-event.html)** | Trigger a scan whenever a change is made to an S3 bucket.       |
    | **Discover and scan ECR images**                                                                                  | Include ECR images in asset discovery and scan them when found. |
 
-11. Select the **CREATE** button.
+11. Select the **START SCANNING** button.
 
 12. Follow the instructions to launch the AWS CloudFormation stack (for an account) or StackSet (for an Organization).
 

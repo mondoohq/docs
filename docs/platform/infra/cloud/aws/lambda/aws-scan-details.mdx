@@ -1,6 +1,6 @@
 ---
-title: Advanced AWS Integration Details
-sidebar_label: Advanced Integration Details
+title: Advanced Serverless AWS Integration Details
+sidebar_label: Advanced Serverless Integration Details
 sidebar_position: 5
 image: /img/featured_img/mondoo-aws.jpg
 description: This document provides detailed information on how the Mondoo AWS integration works.
@@ -8,13 +8,13 @@ description: This document provides detailed information on how the Mondoo AWS i
 
 :::note
 
-This supplemental topic provides detailed information on how the Mondoo AWS integration works. It's not essential knowledge for using Mondoo.
+This supplemental topic provides detailed information on how the serverless Mondoo AWS integration works. It's not essential knowledge for using Mondoo.
 
 :::
 
 ## What is an "account scan"?
 
-When an AWS account is integrated with a space in Mondoo Platform, Mondoo performs a configuration assessment of the AWS account by analyzing the configuration of the account (IAM settings), and discovering resources (EC2 instances, S3 buckets, RDS instances, etc) across all regions. The configuration of discovered resources are assessed according to which policies have been **ENABLED** in the **registry**.
+When an AWS account is integrated with a Mondoo space, Mondoo performs a configuration assessment of the AWS account by analyzing the configuration of the account (IAM settings), and discovering resources (EC2 instances, S3 buckets, RDS instances, etc) across all regions. The configuration of discovered resources are assessed according to which policies have been **ENABLED** in the **registry**.
 
 ### Account scan schedule
 

@@ -5,9 +5,13 @@ sidebar_position: 1
 description: This document covers the configuration and use of the Mondoo-hosted AWS integration to scan AWS accounts and EC2 instances
 ---
 
-FOO FOO FOO
+A Mondoo-hosted AWS integration provides continuous security and compliance scanning for an AWS account without installing any agents in your AWS or incurring additional AWS cost. An AWS access key gives Mondoo integration the access it needs to continuously scan your AWS account. To learn about AWS access keys, read [Managing access keys for IAM users](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html) in the AWS documentation.
 
+:::info
 
+Mondoo also offers a serverless method for assessing AWS security. It provides cron-scheduled and event-based continuous scanning of your AWS accounts or your entire AWS Organization using a Lambda function. To compare the two approaches, read [Continuously Scan with an AWS Integration](/platform/infra/clous/aws/aws-integration-scan/).
+
+:::
 
 ## Set up a new AWS integration
 
@@ -25,22 +29,27 @@ FOO FOO FOO
 
    ![integration-create-image](/img/platform/infra/cloud/aws/add-hosted-top.png)
 
-3.
+3. In the **Choose an integration name** box, type a recognizable name for this AWS asset.
 
+4. In a new browser tab, go to your **AWS access portal** and select the account you want to continuously scan with Mondoo.
 
+   ![AWS access portal](/img/platform/infra/cloud/aws/awsportal.png)
 
+5. Select **Access keys** and scroll down to **Option 3: Use individual values in your AWS service client**.
 
+   ![AWS access keys](/img/platform/infra/cloud/aws/option3.png)
 
+6. Copy the **AWS access key ID** value.
 
-11. Select the **CREATE** button.
+   Return to the Mondoo Console tab in your browser and, under **Enter authentication details**, paste the value in the **Access Key ID** box.
 
-12. Follow the instructions to launch the AWS CloudFormation stack (for an account) or StackSet (for an Organization).
+   ![AWS access keys](/img/platform/infra/cloud/aws/auth.png)
 
-:::caution IMPORTANT
+7. In the AWS tab in your browser, copy the **AWS secret access key** value.
 
-Selecting **Create** does not finalize the integration between Mondoo and AWS. You must launch the AWS CloudFormation stack or StackSet to complete the setup.
+   Return to the Mondoo Console tab in your browser and, under **Enter authentication details**, paste the value in the **AWS secret access key** box.
 
-:::
+8. Select the **START SCANNING** button.
 
 ## Manage an AWS integration
 
@@ -84,16 +93,6 @@ To ping the integration now, select the ping icon (a heartbeat to the left of th
 
 To see fresh scan results, select the **SCAN NOW** button. Mondoo retrieves new scan results as soon as possible.
 
-### Stop all running scans
-
-To stop all currently running AWS scans, on the ellipsis menu of the integration page, select **Cancel Scans**.
-
-![Stop an AWS scan in Mondoo](/img/platform/infra/cloud/aws/cancel-scan.png)
-
-### Retry a failed integration setup
-
-If an error occurred during setup and the CloudFormation stack is now up and running but the integration is unhealthy, you can try to return it to a healthy state: Select the ellipsis to the right of the integration name and select **Retry Setup**.
-
 ### Enable and disable policies for an AWS integration
 
 The **RECOMMENDED POLICIES** tab on the integration page lists policies that can help you protect your AWS environment. It shows which policies are enabled and disabled.
@@ -103,14 +102,6 @@ The **RECOMMENDED POLICIES** tab on the integration page lists policies that can
 Use the toggle on the right side of each policy's row to enable or disable the policy.
 
 To learn more about policies, read [Policy as Code](/platform/security/posture/pac/).
-
-### Reconfigure an AWS integration
-
-The **CONFIGURATION** tab on the integration page shows the current settings and lets you make changes.
-
-![Reconfigure a Mondoo AWS integration](/img/platform/infra/cloud/aws/integration-config.png)
-
-To learn about individual settings, read the sections under the _Set up a new AWS integration_ section above.
 
 ### Remove an integration
 

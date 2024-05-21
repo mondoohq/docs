@@ -7,11 +7,11 @@ description: This document covers the configuration and use of the Mondoo AWS se
 
 The Mondoo serverless AWS integration enables continuous cron-scheduled and [event-based](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-service-event.html) scanning of your AWS account and EC2 instances.
 
-To learn about how an integration runs and its required permissions, read [AWS Integration FAQ](/platform/infra/cloud/aws/aws-integration-faq/).
+To learn about how an integration runs and its required permissions, read [AWS Integration FAQ](/platform/infra/cloud/aws/lambda/aws-integration-faq/).
 
 :::info
 
-Mondoo also offers a Mondoo-hosted method for assessing AWS security. It requires no agent in AWS and is easier to set up. To compare the two approaches, read [Continuously Scan with an AWS Integration](/platform/infra/clous/aws/aws-integration-scan/).
+Mondoo also offers a Mondoo-hosted method for assessing AWS security. It requires no agent in AWS and is easier to set up. To compare the two approaches, read [Continuously Scan with an AWS Integration](/platform/infra/cloud/aws/aws-integration-scan/).
 
 :::
 
@@ -19,7 +19,7 @@ Mondoo also offers a Mondoo-hosted method for assessing AWS security. It require
 
 The serverless Mondoo AWS integration supports scanning multiple AWS accounts. To do this, you install Mondoo across an AWS Organization using CloudFormation StackSets. All scan configuration options you choose apply to every AWS account in the AWS Organization.
 
-If you choose to integrate an entire Organization, be sure your AWS Organization meets the requirements described in [AWS Integration Troubleshooting](/platform/infra/cloud/aws/aws-integration-troubleshooting/#requirements-for-deploying-the-mondoo-stackset-at-the-organization-level).
+If you choose to integrate an entire Organization, be sure your AWS Organization meets the requirements described in [AWS Integration Troubleshooting](/platform/infra/cloud/aws/lambda/aws-integration-troubleshooting/#requirements-for-deploying-the-mondoo-stackset-at-the-organization-level).
 
 You can also opt to scan a single AWS account only. Single account integrations rely on CloudFormation stacks.
 
@@ -56,7 +56,7 @@ This is intentional and reflects the [architectural concepts of AWS StackSets](h
 
 :::caution
 
-Before creating a serverless Mondoo deployment on an AWS Organization, make sure to check if the configuration of your AWS organization meets the [requirements](/platform/infra/cloud/aws/aws-integration-troubleshooting/#requirements-for-deploying-the-mondoo-stackset-at-the-organization-level).
+Before creating a serverless Mondoo deployment on an AWS Organization, make sure to check if the configuration of your AWS organization meets the [requirements](/platform/infra/cloud/aws/lambda/aws-integration-troubleshooting/#requirements-for-deploying-the-mondoo-stackset-at-the-organization-level).
 
 :::
 

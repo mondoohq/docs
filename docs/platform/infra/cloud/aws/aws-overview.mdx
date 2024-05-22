@@ -14,7 +14,7 @@ Mondoo offers a variety of approaches to evaluating your AWS infrastructure secu
 
 Continuously evaluate the security of your AWS accounts and resources, such as EC2 instances, so that you always have an up-to-date view of your environment's security posture.
 
-The [Mondoo AWS Integration](/platform/infra/cloud/aws/aws-integration-scan) provides cron-scheduled and [event-based](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-service-event.html) continuous scanning of your AWS accounts and EC2 instances using a Lambda function. Deploy the integration once and always get the latest security assessments for new accounts and resources.
+The [Mondoo AWS Integration](/platform/infra/cloud/aws/aws-integration-scan) provides continuous scanning of your AWS accounts. Deploy the integration once and always get the latest security assessments for new accounts and resources.
 
 ## Scan during build time
 
@@ -22,11 +22,6 @@ The [Mondoo AWS Integration](/platform/infra/cloud/aws/aws-integration-scan) pro
 
 ## Scan during run time
 
-Ad hoc, agentless scans are a great way to get started evaluating your AWS security with Mondoo. There's no agent to install or manage on instances in your infrastructure, so you can get started scanning in just minutes.
-
-- [Scan an AWS account from your workstation](/platform/infra/cloud/aws/aws-workstation-scan/): Scan your AWS accounts and instances using cnspec, the open source security scanning component of Mondoo.
-- [Instance scan with AWS SSM](/platform/infra/cloud/aws/aws-ssm-scan/): Perform agentless scans of your instances using AWS Systems Manager.
-- [Instance scan with EC2 Instance Connect](/platform/infra/cloud/aws/aws-ec2-ic-scan/): Use EC2 Instance Connect to assess configuration without an agent.
-- [Instance scan with EBS snapshots](/platform/infra/cloud/aws/aws-ebs-snapshot-scan): To prevent impact on running instances, you can conduct a jump-host-based scan of EC2 instance EBS snapshots.
+Mondoo's client, cnspec, provides many ways to [run ad hoc, agentless scans](/cnspec/cloud/aws/).
 
 ---

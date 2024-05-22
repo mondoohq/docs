@@ -34,5 +34,5 @@ The `aws.rds.snapshot` resource provides fields for assessing the configuration 
 | engineVersion     | string            | The snapshot DB engine version                                     |
 | status            | string            | The snapshot status                                                |
 | allocatedStorage  | int               | The amount of storage allocated to the snapshot                    |
-| port              | int               | The port that the DB instance or cluster listens on                |
+| port              | int               | The port that the database instance or cluster listens on          |
 | createdAt         | time              | The creation date of the snapshot                                  |

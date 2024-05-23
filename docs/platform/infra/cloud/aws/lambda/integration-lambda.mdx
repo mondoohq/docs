@@ -91,14 +91,7 @@ This is intentional and reflects the [architectural concepts of AWS StackSets](h
    | **EBS targets per scanner** | Customize the number of targets a single scanner instance is responsible for scanning. Setting a low number (such as 5) results in faster scans, but requires AWS to create more scanner instances. Setting a high number (such as 50) reduces the number of scanner instances, but results in slower scans. The default is 20. |
    | **Max ASG instances**       | Set your own limit for how many instances AWS can spin up in the AutoScalingGroup to perform the filesystem scans. The default is 50.                                                                                                                                                                                           |
 
-8. To scan EC2 instances using SSH, enable **Use SSH for instance connectivity**. You must use the vault secret query if you use SSH. Provide this information:
-
-   | Option                 | Description                                                                                                                                                       |
-   | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-   | **Vault type**         | Specify whether to read the secret from AWS Secrets Manager or AWS SSM Parameter store.                                                                           |
-   | **Vault secret query** | Provide the query to match vault credentials to instances. To learn how to write the query, read [Secrets Management](/platform/infra/opsys/automation/vault.md). |
-
-9. If desired, limit the EC2 instances that Mondoo scans:
+8. If desired, limit the EC2 instances that Mondoo scans:
 
    | Option                     | Description                                                                    | Example                                  |
    | -------------------------- | ------------------------------------------------------------------------------ | ---------------------------------------- |
@@ -106,7 +99,7 @@ This is intentional and reflects the [architectural concepts of AWS StackSets](h
    | **Filter by regions**      | Limit instance scanning to a subset of regions, separating values with commas. | `us-east-1,us-east-2`                    |
    | **Filter by tags**         | To Limit instance scanning to a subset of tags, separated with commas.         | `Name:testname, env:test`                |
 
-10. Set ECS, S3, and ECR options:
+9. Set ECS, S3, and ECR options:
 
    ![integration-create-image](/img/platform/infra/cloud/aws/add-aws-bottom.png)
 
@@ -116,9 +109,9 @@ This is intentional and reflects the [architectural concepts of AWS StackSets](h
    | **Trigger on S3 bucket [events](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-service-event.html)** | Trigger a scan whenever a change is made to an S3 bucket.       |
    | **Discover and scan ECR images**                                                                                  | Include ECR images in asset discovery and scan them when found. |
 
-11. Select the **START SCANNING** button.
+10. Select the **START SCANNING** button.
 
-12. Follow the instructions to launch the AWS CloudFormation stack (for an account) or StackSet (for an Organization).
+11. Follow the instructions to launch the AWS CloudFormation stack (for an account) or StackSet (for an Organization).
 
 :::caution IMPORTANT
 

@@ -3,7 +3,7 @@ title: azure.subscription.networkService.subnet
 id: azure.subscription.networkService.subnet
 sidebar_label: azure.subscription.networkService.subnet
 displayed_sidebar: MQL
-description: Azure network subnet
+description: Azure Virtual Network (VNet) subnet
 ---
 
 # azure.subscription.networkService.subnet
@@ -14,7 +14,7 @@ description: Azure network subnet
 
 **Description**
 
-Azure network subnet
+Azure Virtual Network (VNet) subnet
 
 **Fields**
 

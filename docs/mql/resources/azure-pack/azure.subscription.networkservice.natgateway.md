@@ -3,7 +3,7 @@ title: azure.subscription.networkService.natGateway
 id: azure.subscription.networkService.natGateway
 sidebar_label: azure.subscription.networkService.natGateway
 displayed_sidebar: MQL
-description: Azure network NAT gateway
+description: Azure NAT gateway
 ---
 
 # azure.subscription.networkService.natGateway
@@ -14,7 +14,7 @@ description: Azure network NAT gateway
 
 **Description**
 
-Azure network NAT gateway
+Azure NAT gateway
 
 **Fields**
 
@@ -33,4 +33,4 @@ Azure network NAT gateway
 
 **References**
 
-- [Virtual Network documentation](https://learn.microsoft.com/en-us/azure/virtual-network/)
+- [Azure NAT Gateway documentation](https://learn.microsoft.com/en-us/azure/nat-gateway/)

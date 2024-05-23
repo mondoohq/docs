@@ -28,4 +28,4 @@ Azure Load Balancer rule
 
 **References**
 
-- [Virtual Network documentation](https://learn.microsoft.com/en-us/azure/virtual-network/)
+- [Load Balancer documentation](https://learn.microsoft.com/en-us/azure/load-balancer/)

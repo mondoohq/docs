@@ -3,7 +3,7 @@ title: azure.subscription.networkService.virtualNetworkGateway
 id: azure.subscription.networkService.virtualNetworkGateway
 sidebar_label: azure.subscription.networkService.virtualNetworkGateway
 displayed_sidebar: MQL
-description: Azure virtual network (VNet) gateway
+description: Azure Virtual Network (VNet) gateway
 ---
 
 # azure.subscription.networkService.virtualNetworkGateway
@@ -14,7 +14,7 @@ description: Azure virtual network (VNet) gateway
 
 **Description**
 
-Azure virtual network (VNet) gateway
+Azure Virtual Network (VNet) gateway
 
 **Fields**
 

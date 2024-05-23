@@ -2,17 +2,17 @@
 title: Manage Single Sign-on and Mondoo Access with Okta
 sidebar_label: Manage Access with Okta
 sidebar_position: 5
-description: Configure Okta user management support for Mondoo Platform.
+description: Configure Okta as an authentication provider for Mondoo Platform.
 image: /img/featured_img/mondoo-feature.jpg
 ---
 
-Integrate Mondoo with Okta so you can:
+Set up Okta as your authentication provider so you can:
 
 - Enable users to log into Mondoo with their Okta account
 - Control who has access to Mondoo using Okta
 - Centrally manage users with Okta
 
-Configuring single sign-on allows Okta to handle authentication (verifying that a user is who they say they are) for Mondoo. Configuring user management allows Okta to handle authorization (which users can do what) for Mondoo.
+Configuring single sign-on allows Okta to handle authentication (verifying that a user is who they say they are) for Mondoo. Configuring user management allows you to use Okta user groups to authorize access to Mondoo.
 
 You can choose to set up Okta single sign-on but not Okta user management. However, you can't use Okta for Mondoo user management without first setting up Okta single sign-on.
 
@@ -191,7 +191,7 @@ To find the ID of an organization and a space:
 
 Create a new file named ‘scim-mapping.gql’ and containing a GraphQL request based on this sample:
 
-```
+```gql
 {
   "query": "mutation {\n  setScimGroupMapping(\n    input: {\n      orgMrn: \"//captain.api.mondoo.app/organizations/YOUR-ORG-ID\",\n      group: \"YOUR-OKTA-GROUP\",\n      mappings: [{\n        orgMrn: \"//captain.api.mondoo.app/organizations/YOUR-ORG-ID\",\n        #spaceMrn: \"//captain.api.mondoo.app/spaces/YOUR-SPACE-ID\",\n        iamRole: \"//iam.api.mondoo.app/roles/editor\"\n      },{\n        #orgMrn: \"//captain.api.mondoo.app/organizations/YOUR-ORG-ID\",\n        spaceMrn: \"//captain.api.mondoo.app/spaces/YOUR-SPACE-ID\",\n        iamRole: \"//iam.api.mondoo.app/roles/editor\"\n      },{\n        #orgMrn: \"//captain.api.mondoo.app/organizations/YOUR-ORG-ID\",\n        spaceMrn: \"//captain.api.mondoo.app/spaces/YOUR-SPACE-ID\",\n        iamRole: \"//iam.api.mondoo.app/roles/viewer\"\n      }]\n    }\n  ) {\n    group\n  }\n}"
 }

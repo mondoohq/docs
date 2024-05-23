@@ -35,8 +35,9 @@ The network pack includes resources for querying assets like host names and chec
 These specialized packs let you deep-dive into attributes unique to the platforms:
 
 - [Amazon Web Services (AWS) resource pack](./aws-pack)
-- [Atlassian resource pack](./atlassian-pack)
+- [Amazon Web Services (AWS) CloudFormation IaC resource pack](./cloudformation-pack)
 - [Arista resource pack](./arista-pack)
+- [Atlassian resource pack](./atlassian-pack)
 - [Azure resource pack](./azure-pack)
 - [Equinix Metal resource pack](./equinix-pack)
 - [GitHub resource pack](./github-pack)

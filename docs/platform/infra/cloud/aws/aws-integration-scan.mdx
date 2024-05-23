@@ -9,7 +9,7 @@ The Mondoo AWS integration lets you continuously monitor the security and compli
 
 - A [Mondoo-hosted AWS integration](/platform/infra/cloud/aws/hosted/integration-hosted/) requires no agent installed to your AWS infrastructure and incurs no AWS cost. It's easy to set up and provides a higher level of stability. You can scan individual AWS accounts only; not an entire AWS Organization. This approach requires that you give Mondoo an AWS access key and secret.
 
-- A [serverless AWS integration](/platform/infra/cloud/aws/lambda/integration-lambda/) uses an AWS Lambda function and CloudFormation to perform scheduled scans of an account or an entire AWS Organization. It doesn't require sharing AWS credentials with Mondoo. A serverless integration is more complex to set up and does incur a small AWS cost.
+- A [serverless AWS integration](/platform/infra/cloud/aws/lambda/integration-lambda/) uses an AWS Lambda function and CloudFormation to perform scheduled scans of an account or an entire AWS Organization. It doesn't require sharing AWS credentials with Mondoo because scans run within your AWS infrastructure. A serverless integration is more complex to set up and does incur a small AWS cost.
 
 |                                          | **Mondoo-hosted**                            | **Serverless**                                     |
 |:-----------------------------------------|:--------------------------------------------:|:--------------------------------------------------:|
@@ -20,6 +20,6 @@ The Mondoo AWS integration lets you continuously monitor the security and compli
 | **Stability**                            | Highest; not subject to API limits | High, but very large accounts can exceed API limits |
 | **Complexity**                           | Easy                     | Requires installation in your environment          |
 | **Infrastructure cost**                  | No additional AWS cost   | Small AWS cost                                     |
-| **Security**                             | Highly secure            | Highest                                            |
+| **Security**                             | High; Mondoo securely stores the credentials for your environment      | Highest; share no AWS credentials with Mondoo                                         |
 
 ---

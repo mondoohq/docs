@@ -6,15 +6,15 @@ description: Search for assets in your Mondoo inventory
 image: /img/featured_img/mondoo-feature.jpg
 ---
 
-You can quickly search an entire organization from the Mondoo Console's top navigation bar. Full-text search allows you to find a text string in every asset name, resource, and field where it occurs.
+You can quickly search an entire organization from the Mondoo Console's top navigation bar. Full-text search allows you to find a text string in every asset name, resource, and field where it occurs. It also lets you find spaces, checks, CVEs, and vendor advisories, all in the same text search.
 
 Examples:
 
 - Searching for the Google Cloud project ID `luna-discovery` can return not only the project asset itself but also storage buckets with that project ID and a Terraform file with the name `luna-discovery-backend`.
 
-- You can search for `stella@lunalectric.com` to see all assets in your organization that contain Stella's email in any resource field.
+- You can search for `stella@lunalectric.com` to see all assets in a space that contain Stella's email in any resource field.
 
-- Search for `terraform` across an entire organization to find all Terraform assets in all spaces in the organization.
+- Search for `rds` across an entire organization to find all RDS assets in all spaces in the organization _plus_ all RDS-related checks in policies.
 
 ## Search for assets
 

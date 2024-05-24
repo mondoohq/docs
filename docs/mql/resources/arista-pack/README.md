@@ -25,4 +25,4 @@ Resources included in this pack:
 | [arista.eos.spt.mstInterface](arista.eos.spt.mstinterface.md)           | Multiple Spanning Tree Protocol (MSTP) information for a specified interface |
 | [arista.eos.stp](arista.eos.stp.md)                                     | Arista Spanning Tree Protocol (STP) resource                                 |
 | [arista.eos.stp.mst](arista.eos.stp.mst.md)                             | Arista Multiple Spanning Tree Protocol (MSTP) resource instance              |
-| [arista.eos.user](arista.eos.user.md)                                   | User on the local Arista EOS system                                          |
+| [arista.eos.user](arista.eos.user.md)                                   | Arista EOS local user                                                        |

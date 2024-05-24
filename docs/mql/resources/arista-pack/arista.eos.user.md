@@ -3,7 +3,7 @@ title: arista.eos.user
 id: arista.eos.user
 sidebar_label: arista.eos.user
 displayed_sidebar: MQL
-description: User on the local Arista EOS system
+description: Arista EOS local user
 ---
 
 # arista.eos.user
@@ -14,7 +14,7 @@ description: User on the local Arista EOS system
 
 **Description**
 
-User on the local Arista EOS system
+Arista EOS local user
 
 **Fields**
 

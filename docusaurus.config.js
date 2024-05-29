@@ -424,12 +424,6 @@ module.exports = {
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
         },
-        sitemap: {
-          changefreq: "daily",
-          lastmod: "date",
-          ignorePatterns: ["**/releases/tags/**"],
-          priority: 0.5,
-        },
       },
     ],
   ],

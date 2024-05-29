@@ -229,11 +229,13 @@ natgateway
 NDdh
 NDgz
 netsh
+networkinterface
 networkservice
 newkey
 nginx
 Nlcy
 noarch
+nodegroup
 nodepool
 NSIs
 NSUl
@@ -319,6 +321,7 @@ Stupakov
 sudolog
 suki
 SXp
+targetgroup
 Tdej
 teamsmeetingpolicyconfig
 tenantfederationconfig

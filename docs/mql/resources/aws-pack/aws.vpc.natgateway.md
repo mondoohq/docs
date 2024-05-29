@@ -26,3 +26,4 @@ Amazon VPC NAT Gateway
 | tags         | map[string]string                                                     | Tags for the NAT gateway                                                    |
 | vpc          | [aws.vpc](aws.vpc.md)                                                 | VPC associated with the NAT gateway                                         |
 | addresses    | &#91;&#93;[aws.vpc.natgateway.address](aws.vpc.natgateway.address.md) | List of addresses associated with the NAT gateway                           |
+| subnet       | [aws.vpc.subnet](aws.vpc.subnet.md)                                   | Subnet for the NAT gateway                                                  |

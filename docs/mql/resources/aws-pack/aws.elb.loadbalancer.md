@@ -36,3 +36,4 @@ The `aws.elb.loadbalancer` resource provides fields for assessing the configurat
 | region               | string                                                      | Region where the load balancer exists                                                  |
 | elbType              | string                                                      | The type of ELB. Possible values are `network`, `application`, `gateway`, or `classic` |
 | vpc                  | [aws.vpc](aws.vpc.md)                                       | VPC where the load balancer is located                                                 |
+| targetGroups         | &#91;&#93;[aws.elb.targetgroup](aws.elb.targetgroup.md)     | List of target groups for the load balancer                                            |

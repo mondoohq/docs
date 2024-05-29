@@ -3,7 +3,7 @@ title: aws.sqs.queue
 id: aws.sqs.queue
 sidebar_label: aws.sqs.queue
 displayed_sidebar: MQL
-description: Amazon SQS Queue
+description: Amazon Simple Queue Service (SQS) Queue
 ---
 
 # aws.sqs.queue
@@ -14,7 +14,7 @@ description: Amazon SQS Queue
 
 **Description**
 
-Amazon SQS Queue
+Amazon Simple Queue Service (SQS) Queue
 
 **Fields**
 
@@ -31,7 +31,7 @@ Amazon SQS Queue
 | messageRetentionPeriodSeconds | int                               | Time in seconds the queue retains messages                   |
 | receiveMessageWaitTimeSeconds | int                               | Time in seconds the queue waits for messages                 |
 | region                        | string                            | Region for the queue                                         |
-| sqsManagedSseEnabled          | bool                              | True if SSE is enabled for the queue                         |
-| queueType                     | string                            | Fifo or Standard                                             |
+| sqsManagedSseEnabled          | bool                              | Whether SSE is enabled for the queue                         |
+| queueType                     | string                            | The type of queue: Fifo or Standard                          |
 | url                           | string                            | URL for the queue                                            |
 | visibilityTimeoutSeconds      | int                               | Visibility timeout for the queue                             |

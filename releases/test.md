@@ -5,7 +5,7 @@ description: test
 author: Letha
 author_title: Mondoo Core Team
 unlisted: true
-image: /img/featured_img/release-feature.png
+image: /img/featured_img/release-feature.jpg
 ---
 
 ## 🥳 Mondoo infinity is out! This release includes the world!

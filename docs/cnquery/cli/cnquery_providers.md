@@ -7,7 +7,7 @@ Providers add connectivity to all assets
 
 ### Synopsis
 
-Manage your providers. List and install new ones or update existing ones.
+Manage your providers. List and install new ones or update existing ones
 
 ```
 cnquery providers [flags]
@@ -22,7 +22,7 @@ cnquery providers [flags]
 ### Options inherited from parent commands
 
 ```
-      --api-proxy string   Set proxy for communications with Mondoo API
+      --api-proxy string   Set proxy for communications with Mondoo Platform API
       --auto-update        Enable automatic provider installation and update (default true)
       --config string      Set config file path (default $HOME/.config/mondoo/mondoo.yml)
       --log-level string   Set log level: error, warn, info, debug, trace (default "info")
@@ -32,5 +32,5 @@ cnquery providers [flags]
 ### SEE ALSO
 
 - [cnquery](cnquery.md) - cnquery CLI
-- [cnquery providers install](cnquery_providers_install.md) - Install or update a provider.
-- [cnquery providers list](cnquery_providers_list.md) - List all providers on the system.
+- [cnquery providers install](cnquery_providers_install.md) - Install or update a provider
+- [cnquery providers list](cnquery_providers_list.md) - List all providers on the system

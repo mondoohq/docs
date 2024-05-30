@@ -26,3 +26,17 @@ windows.serverFeature(name string)
 | description  | string | Feature description                           |
 | installed    | bool   | Whether the feature is installed              |
 | installState | int    | Feature installation state                    |
+
+**Examples**
+
+Check that a specific Windows Server feature is installed
+
+```coffee
+windows.serverFeature('SNMP-Service').installed
+```
+
+Check that a specific Windows Server feature is not installed
+
+```coffee
+windows.serverFeature('Windows-Defender').installed == false
+```

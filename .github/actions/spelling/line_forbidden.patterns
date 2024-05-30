@@ -63,6 +63,7 @@
 
 # s.b. Docker Hub
 \bDocker[Hh]ub\b
+\bdocker hub\b
 
 # s.b. REST API
 \b[Rr]est API\b

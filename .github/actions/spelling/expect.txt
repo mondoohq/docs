@@ -163,6 +163,7 @@ ingresstls
 installassistant
 ipsetforwardedipconfig
 ipsetreferencestatement
+istio
 Jalr
 JDAOZ
 jdata

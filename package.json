@@ -19,7 +19,7 @@
     "@docusaurus/core": "<3.3.0",
     "@docusaurus/plugin-client-redirects": "<3.3.0",
     "@docusaurus/preset-classic": "<3.3.0",
-    "@docusaurus/theme-search-algolia": "<3.3.0",
+    "@docusaurus/theme-search-algolia": "<3.5.0",
     "@fontsource/roboto": "^5.0.7",
     "@mdx-js/react": "^3.0.1",
     "@stackql/docusaurus-plugin-hubspot": "^1.0.0",

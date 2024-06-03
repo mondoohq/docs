@@ -189,11 +189,40 @@ To find the ID of an organization and a space:
 
 ### Step G: Grant Mondoo organization and space access using cURL
 
-Create a new file named ‘scim-mapping.gql’ and containing a GraphQL request based on this sample:
+Create a new file named `scim-mapping.gql` and containing a GraphQL request based on this sample:
 
 ```gql
 {
-  "query": "mutation {\n  setScimGroupMapping(\n    input: {\n      orgMrn: \"//captain.api.mondoo.app/organizations/YOUR-ORG-ID\",\n      group: \"YOUR-OKTA-GROUP\",\n      mappings: [{\n        orgMrn: \"//captain.api.mondoo.app/organizations/YOUR-ORG-ID\",\n        #spaceMrn: \"//captain.api.mondoo.app/spaces/YOUR-SPACE-ID\",\n        iamRole: \"//iam.api.mondoo.app/roles/editor\"\n      },{\n        #orgMrn: \"//captain.api.mondoo.app/organizations/YOUR-ORG-ID\",\n        spaceMrn: \"//captain.api.mondoo.app/spaces/YOUR-SPACE-ID\",\n        iamRole: \"//iam.api.mondoo.app/roles/editor\"\n      },{\n        #orgMrn: \"//captain.api.mondoo.app/organizations/YOUR-ORG-ID\",\n        spaceMrn: \"//captain.api.mondoo.app/spaces/YOUR-SPACE-ID\",\n        iamRole: \"//iam.api.mondoo.app/roles/viewer\"\n      }]\n    }\n  ) {\n    group\n  }\n}"
+  "query":
+    "mutation {
+      setScimGroupMapping(
+         input: {
+            orgMrn: \"//captain.api.mondoo.app/organizations/YOUR-ORG-ID\",
+            group: \"YOUR-OKTA-GROUP\",
+            mappings: [
+               {
+                  orgMrn: \"//captain.api.mondoo.app/organizations/YOUR-ORG-ID\",
+                  #spaceMrn: \"//captain.api.mondoo.app/spaces/YOUR-SPACE-ID\",
+                  iamRole: \"//iam.api.mondoo.app/roles/editor\"
+               },
+               {
+                  #orgMrn: \"//captain.api.mondoo.app/organizations/YOUR-ORG-ID\",
+                  spaceMrn: \"//captain.api.mondoo.app/spaces/YOUR-SPACE-ID\",
+                  iamRole: \"//iam.api.mondoo.app/roles/editor\"
+               },
+               {
+                   #orgMrn: \"//captain.api.mondoo.app/organizations/YOUR-ORG-ID\",
+                   spaceMrn: \"//captain.api.mondoo.app/spaces/YOUR-SPACE-ID\",
+                   iamRole: \"//iam.api.mondoo.app/roles/viewer\"
+               }
+            ]
+         }
+      )
+        {
+         group
+         }
+   }
+   "
 }
 ```
 

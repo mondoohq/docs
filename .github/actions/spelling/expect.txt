@@ -93,6 +93,7 @@ dcea
 Ddos
 debconf
 deliverychannel
+dewey
 dfw
 dgrrz
 DHE
@@ -135,6 +136,7 @@ Fwa
 Fwc
 Fxo
 gcfs
+Gci
 gcs
 geomatchstatement
 GFj
@@ -144,6 +146,7 @@ gistfile
 gmail
 googleusercontent
 gpu
+gql
 guncl
 gvnic
 hashs
@@ -155,6 +158,7 @@ hostkeys
 hvm
 iac
 iap
+ietf
 Iiwic
 Ijoi
 IKTK
@@ -203,6 +207,7 @@ MANIFESTFILE
 maxbackup
 maxsize
 Mbeze
+mcnulty
 MDENG
 messagestoragepolicy
 Metasploit
@@ -332,6 +337,8 @@ testname
 testring
 testsuite
 tfblock
+thm
+Thu
 tmpkqyme
 toplevel
 tpu

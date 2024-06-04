@@ -1,0 +1,218 @@
+---
+title: Manage Single Sign-on and Mondoo Access with Okta
+sidebar_label: Manage Access with Okta
+sidebar_position: 5
+description: Configure Okta as an authentication provider for Mondoo Platform.
+image: /img/featured_img/mondoo-feature.jpg
+---
+
+Set up Okta as your authentication provider so you can:
+
+- Enable users to log into Mondoo with their Okta account
+- Control who has access to Mondoo using Okta
+- Centrally manage users with Okta
+
+Configuring single sign-on allows Okta to handle authentication (verifying that a user is who they say they are) for Mondoo. Configuring user management allows you to use Okta user groups to authorize access to Mondoo.
+
+You can choose to set up Okta single sign-on but not Okta user management. However, you can't use Okta for Mondoo user management without first setting up Okta single sign-on.
+
+## Prerequisites
+
+To configure the integration, you need:
+
+- An Okta administrator account
+- A privately hosted Mondoo [Enterprise account](https://mondoo.com/pricing)
+
+Let your Mondoo representative know that you want to enable Okta single sign-on for your Mondoo Enterprise account. The Mondoo team executes the final step in configuring Okta single sign-on using information you provide.
+
+## Configure Okta single sign-on for Mondoo (using OIDC)
+
+To allow users to log into the Mondoo Console with their Okta-provided credentials, you create an Okta app integration for Mondoo. This implementation relies on [OpenID Connect (OIDC)](https://openid.net/developers/how-connect-works/) to authenticate users.
+
+1. Log into your Okta Admin Console.
+
+2. In the left menu, select **Applications**.
+
+   ![Okta applications](/img/platform/maintain/access/okta/applications.png)
+
+3. Select the **Create App Integration** button.
+
+   ![Okta new app integration](/img/platform/maintain/access/okta/new-app1.png)
+
+4. For the **Sign-in method**, select **OIDC - OpenID Connect** and for the **Application type**, select **Single-Page Application**. Then select the **Next** button.
+
+   ![Okta new app integration](/img/platform/maintain/access/okta/new-app2.png)
+
+5. For the **App integration name**, enter **Mondoo**.
+
+6. For **Grant type**, select **Authorization Code** and **Refresh Token**.
+
+7. For the **Sign-in redirect URI** and **Sign-out redirect URI**, enter the private domain you type to access the Mondoo Console, such as `https://console.YOUR-COMPANY-NAME.mondoo.com/`.
+
+8. For **Assignments**, choose to limit access to selected groups and enter the specific groups names.
+
+9. Select the **Save** button.
+
+   Okta creates the app integration.
+
+   ![Okta applications](/img/platform/maintain/access/okta/app-props.png)
+
+10. On the **General** tab of the app integration properties, copy the **Client ID**. Share this with your Mondoo representative.
+
+11. In the top-right corner of the Okta Admin Console, select the drop-down beside your user ID.
+
+   ![Okta issuer ID](/img/platform/maintain/access/okta/issuer-id.png)
+
+   Below your name and email address is an **Issuer ID**. Select the Copy to Clipboard icon beside the Issuer ID. Share the Issuer ID with your Mondoo representative.
+
+The Mondoo team uses the Client ID and Issuer ID to enable Okta single sign-on for your Mondoo Enterprise account. After we let you know we've executed this final step, it can take 10-20 minutes before users can log into Mondoo using Okta single sign-on.
+
+
+## Manage Mondoo users with Okta (using SCIM)
+
+To centralize user management for your organization, give your Okta account full control over who can access organizations and spaces and perform different tasks in Mondoo. This implementation relies on the System for Cross-domain Identity Management (SCIM) protocol. Mondoo's SCIM support lets you give Okta groups access to organizations and spaces in your Mondoo Enterprise instance.
+
+:::note
+
+Before you set up Okta user management for Mondoo, you must first configure Okta single sign-on by following the steps above.
+
+:::
+
+### Step A: Create a new Mondoo API token
+
+1. In the Mondoo Console, [create a new API token with **edit** permission to your Mondoo **organization**.](https://mondoo.com/docs/platform/maintain/access/api-tokens/#generate-an-api-token-for-access-to-all-spaces-in-an-organization).
+
+2. Copy the generated token and save it. You need it for many of the steps below.
+
+### Step B: Identify your SCIM base URL
+
+Determine your SCIM base URL using the URL you use to access the Mondoo Console: Replace `console` with `api` and add `/scim/v2`. So if your Mondoo Console URL is:
+
+`https://console.YOUR-COMPANY-NAME.mondoo.com`
+
+then your SCIM base URL is:
+
+`https://api.YOUR-COMPANY-NAME.mondoo.com/scim/v2`
+
+### Step C: Verify that SCIM is enabled for your Mondoo instance
+
+Confirm that the Mondoo team has successfully enabled SCIM support for your Mondoo Enterprise instance.
+
+- For `YOUR-API-TOKEN`, substitute the token you created in the step above.
+
+- For `YOUR-SCIM-BASE-URL`, substitute the SCIM base URL you identified in the step above.
+
+```bash
+$ TOKEN='YOUR-API-TOKEN'
+$ curl -i -X GET -H "authorization: Bearer $TOKEN" YOUR-SCIM-BASE-URL/Users
+HTTP/2 200
+content-type: application/scim+json
+vary: Origin
+vary: Accept-Encoding
+date: Thu, 16 May 2024 21:09:36 GMT
+content-length: 130
+via: 1.1 google
+alt-svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+
+{"schemas":["urn:ietf:params:scim:api:messages:2.0:ListResponse"],"totalResults":0,"itemsPerPage":0,"startIndex":0,"Resources":[]}
+```
+
+If this test is unsuccessful, contact your Mondoo representative.
+
+### Step D: Create a SCIM application in Okta
+
+1. Log into your Okta Admin Console.
+
+2. In the left menu, select **Applications**.
+
+   ![Okta applications](/img/platform/maintain/access/okta/applications.png)
+
+3. Select the **Browse App Catalog** button.
+
+   ![Okta catalog search](/img/platform/maintain/access/okta/search-scim.png)
+
+4. Use the catalog search box to search for “SCIM 2.0 Bearer” and select the “SCIM 2.0 Test App (OAuth Bearer Token)” application.
+
+   ![Okta SCIM application](/img/platform/maintain/access/okta/scim-info.png)
+
+5. Select the **Add Integration** button.
+
+   ![Add Okta SCIM application](/img/platform/maintain/access/okta/add-start.png)
+
+6. On the **General Settings** tab, keep the default options and select the **Next** button.
+
+7. Your Mondoo-Okta integration doesn't use any of that information on the **Sign-On Options: Required** tab, so just select the **Done** button.
+
+### Step E: Provision users in Okta
+
+1. Select the **Provisioning** tab, select **Configure API Integration**, and check the **Enable API Integration** box.
+
+   ![Okta provisioning](/img/platform/maintain/access/okta/provisioning.png)
+
+2. In the **SCIM 2.0 Base Url** box, enter the Mondoo SCIM base URL that you identified in the step above.
+
+3. In the **OAuth Bearer Token** box, paste your Mondoo API token.
+
+4. Select the **Test API Credentials** button to confirm that the token and URL you provided give Okta the access it needs.
+
+5. Select the **Save** button.
+
+6. In the left menu, select **ToApp**. Select **Edit** and enable these capabilities:
+
+   - Create Users
+   - Update User Attributes
+   - Deactivate Users
+
+7. Select the **Assignments** tab and use the **Assign** button to add the groups to which you want to grant Mondoo access.
+
+8. Select the **Push Groups** tab and use the **Push Groups** button to be sure the same groups are added as in step 7.
+
+### Step F: Identify Mondoo organization and space IDs
+
+To find the ID of an organization and a space:
+
+1. In the top navigation bar of the Mondoo Console, select your region. Mondoo displays all organizations in the region.
+
+   ![Mondoo organization ID](/img/platform/maintain/access/okta/org-id.png)
+
+   Note each organization's ID in smaller text below the organization name. In the image above, the organization IDs are `blissful-mcnulty-255959` and `dewey-marzipan`.
+
+2. Select the organization containing the space you want and, in the side navigation bar, select **Spaces**.
+
+   ![Mondoo spaces](/img/platform/security/monitor-org.png)
+
+3. Select the space you want and, in the side navigation bar, select **Settings**.
+
+   ![Mondoo space ID](/img/platform/maintain/access/okta/space-id.png)
+
+   On the **General Settings** tab, note the ID of the space in the first field, **Name (A unique ID used to identify this space)**. In the image above, the space ID is `bunny-ears-chopsticks`.
+
+### Step G: Grant Mondoo organization and space access using cURL
+
+Create a new file named `scim-mapping.gql` and containing a GraphQL request based on this sample:
+
+```gql
+{
+  "query": "mutation {\n  setScimGroupMapping(\n    input: {\n      orgMrn: \"//captain.api.mondoo.app/organizations/dreamy-bartik-265385\",\n      group: \"API Admins\",\n      mappings: [{\n        orgMrn: \"//captain.api.mondoo.app/organizations/dreamy-bartik-265385\",\n        #spaceMrn: \"//captain.api.mondoo.app/spaces/pedantic-mestorf-965815\",\n        iamRole: \"//iam.api.mondoo.app/roles/editor\"\n      },{\n        #orgMrn: \"//captain.api.mondoo.app/organizations/dreamy-bartik-265385\",\n        spaceMrn: \"//captain.api.mondoo.app/spaces/pedantic-mestorf-965815\",\n        iamRole: \"//iam.api.mondoo.app/roles/editor\"\n      },{\n        #orgMrn: \"//captain.api.mondoo.app/organizations/dreamy-bartik-265385\",\n        spaceMrn: \"//captain.api.mondoo.app/spaces/pedantic-mestorf-12323\",\n        iamRole: \"//iam.api.mondoo.app/roles/viewer\"\n      }]\n    }\n  ) {\n    group\n  }\n}"
+}
+```
+
+| For...         | Substitute...                                                        |
+| -------------- | -------------------------------------------------------------------- |
+| YOUR-ORG-ID    | The ID of the organization to which you want to grant a group access |
+| YOUR-SPACE-ID  | The ID of the space to which you want to grant a group access        |
+
+Execute the query:
+
+```bash
+$ export TOKEN='eyJhbGciOiJF...'
+$ curl -i -X POST -H "content-type: application/json" \
+  -H "authorization: Bearer $TOKEN" -d @scim-mapping.gql \
+  https://api.spacecat.mondoo.com/query
+```
+
+## Learn more
+
+- To learn more about OIDC, read [How OpenID Connect Works](https://openid.net/developers/how-connect-works/).
+- To learn more about SCIM, read [System for Cross-domain Identity Management](https://scim.cloud/).
+- To learn more about applications in Okta, read [Build Flows](https://help.okta.com/wf/en-us/content/topics/workflows/build/build-flows.htm).

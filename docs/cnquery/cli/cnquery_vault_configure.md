@@ -17,15 +17,15 @@ cnquery vault configure VAULTNAME [flags]
 
 ```
   -h, --help                    help for configure
-      --inventory-file string   Set the path to the inventory file.
+      --inventory-file string   Set the path to the inventory file
       --option stringToString   addition vault connection options, multiple options via --option key=value (default [])
-      --type string             possible values: encrypted-file | aws-parameter-store | memory | linux-kernel-keyring | keyring | hashicorp-vault | gcp-secret-manager | aws-secrets-manager | gcp-berglas | none
+      --type string             possible values: linux-kernel-keyring | hashicorp-vault | gcp-secret-manager | aws-parameter-store | none | keyring | gcp-berglas | memory | encrypted-file | aws-secrets-manager
 ```
 
 ### Options inherited from parent commands
 
 ```
-      --api-proxy string   Set proxy for communications with Mondoo API
+      --api-proxy string   Set proxy for communications with Mondoo Platform API
       --auto-update        Enable automatic provider installation and update (default true)
       --config string      Set config file path (default $HOME/.config/mondoo/mondoo.yml)
       --log-level string   Set log level: error, warn, info, debug, trace (default "info")

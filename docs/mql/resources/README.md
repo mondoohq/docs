@@ -31,18 +31,24 @@ Some of the resources in the operating system pack span different operating syst
 [**Network resource pack:**](./network-pack)
 The network pack includes resources for querying assets like host names and checking certificate contents.
 
+**IaC-specific resource packs:**
+These specialized packs let you examine infrastructure-as-code (IaC) files:
+
+- [Amazon Web Services (AWS) CloudFormation IaC resource pack](./cloudformation-pack)
+- [Ansible IaC resource pack](./ansible-pack)
+- [Terraform IaC resource pack](./terraform-pack)
+
 **Platform-specific resource packs:**
 These specialized packs let you deep-dive into attributes unique to the platforms:
 
 - [Amazon Web Services (AWS) resource pack](./aws-pack)
-- [Amazon Web Services (AWS) CloudFormation IaC resource pack](./cloudformation-pack)
 - [Arista resource pack](./arista-pack)
 - [Atlassian resource pack](./atlassian-pack)
 - [Azure resource pack](./azure-pack)
 - [Equinix Metal resource pack](./equinix-pack)
 - [GitHub resource pack](./github-pack)
 - [GitLab resource pack](./gitlab-pack)
-- [Google Cloud Platform (GCP) resource pack](./gcp-pack)
+- [Google Cloud (GCP) resource pack](./gcp-pack)
 - [Google Workspace resource pack](./google-workspace-pack/)
 - [IPMI resource pack](./ipmi-pack)
 - [Kubernetes resource pack](./k8s-pack)
@@ -50,8 +56,8 @@ These specialized packs let you deep-dive into attributes unique to the platform
 - [Okta resource pack](./okta-pack)
 - [OPC UA resource pack](./opcua-pack)
 - [Oracle Cloud Infrastructure (OCI) resource pack](./oci-pack)
+- [Shodan Search Engine resource pack](./shodan-pack)
 - [Slack resource pack](./slack-pack)
-- [Terraform IaC resource pack](./terraform-pack)
 - [VMware Cloud Director resource pack](./vcd-pack/)
 - [VMware vSphere resource pack](./vsphere-pack)
 

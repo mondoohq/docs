@@ -157,14 +157,17 @@ HHq
 hostkeys
 hvm
 iac
+iana
 iap
 ietf
 Iiwic
 Ijoi
 IKTK
 ilb
+imagetools
 ingresstls
 installassistant
+ipconfiguration
 ipsetforwardedipconfig
 ipsetreferencestatement
 istio
@@ -244,6 +247,7 @@ noarch
 nodegroup
 nodepool
 NSIs
+nsrecord
 NSUl
 nsurlsessiond
 Nsxr
@@ -253,6 +257,7 @@ ocid
 OFafff
 openssh
 openssl
+optionalfeatures
 orstatement
 osoverview
 OTIy
@@ -310,6 +315,7 @@ securetty
 securityimages
 SEfirewall
 serviceprincipals
+shodan
 singlequeryargument
 sizeconstraintstatement
 skype
@@ -321,6 +327,7 @@ spo
 sqli
 sqlimatchstatement
 sqlserver
+sqlservice
 srvsvc
 stdevel
 Stupakov

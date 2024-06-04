@@ -12,7 +12,7 @@ cnquery is a cloud-native tool for querying your entire infrastructure.
 ### Options
 
 ```
-      --api-proxy string   Set proxy for communications with Mondoo API
+      --api-proxy string   Set proxy for communications with Mondoo Platform API
       --auto-update        Enable automatic provider installation and update (default true)
       --config string      Set config file path (default $HOME/.config/mondoo/mondoo.yml)
   -h, --help               help for cnquery

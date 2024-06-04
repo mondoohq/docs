@@ -28,18 +28,18 @@ cnquery sbom [flags]
 ### Options
 
 ```
-      --annotation stringToString   Add an annotation to the asset. (default [])
-      --asset-name string           User-override for the asset name.
+      --annotation stringToString   Add an annotation to the asset (default [])
+      --asset-name string           User-override for the asset name
   -h, --help                        help for sbom
   -o, --output string               Set output format: json, cyclonedx-json, cyclonedx-xml, spdx-json, spdx-tag-value, table (default "list")
-      --output-target string        Set output target to which the sbom report will be written.
+      --output-target string        Set output target to which the SBOM report will be written
       --with-evidence               Display evidence for each component
 ```
 
 ### Options inherited from parent commands
 
 ```
-      --api-proxy string   Set proxy for communications with Mondoo API
+      --api-proxy string   Set proxy for communications with Mondoo Platform API
       --auto-update        Enable automatic provider installation and update (default true)
       --config string      Set config file path (default $HOME/.config/mondoo/mondoo.yml)
       --log-level string   Set log level: error, warn, info, debug, trace (default "info")

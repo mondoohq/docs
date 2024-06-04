@@ -23,19 +23,19 @@ cnquery login [flags]
 ### Options
 
 ```
-      --annotation stringToString   Set the client annotations. (default [])
-      --api-endpoint string         Set the Mondoo API endpoint.
+      --annotation stringToString   Set the client annotations (default [])
+      --api-endpoint string         Set the Mondoo API endpoint
   -h, --help                        help for login
-      --name string                 Set asset name.
-      --splay int                   Randomize the timer by up to this many minutes.
-      --timer int                   Set the scan interval in minutes.
-  -t, --token string                Set a client registration token.
+      --name string                 Set asset name
+      --splay int                   Randomize the timer by up to this many minutes
+      --timer int                   Set the scan interval in minutes
+  -t, --token string                Set a client registration token
 ```
 
 ### Options inherited from parent commands
 
 ```
-      --api-proxy string   Set proxy for communications with Mondoo API
+      --api-proxy string   Set proxy for communications with Mondoo Platform API
       --auto-update        Enable automatic provider installation and update (default true)
       --config string      Set config file path (default $HOME/.config/mondoo/mondoo.yml)
       --log-level string   Set log level: error, warn, info, debug, trace (default "info")

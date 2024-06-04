@@ -116,12 +116,12 @@ Resources included in this pack:
 | [windows](windows.md)                                   | Windows-specific resource to get operating system details  |
 | [windows.bitlocker](windows.bitlocker.md)               | Windows BitLocker                                          |
 | [windows.bitlocker.volume](windows.bitlocker.volume.md) | Windows BitLocker volume                                   |
-| [windows.feature](windows.feature.md)                   | Deprecated: use serverFeature instead                      |
+| [windows.feature](windows.feature.md)                   | Deprecated. Use `windows.serverFeature` instead            |
 | [windows.firewall](windows.firewall.md)                 | Windows Firewall resource                                  |
 | [windows.firewall.profile](windows.firewall.profile.md) | Windows Firewall profile entry                             |
 | [windows.firewall.rule](windows.firewall.rule.md)       | Windows Firewall rule entry                                |
 | [windows.hotfix](windows.hotfix.md)                     | Windows hotfix resource                                    |
-| [windows.optionalFeature](windows.optionalfeature.md)   | Windows optional feature resource                          |
+| [windows.optionalFeature](windows.optionalfeature.md)   | Windows optional feature resource (desktop-only)           |
 | [windows.security](windows.security.md)                 |                                                            |
 | [windows.security.health](windows.security.health.md)   | Health of the Windows security provider                    |
 | [windows.security.product](windows.security.product.md) | Private Windows security product                           |

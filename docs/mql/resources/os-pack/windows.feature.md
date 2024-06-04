@@ -3,14 +3,14 @@ title: windows.feature
 id: windows.feature
 sidebar_label: windows.feature
 displayed_sidebar: MQL
-description: Deprecated use serverFeature instead
+description: Deprecated. Use `windows.serverFeature` instead
 ---
 
 # windows.feature
 
 **Description**
 
-Deprecated: use serverFeature instead
+Deprecated. Use `windows.serverFeature` instead
 
 **Init**
 
@@ -29,13 +29,13 @@ windows.feature(name string)
 
 **Examples**
 
-Check that a Windows features is installed
+Check that a specific Windows Server feature is installed
 
 ```coffee
 windows.feature('SNMP-Service').installed
 ```
 
-Check that a specific feature is not installed
+Check that a specific Windows Server feature is not installed
 
 ```coffee
 windows.feature('Windows-Defender').installed == false

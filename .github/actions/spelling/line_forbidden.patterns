@@ -84,6 +84,9 @@
 # Product Names
 #
 
+# s.b. Memcached
+\bMemCached\b
+
 # s.b. Jira
 \bJIRA\b
 
@@ -456,7 +459,7 @@
 \bWorkmail\b
 
 #
-# GCP Products
+# Google Cloud Products
 #
 
 # s.b. AlloyDB
@@ -467,9 +470,11 @@
 
 # s.b. BigLake
 \bBig Lake\b
+\bBiglake\b
 
 # s.b. BigQuery
 \bBig Query\b
+\bBigquery\b
 
 # s.b. Cloud Build
 \bCloudBuild\b
@@ -528,6 +533,16 @@
 # s.b. VMware Engine
 \bVMware engine\b
 \bVMWare Engine\b
+
+# s.b. Bigtable
+\bBigTable\b
+\bBig Table\b
+
+# s.b. Datastore
+\bDataStore\b
+
+# s.b. Memorystore
+\bMemoryStore\b
 
 #
 # Azure Products

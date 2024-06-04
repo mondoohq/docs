@@ -30,6 +30,7 @@ autodisconnect
 autoremove
 autoscaler
 backupconfiguration
+backupsetting
 badssm
 baf
 baselayout
@@ -59,12 +60,12 @@ cdzrr
 Ceph
 certificatechains
 cfee
+cfeed
 cgr
 chainguard
 cim
 classname
 clientid
-cloudlinux
 cloudtrails
 Clusterwide
 Clw
@@ -82,7 +83,6 @@ crcsmnky
 credentialreport
 crowdsource
 cryptokey
-currencyservice
 customresources
 cvmsroot
 cyclonedx
@@ -117,7 +117,6 @@ enableforcedlogoff
 enablesecuritysignature
 ERXy
 Eso
-euleros
 EXAMPLEKEY
 exo
 EXTERNALID
@@ -168,6 +167,7 @@ ingresstls
 installassistant
 ipsetforwardedipconfig
 ipsetreferencestatement
+istio
 Jalr
 JDAOZ
 jdata
@@ -193,7 +193,6 @@ labelmatchstatement
 lappy
 libwebsockets
 linux
-linuxmint
 logd
 logfiles
 loggingservice
@@ -205,9 +204,6 @@ lun
 managedrulegroupstatement
 managedzone
 MANIFESTFILE
-manjaro
-marsrover
-mati
 maxbackup
 maxsize
 Mbeze
@@ -239,11 +235,13 @@ natgateway
 NDdh
 NDgz
 netsh
+networkinterface
 networkservice
 newkey
 nginx
 Nlcy
 noarch
+nodegroup
 nodepool
 NSIs
 NSUl
@@ -255,8 +253,6 @@ ocid
 OFafff
 openssh
 openssl
-opensuse
-oraclelinux
 orstatement
 osoverview
 OTIy
@@ -290,7 +286,6 @@ requiresecuritysignature
 resourcegroup
 restrictnullsessaccess
 Rfi
-rhcos
 rhel
 RLBUE
 rmcfv
@@ -332,10 +327,12 @@ Stupakov
 sudolog
 suki
 SXp
+targetgroup
 Tdej
 teamsmeetingpolicyconfig
 tenantfederationconfig
 testcase
+testdata
 testname
 testring
 testsuite

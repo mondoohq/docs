@@ -41,13 +41,13 @@ For `HOST`, substitute the hostname of the remote Linux asset.
 
 Once inside the shell, use the `help` command to learn what Linux resources you can query. This command lists all the operating system resources:
 
-```coffee
+```coffeescript
 help os
 ```
 
 From the resulting list, you can drill down further. For example, enter this command to list the OS update information you can retrieve:
 
-```coffee
+```coffeescript
 help os.update
 ```
 
@@ -59,19 +59,19 @@ Now that you know how to discover what's possible with cnquery, let's run some a
 
 This query asks the hostname:
 
-```coffee
+```coffeescript
 asset.name
 ```
 
 cnquery returns the pretty hostname:
 
-```coffee
+```coffeescript
 asset.name: "luna-ubuntu-05"
 ```
 
 This query asks the name of the operating system:
 
-```coffee
+```coffeescript
 asset.platform
 ```
 
@@ -79,7 +79,7 @@ asset.platform
 
 To request a list of all users on a machine, enter this query in the shell:
 
-```coffee
+```coffeescript
 users
 ```
 
@@ -87,7 +87,7 @@ users
 
 For a more detailed report, you can specify that you want all fields:
 
-```coffee
+```coffeescript
 users { * }
 ```
 
@@ -97,7 +97,7 @@ For every user, cnquery provides information about their settings.
 
 If you're interested in only some details, specify the fields you want in braces. For example, this query asks for each user's name, group, and whether it's enabled:
 
-```coffee
+```coffeescript
 users { name group enabled }
 ```
 
@@ -107,7 +107,7 @@ You can filter results based on any fields. Specify the criteria using the `wher
 
 For example, this filters results based on group name:
 
-```coffee
+```coffeescript
 users.where(group.name == "admins") { name uid }
 ```
 

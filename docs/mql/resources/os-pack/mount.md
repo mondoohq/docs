@@ -26,19 +26,19 @@ Unix mounted file system
 
 List all mount points
 
-```coffee
+```coffeescript
 mount.list { path device fstype options }
 ```
 
 Ensure the mountpoint exists
 
-```coffee
+```coffeescript
 mount.one( path == "/" )
 ```
 
 Check mountpoint configuration
 
-```coffee
+```coffeescript
 mount.where( path == "/" ) {
   device == '/dev/mapper/vg00-lv_root'
   fstype == 'xfs'

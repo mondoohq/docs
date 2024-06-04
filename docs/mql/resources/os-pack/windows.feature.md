@@ -3,14 +3,14 @@ title: windows.feature
 id: windows.feature
 sidebar_label: windows.feature
 displayed_sidebar: MQL
-description: Windows feature resource
+description: Deprecated use serverFeature instead
 ---
 
 # windows.feature
 
 **Description**
 
-Windows feature resource
+Deprecated: use serverFeature instead
 
 **Init**
 

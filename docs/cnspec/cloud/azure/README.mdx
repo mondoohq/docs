@@ -41,7 +41,7 @@ It asserts that none of your Azure resources have the ID `foo`.
 
 cnspec lists your resources and indicates that the check is true, none of them has `foo` as its ID:
 
-```coffee
+```coffeescript
 azure.subscription.resources: [
   0: {
     id != "foo": true
@@ -183,7 +183,7 @@ azure.subscription.sql.servers { auditingPolicy['state'] == "Enabled" }
 
 If the test passes (all SQL servers have auditing enabled) then cnspec returns `ok`:
 
-```coffee
+```coffeescript
 [ok] value: true
 ```
 

@@ -14,11 +14,13 @@ Windows-specific resource to get operating system details
 
 **Fields**
 
-| ID           | TYPE                                            | DESCRIPTION                                                                                                                                                                                               |
-| ------------ | ----------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| computerInfo | dict                                            | A consolidated object of system and operating system properties, see https://docs.microsoft.com/en-us/dotnet/api/microsoft.powershell.commands.computerinfo?view=powershellsdk-1.1.0 for more information |
-| hotfixes     | &#91;&#93;[windows.hotfix](windows.hotfix.md)   | Hotfixes installed on the computer                                                                                                                                                                        |
-| features     | &#91;&#93;[windows.feature](windows.feature.md) | Information about Windows Server roles, role services, and features that are available for installation and installed on a specified server.                                                              |
+| ID               | TYPE                                                            | DESCRIPTION                                                                                                                                                                                               |
+| ---------------- | --------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| computerInfo     | dict                                                            | A consolidated object of system and operating system properties, see https://docs.microsoft.com/en-us/dotnet/api/microsoft.powershell.commands.computerinfo?view=powershellsdk-1.1.0 for more information |
+| hotfixes         | &#91;&#93;[windows.hotfix](windows.hotfix.md)                   | Hotfixes installed on the computer                                                                                                                                                                        |
+| features         | &#91;&#93;[windows.feature](windows.feature.md)                 | Deprecated: use serverFeatures instead                                                                                                                                                                    |
+| serverFeatures   | &#91;&#93;[windows.serverFeature](windows.serverfeature.md)     | Information about Windows Server roles, role services, and features that are available for installation and installed on a specified server.                                                              |
+| optionalFeatures | &#91;&#93;[windows.optionalFeature](windows.optionalfeature.md) | Information about optional features in a Windows image.                                                                                                                                                   |
 
 **Examples**
 

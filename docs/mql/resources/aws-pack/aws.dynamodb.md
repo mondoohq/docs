@@ -26,12 +26,13 @@ Use the `aws.dynamodb` resource to assess the configuration of the AWS DynamoDB.
 | globalTables | &#91;&#93;[aws.dynamodb.globaltable](aws.dynamodb.globaltable.md) | List of global tables for DynamoDB           |
 | tables       | &#91;&#93;[aws.dynamodb.table](aws.dynamodb.table.md)             | List of tables for DynamoDB                  |
 | limits       | &#91;&#93;[aws.dynamodb.limit](aws.dynamodb.limit.md)             | List of DynamoDB settings across all regions |
+| exports      | &#91;&#93;[aws.dynamodb.export](aws.dynamodb.export.md)           | List of exports for DynamoDB                 |
 
 **Examples**
 
 Return a list of `aws.dynamodb.table` resources and the values for specified fields
 
-```coffee
+```coffeescript
 aws.dynamodb.tables {
   arn
   name
@@ -45,7 +46,7 @@ aws.dynamodb.tables {
 
 Return a list of `aws.dynamodb.limit` resources and the values for specified fields
 
-```coffee
+```coffeescript
 aws.dynamodb.limits {
   arn
   region
@@ -58,7 +59,7 @@ aws.dynamodb.limits {
 
 Return a list of `aws.dynamodb.globaltable` resources and the value for specified fields
 
-```coffee
+```coffeescript
 aws.dynamodb.globaltables {
   arn
   name
@@ -68,7 +69,7 @@ aws.dynamodb.globaltables {
 
 Check that all DynamoDB tables are encrypted with AWS Key Management Service (KMS)
 
-```coffee
+```coffeescript
 aws.dynamodb.tables.all(
   sseDescription['SSEType'] == 'KMS' && sseDescription['Status'] == 'ENABLED'
 )

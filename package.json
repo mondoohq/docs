@@ -2,6 +2,7 @@
   "name": "mondoo-docs",
   "version": "0.0.0",
   "private": true,
+  "license": "MPL-2.0",
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
@@ -15,10 +16,10 @@
   },
   "dependencies": {
     "@algolia/client-search": "^4.23.3",
-    "@docusaurus/core": "<3.3.0",
-    "@docusaurus/plugin-client-redirects": "<3.3.0",
-    "@docusaurus/preset-classic": "<3.3.0",
-    "@docusaurus/theme-search-algolia": "<3.3.0",
+    "@docusaurus/core": "^3.4.0",
+    "@docusaurus/plugin-client-redirects": "^3.4.0",
+    "@docusaurus/preset-classic": "^3.4.0",
+    "@docusaurus/theme-search-algolia": "^3.4.0",
     "@fontsource/roboto": "^5.0.7",
     "@mdx-js/react": "^3.0.1",
     "@stackql/docusaurus-plugin-hubspot": "^1.0.0",
@@ -28,7 +29,7 @@
     "cross-fetch": "^4.0.0",
     "docusaurus-gtm-plugin": "^0.0.2",
     "file-loader": "^6.2.0",
-    "got": "^13.0.0",
+    "got": "^14.3.0",
     "minimist": "^1.2.8",
     "node-fetch": "^3.3.1",
     "normalize-url": "^8.0.1",
@@ -57,11 +58,11 @@
     ]
   },
   "devDependencies": {
-    "@tsconfig/docusaurus": "^2.0.3",
-    "@types/react": "^18.3.1",
+    "@docusaurus/tsconfig": "^3.4.0",
+    "@types/react": "^18.3.3",
     "@types/react-helmet": "^6.1.11",
     "@types/react-router-dom": "^5.1.7",
-    "prettier": "3.2.5",
+    "prettier": "3.3.0",
     "typescript": "^5.4.5"
   },
   "engines": {

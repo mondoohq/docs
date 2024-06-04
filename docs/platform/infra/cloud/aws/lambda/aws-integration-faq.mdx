@@ -1,40 +1,40 @@
 ---
-title: AWS Integration FAQ
-sidebar_label: Integration FAQ
+title: AWS Serverless Integration FAQ
+sidebar_label: Serverless Integration FAQ
 image: /img/featured_img/mondoo-aws.jpg
 description: This document covers how the Mondoo AWS integration works. It includes permissions and billing details.
 sidebar_position: 3
 ---
 
-## How does the Mondoo AWS integration work?
+## How does the serverless Mondoo AWS integration work?
 
-Mondoo Platform never has credentials to your AWS account.
+With the serverless approach to integrating with AWS, Mondoo never has credentials to your AWS account.
 
 We install a Lambda function in your AWS account via the CloudFormation template, and communicate with that Lambda function over AWS EventBridge. The Lambda function communicates with Mondoo using service credentials stored in the SSM Parameter Store.
 
-## Why does the Mondoo integration need to create resources in my AWS account?
+## Why does the serverless Mondoo integration need to create resources in my AWS account?
 
 The resources created in your AWS account are used to run and schedule configuration and EC2 instance scans. Those resources are low-cost, limited to a Lambda function, SNS topic, SQS Queues, some IAM roles, EventBridge rules, and SSM parameters. If using the EBS volume scanning feature, an Autoscaling Group and launch template will also be created.
 
-## How does the integration communicate from my AWS account to Mondoo Platform?
+## How does the serverless integration communicate from my AWS account to Mondoo Platform?
 
 On CloudFormation stack creation, a short-lived token is exchanged for Mondoo credentials. Those credentials are stored in the SSM Parameter store and used by the Lambda function and SSM instances in the AWS account to communicate with Mondoo Platform over HTTPS.
 
-## Choose to integrate an organization or an account
+## Should I choose to integrate an organization or an account?
 
 If you've set up your AWS organization according to [AWS standard practices](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tutorials_basic.html), create an organization integration for ease of use.
 
-Before deploying, check the configuration of your AWS organization as described in [Requirements for deploying the Mondoo StackSet at the organization level](/platform/infra/cloud/aws/aws-integration-troubleshooting#requirements-for-deploying-the-mondoo-stackset-at-the-organization-level).
+Before deploying, check the configuration of your AWS organization as described in [Requirements for deploying the Mondoo StackSet at the organization level](/platform/infra/cloud/aws/lambda/aws-integration-troubleshooting#requirements-for-deploying-the-mondoo-stackset-at-the-organization-level).
 
 ## What information will leave my AWS Account?
 
 Scan report results only.
 
-## What information will Mondoo Platform store about my AWS resources?
+## What information will Mondoo store about my AWS resources?
 
 Mondoo Platform stores the latest report for all scanned assets in the AWS account (the reports viewable under **Inventory**) as well as the total counts of various resources in the AWS account, displayed on the Integration detail page.
 
-## Is the communication channel between Mondoo Platform and my AWS account secure?
+## Is the communication channel between Mondoo and my AWS account secure?
 
 Yes, Mondoo communicates with your AWS account using [AWS EventBridge](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-cross-account.html). The Eventbus policy and rule are created as part of the CloudFormation stack.
 
@@ -111,9 +111,9 @@ Every time the Lambda function updates, it first reads the SHA-256 of each file 
 
 When the CloudFormation stack is deleted, the lambda function receives a notification and immediately deletes all AWS resources created by Mondoo. Mondoo Platform UI will display the integration as deleted. No data will be lost in Mondoo Platform. A CloudFormation stack can be deleted and recreated multiple times.
 
-## How much will operating the Mondoo AWS Integration cost?
+## How much will operating the serverless Mondoo AWS integration cost?
 
-Most of the costs associated with the Mondoo AWS Integration fall into the AWS Free Tier category. Over the course of a month, an example AWS integration incurred this resource usage:
+Most of the costs associated with the serverless Mondoo AWS integration fall into the AWS Free Tier category. Over the course of a month, an example AWS integration incurred this resource usage:
 
 - CloudWatch PutLogs: 1GB (First 5GB per month of log data ingested is free)
 - CloudWatch TimedStorage: 0.16GB (First 5GB-mo per month of logs storage is free)
@@ -141,7 +141,7 @@ The AWS CloudFormation JSON and Lambda zip are available as part of the Mondoo S
 
 ## Learn more
 
-- [AWS Integration Troubleshooting](/docs/platform/infra/cloud/aws/aws-integration-troubleshooting)
+- [AWS Integration Troubleshooting](/docs/platform/infra/cloud/aws/lambda/aws-integration-troubleshooting/)
 - [Scan Continuously with an AWS Integration](/docs/platform/infra/cloud/aws/aws-integration-scan)
 
 ---

@@ -27,7 +27,7 @@ cnspec finds the default policy for Kubernetes and runs a scan based on that pol
 <details>
 <summary>Show or hide example scan results.</summary>
 
-```coffee
+```coffeescript
 → loaded configuration from /Users/user/.config/mondoo/mondoo.yml using source default
 → using service account credentials
 → discover related assets for 1 asset(s)
@@ -935,13 +935,13 @@ Arrow through the list and select Enter to choose the asset you want to explore.
 
 Once inside the shell, use the `help` command to learn what Kubernetes resources you can test. This command lists all the Kubernetes resources:
 
-```coffee
+```coffeescript
 help k8s
 ```
 
 From the resulting list, you can drill down further. For example, enter this command to list all the Kubernetes service resources you can test:
 
-```coffee
+```coffeescript
 help k8s.service
 ```
 
@@ -955,7 +955,7 @@ Now that you know how to discover what's possible with cnspec, let's run some ac
 
 This test assures that DNS entries aren't managed locally using `/etc/hosts` within Pods:
 
-```coffee
+```coffeescript
 k8s.pod { podSpec['hostAliases'] == null }
 ```
 
@@ -965,13 +965,13 @@ If the test passes (no Pods are managed using HostAliases) then cnspec returns `
 
 This test asserts that you don't run any workloads in the default namespace:
 
-```coffee
+```coffeescript
 k8s.pods { namespace != "default" }
 ```
 
 cnspec lists the individual Pod results:
 
-```coffee
+```coffeescript
 k8s.pods: [
   0: {
     namespace != "default": false
@@ -995,13 +995,13 @@ k8s.pods: [
 
 If you need more information in the results, specify the fields you want in braces. For example, this is the same test as above, but also asks for each Pod's ID, name, date created, and namespace:
 
-```coffee
+```coffeescript
 k8s.pods { namespace != "default" id name created namespace }
 ```
 
 cnspec returns detailed results like this:
 
-```coffee
+```coffeescript
 k8s.pods: [
   0: {
     namespace: "default"

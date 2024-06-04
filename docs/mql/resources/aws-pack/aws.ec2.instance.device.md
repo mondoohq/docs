@@ -3,7 +3,7 @@ title: aws.ec2.instance.device
 id: aws.ec2.instance.device
 sidebar_label: aws.ec2.instance.device
 displayed_sidebar: MQL
-description: Amazon EC2 instance device
+description: Amazon EC2 instance block device
 ---
 
 # aws.ec2.instance.device
@@ -14,7 +14,7 @@ description: Amazon EC2 instance device
 
 **Description**
 
-Amazon EC2 instance device
+Amazon EC2 instance block device
 
 The `aws.ec2.instance.device` resource provides fields for assessing the configuration of devices attached to EC2 instances within an account. For usage, see `aws.ec2` resource documentation.
 

@@ -79,7 +79,7 @@ Run `cnspec shell` to open the cnspec interactive shell. From there you can make
 
 Ensure two-factor authentication is enabled for GitHub organizations:
 
-```coffee
+```coffeescript
 cnspec> github.organization.twoFactorRequirementEnabled
 [failed] github.organization.twoFactorRequirementEnabled
   expected: == true
@@ -88,7 +88,7 @@ cnspec> github.organization.twoFactorRequirementEnabled
 
 Ensure the GitHub organization domain is verified:
 
-```coffee
+```coffeescript
 cnspec> github.organization.isVerified
 [failed] github.organization.isVerified
   expected: == true
@@ -97,14 +97,14 @@ cnspec> github.organization.isVerified
 
 Ensure the GitHub organization default permissions is set to _read_:
 
-```coffee
+```coffeescript
 cnspec> github.organization.defaultRepositoryPermission == "read"
 [ok] value: "read"
 ```
 
 Ensure the default branch is configured with branch protection:
 
-```coffee
+```coffeescript
 cnspec> github.repository.branches.where( isDefault == true ).all( protected == true )
 [ok] value: true
 ```

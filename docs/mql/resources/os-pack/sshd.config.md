@@ -35,6 +35,6 @@ sshd.config(path string)
 
 Check that the SSH banner is sourced from /etc/ssh/sshd-banner
 
-```coffee
+```coffeescript
 sshd.config.params['Banner'] == '/etc/ssh/sshd-banner'
 ```

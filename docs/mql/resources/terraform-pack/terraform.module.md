@@ -34,6 +34,6 @@ Terraform module block
 
 Display all loaded Terraform modules
 
-```coffee
+```coffeescript
 terraform.modules { key version source}
 ```

@@ -28,7 +28,7 @@ Use the `aws.redshift` resource to assess the configuration of Amazon Redshift d
 
 Return a list of Amazon Redshift clusters deployed across all enabled regions and the values for specified fields
 
-```coffee
+```coffeescript
 aws.redshift.clusters {
   arn
   encrypted
@@ -47,7 +47,7 @@ aws.redshift.clusters {
 
 Return a list of Amazon Redshift clusters that are not encrypted and the values for the `arn` `region` and `name` fields
 
-```coffee
+```coffeescript
 aws.redshift.clusters.where( encrypted == false ) {
   arn
   region

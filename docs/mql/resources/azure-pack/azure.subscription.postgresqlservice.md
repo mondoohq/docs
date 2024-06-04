@@ -18,7 +18,8 @@ Azure Database for PostgreSQL
 
 **Fields**
 
-| ID             | TYPE                                                                                                    | DESCRIPTION                |
-| -------------- | ------------------------------------------------------------------------------------------------------- | -------------------------- |
-| subscriptionId | string                                                                                                  | Subscription identifier    |
-| servers        | &#91;&#93;[azure.subscription.postgreSqlService.server](azure.subscription.postgresqlservice.server.md) | List of PostgreSQL servers |
+| ID              | TYPE                                                                                                                    | DESCRIPTION                         |
+| --------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------- |
+| subscriptionId  | string                                                                                                                  | Subscription identifier             |
+| servers         | &#91;&#93;[azure.subscription.postgreSqlService.server](azure.subscription.postgresqlservice.server.md)                 | List of PostgreSQL servers          |
+| flexibleServers | &#91;&#93;[azure.subscription.postgreSqlService.flexibleServer](azure.subscription.postgresqlservice.flexibleserver.md) | List of PostgreSQL flexible servers |

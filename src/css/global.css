@@ -20,6 +20,7 @@
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
+  background: var(--bg-color);
 }
 
 /* Sections
@@ -40,7 +41,6 @@ body {
     Roboto,
     Ubuntu;
   color: var(--color-text);
-  background: var(--bg-color);
   line-height: 1.5rem;
 }
 

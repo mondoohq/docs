@@ -1,0 +1,8 @@
+8. To scan EC2 instances using SSH, enable **Use SSH for instance connectivity**. You must use the vault secret query if you use SSH. Provide this information:
+
+   | Option                 | Description                                                                                                                                                       |
+   | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+   | **Vault type**         | Specify whether to read the secret from AWS Secrets Manager or AWS SSM Parameter store.                                                                           |
+   | **Vault secret query** | Provide the query to match vault credentials to instances. To learn how to write the query, read [Secrets Management](/platform/infra/opsys/automation/vault.md). |
+
+9.

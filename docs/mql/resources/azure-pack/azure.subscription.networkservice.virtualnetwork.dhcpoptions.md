@@ -3,7 +3,7 @@ title: azure.subscription.networkService.virtualNetwork.dhcpOptions
 id: azure.subscription.networkService.virtualNetwork.dhcpOptions
 sidebar_label: azure.subscription.networkService.virtualNetwork.dhcpOptions
 displayed_sidebar: MQL
-description: Azure Virtual Network DHCP options
+description: Azure Virtual Network (VNet) DHCP options
 ---
 
 # azure.subscription.networkService.virtualNetwork.dhcpOptions
@@ -14,7 +14,7 @@ description: Azure Virtual Network DHCP options
 
 **Description**
 
-Azure Virtual Network DHCP options
+Azure Virtual Network (VNet) DHCP options
 
 **Fields**
 

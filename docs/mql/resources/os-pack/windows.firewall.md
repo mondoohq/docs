@@ -24,7 +24,7 @@ Windows Firewall resource
 
 Check a specific Windows Firewall rule
 
-```coffee
+```coffeescript
 windows.firewall.rules.where ( displayName == "File and Printer Sharing (Echo Request - ICMPv4-In)") {
   enabled == 1
 }

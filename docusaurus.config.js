@@ -5,6 +5,35 @@ const { themes } = require("prism-react-renderer");
 const legacyRedirects = [
   // NOTE: Path / is equivalent to https://mondoo.com/docs/
   //
+  // May 2024 reworked AWS integration stuff when we added hosted aws
+  {
+    from: "/platform/infra/cloud/aws/aws-integration-faq",
+    to: "/platform/infra/cloud/aws/lambda/aws-integration-faq",
+  },
+  {
+    from: "/platform/infra/cloud/aws/aws-integration-troubleshooting",
+    to: "/platform/infra/cloud/aws/lambda/aws-integration-troubleshooting",
+  },
+  {
+    from: "/platform/infra/cloud/aws/aws-scan-details",
+    to: "/platform/infra/cloud/aws/lambda/aws-scan-details",
+  },
+  {
+    from: "/platform/infra/cloud/aws/aws-ebs-snapshot-scan",
+    to: "/cnspec/cloud/aws/aws-ebs-snapshot-scan",
+  },
+  {
+    from: "/platform/infra/cloud/aws/aws-ec2-ic-scan",
+    to: "/cnspec/cloud/aws/aws-ec2-ic-scan",
+  },
+  {
+    from: "/platform/infra/cloud/aws/aws-ssm-scan",
+    to: "/cnspec/cloud/aws/aws-ssm-scan",
+  },
+  {
+    from: "/platform/infra/cloud/aws/aws-workstation-scan",
+    to: "/cnspec/cloud/aws",
+  },
   // April 2024 removed separate Find Vulnerabilities subsection from Security section
   // part of Firewatch effort
   {
@@ -225,10 +254,11 @@ module.exports = {
     prism: {
       theme: themes.nightOwl,
       additionalLanguages: [
-        "powershell",
         "bash",
-        "json",
+        "coffeescript",
         "graphql",
+        "json",
+        "powershell",
         "python",
         "yaml",
       ],
@@ -393,12 +423,6 @@ module.exports = {
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
-        },
-        sitemap: {
-          changefreq: "daily",
-          lastmod: "date",
-          ignorePatterns: ["**/releases/tags/**"],
-          priority: 0.5,
         },
       },
     ],

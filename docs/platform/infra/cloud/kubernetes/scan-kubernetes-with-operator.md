@@ -85,13 +85,11 @@ To view additional status details or change an integration's configuration, sele
 
 ## Remove Kubernetes integrations
 
-1. Follow the instructions above to view your Kubernetes integrations.
+1. Follow the instructions above to view your list of Kubernetes integrations.
 
-2. On the Kubernetes Integrations page, select the pencil icon.
+2. Find the integration you want to remove and check the box beside it.
 
-3. Find the integration you want to remove and check the box beside it.
-
-4. On the **Edit Selection** menu, select **Remove** and then select the **Done** button.
+3. Select the **DELETE** button.
 
 ![remove-k8s-integration](/img/platform/infra/cloud/kubernetes/integration-delete.png)
 

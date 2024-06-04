@@ -2,204 +2,24 @@
 title: Continuously Scan with an AWS Integration
 sidebar_label: Scan Continuously
 sidebar_position: 2
-description: This document covers the configuration and use of the Mondoo AWS Integration to scan AWS accounts and EC2 instances
+description: Continuously monitor your AWS asset security with Mondoo. Choose between serverless scanning and Mondoo-hosted scanning.
 ---
 
-The Mondoo AWS integration enables continuous cron-scheduled and [event-based](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-service-event.html) scanning of your AWS account and EC2 instances.
-
-To learn about how an integration runs and its required permissions, read [AWS Integration FAQ](/platform/infra/cloud/aws/aws-integration-faq/).
-
-## Integrate with an entire organization or single account
-
-The Mondoo AWS integration supports scanning multiple AWS accounts. To do this, you install Mondoo across an AWS Organization using CloudFormation StackSets. All scan configuration options you choose apply to every AWS account in the AWS Organization.
-
-If you choose to integrate an entire Organization, be sure your AWS organization meets the requirements described in [AWS Integration Troubleshooting](/platform/infra/cloud/aws/aws-integration-troubleshooting/#requirements-for-deploying-the-mondoo-stackset-at-the-organization-level).
-
-You can also opt to scan a single AWS account only. Single account integrations rely on CloudFormation stacks.
-
-:::info
-When you deploy an integration with Mondoo using a StackSet on the organizational level, the StackSet only creates an integration of the [target accounts](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-concepts.html#stacksets-concepts-accts).
-
-The [administrator account](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-concepts.html#stacksets-concepts-accts) in which the StackSet for the target accounts resides needs its own separate [single account integration](/platform/infra/cloud/aws/aws-integration-scan/#integrate-with-an-entire-organization-or-single-account).
-
-This is intentional and reflects the [architectural concepts of AWS StackSets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-concepts.html).
-:::
-
-## Set up a new AWS integration
-
-1. Access the Integrations > Add > AWS page in one of two ways:
-
-   - **New space setup**: After creating a new Mondoo account or creating a new space, the initial setup guide welcomes you. Select **BROWSE INTEGRATIONS** and then select **Amazon AWS**.
-
-     ![Welcome to Mondoo Page](/img/platform/start/welcome_to_mondoo.png)
-
-   - **INTEGRATIONS page**: In the side navigation bar, under **INTEGRATIONS**, select **Add New Integration**. Near the top of the page, select **Amazon AWS**.
-
-   ![integration-create-image](/img/platform/infra/cloud/aws/add-aws-top.png)
-
-2. Select the type of integration:
-
-   | Option                     | Description                                       |
-   | -------------------------- | ------------------------------------------------- |
-   | **Organization install**   | Integrate Mondoo with an entire AWS Organization. |
-   | **Single account install** | Integrate Mondoo with a single AWS account.       |
-
-:::caution
-
-Before creating a Mondoo deployment on an AWS organization, make sure to check if the configuration of your AWS organization meets the [requirements](/platform/infra/cloud/aws/aws-integration-troubleshooting/#requirements-for-deploying-the-mondoo-stackset-at-the-organization-level).
-
-:::
-
-3. Identify the account or Organization and the region:
-
-   | If you're integrating with... | Then...                                                                                                                                |
-   | ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-   | An entire AWS Organization    | In the **AWS Organization(s)** box, enter any name for the integration. Select the region in which you want to deploy the integration. |
-   | A single AWS account          | In the **AWS account** box, enter your AWS account ID. Select the region in which you want to deploy the integration.                  |
-
-4. Set the account options:
-
-   | Option                                   | Description                                                                                                                                                                                                              |
-   | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-   | **Schedule full scan**                   | Set the interval (in hours) at which to execute a full scan of the AWS account, independent of change [events](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-service-event.html). The default is 12 hours. |
-   | **Trigger on AWS console sign-in event** | Trigger an account scan whenever a user logs into the AWS console.                                                                                                                                                       |
-
-5. Set the EC2 options:
-
-   ![integration-create-image](/img/platform/infra/cloud/aws/add-aws-ec2.png)
-
-   | Option                                                                                                                        | Description                                                                                                                        |
-   | ----------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-   | **Discover EC2 instances**                                                                                                    | Include EC2 instances in asset discovery. By default, this applies across all regions.                                             |
-   | **Trigger on instance state change [events](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-service-event.html)** | Trigger a scan of all EC2 instances whenever an instance changes state.                                                            |
-   | [**Use SSM for instance connectivity**](/docs/platform/infra/cloud/aws/aws-ssm-scan)                                          | Use the AWS SSM service to trigger scans for EC2 instances (when it's available).                                                  |
-   | **Use EC2 Instance Connect for instance connectivity**                                                                        | If an EC2 instance has a public IP, connect using EC2 Instance Connect.                                                            |
-   | **Use EBS volume scanning for instance connectivity**                                                                         | Use _EBS volume scanning_ to scan the filesystems of instances that Mondoo otherwise can't reach. This includes stopped instances. |
-
-6. If you enable EBS volume scanning, you can customize these options:
-
-   | Option                      | Description                                                                                                                                                                                                                                                                                                                     |
-   | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-   | **EBS targets per scanner** | Customize the number of targets a single scanner instance is responsible for scanning. Setting a low number (such as 5) results in faster scans, but requires AWS to create more scanner instances. Setting a high number (such as 50) reduces the number of scanner instances, but results in slower scans. The default is 20. |
-   | **Max ASG instances**       | Set your own limit for how many instances AWS can spin up in the AutoScalingGroup to perform the filesystem scans. The default is 50.                                                                                                                                                                                           |
-
-7. To scan EC2 instances using SSH, enable **Use SSH for instance connectivity**. You must use the vault secret query if you use SSH. Provide this information:
-
-   | Option                 | Description                                                                                                                                                       |
-   | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-   | **Vault type**         | Specify whether to read the secret from AWS Secrets Manager or AWS SSM Parameter store.                                                                           |
-   | **Vault secret query** | Provide the query to match vault credentials to instances. To learn how to write the query, read [Secrets Management](/platform/infra/opsys/automation/vault.md). |
-
-8. If desired, limit the EC2 instances that Mondoo scans:
-
-   | Option                     | Description                                                                    | Example                                  |
-   | -------------------------- | ------------------------------------------------------------------------------ | ---------------------------------------- |
-   | **Filter by instance IDs** | Limit instance scanning to a subset of IDs, separated by commas.               | `i-0d1f840578ca82600,i-07ae83fe5d22600a` |
-   | **Filter by regions**      | Limit instance scanning to a subset of regions, separating values with commas. | `us-east-1,us-east-2`                    |
-   | **Filter by tags**         | To Limit instance scanning to a subset of tags, separated with commas.         | `Name:testname, env:test`                |
-
-9. Set ECS, S3, and ECR options:
-
-   ![integration-create-image](/img/platform/infra/cloud/aws/add-aws-bottom.png)
-
-   | Option                                                                                                            | Description                                                     |
-   | ----------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- |
-   | **Discover and scan ECS containers**                                                                              | Use Amazon ECS Exec to scan Fargate containers.                 |
-   | **Trigger on S3 bucket [events](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-service-event.html)** | Trigger a scan whenever a change is made to an S3 bucket.       |
-   | **Discover and scan ECR images**                                                                                  | Include ECR images in asset discovery and scan them when found. |
-
-10. Select the **CREATE** button.
-
-11. Follow the instructions to launch the AWS CloudFormation stack (for an account) or StackSet (for an Organization).
-
-:::caution IMPORTANT
-
-Selecting **Create** does not finalize the integration between Mondoo and AWS. You must launch the AWS CloudFormation stack or StackSet to complete the setup.
-
-:::
-
-## Manage an AWS integration
-
-You can view the status of an AWS integration, change its configuration options, and more on its integration page.
-
-To access an existing integration:
-
-1. In the [Mondoo Console](https://console.mondoo.com), [navigate](/platform/start/navigate) to the space containing the integration.
-
-2. In the side navigation bar, under **Integrations**, select **AWS**.
-
-   ![integration-list-image](/img/platform/infra/cloud/aws/list.png)
-
-3. Select the integration you want to view or manage.
-
-   ![integration-detail-image](/img/platform/infra/cloud/aws/integration-overview.png)
-
-### View an integration's status
-
-Mondoo shows the status at the top of the integration page, beside the integration name.
-
-![Mondoo AWS integration status and actions](/img/platform/infra/cloud/aws/integration-scan-now.png)
-
-Theses are the possible statuses for an AWS integration:
-
-| Status          | Meaning                                                                                                          |
-| --------------- | ---------------------------------------------------------------------------------------------------------------- |
-| **configuring** | Mondoo is sending the scan configuration options to the integration and the integration is saving those options. |
-| **active**      | The integration is active and healthy.                                                                           |
-| **error**       | Mondoo detected an error during installation.                                                                    |
-| **missing**     | Mondoo hasn't received a check-in from the Lambda function for over an hour.                                     |
-| **deleted**     | CloudFormation for the integration has been deleted.                                                             |
-
-### Ping an integration
-
-At the top of the integration page, below the integration name, Mondoo shows the time of the last ping.
-
-To ping the integration now, select the ping icon (a heartbeat to the left of the **SCAN NOW** button).
-
-### Request a fresh scan
-
-To see fresh scan results, select the **SCAN NOW** button. Mondoo retrieves new scan results as soon as possible.
-
-### Stop all running scans
-
-To stop all currently running AWS scans, on the ellipsis menu of the integration page, select **Cancel Scans**.
-
-![Stop an AWS scan in Mondoo](/img/platform/infra/cloud/aws/cancel-scan.png)
-
-### Retry a failed integration setup
-
-If an error occurred during setup and the CloudFormation stack is now up and running but the integration is unhealthy, you can try to return it to a healthy state: Select the ellipsis to the right of the integration name and select **Retry Setup**.
-
-### Enable and disable policies for an AWS integration
-
-The **RECOMMENDED POLICIES** tab on the integration page lists policies that can help you protect your AWS environment. It shows which policies are enabled and disabled.
-
-![Policies for a Mondoo AWS integration](/img/platform/infra/cloud/aws/integration-policies.png)
-
-Use the toggle on the right side of each policy's row to enable or disable the policy.
-
-To learn more about policies, read [Policy as Code](/platform/security/posture/pac/).
-
-### Reconfigure an AWS integration
-
-The **CONFIGURATION** tab on the integration page shows the current settings and lets you make changes.
-
-![Reconfigure a Mondoo AWS integration](/img/platform/infra/cloud/aws/integration-config.png)
-
-To learn about individual settings, read the sections under the _Set up a new AWS integration_ section above.
-
-### Remove an integration
-
-To remove an integration, select the Remove (trash can) icon at the top of the integration page.
-
-![Remove an AWS Mondoo integration](/img/platform/infra/cloud/aws/integration-scan-now.png)
-
-A notification displays with a link to the CloudFormation Stacks list in the AWS console. Select the link and, in the AWS console, delete the stack. This removes the configured integration from Mondoo Platform and deletes the rule allowing the Mondoo AWS account to send events to the target account.
-
-## Learn more
-
-- [AWS Integration FAQ](/docs/platform/infra/cloud/aws/aws-integration-faq)
-
-- [AWS Integration Troubleshooting](/docs/platform/infra/cloud/aws/aws-integration-troubleshooting)
+The Mondoo AWS integration lets you continuously monitor the security and compliance of your AWS account, EC2 instances, EKS clusters, EBS volumes, and more. Choose between a Mondoo-hosted integration and a serverless integration:
+
+- A [Mondoo-hosted AWS integration](/platform/infra/cloud/aws/hosted/integration-hosted/) requires no agent installed to your AWS infrastructure and incurs no AWS cost. It's easy to set up and provides a higher level of stability. You can scan individual AWS accounts only; not an entire AWS Organization. This approach requires that you give Mondoo an AWS access key and secret.
+
+- A [serverless AWS integration](/platform/infra/cloud/aws/lambda/integration-lambda/) uses an AWS Lambda function and CloudFormation to perform scheduled scans of an account or an entire AWS Organization. It doesn't require sharing AWS credentials with Mondoo because scans run within your AWS infrastructure. A serverless integration is more complex to set up and does incur a small AWS cost.
+
+|                                          | **Mondoo-hosted**                            | **Serverless**                                     |
+|:-----------------------------------------|:--------------------------------------------:|:--------------------------------------------------:|
+| **Continuous AWS account scanning**      | :heavy_check_mark:                           | :heavy_check_mark:                                 |
+| **Continuous AWS Organization scanning** | :heavy_multiplication_x:                     | :heavy_check_mark:                                 |
+| **Agentless**                            | :heavy_check_mark:                           | :heavy_multiplication_x:                           |
+| **Requires an AWS Lambda function**      | :heavy_multiplication_x:                     | :heavy_check_mark:                                 |
+| **Stability**                            | Highest; not subject to API limits | High, but very large accounts can exceed API limits |
+| **Complexity**                           | Easy                     | Requires installation in your environment          |
+| **Infrastructure cost**                  | No additional AWS cost   | Small AWS cost                                     |
+| **Security**                             | High; Mondoo securely stores the credentials for your environment      | Highest; share no AWS credentials with Mondoo                                         |
 
 ---

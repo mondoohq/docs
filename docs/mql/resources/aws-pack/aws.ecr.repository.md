@@ -35,7 +35,7 @@ Use the `aws.ecr.repository` resource to assess the Amazon Elastic Container Reg
 
 Return a list of `aws.ecr.repository` resources representing the public repositories.
 
-```coffee
+```coffeescript
 aws.ecr {
   publicRepositories {
     name

@@ -51,13 +51,13 @@ For `YOUR-ORG`, substitute the name of your GitHub organization.
 
 Once inside the shell, use the `help` command to learn what GitHub resources you can query. This command lists all the GitHub resources:
 
-```coffee
+```coffeescript
 help github
 ```
 
 From the resulting list, you can drill down further. For example, enter this command to list all the GitHub resources you can query:
 
-```coffee
+```coffeescript
 help github.organization
 ```
 
@@ -67,7 +67,7 @@ Now that you know how to discover what's possible with cnquery, let's run some a
 
 This query returns the number of private repos in the organization:
 
-```coffee
+```coffeescript
 github.organization.totalPrivateRepos
 ```
 
@@ -77,7 +77,7 @@ You can filter results based on any fields. Specify the criteria using the `wher
 
 For example, this query asks for repo branches, and filters results to show only protected branches:
 
-```coffee
+```coffeescript
 github.repository.branches.where( protected == true )
 ```
 

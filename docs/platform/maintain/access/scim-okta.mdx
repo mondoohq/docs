@@ -193,36 +193,7 @@ Create a new file named `scim-mapping.gql` and containing a GraphQL request base
 
 ```gql
 {
-  "query":
-    "mutation {
-      setScimGroupMapping(
-         input: {
-            orgMrn: \"//captain.api.mondoo.app/organizations/YOUR-ORG-ID\",
-            group: \"YOUR-OKTA-GROUP\",
-            mappings: [
-               {
-                  orgMrn: \"//captain.api.mondoo.app/organizations/YOUR-ORG-ID\",
-                  #spaceMrn: \"//captain.api.mondoo.app/spaces/YOUR-SPACE-ID\",
-                  iamRole: \"//iam.api.mondoo.app/roles/editor\"
-               },
-               {
-                  #orgMrn: \"//captain.api.mondoo.app/organizations/YOUR-ORG-ID\",
-                  spaceMrn: \"//captain.api.mondoo.app/spaces/YOUR-SPACE-ID\",
-                  iamRole: \"//iam.api.mondoo.app/roles/editor\"
-               },
-               {
-                   #orgMrn: \"//captain.api.mondoo.app/organizations/YOUR-ORG-ID\",
-                   spaceMrn: \"//captain.api.mondoo.app/spaces/YOUR-SPACE-ID\",
-                   iamRole: \"//iam.api.mondoo.app/roles/viewer\"
-               }
-            ]
-         }
-      )
-        {
-         group
-         }
-   }
-   "
+  "query": "mutation {\n  setScimGroupMapping(\n    input: {\n      orgMrn: \"//captain.api.mondoo.app/organizations/dreamy-bartik-265385\",\n      group: \"API Admins\",\n      mappings: [{\n        orgMrn: \"//captain.api.mondoo.app/organizations/dreamy-bartik-265385\",\n        #spaceMrn: \"//captain.api.mondoo.app/spaces/pedantic-mestorf-965815\",\n        iamRole: \"//iam.api.mondoo.app/roles/editor\"\n      },{\n        #orgMrn: \"//captain.api.mondoo.app/organizations/dreamy-bartik-265385\",\n        spaceMrn: \"//captain.api.mondoo.app/spaces/pedantic-mestorf-965815\",\n        iamRole: \"//iam.api.mondoo.app/roles/editor\"\n      },{\n        #orgMrn: \"//captain.api.mondoo.app/organizations/dreamy-bartik-265385\",\n        spaceMrn: \"//captain.api.mondoo.app/spaces/pedantic-mestorf-12323\",\n        iamRole: \"//iam.api.mondoo.app/roles/viewer\"\n      }]\n    }\n  ) {\n    group\n  }\n}"
 }
 ```
 

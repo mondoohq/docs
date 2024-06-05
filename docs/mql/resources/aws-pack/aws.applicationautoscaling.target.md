@@ -26,6 +26,7 @@ AWS Application Auto Scaling target
 | minCapacity       | int    | Minimum capacity set for the auto scaling target |
 | maxCapacity       | int    | Maximum capacity set for the auto scaling target |
 | suspendedState    | dict   | suspendedState for the auto scaling target       |
+| createdAt         | time   | The creation date for the auto scaling target    |
 
 **References**
 

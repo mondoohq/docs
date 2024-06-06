@@ -48,4 +48,6 @@ Mondoo's flagship SaaS platform provides full-stack security, compliance, and as
 
 Can't find what you need?​ Join our [community Slack channel](https://mondoo.link/slack) to chat with us and other Mondoo users.
 
+For definitions of Mondoo terms, read the [glossary](/glossary/).
+
 ---

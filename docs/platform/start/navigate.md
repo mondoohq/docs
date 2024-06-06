@@ -12,7 +12,11 @@ Access the Mondoo Console in your web browser at [https://console.mondoo.com](ht
 
 ![Mondoo Console](/img/platform/start/console-overview-callouts.png)
 
+:::TIP
+
 The sun/moon icon on the toolbar lets you switch the console display between light and dark display. The Mondoo Console also has a colorblind display option. To learn more, read [Enable Colorblind Mode in the Mondoo Console](/platform/maintain/user/colorblind/).
+
+:::
 
 ## Navigate regions, organizations, and spaces
 
@@ -23,6 +27,12 @@ The assets in your infrastructure are [organized](/platform/start/organize/overv
 For example, the image below shows all organizations in the US region. Select an organization to explore and manage it:
 
 ![Mondoo Console organizations](/img/platform/start/organizations.png)
+
+:::note
+
+If you have privately hosted Enterprise account, you do not select a region.
+
+:::
 
 In this example, if you select the Lunalectric organization and then select Spaces in the side navigation bar, you see all spaces in the Lunalectric organization.
 

@@ -17,7 +17,7 @@ To set up cnspec in CloudShell, [sign up for a free Mondoo account](/platform/st
 
 ### Step 1: Launch the Mondoo AWS CloudShell Setup Guide
 
-![Mondoo AWS Guide - Start](/img/platform/tutorials/aws-cloudshell/aws-guide-start.png)
+![Mondoo AWS Guide - Start](/img/cnspec/aws/aws-guide-start.png)
 
 1. Open the <a href="https://console.mondoo.com/aws-guide" target="_blank">AWS Guide</a>.
 

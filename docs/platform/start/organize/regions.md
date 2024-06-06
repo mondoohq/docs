@@ -8,7 +8,7 @@ image: /img/featured_img/mondoo-feature.jpg
 
 :::note
 
-Privately hosted Enterprise accounts do not have regions.
+Privately hosted Enterprise accounts run in a single region.
 
 :::
 

@@ -72,4 +72,6 @@ MQL is a graph-based query language built for searching and checking infrastruct
 
 - Mondoo Platform users: Join our <a href="https://mondoo.link/slack">community Slack channel</a> to chat with us and other Mondoo users.
 
+- For definitions of Mondoo terms, read the [glossary](/glossary/).
+
 ---

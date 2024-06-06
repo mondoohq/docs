@@ -6,6 +6,12 @@ descriptions: This page provides detailed information about regions in Mondoo Pl
 image: /img/featured_img/mondoo-feature.jpg
 ---
 
+:::note
+
+Privately hosted Enterprise accounts run in a single region.
+
+:::
+
 ![Regions](/img/platform/start/regions.png)
 
 Mondoo operates in different regions so that you can follow localized policy requirements (such as GDPR). Each of the [organizations](organizations.md) and [spaces](spaces.md) in your Mondoo account exists within one region. Currently Mondoo supports two regions:
@@ -26,7 +32,7 @@ When you first create a Mondoo account, the US region is enabled by default; all
 
 If you want to create assets in the EU region, you must first enable it.
 
-1. In the top-left corner of the Mondoo window, select the **US** region to show the region options.
+1. In the top-left corner of the Mondoo window, select the globe drop-down list to show the region options.
 2. Select EU.
 3. Select Enable.
 
@@ -38,5 +44,5 @@ You can view only one region at a time.
 
 To switch between regions:
 
-1. In the top-left corner of the Mondoo window, select the current region (US or EU).
+1. In the top-left corner of the Mondoo window, select the globe drop-down list.
 2. Select the region you want to view.

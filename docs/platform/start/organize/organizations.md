@@ -14,7 +14,7 @@ Every Mondoo account has at least one organization.
 
 ## Create a new organization
 
-1. In the top-left corner of the Mondoo Console, select the [region](regions.md) in which to create the organization.
+1. In the top-left corner of the Mondoo Console, select the [region](regions.md) in which to create the organization. (Enterprise customers with privately hosted accounts do not have to select a region.)
 
 2. Select the **+ ADD ORGANIZATION** box.
 

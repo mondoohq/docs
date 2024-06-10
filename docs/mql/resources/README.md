@@ -58,6 +58,7 @@ These specialized packs let you deep-dive into attributes unique to the platform
 - [Oracle Cloud Infrastructure (OCI) resource pack](./oci-pack)
 - [Shodan Search Engine resource pack](./shodan-pack)
 - [Slack resource pack](./slack-pack)
+- [Snowflake resource pack](./snowflake-pack)
 - [VMware Cloud Director resource pack](./vcd-pack/)
 - [VMware vSphere resource pack](./vsphere-pack)
 

@@ -3,7 +3,7 @@ title: azure.subscription.sqlService.databaseusage
 id: azure.subscription.sqlService.databaseusage
 sidebar_label: azure.subscription.sqlService.databaseusage
 displayed_sidebar: MQL
-description: Azure SQL database usage
+description: Azure SQL Database service database usage
 ---
 
 # azure.subscription.sqlService.databaseusage
@@ -14,7 +14,7 @@ description: Azure SQL database usage
 
 **Description**
 
-Azure SQL database usage
+Azure SQL Database service database usage
 
 **Fields**
 

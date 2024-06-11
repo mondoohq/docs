@@ -348,7 +348,6 @@ testname
 testring
 testsuite
 tfblock
-thm
 Thu
 tmpkqyme
 toplevel

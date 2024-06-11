@@ -3,7 +3,7 @@ title: azure.subscription.sqlService.server.administrator
 id: azure.subscription.sqlService.server.administrator
 sidebar_label: azure.subscription.sqlService.server.administrator
 displayed_sidebar: MQL
-description: Azure SQL server administrator
+description: Azure SQL Database server administrator
 ---
 
 # azure.subscription.sqlService.server.administrator
@@ -14,7 +14,7 @@ description: Azure SQL server administrator
 
 **Description**
 
-Azure SQL server administrator
+Azure SQL Database server administrator
 
 **Fields**
 

@@ -14,7 +14,52 @@ The Mondoo Azure Blob Storage integration lets you continuously export your spac
 
 - Permission to manage storage containers in the Azure account
 
-- An existing storage container where you want to export data from the Mondoo space
+## Create a new storage account
+
+1. Log into the [Azure portal](https://portal.azure.com/) as a global administrator, application administrator or cloud application administrator.
+
+2. Select or search for **Storage accounts**.
+
+3. In the toolbar, select **+ Create**.
+
+   ![Azure containers](/img/platform/maintain/export/azure-blob/new-storage.png)
+
+4. Give the account a name that indicates it's for Mondoo. Choose your own region and performance options and select the **Next** button.
+
+5. Select the **Networking** tab, select **Enable public access from all networks**, and select the **Review and create** button.
+
+   ![Azure containers](/img/platform/maintain/export/azure-blob/new-networking.png)
+
+6. Select the **Create** button and wait for Azure to create and deploy the storage account. When finished, select the **Go to resource** button.
+
+7. In the left menu, select **Networking**. Ensure that **Enabled from all networks** is selected and there is no message about requiring a private endpoint.
+
+   ![Azure containers](/img/platform/maintain/export/azure-blob/recheck-networking.png)
+
+:::note
+
+If Azure indicates (in a note below the **Enabled from all networks** option) that a private endpoint is required, create a private endpoint so that Mondoo can access the storage account. For instructions, read [Create a private endpoint](https://learn.microsoft.com/en-us/azure/storage/files/storage-files-networking-endpoints?tabs=azure-portal#create-a-private-endpoint) in the Azure documentation.
+
+:::
+
+## Create a new container
+
+1. Log into the [Azure portal](https://portal.azure.com/) as a global administrator, application administrator or cloud application administrator.
+
+2. Select or search for **Storage accounts**.
+
+3. Select the storage account where you want to export your Mondoo data.
+
+4. In the left menu, under **Data storage**, select **Containers**.
+
+   ![Azure containers](/img/platform/maintain/export/azure-blob/no-containers.png)
+
+5. On the toolbar, select **+ Container**.
+
+   ![Azure containers](/img/platform/maintain/export/azure-blob/new-container.png)
+
+6. Name the container and select the **Create** button.
+
 
 ## Create a container access token
 
@@ -26,13 +71,13 @@ Mondoo relies on a _shared access token_ to export data to Azure storage blobs. 
 
 3. Select the storage account that holds the container where you want to export Mondoo data.
 
-4. In the left navigation, select **Containers**.
+4. In the left menu, under **Data storage**, select **Containers**.
 
    ![Azure containers](/img/platform/maintain/export/azure-blob/containers.png)
 
 5. Select the container where you want to export Mondoo data.
 
-6. In the left navigation, select **Shared access tokens**.
+6. In the left navigation, under **Settings**, select **Shared access tokens**.
 
    ![Add a shared access token in Azure](/img/platform/maintain/export/azure-blob/add-token.png)
 
@@ -48,7 +93,7 @@ Mondoo relies on a _shared access token_ to export data to Azure storage blobs. 
 
    - List
 
-8. Under **Expiry**, set a date far in the future so that your Mondoo export continues working.
+8. Under **Expiry**, set a date far enough in the future that your Mondoo export continues working.
 
 9. Select the **Generate SAS token and URL** button.
 

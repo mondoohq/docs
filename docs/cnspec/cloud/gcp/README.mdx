@@ -7,9 +7,9 @@ description: Assess Google Cloud Security with cnspec
 image: /img/featured_img/mondoo-gcp.jpg
 ---
 
-cnspec assesses your full GCP environment for misconfigurations that put your organization at risk. You can scan your GCP account for compliance with security policies created by Mondoo or the community, or [create your own policies](/cnspec/cnspec-policies/write/). You also can write individual tests to run on the fly or include in automated tasks.
+cnspec assesses your full Google Cloud environment for misconfigurations that put your organization at risk. You can scan your Google Cloud account for compliance with security policies created by Mondoo or the community, or [create your own policies](/cnspec/cnspec-policies/write/). You also can write individual tests to run on the fly or include in automated tasks.
 
-cnspec can test any aspect of your GCP configuration. For a list of GCP resources you can test, read [Mondoo Google Cloud Platform (GCP) Resource Pack Reference](/mql/resources/gcp-pack/) and [Mondoo Core Resource Pack Reference](/mql/resources/core-pack/).
+cnspec can test any aspect of your Google Cloud configuration. For a list of Google Cloud resources you can test, read [Mondoo Google Cloud (GCP) Resource Pack Reference](/mql/resources/gcp-pack/) and [Mondoo Core Resource Pack Reference](/mql/resources/core-pack/).
 
 :::info
 
@@ -17,11 +17,11 @@ You can also use cnspec with HashiCorp Packer to [build secure VM images in Goog
 
 :::
 
-## Connect cnspec with your GCP environment
+## Connect cnspec with your Google Cloud environment
 
 ### Requirements
 
-To test your GCP environment with cnspec, you must have:
+To test your Google Cloud environment with cnspec, you must have:
 
 - [cnspec installed on your workstation](/cnspec/)
 - A [Google Platform account](https://cloud.google.com/free)
@@ -30,15 +30,15 @@ To test your GCP environment with cnspec, you must have:
 
 ### Provide access credentials
 
-In your terminal, log into GCP with this command:
+In your terminal, log into Google Cloud with this command:
 
 ```bash
 gcloud auth login  --update-adc
 ```
 
-### Configure the GCP project you want assess
+### Configure the Google Cloud project you want assess
 
-To test a GCP project, you must set up the project:
+To test a Google Cloud project, you must set up the project:
 
 ```bash
 gcloud config set project PROJECTID
@@ -46,7 +46,7 @@ gcloud config set project PROJECTID
 
 For `PROJECTID`, substitute the ID of the project you want to assess.
 
-GCP confirms the setup:
+Google Cloud confirms the setup:
 
 ```bash
 Updated property [core/project].
@@ -58,7 +58,7 @@ To verify your configuration, enter:
 gcloud config list
 ```
 
-GCP returns results similar to these:
+Google Cloud returns results similar to these:
 
 ```ini
 [core]
@@ -69,9 +69,9 @@ project = gcp-project-id
 Your active configuration is: [default]
 ```
 
-### Verify with a quick GCP check
+### Verify with a quick Google Cloud check
 
-To quickly confirm that cnspec has access to your GCP environment, run this check from your terminal:
+To quickly confirm that cnspec has access to your Google Cloud environment, run this check from your terminal:
 
 ```bash
 cnspec run gcp project PROJECT-ID -c 'gcp.project.id!="foo"'

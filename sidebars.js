@@ -148,7 +148,7 @@ module.exports = {
         {
           type: "doc",
           id: "cnquery/cnquery-gcp/cnquery-gcp-intro",
-          label: "GCP",
+          label: "Google Cloud",
         },
         {
           type: "category",

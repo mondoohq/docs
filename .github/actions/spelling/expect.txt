@@ -3,6 +3,7 @@ aaaaaaaavixjk
 AAAAB
 abcbcada
 abelhju
+ACCOUNTADMIN
 acr
 activitylog
 adduser
@@ -89,6 +90,7 @@ cyclonedx
 CYEXAMPLEKEY
 datacompute
 datapath
+DATAUSER
 dcea
 Ddos
 debconf

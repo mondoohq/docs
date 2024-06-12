@@ -173,18 +173,22 @@ From the resulting list, you can drill down even further. You can also learn abo
 
 Now that you know how to discover what's possible with cnspec, let's run some actual tests in the shell.
 
-#### Assess SQL server auditing
+#### Assess Azure SQL Database auditing policy
 
-This test assures that auditing is turned on for your SQL servers:
+This test assures that auditing is turned on for your Azure SQL Database instances:
 
 ```bash
 azure.subscription.sql.servers { auditingPolicy['state'] == "Enabled" }
 ```
 
-If the test passes (all SQL servers have auditing enabled) then cnspec returns `ok`:
+If the test passes (all servers have auditing enabled) then cnspec returns `true` for each server:
 
 ```coffeescript
-[ok] value: true
+azure.subscription.sql.servers: [
+  0: {
+    auditingPolicy.state == "Enabled": true
+  }
+]
 ```
 
 If the test fails, (one or more Cloud Storage buckets don't use uniform bucket-level access) then cnspec provides details about the failure.

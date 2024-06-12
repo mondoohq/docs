@@ -21,6 +21,7 @@ Google Cloud (GCP) Compute Engine
 | ID              | TYPE                                                                                                | DESCRIPTION                                      |
 | --------------- | --------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
 | projectId       | string                                                                                              | Project ID                                       |
+| enabled         | bool                                                                                                | Whether the service is enabled                   |
 | instances       | &#91;&#93;[gcp.project.computeService.instance](gcp.project.computeservice.instance.md)             | Google Compute Engine instances in a project     |
 | snapshots       | &#91;&#93;[gcp.project.computeService.snapshot](gcp.project.computeservice.snapshot.md)             | Google Compute Engine snapshots in a project     |
 | disks           | &#91;&#93;[gcp.project.computeService.disk](gcp.project.computeservice.disk.md)                     | Google Compute Engine disks in a project         |

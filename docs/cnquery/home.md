@@ -26,7 +26,7 @@ Download and install cnquery on your assets.
 
 - [Azure](/cnquery/cnquery-azure/)
 
-- [GCP](/cnquery/cnquery-gcp/)
+- [Google Cloud](/cnquery/cnquery-gcp/)
 
 - [Kubernetes](/cnquery/cnquery-k8s/)
 

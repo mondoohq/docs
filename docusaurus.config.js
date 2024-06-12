@@ -7,52 +7,36 @@ const legacyRedirects = [
   //
   //// June 2024 reworked cnquery structure: made a /cloud dir
   {
-    from: "/cnquery/cnquery-aws/cnquery-aws-intro.mdx",
-    to: "/cnquery/cloud/aws/README.mdx",
+    from: "/cnquery/cnquery-aws/cnquery-aws-intro",
+    to: "/cnquery/cloud/aws/cnquery-aws-intro",
   },
   {
-    from: "/cnquery/cnquery-aws/README.mdx",
-    to: "/cnquery/cloud/aws/README.mdx",
+    from: "/cnquery/cnquery-aws/cnquery-aws-account",
+    to: "/cnquery/cloud/aws/account",
   },
   {
-    from: "/cnquery/cnquery-aws/cnquery-aws-account.mdx",
-    to: "/cnquery/cloud/aws/account.mdx",
+    from: "/cnquery/cnquery-aws/cnquery-aws-ec2",
+    to: "/cnquery/cloud/aws/ec2",
   },
   {
-    from: "/cnquery/cnquery-aws/cnquery-aws-ec2.mdx",
-    to: "/cnquery/cloud/aws/ec2.mdx",
+    from: "/cnquery/cnquery-aws/cnquery-aws-eks",
+    to: "/cnquery/cloud/aws/eks",
   },
   {
-    from: "/cnquery/cnquery-aws/cnquery-aws-eks.mdx",
-    to: "/cnquery/cloud/aws/eks.mdx",
+    from: "/cnquery/cnquery-azure/cnquery-azure-intro",
+    to: "/cnquery/cloud/azure/cnquery-azure-intro",
   },
   {
-    from: "/cnquery/cnquery-azure/README.mdx",
-    to: "/cnquery/cloud/azure/README.mdx",
+    from: "/cnquery/cnquery-gcp/cnquery-gcp-intro",
+    to: "/cnquery/cloud/gcp/cnquery-gcp-intro",
   },
   {
-    from: "/cnquery/cnquery-azure/cnquery-azure-intro.mdx",
-    to: "/cnquery/cloud/azure/README.mdx",
-  },
-  {
-    from: "/cnquery/cnquery-gcp/README.mdx",
-    to: "/cnquery/cloud/gcp/README.mdx",
-  },
-  {
-    from: "/cnquery/cnquery-gcp/cnquery-gcp-intro.mdx",
-    to: "/cnquery/cloud/gcp/README.mdx",
-  },
-  {
-    from: "/cnquery/cnquery-k8s/README.mdx",
-    to: "/cnquery/cloud/k8s/README.mdx",
-  },
-  {
-    from: "/cnquery/cnquery-k8s/cnquery-k8s-cluster.mdx",
+    from: "/cnquery/cnquery-k8s/cnquery-k8s-cluster",
     to: "/cnquery/cloud/k8s/cluster.mdx",
   },
   {
-    from: "/cnquery/cnquery-k8s/cnquery-k8s-intro.mdx",
-    to: "/cnquery/cloud/k8s/README.mdx",
+    from: "/cnquery/cnquery-k8s/cnquery-k8s-intro",
+    to: "/cnquery/cloud/k8s/cnquery-k8s-intro",
   },
   // May 2024 reworked AWS integration stuff when we added hosted aws
   {

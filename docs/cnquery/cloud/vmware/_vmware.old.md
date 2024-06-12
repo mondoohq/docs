@@ -6,6 +6,9 @@ description: This page covers how you can use Mondoo to assess VMware vSphere an
 image: /img/featured_img/mondoo-vmware.jpg
 ---
 
+THIS PAGE DOES NOT GET COMPILED IN THE DOCS
+
+
 This page describes how to use Mondoo to assess VMware vSphere and ESXi hosts for advisories, vulnerabilities, and security misconfigurations.
 
 ## Create a read-only user for Mondoo in vCenter

@@ -135,12 +135,12 @@ packer {
 
 variable "zone" {
   default = "us-east5-a"
-  description = "GCP zone to build the image in"
+  description = "Google Cloud zone to build the image in"
 }
 
 variable "project_id" {
   type = string
-  description = "GCP Project ID to build the image in"
+  description = "Google Cloud Project ID to build the image in"
 }
 
 variable "image_prefix" {
@@ -194,23 +194,23 @@ To learn about the various options to override variables set in the Packer templ
 
 **Zone**
 
-By default the template will build the image in GCP's us-east5-a zone:
+By default the template will build the image in Google Cloud's us-east5-a zone:
 
 ```
 variable "zone" {
   default = "us-east5-a"
-  description = "GCP zone to build the image in"
+  description = "Google Cloud zone to build the image in"
 }
 ```
 
 **Project ID**
 
-You must set the `project_id` variable with the ID of the project from your GCP account:
+You must set the `project_id` variable with the ID of the project from your Google Cloud account:
 
 ```
 variable "project_id" {
   type = string
-  description = "GCP Project ID to build the image in"
+  description = "Google Cloud Project ID to build the image in"
 }
 ```
 

@@ -1,22 +1,22 @@
 ---
 title: Query Google Cloud
 id: cnquery-gcp-intro
-sidebar_label: Google Cloud Platform (GCP)
+sidebar_label: Google Cloud (GCP)
 displayed_sidebar: cnquery
 sidebar_position: 1
 description: Explore and analyze your Google Cloud infrastructure with cnquery
 image: /img/featured_img/mondoo-gcp.jpg
 ---
 
-With cnquery, you can explore and interrogate your entire Google Cloud Platform (GCP) project, including its compute instances. It's like having a powerful search engine for your GCP environment. For example, you can analyze firewalls, search for Compute Engine instance configuration details, or find all Cloud Storage buckets that anonymous or public users can access... all with a single tool.
+With cnquery, you can explore and interrogate your entire Google Cloud (GCP) project, including its compute instances. It's like having a powerful search engine for your Google Cloud environment. For example, you can analyze firewalls, search for Compute Engine instance configuration details, or find all Cloud Storage buckets that anonymous or public users can access... all with a single tool.
 
-cnquery provides the answers you need about every GCP configuration. For a list of GCP resources you can query, read [Mondoo Google Cloud Platform (GCP) Resource Pack Reference](/mql/resources/gcp-pack/) and [Mondoo Core Resource Pack Reference](/mql/resources/core-pack/).
+cnquery provides the answers you need about every Google Cloud configuration. For a list of Google Cloud resources you can query, read [Mondoo Google Cloud (GCP) Resource Pack Reference](/mql/resources/gcp-pack/) and [Mondoo Core Resource Pack Reference](/mql/resources/core-pack/).
 
-## Connect cnquery with your GCP environment
+## Connect cnquery with your Google Cloud environment
 
 ### Requirements
 
-To explore your GCP environment with cnquery, you must have:
+To explore your Google Cloud environment with cnquery, you must have:
 
 - [cnquery installed on your workstation](/cnquery/)
 - A [Google Platform account](https://cloud.google.com/free)
@@ -24,15 +24,15 @@ To explore your GCP environment with cnquery, you must have:
 
 ### Provide access credentials
 
-In your terminal, log into GCP with this command:
+In your terminal, log into Google Cloud with this command:
 
 ```bash
 gcloud auth login  --update-adc
 ```
 
-### Configure the GCP project you want explore
+### Configure the Google Cloud project you want explore
 
-To query a GCP project, you must set up the project:
+To query a Google Cloud project, you must set up the project:
 
 ```bash
 gcloud config set project PROJECTID
@@ -40,7 +40,7 @@ gcloud config set project PROJECTID
 
 For `PROJECTID`, substitute the ID of the project you want to query.
 
-GCP confirms the setup:
+Google Cloud confirms the setup:
 
 ```bash
 Updated property [core/project].
@@ -52,7 +52,7 @@ To verify your configuration, enter:
 gcloud config list
 ```
 
-GCP returns results similar to these:
+Google Cloud returns results similar to these:
 
 ```
 [core]
@@ -63,9 +63,9 @@ project = gcp-project-id
 Your active configuration is: [default]
 ```
 
-### Verify with a quick GCP query
+### Verify with a quick Google Cloud query
 
-To quickly confirm that cnquery has access to your GCP environment, run this query from your terminal, substituting your project ID for YOUR_PROJECT_ID:
+To quickly confirm that cnquery has access to your Google Cloud environment, run this query from your terminal, substituting your project ID for YOUR_PROJECT_ID:
 
 ```bash
 cnquery run gcp project YOUR_PROJECT_ID -c gcp.project
@@ -79,25 +79,25 @@ cnquery returns the name of the project:
 gcp.project: gcp.project name="lune-edge"
 ```
 
-You've successfully used cnquery to answer your first question about your GCP environment. Now you're ready to explore.
+You've successfully used cnquery to answer your first question about your Google Cloud environment. Now you're ready to explore.
 
 ## Query a Google Cloud project
 
 To answer any question about your environment, use cnquery's interactive shell. It has auto-complete to guide you, which is especially helpful when you're new to cnquery and learning MQL.
 
-To launch a shell into your GCP environment to run queries, substitute ORGANIZATION-ID with the ID of the organization you want to access and run:
+To launch a shell into your Google Cloud environment to run queries, substitute ORGANIZATION-ID with the ID of the organization you want to access and run:
 
 ```bash
 cnquery shell gcp org ORGANIZATION-ID
 ```
 
-To launch a shell into your GCP environment on the project level, substitute PROJECT-ID with the ID of the project you want to access and run:
+To launch a shell into your Google Cloud environment on the project level, substitute PROJECT-ID with the ID of the project you want to access and run:
 
 ```bash
 cnquery shell gcp project PROJECT-ID
 ```
 
-To launch a shell into your GCP environment on the folder level, substitute FOLDER-ID with the ID of the folder you want to access and run:
+To launch a shell into your Google Cloud environment on the folder level, substitute FOLDER-ID with the ID of the folder you want to access and run:
 
 ```bash
 cnquery shell gcp folder FOLDER-ID
@@ -105,19 +105,19 @@ cnquery shell gcp folder FOLDER-ID
 
 ### Discover capabilities with the `help` command
 
-Once inside the shell, use the `help` command to learn what GCP resources you can query. This command lists all the GCP resources:
+Once inside the shell, use the `help` command to learn what Google Cloud resources you can query. This command lists all the Google Cloud resources:
 
 ```coffeescript
 help gcp
 ```
 
-From the resulting list, you can drill down further. For example, enter this command to list all the GCP DNS resources you can query:
+From the resulting list, you can drill down further. For example, enter this command to list all the Google Cloud DNS resources you can query:
 
 ```coffeescript
 help gcp.dns
 ```
 
-From the resulting list, you can drill down even further. You can also learn about available GCP resources in the [Mondoo Google Cloud Platform (GCP) Resource Pack Reference](/mql/resources/gcp-pack/).
+From the resulting list, you can drill down even further. You can also learn about available Google Cloud resources in the [Mondoo Google Cloud Platform (GCP) Resource Pack Reference](/mql/resources/gcp-pack/).
 
 ### Query Compute Engine instances
 
@@ -294,6 +294,6 @@ gcp.project.computeService.instances.where: [
 ## Learn more about querying Google Cloud
 
 - To learn more about how the MQL query language works, read [Write Effective MQL](/mql/mql.write/).
-- For a list of all the GCP resources and fields you can query, read the [Mondoo Google Cloud Platform (GCP) Resource Pack Reference](/mql/resources/gcp-pack/).
+- For a list of all the Google Cloud resources and fields you can query, read the [Mondoo Google Cloud (GCP) Resource Pack Reference](/mql/resources/gcp-pack/).
 
 ---

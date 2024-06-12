@@ -147,12 +147,12 @@ module.exports = {
             },
             {
               type: "doc",
-              id: "cnquery/cnquery/cloud/azure/cnquery-azure-intro",
+              id: "cnquery/cnquery/cloud/azure",
               label: "Azure",
             },
             {
               type: "doc",
-              id: "cnquery/cloud/gcp/cnquery-gcp-intro",
+              id: "cnquery/cloud/gcp",
               label: "Google Cloud",
             },
             {
@@ -168,7 +168,7 @@ module.exports = {
             },
             {
               type: "doc",
-              id: "cnquery/cloud/vmware/cnquery-vmware-intro",
+              id: "cnquery/cloud/vmware",
               label: "VMware",
             },
           ],

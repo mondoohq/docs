@@ -1,6 +1,5 @@
 ---
 title: Query EC2 Instances
-id: cnquery-aws-ec2
 sidebar_label: Query AWS EC2 Instances
 displayed_sidebar: cnquery
 sidebar_position: 30
@@ -8,9 +7,9 @@ description: Explore and analyze the configuration of AWS EC2 instances
 image: /img/featured_img/mondoo-aws.jpg
 ---
 
-Now that you have an introduction to [querying your AWS account](/cnquery/cnquery-aws/cnquery-aws-account/) with cnquery, let's dive deeper and explore EC2 instances.
+Now that you have an introduction to [querying your AWS account](/cnquery/cloud/aws/account/) with cnquery, let's dive deeper and explore EC2 instances.
 
-We'll continue working in the cnquery shell, which makes running individual queries easy. If it's not already open, enter `cnquery shell aws` in your terminal. To learn about accessing your AWS account with cnquery, read [Query AWS Infrastructure](/cnquery/cnquery-aws/).
+We'll continue working in the cnquery shell, which makes running individual queries easy. If it's not already open, enter `cnquery shell aws` in your terminal. To learn about accessing your AWS account with cnquery, read [Query AWS Infrastructure](/cnquery/cloud/aws/).
 
 ## EC2 resources
 
@@ -129,6 +128,6 @@ aws.ec2.instances.where(instanceType == /^[t].*/) { instanceType }
 
 ## Next step
 
-To discover more of cnquery's AWS capabilities, [query your EKS clusters](/cnquery/cnquery-aws/cnquery-aws-eks/).
+To discover more of cnquery's AWS capabilities, [query your EKS clusters](/cnquery/cloud/aws/eks/).
 
 ---

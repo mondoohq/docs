@@ -5,6 +5,55 @@ const { themes } = require("prism-react-renderer");
 const legacyRedirects = [
   // NOTE: Path / is equivalent to https://mondoo.com/docs/
   //
+  //// June 2024 reworked cnquery structure: made a /cloud dir
+  {
+    from: "/cnquery/cnquery-aws/cnquery-aws-intro.mdx",
+    to: "/cnquery/cloud/aws/README.mdx",
+  },
+  {
+    from: "/cnquery/cnquery-aws/README.mdx",
+    to: "/cnquery/cloud/aws/README.mdx",
+  },
+  {
+    from: "/cnquery/cnquery-aws/cnquery-aws-account.mdx",
+    to: "/cnquery/cloud/aws/account.mdx",
+  },
+  {
+    from: "/cnquery/cnquery-aws/cnquery-aws-ec2.mdx",
+    to: "/cnquery/cloud/aws/ec2.mdx",
+  },
+  {
+    from: "/cnquery/cnquery-aws/cnquery-aws-eks.mdx",
+    to: "/cnquery/cloud/aws/eks.mdx",
+  },
+  {
+    from: "/cnquery/cnquery-azure/README.mdx",
+    to: "/cnquery/cloud/azure/README.mdx",
+  },
+  {
+    from: "/cnquery/cnquery-azure/cnquery-azure-intro.mdx",
+    to: "/cnquery/cloud/azure/README.mdx",
+  },
+  {
+    from: "/cnquery/cnquery-gcp/README.mdx",
+    to: "/cnquery/cloud/gcp/README.mdx",
+  },
+  {
+    from: "/cnquery/cnquery-gcp/cnquery-gcp-intro.mdx",
+    to: "/cnquery/cloud/gcp/README.mdx",
+  },
+  {
+    from: "/cnquery/cnquery-k8s/README.mdx",
+    to: "/cnquery/cloud/k8s/README.mdx",
+  },
+  {
+    from: "/cnquery/cnquery-k8s/cnquery-k8s-cluster.mdx",
+    to: "/cnquery/cloud/k8s/cluster.mdx",
+  },
+  {
+    from: "/cnquery/cnquery-k8s/cnquery-k8s-intro.mdx",
+    to: "/cnquery/cloud/k8s/README.mdx",
+  },
   // May 2024 reworked AWS integration stuff when we added hosted aws
   {
     from: "/platform/infra/cloud/aws/aws-integration-faq",

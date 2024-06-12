@@ -22,13 +22,13 @@ Download and install cnquery on your assets.
 
 ### Get Started with:
 
-- [AWS](/cnquery/cnquery-aws/)
+- [AWS](/cnquery/cnquery/cloud/aws/)
 
-- [Azure](/cnquery/cnquery-azure/)
+- [Azure](/cnquery/cnquery/cloud/azure/)
 
-- [Google Cloud](/cnquery/cnquery-gcp/)
+- [Google Cloud](/cnquery/cnquery/cloud/gcp/)
 
-- [Kubernetes](/cnquery/cnquery-k8s/)
+- [Kubernetes](/cnquery/cnquery/cloud/k8s/)
 
 - [Linux](/cnquery/cnquery-oper/cnquery-linux-intro)
 

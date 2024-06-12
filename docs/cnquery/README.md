@@ -110,9 +110,6 @@ To learn how to sign up for a free Mondoo account and register cnquery, read [Lo
 
 ## Learn more​
 
-- To get started with AWS, read [Query AWS](/cnquery/cnquery-aws/).
-- To get started with Google Cloud, read [Query Google Cloud](/cnquery/cnquery-gcp/)
-- To get started with Kubernetes, read [Query Kubernetes](/cnquery/cnquery-k8s/)
 - To explore cnquery commands, read [CLI Reference](/cnquery/cli/cnquery).
 - To explore the capabilities of the MQL language, read the [MQL docs](/mql/resources).
 - To learn what technologies cnquery integrates with, read [Supported Query Targets](/cnquery/cnquery-supported).

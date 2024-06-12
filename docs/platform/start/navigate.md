@@ -12,7 +12,7 @@ Access the Mondoo Console in your web browser at [https://console.mondoo.com](ht
 
 ![Mondoo Console](/img/platform/start/console-overview-callouts.png)
 
-:::TIP
+:::tip
 
 The sun/moon icon on the toolbar lets you switch the console display between light and dark display. The Mondoo Console also has a colorblind display option. To learn more, read [Enable Colorblind Mode in the Mondoo Console](/platform/maintain/user/colorblind/).
 

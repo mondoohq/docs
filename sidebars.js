@@ -162,20 +162,28 @@ module.exports = {
           ],
         },
         {
-          type: "doc",
-          id: "cnquery/cnquery-oper/cnquery-linux-intro",
-          label: "Linux",
+          type: "category",
+          label: "Operating Systems",
+          collapsed: true,
+          items: [
+            {
+              type: "doc",
+              id: "cnquery/cnquery-oper/cnquery-linux-intro",
+              label: "Linux",
+            },
+            {
+              type: "doc",
+              id: "cnquery/cnquery-oper/cnquery-macos-intro",
+              label: "macOS",
+            },
+            {
+              type: "doc",
+              id: "cnquery/cnquery-oper/cnquery-windows-intro",
+              label: "Windows",
+            },
+          ],
         },
-        {
-          type: "doc",
-          id: "cnquery/cnquery-oper/cnquery-macos-intro",
-          label: "macOS",
-        },
-        {
-          type: "doc",
-          id: "cnquery/cnquery-oper/cnquery-windows-intro",
-          label: "Windows",
-        },
+
         {
           type: "category",
           label: "SaaS",

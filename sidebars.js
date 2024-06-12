@@ -142,12 +142,12 @@ module.exports = {
         },
         {
           type: "doc",
-          id: "cnquery/cnquery/cloud/azure/",
+          id: "cnquery/cnquery/cloud/azure",
           label: "Azure",
         },
         {
           type: "doc",
-          id: "cnquery/cloud/gcp/",
+          id: "cnquery/cloud/gcp",
           label: "Google Cloud",
         },
         {

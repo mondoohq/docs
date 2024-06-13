@@ -14,8 +14,6 @@ Mondoo's flagship SaaS platform provides full-stack security, compliance, and as
 
 - [What Is Mondoo?](/platform/start/plat-what-is/)
 
-- [Create a Mondoo Account](/platform/start/plat-start-acct/)
-
 - [Plan your Mondoo Organization](/platform/start/organize/overview/)
 
 ### [Integrate Your Infrastructure with Mondoo](/platform/infra/overview/)

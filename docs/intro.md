@@ -20,8 +20,6 @@ Mondoo's flagship SaaS platform provides full-stack security, asset intelligence
 
 - [What Is Mondoo?](/platform/start/plat-what-is/)
 
-- [Get Started](/platform/start/plat-start-acct/)
-
 #### [Integrate Your Infrastructure with Mondoo](/platform/infra/overview/)
 
 - [Cloud](/platform/infra/cloud/overview/)

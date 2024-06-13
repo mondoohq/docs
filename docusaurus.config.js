@@ -5,6 +5,15 @@ const { themes } = require("prism-react-renderer");
 const legacyRedirects = [
   // NOTE: Path / is equivalent to https://mondoo.com/docs/
   //
+  // June 2024 remove signup info per Chris and Tim
+  {
+    from: "/platform/start/plat-start-acct/",
+    to: "/platform/start/what-is-mondoo",
+  },
+  {
+    from: "/platform/start/plat-start-2/",
+    to: "/platform/start/organize/overview",
+  },
   // May 2024 reworked AWS integration stuff when we added hosted aws
   {
     from: "/platform/infra/cloud/aws/aws-integration-faq",

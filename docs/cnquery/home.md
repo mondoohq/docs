@@ -22,7 +22,7 @@ Download and install cnquery on your assets.
 
 ### Get started with:
 
-| **Cloud**    | **SaaS**         | **OSs** |
+| **Cloud**    | **SaaS**         | **OS** |
 |--------------|------------------|---------|
 | [AWS](/cnquery/cloud/aws/)          | [GitHub](/cnquery/saas/github/)           | [Linux](/cnquery/cnquery-oper/cnquery-linux-intro)   |
 | [Azure](/cnquery/cloud/azure/)        | [Google Workspace](/cnquery/saas/google_workspace/)| [macOS](/cnquery/cnquery-oper/cnquery-macos-intro)   |

@@ -7,3 +7,90 @@ description: Explore and analyze your VMware infrastructure with cnquery
 image: /img/featured_img/mondoo-vmware.jpg
 ---
 
+Rely on cnquery to explore and analyze VMware vSphere data centers, hosts, and clusters, Cloud Director deployments, and ESXI hosts.
+
+cnquery provides the answers you need about every VMware environment. For a list of VMware resources you can query, read [Mondoo VMware vSphere Resource Pack Reference](/mql/resources/vsphere-pack/), [Mondoo VMware Cloud Director Resource Pack Reference](/mql/resources/vcd-pack/), and [Mondoo Core Resource Pack Reference](/mql/resources/core-pack/).
+
+
+## Requirements
+
+To analyze and explore your VMware environment with cnquery, you must have [cnquery installed on your workstation](/cnquery/) and access to the VMware environment.
+
+## Explore vSphere with the cnquery shell
+
+To launch a shell into your vSphere environment, enter:
+
+```bash
+cnquery shell vsphere USER@DOMAIN@HOST --ask-pass
+```
+
+| For... | Substitute...           |
+| ------ | ----------------------- |
+| USER   | Your vSphere user ID    |
+| DOMAIN | The vSphere domain      |
+| HOST   | The vSphere IP address  |
+
+
+For example:
+
+```bash
+cnquery shell vsphere mwezi@vsphere.local@192.167.5.25 --ask-pass
+Enter password:
+→ loaded configuration from /Users/vj/.config/mondoo/mondoo.yml using source default
+
+    Available assets
+
+  > 1. 192.168.5.24 (vmware-vsphere)
+    2. esxi-host2.localdomain (vmware-esxi)
+    3. esxi-host3.localdomain (vmware-esxi)
+    4. esxi-host1.localdomain (vmware-esxi)
+```
+
+When prompted, provide your password. When cnquery lists the available assets to query, choose one. You're now in the cnquery shell.
+
+### Discover capabilities with the `help` command
+
+Once inside the shell, use the `help` command to learn what vSphere resources you can query. This command lists all the vSphere resources:
+
+```coffeescript
+help vsphere
+```
+
+From the resulting list, you can drill down further. For example, enter this command to list all the vSphere cluster resources you can query:
+
+```coffeescript
+help vsphere.cluster
+```
+
+From the resulting list, you can drill down even further. You can also learn about available vSphere resources in the [Mondoo VMware vSphere Resource Pack Reference](/mql/resources/vsphere-pack/).
+
+### Answer questions in the cnquery shell
+
+Now that you know how to discover what's possible with cnquery, let's run some actual queries in the shell.
+
+#### Query data centers
+
+This query asks for a list of data centers, including their names and managed object IDs:
+
+```coffeescript
+vsphere.datacenters { name moid}
+vsphere.datacenters: [
+  0: {
+    name: "Mondoo Datacenter-2"
+    moid: "Datacenter-datacenter-8"
+  }
+  1: {
+    name: "Mondoo Datacenter-1"
+    moid: "Datacenter-datacenter-3"
+  }
+]
+```
+
+### Exit the cnquery shell
+
+To exit the cnquery shell, either press `Ctrl + D` or type `exit`.
+
+### Learn more
+
+- To learn more about how the MQL query language works, read [Write Effective MQL](/mql/mql.write/).
+- For a list of VMware resources you can query, read [Mondoo VMware vSphere Resource Pack Reference](/mql/resources/vsphere-pack/), [Mondoo VMware Cloud Director Resource Pack Reference](/mql/resources/vcd-pack/), and [Mondoo Core Resource Pack Reference](/mql/resources/core-pack/).

@@ -8,7 +8,7 @@ const legacyRedirects = [
   // June 2024 remove signup info per Chris and Tim
   {
     from: "/platform/start/plat-start-acct/",
-    to: "/platform/start/what-is-mondoo",
+    to: "/platform/start/plat-what-is",
   },
   {
     from: "/platform/start/plat-start-2/",
@@ -150,11 +150,11 @@ const legacyRedirects = [
   // and march 2024 move
   {
     from: "/getstarted/quickstart",
-    to: "/platform/start/plat-start-acct",
+    to: "/platform/start/plat-what-is",
   },
   {
     from: "/getstarted/overview",
-    to: "/platform/start/plat-start-acct",
+    to: "/platform/start/plat-what-is",
   },
   {
     from: "/cloud/ms365/",

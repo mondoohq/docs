@@ -20,19 +20,19 @@ Get to know cnquery and explore its capabilities.
 
 Download and install cnquery on your assets.
 
-### Get Started with:
+### Get started with:
 
 | **Cloud**    | **SaaS**         | **OSs** |
 |--------------|------------------|---------|
 | [AWS](/cnquery/cloud/aws/)          | [GitHub](/cnquery/saas/github/)           | [Linux](/cnquery/cnquery-oper/cnquery-linux-intro)   |
-| [Azure](/cnquery/cloud/azure/)        | [Google Workspace](/cnquery/saas/google-workspace/)| [macOS](/cnquery/cnquery-oper/cnquery-macos-intro)   |
+| [Azure](/cnquery/cloud/azure/)        | [Google Workspace](/cnquery/saas/google_workspace/)| [macOS](/cnquery/cnquery-oper/cnquery-macos-intro)   |
 | [Google Cloud](/cnquery/cloud/gcp/) | [Microsoft 365](/cnquery/saas/ms365/)    | [Windows](/cnquery/cnquery-oper/cnquery-windows-intro) |
 | [Kubernetes](/cnquery/cloud/k8s/)   | [Okta](/cnquery/saas/okta/)             |         |
 | [VMware](/cnquery/cloud/k8s/)       | [Slack](/cnquery/saas/slack/)            |         |
 |              | [Snowflake](/cnquery/saas/snowflake/)        |         |
 
 
-### [CLI Command Reference](/cnquery/cli/cnquery/)
+### [CLI command reference](/cnquery/cli/cnquery/)
 
 Find the commands you need to search and query your infrastructure.
 

@@ -8,7 +8,7 @@ const legacyRedirects = [
   //// June 2024 reworked cnquery structure: made a /cloud dir
   {
     from: "/cnquery/cnquery-aws/cnquery-aws-intro",
-    to: "/cnquery/cloud/aws/cnquery-aws-intro",
+    to: "/cnquery/cloud/aws",
   },
   {
     from: "/cnquery/cnquery-aws/cnquery-aws-account",
@@ -24,11 +24,11 @@ const legacyRedirects = [
   },
   {
     from: "/cnquery/cnquery-azure/cnquery-azure-intro",
-    to: "/cnquery/cloud/azure/cnquery-azure-intro",
+    to: "/cnquery/cloud/azure",
   },
   {
     from: "/cnquery/cnquery-gcp/cnquery-gcp-intro",
-    to: "/cnquery/cloud/gcp/cnquery-gcp-intro",
+    to: "/cnquery/cloud/gcp",
   },
   {
     from: "/cnquery/cnquery-k8s/cnquery-k8s-cluster",
@@ -36,7 +36,7 @@ const legacyRedirects = [
   },
   {
     from: "/cnquery/cnquery-k8s/cnquery-k8s-intro",
-    to: "/cnquery/cloud/k8s/cnquery-k8s-intro",
+    to: "/cnquery/cloud/k8s",
   },
   // May 2024 reworked AWS integration stuff when we added hosted aws
   {

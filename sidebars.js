@@ -147,7 +147,7 @@ module.exports = {
             },
             {
               type: "doc",
-              id: "cnquery/cnquery/cloud/azure",
+              id: "cnquery/cloud/azure",
               label: "Azure",
             },
             {

@@ -32,7 +32,7 @@ const legacyRedirects = [
   },
   {
     from: "/cnquery/cnquery-k8s/cnquery-k8s-cluster",
-    to: "/cnquery/cloud/k8s/cluster.mdx",
+    to: "/cnquery/cloud/k8s/cluster",
   },
   {
     from: "/cnquery/cnquery-k8s/cnquery-k8s-intro",

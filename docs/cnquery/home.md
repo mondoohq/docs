@@ -22,15 +22,14 @@ Download and install cnquery on your assets.
 
 ### Get started with:
 
-| **Cloud**    | **SaaS**         | **OS** |
-|--------------|------------------|---------|
-| [AWS](/cnquery/cloud/aws/)          | [GitHub](/cnquery/saas/github/)           | [Linux](/cnquery/cnquery-oper/cnquery-linux-intro)   |
-| [Azure](/cnquery/cloud/azure/)        | [Google Workspace](/cnquery/saas/google_workspace/)| [macOS](/cnquery/cnquery-oper/cnquery-macos-intro)   |
-| [Google Cloud](/cnquery/cloud/gcp/) | [Microsoft 365](/cnquery/saas/ms365/)    | [Windows](/cnquery/cnquery-oper/cnquery-windows-intro) |
-| [Kubernetes](/cnquery/cloud/k8s/)   | [Okta](/cnquery/saas/okta/)             |         |
-| [VMware](/cnquery/cloud/k8s/)       | [Slack](/cnquery/saas/slack/)            |         |
-|              | [Snowflake](/cnquery/saas/snowflake/)        |         |
-
+| **Cloud**                           | **SaaS**                                            | **OS**                                                 |
+| ----------------------------------- | --------------------------------------------------- | ------------------------------------------------------ |
+| [AWS](/cnquery/cloud/aws/)          | [GitHub](/cnquery/saas/github/)                     | [Linux](/cnquery/cnquery-oper/cnquery-linux-intro)     |
+| [Azure](/cnquery/cloud/azure/)      | [Google Workspace](/cnquery/saas/google_workspace/) | [macOS](/cnquery/cnquery-oper/cnquery-macos-intro)     |
+| [Google Cloud](/cnquery/cloud/gcp/) | [Microsoft 365](/cnquery/saas/ms365/)               | [Windows](/cnquery/cnquery-oper/cnquery-windows-intro) |
+| [Kubernetes](/cnquery/cloud/k8s/)   | [Okta](/cnquery/saas/okta/)                         |                                                        |
+| [VMware](/cnquery/cloud/k8s/)       | [Slack](/cnquery/saas/slack/)                       |                                                        |
+|                                     | [Snowflake](/cnquery/saas/snowflake/)               |                                                        |
 
 ### [CLI command reference](/cnquery/cli/cnquery/)
 

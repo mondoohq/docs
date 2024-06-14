@@ -56,7 +56,7 @@ Use Mondoo to find and fix security vulnerabilities and misconfigurations before
 
 ## Get started
 
-To get started, [create a Mondoo account](/platform/start/plat-start-acct).
+To get started, [contact Mondoo](https://mondoo.com/contact) to create an account.
 
 If you already have a Mondoo account:
 

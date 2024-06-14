@@ -66,9 +66,9 @@ Custom query packs let you bundle queries to meet your specific needs. To help y
 
 ## Explore your infrastructure in Mondoo Platform​
 
-To more easily explore your infrastructure, sign up for a free Mondoo Platform account. Mondoo's web-based console allows you to navigate, search, and arrange all of your assets.
+To more easily explore your infrastructure, sign up for a Mondoo Platform account. Mondoo's web-based console allows you to navigate, search, and arrange all of your assets.
 
-Go to [console.mondoo.com](https://console.mondoo.com) to sign up.
+To get started, [contact Mondoo](https://mondoo.com/contact).
 
 To learn about Mondoo Platform, read the [Mondoo Platform docs](../platform/home.md) or visit [mondoo.com](https://mondoo.com).
 

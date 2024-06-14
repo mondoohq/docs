@@ -13,8 +13,6 @@ To learn about CloudShell, read the [AWS documentation](https://docs.aws.amazon.
 
 ## Set up cnspec in CloudShell
 
-To set up cnspec in CloudShell, [sign up for a free Mondoo account](/platform/start/plat-start-acct). In the Mondoo Console you'll find a guide that helps you install cnspec in AWS CloudShell and run your first security assessment of AWS.
-
 ### Step 1: Launch the Mondoo AWS CloudShell Setup Guide
 
 ![Mondoo AWS Guide - Start](/img/cnspec/aws/aws-guide-start.png)

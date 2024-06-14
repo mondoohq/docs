@@ -12,7 +12,7 @@ The Mondoo Microsoft 365 integration lets you continuously scan your Microsoft 3
 
 Before you integrate Microsoft 365 with Mondoo, be sure you:
 
-- Have a [Mondoo account](/platform/start/plat-start-acct/) with Editor or Owner permissions for the space in which you want to add the integration.
+- Have a Mondoo account with Editor or Owner permissions for the space in which you want to add the integration.
 
 - Have an [Azure account](https://azure.microsoft.com/free/?WT.mc_id=A261C142F) with an active subscription and permission to manage applications in Microsoft Entra ID (formerly Active Directory). Any of these [Microsoft Entra ID roles](https://learn.microsoft.com/en-us/azure/active-directory/roles/permissions-reference) include the required permissions:
 

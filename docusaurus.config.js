@@ -37,6 +37,14 @@ const legacyRedirects = [
   {
     from: "/cnquery/cnquery-k8s/cnquery-k8s-intro",
     to: "/cnquery/cloud/k8s",
+  // June 2024 remove signup info per Chris and Tim
+  {
+    from: "/platform/start/plat-start-acct/",
+    to: "/platform/start/plat-what-is",
+  },
+  {
+    from: "/platform/start/plat-start-2/",
+    to: "/platform/start/organize/overview",
   },
   // May 2024 reworked AWS integration stuff when we added hosted aws
   {
@@ -174,11 +182,11 @@ const legacyRedirects = [
   // and march 2024 move
   {
     from: "/getstarted/quickstart",
-    to: "/platform/start/plat-start-acct",
+    to: "/platform/start/plat-what-is",
   },
   {
     from: "/getstarted/overview",
-    to: "/platform/start/plat-start-acct",
+    to: "/platform/start/plat-what-is",
   },
   {
     from: "/cloud/ms365/",

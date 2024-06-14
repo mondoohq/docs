@@ -77,9 +77,9 @@ To quickly confirm that cnspec has access to your Google Cloud environment, run 
 cnspec run gcp project PROJECT-ID -c 'gcp.project.id!="foo"'
 ```
 
-For `PROJECT-ID`, substitute your GCP project ID.
+For `PROJECT-ID`, substitute your Google Cloud project ID.
 
-It asserts that your GCP project ID value is not `foo`.
+It asserts that your Google Cloud project ID value is not `foo`.
 
 cnspec returns `[ok]` to indicate that the test passed, and includes the actual value of the GCP project ID, similar to this:
 
@@ -87,14 +87,14 @@ cnspec returns `[ok]` to indicate that the test passed, and includes the actual 
 [ok] value: "luna-dev-262317"
 ```
 
-You've successfully used cnspec to run your first check on your GCP environment. Now you're ready to explore.
+You've successfully used cnspec to run your first check on your Google Cloud environment. Now you're ready to explore.
 
-Once you've ensured that [cnspec can access your GCP environment](/cnspec/cloud/gcp/), you can begin testing. The method you choose depends on your goals:
+Once you've ensured that [cnspec can access your Google Cloud environment](/cnspec/cloud/gcp/), you can begin testing. The method you choose depends on your goals:
 
-- For widescale assessment of your GCP infrastructure, scan using policy bundles. These collections of tests work together to present a broad picture of your GCP security posture.
-- To run ad hoc checks against your GCP environment, use cnspec's interactive shell. It has auto-complete to guide you, which is especially helpful when you're new to cnspec and learning MQL.
+- For widescale assessment of your Google Cloud infrastructure, scan using policy bundles. These collections of tests work together to present a broad picture of your GCP security posture.
+- To run ad hoc checks against your Google Cloud environment, use cnspec's interactive shell. It has auto-complete to guide you, which is especially helpful when you're new to cnspec and learning MQL.
 
-## Assess GCP security with policy-based scanning
+## Assess Google Cloud security with policy-based scanning
 
 The Google Cloud (GCP) Security by Mondoo policy is available to all in Mondoo's [cnspec-policies GitHub repo](https://github.com/mondoohq/cnspec-policies/tree/main/core). This collection of tests evaluates how well your environment follows fundamental GCP security best practices. It checks for misconfigurations across your entire GCP infrastructure.
 

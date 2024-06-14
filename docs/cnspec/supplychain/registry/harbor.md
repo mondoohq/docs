@@ -40,7 +40,7 @@ cnspec scan container registry harbor.lunalectric.com/library/centos --insecure
 
 ## Harbor interrogation services
 
-To complete this task, you must first [create a free Mondoo Platform account](/cnspec/cnspec-platform).
+To complete this task, you must first create a Mondoo Platform account. To learn how, [contact Mondoo](https://mondoo.com/contact).
 
 1. In the Mondoo Console, create a new, separate space for the Harbor integration.
 

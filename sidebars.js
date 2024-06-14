@@ -212,7 +212,7 @@ module.exports = {
     {
       type: "doc",
       id: "cnquery/cnquery-platform",
-      label: "Log into Mondoo Platform for More",
+      label: "Tap into Mondoo Platform for More",
     },
     {
       type: "doc",
@@ -335,7 +335,7 @@ module.exports = {
     {
       type: "doc",
       id: "cnspec/cnspec-platform",
-      label: "Log into Mondoo Platform for More",
+      label: "Tap into Mondoo Platform for More",
     },
     {
       type: "category",

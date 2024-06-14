@@ -275,7 +275,7 @@ pki
 pkr
 pmh
 Pmwtt
-portgrou
+portgroup
 postgre
 PROFILENAME
 PROJECTID

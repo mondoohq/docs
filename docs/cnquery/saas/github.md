@@ -1,5 +1,5 @@
 ---
-title: Query GitHub organizations and repositories with cnquery
+title: Query GitHub organizations and repositories
 sidebar_label: GitHub
 sidebar_position: 2
 displayed_sidebar: cnquery

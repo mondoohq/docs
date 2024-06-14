@@ -37,7 +37,7 @@ const legacyRedirects = [
   {
     from: "/cnquery/cnquery-k8s/cnquery-k8s-intro",
     to: "/cnquery/cloud/k8s",
-  }
+  },
   // June 2024 remove signup info per Chris and Tim
   {
     from: "/platform/start/plat-start-acct/",

@@ -5,6 +5,39 @@ const { themes } = require("prism-react-renderer");
 const legacyRedirects = [
   // NOTE: Path / is equivalent to https://mondoo.com/docs/
   //
+  //// June 2024 reworked cnquery structure: made a /cloud dir
+  {
+    from: "/cnquery/cnquery-aws/cnquery-aws-intro",
+    to: "/cnquery/cloud/aws",
+  },
+  {
+    from: "/cnquery/cnquery-aws/cnquery-aws-account",
+    to: "/cnquery/cloud/aws/account",
+  },
+  {
+    from: "/cnquery/cnquery-aws/cnquery-aws-ec2",
+    to: "/cnquery/cloud/aws/ec2",
+  },
+  {
+    from: "/cnquery/cnquery-aws/cnquery-aws-eks",
+    to: "/cnquery/cloud/aws/eks",
+  },
+  {
+    from: "/cnquery/cnquery-azure/cnquery-azure-intro",
+    to: "/cnquery/cloud/azure",
+  },
+  {
+    from: "/cnquery/cnquery-gcp/cnquery-gcp-intro",
+    to: "/cnquery/cloud/gcp",
+  },
+  {
+    from: "/cnquery/cnquery-k8s/cnquery-k8s-cluster",
+    to: "/cnquery/cloud/k8s/cluster",
+  },
+  {
+    from: "/cnquery/cnquery-k8s/cnquery-k8s-intro",
+    to: "/cnquery/cloud/k8s",
+  },
   // June 2024 remove signup info per Chris and Tim
   {
     from: "/platform/start/plat-start-acct/",

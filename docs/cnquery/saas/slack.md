@@ -1,9 +1,9 @@
 ---
-title: Query Slack with cnquery
+title: Query Slack
 sidebar_label: Slack
 sidebar_position: 6
 displayed_sidebar: cnquery
-description: Query your Slack workspaces
+description: Query your Slack workspaces with cnquery
 image: /img/featured_img/mondoo-feature.jpg
 ---
 

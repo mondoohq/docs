@@ -1,5 +1,5 @@
 ---
-title: Query Okta with cnquery
+title: Query Okta
 sidebar_label: Okta
 sidebar_position: 5
 displayed_sidebar: cnquery

@@ -84,6 +84,7 @@ crcsmnky
 credentialreport
 crowdsource
 cryptokey
+csum
 customresources
 cvmsroot
 cyclonedx
@@ -274,6 +275,7 @@ pki
 pkr
 pmh
 Pmwtt
+portgrou
 postgre
 PROFILENAME
 PROJECTID
@@ -387,6 +389,7 @@ wolfi
 wordpress
 wpe
 WTY
+Xmit
 xmna
 Xnp
 xoxb

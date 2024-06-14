@@ -84,14 +84,14 @@ vsphere.datacenters: [
 ]
 ```
 
-This query asks for the maximum number of failed login attempts before an EXSi user is locked out:
+This query asks for the maximum number of failed login attempts before an ESXi user is locked out:
 
 ```coffeescript
 esxi.host.advancedSettings['Security.AccountLockFailures']
 esxi.host.advancedSettings[Security.AccountLockFailures]: "5"
 ```
 
-This query returns EXSi port group configuration data:
+This query returns ESXi port group configuration data:
 
 ```coffeescript
 esxi.host.properties['config']['network']['portgroup']

@@ -3,7 +3,7 @@ title: azure.subscription.sqlService.database
 id: azure.subscription.sqlService.database
 sidebar_label: azure.subscription.sqlService.database
 displayed_sidebar: MQL
-description: Azure SQL server database
+description: Azure SQL Database service database
 ---
 
 # azure.subscription.sqlService.database
@@ -14,7 +14,7 @@ description: Azure SQL server database
 
 **Description**
 
-Azure SQL server database
+Azure SQL Database service database
 
 **Fields**
 
@@ -42,7 +42,7 @@ Azure SQL server database
 | failoverGroupId                         | string                                                                                                  | SQL database failover group ID                   |
 | readScale                               | string                                                                                                  | SQL database read scale                          |
 | sampleName                              | string                                                                                                  | SQL database sample name                         |
-| zoneRedundant                           | bool                                                                                                    | Whether SQL server is zone redundant             |
+| zoneRedundant                           | bool                                                                                                    | Whether the database is zone redundant           |
 | transparentDataEncryption               | dict                                                                                                    | SQL database transparent data encryption         |
 | advisor                                 | &#91;&#93;dict                                                                                          | SQL database advisor                             |
 | threatDetectionPolicy                   | dict                                                                                                    | SQL database threat detection policy             |

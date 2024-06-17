@@ -21,7 +21,7 @@ Azure SQL
 | ID             | TYPE                                                                                      | DESCRIPTION             |
 | -------------- | ----------------------------------------------------------------------------------------- | ----------------------- |
 | subscriptionId | string                                                                                    | Subscription identifier |
-| servers        | &#91;&#93;[azure.subscription.sqlService.server](azure.subscription.sqlservice.server.md) | List of SQL servers     |
+| servers        | &#91;&#93;[azure.subscription.sqlService.server](azure.subscription.sqlservice.server.md) | List of servers         |
 
 **References**
 

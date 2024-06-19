@@ -7,7 +7,7 @@
 
 \b[Ll]orem [Ii]psum\b
 
-# PR links left in the release notes
+# Mondoo PR links
 \bhttps:\/\/github.com\/mondoohq\/.*\/pull\/\d*
 
 #
@@ -60,6 +60,10 @@
 # s.b. DevOps
 \bDev Ops\b
 \bDevops\b
+
+# s.b. SaaS
+# \bsaas\b disabled due to false positives in this repo
+\bSaas\b
 
 # s.b. Docker Hub
 \bDocker[Hh]ub\b

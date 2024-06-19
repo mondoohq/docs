@@ -20,11 +20,12 @@ The `aws.account` resource provides configuration for AWS accounts, including th
 
 **Fields**
 
-| ID           | TYPE                                    | DESCRIPTION                                           |
-| ------------ | --------------------------------------- | ----------------------------------------------------- |
-| id           | string                                  | Account ID                                            |
-| aliases      | &#91;&#93;string                        | Account aliases                                       |
-| organization | [aws.organization](aws.organization.md) | Information about the associated organization, if any |
+| ID           | TYPE                                    | DESCRIPTION                                                                                                                                                                                            |
+| ------------ | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| id           | string                                  | Account ID                                                                                                                                                                                             |
+| aliases      | &#91;&#93;string                        | Account aliases                                                                                                                                                                                        |
+| organization | [aws.organization](aws.organization.md) | Information about the associated organization, if any                                                                                                                                                  |
+| tags         | map[string]string                       | Tags on the account, Note: This operation can only be called from the organization's management, account or by a member account that is a delegated administrator for an, Amazon Web Services service. |
 
 **Examples**
 

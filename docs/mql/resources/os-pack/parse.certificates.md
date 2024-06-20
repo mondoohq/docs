@@ -33,12 +33,12 @@ parse.certificates(path string)
 
 Parse Certificates from target file system
 
-```coffeescript
+```coffee
 parse.certificates('/etc/ssl/cert.pem').list { issuer.dn }
 ```
 
 Parse Certificates from content
 
-```coffeescript
+```coffee
 parse.certificates(content: 'PEM CONTENT').list { issuer.dn }
 ```

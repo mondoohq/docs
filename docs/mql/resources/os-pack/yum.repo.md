@@ -37,7 +37,7 @@ yum.repo(id string)
 
 Check if a yum repo is enabled
 
-```coffeescript
+```coffee
 yum.repo('salt-latest') {
   enabled
 }

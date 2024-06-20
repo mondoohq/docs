@@ -29,19 +29,19 @@ Use the `aws.rds` resource to assess the configuration of AWS RDS deployments. T
 
 Check whether RDS DB instances have backups enabled
 
-```coffeescript
+```coffee
 aws.rds.dbInstances.all(snapshots.length > 0)
 ```
 
 Check whether high availability is enabled for all rds instances
 
-```coffeescript
+```coffee
 aws.rds.dbInstances.all(multiAZ == true)
 ```
 
 Return a list of RDS Clusters across all regions where snapshots are not encrypted and return the `arn` `region` and `id` for the cluster
 
-```coffeescript
+```coffee
 aws.rds.dbClusters { snapshots.where( encrypted == false) } { arn region id }
 ```
 

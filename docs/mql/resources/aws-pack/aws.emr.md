@@ -28,7 +28,7 @@ Use the `aws.emr` resource to assess the configuration of Amazon EMR clusters. T
 
 Return a list of EMR clusters deployed across all enabled regions and the value for specified fields
 
-```coffeescript
+```coffee
 aws.emr.clusters {
   arn
   name
@@ -42,7 +42,7 @@ aws.emr.clusters {
 
 Check whether EMR cluster master nodes have public ips
 
-```coffeescript
+```coffee
 aws.emr.clusters.all(
   masterInstances { _['PublicIpAddress'] == null }
 )

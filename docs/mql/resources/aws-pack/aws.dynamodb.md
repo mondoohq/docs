@@ -32,7 +32,7 @@ Use the `aws.dynamodb` resource to assess the configuration of the AWS DynamoDB.
 
 Return a list of `aws.dynamodb.table` resources and the values for specified fields
 
-```coffeescript
+```coffee
 aws.dynamodb.tables {
   arn
   name
@@ -46,7 +46,7 @@ aws.dynamodb.tables {
 
 Return a list of `aws.dynamodb.limit` resources and the values for specified fields
 
-```coffeescript
+```coffee
 aws.dynamodb.limits {
   arn
   region
@@ -59,7 +59,7 @@ aws.dynamodb.limits {
 
 Return a list of `aws.dynamodb.globaltable` resources and the value for specified fields
 
-```coffeescript
+```coffee
 aws.dynamodb.globaltables {
   arn
   name
@@ -69,7 +69,7 @@ aws.dynamodb.globaltables {
 
 Check that all DynamoDB tables are encrypted with AWS Key Management Service (KMS)
 
-```coffeescript
+```coffee
 aws.dynamodb.tables.all(
   sseDescription['SSEType'] == 'KMS' && sseDescription['Status'] == 'ENABLED'
 )

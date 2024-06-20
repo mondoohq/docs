@@ -35,7 +35,7 @@ file(path string)
 
 Test if a directory exists
 
-```coffeescript
+```coffee
 file('/etc') {
   exists
   permissions.isDirectory

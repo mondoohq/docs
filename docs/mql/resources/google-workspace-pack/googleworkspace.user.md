@@ -29,6 +29,7 @@ Google Workspace user accounts
 | suspensionReason | string                                                          | The reason a user account is suspended                   |
 | archived         | bool                                                            | Indicates if user is archived                            |
 | isAdmin          | bool                                                            | Indicates a user with super administrator privileges     |
+| isDelegatedAdmin | bool                                                            | Indicates if a user is a delegated administrator         |
 | isEnforcedIn2Sv  | bool                                                            | Is 2-step verification enforced                          |
 | isEnrolledIn2Sv  | bool                                                            | Is enrolled in 2-step verification                       |
 | isMailboxSetup   | bool                                                            | Indicates if the user's Google mailbox is created        |

@@ -25,17 +25,3 @@ windows.optionalFeature(name string)
 | description | string | Feature description            |
 | enabled     | bool   | Whether the feature is enabled |
 | state       | int    | Feature installation state     |
-
-**Examples**
-
-Query all features containing the word PowerShell
-
-```coffee
-windows.optionalfeatures.where(name == /PowerShell/)
-```
-
-Check that a specific Windows optional feature is not installed
-
-```coffee
-windows.optionalfeatures('Hyper-V Module for Windows PowerShell').installed == false
-```

@@ -28,7 +28,7 @@ Use the `aws.backup` resource to assess the configuration of AWS Backup vaults i
 
 Return a list of all AWS Backup vaults configured across all enabled regions across the account and all their recovery points
 
-```coffeescript
+```coffee
 aws.backup.vaults {
   arn
   region

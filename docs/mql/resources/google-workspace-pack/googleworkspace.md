@@ -22,3 +22,4 @@ Google Workspace
 | groups        | &#91;&#93;[googleworkspace.group](googleworkspace.group.md)               | Retrieves a list of all groups for the Google Workspace account               |
 | roles         | &#91;&#93;[googleworkspace.role](googleworkspace.role.md)                 | Retrieves a list of all roles for the Google Workspace account                |
 | connectedApps | &#91;&#93;[googleworkspace.connectedApp](googleworkspace.connectedapp.md) | Retrieves a list of all apps for the Google Workspace account                 |
+| calendars     | &#91;&#93;[googleworkspace.calendar](googleworkspace.calendar.md)         | Retrieves a list of all calendars for the Google Workspace account            |

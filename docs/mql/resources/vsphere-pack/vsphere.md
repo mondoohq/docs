@@ -29,31 +29,31 @@ VMware vSphere resource
 
 Display Information about the vSphere environment
 
-```coffeescript
+```coffee
 vsphere.about
 ```
 
 Display ESXi host moid and properties
 
-```coffeescript
+```coffee
 vsphere.datacenters { hosts { moid properties } }
 ```
 
 Display NTP server for all ESXi hosts
 
-```coffeescript
+```coffee
 vsphere.datacenters { hosts { ntp.server } }
 ```
 
 Ensure a specific NTP Server is set
 
-```coffeescript
+```coffee
 vsphere.datacenters { hosts { ntp.server.any(_ == "10.31.21.2") } }
 ```
 
 Ensure specific VmkNics properties for all management VmkNics
 
-```coffeescript
+```coffee
 vsphere.datacenters {
   hosts {
     vmknics.where(tags == "Management") {

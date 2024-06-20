@@ -28,6 +28,6 @@ Use the `aws.kms` resource to assess the configuration of AWS KMS keys.
 
 Ensure rotation for customer created CMKs is enabled
 
-```coffeescript
+```coffee
 aws.kms.keys.where( metadata['KeyState'] == "Enabled" ).all( keyRotationEnabled == true )
 ```

@@ -28,7 +28,7 @@ Use the `aws.autoscaling` resource to assess the configuration of AWS auto scali
 
 Return a list of all auto-scaling groups configured across all enabled regions across the account and the values for specified fields
 
-```coffeescript
+```coffee
 aws.autoscaling.groups {
   arn
   healthCheckType
@@ -39,7 +39,7 @@ aws.autoscaling.groups {
 
 Check that all autoscaling groups associated with a load balancer use health checks
 
-```coffeescript
+```coffee
 aws.autoscaling.groups.where(loadBalancerNames.length > 0) {
   healthCheckType == "ELB"
 }

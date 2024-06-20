@@ -26,25 +26,25 @@ Users configured on this system
 
 Display all users and their UID
 
-```coffeescript
+```coffee
 users.list { uid name }
 ```
 
 Ensure user exists
 
-```coffeescript
+```coffee
 users.one( name == 'root')
 ```
 
 Ensure user does not exist
 
-```coffeescript
+```coffee
 users.none(name == 'vagrant')
 ```
 
 Search for a specific SID and check for its values
 
-```coffeescript
+```coffee
 users.where( sid == /S-1-5-21-\d+-\d+-\d+-501/ ).list {
   name != "Guest"
 }

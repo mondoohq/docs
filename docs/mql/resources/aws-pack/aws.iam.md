@@ -37,7 +37,7 @@ Use the `aws.iam` resource to assess the configuration of the AWS IAM service. T
 
 Return a list of `aws.iam.user` resources representing IAM users in the account and specified fields
 
-```coffeescript
+```coffee
 aws.iam.users {
   users
   roles
@@ -52,7 +52,7 @@ aws.iam.users {
 
 Return a list of users that do not have MFA configured along with the ARN, name, and associated IAM Groups
 
-```coffeescript
+```coffee
 aws.iam.credentialReport.where(mfaActive == false) {
   user {
     arn
@@ -64,7 +64,7 @@ aws.iam.credentialReport.where(mfaActive == false) {
 
 Do not setup access keys during initial user setup for all IAM users that have a console password
 
-```coffeescript
+```coffee
 aws.iam.credentialReport.
   where(
     passwordEnabled &&

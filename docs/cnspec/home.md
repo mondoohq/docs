@@ -8,7 +8,7 @@ image: /img/featured_img/mondoo-feature.jpg
 hide_table_of_contents: true
 ---
 
-![cnspec Docs](/img/cnspec/cnspec-logo.png)
+![cnspec Docs](/img/cnspec/docs-cnspec-banner.png)
 
 cnspec is an open source, cloud-native tool that evaluates the security of your entire infrastructure. It's also a core component of the [Mondoo Platform](/platform/start/plat-what-is/), serving as both a CLI and an agent for scanning.
 

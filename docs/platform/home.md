@@ -6,9 +6,9 @@ image: /img/featured_img/mondoo-feature.jpg
 hide_table_of_contents: true
 ---
 
-![Mondoo Platform Docs](/img/platform/mondoo-logo-plat.png)
+![Mondoo Platform Docs](/img/platform/docs-platform-banner.png)
 
-Mondoo's flagship SaaS platform provides full-stack security, compliance, and asset intelligence for your entire cloud and on-premises infrastructure.
+The Mondoo unified security platform finds and prioritizes vulnerabilities and misconfigurations that pose the highest risk to your business.
 
 ### Get started
 

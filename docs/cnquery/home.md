@@ -8,7 +8,7 @@ image: /img/featured_img/mondoo-feature.jpg
 hide_table_of_contents: true
 ---
 
-![cnquery Docs](/img/cnquery/cnquery-logo.png)
+![cnquery Docs](/img/cnquery/docs-cnquery-banner.png)
 
 cnquery is an open source, cloud-native tool that answers every question about your infrastructure.
 

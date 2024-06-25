@@ -8,7 +8,9 @@ image: /img/featured_img/mondoo-feature.jpg
 hide_table_of_contents: true
 ---
 
-MQL is a graph-based query language built for searching and checking infrastructure configuration data and building security policies.
+![MQL Docs](/img/cnspec/docs-mql-banner.png)
+
+MQL is a graph-based query language built for exploring and checking infrastructure configuration data and building security policies.
 
 ### [What is MQL?](/mql/resources/)
 

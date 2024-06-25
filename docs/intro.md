@@ -8,15 +8,14 @@ image: /img/featured_img/mondoo-feature.jpg
 hide_table_of_contents: true
 ---
 
-![Welcome to the Mondoo docs](/img/docs-welcome.png)
+![Welcome to the Mondoo docs](/img/docs-home-banner.png)
 
 With Mondoo's fully integrated suite of tools and services, you can reach compliance, secure your cloud and on-premises infrastructure, and gain unlimited insight into your environments.
 
-[Read what's new in our latest release!](releases)
 
 ## [Mondoo Platform](/platform/home/)
 
-Mondoo's flagship SaaS platform provides full-stack security, asset intelligence, and compliance for your entire infrastructure.
+The Mondoo unified security platform finds and prioritizes vulnerabilities and misconfigurations that pose the highest risk to your business.
 
 - [What Is Mondoo?](/platform/start/plat-what-is/)
 
@@ -71,5 +70,9 @@ MQL is a graph-based query language built for searching and checking infrastruct
 - Mondoo Platform users: Join our <a href="https://mondoo.link/slack">community Slack channel</a> to chat with us and other Mondoo users.
 
 - For definitions of Mondoo terms, read the [glossary](/glossary/).
+
+## Mondoo updates
+
+- [Read what's new in our latest release!](releases)
 
 ---

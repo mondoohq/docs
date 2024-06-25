@@ -10,7 +10,7 @@ hide_table_of_contents: true
 
 ![cnquery Docs](/img/cnquery/docs-cnquery-banner.png)
 
-cnquery is an open source, cloud-native tool that answers every question about your infrastructure.
+cnquery is an open source, cloud-native tool that answers every question about your infrastructure. Built upon Mondoo's advanced security data fabric, it reveals critical information about all your systems.
 
 ### [What Is cnquery?](/cnquery/cnquery-about/)
 

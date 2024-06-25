@@ -6,6 +6,7 @@ sidebar_position: 1
 description: MQL documentation home
 image: /img/featured_img/mondoo-feature.jpg
 hide_table_of_contents: true
+hide_title: true
 ---
 
 ![MQL Docs](/img/mql/docs-mql-banner.png)

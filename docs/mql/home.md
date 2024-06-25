@@ -11,7 +11,7 @@ hide_title: true
 
 ![MQL Docs](/img/mql/docs-mql-banner.png)
 
-MQL is a graph-based query language built for exploring and checking infrastructure configuration data and building security policies.
+MQL is a graph-based query language built for exploring and validating infrastructure configuration data and building security policies.
 
 ### [What is MQL?](/mql/resources/)
 

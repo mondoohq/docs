@@ -17,3 +17,4 @@ Google Workspace apps reports
 | ID    | TYPE                                                                            | DESCRIPTION |
 | ----- | ------------------------------------------------------------------------------- | ----------- |
 | drive | &#91;&#93;[googleworkspace.report.activity](googleworkspace.report.activity.md) |             |
+| admin | &#91;&#93;[googleworkspace.report.activity](googleworkspace.report.activity.md) |             |

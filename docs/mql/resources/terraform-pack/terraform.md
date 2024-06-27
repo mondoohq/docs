@@ -38,18 +38,18 @@ Terraform configuration files
 
 Display all Terraform blocks and their arguments
 
-```coffeescript
+```coffee
 terraform.blocks { nameLabel arguments }
 ```
 
 Display all data blocks
 
-```coffeescript
+```coffee
 terraform.datasources { nameLabel arguments }
 ```
 
 Display all resource blocks
 
-```coffeescript
+```coffee
 terraform.resources { nameLabel arguments }
 ```

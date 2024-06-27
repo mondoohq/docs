@@ -34,3 +34,4 @@ Amazon EKS cluster
 | resourcesVpcConfig | dict                                                | VPC configuration                         |
 | createdAt          | time                                                | Cluster creation timestamp                |
 | nodeGroups         | &#91;&#93;[aws.eks.nodegroup](aws.eks.nodegroup.md) | List of EKS node groups                   |
+| addons             | &#91;&#93;[aws.eks.addon](aws.eks.addon.md)         | List of EKS add-ons                       |

@@ -48,48 +48,48 @@ Kubernetes cluster
 
 List kubernetes pods with privileged containers
 
-```coffeescript
+```coffee
 k8s.pods { containers.where(securityContext["privileged"] == true) name }
 ```
 
 Check if the default namespace is used
 
-```coffeescript
+```coffee
 k8s.pods.all( namespace != "default")
 ```
 
 Query services accounts
 
-```coffeescript
+```coffee
 k8s.serviceaccounts { name namespace secrets  }
 ```
 
 Query RBAC cluster roles
 
-```coffeescript
+```coffee
 k8s.roles { name namespace rules  }
 ```
 
 Query RBAC role bindings
 
-```coffeescript
+```coffee
 k8s.rolebindings { name namespace subjects  }
 ```
 
 Query RBAC cluster role bindings
 
-```coffeescript
+```coffee
 k8s.clusterrolebindings { name subjects  }
 ```
 
 Query pod security policies
 
-```coffeescript
+```coffee
 k8s.podSecurityPolicies { name manifest }
 ```
 
 Query network policies
 
-```coffeescript
+```coffee
 k8s.networkPolicies { name manifest }
 ```

@@ -28,12 +28,12 @@ parse.json(path string)
 
 Parse JSON from string content
 
-```coffeescript
+```coffee
 parse.json(content: '{ "a": "b"  }').params
 ```
 
 Parse JSON from file
 
-```coffeescript
+```coffee
 parse.json("/path/to/test.json").params
 ```

@@ -53,7 +53,7 @@ Use the `azure.subscription` resource to assess the configuration of Azure subsc
 
 Return the subscription ID and a list of tenants that manage the subscription
 
-```coffeescript
+```coffee
 azure.subscription {
   subscriptionId
   managedByTenants

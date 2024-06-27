@@ -26,6 +26,6 @@ Groups configured on this system
 
 Ensure the user is not part of group
 
-```coffeescript
+```coffee
 groups.where(name == 'wheel').list { members.all( name != 'username')}
 ```

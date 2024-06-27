@@ -30,19 +30,19 @@ Use the `aws.cloudwatch` resource to assess the configuration of the AWS CloudWa
 
 Return a list of `aws.cloudwatch.loggroup` resources representing individual CloudWatch log groups configured across all enabled regions
 
-```coffeescript
+```coffee
 aws.cloudwatch.logGroups
 ```
 
 Return a list of `aws.cloudwatch.metric` resources representing individual CloudWatch metrics configured across all enabled regions
 
-```coffeescript
+```coffee
 aws.cloudwatch.metrics
 ```
 
 Check that all cloudwatch alarms have at least one action enabled
 
-```coffeescript
+```coffee
 aws.cloudwatch.alarms.all(
   actions.length > 0 == true &&
   insufficientDataActions.length > 0 == props.cloudwatchAlarmInsufficientDataActionRequired &&

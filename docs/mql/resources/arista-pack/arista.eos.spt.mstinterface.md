@@ -40,7 +40,7 @@ Multiple Spanning Tree Protocol (MSTP) information for a specified interface
 
 Verify the Spanning-Tree Version
 
-```coffeescript
+```coffee
 arista.eos.stp.mstInstances {
  protocol == "mstp"
 }

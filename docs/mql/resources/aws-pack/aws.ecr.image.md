@@ -35,7 +35,7 @@ Use the `aws.ecr.image` resource to assess a container image stored in an Amazon
 
 Return a list of `aws.ecr.image` resources representing the images stored in public repositories.
 
-```coffeescript
+```coffee
 aws.ecr {
   publicRepositories {
     images {

@@ -29,12 +29,12 @@ Operating system information
 
 Show all environment variables
 
-```coffeescript
+```coffee
 os.env
 ```
 
 Retrieve a single environment variable
 
-```coffeescript
+```coffee
 os.env['windir']
 ```

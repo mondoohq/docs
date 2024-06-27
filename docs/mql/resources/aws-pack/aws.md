@@ -29,19 +29,19 @@ Use the `aws` resource to assess the configuration of AWS accounts. It features 
 
 List all enabled regions within the AWS account
 
-```coffeescript
+```coffee
 aws.regions
 ```
 
 List of `aws.vpc` resources for all VPCs across all enabled regions
 
-```coffeescript
+```coffee
 aws.vpcs
 ```
 
 List of `aws.vpc` resources for all VPCs across all enabled regions and the values for specified fields
 
-```coffeescript
+```coffee
 aws.vpcs {
   arn
   id
@@ -55,7 +55,7 @@ aws.vpcs {
 
 Ensure VPC flow logging is enabled in all VPCs
 
-```coffeescript
+```coffee
 aws.vpcs.all( flowLogs.any(status == "ACTIVE") )
 ```
 

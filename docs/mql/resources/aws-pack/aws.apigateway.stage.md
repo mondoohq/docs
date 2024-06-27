@@ -33,7 +33,7 @@ The `aws.apigateway.stage` resource provides fields representing an individual s
 
 Return a list of AWS API Gateway REST APIs configured across all enabled regions in the AWS account and the values for the arn and stages
 
-```coffeescript
+```coffee
 aws.apigateway.restApis {
   arn
   stages

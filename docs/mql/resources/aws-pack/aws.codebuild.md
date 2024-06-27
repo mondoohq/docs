@@ -28,7 +28,7 @@ Use the `aws.codebuild` resource to assess the configuration of the AWS CodeBuil
 
 Return a list of `aws.codebuild.project` resources representing all AWS CodeBuild projects configured across all enabled regions within the account and the values for specified fields
 
-```coffeescript
+```coffee
 aws.codebuild.projects {
   arn
   description
@@ -41,7 +41,7 @@ aws.codebuild.projects {
 
 Check that all projects containing env variables AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY are not in plaintext
 
-```coffeescript
+```coffee
 aws.codebuild.projects {
   environment ['EnvironmentVariables'].where(_['Name'] == "AWS_ACCESS_KEY_ID") { _['Type'] != "PLAINTEXT"}
   environment ['EnvironmentVariables'].where(_['Name'] == "AWS_SECRET_ACCESS_KEY") { _['Type'] != "PLAINTEXT"}
@@ -50,7 +50,7 @@ aws.codebuild.projects {
 
 Check that all projects using GitHub or Bitbucket as the source use oauth
 
-```coffeescript
+```coffee
 aws.codebuild.projects.where( source['Type'] == "BITBUCKET" || source['Type'] == "GITHUB" ) {
   source['Auth']['Type'] == "OAUTH"
 }

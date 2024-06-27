@@ -31,6 +31,6 @@ Terraform configuration file (.tf or .tf.json file)
 
 Display all files and their blocks
 
-```coffeescript
+```coffee
 terraform.files { path blocks { nameLabel } }
 ```

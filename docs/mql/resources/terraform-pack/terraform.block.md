@@ -39,6 +39,6 @@ Terraform resource block
 
 Display all Terraform blocks and their arguments
 
-```coffeescript
+```coffee
 terraform.blocks { nameLabel arguments }
 ```

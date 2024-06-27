@@ -29,7 +29,7 @@ Use the `aws.elb` resource to assess the configuration of Amazon Elastic Load Ba
 
 Return a list of all application, gateway, and network Elastic Load Balancers deployed across every enabled region and the values for specified fields
 
-```coffeescript
+```coffee
 aws.elb.loadbalancers {
   arn
   dnsName
@@ -42,7 +42,7 @@ aws.elb.loadbalancers {
 
 Return a list of all classic Elastic Load Balancers deployed across every enabled region and the values for specified fields
 
-```coffeescript
+```coffee
 aws.elb.classicLoadBalancers {
   arn
   dnsName
@@ -55,7 +55,7 @@ aws.elb.classicLoadBalancers {
 
 Check whether HTTP to HTTPS redirection is configured on all application load balancer http listeners
 
-```coffeescript
+```coffee
 aws.elb.loadBalancers.all( listenerDescriptions.any (
   _['Protocol'] == "HTTPS" || _['Protocol'] == "SSL" )
 )
@@ -63,7 +63,7 @@ aws.elb.loadBalancers.all( listenerDescriptions.any (
 
 Check that all Classic Load Balancers use SSL certificates provided by AWS Cert Mgr
 
-```coffeescript
+```coffee
 aws.elb.classicLoadBalancers.all( listenerDescriptions.any (
   _['Listener']['Protocol'] == "HTTPS" || _['Listener']['Protocol'] == "SSL" )
 )

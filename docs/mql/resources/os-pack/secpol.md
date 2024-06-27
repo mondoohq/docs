@@ -25,6 +25,6 @@ Windows local security policy
 
 Check that a specific SID is included in the privilege rights
 
-```coffeescript
+```coffee
 secpol.privilegerights['SeRemoteShutdownPrivilege'].contains( _ == 'S-1-5-32-544')
 ```

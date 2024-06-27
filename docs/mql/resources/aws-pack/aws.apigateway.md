@@ -28,13 +28,13 @@ Use the `aws.apigateway` resource to assess the configuration of the AWS API Gat
 
 Return a list of `aws.apigateway.restapi` resources for all REST APIs configured with the account across all enabled regions
 
-```coffeescript
+```coffee
 aws.apigateway.restApis
 ```
 
 Return a list of `aws.apigateway.restapi` resources for all REST APIs configured with the account across all enabled regions and the value for specified fields
 
-```coffeescript
+```coffee
 aws.apigateway.restApis {
   createdDate
   description
@@ -48,7 +48,7 @@ aws.apigateway.restApis {
 
 Check that all methods in Amazon API Gateway have caching enabled and encrypted
 
-```coffeescript
+```coffee
 aws.apigateway.restApis.all(stages.all(
   methodSettings['CachingEnabled'] == true &&
     methodSettings['CacheDataEncrypted'] == true
@@ -57,7 +57,7 @@ aws.apigateway.restApis.all(stages.all(
 
 Check that all methods in Amazon API Gateway have logging enabled
 
-```coffeescript
+```coffee
 aws.apigateway.restApis.all(stages.all(
 methodSettings['LoggingLevel'] == "ERROR" || methodSettings['LoggingLevel'] == "INFO"
 ))

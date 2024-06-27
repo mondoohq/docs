@@ -30,7 +30,7 @@ Use the `aws.config` resource to assess the configuration of the AWS Config serv
 
 Return a list of `aws.config.rule` resources representing AWS Config rules configured across all enabled regions and the values for specified fields
 
-```coffeescript
+```coffee
 aws.config.rules {
   arn
   state
@@ -40,7 +40,7 @@ aws.config.rules {
 
 Return a list of AWS Config recorders configured across all enabled regions and the values for specified fields
 
-```coffeescript
+```coffee
 aws.config.recorders {
   name
   roleArn
@@ -55,7 +55,7 @@ aws.config.recorders {
 
 Ensure AWS Config is enabled in all regions
 
-```coffeescript
+```coffee
 aws.config.recorders.any(allSupported == true && includeGlobalResourceTypes == true)
 aws.config.recorders.where(allSupported == true && includeGlobalResourceTypes == true).all(
   recording == true && lastStatus == "SUCCESS"

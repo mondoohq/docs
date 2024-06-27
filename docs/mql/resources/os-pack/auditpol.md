@@ -26,13 +26,13 @@ Windows audit policies
 
 List all audit policies
 
-```coffeescript
+```coffee
 auditpol { inclusionsetting exclusionsetting subcategory }
 ```
 
 Check a specific auditpol configuration
 
-```coffeescript
+```coffee
 auditpol.where(subcategory == 'Sensitive Privilege Use') {
   inclusionsetting == 'Success and Failure'
 }

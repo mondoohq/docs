@@ -31,7 +31,7 @@ The `aws.account` resource provides configuration for AWS accounts, including th
 
 Return the account ID (number) and any configured account aliases
 
-```coffeescript
+```coffee
 aws.account {
   id
   aliases

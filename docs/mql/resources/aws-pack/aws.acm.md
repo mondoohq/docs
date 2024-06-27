@@ -28,13 +28,13 @@ Use the `aws.acm` resource to assess the configuration of the AWS Certificates M
 
 Return a list of `aws.acm.certificate` resources within the AWS account
 
-```coffeescript
+```coffee
 aws.acm.certificates
 ```
 
 Return a list of `aws.acm.certificate` resources within the AWS account along with values for specified fields
 
-```coffeescript
+```coffee
 aws.acm.certificates {
   arn
   notBefore
@@ -49,7 +49,7 @@ aws.acm.certificates {
 
 Check whether ACM certificates in your account are marked for expiration within 90 days
 
-```coffeescript
+```coffee
 aws.acm.certificates.
   where( status != /PENDING_VALIDATION/ ).
   all (notAfter - notBefore <= 90 * time.day)

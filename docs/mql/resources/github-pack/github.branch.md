@@ -19,6 +19,7 @@ GitHub repository branch
 | name            | string                                                | Repository branch name                   |
 | isProtected     | bool                                                  | Whether branch protection is enabled     |
 | headCommit      | [github.commit](github.commit.md)                     | Repository branch HEAD commit            |
+| headCommitSha   | string                                                | Repository branch HEAD commit SHA sum    |
 | protectionRules | [github.branchprotection](github.branchprotection.md) | Repository branch protection rules       |
 | repoName        | string                                                | Repository branch repository name        |
 | owner           | [github.user](github.user.md)                         | Repository branch owner                  |

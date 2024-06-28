@@ -31,6 +31,7 @@ Resources included in this pack:
 | [github.mergeRequest](github.mergerequest.md)         | GitHub repository pull request      |
 | [github.organization](github.organization.md)         | GitHub organization                 |
 | [github.package](github.package.md)                   | GitHub package                      |
+| [github.packages](github.packages.md)                 | GitHub packages                     |
 | [github.release](github.release.md)                   | GitHub release                      |
 | [github.repository](github.repository.md)             | GitHub repository                   |
 | [github.review](github.review.md)                     | GitHub repository review            |

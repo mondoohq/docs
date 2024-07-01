@@ -60,13 +60,15 @@ To learn more about personal access tokens, read [Managing your personal access 
 
    - INTEGRATIONS page: In the side navigation bar, under **INTEGRATIONS**, select **Add New Integration**. Under SaaS, select **GitHub**.
 
-     ![Add a GitHub Integration in Mondoo](/img/platform/infra/saas/github/github.png)
+     ![Add a GitHub Integration in Mondoo](/img/platform/infra/saas/github/gh-top.png)
 
 2. In the **Choose an integration name** box, enter a name for the integration. Make it a name that lets you easily recognize the GitHub organization or repository.
 
-3. Under **Select your integration type**, choose whether to continuously scan an entire organization or a single repository.
+3. To scan an organization or repository that is in a GitHub Enterprise account, in the **Provide GitHub Enterprise URL** box, type the URL for the account. This is the URL you use to access the home page for your GitHub account. An example is `https://github.mycompany.com`.
 
-4. Specify the organization or repository to scan:
+4. Under **Select your integration type**, choose whether to continuously scan an entire organization or a single repository.
+
+5. Specify the organization or repository to scan:
 
    - If you're scanning an organization, type its name in the **Organization** box.
 
@@ -76,19 +78,19 @@ To learn more about personal access tokens, read [Managing your personal access 
 
    ![GitHub organization name](/img/platform/infra/saas/github/repo.png)
 
-5. In the **Provide your personal access token** box, paste the GitHub token you generated in the previous section.
+6. In the **Provide your personal access token** box, paste the GitHub token you generated in the previous section.
 
-6. Choose **Discovery options** to determine the extent of Mondoo scanning:
+7. Choose **Discovery options** to determine the extent of Mondoo scanning:
 
-   ![GitHub discovery options](/img/platform/infra/saas/github/discovery-gh.png)
+   ![GitHub discovery options](/img/platform/infra/saas/github/gh-bottom.png)
 
    - To scan all Terraform files in the projects to which your token provides access, check **Terraform files**.
 
    - To scan all Kubernetes manifests in the projects to which your token provides access, check **Kubernetes manifests**.
 
-7. Select the **START SCANNING** button.
+8. Select the **START SCANNING** button.
 
-8. On the Recommended Policies page, enable the policies on which you want to base assessments of your GitHub repository. To learn more, read [Manage Policies](/platform/security/posture/policies/).
+9. On the Recommended Policies page, enable the policies on which you want to base assessments of your GitHub repository (or repositories). To learn more, read [Manage Policies](/platform/security/posture/policies/).
 
    Mondoo begins scanning your GitHub repository and, when completed, presents results on the INVENTORY page.
 

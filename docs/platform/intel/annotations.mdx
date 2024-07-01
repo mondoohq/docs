@@ -2,18 +2,18 @@
 title: Annotate (Tag) Assets
 sidebar_label: Annotate (Tag) Assets
 sidebar_position: 4
-description: Add annotations
+description: Add annotations, similar to tags, to the assets in your infrastructure using Mondoo
 image: /img/featured_img/mondoo-feature.jpg
 ---
 
 Use Mondoo annotations to add metadata to an asset. Annotations are key-value pairs that let you tag or categorize your assets. Add whatever metadata you need. Some examples are:
 
-| Example key | Example value         |
-| ----------- | --------------------- |
-| owner       | cosmo@lunalectric.com |
-| build       | terraform             |
-| asset-tag   | luna000262            |
-| team        | 01research            |
+| Example key | Example value             |
+| ----------- | ------------------------- |
+| owner       | cosmo&#64;lunalectric.com |
+| build       | terraform                 |
+| asset-tag   | luna000262                |
+| team        | 01research                |
 
 You can reuse key-value pairs or you can reuse only the key and give each asset a unique value.
 
@@ -23,15 +23,20 @@ As another example, you might assign the key `build` and the value `terraform` t
 
 Annotations display in the Mondoo Console when you view an asset. When you export data from Mondoo, annotations are included. You can search for assets based on their annotations. To learn how, read [Search Your Inventory](/platform/intel/search/)
 
-## Annotate an asset
+There are multiple ways to annotate an asset:
 
-You can annotate an asset in the Mondoo Console.
+- The Mondoo Console
 
-:::tip
+- The `cnspec scan` command
 
-You can also add an annotation from the command line or using automation. To learn how, read [Annotate (tag) an asset during registration](/cnspec/cnspec-adv-install/registration/#annotate-tag-an-asset-during-registration).
+- The asset's local Mondoo configuration file
 
-:::
+- The asset's inventory configuration file
+
+- Programmatically using an inventory template
+
+## Annotate an asset in the Mondoo Console
+
 
 1. In the [Mondoo Console](https://console.mondoo.com), [navigate](/platform/start/navigate/) to the asset you want to annotate.
 
@@ -46,6 +51,61 @@ You can also add an annotation from the command line or using automation. To lea
 4. Enter a key and a value, then select the :heavy_check_mark: icon to add the annotation.
 
    ![Annotation on a Mondoo asset](/img/platform/intel/existing-annotation.png)
+
+## Annotate an asset using the `cnspec scan` command
+
+You can add an annotation to an asset when you scan it using cnspec, the Mondoo CLI. To do so, include the `--annotation` flag in the `cnspec scan` command and provide the key and value:
+
+```bash
+cnspec scan TARGET --annotation KEY=VALUE
+```
+
+For example:
+
+```bash
+cnspec scan local --annotation asset-tag=luna0003644
+```
+
+To learn more about cnspec, read the [cnspec documentation](/cnspec/home/). To learn about the `cnspec scan` command, read [`cnspec scan`](/cnspec/cli/cnspec_scan/).
+
+## Annotate an asset using the local Mondoo configuration file
+
+You can add an annotation to an asset's local configuration file.
+
+On a Linux or macOS host, the configuration is stored in one of these locations:
+
+- `/etc/opt/mondoo/mondoo.yml` configures Mondoo for all user accounts.
+
+- `~/.config/mondoo/mondoo.yml` configures Mondoo for a single user.
+
+On a Windows host, configuration is stored in one of these locations:
+
+- `C:\ProgramData\mondoo\mondoo.yml` configures Mondoo for all users.
+
+- `C:\Users\{username}\.config\mondoo\mondoo.yml` configures Mondoo for a single user.
+
+Include these lines to annotate an asset:
+
+```yaml
+annotations:
+   KEY1:VALUE1
+   KEY2:VALUE2
+   ...
+```
+
+For example, this annotation identifies an asset that belongs to the research team:
+
+```yaml
+annotations:
+   team:research
+```
+
+## Annotate an asset using an inventory file
+
+
+## Programmatically annotate assets using an inventory template
+
+
 
 ## Change or remove an annotation
 

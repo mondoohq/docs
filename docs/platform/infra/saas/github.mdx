@@ -78,9 +78,17 @@ To learn more about personal access tokens, read [Managing your personal access 
 
 5. In the **Provide your personal access token** box, paste the GitHub token you generated in the previous section.
 
-6. Select the **START SCANNING** button.
+6. Choose **Discovery options** to determine the extent of Mondoo scanning:
 
-7. On the Recommended Policies page, enable the policies on which you want to base assessments of your GitHub repository. To learn more, read [Manage Policies](/platform/security/posture/policies/).
+   ![GitHub discovery options](/img/platform/infra/saas/github/discovery-gh.png)
+
+   - To scan all Terraform files in the projects to which your token provides access, check **Terraform files**.
+
+   - To scan all Kubernetes manifests in the projects to which your token provides access, check **Kubernetes manifests**.
+
+7. Select the **START SCANNING** button.
+
+8. On the Recommended Policies page, enable the policies on which you want to base assessments of your GitHub repository. To learn more, read [Manage Policies](/platform/security/posture/policies/).
 
    Mondoo begins scanning your GitHub repository and, when completed, presents results on the INVENTORY page.
 

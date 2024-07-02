@@ -1,0 +1,29 @@
+---
+title: Customize Policy Scoring
+sidebar_label: Customize Policy Scoring
+sidebar_position: 2
+description: Control how Mondoo calculates the security scores it assigns to assets your infrastructure
+image: /img/featured_img/mondoo-feature.jpg
+---
+
+When Mondoo scans the assets in your infrastructure, it calculates a letter score that represents the asset's level of security&mdash;its ability to withstand attack. A score of A indicates that the asset is well fortified against attack, while an F indicates that an asset is highly vulnerable.
+
+Mondoo scoring is based on the [policies](/platform/security/posture/pac/) that you enable in the Mondoo space that the asset is a part of. You [choose which policies are enabled](/platform/security/posture/policies/) in a space and Mondoo assesses each asset in the space based on any applicable policies you enable. For example, to evaluate a Microsoft 365 asset, Mondoo uses any Microsoft 365 assets enabled in the space.
+
+Letter scores are based on numeric scores between 0 and 100. These are the ranges for Mondoo letter scores:
+
+| From... | To... | Letter score |
+|:-------:|:-----:|:------------:|
+| 80      | 100   | A            |
+| 60      | 79    | B            |
+| 30      | 59    | C            |
+| 10      | 29    | D            |
+| 0       | 9     | F            |
+
+## How Mondoo calculates scores
+
+There are four different methods Mondoo can use to calculate an asset's numeric score on a policy:
+
+-
+
+---

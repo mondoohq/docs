@@ -110,19 +110,22 @@ The tabs on the asset detail page show different details:
 
 ## How Mondoo scores policies
 
-When Mondoo scans your assets, it produces a graded score to assess risk to your business. Mondoo scoring is based on policies that match the type of asset scanned. For example, there are policies for Windows, Linux, Kubernetes clusters, and so on. You [choose which policies are enabled](/platform/security/posture/policies/) in a space. An asset can match multiple policies enabled in a space.
+When Mondoo scans your assets, it produces a letter score to assess risk to your business. Mondoo scoring is based on policies that you choose that match the type of asset scanned. For example, you can choose policies for Windows, Kubernetes, Google Cloud, and so on. You [choose which policies are enabled](/platform/security/posture/policies/) in a space. An asset can match multiple policies enabled in a space.
 
-These are the ranges for Mondoo scores:
+Letter scores are based on numeric scores between 0 and 100. These are the ranges for Mondoo letter scores:
 
-```text
-score:
-    80  ..  100   A (100 A+ 95 A 85 A- 80)
-    60  ..   79   B ( 79 B+ 75 B 65 B- 60)
-    30  ..   59   C ( 59 C+ 50 C 40 C- 30)
-    10  ..   29   D ( 29 D+ 25 D 15 D- 10)
-     0  ..    9   F
-```
+| From... | To... | Letter score |
+|:-------:|:-----:|:------------:|
+| 80      | 100   | A            |
+| 60      | 79    | B            |
+| 30      | 59    | C            |
+| 10      | 29    | D            |
+| 0       | 9     | F            |
 
-To learn more about scoring, read [Score Policies](/cnspec/cnspec-policies/write/policy-scoring/).
+:::tip Customize policy scoring
+
+You can customize how Mondoo calculates the security scores that it assigns to your assets. To learn how, read [Customize Policy Scoring](/platform/security/customize/score/).
+
+:::
 
 ---

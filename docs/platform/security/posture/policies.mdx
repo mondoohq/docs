@@ -6,7 +6,7 @@ description: Mondoo security policies.
 image: /img/featured_img/mondoo-feature.jpg
 ---
 
-Mondoo comes stocked with a constantly growing collection of policies, which are codified benchmarks used to assess your infrastructure. Policies control what misconfigurations and security issues Mondoo checks for when it evaluates your digital business assets. Mondoo's built-in policies are production ready, simple to deploy and customize in any environment, and actionable.
+Mondoo comes stocked with a constantly growing collection of [policies](/platform/security/posture/pac/), which are codified benchmarks used to assess your infrastructure. Policies control what misconfigurations and security issues Mondoo checks for when it evaluates your digital business assets. Mondoo's built-in policies are production ready, simple to deploy and customize in any environment, and actionable.
 
 Mondoo continuously assesses your systems according to the policies _you enable_. The **registry** is where you control which policies Mondoo uses to assess your infrastructure.
 
@@ -42,6 +42,12 @@ You can also see enabled policies from the cnspec command line. To learn more, r
 
 Enable a policy to use that policy as a basis for evaluating assets in the space.
 
+:::tip
+
+You can also enable a policy from the cnspec command line. To learn more, read [cnspec policy enable](/cnspec/cli/cnspec_policy_enable/).
+
+:::
+
 1. Access the registry for the space as instructed above.
 
 2. Locate the policy you want to enable by scrolling through the list of available policies or using the **Filter** search box.
@@ -52,9 +58,9 @@ Enable a policy to use that policy as a basis for evaluating assets in the space
 
 Changes take effect immediately. The next time Mondoo scans applicable assets in the space, it includes this policy.
 
-:::tip
+:::tip Customize policy scoring
 
-You can also enable a policy from the cnspec command line. To learn more, read [cnspec policy enable](/cnspec/cli/cnspec_policy_enable/).
+You can customize how Mondoo calculates the security scores that it assigns to your assets. To learn how, read [Customize Policy Scoring](/platform/security/customize/score/).
 
 :::
 

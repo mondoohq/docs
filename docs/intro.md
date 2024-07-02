@@ -12,7 +12,6 @@ hide_table_of_contents: true
 
 With Mondoo's fully integrated suite of tools and services, you can reach compliance, secure your cloud and on-premises infrastructure, and gain unlimited insight into your environments.
 
-
 ## [Mondoo Platform](/platform/home/)
 
 The Mondoo unified security platform finds and prioritizes vulnerabilities and misconfigurations that pose the highest risk to your business.

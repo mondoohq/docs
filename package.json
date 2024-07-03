@@ -43,7 +43,7 @@
     "terser": "5.31.1",
     "url-loader": "^4.1.1",
     "webpack": "^5.92.1",
-    "ws": "^8.17.0"
+    "ws": "^8.18.0"
   },
   "browserslist": {
     "production": [

@@ -444,4 +444,25 @@ To execute cnspec with the inventory file, run this command:
 cnquery scan --inventory-file ./inventory.yml
 ```
 
+## cnspec inventory template
+
+cnspec inventory files are useful for a CI/CD pipeline. Inventory templates are useful for scanning different assets for different environments. They allow you to reuse the same template with a custom variable. This example uses the `getenv` function to include an environment variable (the asset name):
+
+```yaml
+spec:
+  assets:
+    - name: {{ getenv "ASSET_NAME" }}
+      connections:
+        - type: local
+          discover:
+            targets:
+              - auto
+```
+
+You can use this example inventory template by providing the `ASSET_NAME` and variable with the `cnspec scan` command and specifying the template:
+
+```bash
+ASSET_NAME="my_asset" cnspec scan --inventory-template template.yaml
+```
+
 ---

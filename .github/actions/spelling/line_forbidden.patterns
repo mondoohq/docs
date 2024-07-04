@@ -47,6 +47,9 @@
 # s.b. SOC 2
 \bSOC2\b
 
+# s.b. NIS2
+\bNIS 2\b
+
 # s.b. ISO 270001
 \bISO270001\b
 

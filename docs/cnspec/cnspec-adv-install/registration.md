@@ -139,51 +139,6 @@ cnspec status
 ! possible clock skew detected: 72h0m6.277868s
 ```
 
-## Annotate (tag) an asset during registration
-
-Use Mondoo annotations to add metadata to an asset. Annotations are key-value pairs that let you identify, tag, or categorize your assets. Add whatever metadata you need. Some examples are:
-
-| Example key | Example value         |
-| ----------- | --------------------- |
-| owner       | cosmo@lunalectric.com |
-| build       | terraform             |
-| asset-tag   | luna000262            |
-| team        | 01research            |
-
-You can reuse key-value pairs or you can reuse only the key and give each asset a unique value.
-
-For example, suppose you're matching annotations to the physical asset tags on your company's workstations. You'd give every workstation in your infrastructure an `asset tag` key, but give each workstation a unique value to match the unique physical tags.
-
-As another example, you might assign the key `build` and the value `terraform` to every asset in your infrastructure that is built using Terraform.
-
-To include an annotation when you register an asset, include the `--annotation` flag in the `cnspec login` command and provide the key and value:
-
-```bash
-cnspec login --token "PASTE_YOUR_TOKEN_HERE" --annotation KEY=VALUE --config "/etc/opt/mondoo/mondoo.yml"
-```
-
-For example:
-
-```bash
-cnspec login --token 'eyJh9vLmFwcC9zcGFjZXMvdGhpcnN0eS1tZWl0bmVyLTU5OTIyNSIsInNwYWNlIjoiLy9jYXB0YWluLmFwaS5tb25kb28uYXBwL3NwYWNlcy90aGlyc3R5LW1laXRuZXItNTk5MjI1Iiwic3ViIjoiLy9jYXB0YWluLmFwaS5tb25kb28uYXBwL3VzZXJzLzI3ZkVlc2hzMHNyT0ZzdWExWTY0ajRoblFmWiJ9.le5xx5sp5Qb7WoK0vWUS1wpeSOgpWR8cNjCBYqFfImDxRh_m2KpMFx3MN4K4Gv2DeEKfj4S4wWWEsoDLkenBGhgF2cZlPG7kidguLqcNOFxoRRQoMUgX-78DH8sUaTpi' --annotation owner=cosmo@lunalectric.org --config "/etc/opt/mondoo/mondoo.yml"
-```
-
-:::tip
-
-You can also add an annotation when you scan an asset. Include the `--annotation` flag in the `cnspec scan` command and provide the key and value:
-
-```bash
-cnspec scan local --annotation KEY=VALUE
-```
-
-For example:
-
-```bash
-cnspec scan local --annotation asset-tag=luna0003644
-```
-
-:::
-
 ## Specify a proxy server for communication with Mondoo
 
 You can specify a proxy server for communication between cnspec and Mondoo Platform. This is useful if your default system proxy restricts communication, or if you need to monitor different types of traffic.

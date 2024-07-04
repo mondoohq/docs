@@ -2,7 +2,7 @@
 title: Annotate (Tag) Assets
 sidebar_label: Annotate (Tag) Assets
 sidebar_position: 4
-description: Add annotations
+description: Add Mondoo annotations (similar to tags) to the assets in your infrastructure
 image: /img/featured_img/mondoo-feature.jpg
 ---
 
@@ -23,15 +23,22 @@ As another example, you might assign the key `build` and the value `terraform` t
 
 Annotations display in the Mondoo Console when you view an asset. When you export data from Mondoo, annotations are included. You can search for assets based on their annotations. To learn how, read [Search Your Inventory](/platform/intel/search/)
 
-## Annotate an asset
+## Add annotations
 
-You can annotate an asset in the Mondoo Console.
+There are multiple ways to annotate an asset:
 
-:::tip
+- The Mondoo Console
 
-You can also add an annotation from the command line or using automation. To learn how, read [Annotate (tag) an asset during registration](/cnspec/cnspec-adv-install/registration/#annotate-tag-an-asset-during-registration).
+- The `cnspec scan` command
 
-:::
+- The asset's local Mondoo configuration file
+
+- A cnspec inventory file
+
+- A cnspec inventory template
+
+### Annotate an asset in the Mondoo Console
+
 
 1. In the [Mondoo Console](https://console.mondoo.com), [navigate](/platform/start/navigate/) to the asset you want to annotate.
 
@@ -46,6 +53,99 @@ You can also add an annotation from the command line or using automation. To lea
 4. Enter a key and a value, then select the :heavy_check_mark: icon to add the annotation.
 
    ![Annotation on a Mondoo asset](/img/platform/intel/existing-annotation.png)
+
+### Annotate an asset using the `cnspec scan` command
+
+You can add an annotation to an asset when you scan it using cnspec, the Mondoo CLI. To do so, include the `--annotation` flag in the `cnspec scan` command and provide the key and value:
+
+```bash
+cnspec scan TARGET --annotation KEY=VALUE
+```
+
+For example:
+
+```bash
+cnspec scan local --annotation asset-tag=luna0003644
+```
+
+To learn more about cnspec, read the [cnspec documentation](/cnspec/home/). To learn about the `cnspec scan` command, read [`cnspec scan`](/cnspec/cli/cnspec_scan/).
+
+### Annotate an asset using the local Mondoo configuration file
+
+You can add an annotation to an asset's local configuration file.
+
+On a Linux or macOS host, the configuration is stored in one of these locations:
+
+- `/etc/opt/mondoo/mondoo.yml` configures Mondoo for all user accounts.
+
+- `~/.config/mondoo/mondoo.yml` configures Mondoo for a single user.
+
+On a Windows host, configuration is stored in one of these locations:
+
+- `C:\ProgramData\mondoo\mondoo.yml` configures Mondoo for all users.
+
+- `C:\Users\{username}\.config\mondoo\mondoo.yml` configures Mondoo for a single user.
+
+Include these lines to annotate an asset:
+
+```yaml
+annotations:
+   KEY1:VALUE1
+   KEY2:VALUE2
+   ...
+```
+
+For example, this annotation identifies an asset that belongs to the research team:
+
+```yaml
+annotations:
+   team:research
+```
+
+### Annotate an asset using a cnspec inventory file
+
+You can use a [cnspec inventory](/cnspec/cnspec-adv-install/service/#cnspec-inventory) file to define a list of target assets to scan. When you do so, you can add annotations to the target assets.
+
+Include these lines in the cnspec inventory file to annotate an asset:
+
+```yaml
+annotations:
+   KEY1:VALUE1
+   KEY2:VALUE2
+   ...
+```
+
+For example, this annotation identifies an asset in the Mars Rover project:
+
+```yaml
+annotations:
+   project:mars-rover
+```
+
+### Programmatically annotate assets using a cnspec inventory template
+
+[cnspec inventory templates](/cnspec/cnspec-adv-install/service/#cnspec-inventory-template) let you re-use cnspec inventory files with custom variables. This is especially helpful in CI/CD pipelines.
+
+This example inventory template uses variables to define both the asset name and a value for the `project` annotation:
+
+```yaml
+spec:
+  assets:
+    - name: {{ getenv "ASSET_NAME" }}
+      connections:
+        - type: local
+          discover:
+            targets:
+              - auto
+      annotations:
+        project: {{ getenv "PROJECT" }}
+```
+
+To execute `cnspec scan` using the inventory template and define the Mondoo asset name and `project` annotation key value, run:
+
+```bash
+ASSET_NAME="my_asset" PROJECT="mars-rover" cnquery scan --inventory-template template.yaml
+```
 
 ## Change or remove an annotation
 

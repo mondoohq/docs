@@ -371,6 +371,11 @@ module.exports = {
     },
     {
       type: "doc",
+      id: "cnspec/debug",
+      label: "Troubleshoot in Debug Mode",
+    },
+    {
+      type: "doc",
       id: "cnspec/uninstall",
       label: "Uninstall cnspec",
     },

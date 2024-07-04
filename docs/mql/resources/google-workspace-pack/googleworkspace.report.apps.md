@@ -14,7 +14,7 @@ Google Workspace apps reports
 
 **Fields**
 
-| ID    | TYPE                                                                            | DESCRIPTION |
-| ----- | ------------------------------------------------------------------------------- | ----------- |
-| drive | &#91;&#93;[googleworkspace.report.activity](googleworkspace.report.activity.md) |             |
-| admin | &#91;&#93;[googleworkspace.report.activity](googleworkspace.report.activity.md) |             |
+| ID    | TYPE                                                                            | DESCRIPTION                                                           |
+| ----- | ------------------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| drive | &#91;&#93;[googleworkspace.report.activity](googleworkspace.report.activity.md) | Retrieves a report for the settings of the Google Workspace app Drive |
+| admin | &#91;&#93;[googleworkspace.report.activity](googleworkspace.report.activity.md) | Retrieves a report for the Google Workspace Admin settings            |

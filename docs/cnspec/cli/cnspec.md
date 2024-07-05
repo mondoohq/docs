@@ -22,6 +22,7 @@ cnspec is a cloud-native security testing tool for your entire infrastructure
 
 ### SEE ALSO
 
+- [cnspec framework](cnspec_framework.md) - Manage local and Mondoo Platform hosted compliance frameworks
 - [cnspec login](cnspec_login.md) - Register with Mondoo Platform
 - [cnspec logout](cnspec_logout.md) - Log out from Mondoo Platform
 - [cnspec migrate](cnspec_migrate.md) - Migrate cnspec CLI configuration to the latest version

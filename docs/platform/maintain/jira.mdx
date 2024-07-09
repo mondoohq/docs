@@ -1,24 +1,28 @@
 ---
-title: Create Atlassian Jira Issues from Mondoo
-sidebar_label: Create Jira Issues from Mondoo
+title: Track and Fix Security Findings with Cases and Jira
+sidebar_label: Track and Fix Security Findings
 sidebar_position: 4
-description: With the Mondoo Jira integration you can create a Jira issue directly from the Mondoo Console.
+description: Cases, which integrate with Atlassian Jira, allow you to track remediation of important security findings.
 image: /img/featured_img/mondoo-feature.jpg
 ---
 
-Mondoo can create issues directly in Atlassian Jira so you can schedule remediation work within your team's existing project workflows. Without ever leaving the Mondoo Console, you can create Jira issues (tickets) that include all the details necessary for infrastructure owners to remediate findings, even if they don't have access to Mondoo.
+The work of improving your security posture can be daunting. Mondoo finds security issues in your infrastructure and prioritizes them so you know what problems to fix first. But how do you track the fixes and ensure that the work is completed? How do you communicate the most important tasks to your team?
 
-Once you set up a Jira integration, a Create Jira Issue icon on each asset's page lets team members add an issue to your Jira project:
+*Cases* allow you to turn security findings into tasks to complete. They integrate with Atlassian Jira to fit into your existing workflow.
 
-![Icon to add a Jira issue from Mondoo](/img/platform/ticket/jira-icon-closeup.png)
+When you see a security finding that requires fixing, you create a case for that finding. Mondoo automatically includes the details of the finding, information on the asset(s) that contain the finding, and instructions for fixing it. When you save the case, Mondoo automatically creates an issue containing all the same information in your Jira project.
 
-Mondoo's Jira integration even provides remediation details right in the issues, so the team members fixing issues have all the information they need.
+![Cases in Mondoo and issues in Jira](/img/platform/ticket/cases-diagram.png)
 
-![Add a Jira issue from Mondoo](/img/platform/ticket/add-jira-issue.png)
+Once Mondoo creates an issue directly in Jira, you can schedule remediation work within your team's existing project workflow. Cases let you create Jira issues that include all the details necessary for infrastructure owners to remediate findings, even if they don't have access to Mondoo.
 
-## Integrate Jira with a Mondoo space
+In the Mondoo Console, when a security finding or an asset has a case created for it, you can view the case from the finding or the asset. You can also see a list of all cases in a space.
 
-Adding a Mondoo Jira integration to a space allows users in that space to add Jira issues from within the Mondoo Console.
+You can also close cases in the Mondoo Console. A space-wide setting determines whether closing a case in Mondoo closes the corresponding issue in Jira.
+
+## Set up cases to automatically create Jira issues
+
+Set up cases in a space to allow users in the space to add Jira issues from within the Mondoo Console. Cases setup involves configuring Mondoo to integrate with Jira.
 
 ### Prerequisites
 
@@ -26,60 +30,88 @@ Adding a Mondoo Jira integration to a space allows users in that space to add Ji
 
 - A Jira account with access to the project where you want Mondoo to add issues
 
-- The _project key_ of the project where you want Mondoo to add issues
-
-  A project key is the short name that Jira adds to all issues in a project. For example, you might have a project named Security with the project key SEC. All the issues in the Security project include the key SEC in their issue IDs, such as SEC-233 or SEC-1438.
-
-  You can also view a project key in Jira by selecting the **Projects** menu and then **View all projects**. The table listing all your projects shows the key for each project.
-
 - An API token for Jira account access
 
   To learn how to create and copy an API token, read [Manage API tokens for your Atlassian account](https://support.atlassian.com/atlassian-account/docs/manage-api-tokens-for-your-atlassian-account/) in the Atlassian documentation.
 
 ### Add a Jira integration
 
-1. Access the Integrations > Add > Atlassian Jira page in one of two ways:
+1. In the Mondoo Console, navigate to the space where you want to set up cases and, in the side navigation bar, select **Cases**.
 
-   - New space setup: After creating a new Mondoo account or creating a new space, the initial setup guide welcomes you. Select **BROWSE INTEGRATIONS** and then select **Atlassian Jira**.
+   ![Configure cases in Mondoo](/img/platform/ticket/cases-blank.png)
 
-     ![Welcome to Mondoo Page](/img/platform/start/welcome_to_mondoo.png)
+2. Select the **ADD INTEGRATION** button.
 
-   - INTEGRATIONS page: In the side navigation bar, under **INTEGRATIONS**, select **Add New Integration**. Under Ticket Systems, select **Atlassian Jira**.
+   ![Configure cases in Mondoo](/img/platform/ticket/cases-add-jira.png)
 
-     ![Add an integration - ticket system](/img/platform/ticket/add-int-ticket.png)
+3. In the **Choose an integration name** box, enter a name for the integration. Make it a name that clearly shows this is a Jira integration.
 
-2. In the **Choose an integration name** box, enter a name for the integration. Make it a name that clearly shows this is a Jira integration.
+4. In the **Jira Host** box, type the domain for your Jira instance. Do not include a slash at the end of the domain. Example: `https://lunalectric-workspace.atlassian.net`
 
-   ![Add a Jira integration to a Mondoo space](/img/platform/ticket/add-jira-int-top.png)
+5. In the **Email address** box, enter the email address you use to log into your Jira instance.
 
-3. In the **Jira HOST** box, type the domain for your Jira instance. Do not include a slash at the end of the domain. Example: `https://lunalectric-workspace.atlassian.net`
+6. In the **API Token** box, paste your API token for access to your Jira account. To learn how to create and copy an API token, read [Manage API tokens for your Atlassian account](https://support.atlassian.com/atlassian-account/docs/manage-api-tokens-for-your-atlassian-account/) in the Atlassian documentation.
 
-4. In the **Email address** box, enter the email address you use to log into your Jira instance.
+7. By default, when you close a case in the Mondoo Console, Mondoo also closes the corresponding Jira issue. To stop Mondoo from closing Jira issues, disable **Automatically close cases**.
 
-5. In the **API Token** box, paste your API token for access to your Jira account. To learn how to create and copy an API token, read [Manage API tokens for your Atlassian account](https://support.atlassian.com/atlassian-account/docs/manage-api-tokens-for-your-atlassian-account/) in the Atlassian documentation.
+8. Select the **CREATE INTEGRATION** button.
 
-6. In the **Provide a default project** box, enter the project key for the project where you want Mondoo to add issues. To learn about project keys, read the Prerequisites section above.
+## Create a case to add a Jira issue from Mondoo
 
-7. Select the **CREATE INTEGRATION** button.
+When a Mondoo space has the cases feature configured, any team member can create a case, which creates a new a Jira issue directly from the Mondoo Console.
 
-## Add a Jira issue from Mondoo
+1. In the [Mondoo Console](https://console.mondoo.com), [navigate](/platform/start/navigate) to a space that is set up to use cases.
 
-When a Mondoo space has a Jira integration, team members can add Jira issues directly from the Mondoo Console. Any team member can add issues, as long as their email address (in Mondoo) matches the email address they use to log into the Jira instance.
+2. In the side navigation bar, under **Vulnerabilities**, select **Advisories**.
 
-1. In the [Mondoo Console](https://console.mondoo.com), [navigate](/platform/start/navigate) to a space that is integrated with Jira and.
+3. Select the advisory you want to track using a case and a corresponding issue in Jira.
 
-2. [In the Inventory view, access the asset](/platform/security/posture/monitor/) for which you want to create a Jira issue.
+   ![Add a case in Mondoo](/img/platform/ticket/add-case-advisory.png)
 
-   ![Add a Jira issue on a Mondoo asset](/img/platform/ticket/jira-icon-fleet.png)
+4. To the right of the asset name, select the **CREATE CASE** button and select **Selected Assets** to jump to the bottom of the page and see all assets affected by the advisory.
 
-3. To the right of the asset name, select the Jira icon.
+   ![Create a new Jira issue in Mondoo](/img/platform/ticket/select-asset.png)
+
+5. Check the boxes beside all the assets for which you want to track this advisory. Note that this creates a single case (and therefore a single Jira issue) for all the assets you choose. (If you want to track assets separately, create a new case for each asset.)
+
+   Select the **CREATE CASE** button.
 
    ![Create a new Jira issue in Mondoo](/img/platform/ticket/add-jira-issue.png)
 
-4. Edit the issue summary and description as you wish and select the **CREATE ISSUE** button.
+6. Select the Jira project in which you want Mondoo to add the issue. Edit the issue name and description as you wish and select the **CREATE CASE** button.
 
-In the Jira project, you can view the tickets that Mondoo creates on your behalf. It's like any other Jira issue.
+   Mondoo creates a new case in the space and a corresponding Jira issue in the project you selected.
+
+## View cases and Jira issues
+
+On the Cases page in the Mondoo Console, you can view all the cases in a space.
+
+![Cases in Mondoo](/img/platform/ticket/cases-list.png)
+
+Select a case to open its corresponding issue in Jira.
 
 ![Jira issue created by Mondoo](/img/platform/ticket/issue-in-jira.png)
+
+:::note
+
+Updating a Jira issue that Mondoo created from a case does not make any changes to the case.
+
+:::
+
+## Close a case
+
+Close a case to indicate that the work is completed or to stop tracking it. By default, when you close a case in the Mondoo Console, Mondoo also closes the corresponding Jira issue. However, you can change this when you first set up cases for the space. To learn how, read the "Add a Jira integration" section above.
+
+:::note
+
+Closing an issue in Jira does not close the corresponding case in Mondoo.
+
+:::
+
+1. In the Mondoo Console's side navigation bar, select **Cases**.
+
+   ![Configure cases in Mondoo](/img/platform/ticket/cases-list.png)
+
+2. Select the **CLOSE CASE** button beside on the row of the case you want to close.
 
 ---

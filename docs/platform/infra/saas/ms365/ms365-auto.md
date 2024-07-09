@@ -102,7 +102,7 @@ When successful, the Azure CLI returns results like these:
 
 3. Copy the created PEM file (in the example above, it's named tmpkqyme3rm.pem) and save it; you'll need it later in this process.
 
-#### Step B: Grant permissions to access Microsoft Graph (API permissions)
+### Step B: Grant permissions to access Microsoft Graph (API permissions)
 
 1. Copy this content and save it in a file on your local your system (in this example, the file name is app-manifest.json):
 

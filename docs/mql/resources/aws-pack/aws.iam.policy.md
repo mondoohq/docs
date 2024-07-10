@@ -23,7 +23,8 @@ The `aws.iam.policy` resource provides fields for assessing the configuration of
 | ID              | TYPE                                                        | DESCRIPTION                                                                                |
 | --------------- | ----------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
 | arn             | string                                                      | ARN of the policy                                                                          |
-| id              | string                                                      | ID of the policy                                                                           |
+| id              | string                                                      | ID of the policy: deprecated, use policyId                                                 |
+| policyId        | string                                                      | ID of the policy                                                                           |
 | name            | string                                                      | Name of the policy                                                                         |
 | description     | string                                                      | Description of the policy                                                                  |
 | isAttachable    | bool                                                        | Denotes if the policy can be attached                                                      |

@@ -20,11 +20,13 @@ The `aws.ec2.securitygroup.ippermission` resource provides fields for assessing 
 
 **Fields**
 
-| ID         | TYPE             | DESCRIPTION                               |
-| ---------- | ---------------- | ----------------------------------------- |
-| id         | string           | Unique ID for the IP permission           |
-| fromPort   | int              | Start of port range for TCP/UDP protocols |
-| toPort     | int              | End of port range for TCP/UDP protocols   |
-| ipProtocol | string           | IP protocol name                          |
-| ipRanges   | &#91;&#93;string | IPv4 ranges                               |
-| ipv6Ranges | &#91;&#93;string | IPv6 ranges                               |
+| ID               | TYPE             | DESCRIPTION                               |
+| ---------------- | ---------------- | ----------------------------------------- |
+| id               | string           | Unique ID for the IP permission           |
+| fromPort         | int              | Start of port range for TCP/UDP protocols |
+| toPort           | int              | End of port range for TCP/UDP protocols   |
+| ipProtocol       | string           | IP protocol name                          |
+| ipRanges         | &#91;&#93;string | IPv4 ranges                               |
+| ipv6Ranges       | &#91;&#93;string | IPv6 ranges                               |
+| prefixListIds    | &#91;&#93;dict   | List of Prefix IDs                        |
+| userIdGroupPairs | &#91;&#93;dict   | List of user ID group pairs               |

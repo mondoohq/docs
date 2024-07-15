@@ -124,7 +124,7 @@ In addition, the banded scoring system:
 
 - Guarantees a minimum score when an asset has no critical or high failures
 
-For these reasons, Mondoo recommends th banded scoring system to most of our customers.
+For these reasons, Mondoo recommends the banded scoring system to most of our customers.
 
 To use the banded scoring system, set the `scoring system` value to `banded`:
 
@@ -138,7 +138,7 @@ policies:
 
 ## Decayed scoring system
 
-Like the average and banded scoring systems, the decayed scoring system calculates an asset's score based on the impact of the checks that pass and fail. What's unique is that it scores assets on a curve. It uses [exponential decay](https://en.wikipedia.org/wiki/Exponential_decay): As checks fail, this system decreases the score of the asset at a rate proportional to its current value. Compared to the average scoring system, the decayed scoring system:
+Like the average and banded scoring systems, the decayed scoring system calculates an asset's score based on the impact of the checks that pass and fail. What's unique is that it scores assets on a curve. It uses [exponential decay](https://en.wikipedia.org/wiki/Exponential_decay): As checks fail, this system decreases the score of the asset at a rate proportional to its current value. The decayed scoring system:
 
 - Quickly reduces scores as critical findings are added
 
@@ -158,7 +158,7 @@ policies:
 
 ## Highest (failed) impact scoring system
 
-The highest impact scoring system only considers the highest impact check in the policy. It relies on the same method of subtraction as the average scoring system: It subtracts the `impact` value from 100 if a check fails. However, unlike the average scoring system, it doesn't average all the check scores to calculate the overall score. Instead, it just takes the score of the highest-impact **failed** check and makes that the overall score.
+The highest impact scoring system only considers the highest impact check in the policy. It relies on the same method of subtraction as the average scoring system: It subtracts the `impact` value from 100 if a check fails. It then takes the score of the highest-impact **failed** check and makes that the overall score.
 
 To use the highest impact scoring system, set the `scoring system` value to `highest impact`:
 
@@ -176,9 +176,9 @@ policies:
 
 Mondoo recommends the banded scoring system for all but the most risk-averse organizations. It produces a score that reflects the risk that critical failures introduce to your infrastructure and also changes as your team makes security fixes.
 
-More risk-averse companies can choose the decayed scoring system. It's more sensitive to all failures, especially to high and critical checks, but is slower to reflect improvements than the banded system.
+More risk-averse companies can choose the decayed scoring system. It's more sensitive to all failures, especially to high and critical checks, but tends to grant lower scores than the banded system.
 
-The highest impact scoring system is useful only for the most risk-averse teams who can't abide any check failures. On the other end of the spectrum, the average scoring system provides a very positive representation of an asset's security, and at the same time may not motivate teams to improve.
+The highest impact scoring system is useful only for the most risk-averse teams who can't tolerate any check failures. On the other end of the spectrum, the average scoring system provides a very positive representation of an asset's security, and at the same time may not motivate teams to improve.
 
 <details>
 <summary>
@@ -195,7 +195,7 @@ To demonstrate how the different scoring systems evaluate an asset and reflect t
 
 - 45 low-impact checks
 
-When Mondoo first scans the asset based on the example policy:
+When Mondoo first scans the asset based on the example policy, the asset:
 
 - Fails 5 of 10 critical-impact checks
 
@@ -208,7 +208,7 @@ When Mondoo first scans the asset based on the example policy:
 These are the scores the different systems calculate for the asset:
 
 | System         | Score | Letter grade |
-|----------------|-------|--------------|
+|:---------------|:------|:-------------|
 | Average        | 85    | A            |
 | Banded         | 11    | D            |
 | Decayed        | 4     | F            |
@@ -227,7 +227,7 @@ Suppose the team fixes the asset so that it now passes 5 of the high-impact chec
 - Fails 1 of 45 low-impact checks
 
 | System         | Score | Letter grade |
-|----------------|-------|--------------|
+|:---------------|:------|:-------------|
 | Average        | 89    | A            |
 | Banded         | 17    | D            |
 | Decayed        | 11    | D            |
@@ -235,7 +235,7 @@ Suppose the team fixes the asset so that it now passes 5 of the high-impact chec
 
 The average scoring system continues to report sunny results. The banded scoring system still reflects the high quantity of critical-impact failures. The decayed scoring system reflects the improvement. And the highest impact scoring system doesn't change.
 
-Now suppose the team makes improvements to the asset so that it now passes another high-impact check and 3 more of the critical-impact checks. The asset:
+Now suppose the team makes improvements to the asset so that it now passes another high-impact check and 3 more of the critical-impact checks. The asset now:
 
 - Fails 2 of 10 critical-impact checks
 
@@ -246,7 +246,7 @@ Now suppose the team makes improvements to the asset so that it now passes anoth
 - Fails 1 of 45 low-impact checks
 
 | System         | Score | Letter grade |
-|----------------|-------|--------------|
+|:---------------|:------|:-------------|
 | Average        | 93    | A            |
 | Banded         | 30    | C            |
 | Decayed        | 25    | D            |
@@ -254,7 +254,7 @@ Now suppose the team makes improvements to the asset so that it now passes anoth
 
 There's no change in the average, decayed, or highest impact scores. The banded scoring system shows improvement with a D.
 
-Finally, the team fixes all but one critical issue. The asset:
+Finally, the team fixes all but one critical issue. The asset now:
 
 - Fails 1 of 10 critical-impact checks
 
@@ -265,7 +265,7 @@ Finally, the team fixes all but one critical issue. The asset:
 - Fails 1 of 45 low-impact checks
 
 | System         | Score | Letter grade |
-|----------------|-------|--------------|
+|:---------------|:------|:-------------|
 | Average        | 94    | A            |
 | Banded         | 34    | C            |
 | Decayed        | 31    | C            |
@@ -298,7 +298,9 @@ For example, suppose Mondoo assesses an asset based on two policies:
 If an asset scores 72 on policy X and scores 50 on policy Y:
 
 **72 x 100 = 7000**
+
 **50 x 20 = 1000**
+
 **(7200 + 1000) / 120 = 68 (B)**
 
 ## Next steps

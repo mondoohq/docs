@@ -51,3 +51,25 @@ To learn more about scoring systems, read [Policy Authoring Guide | Score Polici
 ## Change a policy's scoring system within a space
 
 Every policy has a default scoring system. The default scoring system is [encoded in the policy](/cnspec/cnspec-policies/write/policy-scoring). However, you can change which scoring system Mondoo uses for a policy within a [space](/platform/start/organize/spaces).
+
+For example, suppose an Azure policy uses the highest impact scoring system by default, and you find that this system doesn't reflect the improvements you make to the security of assets in your Cloud Operations space. You can change the way that Mondoo scores assets in your Cloud Operations space against that Azure policy: Choose the banded policy scoring instead. Your change doesn't affect the policy's scoring system in other spaces.
+
+To change a policy's scoring system within a space:
+
+1. In the [Mondoo Console](https://console.mondoo.com), [navigate](/platform/start/navigate/) to the space in which you want to change a policy's scoring system.
+
+   ![Space in the Mondoo Console](/img/platform/security/monitor-org.png)
+
+2. In the side navigation bar, under **Security**, select **Policies**.
+
+   ![Security policies in the Mondoo Console](/img/platform/security/policies.png)
+
+3. Select the policy you want to customize.
+
+   ![Change a policy's scoring system in the Mondoo Console](/img/platform/security/change-scoring.png)
+
+4. Near the top-right corner of the page, select the **Score by** drop-down and select the scoring system you want to use.
+
+   The next time Mondoo scans an asset in the current space, it uses the new scoring system.
+
+---

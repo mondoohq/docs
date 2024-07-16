@@ -158,7 +158,7 @@ policies:
 
 ## Highest (failed) impact scoring system
 
-The highest impact scoring system only considers the highest impact check in the policy. It relies on the same method of subtraction as the average scoring system: It subtracts the `impact` value from 100 if a check fails. It then takes the score of the highest-impact **failed** check and makes that the overall score.
+The highest impact scoring system only considers the highest-impact check in the policy. It relies on the same method of subtraction as the average scoring system: It subtracts the `impact` value from 100 if a check fails. It then takes the score of the highest-impact **failed** check and makes that the overall score.
 
 To use the highest impact scoring system, set the `scoring system` value to `highest impact`:
 
@@ -284,6 +284,10 @@ Throughout this example:
 - The highest impact scoring system maintained an F for the asset because it still had at least one critical-impact check failure.
 
 </details>
+
+## Change a policy's scoring system in a Mondoo space
+
+Mondoo Enterprise users can customize what scoring system a policy uses for assets within a Mondoo space, regardless of the scoring system set in the policy. To learn more, read [Change a Policy's Scoring System within a Space](/platform/security/customize/score/).
 
 ## Scoring and multiple policies
 

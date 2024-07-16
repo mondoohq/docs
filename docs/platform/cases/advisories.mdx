@@ -1,0 +1,43 @@
+---
+title: Create Cases from Advisories
+sidebar_label: Create from Advisories
+sidebar_position: 3
+description: Cases, which integrate with Atlassian Jira, allow you to track remediation of important security findings. Create a case from an advisory.
+image: /img/featured_img/mondoo-feature.jpg
+---
+
+Use cases to track the work of fixing advisories in your existing workflow. When a Mondoo space has the [cases feature configured](/platform/cases/setup/), any team member can create a case from an advisory. Creating a case creates a new a Jira issue directly from the Mondoo Console.
+
+1. In the [Mondoo Console](https://console.mondoo.com), [navigate](/platform/start/navigate) to a space that is set up to use cases.
+
+2. In the side navigation bar, under **Vulnerabilities**, select **Advisories**.
+
+3. Select the advisory you want to track using a case and a corresponding issue in Jira.
+
+   ![Add a case in Mondoo](/img/platform/cases/add-case-advisory.png)
+
+4. To the right of the asset name, select the **CREATE CASE** button and select **Selected Assets** to jump to the bottom of the page and see all assets affected by the advisory.
+
+   ![Create a new Jira issue in Mondoo](/img/platform/cases/select-asset.png)
+
+5. Check the boxes beside all the assets for which you want to track this advisory. Note that this creates a single case (and therefore a single Jira issue) for all the assets you choose. (If you want to track assets separately, create a new case for each asset.)
+
+   Select the **CREATE CASE** button.
+
+   ![Create a new case in Mondoo](/img/platform/cases/new-case.png)
+
+6. Select the Jira project in which you want Mondoo to add the issue. Edit the issue name and description as you wish and select the **CREATE CASE** button.
+
+   Mondoo creates a new case in the space and a corresponding Jira issue in the project you selected.
+
+## Learn more
+
+- [Track and Fix Findings with Cases and Jira](/platform/cases/overview/)
+
+- [Set up Cases and Jira](/platform/cases/setup/)
+
+- [Create Cases from Checks](/platform/cases/checks/)
+
+- [View and Close Cases](/platform/cases/manage/)
+
+---

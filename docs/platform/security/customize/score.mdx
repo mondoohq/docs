@@ -36,7 +36,7 @@ All Mondoo scoring systems consider check impact when calculating an asset's sco
 
 ## Scoring systems
 
-Mondoo has four scoring systems:
+Mondoo has these scoring systems:
 
 - **Banded** strategically uses impact bands to accurately evaluate an asset's security. In this system, the score quickly goes down as the number of critical-impact failures increase. It takes into account other scoring failures (like high and medium), and guarantees a minimum score when an asset has no critical or high failures. For these reasons, Mondoo recommends the banded scoring system to most of our customers.
 
@@ -46,7 +46,9 @@ Mondoo has four scoring systems:
 
 - **Average** simply scores an asset based on the number of passed and failed checks, weighted by each check's impact. This system can give high scores even when multiple critical-impact checks fail. It presents an optimistic view, but doesn't always reflect changes when you fix important issues on an asset.
 
-![Scoring systems in Mondoo](/img/cnspec/scoring-systems.png)
+- **Weighted average** is just like the average scoring system except that it also considers another factor when calculating an asset's score: the weight assigned to a check. This scoring system gives checks with higher weight greater influence over an asset's total score than checks with lower weight.
+
+![Scoring systems in Mondoo](/img/cnspec/scoring-systems-with-weighted.png)
 
 To learn details about how Mondoo's scoring systems work, read the [Policy Authoring Guide | Score Policies](/cnspec/cnspec-policies/write/policy-scoring).
 

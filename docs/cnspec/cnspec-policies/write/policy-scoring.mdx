@@ -58,6 +58,8 @@ How Mondoo uses these values to calculate an asset's score depends on the `scori
 
 - Average
 
+- Weighted (average)
+
 - Banded (recommended)
 
 - Decayed
@@ -95,6 +97,26 @@ policies:
     name: Simple example policy 1
     version: "1.0.0"
     scoring_system: average
+```
+
+## Weighted average scoring system
+
+The weighted average scoring system is just like the average scoring system except that it also considers another factor when calculating an asset's score: the `weight` value assigned to a check. This scoring system gives checks with higher weight greater influence over an asset's total score than checks with lower weight.
+
+:::note
+
+The weighted average scoring system can produce overly positive results for assets that fail checks with very high impact scores.
+
+:::
+
+To use the weighted average scoring system, set the `scoring system` value to `weighted`:
+
+```yaml
+policies:
+  - uid: simple-example1
+    name: Simple example policy 1
+    version: "1.0.0"
+    scoring_system: weighted
 ```
 
 ## Banded scoring system (recommended)
@@ -172,13 +194,13 @@ policies:
 
 ## Which scoring system is right for you?
 
-![Scoring systems in Mondoo](/img/cnspec/scoring-systems.png)
+![Scoring systems in Mondoo](/img/cnspec/scoring-systems-with-weighted.png)
 
 Mondoo recommends the banded scoring system for all but the most risk-averse organizations. It produces a score that reflects the risk that critical failures introduce to your infrastructure and also changes as your team makes security fixes.
 
 More risk-averse companies can choose the decayed scoring system. It's more sensitive to all failures, especially to high and critical checks, but tends to grant lower scores than the banded system.
 
-The highest impact scoring system is useful only for the most risk-averse teams who can't tolerate any check failures. On the other end of the spectrum, the average scoring system provides a very positive representation of an asset's security, and at the same time may not motivate teams to improve.
+The highest impact scoring system is useful only for the most risk-averse teams who can't tolerate any check failures. On the other end of the spectrum, the average scoring system and weighted average scoring system provide a very positive representation of an asset's security, and at the same time may not motivate teams to improve.
 
 <details>
 <summary>
@@ -194,6 +216,12 @@ To demonstrate how the different scoring systems evaluate an asset and reflect t
 - 30 medium-impact checks
 
 - 45 low-impact checks
+
+:::note
+
+These examples don't include the weighted average scoring policy because its behavior is so similar to the average scoring policy.
+
+:::
 
 When Mondoo first scans the asset based on the example policy, the asset:
 

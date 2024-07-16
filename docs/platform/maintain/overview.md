@@ -12,8 +12,6 @@ Learn how to manage your account, data, and organization(s) in Mondoo:
 
 - [Export data from Mondoo](/platform/maintain/export/overview)
 
-- [Add Atlassian Jira issues directly from the Mondoo Console](/platform/maintain/jira/)
-
 - [Manage alerts](/platform/maintain/alerting/overview)
 
 - [Stay up to date on releases and versions](/platform/maintain/version/)

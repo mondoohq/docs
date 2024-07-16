@@ -34,6 +34,8 @@ The Mondoo unified security platform finds and prioritizes vulnerabilities and m
 
 #### [Compliance](/platform/compliance/overview/)
 
+#### [Track and Fix Findings with Cases and Jira](/platform/cases/overview/)
+
 #### [Asset Intelligence](/platform/intel/overview/)
 
 #### [Manage Mondoo](/platform/maintain/overview/)

@@ -32,6 +32,8 @@ The Mondoo unified security platform finds and prioritizes vulnerabilities and m
 
 ### [Reach Continuous Compliance](/platform/compliance/overview/)
 
+### [Track and Fix Findings with Cases and Jira](/platform/cases/overview/)
+
 ### [Gain Asset Intelligence](/platform/intel/overview/)
 
 ### [Manage Mondoo](/platform/maintain/overview/)
@@ -39,8 +41,6 @@ The Mondoo unified security platform finds and prioritizes vulnerabilities and m
 - [Manage Access to Mondoo](/platform/maintain/overview/)
 
 - [Export Mondoo Data](/platform/maintain/export/overview/)
-
-- [Create Jira Issues from the Mondoo Console](/platform/maintain/jira/)
 
 ### Help
 

@@ -1,0 +1,53 @@
+---
+title: Set up Cases and Jira
+sidebar_label: Set up Cases and Jira
+sidebar_position: 2
+description: Cases, which integrate with Atlassian Jira, allow you to track remediation of important security findings. Set up an integration with Jira to start using cases.
+image: /img/featured_img/mondoo-feature.jpg
+---
+
+Set up cases in a space to allow users in the space to add Jira issues from within the Mondoo Console. Cases setup involves configuring Mondoo to integrate with Jira.
+
+For an overview of cases, read [Track and Fix Findings with Cases and Jira](/platform/cases/overview/).
+
+## Prerequisites
+
+- Owner or Editor access to the Mondoo space
+
+- A Jira account with access to the project where you want Mondoo to add issues
+
+- An API token for Jira account access
+
+  To learn how to create and copy an API token, read [Manage API tokens for your Atlassian account](https://support.atlassian.com/atlassian-account/docs/manage-api-tokens-for-your-atlassian-account/) in the Atlassian documentation.
+
+## Add a Jira integration
+
+1. In the Mondoo Console, navigate to the space where you want to set up cases and, in the side navigation bar, select **Cases**.
+
+   ![Configure cases in Mondoo](/img/platform/cases/cases-blank.png)
+
+2. Select the **ADD INTEGRATION** button.
+
+   ![Configure cases in Mondoo](/img/platform/cases/cases-add-jira.png)
+
+3. In the **Choose an integration name** box, enter a name for the integration. Make it a name that clearly shows this is a Jira integration.
+
+4. In the **Jira Host** box, type the domain for your Jira instance. Do not include a slash at the end of the domain. Example: `https://lunalectric-workspace.atlassian.net`
+
+5. In the **Email address** box, enter the email address you use to log into your Jira instance.
+
+6. In the **API Token** box, paste your API token for access to your Jira account. To learn how to create and copy an API token, read [Manage API tokens for your Atlassian account](https://support.atlassian.com/atlassian-account/docs/manage-api-tokens-for-your-atlassian-account/) in the Atlassian documentation.
+
+7. By default, when you close a case in the Mondoo Console, Mondoo also closes the corresponding Jira issue. To stop Mondoo from closing Jira issues, disable **Automatically close cases**.
+
+8. Select the **CREATE INTEGRATION** button.
+
+## Learn more
+
+- [Track and Fix Findings with Cases and Jira](/platform/cases/overview/)
+
+- [Create Cases from Advisories](/platform/cases/advisories/)
+
+- [Create Cases from Checks](/platform/cases/checks/)
+
+---

@@ -1,0 +1,97 @@
+---
+title: Snooze or Disable Advisories for Assets
+sidebar_label: Disable/Snooze Advisories
+sidebar_position: 4
+description: Control which advisories Mondoo uses to assess an asset's vulnerability
+image: /img/featured_img/mondoo-feature.jpg
+---
+
+Make _advisory exceptions_ to customize how Mondoo evaluates your assets. Advisory exceptions tell Mondoo to exclude certain [advisories](/platform/security/posture/advisories/) when assessing an asset's security posture.
+
+If an asset has some advisories that, for any reason, you don't want to include in your assessments, you can _disable_ them. Doing so instructs Mondoo to skip them entirely. Mondoo doesn't prioritize disabled advisories or include them when evaluating the asset's vulnerability to attack.
+
+To temporarily or indefinitely exclude an advisory, you can _snooze_ it. While an advisory is snoozed, it doesn't affect the asset's vulnerability score. Snoozing is useful when you intend to fix an advisory eventually but don't want it distracting your team right now.
+
+## Disable or snooze an advisory
+
+:::note
+
+Only team members who have Editor or Owner access to a space can snooze or disable advisories in the space.
+
+:::
+
+1. In the [Mondoo Console](https://console.mondoo.com), [navigate](/platform/start/navigate/) to the space containing the asset.
+
+   ![Space in the Mondoo Console](/img/platform/security/monitor-org.png)
+
+2. Use the Search in Space box in the top-right corner of the page or **Inventory** list in the side navigation bar to open the asset you want.
+
+3. Select the **Advisories** tab.
+
+   ![Advisories tab for an asset](/img/platform/security/advisories-tab.png)
+
+4. Check the boxes to the left of the advisories you want to snooze or disable.
+
+   ![Mondoo advisories - set an exception](/img/platform/security/selected-advisories.png)
+
+5. Select the **SET EXCEPTION** button.
+
+   ![Mondoo exception](/img/platform/security/set-exception-advisory.png)
+
+6. Select whether to **Snooze** or **Disable** the check and write an explanation for the exception.
+
+   If you select Snooze, select how long to snooze the check. Select **Indefinitely** to keep the check snoozed unless you un-snooze it.
+
+7. Select the **SAVE EXCEPTION** button.
+
+## Approve or reject an exception
+
+Exceptions take effect the moment they're added. However, as an extra tracking step, a team member can approve or reject an exception:
+
+- Approving an exception allows it to remain.
+
+- Rejecting an exception removes it.
+
+:::note
+
+Only team members who have Editor or Owner access to a space can approve or reject exceptions in the space.
+
+:::
+
+To approve or reject an exception:
+
+1. In the [Mondoo Console](https://console.mondoo.com), [navigate](/platform/start/navigate/) to the space in which you want to approve or deny exceptions.
+
+   ![Space in the Mondoo Console](/img/platform/security/monitor-org.png)
+
+2. Use the Search in Space box in the top-right corner of the page or **Inventory** list in the side navigation bar to open the asset you want.
+
+3. Select the **Exceptions** tab to see all the exceptions for the asset.
+
+   ![Security policies in the Mondoo Console](/img/platform/security/approve-reject.png)
+
+4. Select the **Reject** button to remove the exception, or select the **Approve** button to keep the exception with your approval.
+
+## Un-snooze or re-enable an advisory
+
+:::note
+
+Only team members who have Editor or Owner access to a space can un-snooze or re-enable advisories in the space.
+
+:::
+
+1. In the [Mondoo Console](https://console.mondoo.com), [navigate](/platform/start/navigate/) to the space in which you want to disable a check.
+
+   ![Space in the Mondoo Console](/img/platform/security/monitor-org.png)
+
+2. Use the Search in Space box in the top-right corner of the page or **Inventory** list in the side navigation bar to open the asset you want.
+
+3. Select the **Advisories** tab.
+
+4. Check the boxes to the left of the advisories you want to un-snooze or re-enable.
+
+   ![Mondoo security - un-snooze or re-enable advisories](/img/platform/security/remove.png)
+
+5. Select **Remove Exception and Enable**.
+
+---

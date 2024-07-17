@@ -112,17 +112,16 @@ The tabs on the asset detail page show different details:
 
 When Mondoo scans your assets, it produces a graded score to assess risk to your business. Mondoo scoring is based on policies that match the type of asset scanned. For example, there are policies for Windows, Linux, Kubernetes clusters, and so on. You [choose which policies are enabled](/platform/security/posture/policies/) in a space. An asset can match multiple policies enabled in a space.
 
-These are the ranges for Mondoo scores:
+Mondoo scores policies from A (highly secure) to F (highly vulnerable to attack) based on percentage scores:
 
-```text
-score:
-    80  ..  100   A (100 A+ 95 A 85 A- 80)
-    60  ..   79   B ( 79 B+ 75 B 65 B- 60)
-    30  ..   59   C ( 59 C+ 50 C 40 C- 30)
-    10  ..   29   D ( 29 D+ 25 D 15 D- 10)
-     0  ..    9   F
-```
+| From... | To... | Letter score |
+|:-------:|:-----:|:------------:|
+| 80      | 100   | A            |
+| 60      | 79    | B            |
+| 30      | 59    | C            |
+| 10      | 29    | D            |
+| 0       | 9     | F            |
 
-To learn more about scoring, read [Score Policies](/cnspec/cnspec-policies/write/policy-scoring/).
+To learn more about scoring, read [Change a Policy's Scoring System](/platform/security/customize/score/).
 
 ---

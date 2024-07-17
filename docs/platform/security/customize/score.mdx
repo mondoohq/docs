@@ -1,0 +1,79 @@
+---
+title: Change a Policy's Scoring System within a Space
+sidebar_label: Change a Policy's Scoring System
+sidebar_position: 1
+description: Change the scoring system Mondoo uses to evaluate assets against a policy
+image: /img/featured_img/mondoo-feature.jpg
+---
+
+Each target that Mondoo scans receives a letter score that summarizes what percentage of the policy's [checks](/cnspec/cnspec-policies/write/simple/#checks) the asset passes. Letter scores are based on numeric scores between 0 and 100. These are the ranges for Mondoo letter scores:
+
+| From... | To... | Letter score |
+|:-------:|:-----:|:------------:|
+| 80      | 100   | A            |
+| 60      | 79    | B            |
+| 30      | 59    | C            |
+| 10      | 29    | D            |
+| 0       | 9     | F            |
+
+You can control how Mondoo calculates an asset's score on a policy.
+
+## Check impact
+
+An asset's score on a policy is based on the number of checks in the policy that an asset passes and the number that it fails. However, not every check is equal in importance. Every check in a policy has an _impact_ value in one of these four bands:
+
+- Critical
+
+- High
+
+- Medium
+
+- Low
+
+In Mondoo policies, the impact of a check represents the increased vulnerability of an asset that fails the check. For example, the AWS policy check "Ensure Redshift clusters are not publicly accessible" is a critical-impact check because a publicly-accessible cluster is a potential entry point for attack. But "Ensure IAM groups are utilized by assigning at least one user" is a low-impact check because empty IAM groups don't greatly increase an asset's vulnerability.
+
+All Mondoo scoring systems consider check impact when calculating an asset's score.
+
+## Scoring systems
+
+Mondoo has these scoring systems:
+
+- **Banded** strategically uses impact bands to accurately evaluate an asset's security. In this system, the score quickly goes down as the number of critical-impact failures increase. It takes into account other scoring failures (like high and medium), and guarantees a minimum score when an asset has no critical or high failures. For these reasons, Mondoo recommends the banded scoring system to most of our customers.
+
+- **Decayed** scores assets on a curve. As checks fail, this system decreases the score of the asset at a rate proportional to its current value. The decayed scoring system quickly reduces scores as critical findings are added, and doesn't sink scores to zero too quickly as more checks fail. Mondoo recommends decayed scoring to more risk-averse customers.
+
+- **Highest impact** only considers the highest-impact check in the policy. If any check with the highest impact value fails, the asset score is F.
+
+- **Average** simply scores an asset based on the number of passed and failed checks, weighted by each check's impact. This system can give high scores even when multiple critical-impact checks fail. It presents an optimistic view, but doesn't always reflect changes when you fix important issues on an asset.
+
+- **Weighted average** is just like the average scoring system except that it also considers another factor when calculating an asset's score: the weight assigned to a check. This scoring system gives checks with higher weight greater influence over an asset's total score than checks with lower weight.
+
+![Scoring systems in Mondoo](/img/cnspec/scoring-systems-with-weighted.png)
+
+To learn details about how Mondoo's scoring systems work, read the [Policy Authoring Guide | Score Policies](/cnspec/cnspec-policies/write/policy-scoring).
+
+## Change a policy's scoring system within a space
+
+Every policy has a default scoring system. The default scoring system is [encoded in the policy](/cnspec/cnspec-policies/write/policy-scoring). However, you can change which scoring system Mondoo uses for a policy within a [space](/platform/start/organize/spaces).
+
+For example, suppose an Azure policy uses the highest impact scoring system by default, and you find that this system doesn't reflect the improvements you make to the security of assets in your Cloud Operations space. You can change the way that Mondoo scores assets in your Cloud Operations space against that Azure policy: Choose the banded policy scoring instead. Your change doesn't affect the policy's scoring system in other spaces.
+
+To change a policy's scoring system within a space:
+
+1. In the [Mondoo Console](https://console.mondoo.com), [navigate](/platform/start/navigate/) to the space in which you want to change a policy's scoring system.
+
+   ![Space in the Mondoo Console](/img/platform/security/monitor-org.png)
+
+2. In the side navigation bar, under **Security**, select **Policies**.
+
+   ![Security policies in the Mondoo Console](/img/platform/security/policies.png)
+
+3. Select the policy you want to customize.
+
+   ![Change a policy's scoring system in the Mondoo Console](/img/platform/security/change-scoring.png)
+
+4. Near the top-right corner of the page, select the **Score by** drop-down and select the scoring system you want to use.
+
+   The next time Mondoo scans an asset in the current space, it uses the new scoring system.
+
+---

@@ -31,8 +31,6 @@ To set up a Mondoo Kubernetes operator integration, access the Integrations > Ad
 
 ### Configure a Mondoo Kubernetes integration
 
-import Partial from "../../partials/_editor-owner.mdx";
-
 <Partial />{" "}
 
 ![k8s-settings](/img/platform/infra/cloud/kubernetes/integration-setup.png)
@@ -94,8 +92,6 @@ To view additional status details or change an integration's configuration, sele
 ![k8s-integration-detail](/img/platform/infra/cloud/kubernetes/integration-details.png)
 
 ## Remove Kubernetes integrations
-
-import Partial from "../../partials/_editor-owner.mdx";
 
 <Partial />{" "}
 

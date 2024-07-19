@@ -21,7 +21,7 @@ Open source projects that don't adhere to GitHub's recommended security best pra
 
 To scan GitHub organizations and repos, cnspec needs access. You give cnspec the access it needs through the GitHub API. First, you create GitHub personal access token. Then you share that token with cnspec using an environment variable.
 
-### Create a GitHub personal access token
+### Option 1: Create a GitHub personal access token
 
 cnspec needs a personal access token to scan a GitHub organization, public repo, or private repo. The token's level of access determines how much information cnspec can retrieve.
 
@@ -41,6 +41,13 @@ export GITHUB_TOKEN=<your personal access token>
 
 ```powershell
 $Env:GITHUB_TOKEN = "<personal-access-token>"
+```
+
+### Option 2: Use custom GitHub application credentials
+Mondoo also supports the using [custom GitHub application credentials](https://docs.github.com/en/apps/creating-github-apps). Create an application and then use the app ID and the private key to authenticate scans:
+
+```bash
+cnquery scan github org <ORG> --app-id <YOUR-APP-ID> --app-installation-id <YOUR-INSTALL-ID> --app-private-key <PATH-TO-PEM-FILE>
 ```
 
 ## Scan a GitHub organization
@@ -71,6 +78,44 @@ To scan the configuration of a GitHub repo:
 
 ```bash
 cnspec scan github repo <ORG_NAME/REPO_NAME>
+```
+
+### Scan specific repos in an organization
+
+You can specify which repos in an organization to scan. This command scans only two repos:
+
+```bash
+cnspec scan github org <ORG_NAME> --repos "<REPO1>,<REPO2>" --discover repos
+```
+
+This command scans the repos and the organization:
+
+```
+cnspec scan github org <ORG_NAME> --repos "<REPO1>,<REPO2>"
+```
+
+You can achieve the same scan using a Mondoo inventory file. This is especially helpful when you have a long list of repos to scan.
+
+github-inventory.yml:
+
+```yml
+spec:
+  assets:
+    - connections:
+        - type: github
+          options:
+            organization: <ORG>
+            repos: <REPO1>,<REPO2>
+            repos-exclude: ""
+          discover:
+            targets:
+              - auto
+```
+
+To run a scan using this inventory, enter:
+
+```bash
+cnspec scan --inventory-file github-inventory.yml
 ```
 
 ## Example checks

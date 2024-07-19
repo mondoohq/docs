@@ -30,6 +30,10 @@ Before you set up the integration, you must create an incoming webhook app for S
 
 ## Set up the integration with your Mondoo space
 
+import Partial from "../../partials/_editor-owner.mdx";
+
+<Partial />{" "}
+
 1. In the [Mondoo Console](https://console.mondoo.com), [navigate to the space](/platform/start/navigate) for which you want to see Slack alerts.
 
 2. In the side navigation bar, under **Integrations**, select **Add New Integration**.

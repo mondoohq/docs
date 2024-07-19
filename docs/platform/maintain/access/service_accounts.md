@@ -14,6 +14,10 @@ Every service account has permissions that limit the actions it can perform.
 
 One example for relying on a service account is in a CI/CD workflow in which worker nodes test builds of infrastructure and applications. You can create a service account that can access the policies in a space and execute the policies on builds to assess security risks.
 
+import Partial from "../../partials/_editor-owner.mdx";
+
+<Partial />{" "}
+
 ## Generate a service account for access to a single space
 
 1. [Navigate](/platform/start/navigate/) to the space in which you want to create a service account.

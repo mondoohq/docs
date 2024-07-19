@@ -17,6 +17,10 @@ The operator includes a Kubernetes admission controller that performs a security
 
 ### Add a Mondoo Kubernetes integration
 
+import Partial from "../../partials/_editor-owner.mdx";
+
+<Partial />{" "}
+
 To set up a Mondoo Kubernetes operator integration, access the Integrations > Add > GCP page in one of two ways:
 
 - New space setup: After creating a new Mondoo account or creating a new space, the initial setup guide welcomes you. Select **BROWSE INTEGRATIONS** and then select **Kubernetes**.
@@ -26,6 +30,10 @@ To set up a Mondoo Kubernetes operator integration, access the Integrations > Ad
 - INTEGRATIONS page: In the side navigation bar, under **INTEGRATIONS**, select **Add New Integration**. Under Cloud Security, select **Kubernetes**.
 
 ### Configure a Mondoo Kubernetes integration
+
+import Partial from "../../partials/_editor-owner.mdx";
+
+<Partial />{" "}
 
 ![k8s-settings](/img/platform/infra/cloud/kubernetes/integration-setup.png)
 
@@ -86,6 +94,10 @@ To view additional status details or change an integration's configuration, sele
 ![k8s-integration-detail](/img/platform/infra/cloud/kubernetes/integration-details.png)
 
 ## Remove Kubernetes integrations
+
+import Partial from "../../partials/_editor-owner.mdx";
+
+<Partial />{" "}
 
 1. Follow the instructions above to view your list of Kubernetes integrations.
 

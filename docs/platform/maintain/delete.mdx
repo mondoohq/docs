@@ -9,6 +9,10 @@ If you're no longer using Mondoo spaces or organizations, you can remove them fr
 
 ## Remove all assets from a space
 
+import Partial from "../../partials/_editor-owner.mdx";
+
+<Partial />{" "}
+
 Removing all assets from a space deletes every asset and the report data on those assets. This action retains the space's security policies, compliance frameworks, team member access settings, audit logs, tokens, and other space settings.
 
 :::warning
@@ -29,6 +33,12 @@ Removing all assets from a space permanently deletes asset data and can't be und
 
 ## Remove a space from a Mondoo organization
 
+:::note
+
+Only team members with Owner access can perform this task.
+
+:::
+
 If you no longer need a space in an organization, you can remove the space. This action deletes all the Mondoo data in the space, including (but not limited to) assets, integrations, security policy and compliance framework configuration, and reports.
 
 :::warning
@@ -48,6 +58,12 @@ Removing a space permanently deletes all space data and can't be undone.
 5. Select the **DELETE** button on the **Delete Space** row.
 
 ## Remove a Mondoo organization
+
+:::note
+
+Only team members with Owner access can perform this task.
+
+:::
 
 If you no longer need an organization in your Mondoo account, you can remove the organization. This action deletes all the Mondoo data in the organization, including (but not limited to) spaces, assets, integrations, security policy and compliance framework configuration, and reports.
 

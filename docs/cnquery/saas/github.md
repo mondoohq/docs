@@ -13,13 +13,13 @@ Rely on cnquery to query and inventory your GitHub organizations and private rep
 
 To query GitHub organizations and repos, cnquery needs access. You give cnquery the access it needs through the GitHub API. First, you create GitHub personal access token. Then you share that token with cnquery using an environment variable.
 
-### Create a GitHub personal access token
+### Option 1: Create a GitHub personal access token
 
 cnquery needs a personal access token to query a GitHub organization, public repo, or private repo. The token's level of access determines how much information cnquery can retrieve.
 
 To learn how to create a personal access token, read [Creating a personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) in the GitHub documentation.
 
-### Configure a GITHUB_TOKEN environment variable
+#### Configure a GITHUB_TOKEN environment variable
 
 You supply your personal access token to cnquery using the `GITHUB_TOKEN` environment variable.
 
@@ -33,6 +33,13 @@ export GITHUB_TOKEN=<your personal access token>
 
 ```powershell
 $Env:GITHUB_TOKEN = "<personal-access-token>"
+```
+
+### Option 2: Use custom GitHub application credentials
+Mondoo also supports the using [custom GitHub application credentials](https://docs.github.com/en/apps/creating-github-apps). Create an application and then use the app ID and the private key to authenticate scans:
+
+```bash
+cnquery scan github org <ORG> --app-id <YOUR-APP-ID> --app-installation-id <YOUR-INSTALL-ID> --app-private-key <PATH-TO-PEM-FILE>
 ```
 
 ## Query GitHub

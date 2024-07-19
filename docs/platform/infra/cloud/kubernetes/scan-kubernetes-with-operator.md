@@ -37,7 +37,7 @@ To set up a Mondoo Kubernetes operator integration, access the Integrations > Ad
 
    - We strongly recommend that you leave **CronJob-based** selected. It's ideal for most infrastructures. A CronJob executes regularly to run the scans without permanently allocating any resources for Mondoo on cluster nodes.
 
-   - If your nodes tend to run near 100% resource utilization, that leaves no resources available for a CronJob to run a Mondoo scan. If you experience consistently failing Mondoo node scans, select **Deployment-based** scanning instead. This approach reserves resources for Mondoo on each cluster node. It relies on a DaemonSet to assure that Mondoo scans the nodes continuously, even during high-traffic times.
+   - If your nodes tend to run near 100% resource utilization, that leaves no resources available for a CronJob to run a Mondoo scan. If you experience consistently failing Mondoo node scans, select **DaemonSet-based** scanning instead. This approach reserves resources for Mondoo on each cluster node. It relies on a DaemonSet to assure that Mondoo scans the nodes continuously, even during high-traffic times.
 
 3. To continuously assess the security posture of workloads and resources in your cluster, enable **Scan workloads**.
 
@@ -50,6 +50,8 @@ To set up a Mondoo Kubernetes operator integration, access the Integrations > Ad
 6. To assess the security of every change applied to your Kubernetes cluster and display the results in the CI/CD view, enable **Scan incoming deployments**.
 
 7. If you enable **Scan incoming deployments**, choose the tool to use for managing the Mondoo admission controller's certificates: **CertManager** or **OpenShift**.
+
+8. Select the **CREATE KUBERNETES INTEGRATION** button.
 
 ### Scan incoming deployments
 

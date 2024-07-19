@@ -35,10 +35,10 @@
 #
 
 # s.b. Mondoo Platform
-\sMondoo platform\b
+\bMondoo platform\b
 
 # s.b. Compliance Hub
-\s[Cc]ompliance hub\b
+\b[Cc]ompliance hub\b
 
 #
 # Compliance Terms

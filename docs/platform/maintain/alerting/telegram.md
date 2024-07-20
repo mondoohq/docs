@@ -43,6 +43,10 @@ Before you set up the integration, you must create Telegram bot token and get yo
 
 ## Set up the integration
 
+import Partial from "../../partials/_editor-owner.mdx";
+
+<Partial />{" "}
+
 1. In the [Mondoo Console](https://console.mondoo.com), [navigate to the space](/platform/start/navigate) for which you want to see Telegram alerts.
 
 2. In the side navigation bar, under **Integrations**, select **Add New Integration**.

@@ -34,6 +34,10 @@ Before you set up the integration, you must generate a new Microsoft Teams webho
 
 ## Set up the integration with your Mondoo space
 
+import Partial from "../../partials/_editor-owner.mdx";
+
+<Partial />{" "}
+
 1. In the [Mondoo Console](https://console.mondoo.com), [navigate to the space](/platform/start/navigate) for which you want to see Microsoft Teams alerts.
 
 2. In the side navigation bar, under **Integrations**, select **Add New Integration**.

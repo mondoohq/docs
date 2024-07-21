@@ -17,7 +17,7 @@ The operator includes a Kubernetes admission controller that performs a security
 
 ### Add a Mondoo Kubernetes integration
 
-import Partial from "../../../partials/_editor-owner.mdx";
+import Partial from "../../../partials/\_editor-owner.mdx";
 
 <Partial />{" "}
 

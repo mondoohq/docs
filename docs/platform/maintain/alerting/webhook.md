@@ -8,7 +8,7 @@ image: /img/featured_img/mondoo-feature.jpg
 
 Even if Mondoo doesn't have dedicated support for your messaging platform, you can configure Mondoo to send you alerts. A _webhook_ makes this possible. Mondoo's custom webhook integration posts asset alerts as JSON-encoded data to an HTTP endpoint. To learn how to create a webhook, read your messaging platform documentation.
 
-import Partial from "../../partials/_editor-owner.mdx";
+import Partial from "../../partials/\_editor-owner.mdx";
 
 <Partial />{" "}
 

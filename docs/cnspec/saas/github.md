@@ -44,6 +44,7 @@ $Env:GITHUB_TOKEN = "<personal-access-token>"
 ```
 
 ### Option 2: Use custom GitHub application credentials
+
 Mondoo also supports the using [custom GitHub application credentials](https://docs.github.com/en/apps/creating-github-apps). Create an application and then use the app ID and the private key to authenticate scans:
 
 ```bash

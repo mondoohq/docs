@@ -1,0 +1,34 @@
+---
+title: Choose When to Automatically Remove Obsolete Assets
+sidebar_label: Remove Obsolete Assets
+sidebar_position: 9
+description: You can configure Mondoo to automatically remove assets that haven't returned scan results in a selected time span. You can also automatically remove terminated Amazon EC2 instances.
+---
+
+You control how long Mondoo retains obsolete assets in a space. There are settings for when to remove:
+
+- Assets that haven't returned updated scan results
+
+- Terminated Amazon EC2 instances
+
+import Partial from "../partials/_editor-owner.mdx";
+
+<Partial />{" "}
+
+To choose when to automatically remove obsolete assets:
+
+1. [Navigate](/platform/start/navigate/) to the space.
+
+2. In the side navigation bar, select **Settings**.
+
+   ![Mondoo general space settings](/img/platform/maintain/space-settings-general.png)
+
+3. On the **General Settings** tab, in the **Remove Terminated Assets** drop-down list, choose whether to permanently remove terminated Amazon EC2 instances after **24 Hours** or **Never**.
+
+4. In the **Remove Inactive Assets** drop-down list, choose the period of time after which to permanently remove assets that haven't returned updated scan results:
+
+   - To retain inactive assets until you manually delete them, select **Never**.
+
+   - To automatically delete inactive assets, choose a time span.
+
+---

@@ -5,7 +5,7 @@ description: This guide covers how you can continuously assess the security conf
 image: /img/featured_img/mondoo-kubernetes.jpg
 ---
 
-The Mondoo Kubernetes Operator is Mondoo software that runs in your Kubernetes environment. Working within your cluster, the Mondoo Operator can:
+The Mondoo Kubernetes Operator is Mondoo software that runs in your Kubernetes environment. Working within your cluster, the Mondoo Kubernetes Operator can:
 
 - Continuously scan nodes to assess security and identify vulnerabilities
 
@@ -21,7 +21,7 @@ import Partial from "../../../partials/_editor-owner.mdx";
 
 <Partial />{" "}
 
-To set up a Mondoo Kubernetes operator integration, access the Integrations > Add > GCP page in one of two ways:
+To set up a Mondoo Kubernetes Operator integration, access the Integrations > Add > GCP page in one of two ways:
 
 - New space setup: After creating a new Mondoo account or creating a new space, the initial setup guide welcomes you. Select **BROWSE INTEGRATIONS** and then select **Kubernetes**.
 
@@ -49,9 +49,9 @@ To set up a Mondoo Kubernetes operator integration, access the Integrations > Ad
 
    ![Kubernetes integration](/img/platform/infra/cloud/kubernetes/integration-setup-2.png)
 
-4. To scan container images, enable **Workload image scanning**.
+4. To scan container images, enable **Scan workload images**.
 
-5. To control which namespaces Mondoo scans, enable **Namespace filtering** and list the namespaces to which you want to allow or deny access.
+5. To control which namespaces Mondoo scans, enable **Filter namespaces** and list the namespaces to which you want to allow or deny access.
 
 6. To assess the security of every change applied to your Kubernetes cluster and display the results in the CI/CD view, enable **Scan incoming deployments**.
 

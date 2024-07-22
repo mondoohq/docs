@@ -23,16 +23,16 @@ Google Workspace user accounts
 | primaryEmail     | string                                                          | The user's primary email address                         |
 | recoveryEmail    | string                                                          | Recovery email of the user                               |
 | recoveryPhone    | string                                                          | Recovery phone of the user                               |
-| agreedToTerms    | bool                                                            | User accepted the Terms of Service agreement             |
+| agreedToTerms    | bool                                                            | Whether the user accepted the Terms of Service agreement |
 | aliases          | &#91;&#93;string                                                | A list of the user's alias email addresses               |
-| suspended        | bool                                                            | Indicates if user is suspended                           |
+| suspended        | bool                                                            | Whether the user is suspended                            |
 | suspensionReason | string                                                          | The reason a user account is suspended                   |
-| archived         | bool                                                            | Indicates if user is archived                            |
-| isAdmin          | bool                                                            | Indicates a user with super administrator privileges     |
-| isDelegatedAdmin | bool                                                            | Indicates if a user is a delegated administrator         |
-| isEnforcedIn2Sv  | bool                                                            | Is 2-step verification enforced                          |
-| isEnrolledIn2Sv  | bool                                                            | Is enrolled in 2-step verification                       |
-| isMailboxSetup   | bool                                                            | Indicates if the user's Google mailbox is created        |
+| archived         | bool                                                            | Whether the user is archived                             |
+| isAdmin          | bool                                                            | Whether the user has super administrator privileges      |
+| isDelegatedAdmin | bool                                                            | Whether the a user is a delegated administrator          |
+| isEnforcedIn2Sv  | bool                                                            | Whether 2-step verification is enforced                  |
+| isEnrolledIn2Sv  | bool                                                            | Whether the user is enrolled in 2-step verification      |
+| isMailboxSetup   | bool                                                            | Whether the user's Google mailbox is created             |
 | lastLoginTime    | time                                                            | User's last login time                                   |
 | creationTime     | time                                                            | User's account creation time                             |
 | usageReport      | [googleworkspace.report.usage](googleworkspace.report.usage.md) | Retrieves latest report for the user                     |

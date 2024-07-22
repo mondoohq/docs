@@ -20,7 +20,7 @@ AWS ECS container instance
 
 | ID               | TYPE                                    | DESCRIPTION                                                              |
 | ---------------- | --------------------------------------- | ------------------------------------------------------------------------ |
-| agentConnected   | bool                                    | True if agent is connected to ECS                                        |
+| agentConnected   | bool                                    | Whether the agent is connected to ECS                                    |
 | id               | string                                  | ID for the container instance                                            |
 | arn              | string                                  | ARN for the container instance                                           |
 | capacityProvider | string                                  | Capacity provider associated with the container instance                 |

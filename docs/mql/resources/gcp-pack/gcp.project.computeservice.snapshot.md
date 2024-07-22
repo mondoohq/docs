@@ -24,7 +24,7 @@ Google Cloud (GCP) Compute persistent disk snapshot
 | name               | string            | Name of the resource                                                              |
 | description        | string            | Optional description                                                              |
 | architecture       | string            | Architecture of the snapshot                                                      |
-| autoCreated        | bool              | Indicates if snapshot was automatically created                                   |
+| autoCreated        | bool              | Whether the snapshot was automatically created                                    |
 | chainName          | string            | Snapshot chain                                                                    |
 | creationSizeBytes  | int               | Size in bytes of the snapshot at creation time                                    |
 | diskSizeGb         | int               | Size of the source disk, specified in GB                                          |

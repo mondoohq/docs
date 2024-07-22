@@ -29,7 +29,7 @@ Use the `aws.ecr.repository` resource to assess the Amazon Elastic Container Reg
 | public          | bool                                        | Whether the repository is public                                   |
 | images          | &#91;&#93;[aws.ecr.image](aws.ecr.image.md) | List of images in the repository                                   |
 | region          | string                                      | Region where the image is stored                                   |
-| imageScanOnPush | bool                                        | Repository option to scan on image push                            |
+| imageScanOnPush | bool                                        | Whether the repository option to scan on image push is enabled     |
 
 **Examples**
 

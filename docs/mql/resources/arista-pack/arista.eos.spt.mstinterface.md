@@ -30,7 +30,7 @@ Multiple Spanning Tree Protocol (MSTP) information for a specified interface
 | role                 | string | Port role                                                                                       |
 | inconsistentFeatures | dict   | Interface inconsistent features                                                                 |
 | portNumber           | int    | Port Number                                                                                     |
-| isEdgePort           | bool   | Flag if it is an edge port                                                                      |
+| isEdgePort           | bool   | Whether the interface is an edge port                                                           |
 | detail               | dict   | Details about Designated root, Designated bridge and Designated port                            |
 | boundaryType         | string | Interface Boundary Type                                                                         |
 | counters             | dict   | Number of BPDU transactions on this interface                                                   |

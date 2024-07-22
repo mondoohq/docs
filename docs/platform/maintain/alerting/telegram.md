@@ -43,7 +43,7 @@ Before you set up the integration, you must create Telegram bot token and get yo
 
 ## Set up the integration
 
-import Partial from "../../partials/_editor-owner.mdx";
+import Partial from "../../partials/\_editor-owner.mdx";
 
 <Partial />{" "}
 

@@ -26,7 +26,7 @@ Snowflake Warehouse
 | running                         | int    | Number of running clusters                                                                                       |
 | queued                          | int    | Number of queued clusters                                                                                        |
 | isDefault                       | bool   | Whether the warehouse is a default warehouse                                                                     |
-| isCurrent                       | bool   | Indicates if the warehouse is a current warehouse                                                                |
+| isCurrent                       | bool   | Whether the warehouse is a current warehouse                                                                     |
 | autoSuspend                     | int    | Period of inactivity, in seconds, after which a running warehouse automatically suspends and stops using credits |
 | autoResume                      | bool   | Whether the warehouse, if suspended, automatically resumes                                                       |
 | available                       | float  | Percentage of the warehouse compute resources available                                                          |

@@ -20,5 +20,5 @@ Arista EOS SNMP information resource
 
 | ID            | TYPE           | DESCRIPTION                      |
 | ------------- | -------------- | -------------------------------- |
-| enabled       | bool           | SNMP logging status              |
+| enabled       | bool           | Whether SNMP logging is enabled  |
 | notifications | &#91;&#93;dict | SNMP trap generation information |

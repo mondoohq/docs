@@ -20,7 +20,7 @@ Amazon VPC Service Endpoint
 
 | ID                              | TYPE              | DESCRIPTION                                              |
 | ------------------------------- | ----------------- | -------------------------------------------------------- |
-| acceptanceRequired              | bool              | True if acceptance required                              |
+| acceptanceRequired              | bool              | Whether acceptance is required                           |
 | availabilityZones               | &#91;&#93;string  | List of availability zones for the service endpoint      |
 | dnsNames                        | &#91;&#93;string  | List of base endpoint DNS names for the service endpoint |
 | id                              | string            | Service ID                                               |

@@ -30,7 +30,7 @@ Before you set up the integration, you must create an incoming webhook app for S
 
 ## Set up the integration with your Mondoo space
 
-import Partial from "../../partials/_editor-owner.mdx";
+import Partial from "../../partials/\_editor-owner.mdx";
 
 <Partial />{" "}
 

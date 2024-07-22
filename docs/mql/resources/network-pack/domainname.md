@@ -23,5 +23,5 @@ domainName(fqdn string)
 | fqdn                | string           | Fully qualified domain name (FQDN)                                             |
 | effectiveTLDPlusOne | string           | effectiveTLDPlusOne returns the effective top level domain plus one more label |
 | tld                 | string           | Top-level domain                                                               |
-| tldIcannManaged     | bool             | Flag indicates if the TLD is ICANN managed                                     |
+| tldIcannManaged     | bool             | Whether the TLD is ICANN managed                                               |
 | labels              | &#91;&#93;string | Domain labels                                                                  |

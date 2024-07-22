@@ -34,7 +34,7 @@ Before you set up the integration, you must generate a new Microsoft Teams webho
 
 ## Set up the integration with your Mondoo space
 
-import Partial from "../../partials/_editor-owner.mdx";
+import Partial from "../../partials/\_editor-owner.mdx";
 
 <Partial />{" "}
 

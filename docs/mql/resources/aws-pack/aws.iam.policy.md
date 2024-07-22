@@ -27,7 +27,7 @@ The `aws.iam.policy` resource provides fields for assessing the configuration of
 | policyId        | string                                                      | ID of the policy                                                                           |
 | name            | string                                                      | Name of the policy                                                                         |
 | description     | string                                                      | Description of the policy                                                                  |
-| isAttachable    | bool                                                        | Denotes if the policy can be attached                                                      |
+| isAttachable    | bool                                                        | Whether the policy can be attached                                                         |
 | attachmentCount | int                                                         | The number of principal entities (users, groups, and roles) that the policy is attached to |
 | createDate      | time                                                        | Time when the policy was created                                                           |
 | updateDate      | time                                                        | Time when the policy was updated                                                           |

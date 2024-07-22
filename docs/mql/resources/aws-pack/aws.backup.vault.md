@@ -27,5 +27,5 @@ The `aws.backup.vault` resource provides fields representing an individual AWS B
 | recoveryPoints   | &#91;&#93;[aws.backup.vaultRecoveryPoint](aws.backup.vaultrecoverypoint.md) | List of recovery points stored in the backup vault |
 | region           | string                                                                      | The region of the vault                            |
 | createdAt        | time                                                                        | Date the backup vault was created                  |
-| locked           | bool                                                                        | Is the backup locked                               |
+| locked           | bool                                                                        | Whether the backup is locked                       |
 | encryptionKeyArn | string                                                                      | The ARN of the encryption key                      |

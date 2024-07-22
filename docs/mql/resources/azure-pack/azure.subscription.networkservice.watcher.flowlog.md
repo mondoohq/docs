@@ -27,7 +27,7 @@ Azure Network Watcher flow log
 | type               | string            | Network watcher flow log type                       |
 | etag               | string            | Network watcher flow log etag                       |
 | provisioningState  | string            | Network watcher flow log provisioning state         |
-| enabled            | bool              | whether the network watcher flow log is enabled     |
+| enabled            | bool              | Whether the network watcher flow log is enabled     |
 | storageAccountId   | string            | Network watcher flow log storage account identifier |
 | targetResourceId   | string            | Network watcher flow log target resource identifier |
 | targetResourceGuid | string            | Network watcher flow log target resource guid       |

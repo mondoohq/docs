@@ -20,14 +20,14 @@ The `aws.apigateway.stage` resource provides fields representing an individual s
 
 **Fields**
 
-| ID             | TYPE   | DESCRIPTION                                           |
-| -------------- | ------ | ----------------------------------------------------- |
-| arn            | string | ARN for the REST API stage                            |
-| name           | string | Name for the stage                                    |
-| tracingEnabled | bool   | Bool that denotes if tracing is enabled for the stage |
-| description    | string | Description for the stage                             |
-| deploymentId   | string | ID of the deployment the stage is attached to         |
-| methodSettings | dict   | Method settings for the stage                         |
+| ID             | TYPE   | DESCRIPTION                                   |
+| -------------- | ------ | --------------------------------------------- |
+| arn            | string | ARN for the REST API stage                    |
+| name           | string | Name for the stage                            |
+| tracingEnabled | bool   | Whether tracing is enabled for the stage      |
+| description    | string | Description for the stage                     |
+| deploymentId   | string | ID of the deployment the stage is attached to |
+| methodSettings | dict   | Method settings for the stage                 |
 
 **Examples**
 

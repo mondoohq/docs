@@ -18,8 +18,8 @@ Microsoft group
 | ----------------------------- | --------------------------------------------- | --------------------------------------------------------------------- |
 | id                            | string                                        | Group ID                                                              |
 | displayName                   | string                                        | Group display name                                                    |
-| securityEnabled               | bool                                          | Group security enabled status                                         |
-| mailEnabled                   | bool                                          | Group email enabled status                                            |
+| securityEnabled               | bool                                          | Whether group security is enabled                                     |
+| mailEnabled                   | bool                                          | Whether group email is enabled status                                 |
 | mailNickname                  | string                                        | Group email nickname                                                  |
 | mail                          | string                                        | Group email                                                           |
 | visibility                    | string                                        | Group visibility state                                                |

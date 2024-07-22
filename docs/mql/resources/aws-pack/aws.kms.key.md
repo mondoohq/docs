@@ -20,10 +20,10 @@ The `aws.kms.key` resource provides fields for assessing the configuration of in
 
 **Fields**
 
-| ID                 | TYPE   | DESCRIPTION                                         |
-| ------------------ | ------ | --------------------------------------------------- |
-| id                 | string | Unique identifier for the key                       |
-| arn                | string | ARN of the key                                      |
-| region             | string | Region the key lives in                             |
-| keyRotationEnabled | bool   | Bool that specifies whether key rotation is enabled |
-| metadata           | dict   | Metadata for the key                                |
+| ID                 | TYPE   | DESCRIPTION                     |
+| ------------------ | ------ | ------------------------------- |
+| id                 | string | Unique identifier for the key   |
+| arn                | string | ARN of the key                  |
+| region             | string | Region the key lives in         |
+| keyRotationEnabled | bool   | Whether key rotation is enabled |
+| metadata           | dict   | Metadata for the key            |

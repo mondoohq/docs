@@ -14,9 +14,9 @@ x509 certificate PKIX extension
 
 **Fields**
 
-| ID         | TYPE   | DESCRIPTION                 |
-| ---------- | ------ | --------------------------- |
-| id         | string | ID                          |
-| identifier | string | Extension identifier        |
-| critical   | bool   | Flag for critical extension |
-| value      | string | Extension value             |
+| ID         | TYPE   | DESCRIPTION                       |
+| ---------- | ------ | --------------------------------- |
+| id         | string | ID                                |
+| identifier | string | Extension identifier              |
+| critical   | bool   | Whether the extension is critical |
+| value      | string | Extension value                   |

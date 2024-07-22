@@ -22,7 +22,7 @@ Kubernetes API resources
 | ------------ | ---------------- | --------------------------------------------- |
 | name         | string           | Plural name of the resource                   |
 | singularName | string           | Singular name of the resource                 |
-| namespaced   | bool             | Whether a resource is namespaced or not       |
+| namespaced   | bool             | Whether a resource is namespaced              |
 | group        | string           | Preferred group of the resource               |
 | version      | string           | Preferred version of the resource             |
 | kind         | string           | Kubernetes object type                        |

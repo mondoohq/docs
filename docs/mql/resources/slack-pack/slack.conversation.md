@@ -23,8 +23,8 @@ Slack conversation
 | locale             | string                                | IETF language code that represents chosen language                              |
 | topic              | dict                                  | Information about the channel topic                                             |
 | purpose            | dict                                  | Information about the channel purpose                                           |
-| isArchived         | bool                                  | Indicates that the conversation is archived                                     |
-| isOpen             | bool                                  | Indicates that the conversation is open                                         |
+| isArchived         | bool                                  | Whether the conversation is archived                                            |
+| isOpen             | bool                                  | Whether the conversation is open                                                |
 | isPrivate          | bool                                  | Whether the conversation is privileged between two or more members              |
 | isIM               | bool                                  | Whether the conversation is a direct message                                    |
 | isMpim             | bool                                  | Whether the conversation is private between multiple users                      |

@@ -14,9 +14,9 @@ Google Workspace domain
 
 **Fields**
 
-| ID           | TYPE   | DESCRIPTION                                  |
-| ------------ | ------ | -------------------------------------------- |
-| domainName   | string | The domain name of the customer              |
-| isPrimary    | bool   | Indicates if the domain is a primary domain  |
-| verified     | bool   | Indicates the verification state of a domain |
-| creationTime | time   | Creation time of the domain                  |
+| ID           | TYPE   | DESCRIPTION                            |
+| ------------ | ------ | -------------------------------------- |
+| domainName   | string | The domain name of the customer        |
+| isPrimary    | bool   | Whether the domain is a primary domain |
+| verified     | bool   | Whether the domain is verified         |
+| creationTime | time   | Creation time of the domain            |

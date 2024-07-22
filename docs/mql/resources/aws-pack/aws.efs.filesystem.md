@@ -25,7 +25,7 @@ The `aws.efs.filesystem` resource provides fields for assessing the configuratio
 | name             | string                        | Name of the file system                                                    |
 | id               | string                        | ID of the file system                                                      |
 | arn              | string                        | ARN of the file system                                                     |
-| encrypted        | bool                          | Whether or not the file system is encrypted                                |
+| encrypted        | bool                          | Whether the file system is encrypted                                       |
 | kmsKey           | [aws.kms.key](aws.kms.key.md) | KMS key used for encryption of the file system                             |
 | backupPolicy     | dict                          | Backup policy for the file system                                          |
 | region           | string                        | Region in which the file system exists                                     |

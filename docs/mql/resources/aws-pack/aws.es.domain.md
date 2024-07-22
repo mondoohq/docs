@@ -20,15 +20,15 @@ The `aws.es.domain` resource provides fields for assessing the configuration of 
 
 **Fields**
 
-| ID                          | TYPE              | DESCRIPTION                                        |
-| --------------------------- | ----------------- | -------------------------------------------------- |
-| arn                         | string            | ARN for the Elasticsearch domain                   |
-| encryptionAtRestEnabled     | bool              | Whether encryption at rest is enabled              |
-| nodeToNodeEncryptionEnabled | bool              | Denoted whether node to node encryption is enabled |
-| name                        | string            | Name of the Elasticsearch domain                   |
-| endpoint                    | string            | Endpoint used to submit index and search requests  |
-| region                      | string            | Region where the domain exists                     |
-| tags                        | map[string]string | Tags for the domain                                |
-| elasticsearchVersion        | string            | The version of Elasticsearch running               |
-| domainId                    | string            | The Elasticsearch domain ID                        |
-| domainName                  | string            | The Elasticsearch domain name                      |
+| ID                          | TYPE              | DESCRIPTION                                       |
+| --------------------------- | ----------------- | ------------------------------------------------- |
+| arn                         | string            | ARN for the Elasticsearch domain                  |
+| encryptionAtRestEnabled     | bool              | Whether encryption at rest is enabled             |
+| nodeToNodeEncryptionEnabled | bool              | Whether node-to-node encryption is enabled        |
+| name                        | string            | Name of the Elasticsearch domain                  |
+| endpoint                    | string            | Endpoint used to submit index and search requests |
+| region                      | string            | Region where the domain exists                    |
+| tags                        | map[string]string | Tags for the domain                               |
+| elasticsearchVersion        | string            | The version of Elasticsearch running              |
+| domainId                    | string            | The Elasticsearch domain ID                       |
+| domainName                  | string            | The Elasticsearch domain name                     |

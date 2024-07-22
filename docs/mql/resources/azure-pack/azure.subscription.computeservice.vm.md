@@ -18,21 +18,21 @@ Azure compute virtual machine
 
 **Fields**
 
-| ID                | TYPE                                                                                                    | DESCRIPTION                    |
-| ----------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------ |
-| id                | string                                                                                                  | VM ID                          |
-| name              | string                                                                                                  | VM name                        |
-| location          | string                                                                                                  | VM location                    |
-| zones             | &#91;&#93;string                                                                                        | VM zones                       |
-| state             | string                                                                                                  | VM state                       |
-| isRunning         | bool                                                                                                    | Indicates if the VM is running |
-| tags              | map[string]string                                                                                       | VM tags                        |
-| type              | string                                                                                                  | VM type                        |
-| properties        | dict                                                                                                    | VM properties                  |
-| extensions        | &#91;&#93;dict                                                                                          | VM extension                   |
-| osDisk            | [azure.subscription.computeService.disk](azure.subscription.computeservice.disk.md)                     | VM compute disk                |
-| dataDisks         | &#91;&#93;[azure.subscription.computeService.disk](azure.subscription.computeservice.disk.md)           | VM compute data disk           |
-| publicIpAddresses | &#91;&#93;[azure.subscription.networkService.ipAddress](azure.subscription.networkservice.ipaddress.md) | VM public IP addresses         |
+| ID                | TYPE                                                                                                    | DESCRIPTION               |
+| ----------------- | ------------------------------------------------------------------------------------------------------- | ------------------------- |
+| id                | string                                                                                                  | VM ID                     |
+| name              | string                                                                                                  | VM name                   |
+| location          | string                                                                                                  | VM location               |
+| zones             | &#91;&#93;string                                                                                        | VM zones                  |
+| state             | string                                                                                                  | VM state                  |
+| isRunning         | bool                                                                                                    | Whether the VM is running |
+| tags              | map[string]string                                                                                       | VM tags                   |
+| type              | string                                                                                                  | VM type                   |
+| properties        | dict                                                                                                    | VM properties             |
+| extensions        | &#91;&#93;dict                                                                                          | VM extension              |
+| osDisk            | [azure.subscription.computeService.disk](azure.subscription.computeservice.disk.md)                     | VM compute disk           |
+| dataDisks         | &#91;&#93;[azure.subscription.computeService.disk](azure.subscription.computeservice.disk.md)           | VM compute data disk      |
+| publicIpAddresses | &#91;&#93;[azure.subscription.networkService.ipAddress](azure.subscription.networkservice.ipaddress.md) | VM public IP addresses    |
 
 **References**
 

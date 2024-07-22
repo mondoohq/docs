@@ -25,4 +25,4 @@ VMware Cloud Director organization VDC resource
 | networkQuota     | int    | Maximum number of network objects allowed (0=unlimited)    |
 | usedNetworkCount | int    | Number of networks in use for/by this VDC                  |
 | vmQuota          | int    | Quota of VMs that can be created in this VDC               |
-| isEnabled        | bool   | Indicates if VDC is enabled for use                        |
+| isEnabled        | bool   | Whether VDC is enabled                                     |

@@ -27,7 +27,7 @@ Amazon CloudFront distribution
 | defaultCacheBehavior | dict                                                                                  | Default cache behavior for the distribution |
 | cacheBehaviors       | &#91;&#93;dict                                                                        | All cache behaviors for the distribution    |
 | httpVersion          | string                                                                                | HTTP version of the distribution            |
-| isIPV6Enabled        | bool                                                                                  | Is the distribution IPV6 enabled            |
-| enabled              | bool                                                                                  | Is the distribution enabled                 |
+| isIPV6Enabled        | bool                                                                                  | Whether the distribution is IPV6 enabled    |
+| enabled              | bool                                                                                  | Whether the distribution is enabled         |
 | priceClass           | string                                                                                | The price class of the distribution         |
 | cnames               | &#91;&#93;string                                                                      | CNAMEs aliases if any for this distribution |

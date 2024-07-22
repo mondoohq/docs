@@ -20,7 +20,7 @@ GitHub repository branch protection
 | requiredStatusChecks           | dict   | Require status checks to pass before merging   |
 | requiredPullRequestReviews     | dict   | Require a pull request before merging          |
 | requiredConversationResolution | dict   | Require conversation resolution before merging |
-| requiredSignatures             | bool   | Require signed commits                         |
+| requiredSignatures             | bool   | Whether signed commits are required            |
 | requireLinearHistory           | dict   | Require linear history                         |
 | enforceAdmins                  | dict   | Include administrators                         |
 | restrictions                   | dict   | Restrict who can push to matching branches     |

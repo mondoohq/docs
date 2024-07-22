@@ -18,8 +18,8 @@ HTTP header for X-XSS-Protection, which is now outdated (replaced by CSP)
 
 **Fields**
 
-| ID      | TYPE   | DESCRIPTION                                                     |
-| ------- | ------ | --------------------------------------------------------------- |
-| enabled | bool   | Enabled when the header value is set to 1; disabled if set to 0 |
-| mode    | string | Mode for XSS filtering                                          |
-| report  | string | Report endpoint for violations (Chromium only)                  |
+| ID      | TYPE   | DESCRIPTION                                                                                     |
+| ------- | ------ | ----------------------------------------------------------------------------------------------- |
+| enabled | bool   | Whether the header is enabled (Enabled when the header value is set to 1; disabled if set to 0) |
+| mode    | string | Mode for XSS filtering                                                                          |
+| report  | string | Report endpoint for violations (Chromium only)                                                  |

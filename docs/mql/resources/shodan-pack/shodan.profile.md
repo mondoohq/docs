@@ -14,9 +14,9 @@ Shodan Search Engine account
 
 **Fields**
 
-| ID          | TYPE   | DESCRIPTION                          |
-| ----------- | ------ | ------------------------------------ |
-| member      | bool   | Indicates if the account is a member |
-| credits     | int    | Number of search credits             |
-| displayName | string | Display name                         |
-| createdAt   | time   | Profile creation time                |
+| ID          | TYPE   | DESCRIPTION                     |
+| ----------- | ------ | ------------------------------- |
+| member      | bool   | Whether the account is a member |
+| credits     | int    | Number of search credits        |
+| displayName | string | Display name                    |
+| createdAt   | time   | Profile creation time           |

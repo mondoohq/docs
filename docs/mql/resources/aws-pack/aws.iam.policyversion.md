@@ -20,10 +20,10 @@ The `aws.iam.policyversion` resource provides fields for assessing the metadata 
 
 **Fields**
 
-| ID               | TYPE   | DESCRIPTION                                           |
-| ---------------- | ------ | ----------------------------------------------------- |
-| arn              | string | ARN of the policy version                             |
-| versionId        | string | Version ID                                            |
-| isDefaultVersion | bool   | Denotes if this version is the policy default version |
-| document         | dict   | JSON statements for this policy version               |
-| createDate       | time   | Time when this policy version was created             |
+| ID               | TYPE   | DESCRIPTION                                        |
+| ---------------- | ------ | -------------------------------------------------- |
+| arn              | string | ARN of the policy version                          |
+| versionId        | string | Version ID                                         |
+| isDefaultVersion | bool   | Whether this version is the policy default version |
+| document         | dict   | JSON statements for this policy version            |
+| createDate       | time   | Time when this policy version was created          |

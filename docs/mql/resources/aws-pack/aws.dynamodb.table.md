@@ -31,7 +31,7 @@ The `aws.dynamodb.table` resource provides fields representing a DynamoDB table.
 | continuousBackups         | dict              | Continuous backups and point-in-time recovery settings for the table                                                              |
 | tags                      | map[string]string | Tags for the table                                                                                                                |
 | createdTime               | time              | The creation time of the table                                                                                                    |
-| deletionProtectionEnabled | bool              | Is deletion protection enabled                                                                                                    |
+| deletionProtectionEnabled | bool              | Whether deletion protection is enabled                                                                                            |
 | globalTableVersion        | string            | The global table version                                                                                                          |
 | id                        | string            | The table ID                                                                                                                      |
 | sizeBytes                 | int               | The total size of the specified table, in bytes. DynamoDB updates this value approximately every six hours.                       |

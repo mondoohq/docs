@@ -14,15 +14,15 @@ vCenter server attached to VCD
 
 **Fields**
 
-| ID            | TYPE   | DESCRIPTION                              |
-| ------------- | ------ | ---------------------------------------- |
-| name          | string | Name of vCenter server                   |
-| isBusy        | bool   | Indicates if vCenter server is busy      |
-| isEnabled     | bool   | Indicates if vCenter server is enabled   |
-| isSupported   | bool   | Indicates if vCenter server is supported |
-| listenerState | string | vCenter listener state                   |
-| status        | string | vCenter status                           |
-| userName      | string | User name to connect to the server       |
-| vcVersion     | string | Version of the vCenter server            |
-| uuid          | string | Instance UUID of the vCenter server      |
-| vsmIP         | string | VSM IP                                   |
+| ID            | TYPE   | DESCRIPTION                         |
+| ------------- | ------ | ----------------------------------- |
+| name          | string | Name of vCenter server              |
+| isBusy        | bool   | Whether vCenter server is busy      |
+| isEnabled     | bool   | Whether vCenter server is enabled   |
+| isSupported   | bool   | Whether vCenter server is supported |
+| listenerState | string | vCenter listener state              |
+| status        | string | vCenter status                      |
+| userName      | string | User name to connect to the server  |
+| vcVersion     | string | Version of the vCenter server       |
+| uuid          | string | Instance UUID of the vCenter server |
+| vsmIP         | string | VSM IP                              |

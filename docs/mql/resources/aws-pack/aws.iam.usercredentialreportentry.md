@@ -28,21 +28,21 @@ aws.iam.usercredentialreportentry(properties map[string]string)
 | ------------------------- | ------------------------------- | -------------------------------------------- |
 | properties                | map[string]string               | properties on the IAM user credential report |
 | arn                       | string                          | ARN for the credential report                |
-| accessKey1Active          | bool                            | Denotes if the access key is active          |
+| accessKey1Active          | bool                            | Whether the access key is active             |
 | accessKey1LastRotated     | time                            | Time when key was last rotated               |
 | accessKey1LastUsedDate    | time                            | Time when key was last used                  |
 | accessKey1LastUsedRegion  | string                          | Region in which the key was last used        |
 | accessKey1LastUsedService | string                          | Service that last used the key               |
-| accessKey2Active          | bool                            | Denotes if the access key is active          |
+| accessKey2Active          | bool                            | Whether the access key is active             |
 | accessKey2LastRotated     | time                            | Time when key was last rotated               |
 | accessKey2LastUsedDate    | time                            | Time when key was last used                  |
 | accessKey2LastUsedRegion  | string                          | Region in which the key was last used        |
 | accessKey2LastUsedService | string                          | Service that last used the key               |
-| cert1Active               | bool                            | Denotes if the cert is active                |
+| cert1Active               | bool                            | Whether the cert is active                   |
 | cert1LastRotated          | time                            | Time when the cert was last rotated          |
-| cert2Active               | bool                            | Denotes if the cert is active                |
+| cert2Active               | bool                            | Whether the cert is active                   |
 | cert2LastRotated          | time                            | Time when the cert was last rotated          |
-| mfaActive                 | bool                            | Denotes if mfa is active in the account      |
+| mfaActive                 | bool                            | Whether MFA is active in the account         |
 | passwordEnabled           | bool                            | Whether passwords are enabled                |
 | passwordLastChanged       | time                            | Time when the password was last changed      |
 | passwordLastUsed          | time                            | Time when the password was last used         |

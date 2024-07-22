@@ -37,6 +37,6 @@ The `aws.autoscaling.group` resource provides fields representing an individual 
 | maxInstanceLifetime     | int                                               | The maximum amount of time, in seconds, that an instance can be in service                  |
 | desiredCapacity         | int                                               | The desired size of the group                                                               |
 | availabilityZones       | &#91;&#93;string                                  | List of availability zones associated with the group                                        |
-| capacityRebalance       | bool                                              | Indicates whether Capacity Rebalancing is enabled                                           |
+| capacityRebalance       | bool                                              | Whether Capacity Rebalancing is enabled                                                     |
 | defaultInstanceWarmup   | int                                               | The duration of the default instance warmup, in seconds                                     |
 | instances               | &#91;&#93;[aws.ec2.instance](aws.ec2.instance.md) | The EC2 instances associated with the group                                                 |

@@ -25,8 +25,8 @@ Ansible Play
 | becomeFlags       | string                                          | Become flags                                    |
 | strategy          | string                                          | Strategy                                        |
 | maxFailPercentage | int                                             | Maximum number of hosts to fail before quitting |
-| ignoreUnreachable | bool                                            | Flag to ignore unreachable hosts                |
-| anyErrorsFatal    | bool                                            | Flag to finish fatal on any error               |
+| ignoreUnreachable | bool                                            | Whether to ignore unreachable hosts             |
+| anyErrorsFatal    | bool                                            | Whether to finish fatal on any error            |
 | vars              | map[string]dict                                 | Playbook variables                              |
 | roles             | &#91;&#93;string                                | Roles                                           |
 | tasks             | &#91;&#93;[ansible.task](ansible.task.md)       | Tasks                                           |

@@ -26,7 +26,7 @@ AWS Elastic Load Balancer (ELB) Target Group
 | protocol                   | string                                                  | Protocol for the load balancer target group                                        |
 | protocolVersion            | string                                                  | Protocol version for the load balancer target group                                |
 | ipAddressType              | string                                                  | IP address type for the load balancer target group (IPv4, IPv6)                    |
-| healthCheckEnabled         | bool                                                    | True if health check is enabled for the load balancer target group                 |
+| healthCheckEnabled         | bool                                                    | Whether health check is enabled for the load balancer target group                 |
 | healthCheckIntervalSeconds | int                                                     | Health check interval for the load balancer target group                           |
 | healthCheckPath            | string                                                  | Health check path for the load balancer target group                               |
 | healthCheckPort            | string                                                  | Health check port for the load balancer target group                               |

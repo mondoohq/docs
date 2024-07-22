@@ -27,8 +27,8 @@ Google Cloud (GCP) BigQuery table
 | location               | string            | Location of the table                                                                    |
 | description            | string            | User-friendly description of the table                                                   |
 | labels                 | map[string]string | User-provided labels                                                                     |
-| useLegacySQL           | bool              | Indicates if Legacy SQL is used for the view query                                       |
-| requirePartitionFilter | bool              | Indicates if queries that reference this table must specify a partition filter           |
+| useLegacySQL           | bool              | Whether the view query uses Legacy SQL                                                   |
+| requirePartitionFilter | bool              | Whether queries that reference this table must specify a partition filter                |
 | created                | time              | Creation timestamp                                                                       |
 | modified               | time              | Modified timestamp                                                                       |
 | numBytes               | int               | Size of the table in bytes                                                               |

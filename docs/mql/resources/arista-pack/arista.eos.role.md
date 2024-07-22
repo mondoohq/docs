@@ -21,5 +21,5 @@ Arista EOS role resource
 | ID      | TYPE           | DESCRIPTION                                               |
 | ------- | -------------- | --------------------------------------------------------- |
 | name    | string         | Name of role                                              |
-| default | bool           | Flag for default role                                     |
+| default | bool           | Whether this is the default role                          |
 | rules   | &#91;&#93;dict | List of rules that restricts access to specified commands |

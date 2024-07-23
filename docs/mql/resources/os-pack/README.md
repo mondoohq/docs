@@ -59,6 +59,7 @@ Resources included in this pack:
 | [machine.system](machine.system.md)                     | SMBIOS system information                                  |
 | [macos](macos.md)                                       | macOS specific resources                                   |
 | [macos.alf](macos.alf.md)                               | macOS application layer firewall (ALF) service             |
+| [macos.systemExtension](macos.systemextension.md)       | macOS system extension                                     |
 | [macos.systemsetup](macos.systemsetup.md)               | macOS machine settings                                     |
 | [macos.timemachine](macos.timemachine.md)               | macOS Time Machine                                         |
 | [mondoo.eol](mondoo.eol.md)                             | Platform end-of-life information                           |

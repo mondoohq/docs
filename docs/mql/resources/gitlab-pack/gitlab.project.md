@@ -48,4 +48,6 @@ GitLab project
 | mergeMethod                               | string                                                                        | Merge methods for the project                                                  |
 | approvalSettings                          | [gitlab.project.approvalSettings](gitlab.project.approvalsettings.md)         | Approval settings for the project                                              |
 | protectedBranches                         | &#91;&#93;[gitlab.project.protectedBranch](gitlab.project.protectedbranch.md) | Protected branches settings for the project                                    |
-| projectMembers                            | &#91;&#93;[gitlab.project.member](gitlab.project.member.md)                   | To fetch the list of members in the project with their roles                   |
+| projectMembers                            | &#91;&#93;[gitlab.project.member](gitlab.project.member.md)                   | List of members in the project with their roles                                |
+| projectFiles                              | &#91;&#93;[gitlab.project.file](gitlab.project.file.md)                       | List of files in the project repository                                        |
+| webhooks                                  | &#91;&#93;[gitlab.project.webhook](gitlab.project.webhook.md)                 | List of webhooks for the project                                               |

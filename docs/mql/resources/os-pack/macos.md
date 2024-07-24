@@ -14,8 +14,9 @@ macOS specific resources
 
 **Fields**
 
-| ID                    | TYPE            | DESCRIPTION                          |
-| --------------------- | --------------- | ------------------------------------ |
-| userPreferences       | map[string]dict | macOS user defaults                  |
-| userHostPreferences   | map[string]dict | macOS user defaults for current host |
-| globalAccountPolicies | dict            | macOS global account policies        |
+| ID                    | TYPE                                                        | DESCRIPTION                          |
+| --------------------- | ----------------------------------------------------------- | ------------------------------------ |
+| userPreferences       | map[string]dict                                             | macOS user defaults                  |
+| userHostPreferences   | map[string]dict                                             | macOS user defaults for current host |
+| globalAccountPolicies | dict                                                        | macOS global account policies        |
+| systemExtensions      | &#91;&#93;[macos.systemExtension](macos.systemextension.md) | System extensions                    |

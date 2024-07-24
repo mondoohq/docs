@@ -1,12 +1,12 @@
 ---
-title: gitlab.project.repository.protectedBranch
-id: gitlab.project.repository.protectedBranch
-sidebar_label: gitlab.project.repository.protectedBranch
+title: gitlab.project.protectedBranch
+id: gitlab.project.protectedBranch
+sidebar_label: gitlab.project.protectedBranch
 displayed_sidebar: MQL
 description: GitLab protected branch
 ---
 
-# gitlab.project.repository.protectedBranch
+# gitlab.project.protectedBranch
 
 **Description**
 

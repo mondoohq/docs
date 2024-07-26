@@ -70,6 +70,7 @@ Clusterwide
 Clw
 cmek
 cnames
+cni
 CODENAME
 codeql
 computeservice
@@ -112,6 +113,7 @@ eig
 eip
 ekm
 Ekoslaq
+eksbuild
 enableforcedlogoff
 enablesecuritysignature
 ERXy
@@ -296,7 +298,6 @@ securetty
 securityimages
 SEfirewall
 serviceprincipals
-shodan
 singlequeryargument
 sizeconstraintstatement
 skype

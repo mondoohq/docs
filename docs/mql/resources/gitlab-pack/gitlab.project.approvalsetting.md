@@ -1,12 +1,12 @@
 ---
-title: gitlab.project.approvalSettings
-id: gitlab.project.approvalSettings
-sidebar_label: gitlab.project.approvalSettings
+title: gitlab.project.approvalSetting
+id: gitlab.project.approvalSetting
+sidebar_label: gitlab.project.approvalSetting
 displayed_sidebar: MQL
 description: GitLab project approval settings
 ---
 
-# gitlab.project.approvalSettings
+# gitlab.project.approvalSetting
 
 **Description**
 

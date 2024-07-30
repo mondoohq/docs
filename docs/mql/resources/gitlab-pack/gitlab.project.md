@@ -46,7 +46,7 @@ GitLab project
 | requirementsEnabled                       | bool                                                                          | Whether the requirements feature is enabled                                    |
 | approvalRules                             | &#91;&#93;[gitlab.project.approvalRule](gitlab.project.approvalrule.md)       | Approval rules for the project                                                 |
 | mergeMethod                               | string                                                                        | Merge methods for the project                                                  |
-| approvalSettings                          | [gitlab.project.approvalSettings](gitlab.project.approvalsettings.md)         | Approval settings for the project                                              |
+| approvalSettings                          | [gitlab.project.approvalSetting](gitlab.project.approvalsetting.md)           | Approval settings for the project                                              |
 | protectedBranches                         | &#91;&#93;[gitlab.project.protectedBranch](gitlab.project.protectedbranch.md) | Protected branches settings for the project                                    |
 | projectMembers                            | &#91;&#93;[gitlab.project.member](gitlab.project.member.md)                   | List of members in the project with their roles                                |
 | projectFiles                              | &#91;&#93;[gitlab.project.file](gitlab.project.file.md)                       | List of files in the project repository                                        |

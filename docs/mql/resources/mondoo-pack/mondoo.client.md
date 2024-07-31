@@ -1,12 +1,12 @@
 ---
-title: mondoo.agent
-id: mondoo.agent
-sidebar_label: mondoo.agent
+title: mondoo.client
+id: mondoo.client
+sidebar_label: mondoo.client
 displayed_sidebar: MQL
 description: Mondoo Client
 ---
 
-# mondoo.agent
+# mondoo.client
 
 **Description**
 

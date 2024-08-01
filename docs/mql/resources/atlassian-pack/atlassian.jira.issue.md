@@ -14,9 +14,10 @@ Issue
 
 **Fields**
 
-| ID          | TYPE   | DESCRIPTION |
-| ----------- | ------ | ----------- |
-| id          | string | Issue ID    |
-| project     | string | Project     |
-| status      | string | Status      |
-| description | string | Description |
+| ID          | TYPE   | DESCRIPTION              |
+| ----------- | ------ | ------------------------ |
+| id          | string | Issue ID                 |
+| project     | string | Project                  |
+| status      | string | Status                   |
+| description | string | Description              |
+| createdAt   | time   | Issue create time in UTC |

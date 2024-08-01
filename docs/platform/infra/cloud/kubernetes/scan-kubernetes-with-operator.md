@@ -38,11 +38,11 @@ import Partial from "../../../partials/\_editor-owner.mdx";
 
    - New space setup: After creating a new Mondoo account or creating a new space, the initial setup guide welcomes you. Select **BROWSE INTEGRATIONS** and then select **Kubernetes**.
 
-  ![Welcome to Mondoo Page](/img/platform/start/welcome_to_mondoo.png)
+     ![Welcome to Mondoo Page](/img/platform/start/welcome_to_mondoo.png)
 
    - INTEGRATIONS page: In the side navigation bar, under **INTEGRATIONS**, select **Add New Integration**. Under Cloud Security, select **Kubernetes**.
 
-   ![k8s-settings](/img/platform/infra/cloud/kubernetes/integration-setup.png)
+     ![k8s-settings](/img/platform/infra/cloud/kubernetes/integration-setup.png)
 
 2. Type a name for the integration. This name identifies the integration in lists and distinguishes it from other integrations in your space. You can't change the name after you leave this page.
 

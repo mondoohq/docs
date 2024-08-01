@@ -14,9 +14,14 @@ Mondoo Asset
 
 **Fields**
 
-| ID        | TYPE                                            | DESCRIPTION      |
-| --------- | ----------------------------------------------- | ---------------- |
-| name      | string                                          | Asset name       |
-| mrn       | string                                          | Asset identifier |
-| platform  | string                                          | Platform name    |
-| resources | &#91;&#93;[mondoo.resource](mondoo.resource.md) | Asset resources  |
+| ID          | TYPE                                            | DESCRIPTION                            |
+| ----------- | ----------------------------------------------- | -------------------------------------- |
+| name        | string                                          | Asset name                             |
+| mrn         | string                                          | Asset identifier                       |
+| platform    | string                                          | Platform name                          |
+| annotations | map[string]string                               | Annotations associated with this asset |
+| labels      | map[string]string                               | Labels associated with this asset      |
+| updatedAt   | time                                            | Time this asset was last updated       |
+| scoreValue  | int                                             | Asset score value                      |
+| scoreGrade  | string                                          | Asset score grade                      |
+| resources   | &#91;&#93;[mondoo.resource](mondoo.resource.md) | Asset resources                        |

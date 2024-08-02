@@ -28,13 +28,6 @@ If a workload depends on another workload, the admission controller only scans t
 
 The owner workload is the definition where you can fix issues permanently. To learn more, read the [Kubernetes documentation](https://kubernetes.io/docs/concepts/overview/working-with-objects/owners-dependents/).
 
-Mondoo scans workloads according to the activated policies. [Learn more](/platform/security/posture/overview)
-
-Scan results appear in the CI/CD view when running the admission webhook in **permissive** mode.
-In **enforcing** mode, the scan result also determines whether the workload is applied to the cluster.
-
-For general information about admission controllers, read the [Kubernetes documentation](https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/).
-
 ## Add a Mondoo Kubernetes integration
 
 import Partial from "../../../partials/\_editor-owner.mdx";
@@ -77,7 +70,9 @@ import Partial from "../../../partials/\_editor-owner.mdx";
 
 8. Select the **CREATE KUBERNETES INTEGRATION** button.
 
-## View Kubernetes integrations
+Mondoo scans workloads according to the activated policies. [Learn more.](/platform/security/posture/overview)
+
+## View a Kubernetes integration
 
 Once you've added a Kubernetes Operator Integration you can view these integrations by going to the **Integrations** page and selecting **Kubernetes**
 
@@ -87,7 +82,7 @@ To view additional status details or change an integration's configuration, sele
 
 ![k8s-integration-detail](/img/platform/infra/cloud/kubernetes/integration-details.png)
 
-## Remove Kubernetes integrations
+## Remove a Kubernetes integration
 
 <Partial />{" "}
 

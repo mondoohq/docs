@@ -13,56 +13,9 @@ The Mondoo Kubernetes Operator is Mondoo software that runs in your Kubernetes e
 
 - Scan new nodes as they come online
 
-The operator includes a Kubernetes admission controller that performs a security scan on each deployment introduced into the cluster and reports the results. [Learn more.](/cnspec/cloud/k8s/)
+The Mondoo Kubernetes Operator includes a Kubernetes admission controller that performs a security scan on each deployment introduced into the cluster and reports the results. [Learn more.](/cnspec/cloud/k8s/)
 
-### Add a Mondoo Kubernetes integration
-
-import Partial from "../../../partials/\_editor-owner.mdx";
-
-<Partial />{" "}
-
-To set up a Mondoo Kubernetes Operator integration, access the Integrations > Add > GCP page in one of two ways:
-
-- New space setup: After creating a new Mondoo account or creating a new space, the initial setup guide welcomes you. Select **BROWSE INTEGRATIONS** and then select **Kubernetes**.
-
-  ![Welcome to Mondoo Page](/img/platform/start/welcome_to_mondoo.png)
-
-- INTEGRATIONS page: In the side navigation bar, under **INTEGRATIONS**, select **Add New Integration**. Under Cloud Security, select **Kubernetes**.
-
-### Configure a Mondoo Kubernetes integration
-
-<Partial />{" "}
-
-![k8s-settings](/img/platform/infra/cloud/kubernetes/integration-setup.png)
-
-1. Type a name for the integration. This name identifies the integration in lists and distinguishes it from other integrations in your space. You can't change the name after you leave this page.
-
-2. To continuously assess the security posture of nodes in your Kubernetes cluster, enable **Scan nodes**.
-
-   Choose how to scan cluster nodes:
-
-   - We strongly recommend that you leave **CronJob-based** selected. It's ideal for most infrastructures. A CronJob executes regularly to run the scans without permanently allocating any resources for Mondoo on cluster nodes.
-
-   - If your nodes tend to run near 100% resource utilization, that leaves no resources available for a CronJob to run a Mondoo scan. If you experience consistently failing Mondoo node scans, select **DaemonSet-based** scanning instead. This approach reserves resources for Mondoo on each cluster node. It relies on a DaemonSet to assure that Mondoo scans the nodes continuously, even during high-traffic times.
-
-3. To continuously assess the security posture of workloads and resources in your cluster, enable **Scan workloads**.
-
-   ![Kubernetes integration](/img/platform/infra/cloud/kubernetes/integration-setup-2.png)
-
-4. To scan container images, enable **Scan workload images**.
-
-5. To control which namespaces Mondoo scans, enable **Filter namespaces** and list the namespaces to which you want to allow or deny access.
-
-6. To assess the security of every change applied to your Kubernetes cluster and display the results in the CI/CD view, enable **Scan incoming deployments**.
-
-7. If you enable **Scan incoming deployments**, choose the tool to use for managing the Mondoo admission controller's certificates: **CertManager** or **OpenShift**.
-
-8. Select the **CREATE KUBERNETES INTEGRATION** button.
-
-### Scan incoming deployments
-
-Whenever a supported workload type is created or updated, the Kubernetes admission controller scans it.
-Currently, the admission controller can scan these workload types:
+Whenever a supported workload type is created or updated, the Kubernetes admission controller scans it. Currently, the admission controller can scan these workload types:
 
 - Pods
 - Deployments
@@ -71,17 +24,55 @@ Currently, the admission controller can scan these workload types:
 - Jobs
 - CronJobs
 
-If a workload is dependent on another workload, the admission controller only scans the owner workload. For example, if a Deployment creates a pod, the admission controller skips the pod and scans the Deployment.
-The owner workload is the definition where you can fix issues permanently.
-For more details, see the [Kubernetes documentation](https://kubernetes.io/docs/concepts/overview/working-with-objects/owners-dependents/).
+If a workload depends on another workload, the admission controller only scans the owner workload. For example, if a Deployment creates a pod, the admission controller skips the pod and scans the Deployment.
 
-Mondoo scans workloads according to the activated policies. [Learn more](/platform/security/posture/overview)
+The owner workload is the definition where you can fix issues permanently. To learn more, read the [Kubernetes documentation](https://kubernetes.io/docs/concepts/overview/working-with-objects/owners-dependents/).
 
-Scan results appear in the CI/CD view when running the admission webhook in **permissive** mode.
-In **enforcing** mode, the scan result also determines whether the workload is applied to the cluster.
-For general information about admission controllers, see the [Kubernetes documentation](https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/).
+## Add a Mondoo Kubernetes integration
 
-## View Kubernetes integrations
+import Partial from "../../../partials/\_editor-owner.mdx";
+
+<Partial />{" "}
+
+1. To set up a Mondoo Kubernetes Operator integration, access the Integrations > Add > GCP page in one of two ways:
+
+   - New space setup: After creating a new Mondoo account or creating a new space, the initial setup guide welcomes you. Select **BROWSE INTEGRATIONS** and then select **Kubernetes**.
+
+  ![Welcome to Mondoo Page](/img/platform/start/welcome_to_mondoo.png)
+
+   - INTEGRATIONS page: In the side navigation bar, under **INTEGRATIONS**, select **Add New Integration**. Under Cloud Security, select **Kubernetes**.
+
+   ![k8s-settings](/img/platform/infra/cloud/kubernetes/integration-setup.png)
+
+2. Type a name for the integration. This name identifies the integration in lists and distinguishes it from other integrations in your space. You can't change the name after you leave this page.
+
+3. To continuously assess the security posture of nodes in your Kubernetes cluster, enable **Scan nodes**.
+
+   Choose how to scan cluster nodes:
+
+   - We strongly recommend that you leave **CronJob-based** selected. It's ideal for most infrastructures. A CronJob executes regularly to run the scans without permanently allocating any resources for Mondoo on cluster nodes.
+
+   - If your nodes tend to run near 100% resource utilization, that leaves no resources available for a CronJob to run a Mondoo scan. If you experience consistently failing Mondoo node scans, select **DaemonSet-based** scanning instead. This approach reserves resources for Mondoo on each cluster node. It relies on a DaemonSet to assure that Mondoo scans the nodes continuously, even during high-traffic times.
+
+4. To continuously assess the security posture of workloads and resources in your cluster, enable **Scan workloads**.
+
+   ![Kubernetes integration](/img/platform/infra/cloud/kubernetes/integration-setup-2.png)
+
+5. To scan container images, enable **Scan workload images**.
+
+6. To control which namespaces Mondoo scans, enable **Filter namespaces** and list the namespaces to which you want to allow or deny access.
+
+   You control which namespaces to scan using either the **Allow list** or the **Deny list** boxes. To scan only the namespaces you specify, type them in the **Allow list** box. To scan all namespaces except the ones you specify, type the namespaces to skip in the **Deny list** box. If you list multiple namespaces, separate them with line breaks.
+
+   By default, the `mondoo-operator` namespace is in the **Deny list** box because there's no need to scan Mondoo Operator workloads. However, if you prefer to include the Mondoo Operator in your scans, you can remove it from the **Deny list** box.
+
+7. To assess the security of every change applied to your Kubernetes cluster and display the results in the CI/CD view, enable **Scan incoming deployments** and choose the tool to use for managing the Mondoo admission controller's certificates: **CertManager** or **OpenShift**.
+
+8. Select the **CREATE KUBERNETES INTEGRATION** button.
+
+Mondoo scans workloads according to the activated policies. [Learn more.](/platform/security/posture/overview)
+
+## View a Kubernetes integration
 
 Once you've added a Kubernetes Operator Integration you can view these integrations by going to the **Integrations** page and selecting **Kubernetes**
 
@@ -91,7 +82,7 @@ To view additional status details or change an integration's configuration, sele
 
 ![k8s-integration-detail](/img/platform/infra/cloud/kubernetes/integration-details.png)
 
-## Remove Kubernetes integrations
+## Remove a Kubernetes integration
 
 <Partial />{" "}
 

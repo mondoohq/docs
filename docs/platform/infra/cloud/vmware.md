@@ -62,40 +62,42 @@ It is not required to use the Mondoo VMware appliance. Instead, you can provisio
 **Setup**
 
 1. Download the [Mondoo OVA image](https://releases.mondoo.com/vmware/).
+
 2. Import the Mondoo OVA image.
+
 3. Launch the Mondoo OVA image.
 
 ### Launch the appliance using the vCenter web UI
 
 1. Right-click on your Datacenter and select **Deploy OVF Template**.
 
-![Deploy OVF Template](/img/platform/infra/cloud/vmware/vmware-deploy-ovf-template.png)
+   ![Deploy OVF Template](/img/platform/infra/cloud/vmware/vmware-deploy-ovf-template.png)
 
 2. Select an OVF template using **URL** or **Local file** and select **Next**.
 
-![Select OVF Template](/img/platform/infra/cloud/vmware/vmware-select-ovf-template.png)
+   ![Select OVF Template](/img/platform/infra/cloud/vmware/vmware-select-ovf-template.png)
 
 3. Select a name and folder where you want to deploy the Mondoo appliance and select **Next**.
 
-![Select folder](/img/platform/infra/cloud/vmware/vmware-select-name-folder.png)
+   ![Select folder](/img/platform/infra/cloud/vmware/vmware-select-name-folder.png)
 
 4. Select any compute resource to run the Mondoo appliance and select **Next**.
 
 5. Review the details and select **Next**.
 
-![Review details](/img/platform/infra/cloud/vmware/vmware-review-details.png)
+   ![Review details](/img/platform/infra/cloud/vmware/vmware-review-details.png)
 
 6. Select the appropriate storage (such as `datastore2`) and select **Next**.
 
-![Select Storage](/img/platform/infra/cloud/vmware/vmware-select-storage.png)
+   ![Select Storage](/img/platform/infra/cloud/vmware/vmware-select-storage.png)
 
 7. Select destination network (such as `VM Network`) and select **Next**.
 
-![Select Network](/img/platform/infra/cloud/vmware/vmware-select-network.png)
+   ![Select Network](/img/platform/infra/cloud/vmware/vmware-select-network.png)
 
 8. Review your complete configuration for the Mondoo appliance and select **Next**.
 
-![Ready to complete](/img/platform/infra/cloud/vmware/vmware-ready.png)
+   ![Ready to complete](/img/platform/infra/cloud/vmware/vmware-ready.png)
 
 9. Launch the Mondoo appliance.
 
@@ -185,7 +187,7 @@ nameserver 192.168.1.1
 nameserver 192.168.1.2
 ```
 
-5. Now restart the `networking` service:
+5. Restart the `networking` service:
 
 ```bash
 systemctl restart networking
@@ -232,9 +234,9 @@ sudo cnspec login -t <paste token here> --config /etc/opt/mondoo/mondoo.yml
    - The `Platform End-of-Life Policy`
    - The `Platform Vulnerability Policy`
 
-As their names suggest, they scan the vSphere and determine if it has reached its end-of-life and if there are any known vulnerabilities.
+   As their names suggest, they scan the vSphere and determine if it has reached its end-of-life and if there are any known vulnerabilities.
 
-Use the `--incognito` switch to disable sending the results to the Mondoo Console.
+   Use the `--incognito` switch to disable sending the results to the Mondoo Console.
 
 ```bash
 # vSphere 6.x / 7.x
@@ -243,7 +245,7 @@ cnspec scan vsphere user@host --ask-pass
 
 4. Activate the policies against which Mondoo assesses your VMware.
 
-To learn more, read [Manage Policies](/platform/security/posture/policies/).
+   To learn more, read [Manage Policies](/platform/security/posture/policies/).
 
 A good place to start scanning is the `VMware vSphere ESXi Security Baseline by Mondoo` policy.
 
@@ -253,11 +255,11 @@ A good place to start scanning is the `VMware vSphere ESXi Security Baseline by 
 cnspec scan vsphere user@host --ask-pass
 ```
 
-Since we did not pass the `--incognito` switch, the command output will also include a link to the Mondoo Console, where you can review the scan results.
+Because you did not pass the `--incognito` switch, the command output includes a link to the Mondoo Console, where you can review the scan results.
 
 ## Set up cnspec inventory
 
-cnspec is able to leverage an inventory to scan multiple VMware assets at the same time. An inventory is a list of systems with their connection types and accounts.
+cnspec can use an inventory file to scan multiple VMware assets at the same time. An inventory is a list of systems with their connection types and accounts.
 
 ### cnspec inventory with embedded secrets
 
@@ -286,9 +288,9 @@ spec:
               - host-machines
 ```
 
-Using a user account with `root` privileges, store the content in `/etc/opt/mondoo/inventory.yml` to ensure that cnspec picks up the inventory automatically.
+1. Using a user account with `root` privileges, store the content in `/etc/opt/mondoo/inventory.yml` to ensure that cnspec picks up the inventory automatically.
 
-Test that the `inventory.yml` is working:
+2. Test that the `inventory.yml` is working:
 
 ```bash
 mondoo@debian:~$ sudo cnspec scan --inventory-file /etc/opt/mondoo/inventory.yml
@@ -306,13 +308,13 @@ mondoo@debian:~$ sudo cnspec scan --inventory-file /etc/opt/mondoo/inventory.yml
 ...
 ```
 
-Restart the service, so that the new inventory is loaded:
+2. Restart the service, so that the new inventory is loaded:
 
 ```bash
 sudo systemctl restart cnspec
 ```
 
-Check if the `inventory.yml` is loaded:
+3. Check if the `inventory.yml` is loaded:
 
 ```bash
 sudo journalctl -u cnspec.service
@@ -327,7 +329,7 @@ Dec 29 16:38:05 debian cnspec[1294]: → loaded configuration from /etc/opt/mond
 Dec 29 16:38:06 debian cnspec[1294]: → start cnspec background service
 ```
 
-Enable the service so that after the VM restarts, the service starts automatically:
+4. Enable the service so that after the VM restarts, the service starts automatically:
 
 ```bash
 sudo systemctl enable cnspec
@@ -335,7 +337,7 @@ sudo systemctl enable cnspec
 
 ### cnspec inventory YAML with encrypted file vault
 
-Configure cnspec's vault to use the encrypted file vault. Execute the following commands as `mondoo` user (not as `root` user). Run the following command to create the vault configuration:
+1. Configure cnspec's vault to use the encrypted file vault. Execute the following commands as `mondoo` user (not as `root` user). Run this command to create the vault configuration:
 
 ```bash
 cnspec vault configure mondoo-client-vault --type encrypted-file --option=password='changeme' --option path='/etc/opt/mondoo/vault.enc'
@@ -349,7 +351,7 @@ spec:
     type: encrypted-file
 ```
 
-Adjust the `/etc/opt/mondoo/inventory.yml` with the proposed configuration to use the encrypted file vault functionality:
+2. Adjust the `/etc/opt/mondoo/inventory.yml` with the proposed configuration to use the encrypted file vault functionality:
 
 ```yaml
 apiVersion: v1
@@ -378,141 +380,28 @@ spec:
     type: encrypted-file
 ```
 
-To store the vSphere login credentials into the encrypted file vault, execute the following command:
+3. To store the vSphere login credentials into the encrypted file vault, execute the following command:
 
 ```bash
 cnspec vault add-secret vcenter '{   "type": "password",   "user": "chris@vsphere.local",   "password": "password" }' --inventory-file /etc/opt/mondoo/inventory.yml
 ```
 
-Now, you can scan the vSphere using the encrypted file vault:
+4. Scan the vSphere using the encrypted file vault:
 
 ```bash
 # Note that you need to run this as root user, as the vault is stored in /etc/opt/mondoo/vault.enc
 sudo cnspec scan --inventory-file /etc/opt/mondoo/inventory.yml
 ```
 
-Once you have verified that the encrypted file vault is working, you can restart the cnspec service:
+5. Once you have verified that the encrypted file vault is working, restart the cnspec service:
 
 ```bash
 systemctl restart cnspec
 ```
 
-## Scan virtual machines using VMware tools
-
-As the first step, we query for available virtual machines that have VMware Tools configured.
-
-```bash
-# open the shell to the vsphere api
-cnspec shell vsphere user@host --ask-pass
-
-# select the platform id for api
-cnspec shell vsphere user@host --ask-pass --platform-id /platformid.api.mondoo.app/runtime/vsphere/instance/ha-host
-```
-
-Within the cnspec shell query the available VMs and their inventory Path.
-
-```javascript
-cnspec> vsphere.datacenters { vms { inventoryPath name  } }
-vsphere.datacenters: [..
-  0: {
-    vms: [
-      0: {
-        name: "mondoo-appliance"
-        inventoryPath: "/Mondoo Datacenter 2/vm/mondoo-appliance"
-      }
-      1: {
-        name: "vCenter"
-        inventoryPath: "/Mondoo Datacenter 2/vm/vCenter"
-      }
-      2: {
-        name: "windows 2022"
-        inventoryPath: "/Mondoo Datacenter 2/vm/windows 2022"
-      }
-    ]
-  }
-  1: {
-    vms: [
-      0: {
-        name: "ubuntu-no-guest-tools"
-        inventoryPath: "/Mondoo Datacenter 1/vm/ubuntu-no-guest-tools"
-      }
-      1: {
-        name: "ubuntu"
-        inventoryPath: "/Mondoo Datacenter 1/vm/ubuntu"
-      }
-    ]
-  }
-]
-```
-
-Next, we query for all VMs and get check if the VMware Guest Tools are installed:
-
-```javascript
-cnspec> vsphere.datacenters { vms { name inventoryPath properties["summary"]["guest"]["toolsStatus"] }}
-vsphere.datacenters: [..
-  0: {
-    vms: [
-      0: {
-        name: "mondoo-appliance"
-        inventoryPath: "/Mondoo Datacenter 2/vm/mondoo-appliance"
-        properties[summary][guest][toolsStatus]: "toolsOk"
-      }
-      1: {
-        name: "vCenter"
-        inventoryPath: "/Mondoo Datacenter 2/vm/vCenter"
-        properties[summary][guest][toolsStatus]: "toolsOk"
-      }
-      2: {
-        name: "windows 2022"
-        inventoryPath: "/Mondoo Datacenter 2/vm/windows 2022"
-        properties[summary][guest][toolsStatus]: "toolsNotRunning"
-      }
-    ]
-  }
-  1: {
-    vms: [
-      0: {
-        name: "ubuntu-no-guest-tools"
-        inventoryPath: "/Mondoo Datacenter 1/vm/ubuntu-no-guest-tools"
-        properties[summary][guest][toolsStatus]: "toolsNotInstalled"
-      }
-      1: {
-        name: "ubuntu"
-        inventoryPath: "/Mondoo Datacenter 1/vm/ubuntu"
-        properties[summary][guest][toolsStatus]: "toolsNotRunning"
-      }
-    ]
-  }
-]
-```
-
-With that information, we can connect to an individual virtual machine via VMware Tools:
-
-```bash
-cnspec scan vsphere vm user@host --password password --insecure --option 'inventoryPath=/Mondoo Datacenter 2/vm/mondoo-appliance' --option guestUser=mondoo --option guestPassword='changeme'
-```
-
-The result would look like this:
-
-```
-cnspec scan vsphere vm mondoo-read@vsphere.local@192.168.51.134 --password changeme --insecure --option 'inventoryPath=/Mondoo Datacenter 2/vm/mondoo-appliance' --option guestUser=mondoo --option guestPassword='changeme'
-→ cnspec 7.15.1 (Space: "//captain.api.mondoo.app/spaces/relaxed-poincare-384428", Service Account: "22y0WDmHloyEvdJEteV5cEvsQTj", Managed Client: "22vUq9U0gN9Uoy2c3UqCaKARSEg")
-→ loaded configuration from /etc/opt/mondoo/mondoo.yml using source --config
-
-→ discover related assets for 1 asset(s)
-→ resolved assets resolved-assets=1
-→ execute policies
-→ synchronize asset found=1
-→ establish connection to asset mondoo-appliance
-→ established connection
-→ run policies for asset asset=//assets.api.mondoo.app/spaces/relaxed-poincare-384428/assets/22y6EAkCdtKawukAEWGxoTezNGg
-
-█████████████████████████████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  50% mondoo-appliance
-```
-
 ## Scan vSphere and ESXi using cnspec
 
-Scan vSphere API, ESXi, and VMs
+Scan vSphere API, ESXi, and VMs:
 
 ```bash
 cnspec scan vsphere mondoo-read@vsphere.local@192.168.51.134 --ask-pass --discover auto
@@ -520,18 +409,14 @@ cnspec scan vsphere mondoo-read@vsphere.local@192.168.51.134 --ask-pass --discov
 
 :::info
 
-The `--discover auto` option will automatically discover all ESXi hosts and the vCenter.
+The `--discover auto` option automatically discovers all ESXi hosts and the vCenter.
 
 :::
 
-Scan vSphere API, ESXi, and VMs
+Scan vSphere API, ESXi, and VMs and automatically discover all ESXi hosts and VMs:
 
 ```bash
 cnspec scan vsphere mondoo-read@vsphere.local@192.168.51.134 --ask-pass --discover all
 ```
 
-:::info
-
-The `--discover all` option automatically discovers all ESXi hosts and VMs.
-
-:::
+---

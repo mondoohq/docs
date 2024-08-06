@@ -32,15 +32,15 @@ For Mondoo to scan assets, it requires read-only user access to the vCenter. To 
 9. On the **Administration** menu, select **Global Permissions** and select **ADD**.
 10. Assign the new role to the new user:
 
-   A. Select the user you created, **mondoo-read**.
+a. Select the user you created, **mondoo-read**.
 
-   B. Select the role you created, **Mondoo Read-only role**.
+b. Select the role you created, **Mondoo Read-only role**.
 
-   C. Check **Propagate to children**.
+c. Check **Propagate to children**.
 
-   D. Select **OK**.
+d. Select **OK**.
 
-   ![add read-only role to mondoo user](/img/platform/infra/cloud/vmware/add-permission-to-mondoo-read-account.png)
+![add read-only role to mondoo user](/img/platform/infra/cloud/vmware/add-permission-to-mondoo-read-account.png)
 
 ## Mondoo VMware appliance
 
@@ -234,9 +234,9 @@ sudo cnspec login -t <paste token here> --config /etc/opt/mondoo/mondoo.yml
    - The `Platform End-of-Life Policy`
    - The `Platform Vulnerability Policy`
 
-As their names suggest, they scan the vSphere and determine if it has reached its end-of-life and if there are any known vulnerabilities.
+   As their names suggest, they scan the vSphere and determine if it has reached its end-of-life and if there are any known vulnerabilities.
 
-Use the `--incognito` switch to disable sending the results to the Mondoo Console.
+   Use the `--incognito` switch to disable sending the results to the Mondoo Console.
 
 ```bash
 # vSphere 6.x / 7.x
@@ -255,7 +255,7 @@ A good place to start scanning is the `VMware vSphere ESXi Security Baseline by 
 cnspec scan vsphere user@host --ask-pass
 ```
 
-Since we did not pass the `--incognito` switch, the command output will also include a link to the Mondoo Console, where you can review the scan results.
+Because you did not pass the `--incognito` switch, the command output includes a link to the Mondoo Console, where you can review the scan results.
 
 ## Set up cnspec inventory
 

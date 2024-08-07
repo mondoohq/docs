@@ -231,6 +231,7 @@ sudo cnspec login -t <paste token here> --config /etc/opt/mondoo/mondoo.yml
 ```
 
 3. Test that cnspec can reach the vSphere API. The command below runs the two default Mondoo policies:
+
    - The `Platform End-of-Life Policy`
    - The `Platform Vulnerability Policy`
 

@@ -58,6 +58,7 @@ github.repository(name string)
 | allMergeRequests    | &#91;&#93;[github.mergeRequest](github.mergerequest.md) | List of all merge requests for the repository                      |
 | branches            | &#91;&#93;[github.branch](github.branch.md)             | List of branches for the repository                                |
 | defaultBranchName   | string                                                  | Default branch name for the repository                             |
+| defaultBranch       | [github.branch](github.branch.md)                       | Default branch                                                     |
 | commits             | &#91;&#93;[github.commit](github.commit.md)             | List of commits for the repository                                 |
 | contributors        | &#91;&#93;[github.user](github.user.md)                 | List of contributors for the repository                            |
 | collaborators       | &#91;&#93;[github.collaborator](github.collaborator.md) | List of collaborators for the repository                           |

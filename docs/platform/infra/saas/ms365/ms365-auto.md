@@ -227,17 +227,17 @@ After you've created and granted permissions to a new app registration, you can 
 
 2. In the **Choose an integration name** box, enter a name for the integration. Make it a name that lets you easily recognize the Microsoft 365 tenant.
 
-3. In the **Enter Application (client) ID** box, enter the value from the app registration's **Application (client) ID** box.
+3. In the **Enter the application (client) ID** box, enter the value from the app registration's **Application (client) ID** box.
 
-4. In the **Enter the Directory (tenant) ID** box, enter the value from the app registration's **Directory (tenant) ID** box.
+4. In the **Enter the directory (tenant) ID** box, enter the value from the app registration's **Directory (tenant) ID** box.
 
 5. Specify the subscriptions for Mondoo to continuously scan.
 
-   - To continuously scan all subscriptions in the tenant, leave the **Scan all subscriptions connected to the Directory (tenant) ID** toggle enabled.
+   - To continuously scan all subscriptions in the tenant, leave the **Scan all subscriptions connected to the directory (tenant) ID** toggle enabled.
 
-   - To choose the subscriptions to scan, disable the **Scan all subscriptions connected to the Directory (tenant) ID** toggle, select Allowlist, and enter the subscription ID to scan.
+   - To choose the subscriptions to scan, disable the **Scan all subscriptions connected to the directory (tenant) ID** toggle, select **Allow list** and enter the subscription ID to scan.
 
-   - To scan **all** subscriptions except those you specify, disable the **Scan all subscriptions connected to the Directory (tenant) ID** toggle, select Denylist, and enter the names of the subscriptions you don't want Mondoo to scan.
+   - To scan **all** subscriptions except those you specify, disable the **Scan all subscriptions connected to the directory (tenant) ID** toggle, select **Deny list** and enter the names of the subscriptions you don't want Mondoo to scan.
 
 6. Provide a certificate (a [PEM](https://aboutssl.org/what-is-pem-certificate-file/) (privacy-enhanced mail) file) for Mondoo to securely authenticate with the app (service principal) you created.
 

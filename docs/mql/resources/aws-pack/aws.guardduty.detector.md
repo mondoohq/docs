@@ -20,10 +20,13 @@ The `aws.guardduty.detector` resource provides fields for assessing the configur
 
 **Fields**
 
-| ID                         | TYPE           | DESCRIPTION                                      |
-| -------------------------- | -------------- | ------------------------------------------------ |
-| id                         | string         | Unique ID for the detector                       |
-| region                     | string         | Region for the detector                          |
-| status                     | string         | Status of the detector: ENABLED or DISABLED      |
-| findingPublishingFrequency | string         | Publishing frequency for the detector            |
-| unarchivedFindings         | &#91;&#93;dict | List of unarchivedFindings found by the detector |
+| ID                         | TYPE                                                        | DESCRIPTION                                 |
+| -------------------------- | ----------------------------------------------------------- | ------------------------------------------- |
+| id                         | string                                                      | Unique ID for the detector                  |
+| region                     | string                                                      | Region for the detector                     |
+| status                     | string                                                      | Status of the detector: ENABLED or DISABLED |
+| features                   | &#91;&#93;dict                                              | Feature set for the detector                |
+| tags                       | map[string]string                                           | Tags for the project                        |
+| findingPublishingFrequency | string                                                      | Publishing frequency for the detector       |
+| findings                   | &#91;&#93;[aws.guardduty.finding](aws.guardduty.finding.md) | List of active findings by the detector     |
+| unarchivedFindings         | &#91;&#93;dict                                              | Deprecated (use `findings` instead)         |

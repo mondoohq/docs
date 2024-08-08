@@ -20,9 +20,10 @@ Use the `aws.guardduty` resource to assess the configuration of the AWS GuardDut
 
 **Fields**
 
-| ID        | TYPE                                                          | DESCRIPTION                 |
-| --------- | ------------------------------------------------------------- | --------------------------- |
-| detectors | &#91;&#93;[aws.guardduty.detector](aws.guardduty.detector.md) | List of GuardDuty detectors |
+| ID        | TYPE                                                          | DESCRIPTION                       |
+| --------- | ------------------------------------------------------------- | --------------------------------- |
+| findings  | &#91;&#93;[aws.guardduty.finding](aws.guardduty.finding.md)   | List of GuardDuty active findings |
+| detectors | &#91;&#93;[aws.guardduty.detector](aws.guardduty.detector.md) | List of GuardDuty detectors       |
 
 **Examples**
 

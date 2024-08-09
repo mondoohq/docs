@@ -3,14 +3,14 @@ title: pkix.name
 id: pkix.name
 sidebar_label: pkix.name
 displayed_sidebar: MQL
-description: x509 certificate PKIX name
+description: X.509 certificate PKIX name
 ---
 
 # pkix.name
 
 **Description**
 
-x509 certificate PKIX name
+X.509 certificate PKIX name
 
 **Fields**
 

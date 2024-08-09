@@ -29,3 +29,7 @@ HTTP header
 | contentType         | [http.header.contentType](http.header.contenttype.md)     | Content-Type header                                                       |
 | setCookie           | [http.header.setCookie](http.header.setcookie.md)         | Set-Cookie header                                                         |
 | csp                 | map[string]string                                         | Content-Security-Policy header                                            |
+
+**References**
+
+- [HTTP Headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers)

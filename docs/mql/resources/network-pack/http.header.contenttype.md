@@ -3,7 +3,7 @@ title: http.header.contentType
 id: http.header.contentType
 sidebar_label: http.header.contentType
 displayed_sidebar: MQL
-description: Content-Type header
+description: HTTP header Content-Type
 ---
 
 # http.header.contentType
@@ -14,7 +14,7 @@ experimental
 
 **Description**
 
-Content-Type header
+HTTP header Content-Type
 
 **Fields**
 
@@ -22,3 +22,7 @@ Content-Type header
 | ------ | ----------------- | ------------------------------------------- |
 | type   | string            | MIME type for the content                   |
 | params | map[string]string | Additional parameters for this content type |
+
+**References**
+
+- [X-Content-Type-Options](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options)

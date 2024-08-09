@@ -3,14 +3,14 @@ title: certificates
 id: certificates
 sidebar_label: certificates
 displayed_sidebar: MQL
-description: x509 certificates resource
+description: X.509 certificates resource
 ---
 
 # certificates
 
 **Description**
 
-x509 certificates resource
+X.509 certificates resource
 
 **List**
 

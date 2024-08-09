@@ -3,14 +3,14 @@ title: pkix.extension
 id: pkix.extension
 sidebar_label: pkix.extension
 displayed_sidebar: MQL
-description: x509 certificate PKIX extension
+description: X.509 certificate PKIX extension
 ---
 
 # pkix.extension
 
 **Description**
 
-x509 certificate PKIX extension
+X.509 certificate PKIX extension
 
 **Fields**
 

@@ -37,7 +37,7 @@ Google Cloud (GCP) BigQuery table
 | type                   | string            | Table Type                                                                               |
 | expirationTime         | time              | Time when this table expires                                                             |
 | kmsName                | string            | Cloud KMS encryption key that is used to protect BigQuery table                          |
-| snapshotTime           | time              | Indicates when the base table was snapshot                                               |
+| snapshotTime           | time              | Snapshot creation time                                                                   |
 | viewQuery              | string            | Query to use for a logical view                                                          |
 | clusteringFields       | dict              | Data clustering configuration                                                            |
 | externalDataConfig     | dict              | Information about table stored outside of BigQuery.                                      |

@@ -15,14 +15,16 @@ Resources included in this pack:
 | ID                                                                                                        | DESCRIPTION                                         |
 | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------- |
 | [microsoft](microsoft.md)                                                                                 | Microsoft                                           |
-| [microsoft.application](microsoft.application.md)                                                         | Microsoft application                               |
+| [microsoft.application](microsoft.application.md)                                                         | Microsoft Entra ID application registration         |
 | [microsoft.devicemanagement](microsoft.devicemanagement.md)                                               | Microsoft device management                         |
 | [microsoft.devicemanagement.devicecompliancepolicy](microsoft.devicemanagement.devicecompliancepolicy.md) | Microsoft device compliance policy                  |
 | [microsoft.devicemanagement.deviceconfiguration](microsoft.devicemanagement.deviceconfiguration.md)       | Microsoft device configuration                      |
 | [microsoft.domain](microsoft.domain.md)                                                                   | Microsoft domain                                    |
 | [microsoft.domaindnsrecord](microsoft.domaindnsrecord.md)                                                 | Microsoft domain DNS record                         |
 | [microsoft.group](microsoft.group.md)                                                                     | Microsoft group                                     |
+| [microsoft.keyCredential](microsoft.keycredential.md)                                                     | Microsoft Entra AD Application certificate          |
 | [microsoft.organization](microsoft.organization.md)                                                       | Microsoft organization                              |
+| [microsoft.passwordCredential](microsoft.passwordcredential.md)                                           | Microsoft Entra AD Application secrets              |
 | [microsoft.policies](microsoft.policies.md)                                                               | Microsoft policies                                  |
 | [microsoft.rolemanagement](microsoft.rolemanagement.md)                                                   | Microsoft role management                           |
 | [microsoft.rolemanagement.roleassignment](microsoft.rolemanagement.roleassignment.md)                     | Microsoft role assignment                           |

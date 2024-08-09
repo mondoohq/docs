@@ -31,7 +31,7 @@ Google Cloud (GCP) Compute persistent disk snapshot
 | downloadBytes      | int               | Number of bytes downloaded to restore a snapshot to a disk                        |
 | storageBytes       | int               | Size of the storage used by the snapshot                                          |
 | storageBytesStatus | string            | An indicator whether storageBytes is in a stable state or in storage reallocation |
-| snapshotType       | string            | Indicates the type of the snapshot                                                |
+| snapshotType       | string            | Snapshot type                                                                     |
 | licenses           | &#91;&#93;string  | Public visible licenses                                                           |
 | labels             | map[string]string | Snapshot Labels                                                                   |
 | created            | time              | Creation timestamp                                                                |

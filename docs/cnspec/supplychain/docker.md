@@ -7,9 +7,25 @@ description: This page provides an overview of how to use Mondoo to scan Docker 
 image: /img/featured_img/mondoo-docker.jpg
 ---
 
-Use cnspec to scan Docker images and containers for security misconfigurations, CVEs, and end of life operating systems using the built in Mondoo security policies or your own custom policies.
+Use cnspec to scan Docker images, containers, and Dockerfiles for security misconfigurations, CVEs, and end of life operating systems using the built in Mondoo security policies or your own custom policies.
 
 ![Docker Image Scan](/img/platform/infra/supply/docker-image-scan.png)
+
+## Dockerfiles
+
+Scan Dockerfiles to reveal security issues before they reach production.
+
+Scan a single Dockerfile, substituting the path a name of the file for FILEPATH:
+
+```bash
+cnquery scan docker file FILEPATH
+```
+
+Find nested Dockerfiles within a directory, substituting the directory path for PATH:
+
+```bash
+cnquery scan docker file PATH
+```
 
 ## Docker images
 

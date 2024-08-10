@@ -467,6 +467,7 @@ module.exports = {
               "Keep up to date with the latest features in each release from Mondoo",
             copyright: `Copyright © ${new Date().getFullYear()} Mondoo, Inc.`,
           },
+          onUntruncatedBlogPosts: "ignore",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),

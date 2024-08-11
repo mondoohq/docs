@@ -18,3 +18,7 @@ Oracle Cloud Infrastructure (OCI) Object Storage
 | --------- | ----------------------------------------------------------------- | ----------- |
 | namespace | string                                                            | Namespace   |
 | buckets   | &#91;&#93;[oci.objectStorage.bucket](oci.objectstorage.bucket.md) | Buckets     |
+
+**References**
+
+- [Object Storage](https://docs.oracle.com/en-us/iaas/Content/Object/home.htm)

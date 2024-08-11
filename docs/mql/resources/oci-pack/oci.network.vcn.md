@@ -23,3 +23,7 @@ Oracle Cloud Infrastructure (OCI) virtual cloud network (VCN)
 | state         | string           | VCN state                     |
 | cidrBlock     | string           | Deprecated                    |
 | cidrBlocks    | &#91;&#93;string | List of IPv4 CIDR blocks      |
+
+**References**
+
+- [VCNs and Subnets](https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/VCNs.htm)

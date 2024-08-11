@@ -20,10 +20,12 @@ Use the `aws.rds` resource to assess the configuration of AWS RDS deployments. T
 
 **Fields**
 
-| ID          | TYPE                                                  | DESCRIPTION                   |
-| ----------- | ----------------------------------------------------- | ----------------------------- |
-| dbInstances | &#91;&#93;[aws.rds.dbinstance](aws.rds.dbinstance.md) | List of database instances    |
-| dbClusters  | &#91;&#93;[aws.rds.dbcluster](aws.rds.dbcluster.md)   | List of RDS database clusters |
+| ID          | TYPE                                                  | DESCRIPTION                         |
+| ----------- | ----------------------------------------------------- | ----------------------------------- |
+| dbInstances | &#91;&#93;[aws.rds.dbinstance](aws.rds.dbinstance.md) | Deprecated. Use `instances` instead |
+| instances   | &#91;&#93;[aws.rds.dbinstance](aws.rds.dbinstance.md) | List of database instances          |
+| dbClusters  | &#91;&#93;[aws.rds.dbcluster](aws.rds.dbcluster.md)   | Deprecated: Use `clusters` instead  |
+| clusters    | &#91;&#93;[aws.rds.dbcluster](aws.rds.dbcluster.md)   | List of RDS database clusters       |
 
 **Examples**
 

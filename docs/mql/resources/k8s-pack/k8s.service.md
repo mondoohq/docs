@@ -31,3 +31,7 @@ Kubernetes Service
 | created         | time              | Kubernetes object creation timestamp |
 | manifest        | dict              | Full resource manifest               |
 | spec            | dict              | Service Spec                         |
+
+**References**
+
+- [Service Documentation](https://kubernetes.io/docs/concepts/services-networking/service/)

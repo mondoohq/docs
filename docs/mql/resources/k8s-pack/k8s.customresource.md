@@ -30,3 +30,7 @@ Kubernetes CustomResource
 | kind            | string            | Kubernetes object type               |
 | created         | time              | Kubernetes object creation timestamp |
 | manifest        | dict              | Full resource manifest               |
+
+**References**
+
+- [Custom Resources Documentation](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/)

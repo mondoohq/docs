@@ -21,3 +21,7 @@ Oracle Cloud Infrastructure (OCI) Compute image
 | region  | [oci.region](oci.region.md) | Region                          |
 | created | time                        | Time when the image was created |
 | state   | string                      | Image state                     |
+
+**References**
+
+- [Platform Images](https://docs.oracle.com/en-us/iaas/Content/Compute/References/images.htm)

@@ -20,3 +20,7 @@ Oracle Cloud Infrastructure (OCI) tenancy
 | name            | string | Compartment name               |
 | description     | string | Description of the compartment |
 | retentionPeriod | time   | Retention period duration      |
+
+**References**
+
+- [What is a Tenancy?](https://docs.oracle.com/en/cloud/foundation/cloud_architecture/governance/tenancy.html)

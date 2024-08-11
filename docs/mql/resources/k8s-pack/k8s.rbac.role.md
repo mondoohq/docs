@@ -31,3 +31,7 @@ Kubernetes Role
 | created         | time              | Kubernetes object creation timestamp |
 | manifest        | dict              | Full resource manifest               |
 | rules           | &#91;&#93;dict    | Cluster Role Rules                   |
+
+**References**
+
+- [Using RBAC Authorization Documentation](https://kubernetes.io/docs/reference/access-authn-authz/rbac/#rolebinding-and-clusterrolebinding)

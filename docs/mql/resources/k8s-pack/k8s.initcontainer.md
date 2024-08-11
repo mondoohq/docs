@@ -36,3 +36,7 @@ Kubernetes init container
 | tty             | bool               | Whether this container should allocate a TTY for itself |
 | env             | dict               | env variables                                           |
 | envFrom         | dict               | envFrom settings                                        |
+
+**References**
+
+- [Init Containers Documentation](https://kubernetes.io/docs/concepts/workloads/pods/init-containers/)

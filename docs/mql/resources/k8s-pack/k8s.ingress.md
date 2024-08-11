@@ -32,3 +32,7 @@ Kubernetes Ingress
 | manifest        | dict                                            | Full resource manifest               |
 | rules           | &#91;&#93;[k8s.ingressrule](k8s.ingressrule.md) | Ingress rules                        |
 | tls             | &#91;&#93;[k8s.ingresstls](k8s.ingresstls.md)   | Ingress TLS data                     |
+
+**References**
+
+- [Ingress Documentation](https://kubernetes.io/docs/concepts/services-networking/ingress/)

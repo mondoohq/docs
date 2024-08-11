@@ -18,3 +18,7 @@ Oracle Cloud Infrastructure (OCI) Networking
 | ------------- | ----------------------------------------------------------------- | ---------------------- |
 | vcns          | &#91;&#93;[oci.network.vcn](oci.network.vcn.md)                   | Virtual Cloud Networks |
 | securityLists | &#91;&#93;[oci.network.securityList](oci.network.securitylist.md) | VCN Security List      |
+
+**References**
+
+- [Core Network Capabilities](https://docs.oracle.com/en/cloud/foundation/cloud_architecture/network/corecapabilities.html)

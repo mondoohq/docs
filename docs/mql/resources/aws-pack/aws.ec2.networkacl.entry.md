@@ -24,7 +24,7 @@ The `aws.ec2.networkacl.entry` resource provides fields for assessing the config
 | ------------- | --------------------------------------------------------------------------- | ----------------------------------------- |
 | egress        | bool                                                                        | Whether this is an entry for egress rules |
 | ruleAction    | string                                                                      | Allow or deny                             |
-| ruleNumber    | int                                                                         | The rule number                           |
+| ruleNumber    | int                                                                         | Rule number                               |
 | portRange     | [aws.ec2.networkacl.entry.portrange](aws.ec2.networkacl.entry.portrange.md) | Port range for the ACL entry              |
 | cidrBlock     | string                                                                      | CIDR block for the ACL entry              |
 | ipv6CidrBlock | string                                                                      | IPv6 CIDR block for the ACL entry         |

@@ -36,12 +36,12 @@ Amazon Redshift cluster
 | logging                          | dict              | Logging configuration for the cluster                                                          |
 | masterUsername                   | string            | Master user name for the cluster.                                                              |
 | name                             | string            | Name of the initial database created when cluster was created                                  |
-| nextMaintenanceWindowStartTime   | time              | The next scheduled maintenance window                                                          |
-| nodeType                         | string            | The node type for the nodes in the cluster                                                     |
-| numberOfNodes                    | int               | The number of nodes in the cluster                                                             |
+| nextMaintenanceWindowStartTime   | time              | Next scheduled maintenance window                                                              |
+| nodeType                         | string            | Node type for the nodes in the cluster                                                         |
+| numberOfNodes                    | int               | Number of nodes in the cluster                                                                 |
 | parameters                       | &#91;&#93;dict    | Detailed list of parameters for each parameter group name                                      |
 | preferredMaintenanceWindow       | string            | Weekly time range for system maintenance (in UTC)                                              |
 | publiclyAccessible               | bool              | Whether the cluster is publicly accessible                                                     |
 | region                           | string            | Region where the cluster exists                                                                |
 | tags                             | map[string]string | Tags for the cluster                                                                           |
-| vpcId                            | string            | The ID of the VPC where the cluster is running                                                 |
+| vpcId                            | string            | ID of the VPC where the cluster is running                                                     |

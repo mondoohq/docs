@@ -30,7 +30,7 @@ Amazon Neptune cluster
 | region                           | string           | Region where the cluster exists                                                                         |
 | automaticRestartTime             | time             | Time when the cluster was created                                                                       |
 | availabilityZones                | &#91;&#93;string | List of EC2 Availability Zones                                                                          |
-| backupRetentionPeriod            | int              | Number of days for which automatic DB snapshots are retained                                            |
+| backupRetentionPeriod            | int              | Number of days automatic DB snapshots are retained                                                      |
 | createdAt                        | time             | Time when the cluster was created                                                                       |
 | crossAccountClone                | bool             | Whether the DB cluster can be cloned across accounts                                                    |
 | clusterParameterGroup            | string           | DB cluster parameter group for the DB cluster                                                           |
@@ -44,7 +44,7 @@ Amazon Neptune cluster
 | latestRestorableTime             | time             | Latest time to which a database can be restored                                                         |
 | masterUsername                   | string           | Username                                                                                                |
 | multiAZ                          | bool             | Whether the cluster has instances in multiple availability zones                                        |
-| port                             | int              | Port that the database engine is listening on                                                           |
+| port                             | int              | Port on which the database engine is listening                                                          |
 | preferredBackupWindow            | string           | Daily time range during which automated backups are created                                             |
 | preferredMaintenanceWindow       | string           | Weekly time range during which system maintenance can occur                                             |
 | status                           | string           | Status of the cluster                                                                                   |

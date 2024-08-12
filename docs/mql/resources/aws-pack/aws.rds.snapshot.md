@@ -30,9 +30,9 @@ The `aws.rds.snapshot` resource provides fields for assessing the configuration 
 | region            | string            | Region where the snapshot exists                                   |
 | isClusterSnapshot | bool              | Whether the snapshot is for a cluster                              |
 | tags              | map[string]string | Tags for the snapshot                                              |
-| engine            | string            | The snapshot DB engine                                             |
-| engineVersion     | string            | The snapshot DB engine version                                     |
-| status            | string            | The snapshot status                                                |
-| port              | int               | The port that the database instance or cluster listens on          |
+| engine            | string            | Snapshot DB engine                                                 |
+| engineVersion     | string            | Snapshot DB engine version                                         |
+| status            | string            | Snapshot status                                                    |
+| port              | int               | Port that the database instance or cluster listens on              |
 | allocatedStorage  | int               | Allocated storage size in gibibytes (GiB)                          |
-| createdAt         | time              | The creation date of the snapshot                                  |
+| createdAt         | time              | Creation date of the snapshot                                      |

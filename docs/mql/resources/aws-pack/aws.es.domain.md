@@ -29,6 +29,6 @@ The `aws.es.domain` resource provides fields for assessing the configuration of 
 | endpoint                    | string            | Endpoint used to submit index and search requests |
 | region                      | string            | Region where the domain exists                    |
 | tags                        | map[string]string | Tags for the domain                               |
-| elasticsearchVersion        | string            | The version of Elasticsearch running              |
-| domainId                    | string            | The Elasticsearch domain ID                       |
-| domainName                  | string            | The Elasticsearch domain name                     |
+| elasticsearchVersion        | string            | Version of Elasticsearch running                  |
+| domainId                    | string            | Elasticsearch domain ID                           |
+| domainName                  | string            | Elasticsearch domain name                         |

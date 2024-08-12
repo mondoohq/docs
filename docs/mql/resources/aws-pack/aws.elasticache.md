@@ -22,7 +22,7 @@ Use the `aws.elasticache` resource to assess the configuration of Amazon ElastiC
 
 | ID               | TYPE                                                                            | DESCRIPTION                              |
 | ---------------- | ------------------------------------------------------------------------------- | ---------------------------------------- |
-| clusters         | &#91;&#93;dict                                                                  | Deprecated. Use `cacheClusters` instead. |
+| clusters         | &#91;&#93;dict                                                                  | Deprecated: Use `cacheClusters` instead. |
 | cacheClusters    | &#91;&#93;[aws.elasticache.cluster](aws.elasticache.cluster.md)                 | List of cache clusters                   |
 | serverlessCaches | &#91;&#93;[aws.elasticache.serverlessCache](aws.elasticache.serverlesscache.md) | List of serverless caches                |
 

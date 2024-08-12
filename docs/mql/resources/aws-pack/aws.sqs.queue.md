@@ -32,6 +32,6 @@ Amazon Simple Queue Service (SQS) Queue
 | receiveMessageWaitTimeSeconds | int                               | Time in seconds the queue waits for messages                 |
 | region                        | string                            | Region for the queue                                         |
 | sqsManagedSseEnabled          | bool                              | Whether SSE is enabled for the queue                         |
-| queueType                     | string                            | The type of queue: Fifo or Standard                          |
+| queueType                     | string                            | Type of queue: Fifo or Standard                              |
 | url                           | string                            | URL for the queue                                            |
 | visibilityTimeoutSeconds      | int                               | Visibility timeout for the queue                             |

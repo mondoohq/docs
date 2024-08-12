@@ -26,5 +26,5 @@ Amazon Timestream for LiveAnalytics table
 | region                       | string | Region where the table exists               |
 | createdAt                    | time   | Time when the table was created             |
 | updatedAt                    | time   | Time when the table was last updated        |
-| magneticStoreWriteProperties | dict   | magnetic store properties for the table     |
-| retentionProperties          | dict   | retention duration properties for the table |
+| magneticStoreWriteProperties | dict   | Magnetic store properties for the table     |
+| retentionProperties          | dict   | Retention duration properties for the table |

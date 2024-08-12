@@ -3,7 +3,7 @@ title: aws.waf.rule.fieldtomatch.headers.matchpattern
 id: aws.waf.rule.fieldtomatch.headers.matchpattern
 sidebar_label: aws.waf.rule.fieldtomatch.headers.matchpattern
 displayed_sidebar: MQL
-description: The pattern to match
+description: pattern to match
 ---
 
 # aws.waf.rule.fieldtomatch.headers.matchpattern
@@ -14,7 +14,7 @@ description: The pattern to match
 
 **Description**
 
-The pattern to match
+pattern to match
 
 **Fields**
 

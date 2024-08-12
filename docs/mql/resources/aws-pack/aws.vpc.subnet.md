@@ -24,8 +24,8 @@ Amazon Virtual Private Cloud (VPC) subnet
 | id                          | string | Unique ID of the subnet                                                                                                              |
 | cidrs                       | string | List of CIDR descriptions                                                                                                            |
 | mapPublicIpOnLaunch         | bool   | Whether instances launched in this subnet receive public IPv4 addresses                                                              |
-| availabilityZone            | string | The availability zone where this subnet is located                                                                                   |
+| availabilityZone            | string | Availability zone where this subnet is located                                                                                       |
 | defaultForAvailabilityZone  | bool   | Whether this is the default subnet for the availability zone                                                                         |
 | assignIpv6AddressOnCreation | bool   | Whether a network interface created in this subnet (including a network interface created by RunInstances ) receives an IPv6 address |
-| state                       | string | The state of the subnet: pending or available                                                                                        |
+| state                       | string | State of the subnet: pending or available                                                                                            |
 | region                      | string | Region in which the VPC subnet exists                                                                                                |

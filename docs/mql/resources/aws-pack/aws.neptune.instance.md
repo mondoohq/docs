@@ -25,10 +25,10 @@ Amazon Neptune instance
 | clusterIdentifier                | string           | User-supplied DB cluster identifier                                                                     |
 | autoMinorVersionUpgrade          | bool             | Whether minor version patches are applied automatically                                                 |
 | availabilityZone                 | string           | Name of the availability zone                                                                           |
-| backupRetentionPeriod            | int              | Number of days for which automatic DB snapshots are retained                                            |
+| backupRetentionPeriod            | int              | Number of days automatic DB snapshots are retained                                                      |
 | instanceClass                    | string           | Name of the compute and memory capacity class                                                           |
 | status                           | string           | Status of the instance                                                                                  |
-| port                             | int              | Port that the database engine is listening on                                                           |
+| port                             | int              | Port on which the database engine is listening                                                          |
 | deletionProtection               | bool             | Whether the instance has deletion protection enabled                                                    |
 | enabledCloudwatchLogsExports     | &#91;&#93;string | List of log types that this DB instance is configured to export to CloudWatch logs                      |
 | endpoint                         | dict             | Connection endpoint                                                                                     |
@@ -45,7 +45,7 @@ Amazon Neptune instance
 | multiAZ                          | bool             | Whether the cluster has instances in multiple availability zones                                        |
 | preferredBackupWindow            | string           | Daily time range during which automated backups are created                                             |
 | preferredMaintenanceWindow       | string           | Weekly time range during which system maintenance can occur                                             |
-| promotionTier                    | int              | Specifies the order in which a Read Replica is promoted                                                 |
+| promotionTier                    | int              | Order in which a Read Replica is promoted                                                               |
 | region                           | string           | Region where the cluster exists                                                                         |
 | storageEncrypted                 | bool             | Whether the DB cluster is encrypted                                                                     |
 | storageType                      | string           | Storage type                                                                                            |

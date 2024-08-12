@@ -3,14 +3,14 @@ title: asset.eol
 id: asset.eol
 sidebar_label: asset.eol
 displayed_sidebar: MQL
-description: Information about the assets platform end-of-life.
+description: Information about the asset's platform's end of life
 ---
 
 # asset.eol
 
 **Description**
 
-Information about the assets platform end-of-life.
+Information about the asset's platform's end of life
 
 **Fields**
 

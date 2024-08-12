@@ -25,4 +25,4 @@ Amazon WAF rule
 | priority  | int                                                 | Priority from lowest to highest number                                                                         |
 | statement | [aws.waf.rule.statement](aws.waf.rule.statement.md) | Part of the rule that tells WAF how to inspect a web request                                                   |
 | action    | [aws.waf.rule.action](aws.waf.rule.action.md)       | Part of the rule that tells WAF what to do with a web request when it matches the criteria defined in the rule |
-| belongsTo | string                                              | The ARN of either rule ACL or the RuleGroup that this rule belongs to                                          |
+| belongsTo | string                                              | ARN of either rule ACL or the RuleGroup that this rule belongs to                                              |

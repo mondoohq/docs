@@ -30,4 +30,4 @@ Amazon ECS cluster
 | status                            | string                                            | Status of the cluster                                  |
 | tasks                             | &#91;&#93;[aws.ecs.task](aws.ecs.task.md)         | List of AWS ECS task definitions                       |
 | containerInstances                | &#91;&#93;[aws.ecs.instance](aws.ecs.instance.md) | List of AWS ECS container instances                    |
-| region                            | string                                            | The region where the cluster is located                |
+| region                            | string                                            | Region where the cluster is located                    |

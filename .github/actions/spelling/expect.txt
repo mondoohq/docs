@@ -188,6 +188,7 @@ kyleen
 labelmatchstatement
 lappy
 libwebsockets
+lifeanalytics
 linux
 logd
 logfiles
@@ -316,6 +317,7 @@ sudolog
 suki
 SXp
 targetgroup
+tde
 Tdej
 teamsmeetingpolicyconfig
 tenantfederationconfig
@@ -326,6 +328,7 @@ testring
 testsuite
 tfblock
 Thu
+timestream
 tmpkqyme
 toplevel
 tpu

@@ -36,3 +36,4 @@ microsoft.application(name string)
 | secrets               | &#91;&#93;[microsoft.passwordCredential](microsoft.passwordcredential.md) | Client secrets                       |
 | certificates          | &#91;&#93;[microsoft.keyCredential](microsoft.keycredential.md)           | Certificates                         |
 | hasExpiredCredentials | bool                                                                      | Whether the credentials have expired |
+| owners                | &#91;&#93;[microsoft.user](microsoft.user.md)                             | Application owner                    |

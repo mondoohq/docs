@@ -3,14 +3,14 @@ title: microsoft.user
 id: microsoft.user
 sidebar_label: microsoft.user
 displayed_sidebar: MQL
-description: Microsoft user
+description: Microsoft Entra ID user
 ---
 
 # microsoft.user
 
 **Description**
 
-Microsoft user
+Microsoft Entra ID user
 
 **Fields**
 

@@ -33,7 +33,7 @@ Resources included in this pack:
 | [microsoft.security.securityscore](microsoft.security.securityscore.md)                                   | Microsoft Secure Score                              |
 | [microsoft.serviceprincipal](microsoft.serviceprincipal.md)                                               | Microsoft service principal                         |
 | [microsoft.serviceprincipal.assignment](microsoft.serviceprincipal.assignment.md)                         | Microsoft Service Principal Assignment              |
-| [microsoft.user](microsoft.user.md)                                                                       | Microsoft user                                      |
+| [microsoft.user](microsoft.user.md)                                                                       | Microsoft Entra ID user                             |
 | [ms365.exchangeonline](ms365.exchangeonline.md)                                                           | Microsoft 365 Exchange Online                       |
 | [ms365.exchangeonline.exoMailbox](ms365.exchangeonline.exomailbox.md)                                     | Microsoft 365 Exchange Online Mailbox               |
 | [ms365.exchangeonline.externalSender](ms365.exchangeonline.externalsender.md)                             | Microsoft 365 Exchange Online External Sender       |

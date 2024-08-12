@@ -1,0 +1,35 @@
+---
+title: aws.elasticache.serverlessCache
+id: aws.elasticache.serverlessCache
+sidebar_label: aws.elasticache.serverlessCache
+displayed_sidebar: MQL
+description: Amazon ElastiCache serverless cache
+---
+
+# aws.elasticache.serverlessCache
+
+**Supported platform**
+
+- aws
+
+**Description**
+
+Amazon ElastiCache serverless cache
+
+**Fields**
+
+| ID                     | TYPE                                                        | DESCRIPTION                                                                                       |
+| ---------------------- | ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| arn                    | string                                                      | ARN for the cache                                                                                 |
+| name                   | string                                                      | Unique identifier of the serverless cache                                                         |
+| description            | string                                                      | Description of the serverless cache                                                               |
+| engine                 | string                                                      | The name of the cache engine used for this cluster: Memcached or Redis                            |
+| engineVersion          | string                                                      | The version of the cache engine that is used in this cluster                                      |
+| majorEngineVersion     | string                                                      | Version number of the engine the serverless cache is compatible with                              |
+| kmsKeyId               | string                                                      | ID of the Amazon Web Services Key Management Service (KMS) key                                    |
+| securityGroups         | &#91;&#93;[aws.ec2.securitygroup](aws.ec2.securitygroup.md) | A list of VPC security groups associated with the cluster                                         |
+| snapshotRetentionLimit | int                                                         | The number of days for which ElastiCache retains automatic cluster snapshots before deleting them |
+| dailySnapshotTime      | string                                                      | Time that a cache snapshot will be created                                                        |
+| status                 | string                                                      | Status of the serverless cache                                                                    |
+| region                 | string                                                      | Region where the cache exists                                                                     |
+| createdAt              | time                                                        | Time when the serverless cache was created                                                        |

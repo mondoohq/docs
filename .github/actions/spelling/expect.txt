@@ -188,8 +188,8 @@ kyleen
 labelmatchstatement
 lappy
 libwebsockets
-lifeanalytics
 linux
+liveanalytics
 logd
 logfiles
 loggingservice

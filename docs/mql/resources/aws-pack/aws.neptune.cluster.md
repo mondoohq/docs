@@ -38,6 +38,7 @@ Amazon Neptune cluster
 | clusterResourceId                | string           | Amazon Region-unique, immutable identifier for the DB cluster                                           |
 | deletionProtection               | bool             | Whether the DB cluster has deletion protection enabled                                                  |
 | earliestRestorableTime           | time             | Earliest time to which a database can be restored                                                       |
+| enabledCloudwatchLogsExports     | &#91;&#93;string | List of log types that this cluster is configured to export to CloudWatch logs                          |
 | endpoint                         | string           | Connection endpoint for the primary instance                                                            |
 | iamDatabaseAuthenticationEnabled | bool             | Whether mapping of Amazon Identity and Access Management (IAM) accounts to database accounts is enabled |
 | latestRestorableTime             | time             | Latest time to which a database can be restored                                                         |

@@ -1,12 +1,12 @@
 ---
-title: aws.timestream.lifeanalytics.database
-id: aws.timestream.lifeanalytics.database
-sidebar_label: aws.timestream.lifeanalytics.database
+title: aws.timestream.liveanalytics.database
+id: aws.timestream.liveanalytics.database
+sidebar_label: aws.timestream.liveanalytics.database
 displayed_sidebar: MQL
-description: Amazon Timestream for LifeAnalytics database
+description: Amazon Timestream for LiveAnalytics database
 ---
 
-# aws.timestream.lifeanalytics.database
+# aws.timestream.liveanalytics.database
 
 **Supported platform**
 
@@ -14,7 +14,7 @@ description: Amazon Timestream for LifeAnalytics database
 
 **Description**
 
-Amazon Timestream for LifeAnalytics database
+Amazon Timestream for LiveAnalytics database
 
 **Fields**
 

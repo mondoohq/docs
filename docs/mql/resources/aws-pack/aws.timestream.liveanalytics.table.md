@@ -1,12 +1,12 @@
 ---
-title: aws.timestream.lifeanalytics.table
-id: aws.timestream.lifeanalytics.table
-sidebar_label: aws.timestream.lifeanalytics.table
+title: aws.timestream.liveanalytics.table
+id: aws.timestream.liveanalytics.table
+sidebar_label: aws.timestream.liveanalytics.table
 displayed_sidebar: MQL
-description: Amazon Timestream for LifeAnalytics table
+description: Amazon Timestream for LiveAnalytics table
 ---
 
-# aws.timestream.lifeanalytics.table
+# aws.timestream.liveanalytics.table
 
 **Supported platform**
 
@@ -14,7 +14,7 @@ description: Amazon Timestream for LifeAnalytics table
 
 **Description**
 
-Amazon Timestream for LifeAnalytics table
+Amazon Timestream for LiveAnalytics table
 
 **Fields**
 

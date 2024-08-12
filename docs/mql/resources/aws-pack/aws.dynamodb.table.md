@@ -20,19 +20,21 @@ The `aws.dynamodb.table` resource provides fields representing a DynamoDB table.
 
 **Fields**
 
-| ID                        | TYPE              | DESCRIPTION                                                                                                                       |
-| ------------------------- | ----------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| arn                       | string            | ARN for the table                                                                                                                 |
-| name                      | string            | Table name                                                                                                                        |
-| region                    | string            | Region where the table exists                                                                                                     |
-| backups                   | &#91;&#93;dict    | Backups for the table                                                                                                             |
-| sseDescription            | dict              | Description of server-side encryption for the table                                                                               |
-| provisionedThroughput     | dict              | Provisioned throughput settings for the table                                                                                     |
-| continuousBackups         | dict              | Continuous backups and point-in-time recovery settings for the table                                                              |
-| tags                      | map[string]string | Tags for the table                                                                                                                |
-| createdTime               | time              | The creation time of the table                                                                                                    |
-| deletionProtectionEnabled | bool              | Whether deletion protection is enabled                                                                                            |
-| globalTableVersion        | string            | The global table version                                                                                                          |
-| id                        | string            | The table ID                                                                                                                      |
-| sizeBytes                 | int               | The total size of the specified table, in bytes. DynamoDB updates this value approximately every six hours.                       |
-| status                    | string            | The current state of the table: CREATING, UPDATING, DELETING, ACTIVE, INACCESSIBLE_ENCRYPTION_CREDENTIALS, ARCHIVING, or ARCHIVED |
+| ID                        | TYPE              | DESCRIPTION                                                                                                                   |
+| ------------------------- | ----------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| arn                       | string            | ARN for the table                                                                                                             |
+| id                        | string            | The table ID                                                                                                                  |
+| name                      | string            | Table name                                                                                                                    |
+| region                    | string            | Region where the table exists                                                                                                 |
+| backups                   | &#91;&#93;dict    | Backups for the table                                                                                                         |
+| sseDescription            | dict              | Description of server-side encryption for the table                                                                           |
+| provisionedThroughput     | dict              | Provisioned throughput settings for the table                                                                                 |
+| continuousBackups         | dict              | Continuous backups and point-in-time recovery settings for the table                                                          |
+| tags                      | map[string]string | Tags for the table                                                                                                            |
+| createdTime               | time              | The creation time of the table                                                                                                |
+| deletionProtectionEnabled | bool              | Whether deletion protection is enabled                                                                                        |
+| globalTableVersion        | string            | The global table version                                                                                                      |
+| items                     | int               | Number of items in the table                                                                                                  |
+| sizeBytes                 | int               | The total size of the specified table, in bytes. DynamoDB updates this value approximately every six hours.                   |
+| latestStreamArn           | string            | Latest stream for this table                                                                                                  |
+| status                    | string            | Current state of the table: CREATING, UPDATING, DELETING, ACTIVE, INACCESSIBLE_ENCRYPTION_CREDENTIALS, ARCHIVING, or ARCHIVED |

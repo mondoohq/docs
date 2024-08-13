@@ -33,3 +33,7 @@ Kubernetes Deployment
 | podSpec         | dict                                                | Pod description                      |
 | initContainers  | &#91;&#93;[k8s.initContainer](k8s.initcontainer.md) | Init containers                      |
 | containers      | &#91;&#93;[k8s.container](k8s.container.md)         | Contained containers                 |
+
+**References**
+
+- [Deployments Documentation](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)

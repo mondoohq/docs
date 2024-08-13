@@ -31,3 +31,7 @@ Kubernetes ClusterRoleBinding
 | manifest        | dict              | Full resource manifest                        |
 | subjects        | &#91;&#93;dict    | References to the objects the role applies to |
 | roleRef         | dict              | ClusterRole in the global namespace           |
+
+**References**
+
+- [Using RBAC Authorization Documentation](https://kubernetes.io/docs/reference/access-authn-authz/rbac/#rolebinding-and-clusterrolebinding)

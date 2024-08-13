@@ -22,6 +22,7 @@ Amazon Virtual Private Cloud (VPC)
 | ------------------ | ------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
 | arn                | string                                                              | ARN of the VPC                                                                        |
 | id                 | string                                                              | ID of the VPC                                                                         |
+| name               | string                                                              | Name of the VPC                                                                       |
 | cidrBlock          | string                                                              | IPv4 CIDR block of the VPC                                                            |
 | state              | string                                                              | State of the VPC: pending or available                                                |
 | isDefault          | bool                                                                | Whether the VPC is the default VPC                                                    |

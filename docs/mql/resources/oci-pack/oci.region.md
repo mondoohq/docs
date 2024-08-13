@@ -20,3 +20,8 @@ Oracle Cloud Infrastructure (OCI) region
 | name         | string | Region name                           |
 | isHomeRegion | bool   | Whether the region is the home region |
 | status       | string | Region subscription status            |
+
+**References**
+
+- [What is a Region?](https://docs.oracle.com/en/cloud/foundation/cloud_architecture/governance/regions.html)
+- [Regions and Availability Domains](https://docs.oracle.com/en-us/iaas/Content/General/Concepts/regions.htm)

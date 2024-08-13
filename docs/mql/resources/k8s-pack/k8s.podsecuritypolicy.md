@@ -30,3 +30,7 @@ Kubernetes PodSecurityPolicy (deprecated as of Kubernetes v1.21)
 | created         | time              | Kubernetes object creation timestamp |
 | manifest        | dict              | Full resource manifest               |
 | spec            | dict              | Policy Spec                          |
+
+**References**
+
+- [Pod Security Policies Documentation](https://kubernetes.io/docs/concepts/security/pod-security-policy/)

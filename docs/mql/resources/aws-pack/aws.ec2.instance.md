@@ -37,7 +37,7 @@ The `aws.ec2.instance` resource provides fields for assessing the configuration 
 | securityGroups        | &#91;&#93;[aws.ec2.securitygroup](aws.ec2.securitygroup.md)       | List of security groups (IDs) associated with the instance                                  |
 | platformDetails       | string                                                            | Platform details                                                                            |
 | publicDnsName         | string                                                            | Public DNS name for the instance                                                            |
-| instanceStatus        | dict                                                              | The status of the specified instance                                                        |
+| instanceStatus        | dict                                                              | Status of the specified instance                                                            |
 | stateReason           | dict                                                              | Reason for the most recent state transition                                                 |
 | stateTransitionReason | string                                                            | Reason for the most recent state transition                                                 |
 | ebsOptimized          | bool                                                              | Whether the instance has EBS optimization turned on                                         |
@@ -50,11 +50,11 @@ The `aws.ec2.instance` resource provides fields for assessing the configuration 
 | privateDnsName        | string                                                            | Private DNS name for the instance                                                           |
 | keypair               | [aws.ec2.keypair](aws.ec2.keypair.md)                             | Key pair associated with the instance                                                       |
 | stateTransitionTime   | time                                                              | Time when the last state transition occurred                                                |
-| vpcArn                | string                                                            | The ARN of the VPC associated with the instance                                             |
-| hypervisor            | string                                                            | The hypervisor type of the instance: ovm or xen                                             |
+| vpcArn                | string                                                            | ARN of the VPC associated with the instance                                                 |
+| hypervisor            | string                                                            | Hypervisor type of the instance: ovm or xen                                                 |
 | instanceLifecycle     | string                                                            | Whether this is a Spot Instance or a Scheduled Instance: spot, scheduled, or capacity-block |
-| rootDeviceType        | string                                                            | The root device type used by the AMI: ebs or instance-store                                 |
-| rootDeviceName        | string                                                            | The device name of the root device volume, such as /dev/sda1                                |
-| architecture          | string                                                            | The architecture of the instance                                                            |
-| tpmSupport            | string                                                            | The TPM version supported. NitroTPM is enabled if this value is `2.0`                       |
+| rootDeviceType        | string                                                            | Root device type used by the AMI: ebs or instance-store                                     |
+| rootDeviceName        | string                                                            | Device name of the root device volume, such as /dev/sda1                                    |
+| architecture          | string                                                            | Architecture of the instance                                                                |
+| tpmSupport            | string                                                            | TPM version supported. NitroTPM is enabled if this value is `2.0`                           |
 | networkInterfaces     | &#91;&#93;[aws.ec2.networkinterface](aws.ec2.networkinterface.md) | List of network interfaces for the instance                                                 |

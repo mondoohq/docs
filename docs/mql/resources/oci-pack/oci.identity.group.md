@@ -22,3 +22,7 @@ Oracle Cloud Infrastructure (OCI) collection of users
 | description   | string | Description of the user        |
 | created       | time   | Time when the user was created |
 | state         | string | Instance state                 |
+
+**References**
+
+- [Managing Groups](https://docs.oracle.com/en-us/iaas/Content/Identity/Tasks/managinggroups.htm)

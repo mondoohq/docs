@@ -33,3 +33,7 @@ Kubernetes CronJob
 | podSpec         | dict                                                | Pod description                      |
 | initContainers  | &#91;&#93;[k8s.initContainer](k8s.initcontainer.md) | Init containers                      |
 | containers      | &#91;&#93;[k8s.container](k8s.container.md)         | Contained containers                 |
+
+**References**
+
+- [CronJob Documentation](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/)

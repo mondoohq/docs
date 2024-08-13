@@ -26,6 +26,6 @@ AWS IAM Access Analyzer resource (provides an object representing an individual 
 | type                   | string            | Type of analyzer: ACCOUNT or ORGANIZATION                     |
 | region                 | string            | Region where the analyzer exists                              |
 | tags                   | map[string]string | Tags for the analyzer                                         |
-| lastResourceAnalyzed   | string            | The name of the last resource that was analyzed               |
+| lastResourceAnalyzed   | string            | Name of the last resource that was analyzed                   |
 | lastResourceAnalyzedAt | time              | Last scan timestamp                                           |
 | createdAt              | time              | Creation timestamp                                            |

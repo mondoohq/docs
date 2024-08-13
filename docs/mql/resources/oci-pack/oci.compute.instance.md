@@ -21,3 +21,7 @@ Oracle Cloud Infrastructure (OCI) Compute instance
 | region  | [oci.region](oci.region.md) | Region                             |
 | created | time                        | Time when the instance was created |
 | state   | string                      | Instance state                     |
+
+**References**
+
+- [Working with Instances](https://docs.oracle.com/en-us/iaas/Content/Compute/Tasks/instances.htm)

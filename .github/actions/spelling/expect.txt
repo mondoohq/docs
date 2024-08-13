@@ -189,6 +189,7 @@ labelmatchstatement
 lappy
 libwebsockets
 linux
+liveanalytics
 logd
 logfiles
 loggingservice
@@ -316,6 +317,7 @@ sudolog
 suki
 SXp
 targetgroup
+tde
 Tdej
 teamsmeetingpolicyconfig
 tenantfederationconfig
@@ -326,6 +328,7 @@ testring
 testsuite
 tfblock
 Thu
+timestream
 tmpkqyme
 toplevel
 tpu

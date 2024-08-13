@@ -32,3 +32,7 @@ Kubernetes RoleBinding
 | manifest        | dict              | Full resource manifest                                           |
 | subjects        | &#91;&#93;dict    | Subjects holds references to the objects the role applies to     |
 | roleRef         | dict              | RoleRef can only reference a ClusterRole in the global namespace |
+
+**References**
+
+- [Using RBAC Authorization Documentation](https://kubernetes.io/docs/reference/access-authn-authz/rbac/#rolebinding-and-clusterrolebinding)

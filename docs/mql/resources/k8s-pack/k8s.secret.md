@@ -32,3 +32,7 @@ Kubernetes Secret
 | manifest        | dict                          | Full resource manifest               |
 | type            | string                        | Secret type                          |
 | certificates    | &#91;&#93;network.certificate | Secret certificates                  |
+
+**References**
+
+- [Secrets Documentation](https://kubernetes.io/docs/concepts/configuration/secret/)

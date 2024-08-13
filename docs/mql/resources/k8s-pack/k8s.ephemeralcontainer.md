@@ -35,3 +35,7 @@ Kubernetes ephemeral container
 | tty             | bool               | Whether this container should allocate a TTY for itself |
 | env             | dict               | env variables                                           |
 | envFrom         | dict               | envFrom settings                                        |
+
+**References**
+
+- [Ephemeral Containers Documentation](https://kubernetes.io/docs/concepts/workloads/pods/ephemeral-containers/)

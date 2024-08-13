@@ -30,6 +30,6 @@ The `aws.ec2.snapshot` resource provides fields for assessing the configuration 
 | startTime              | time              | Time when the snapshot was initiated                                         |
 | tags                   | map[string]string | Tags for the snapshot                                                        |
 | state                  | string            | State of the snapshot: pending, completed, error, recoverable, or recovering |
-| volumeSize             | int               | The size of the volume, in GiB                                               |
-| description            | string            | The description of the snapshot                                              |
+| volumeSize             | int               | Size of the volume, in GiB                                                   |
+| description            | string            | Description of the snapshot                                                  |
 | encrypted              | bool              | Whether the snapshot is encrypted                                            |

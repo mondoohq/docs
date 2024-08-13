@@ -93,3 +93,7 @@ Query network policies
 ```coffee
 k8s.networkPolicies { name manifest }
 ```
+
+**References**
+
+- [Kubernetes Documentation](https://kubernetes.io/docs/home/)

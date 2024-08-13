@@ -31,3 +31,7 @@ Kubernetes Network Policy
 | created         | time              | Kubernetes object creation timestamp |
 | manifest        | dict              | Full resource manifest               |
 | spec            | dict              | Network policy spec                  |
+
+**References**
+
+- [Network Policies Documentation](https://kubernetes.io/docs/concepts/services-networking/network-policies/)

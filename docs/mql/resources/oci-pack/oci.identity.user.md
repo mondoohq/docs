@@ -32,3 +32,7 @@ Oracle Cloud Infrastructure (OCI) identity user
 | customerSecretKeys | &#91;&#93;[oci.identity.customerSecretKey](oci.identity.customersecretkey.md) | Customer secret keys                                          |
 | authTokens         | &#91;&#93;[oci.identity.authToken](oci.identity.authtoken.md)                 | Auth tokens                                                   |
 | groups             | &#91;&#93;[oci.identity.group](oci.identity.group.md)                         | User groups                                                   |
+
+**References**
+
+- [Managing Users](https://docs.oracle.com/en-us/iaas/Content/Identity/Tasks/managingusers.htm)

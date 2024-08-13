@@ -25,7 +25,7 @@ The `aws.config.rule` resource provides fields representing an individual AWS Co
 | arn         | string | ARN for the config rule                                        |
 | state       | string | State of the rule                                              |
 | source      | dict   | Rule identifier that causes the function to evaluate resources |
-| id          | string | The ID of the Config rule                                      |
-| name        | string | The name that you assigned to the Config rule                  |
-| description | string | The description that provided for the Config rule              |
+| id          | string | ID of the Config rule                                          |
+| name        | string | Name that you assigned to the Config rule                      |
+| description | string | Description that provided for the Config rule                  |
 | region      | string | Region for the Config rule                                     |

@@ -20,11 +20,11 @@ The `aws.cloudwatch.loggroup` object represents an individual AWS CloudWatch log
 
 **Fields**
 
-| ID              | TYPE                                                                                        | DESCRIPTION                                                            |
-| --------------- | ------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
-| arn             | string                                                                                      | ARN of the log group                                                   |
-| name            | string                                                                                      | Name of the log group                                                  |
-| metricsFilters  | &#91;&#93;[aws.cloudwatch.loggroup.metricsfilter](aws.cloudwatch.loggroup.metricsfilter.md) | List of metric filters associated with the log group                   |
-| kmsKey          | [aws.kms.key](aws.kms.key.md)                                                               | KMS key used for log encryption                                        |
-| region          | string                                                                                      | Region where the log group is stored                                   |
-| retentionInDays | int                                                                                         | The number of days to retain the log events in the specified log group |
+| ID              | TYPE                                                                                        | DESCRIPTION                                                        |
+| --------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
+| arn             | string                                                                                      | ARN of the log group                                               |
+| name            | string                                                                                      | Name of the log group                                              |
+| metricsFilters  | &#91;&#93;[aws.cloudwatch.loggroup.metricsfilter](aws.cloudwatch.loggroup.metricsfilter.md) | List of metric filters associated with the log group               |
+| kmsKey          | [aws.kms.key](aws.kms.key.md)                                                               | KMS key used for log encryption                                    |
+| region          | string                                                                                      | Region where the log group is stored                               |
+| retentionInDays | int                                                                                         | Number of days to retain the log events in the specified log group |

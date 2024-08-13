@@ -36,3 +36,7 @@ Kubernetes Pod
 | initContainers      | &#91;&#93;[k8s.initContainer](k8s.initcontainer.md)           | Init containers                      |
 | containers          | &#91;&#93;[k8s.container](k8s.container.md)                   | Contained containers                 |
 | node                | [k8s.node](k8s.node.md)                                       | Node the pod runs on                 |
+
+**References**
+
+- [Pods Documentation](https://kubernetes.io/docs/concepts/workloads/pods/)

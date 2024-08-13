@@ -21,3 +21,7 @@ Oracle Cloud Infrastructure (OCI) compartment
 | description | string | Description of the compartment        |
 | created     | time   | Time when the compartment was created |
 | state       | string | Compartment state                     |
+
+**References**
+
+- [What is a Compartment?](https://docs.oracle.com/en/cloud/foundation/cloud_architecture/governance/compartments.html)

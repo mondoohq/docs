@@ -27,3 +27,7 @@ Kubernetes node
 | resourceVersion | string            | Kubernetes resource version         |
 | name            | string            | Plural name of the resource         |
 | kind            | string            | Kubernetes object type              |
+
+**References**
+
+- [Nodes Documentation](https://kubernetes.io/docs/concepts/architecture/nodes/)

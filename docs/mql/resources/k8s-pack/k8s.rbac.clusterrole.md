@@ -31,3 +31,7 @@ Kubernetes ClusterRole
 | manifest        | dict              | Full resource manifest               |
 | rules           | &#91;&#93;dict    | ClusterRole rules                    |
 | aggregationRule | dict              | ClusterRole aggregation rule         |
+
+**References**
+
+- [Using RBAC Authorization Documentation](https://kubernetes.io/docs/reference/access-authn-authz/rbac/#rolebinding-and-clusterrolebinding)

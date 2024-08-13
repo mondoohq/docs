@@ -33,3 +33,7 @@ Kubernetes service account
 | secrets                      | &#91;&#93;dict    | List of secrets that Pods running using this service account are allowed to use             |
 | imagePullSecrets             | &#91;&#93;dict    | List of references to secrets in the same namespace to use for pulling any images           |
 | automountServiceAccountToken | bool              | Whether pods running as this service account should have an API token automatically mounted |
+
+**References**
+
+- [Service Accounts Documentation](https://kubernetes.io/docs/concepts/security/service-accounts/)

@@ -23,3 +23,7 @@ Policy that specifies the type of access a group has to the resources in a compa
 | created       | time             | Time when the policy was created |
 | state         | string           | Instance state                   |
 | statements    | &#91;&#93;string | Policy statements                |
+
+**References**
+
+- [Managing Policies](https://docs.oracle.com/en-us/iaas/Content/Identity/Tasks/managingpolicies.htm)

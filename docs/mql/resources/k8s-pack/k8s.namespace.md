@@ -28,3 +28,7 @@ Kubernetes namespace
 | kind        | string            | Kubernetes object type               |
 | labels      | map[string]string | Kubernetes labels                    |
 | annotations | map[string]string | Kubernetes annotations               |
+
+**References**
+
+- [Namespaces Documentation](https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/)

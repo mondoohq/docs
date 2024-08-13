@@ -31,3 +31,7 @@ Kubernetes ConfigMap
 | created         | time              | Kubernetes object creation timestamp |
 | manifest        | dict              | Full resource manifest               |
 | data            | map[string]string | Configuration data                   |
+
+**References**
+
+- [ConfigMaps Documentation](https://kubernetes.io/docs/concepts/configuration/configmap/)

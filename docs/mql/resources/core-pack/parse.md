@@ -3,11 +3,11 @@ title: parse
 id: parse
 sidebar_label: parse
 displayed_sidebar: MQL
-description: Provides common parsers (json, ini, certs, etc)
+description: Common parsers (json, ini, certs, and so on)
 ---
 
 # parse
 
 **Description**
 
-Provides common parsers (json, ini, certs, etc)
+Common parsers (json, ini, certs, and so on)

@@ -23,3 +23,7 @@ Oracle Cloud Infrastructure (OCI) VCN security list virtual firewall rules
 | state                | string         | VCN state                             |
 | egressSecurityRules  | &#91;&#93;dict | Rules for allowing egress IP packets  |
 | ingressSecurityRules | &#91;&#93;dict | Rules for allowing ingress IP packets |
+
+**References**
+
+- [Security Lists](https://docs.oracle.com/en-us/iaas/Content/Network/Concepts/securitylists.htm)

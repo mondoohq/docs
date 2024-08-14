@@ -100,6 +100,16 @@ Asset's risk score
 | :----- | :-------- | :-------- |
 | Integer | ???       | ???        |
 
+### status property
+
+Asset's last known status at time of export
+
+`status`
+
+| Type   | Required? | Nullable? |
+| :----- | :-------- | :-------- |
+| String | ???       | ???        |
+
 ### modified_at property
 
 Timestamp from when this check result item was last modified. This is a date-time string matching [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification").

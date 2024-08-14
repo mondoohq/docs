@@ -14,20 +14,20 @@ This is the schema Mondoo uses when exporting asset data to JSONL.
 
 | Property                                       | Type   | Required? | Nullable? |
 | :--------------------------------------------- | :----- | :-------- | :-------- |
-| mrn (deprecated)                               | String | Yes       | No        |
-| [asset_mrn](#asset_mrn-property)               | String | Yes       | No        |
+| mrn (deprecated)                               |  |        |         |
+| [asset_mrn](#asset_mrn-property)               | `string` | Yes       | No        |
 | [asset_id](#asset_id-property)     | `string`      | Yes       | No        |
 | [space_mrn](#space_mrn-property)     | `string`      | Yes       | No        |
 | [space_id](#space_id-property)     | `string`      | Yes       | No        |
 | [space_name](#space_name-property)     | `string`      | Yes       | No        |
-| [name](#name-property)                         | String | Yes       | No        |
-| [platform_name](#platform_name-property)       | String | Yes       | No        |
-| [error](#error-property)                       | String | Yes       | Yes       |
-| [score_updated_at](#score_updated_at-property) | String | Yes       | No        |
-| [updated_at](#updated_at-property)             | String | Yes       | No        |
-| [labels](#labels-property)                     | Object | Yes       | No        |
-| [annotations](#annotations-property)           | Object | Yes       | No        |
-| [exported_at](#exported_at-property)           | String | Yes       | No        |
+| [name](#name-property)                         | `string` | Yes       | No        |
+| [platform_name](#platform_name-property)       | `string` | Yes       | No        |
+| [error](#error-property)                       | `string` | Yes       | Yes       |
+| [score_updated_at](#score_updated_at-property) | `string` | Yes       | No        |
+| [updated_at](#updated_at-property)             | `string` | Yes       | No        |
+| [labels](#labels-property)                     | `object` | Yes       | No        |
+| [annotations](#annotations-property)           | `object` | Yes       | No        |
+| [exported_at](#exported_at-property)           | `string` | Yes       | No        |
 | [base_score](#base_score-property)       | `integer`     | ???       | ???        |
 | [risk_score](#risk_score-property)        | `integer`     | ???       | ???        |
 
@@ -165,7 +165,7 @@ Timestamp when this data was exported. This is a date-time string matching [RFC 
 
 ### risk_factors
 
-Read [Risk Factors](/platform/maintain/export/schema/risk/).
+Read [Risk Factor Export Schema](/platform/maintain/export/schema/risk/).
 
 ### base_score property
 

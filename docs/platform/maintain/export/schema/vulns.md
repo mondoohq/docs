@@ -123,6 +123,24 @@ Brief summary of the vulnerability
 | :----- | :-------- | :-------- |
 | String | Yes       | No        |
 
+### cvss_score property
+
+CVSS score (1 to 10)
+
+`cvss_score`
+
+| Type   | Required? | Nullable? |
+| :----- | :-------- | :-------- |
+| Integer | ???       | ???        |
+
+### cvss_severity property
+
+CVSS severity (Critical, High, Medium, Low, None)`cvss_score`
+
+| Type   | Required? | Nullable? |
+| :----- | :-------- | :-------- |
+| String | ???       | ???        |
+
 ### first_detected_on property
 
 Timestamp from when the vulnerability was first detected. This is a date-time string matching [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification").

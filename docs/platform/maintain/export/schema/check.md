@@ -1,10 +1,10 @@
 ---
-title: Query Result Export Schema
-sidebar_label: Query Results
+title: Check Result Export Schema
+sidebar_label: Check Results
 description: Query result schema for the Mondoo JSONL export
 ---
 
-This is the schema Mondoo uses when exporting query result data to JSONL.
+This is the schema Mondoo uses when exporting check result data to JSONL.
 
 ## Result type
 
@@ -19,15 +19,12 @@ This is the schema Mondoo uses when exporting query result data to JSONL.
 | [space_name](#space_name-property)     | `string`      | Yes       | No        |
 | [asset_id](#asset_id-property)     | `string`      | Yes       | No        |
 | [asset_mrn](#asset_mrn-property)     | `string`      | Yes       | No        |
-| [query_mrn](#query_mrn-property)     | `string`      | Yes       | No        |
-| [title](#title-property)             | `string`      | Yes       | No        |
-| [mql](#mql-property)                 | `string`      | Yes       | No        |
-| [data](#data-property)               | Not specified | Yes       | No        |
-| [exported_at](#exported_at-property) | `string`      | Yes       | No        |
 | [score](#score-property)             | Deprecated     |        |         |
-| [status](#status-property)           | Deprecated     |        |         |
-| [modified_at](#modified_at-property) | Deprecated     |        |         |
-| [failed_at](#failed_at-property)     | Deprecated     |        |         |
+| [base_score](#base_score-property)       | `integer`     | ???       | ???        |
+| [risk_score](#risk_score-property)        | `integer`     | ???       | ???        |
+| [status](#status-property)           | `string`      | Yes       | No        |
+| [modified_at](#modified_at-property) | `string`      | Yes       | No        |
+| [failed_at](#failed_at-property)     | `string`      | ???       | ???        |
 
 ### space_mrn property
 
@@ -79,70 +76,48 @@ Mondoo identifier for the asset
 | :----- | :-------- | :-------- |
 | String | Yes       | No        |
 
-### query_mrn property
-
-Mondoo identifier for the query
-
-`query_mrn`
-
-| Type   | Required? | Nullable? |
-| :----- | :-------- | :-------- |
-| String | Yes       | No        |
-
-### title property
-
-Title of the query
-
-`title`
-
-| Type   | Required? | Nullable? |
-| :----- | :-------- | :-------- |
-| String | Yes       | No        |
-
-### mql property
-
-MQL of the query
-
-`mql`
-
-| Type   | Required? | Nullable? |
-| :----- | :-------- | :-------- |
-| String | Yes       | No        |
-
-### data property
-
-Data of the query result
-
-`data`
-
-| Type    | Required? | Nullable? |
-| :------ | :-------- | :-------- |
-| Unknown | Yes       | No        |
-
-### exported_at property
-
-Timestamp from when the data was exported. This is a date-time string matching [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification").
-
-`exported_at`
-
-| Type   | Required? | Nullable? |
-| :----- | :-------- | :-------- |
-| String | Yes       | No        |
-
 ### score property
 
-Deprecated: Read [Check Results](/platform/maintain/export/schema/check/).
+Deprecated: Use `base_score` instead.
 
-### status property
+### base_score property
 
-Deprecated: Read [Check Results](/platform/maintain/export/schema/check/).
+Asset's score from most recent policy-based scan
+
+`base_score`
+
+| Type   | Required? | Nullable? |
+| :----- | :-------- | :-------- |
+| Integer | ???       | ???        |
+
+### risk_score property
+
+Asset's risk score
+
+`risk_score`
+
+| Type   | Required? | Nullable? |
+| :----- | :-------- | :-------- |
+| Integer | ???       | ???        |
 
 ### modified_at property
 
-Deprecated: Read [Check Results](/platform/maintain/export/schema/check/).
+Timestamp from when this check result item was last modified. This is a date-time string matching [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification").
+
+`modified_at`
+
+| Type   | Required? | Nullable? |
+| :----- | :-------- | :-------- |
+| String | Yes       | No        |
 
 ### failed_at property
 
-Deprecated: Read [Check Results](/platform/maintain/export/schema/check/).
+Optional timestamp from when this check result item failed This is a date-time string matching [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification").
+
+`failed_at`
+
+| Type   | Required? | Nullable? |
+| :----- | :-------- | :-------- |
+| String | ???       | ???        |
 
 ---

@@ -1,6 +1,6 @@
 ---
 title: Vulnerability Export Schema
-sidebar_label: Vulnerability
+sidebar_label: Vulnerabilities
 description: Vulnerability schema for the Mondoo JSONL export
 ---
 
@@ -14,18 +14,68 @@ This is the schema Mondoo uses when exporting vulnerability data to JSONL.
 
 | Property                                         | Type     | Required? | Nullable? |
 | :----------------------------------------------- | :------- | :-------- | :-------- |
-| [asset_mrn](#asset_mrn-property)                 | `string` | Yes       | No        |
+| [space_mrn](#space_mrn-property)     | `string`      | Yes       | No        |
+| [space_id](#space_id-property)     | `string`      | Yes       | No        |
+| [space_name](#space_name-property)     | `string`      | Yes       | No        |
+| [asset_id](#asset_id-property)     | `string`      | Yes       | No        |
+| [asset_mrn](#asset_mrn-property)     | `string`      | Yes       | No        |
 | [vuln_mrn](#vuln_mrn-property)                   | `string` | Yes       | No        |
 | [vuln_id](#vuln_id-property)                     | `string` | Yes       | No        |
 | [type](#type-property)                           | `string` | Yes       | No        |
 | [summary](#summary-property)                     | `string` | Yes       | No        |
+| [cvss_score](#cvss_score-property)                     | `integer` | ???       | ???        |
+| [cvss_severity](#cvss_severity-property)                     | `string` | ???       | ???        |
 | [first_detected_on](#first_detected_on-property) | `string` | Yes       | No        |
 | [resolved_on](#resolved_on-property)             | `string` | Yes       | No        |
 | [exported_at](#exported_at-property)             | `string` | Yes       | No        |
+| [risk_factors](#risk_factors-property)       | `json`     | ???       | ???        |
+| [references](#references-property)        | `json`     | ???       | ???        |
+| [base_score](#base_score-property)       | `integer`     | ???       | ???        |
+| [risk_score](#risk_score-property)        | `integer`     | ???       | ???        |
+
+### space_mrn property
+
+Mondoo identifier for the space containing the asset
+
+`asset_mrn`
+
+| Type   | Required? | Nullable? |
+| :----- | :-------- | :-------- |
+| String | Yes       | No        |
+
+### space_id property
+
+Unique identifier for the space containing the asset
+
+`asset_mrn`
+
+| Type   | Required? | Nullable? |
+| :----- | :-------- | :-------- |
+| String | Yes       | No        |
+
+### space_name property
+
+Name of the space containing the asset
+
+`asset_mrn`
+
+| Type   | Required? | Nullable? |
+| :----- | :-------- | :-------- |
+| String | Yes       | No        |
+
+### asset_id property
+
+Unique identifier for the asset
+
+`asset_mrn`
+
+| Type   | Required? | Nullable? |
+| :----- | :-------- | :-------- |
+| String | Yes       | No        |
 
 ### asset_mrn property
 
-Unique identifier for the vulnerability item's asset
+Mondoo identifier for the asset
 
 `asset_mrn`
 
@@ -35,7 +85,7 @@ Unique identifier for the vulnerability item's asset
 
 ### vuln_mrn property
 
-Unique identifier for the vulnerability
+Mondoo identifier for the vulnerability
 
 `vuln_mrn`
 
@@ -91,7 +141,7 @@ Optional timestamp from when the vulnerability was resolved. This is a date-time
 
 | Type   | Required? | Nullable? |
 | :----- | :-------- | :-------- |
-| String | Yes       | No        |
+| String | No?????       | Yes?????        |
 
 ### exported_at property
 
@@ -102,5 +152,39 @@ Timestamp from when this vulnerability data was exported. This is a date-time st
 | Type   | Required? | Nullable? |
 | :----- | :-------- | :-------- |
 | String | Yes       | No        |
+
+### risk_factors property
+
+Read [Risk Factors](/platform/maintain/export/schema/risk/).
+
+### references property
+
+CVE references
+
+`references`
+
+| Type   | Required? | Nullable? |
+| :----- | :-------- | :-------- |
+| String | No?????       | Yes?????        |
+
+### base_score property
+
+Asset's score from most recent policy-based scan
+
+`base_score`
+
+| Type   | Required? | Nullable? |
+| :----- | :-------- | :-------- |
+| Integer | ???       | ???        |
+
+### risk_score property
+
+Asset's risk score
+
+`risk_score`
+
+| Type   | Required? | Nullable? |
+| :----- | :-------- | :-------- |
+| Integer | ???       | ???        |
 
 ---

@@ -14,26 +14,27 @@ This is the schema Mondoo uses when exporting asset data to JSONL.
 
 | Property                                       | Type   | Required? | Nullable? |
 | :--------------------------------------------- | :----- | :-------- | :-------- |
-| [annotations](#annotations-property)           | Object | Yes       | No        |
-| [asset_mrn](#asset_mrn-property)               | String | Yes       | No        |
-| [error](#error-property)                       | String | Yes       | Yes       |
-| [exported_at](#exported_at-property)           | String | Yes       | No        |
-| [labels](#labels-property)                     | Object | Yes       | No        |
 | mrn (deprecated)                               | String | Yes       | No        |
+| [asset_mrn](#asset_mrn-property)               | String | Yes       | No        |
+| [asset_id](#asset_id-property)     | `string`      | Yes       | No        |
+| [space_mrn](#space_mrn-property)     | `string`      | Yes       | No        |
+| [space_id](#space_id-property)     | `string`      | Yes       | No        |
+| [space_name](#space_name-property)     | `string`      | Yes       | No        |
 | [name](#name-property)                         | String | Yes       | No        |
 | [platform_name](#platform_name-property)       | String | Yes       | No        |
+| [error](#error-property)                       | String | Yes       | Yes       |
 | [score_updated_at](#score_updated_at-property) | String | Yes       | No        |
 | [updated_at](#updated_at-property)             | String | Yes       | No        |
+| [labels](#labels-property)                     | Object | Yes       | No        |
+| [annotations](#annotations-property)           | Object | Yes       | No        |
+| [exported_at](#exported_at-property)           | String | Yes       | No        |
+| [base_score](#base_score-property)       | `integer`     | ???       | ???        |
+| [risk_score](#risk_score-property)        | `integer`     | ???       | ???        |
 
-### annotations property
 
-Metadata that Mondoo adds to assets
+### mrn property
 
-`annotations`
-
-| Type   | Required? | Nullable? |
-| :----- | :-------- | :-------- |
-| Object | Yes       | No        |
+Deprecated: Use `asset_mrn` instead.
 
 ### asset_mrn property
 
@@ -45,59 +46,74 @@ Unique identifier for the asset
 | :----- | :-------- | :-------- |
 | String | Yes       | No        |
 
-### error property
+### asset_id property
 
-The error if any (needs better description)
+Unique identifier for the asset
 
-`error`
-
-| Type   | Required? | Nullable? |
-| :----- | :-------- | :-------- |
-| String | Yes       | Yes       |
-
-### exported_at property
-
-Timestamp when this data was exported. This is a date-time string matching [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification").
-
-`exported_at`
+`asset_mrn`
 
 | Type   | Required? | Nullable? |
 | :----- | :-------- | :-------- |
 | String | Yes       | No        |
 
-### labels property
+### space_mrn property
 
-Metadata that Mondoo users add to assets
+Mondoo identifier for the space containing the asset
 
-`labels`
+`asset_mrn`
 
 | Type   | Required? | Nullable? |
 | :----- | :-------- | :-------- |
-| Object | Yes       | No        |
+| String | Yes       | No        |
 
-### mrn
+### space_id property
 
-Deprecated. Use `asset_mrn` instead.
+Unique identifier for the space containing the asset
+
+`asset_mrn`
+
+| Type   | Required? | Nullable? |
+| :----- | :-------- | :-------- |
+| String | Yes       | No        |
+
+### space_name property
+
+Name of the space containing the asset
+
+`asset_mrn`
+
+| Type   | Required? | Nullable? |
+| :----- | :-------- | :-------- |
+| String | Yes       | No        |
 
 ### name property
 
-The name of the asset
+Name of the asset
 
 `name`
-
 | Type   | Required? | Nullable? |
 | :----- | :-------- | :-------- |
-| String | Yes       | No        |
+| String | ???       | ???        |
 
 ### platform_name property
 
-The name of the platform
+Name of the asset's platform
 
 `platform_name`
 
 | Type   | Required? | Nullable? |
 | :----- | :-------- | :-------- |
 | String | Yes       | No        |
+
+### error property
+
+Error, if any
+
+`error`
+
+| Type   | Required? | Nullable? |
+| :----- | :-------- | :-------- |
+| String | Yes       | Yes       |
 
 ### score_updated_at property
 
@@ -116,5 +132,59 @@ Timestamp when this asset was last updated. This is a date-time string matching 
 | Type   | Required? | Nullable? |
 | :----- | :-------- | :-------- |
 | String | Yes       | No        |
+
+### labels property
+
+Metadata that Mondoo users add to assets
+
+`labels`
+
+| Type   | Required? | Nullable? |
+| :----- | :-------- | :-------- |
+| Object | Yes       | No        |
+
+### annotations property
+
+Metadata that Mondoo adds to assets
+
+`annotations`
+
+| Type   | Required? | Nullable? |
+| :----- | :-------- | :-------- |
+| Object | Yes       | No        |
+
+### exported_at property
+
+Timestamp when this data was exported. This is a date-time string matching [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339 "check the specification").
+
+`exported_at`
+
+| Type   | Required? | Nullable? |
+| :----- | :-------- | :-------- |
+| String | Yes       | No        |
+
+### risk_factors
+
+Read [Risk Factors](/platform/maintain/export/schema/risk/).
+
+### base_score property
+
+Asset's score from most recent policy-based scan
+
+`base_score`
+
+| Type   | Required? | Nullable? |
+| :----- | :-------- | :-------- |
+| Integer | ???       | ???        |
+
+### risk_score property
+
+Asset's risk score
+
+`risk_score`
+
+| Type   | Required? | Nullable? |
+| :----- | :-------- | :-------- |
+| Integer | ???       | ???        |
 
 ---

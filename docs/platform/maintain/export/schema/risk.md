@@ -12,11 +12,11 @@ This is the schema Mondoo uses when exporting risk factor data to JSONL.
 
 ## RiskFactor properties
 
-| Property                             | Type          | Required? | Nullable? |
-| :----------------------------------- | :------------ | :-------- | :-------- |
-| [id](#id-property)     | `string`      | Yes       | No        |
-| [mrn](#mrn-property)     | `string`      | Yes       | No        |
-| [name](#name-property)             | `string`      | Yes       | No        |
+| Property               | Type     | Required? | Nullable? |
+| :--------------------- | :------- | :-------- | :-------- |
+| [id](#id-property)     | `string` | Yes       | No        |
+| [mrn](#mrn-property)   | `string` | Yes       | No        |
+| [name](#name-property) | `string` | Yes       | No        |
 
 ### id property
 

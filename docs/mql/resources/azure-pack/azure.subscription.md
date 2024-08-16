@@ -48,6 +48,7 @@ Use the `azure.subscription` resource to assess the configuration of Azure subsc
 | cloudDefender         | [azure.subscription.cloudDefenderService](azure.subscription.clouddefenderservice.md) | Cloud defender resources in the subscription  |
 | aks                   | [azure.subscription.aksService](azure.subscription.aksservice.md)                     | AKS resources in the subscription             |
 | advisor               | [azure.subscription.advisorService](azure.subscription.advisorservice.md)             | Advisor resources in the subscription         |
+| policy                | [azure.subscription.policy](azure.subscription.policy.md)                             | Policy service in the subscription            |
 
 **Examples**
 

@@ -12,25 +12,24 @@ This is the schema Mondoo uses when exporting asset data to JSONL.
 
 ## Asset properties
 
-| Property                                       | Type   | Required? | Nullable? |
-| :--------------------------------------------- | :----- | :-------- | :-------- |
-| mrn (deprecated)                               |  |        |         |
-| [asset_mrn](#asset_mrn-property)               | `string` | Yes       | No        |
-| [asset_id](#asset_id-property)     | `string`      | Yes       | No        |
-| [space_mrn](#space_mrn-property)     | `string`      | Yes       | No        |
-| [space_id](#space_id-property)     | `string`      | Yes       | No        |
-| [space_name](#space_name-property)     | `string`      | Yes       | No        |
-| [name](#name-property)                         | `string` | Yes       | No        |
-| [platform_name](#platform_name-property)       | `string` | Yes       | No        |
-| [error](#error-property)                       | `string` | Yes       | Yes       |
-| [score_updated_at](#score_updated_at-property) | `string` | Yes       | No        |
-| [updated_at](#updated_at-property)             | `string` | Yes       | No        |
-| [labels](#labels-property)                     | `object` | Yes       | No        |
-| [annotations](#annotations-property)           | `object` | Yes       | No        |
-| [exported_at](#exported_at-property)           | `string` | Yes       | No        |
-| [base_score](#base_score-property)       | `integer`     | Yes       | Yes        |
-| [risk_score](#risk_score-property)        | `integer`     | Yes       | Yes        |
-
+| Property                                       | Type      | Required? | Nullable? |
+| :--------------------------------------------- | :-------- | :-------- | :-------- |
+| mrn (deprecated)                               |           |           |           |
+| [asset_mrn](#asset_mrn-property)               | `string`  | Yes       | No        |
+| [asset_id](#asset_id-property)                 | `string`  | Yes       | No        |
+| [space_mrn](#space_mrn-property)               | `string`  | Yes       | No        |
+| [space_id](#space_id-property)                 | `string`  | Yes       | No        |
+| [space_name](#space_name-property)             | `string`  | Yes       | No        |
+| [name](#name-property)                         | `string`  | Yes       | No        |
+| [platform_name](#platform_name-property)       | `string`  | Yes       | No        |
+| [error](#error-property)                       | `string`  | Yes       | Yes       |
+| [score_updated_at](#score_updated_at-property) | `string`  | Yes       | No        |
+| [updated_at](#updated_at-property)             | `string`  | Yes       | No        |
+| [labels](#labels-property)                     | `object`  | Yes       | No        |
+| [annotations](#annotations-property)           | `object`  | Yes       | No        |
+| [exported_at](#exported_at-property)           | `string`  | Yes       | No        |
+| [base_score](#base_score-property)             | `integer` | Yes       | Yes       |
+| [risk_score](#risk_score-property)             | `integer` | Yes       | Yes       |
 
 ### mrn property
 
@@ -173,9 +172,9 @@ Asset's score from most recent policy-based scan
 
 `base_score`
 
-| Type   | Required? | Nullable? |
-| :----- | :-------- | :-------- |
-| Integer | Yes       | Yes        |
+| Type    | Required? | Nullable? |
+| :------ | :-------- | :-------- |
+| Integer | Yes       | Yes       |
 
 ### risk_score property
 
@@ -183,8 +182,8 @@ Asset's risk score
 
 `risk_score`
 
-| Type   | Required? | Nullable? |
-| :----- | :-------- | :-------- |
-| Integer | Yes       | Yes        |
+| Type    | Required? | Nullable? |
+| :------ | :-------- | :-------- |
+| Integer | Yes       | Yes       |
 
 ---

@@ -12,19 +12,19 @@ This is the schema Mondoo uses when exporting check result data to JSONL.
 
 ## Result properties
 
-| Property                             | Type          | Required? | Nullable? |
-| :----------------------------------- | :------------ | :-------- | :-------- |
-| [space_mrn](#space_mrn-property)     | `string`      | Yes       | No        |
-| [space_id](#space_id-property)     | `string`      | Yes       | No        |
-| [space_name](#space_name-property)     | `string`      | Yes       | No        |
-| [asset_id](#asset_id-property)     | `string`      | Yes       | No        |
-| [asset_mrn](#asset_mrn-property)     | `string`      | Yes       | No        |
-| [score](#score-property)             | Deprecated     |        |         |
-| [base_score](#base_score-property)       | `integer`     | Yes       | Yes        |
-| [risk_score](#risk_score-property)        | `integer`     | Yes       |Yes        |
-| [status](#status-property)           | `string`      | Yes       | No        |
-| [modified_at](#modified_at-property) | `string`      | Yes       | No        |
-| [failed_at](#failed_at-property)     | `string`      | Yes       | No        |
+| Property                             | Type       | Required? | Nullable? |
+| :----------------------------------- | :--------- | :-------- | :-------- |
+| [space_mrn](#space_mrn-property)     | `string`   | Yes       | No        |
+| [space_id](#space_id-property)       | `string`   | Yes       | No        |
+| [space_name](#space_name-property)   | `string`   | Yes       | No        |
+| [asset_id](#asset_id-property)       | `string`   | Yes       | No        |
+| [asset_mrn](#asset_mrn-property)     | `string`   | Yes       | No        |
+| [score](#score-property)             | Deprecated |           |           |
+| [base_score](#base_score-property)   | `integer`  | Yes       | Yes       |
+| [risk_score](#risk_score-property)   | `integer`  | Yes       | Yes       |
+| [status](#status-property)           | `string`   | Yes       | No        |
+| [modified_at](#modified_at-property) | `string`   | Yes       | No        |
+| [failed_at](#failed_at-property)     | `string`   | Yes       | No        |
 
 ### space_mrn property
 
@@ -86,9 +86,9 @@ Asset's score for this check in the most recent policy-based scan
 
 `base_score`
 
-| Type   | Required? | Nullable? |
-| :----- | :-------- | :-------- |
-| Integer | Yes       | Yes        |
+| Type    | Required? | Nullable? |
+| :------ | :-------- | :-------- |
+| Integer | Yes       | Yes       |
 
 ### risk_score property
 
@@ -96,9 +96,9 @@ Check risk score
 
 `risk_score`
 
-| Type   | Required? | Nullable? |
-| :----- | :-------- | :-------- |
-| Integer | Yes       | Yes        |
+| Type    | Required? | Nullable? |
+| :------ | :-------- | :-------- |
+| Integer | Yes       | Yes       |
 
 ### status property
 

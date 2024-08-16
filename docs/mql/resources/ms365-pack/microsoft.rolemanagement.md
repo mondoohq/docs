@@ -3,17 +3,17 @@ title: microsoft.rolemanagement
 id: microsoft.rolemanagement
 sidebar_label: microsoft.rolemanagement
 displayed_sidebar: MQL
-description: Microsoft role management
+description: Deprecated use `microsoft.roles` instead
 ---
 
 # microsoft.rolemanagement
 
 **Description**
 
-Microsoft role management
+Deprecated: use `microsoft.roles` instead
 
 **Fields**
 
-| ID              | TYPE                                                                                            | DESCRIPTION              |
-| --------------- | ----------------------------------------------------------------------------------------------- | ------------------------ |
-| roleDefinitions | &#91;&#93;[microsoft.rolemanagement.roledefinition](microsoft.rolemanagement.roledefinition.md) | List of role definitions |
+| ID              | TYPE                                                                                            | DESCRIPTION                               |
+| --------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------- |
+| roleDefinitions | &#91;&#93;[microsoft.rolemanagement.roledefinition](microsoft.rolemanagement.roledefinition.md) | Deprecated: use `microsoft.roles` instead |

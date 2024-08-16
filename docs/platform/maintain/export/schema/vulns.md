@@ -12,26 +12,26 @@ This is the schema Mondoo uses when exporting vulnerability data to JSONL.
 
 ## Vulnerability properties
 
-| Property                                         | Type     | Required? | Nullable? |
-| :----------------------------------------------- | :------- | :-------- | :-------- |
-| [space_mrn](#space_mrn-property)     | `string`      | Yes       | No        |
-| [space_id](#space_id-property)     | `string`      | Yes       | No        |
-| [space_name](#space_name-property)     | `string`      | Yes       | No        |
-| [asset_id](#asset_id-property)     | `string`      | Yes       | No        |
-| [asset_mrn](#asset_mrn-property)     | `string`      | Yes       | No        |
-| [vuln_mrn](#vuln_mrn-property)                   | `string` | Yes       | No        |
-| [vuln_id](#vuln_id-property)                     | `string` | Yes       | No        |
-| [type](#type-property)                           | `string` | Yes       | No        |
-| [summary](#summary-property)                     | `string` | Yes       | No        |
-| [cvss_score](#cvss_score-property)                     | `integer` | No       | No        |
-| [cvss_severity](#cvss_severity-property)                     | `string` | No       | No        |
-| [first_detected_on](#first_detected_on-property) | `string` | Yes       | No        |
-| [resolved_on](#resolved_on-property)             | `string` | Yes       | No        |
-| [exported_at](#exported_at-property)             | `string` | Yes       | No        |
-| [risk_factors](#risk_factors-property)       | `JSON`     | No       | Yes        |
-| [references](#references-property)        | `JSON`     | No       | Yes        |
-| [base_score](#base_score-property)       | `integer`     | Yes       | No        |
-| [risk_score](#risk_score-property)        | `integer`     | Yes       | No        |
+| Property                                         | Type      | Required? | Nullable? |
+| :----------------------------------------------- | :-------- | :-------- | :-------- |
+| [space_mrn](#space_mrn-property)                 | `string`  | Yes       | No        |
+| [space_id](#space_id-property)                   | `string`  | Yes       | No        |
+| [space_name](#space_name-property)               | `string`  | Yes       | No        |
+| [asset_id](#asset_id-property)                   | `string`  | Yes       | No        |
+| [asset_mrn](#asset_mrn-property)                 | `string`  | Yes       | No        |
+| [vuln_mrn](#vuln_mrn-property)                   | `string`  | Yes       | No        |
+| [vuln_id](#vuln_id-property)                     | `string`  | Yes       | No        |
+| [type](#type-property)                           | `string`  | Yes       | No        |
+| [summary](#summary-property)                     | `string`  | Yes       | No        |
+| [cvss_score](#cvss_score-property)               | `integer` | No        | No        |
+| [cvss_severity](#cvss_severity-property)         | `string`  | No        | No        |
+| [first_detected_on](#first_detected_on-property) | `string`  | Yes       | No        |
+| [resolved_on](#resolved_on-property)             | `string`  | Yes       | No        |
+| [exported_at](#exported_at-property)             | `string`  | Yes       | No        |
+| [risk_factors](#risk_factors-property)           | `JSON`    | No        | Yes       |
+| [references](#references-property)               | `JSON`    | No        | Yes       |
+| [base_score](#base_score-property)               | `integer` | Yes       | No        |
+| [risk_score](#risk_score-property)               | `integer` | Yes       | No        |
 
 ### space_mrn property
 
@@ -129,8 +129,8 @@ CVSS score (0 to 10)
 
 `cvss_score`
 
-| Type   | Required? | Nullable? |
-| :----- | :-------- | :-------- |
+| Type    | Required? | Nullable? |
+| :------ | :-------- | :-------- |
 | Integer | Yes       | No        |
 
 ### cvss_severity property
@@ -185,7 +185,7 @@ CVE and advisory references
 
 | Type   | Required? | Nullable? |
 | :----- | :-------- | :-------- |
-| String | No       | Yes        |
+| String | No        | Yes       |
 
 ### base_score property
 
@@ -193,8 +193,8 @@ CVE or advisory score based on the most recent policy-based scan
 
 `base_score`
 
-| Type   | Required? | Nullable? |
-| :----- | :-------- | :-------- |
+| Type    | Required? | Nullable? |
+| :------ | :-------- | :-------- |
 | Integer | Yes       | No        |
 
 ### risk_score property
@@ -203,8 +203,8 @@ CVE or advisory's risk score
 
 `risk_score`
 
-| Type   | Required? | Nullable? |
-| :----- | :-------- | :-------- |
+| Type    | Required? | Nullable? |
+| :------ | :-------- | :-------- |
 | Integer | Yes       | No        |
 
 ---

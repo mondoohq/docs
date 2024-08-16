@@ -90,9 +90,9 @@ Name of the space containing the asset
 Name of the asset
 
 `name`
-| Type   | Required? | Nullable? |
+| Type | Required? | Nullable? |
 | :----- | :-------- | :-------- |
-| String | Yes       | No        |
+| String | Yes | No |
 
 ### platform_name property
 

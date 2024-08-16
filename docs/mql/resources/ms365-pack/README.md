@@ -34,6 +34,7 @@ Resources included in this pack:
 | [microsoft.serviceprincipal](microsoft.serviceprincipal.md)                                               | Microsoft service principal (Enterprise application) |
 | [microsoft.serviceprincipal.assignment](microsoft.serviceprincipal.assignment.md)                         | Microsoft Service Principal Assignment               |
 | [microsoft.user](microsoft.user.md)                                                                       | Microsoft Entra ID user                              |
+| [microsoft.user.authenticationMethods](microsoft.user.authenticationmethods.md)                           | Microsoft Entra authentication methods               |
 | [ms365.exchangeonline](ms365.exchangeonline.md)                                                           | Microsoft 365 Exchange Online                        |
 | [ms365.exchangeonline.exoMailbox](ms365.exchangeonline.exomailbox.md)                                     | Microsoft 365 Exchange Online Mailbox                |
 | [ms365.exchangeonline.externalSender](ms365.exchangeonline.externalsender.md)                             | Microsoft 365 Exchange Online External Sender        |

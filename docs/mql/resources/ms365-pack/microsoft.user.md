@@ -14,27 +14,30 @@ Microsoft Entra ID user
 
 **Fields**
 
-| ID                | TYPE             | DESCRIPTION                         |
-| ----------------- | ---------------- | ----------------------------------- |
-| id                | string           | User ID                             |
-| accountEnabled    | bool             | Whether the user account is enabled |
-| city              | string           | User city                           |
-| companyName       | string           | User company name                   |
-| country           | string           | User country                        |
-| createdDateTime   | time             | User create time                    |
-| department        | string           | User department                     |
-| displayName       | string           | User display name                   |
-| employeeId        | string           | User employee ID                    |
-| givenName         | string           | User given name                     |
-| jobTitle          | string           | User job title                      |
-| mail              | string           | User email                          |
-| mobilePhone       | string           | User mobile phone                   |
-| otherMails        | &#91;&#93;string | List of other email addresses       |
-| officeLocation    | string           | User office location                |
-| postalCode        | string           | User postal code                    |
-| state             | string           | User state                          |
-| streetAddress     | string           | User street address                 |
-| surname           | string           | User surname                        |
-| userPrincipalName | string           | User service principal name         |
-| userType          | string           | User type                           |
-| settings          | dict             | User settings                       |
+| ID                | TYPE                                                                            | DESCRIPTION                                   |
+| ----------------- | ------------------------------------------------------------------------------- | --------------------------------------------- |
+| id                | string                                                                          | User Object ID                                |
+| accountEnabled    | bool                                                                            | Whether the user account is enabled           |
+| city              | string                                                                          | User city                                     |
+| companyName       | string                                                                          | Deprecated: use job.companyName instead       |
+| country           | string                                                                          | Deprecated: use contact.country instead       |
+| createdDateTime   | time                                                                            | User create time                              |
+| department        | string                                                                          | Deprecated: use job.department instead        |
+| displayName       | string                                                                          | User display name                             |
+| employeeId        | string                                                                          | Deprecated: use job.employeeId instead        |
+| givenName         | string                                                                          | User given name                               |
+| jobTitle          | string                                                                          | Deprecated: use job.title instead             |
+| mail              | string                                                                          | Deprecated: use contact.email instead         |
+| mobilePhone       | string                                                                          | Deprecated: use contact.mobilePhone instead   |
+| otherMails        | &#91;&#93;string                                                                | Deprecated: use contact.otherMails instead    |
+| officeLocation    | string                                                                          | Deprecated: use job.officeLocation instead    |
+| postalCode        | string                                                                          | Deprecated: use contact.postalCode instead    |
+| state             | string                                                                          | Deprecated: use contact.state instead         |
+| streetAddress     | string                                                                          | Deprecated: use contact.streetAddress instead |
+| surname           | string                                                                          | User surname                                  |
+| userPrincipalName | string                                                                          | User service principal name                   |
+| userType          | string                                                                          | User type                                     |
+| settings          | dict                                                                            | User settings                                 |
+| job               | dict                                                                            | Job information                               |
+| contact           | dict                                                                            | Contact information                           |
+| authMethods       | [microsoft.user.authenticationMethods](microsoft.user.authenticationmethods.md) | Authentication information                    |

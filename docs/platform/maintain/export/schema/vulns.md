@@ -23,21 +23,21 @@ This is the schema Mondoo uses when exporting vulnerability data to JSONL.
 | [vuln_id](#vuln_id-property)                     | `string` | Yes       | No        |
 | [type](#type-property)                           | `string` | Yes       | No        |
 | [summary](#summary-property)                     | `string` | Yes       | No        |
-| [cvss_score](#cvss_score-property)                     | `integer` | ???       | ???        |
-| [cvss_severity](#cvss_severity-property)                     | `string` | ???       | ???        |
+| [cvss_score](#cvss_score-property)                     | `integer` | No       | No        |
+| [cvss_severity](#cvss_severity-property)                     | `string` | No       | No        |
 | [first_detected_on](#first_detected_on-property) | `string` | Yes       | No        |
 | [resolved_on](#resolved_on-property)             | `string` | Yes       | No        |
 | [exported_at](#exported_at-property)             | `string` | Yes       | No        |
-| [risk_factors](#risk_factors-property)       | `json`     | ???       | ???        |
-| [references](#references-property)        | `json`     | ???       | ???        |
-| [base_score](#base_score-property)       | `integer`     | ???       | ???        |
-| [risk_score](#risk_score-property)        | `integer`     | ???       | ???        |
+| [risk_factors](#risk_factors-property)       | `JSON`     | No       | Yes        |
+| [references](#references-property)        | `JSON`     | No       | Yes        |
+| [base_score](#base_score-property)       | `integer`     | Yes       | No        |
+| [risk_score](#risk_score-property)        | `integer`     | Yes       | No        |
 
 ### space_mrn property
 
 Mondoo identifier for the space containing the asset
 
-`asset_mrn`
+`space_mrn`
 
 | Type   | Required? | Nullable? |
 | :----- | :-------- | :-------- |
@@ -47,7 +47,7 @@ Mondoo identifier for the space containing the asset
 
 Unique identifier for the space containing the asset
 
-`asset_mrn`
+`space_id`
 
 | Type   | Required? | Nullable? |
 | :----- | :-------- | :-------- |
@@ -57,7 +57,7 @@ Unique identifier for the space containing the asset
 
 Name of the space containing the asset
 
-`asset_mrn`
+`space_name`
 
 | Type   | Required? | Nullable? |
 | :----- | :-------- | :-------- |
@@ -67,7 +67,7 @@ Name of the space containing the asset
 
 Unique identifier for the asset
 
-`asset_mrn`
+`asset_id`
 
 | Type   | Required? | Nullable? |
 | :----- | :-------- | :-------- |
@@ -125,21 +125,23 @@ Brief summary of the vulnerability
 
 ### cvss_score property
 
-CVSS score (1 to 10)
+CVSS score (0 to 10)
 
 `cvss_score`
 
 | Type   | Required? | Nullable? |
 | :----- | :-------- | :-------- |
-| Integer | ???       | ???        |
+| Integer | Yes       | No        |
 
 ### cvss_severity property
 
-CVSS severity (Critical, High, Medium, Low, None)`cvss_score`
+CVSS severity (Critical, High, Medium, Low, None)
+
+`cvss_score`
 
 | Type   | Required? | Nullable? |
 | :----- | :-------- | :-------- |
-| String | ???       | ???        |
+| String | Yes       | No        |
 
 ### first_detected_on property
 
@@ -159,7 +161,7 @@ Optional timestamp from when the vulnerability was resolved. This is a date-time
 
 | Type   | Required? | Nullable? |
 | :----- | :-------- | :-------- |
-| String | No?????       | Yes?????        |
+| String | Yes       | No        |
 
 ### exported_at property
 
@@ -177,23 +179,23 @@ Read [Risk Factors](/platform/maintain/export/schema/risk/).
 
 ### references property
 
-CVE references
+CVE and advisory references
 
 `references`
 
 | Type   | Required? | Nullable? |
 | :----- | :-------- | :-------- |
-| String | No?????       | Yes?????        |
+| String | No       | Yes        |
 
 ### base_score property
 
-Asset's score from most recent policy-based scan
+CVE or advisory score based on the most recent policy-based scan
 
 `base_score`
 
 | Type   | Required? | Nullable? |
 | :----- | :-------- | :-------- |
-| Integer | ???       | ???        |
+| Integer | Yes       | No        |
 
 ### risk_score property
 
@@ -203,6 +205,6 @@ Asset's risk score
 
 | Type   | Required? | Nullable? |
 | :----- | :-------- | :-------- |
-| Integer | ???       | ???        |
+| Integer | Yes       | No        |
 
 ---

@@ -28,8 +28,8 @@ This is the schema Mondoo uses when exporting asset data to JSONL.
 | [labels](#labels-property)                     | `object` | Yes       | No        |
 | [annotations](#annotations-property)           | `object` | Yes       | No        |
 | [exported_at](#exported_at-property)           | `string` | Yes       | No        |
-| [base_score](#base_score-property)       | `integer`     | ???       | ???        |
-| [risk_score](#risk_score-property)        | `integer`     | ???       | ???        |
+| [base_score](#base_score-property)       | `integer`     | Yes       | Yes        |
+| [risk_score](#risk_score-property)        | `integer`     | Yes       | Yes        |
 
 
 ### mrn property
@@ -93,7 +93,7 @@ Name of the asset
 `name`
 | Type   | Required? | Nullable? |
 | :----- | :-------- | :-------- |
-| String | ???       | ???        |
+| String | Yes       | No        |
 
 ### platform_name property
 
@@ -175,7 +175,7 @@ Asset's score from most recent policy-based scan
 
 | Type   | Required? | Nullable? |
 | :----- | :-------- | :-------- |
-| Integer | ???       | ???        |
+| Integer | Yes       | Yes        |
 
 ### risk_score property
 
@@ -185,6 +185,6 @@ Asset's risk score
 
 | Type   | Required? | Nullable? |
 | :----- | :-------- | :-------- |
-| Integer | ???       | ???        |
+| Integer | Yes       | Yes        |
 
 ---

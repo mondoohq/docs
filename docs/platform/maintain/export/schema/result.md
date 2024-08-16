@@ -22,12 +22,8 @@ This is the schema Mondoo uses when exporting query result data to JSONL.
 | [query_mrn](#query_mrn-property)     | `string`      | Yes       | No        |
 | [title](#title-property)             | `string`      | Yes       | No        |
 | [mql](#mql-property)                 | `string`      | Yes       | No        |
-| [data](#data-property)               | Not specified | Yes       | No        |
+| [data](#data-property)               | `JSON` | Yes       | No        |
 | [exported_at](#exported_at-property) | `string`      | Yes       | No        |
-| [score](#score-property)             | Deprecated     |        |         |
-| [status](#status-property)           | Deprecated     |        |         |
-| [modified_at](#modified_at-property) | Deprecated     |        |         |
-| [failed_at](#failed_at-property)     | Deprecated     |        |         |
 
 ### space_mrn property
 
@@ -128,21 +124,5 @@ Timestamp from when the data was exported. This is a date-time string matching [
 | Type   | Required? | Nullable? |
 | :----- | :-------- | :-------- |
 | String | Yes       | No        |
-
-### score property
-
-Deprecated: Read [Check Results](/platform/maintain/export/schema/check/).
-
-### status property
-
-Deprecated: Read [Check Results](/platform/maintain/export/schema/check/).
-
-### modified_at property
-
-Deprecated: Read [Check Results](/platform/maintain/export/schema/check/).
-
-### failed_at property
-
-Deprecated: Read [Check Results](/platform/maintain/export/schema/check/).
 
 ---

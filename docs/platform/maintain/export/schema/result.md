@@ -12,18 +12,18 @@ This is the schema Mondoo uses when exporting query result data to JSONL.
 
 ## Result properties
 
-| Property                             | Type          | Required? | Nullable? |
-| :----------------------------------- | :------------ | :-------- | :-------- |
-| [space_mrn](#space_mrn-property)     | `string`      | Yes       | No        |
-| [space_id](#space_id-property)     | `string`      | Yes       | No        |
-| [space_name](#space_name-property)     | `string`      | Yes       | No        |
-| [asset_id](#asset_id-property)     | `string`      | Yes       | No        |
-| [asset_mrn](#asset_mrn-property)     | `string`      | Yes       | No        |
-| [query_mrn](#query_mrn-property)     | `string`      | Yes       | No        |
-| [title](#title-property)             | `string`      | Yes       | No        |
-| [mql](#mql-property)                 | `string`      | Yes       | No        |
-| [data](#data-property)               | `JSON` | Yes       | No        |
-| [exported_at](#exported_at-property) | `string`      | Yes       | No        |
+| Property                             | Type     | Required? | Nullable? |
+| :----------------------------------- | :------- | :-------- | :-------- |
+| [space_mrn](#space_mrn-property)     | `string` | Yes       | No        |
+| [space_id](#space_id-property)       | `string` | Yes       | No        |
+| [space_name](#space_name-property)   | `string` | Yes       | No        |
+| [asset_id](#asset_id-property)       | `string` | Yes       | No        |
+| [asset_mrn](#asset_mrn-property)     | `string` | Yes       | No        |
+| [query_mrn](#query_mrn-property)     | `string` | Yes       | No        |
+| [title](#title-property)             | `string` | Yes       | No        |
+| [mql](#mql-property)                 | `string` | Yes       | No        |
+| [data](#data-property)               | `JSON`   | Yes       | No        |
+| [exported_at](#exported_at-property) | `string` | Yes       | No        |
 
 ### space_mrn property
 

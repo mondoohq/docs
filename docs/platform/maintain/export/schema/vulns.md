@@ -199,7 +199,7 @@ CVE or advisory score based on the most recent policy-based scan
 
 ### risk_score property
 
-Asset's risk score
+CVE or advisory's risk score
 
 `risk_score`
 

@@ -3,7 +3,7 @@ title: azure.subscription.authorizationService
 id: azure.subscription.authorizationService
 sidebar_label: azure.subscription.authorizationService
 displayed_sidebar: MQL
-description: Azure authorization
+description: Azure IAM service
 ---
 
 # azure.subscription.authorizationService
@@ -14,14 +14,15 @@ description: Azure authorization
 
 **Description**
 
-Azure authorization
+Azure IAM service
 
 **Fields**
 
 | ID              | TYPE                                                                                                                          | DESCRIPTION                                 |
 | --------------- | ----------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------- |
 | subscriptionId  | string                                                                                                                        | Subscription identifier                     |
-| roleDefinitions | &#91;&#93;[azure.subscription.authorizationService.roleDefinition](azure.subscription.authorizationservice.roledefinition.md) | Role definitions for the Azure subscription |
+| roles           | &#91;&#93;[azure.subscription.authorizationService.roleDefinition](azure.subscription.authorizationservice.roledefinition.md) | Role definitions for the Azure subscription |
+| roleDefinitions | &#91;&#93;[azure.subscription.authorizationService.roleDefinition](azure.subscription.authorizationservice.roledefinition.md) | Deprecated: use `roles` instead             |
 
 **References**
 

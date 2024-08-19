@@ -20,6 +20,7 @@ Microsoft service principal (Enterprise application)
 | type                       | string                                                                                      | Service principal type                                                                 |
 | name                       | string                                                                                      | Service principal name                                                                 |
 | appId                      | string                                                                                      | Application ID                                                                         |
+| appOwnerOrganizationId     | string                                                                                      | Application owner ID                                                                   |
 | description                | string                                                                                      | Application description                                                                |
 | tags                       | &#91;&#93;string                                                                            | Service principal tags                                                                 |
 | enabled                    | bool                                                                                        | Whether users can sign into the service principal (application)                        |
@@ -31,6 +32,7 @@ Microsoft service principal (Enterprise application)
 | notes                      | string                                                                                      | Service principal notes                                                                |
 | assignments                | &#91;&#93;[microsoft.serviceprincipal.assignment](microsoft.serviceprincipal.assignment.md) | List of assignments (users and groups) this service principal has                      |
 | applicationTemplateId      | string                                                                                      | Application template ID                                                                |
+| verifiedPublisher          | dict                                                                                        | Application publisher                                                                  |
 | loginUrl                   | string                                                                                      | Login URL                                                                              |
 | logoutUrl                  | string                                                                                      | Logout URL                                                                             |
 | servicePrincipalNames      | &#91;&#93;string                                                                            | Service principal names                                                                |
@@ -38,4 +40,6 @@ Microsoft service principal (Enterprise application)
 | preferredSingleSignOnMode  | string                                                                                      | Preferred single sign-on mode                                                          |
 | notificationEmailAddresses | &#91;&#93;string                                                                            | Notification email addresses                                                           |
 | appRoleAssignmentRequired  | bool                                                                                        | App role assignment required                                                           |
-| accountEnabled             | bool                                                                                        | Account enabled                                                                        |
+| accountEnabled             | bool                                                                                        | Deprecated: use `enabled` instead                                                      |
+| isFirstParty               | bool                                                                                        | Whether it is a first-party Microsoft application                                      |
+| appRoles                   | &#91;&#93;[microsoft.application.role](microsoft.application.role.md)                       | Application roles                                                                      |

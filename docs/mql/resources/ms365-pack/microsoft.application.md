@@ -57,3 +57,4 @@ microsoft.application(name string)
 | requestSignatureVerification      | dict                                                                      | Signature verification                                      |
 | parentalControlSettings           | dict                                                                      | Parental control settings                                   |
 | publicClient                      | dict                                                                      | Public client configuration                                 |
+| appRoles                          | &#91;&#93;[microsoft.application.role](microsoft.application.role.md)     | Application roles                                           |

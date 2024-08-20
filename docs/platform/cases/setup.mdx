@@ -38,9 +38,37 @@ For an overview of cases, read [Track and Fix Findings with Cases and Jira](/pla
 
 6. In the **API Token** box, paste your API token for access to your Jira account. To learn how to create and copy an API token, read [Manage API tokens for your Atlassian account](https://support.atlassian.com/atlassian-account/docs/manage-api-tokens-for-your-atlassian-account/) in the Atlassian documentation.
 
-7. By default, when you close a case in the Mondoo Console, Mondoo also closes the corresponding Jira issue. To stop Mondoo from closing Jira issues, disable **Automatically close cases**.
+7. Select the **CREATE INTEGRATION** button.
 
-8. Select the **CREATE INTEGRATION** button.
+   ![Configure cases in Mondoo](/img/platform/cases/cases-config.png)
+
+8. Set preferences for how cases work in the space:
+
+   - To close the corresponding Jira issue when you close a case in Mondoo, enable **Automatically close tickets**.
+
+   - To create a corresponding Jira issue when you create a case in Mondoo, enable **Automatically create tickets for cases** and select a default Jira project in which to add new issues. (You can choose a different project each time you add a case.)
+
+9. Select the **FINALIZE UPDATE** button.
+
+## Modify configuration of cases for a space
+
+At any time, you can change how cases work in a space. You can choose a different default Jira project or change whether to automatically create or close Jira issues.
+
+1. In the Mondoo Console, navigate to the space where you want to reconfigure cases.
+
+2. In the side navigation bar, select **Settings**.
+
+3. Select the **Cases** tab.
+
+   ![Configure cases in Mondoo](/img/platform/cases/settings-cases.png)
+
+4. Set preferences for how cases work in the space:
+
+   - To close the corresponding Jira issue when you close a case in Mondoo, enable **Automatically close tickets**.
+
+   - To create a corresponding Jira issue when you create a case in Mondoo, enable **Automatically create tickets for cases** and select a default Jira project in which to add new issues. (You can choose a different project each time you add a case.)
+
+   Mondoo saves changes as you make them.
 
 ## Learn more
 

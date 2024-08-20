@@ -18,11 +18,13 @@ Azure IAM service
 
 **Fields**
 
-| ID              | TYPE                                                                                                                          | DESCRIPTION                                 |
-| --------------- | ----------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------- |
-| subscriptionId  | string                                                                                                                        | Subscription identifier                     |
-| roles           | &#91;&#93;[azure.subscription.authorizationService.roleDefinition](azure.subscription.authorizationservice.roledefinition.md) | Role definitions for the Azure subscription |
-| roleDefinitions | &#91;&#93;[azure.subscription.authorizationService.roleDefinition](azure.subscription.authorizationservice.roledefinition.md) | Deprecated: use `roles` instead             |
+| ID                | TYPE                                                                                                                          | DESCRIPTION                                 |
+| ----------------- | ----------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------- |
+| subscriptionId    | string                                                                                                                        | Subscription identifier                     |
+| roles             | &#91;&#93;[azure.subscription.authorizationService.roleDefinition](azure.subscription.authorizationservice.roledefinition.md) | Role definitions for the Azure subscription |
+| roleDefinitions   | &#91;&#93;[azure.subscription.authorizationService.roleDefinition](azure.subscription.authorizationservice.roledefinition.md) | Deprecated: use `roles` instead             |
+| roleAssignments   | &#91;&#93;[azure.subscription.authorizationService.roleAssignment](azure.subscription.authorizationservice.roleassignment.md) | Role assignments                            |
+| managedIdentities | &#91;&#93;[azure.subscription.managedIdentity](azure.subscription.managedidentity.md)                                         | Managed identities                          |
 
 **References**
 

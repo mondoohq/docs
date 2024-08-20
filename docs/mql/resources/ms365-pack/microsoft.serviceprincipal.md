@@ -43,3 +43,4 @@ Microsoft service principal (Enterprise application)
 | accountEnabled             | bool                                                                                        | Deprecated: use `enabled` instead                                                      |
 | isFirstParty               | bool                                                                                        | Whether it is a first-party Microsoft application                                      |
 | appRoles                   | &#91;&#93;[microsoft.application.role](microsoft.application.role.md)                       | Application roles                                                                      |
+| permissions                | &#91;&#93;[microsoft.application.permission](microsoft.application.permission.md)           | Permissions                                                                            |

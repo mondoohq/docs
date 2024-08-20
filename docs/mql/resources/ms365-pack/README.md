@@ -16,6 +16,7 @@ Resources included in this pack:
 | --------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
 | [microsoft](microsoft.md)                                                                                 | Microsoft                                                                            |
 | [microsoft.application](microsoft.application.md)                                                         | Microsoft Entra ID application registration                                          |
+| [microsoft.application.permission](microsoft.application.permission.md)                                   | Microsoft Service Principal Permission                                               |
 | [microsoft.application.role](microsoft.application.role.md)                                               | Microsoft Entra ID app roles are custom roles to assign permissions to users or apps |
 | [microsoft.devicemanagement](microsoft.devicemanagement.md)                                               | Microsoft device management                                                          |
 | [microsoft.devicemanagement.devicecompliancepolicy](microsoft.devicemanagement.devicecompliancepolicy.md) | Microsoft device compliance policy                                                   |
@@ -24,7 +25,6 @@ Resources included in this pack:
 | [microsoft.domaindnsrecord](microsoft.domaindnsrecord.md)                                                 | Microsoft domain DNS record                                                          |
 | [microsoft.group](microsoft.group.md)                                                                     | Microsoft group                                                                      |
 | [microsoft.keyCredential](microsoft.keycredential.md)                                                     | Microsoft Entra AD Application certificate                                           |
-| [microsoft.organization](microsoft.organization.md)                                                       | Microsoft organization                                                               |
 | [microsoft.passwordCredential](microsoft.passwordcredential.md)                                           | Microsoft Entra AD Application secrets                                               |
 | [microsoft.policies](microsoft.policies.md)                                                               | Microsoft policies                                                                   |
 | [microsoft.rolemanagement](microsoft.rolemanagement.md)                                                   | Deprecated: use `microsoft.roles` instead                                            |
@@ -35,6 +35,7 @@ Resources included in this pack:
 | [microsoft.security.securityscore](microsoft.security.securityscore.md)                                   | Microsoft Secure Score                                                               |
 | [microsoft.serviceprincipal](microsoft.serviceprincipal.md)                                               | Microsoft service principal (Enterprise application)                                 |
 | [microsoft.serviceprincipal.assignment](microsoft.serviceprincipal.assignment.md)                         | Microsoft Service Principal Assignment                                               |
+| [microsoft.tenant](microsoft.tenant.md)                                                                   | Microsoft Entra tenant                                                               |
 | [microsoft.user](microsoft.user.md)                                                                       | Microsoft Entra ID user                                                              |
 | [microsoft.user.authenticationMethods](microsoft.user.authenticationmethods.md)                           | Microsoft Entra authentication methods                                               |
 | [ms365.exchangeonline](ms365.exchangeonline.md)                                                           | Microsoft 365 Exchange Online                                                        |

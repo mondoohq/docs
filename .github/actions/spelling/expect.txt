@@ -25,7 +25,9 @@ ashburn
 assetid
 ASUSTe
 atlassian
+Audiencesign
 auditlog
+authorizationservice
 auths
 autodisconnect
 autoremove

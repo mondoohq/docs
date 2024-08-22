@@ -16,7 +16,7 @@ Microsoft
 
 | ID                     | TYPE                                                                                            | DESCRIPTION                                |
 | ---------------------- | ----------------------------------------------------------------------------------------------- | ------------------------------------------ |
-| organizations          | &#91;&#93;[microsoft.organization](microsoft.organization.md)                                   | List of organizations                      |
+| organizations          | &#91;&#93;[microsoft.tenant](microsoft.tenant.md)                                               | Deprecated: use `microsoft.tenant` instead |
 | users                  | &#91;&#93;[microsoft.user](microsoft.user.md)                                                   | List of users                              |
 | groups                 | &#91;&#93;[microsoft.group](microsoft.group.md)                                                 | List of groups                             |
 | domains                | &#91;&#93;[microsoft.domain](microsoft.domain.md)                                               | List of domains                            |

@@ -14,7 +14,8 @@ Microsoft Security
 
 **Fields**
 
-| ID                 | TYPE                                                                              | DESCRIPTION             |
-| ------------------ | --------------------------------------------------------------------------------- | ----------------------- |
-| secureScores       | &#91;&#93;[microsoft.security.securityscore](microsoft.security.securityscore.md) | List of security scores |
-| latestSecureScores | [microsoft.security.securityscore](microsoft.security.securityscore.md)           | Latest security score   |
+| ID                 | TYPE                                                                              | DESCRIPTION                                |
+| ------------------ | --------------------------------------------------------------------------------- | ------------------------------------------ |
+| secureScores       | &#91;&#93;[microsoft.security.securityscore](microsoft.security.securityscore.md) | List of security scores                    |
+| latestSecureScores | [microsoft.security.securityscore](microsoft.security.securityscore.md)           | Latest security score                      |
+| riskyUsers         | &#91;&#93;[microsoft.security.riskyUser](microsoft.security.riskyuser.md)         | List Microsoft Entra users who are at risk |

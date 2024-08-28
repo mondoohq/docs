@@ -6,7 +6,7 @@ description: This page details how to integrate Mondoo with Jenkins.
 image: /img/featured_img/mondoo-jenkins.jpg
 ---
 
-Integrate Mondoo security with [Open Source Jenkins](https://jenkins.io/) and [CloudBees Jenkins Distribution](https://www.cloudbees.com/products/cloudbees-jenkins-distribution) to scan Kubernetes manifests, Terraform configuration files, and Docker images for common misconfigurations and CVEs.
+Integrate Mondoo security with [Open Source Jenkins](https://jenkins.io/) and [CloudBees CI](https://www.cloudbees.com/jenkins) to scan Kubernetes manifests, Terraform configuration files, and Docker images for common misconfigurations and CVEs.
 
 ## Configure Jenkins security
 

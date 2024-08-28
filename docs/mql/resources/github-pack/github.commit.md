@@ -24,5 +24,5 @@ GitHub repository commit
 | committer     | [github.user](github.user.md) | Commit committer       |
 | commit        | [git.commit](git.commit.md)   | Commit resource object |
 | stats         | dict                          | Commit stats           |
-| authoredDate  | time                          | Authored Date          |
-| committedDate | time                          | Committed Date         |
+| authoredDate  | time                          | Authored date          |
+| committedDate | time                          | Committed date         |

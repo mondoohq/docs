@@ -3,14 +3,14 @@ title: atlassian.jira.issue
 id: atlassian.jira.issue
 sidebar_label: atlassian.jira.issue
 displayed_sidebar: MQL
-description: Issue
+description: Jira issue
 ---
 
 # atlassian.jira.issue
 
 **Description**
 
-Issue
+Jira issue
 
 **Fields**
 

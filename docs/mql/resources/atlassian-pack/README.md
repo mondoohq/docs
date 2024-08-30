@@ -23,7 +23,7 @@ Resources included in this pack:
 | [atlassian.jira](atlassian.jira.md)                                                     | Jira                                      |
 | [atlassian.jira.applicationRole](atlassian.jira.applicationrole.md)                     | Jira application role                     |
 | [atlassian.jira.group](atlassian.jira.group.md)                                         | Jira group                                |
-| [atlassian.jira.issue](atlassian.jira.issue.md)                                         | Issue                                     |
+| [atlassian.jira.issue](atlassian.jira.issue.md)                                         | Jira issue                                |
 | [atlassian.jira.project](atlassian.jira.project.md)                                     | Jira project                              |
 | [atlassian.jira.project.property](atlassian.jira.project.property.md)                   | Jira project property                     |
 | [atlassian.jira.serverInfo](atlassian.jira.serverinfo.md)                               | Jira server info                          |

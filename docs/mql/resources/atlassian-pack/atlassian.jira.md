@@ -18,6 +18,6 @@ Jira
 | ----------- | ------------------------------------------------------------- | ---------------- |
 | users       | &#91;&#93;[atlassian.jira.user](atlassian.jira.user.md)       | Jira users       |
 | projects    | &#91;&#93;[atlassian.jira.project](atlassian.jira.project.md) | Jira projects    |
-| issues      | &#91;&#93;[atlassian.jira.issue](atlassian.jira.issue.md)     | Jira groups      |
+| issues      | &#91;&#93;[atlassian.jira.issue](atlassian.jira.issue.md)     | Jira issues      |
 | groups      | &#91;&#93;[atlassian.jira.group](atlassian.jira.group.md)     | Jira groups      |
 | serverInfos | [atlassian.jira.serverInfo](atlassian.jira.serverinfo.md)     | Jira server info |

@@ -50,6 +50,7 @@ Use the `azure.subscription` resource to assess the configuration of Azure subsc
 | aks                   | [azure.subscription.aksService](azure.subscription.aksservice.md)                     | AKS resources in the subscription             |
 | advisor               | [azure.subscription.advisorService](azure.subscription.advisorservice.md)             | Advisor resources in the subscription         |
 | policy                | [azure.subscription.policy](azure.subscription.policy.md)                             | Policy service in the subscription            |
+| iot                   | [azure.subscription.iotService](azure.subscription.iotservice.md)                     | IoT resources in the subscription             |
 
 **Examples**
 

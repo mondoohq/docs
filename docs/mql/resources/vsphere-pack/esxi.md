@@ -21,7 +21,7 @@ deprecated
 
 VMware ESXi resource
 
-The `esxi.host` and `esxi.vm` resource is deprecated. Please use `vsphere.host` and `vsphere.vm` instead.
+The `esxi.host` and `esxi.vm` resources are deprecated. Please use `vsphere.host` and `vsphere.vm` instead.
 
 **Fields**
 

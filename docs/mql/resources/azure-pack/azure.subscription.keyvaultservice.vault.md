@@ -32,6 +32,7 @@ Azure Key Vault vault
 | certificates             | &#91;&#93;[azure.subscription.keyVaultService.certificate](azure.subscription.keyvaultservice.certificate.md)           | Vault certificates                          |
 | secrets                  | &#91;&#93;[azure.subscription.keyVaultService.secret](azure.subscription.keyvaultservice.secret.md)                     | Vault secrets                               |
 | diagnosticSettings       | &#91;&#93;[azure.subscription.monitorService.diagnosticsetting](azure.subscription.monitorservice.diagnosticsetting.md) | Vault diagnostic settings                   |
+| autorotation             | &#91;&#93;[azure.subscription.keyVaultService.key.autorotation](azure.subscription.keyvaultservice.key.autorotation.md) | Auto-rotation enabled status for all keys   |
 
 **References**
 

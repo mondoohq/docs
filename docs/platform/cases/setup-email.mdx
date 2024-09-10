@@ -1,5 +1,5 @@
 ---
-title: Set up Cases to Email Your Ticketing System
+title: Set up Cases to Email Your Ticket System
 sidebar_label: Set up Cases with Email
 sidebar_position: 3
 description: Mondoo cases, which you can integrate with your ticket, issue tracking, or project management software, allow you to track remediation of important security findings. Set up an integration to start using cases and include Mondoo data in your regular project workflow.
@@ -8,7 +8,7 @@ image: /img/featured_img/mondoo-feature.jpg
 
 Set up cases in a space to allow users in the space to keep track of security tasks from within the Mondoo Console. Create an email integration to automatically send email to your ticket, issue tracking, or project management system when you create a new case. Your ticket system's email listener or service receives the email and generates a ticket using the information Mondoo includes in the email.
 
-For an overview of cases, read [Track and Fix Findings with Cases and Your Ticketing System](/platform/cases/overview/).
+For an overview of cases, read [Track and Fix Findings with Cases and Your Ticket System](/platform/cases/overview/).
 
 You can set up multiple recipients for case email messages. When you create a new case, a drop-down lets you choose the recipient for that case. This is helpful for teams with different methods for tracking different types of tasks.
 
@@ -22,29 +22,29 @@ You can set up multiple recipients for case email messages. When you create a ne
 
 1. In the Mondoo Console, navigate to the space where you want to set up cases and, in the side navigation bar, select **Cases**.
 
-   ![Configure cases in Mondoo](/img/platform/cases/cases-blank.png)
+  ![Configure cases in Mondoo](/img/platform/cases/cases-blank.png)
 
 2. Select the **ADD INTEGRATION** button.
 
-   ![Configure cases in Mondoo](/img/platform/cases/cases-integrations.png)
+  ![Configure cases in Mondoo](/img/platform/cases/cases-integrations.png)
 
 3. Select **Ticketing via email**.
 
-   ![Configure cases in Mondoo](/img/platform/cases/cases-add-email.png)
+  ![Configure cases in Mondoo](/img/platform/cases/cases-add-email.png)
 
 4. In the **Choose an integration name** box, enter a name for the integration. Make it a name that clearly shows the purpose of the integration.
 
 5. Under **Recipient 1**, provide information about where to send case email messages:
 
-  - The **Name** identifies the recipient. This displays in the recipients drop-down list when you add a new case.
+   - The **Name** identifies the recipient. This displays in the recipients drop-down list when you add a new case.
 
-  - The **Email address** is where Mondoo directs the email message.
+   - The **Email address** is where Mondoo directs the email message.
 
-  - You can include a **Reference link** to provide a link to the ticket system from the case details page in Mondoo.
+   - You can include a **Reference link** to provide a link to the ticket system from the case details page in Mondoo.
 
 6. To add another option for where to send case email messages, select ***ADD A RECIPIENT** and provide the details for Recipient 2, 3, and so on.
 
-7. To send an email message to one of these recipients every time you create a new case in Mondoo, enable **Automatically send email for cases** and choose the default recipient. (Each time you create a case, you can choose a different recipient.)
+7. To automatically send an email message to one of these recipients every time Mondoo creates a new case based on drift, enable **Automatically send email for cases** and choose the recipient. To learn more about automatically creating cases on drift, read [Change Cases Settings](/platform/cases/manage/).
 
 8. Select the **CREATE INTEGRATION** button.
 
@@ -54,6 +54,8 @@ You can set up multiple recipients for case email messages. When you create a ne
 
 - [Create Cases from Checks](/platform/cases/checks/)
 
-- [Track and Fix Findings with Cases and Your Ticketing System](/platform/cases/overview/)
+- [Manage Cases](/platform/cases/manage/)
+
+- [Track and Fix Findings with Cases and Your Ticket System](/platform/cases/overview/)
 
 ---

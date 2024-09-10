@@ -24,7 +24,7 @@ This is an example of an infrastructure organization:
 
 - [Spaces](/platform/start/organize/spaces) are collections of assets, policies, and reports that you manage together.
 
-You can organize your infrastructure in as complex or simple a structure as you need. All security, compliance, and asset intelligence reports, data exports, and ticketing system exports are organized in the structure you create.
+You can organize your infrastructure in as complex or simple a structure as you need. All security, compliance, and asset intelligence reports, data exports, and Ticket system exports are organized in the structure you create.
 
 ![Organize a small infrastructure with Mondoo](/img/platform/start/org-complex.png)
 

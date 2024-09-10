@@ -21,10 +21,17 @@ An API token gives an application or service access to an application programmin
 
 An asset is a physical or virtual computing, network, or storage device or other component of the information environment. Workstations, servers, SaaS environments, cloud storage, repositories, and virtual machines are only a few examples.
 
+### base score
+
+Each finding that Mondoo reveals has a [base score](/platform/security/posture/findings/#begin-with-a-base-score) associated with it. For misconfigurations exposed by Mondoo's security policies, the base score comes from the policy. For CVEs and advisories, the base score is the CVSS score.
+
+### blast radius
+
+The [blast radius](/platform/security/posture/findings/#blast-radius) of a finding is the impact that the finding has on a space. Mondoo can expose the same finding on multiple assets in a space. It calculates blast radius of the finding using the risk scores of all of the assets in the space that have that finding.
+
 ### case
 
 A [case](/platform/cases/overview/) is a security finding (such as an advisory or failed check) that a team member has identified as needing work. For each case, Mondoo creates a corresponding Jira issue so that you can track the case as a part of your team's regular workflow.
-
 
 ### check
 
@@ -33,6 +40,10 @@ A check is a verification of information. For example, a check can assert that a
 ### CI/CD
 
 Continuous integration and continuous delivery/deployment (CI/CD) is a highly automated software development practice in which teams make, test, and deploy frequent, incremental code changes. Mondoo integrates with [major CI/CD platforms](/platform/infra/supply/cicd/overview/) to enable security testing throughout the development process.
+
+### contextual risk factors
+
+When calculating risk, Mondoo considers the environment in which a finding exists. [Contextual risk factors](/platform/security/posture/findings/#factor-contextual-risk), such as an end-of-life operating system, a running service, or defensive countermeasures on the asset, increase or decrease the risk of a finding.
 
 ### cnquery
 
@@ -89,6 +100,14 @@ A [region](/platform/start/organize/regions/) is the part of the world in which 
 ### registry
 
 Mondoo's [registry](/platform/security/posture/policies/) is the location in the Mondoo Console where you choose and manage the security policies that are the bases for assessing your infrastructure.
+
+### risk factor
+
+[Risk factors](/platform/security/posture/advisories/#risk-factors) are attributes that can elevate the risk that a finding poses to your organization.
+
+### risk score
+
+Mondoo assigns a [risk score](/platform/security/posture/findings/#risk-score) of Low, Medium, High, or Critical to each finding. This score is calculated using a [base score](/platform/security/posture/findings/#base-score) (from the [policy](/platform/security/posture/policies/)) and [contextual risks](/platform/security/posture/findings/#factor-contextual-risk) such as credentials exposed to the internet or a running service or database.
 
 ### score
 

@@ -23,11 +23,11 @@ An asset is a physical or virtual computing, network, or storage device or other
 
 ### base score
 
-Each finding that Mondoo reveals has a [base score](/platform/security/posture/findings/#begin-with-a-base-score) associated with it. For misconfigurations exposed by Mondoo's security policies, the base score comes from the policy. For CVEs and advisories, the base score is the CVSS score.
+Each finding that Mondoo reveals has a [base score](/platform/security/posture/findings/#begin-with-a-base-score) associated with it. For misconfigurations exposed by Mondoo's [security policies](/platform/security/posture/pac/), the base score comes from the policy. For CVEs and advisories, the base score is the [CVSS score](/platform/security/posture/vulnerabilities/#cvss-score-and-metrics).
 
 ### blast radius
 
-The [blast radius](/platform/security/posture/findings/#blast-radius) of a finding is the impact that the finding has on a space. Mondoo can expose the same finding on multiple assets in a space. It calculates blast radius of the finding using the risk scores of all of the assets in the space that have that finding.
+The [blast radius](/platform/security/posture/findings/#blast-radius) of a finding is the number of assets in the space where Mondoo detected the finding.
 
 ### case
 
@@ -103,7 +103,7 @@ Mondoo's [registry](/platform/security/posture/policies/) is the location in the
 
 ### risk factor
 
-[Risk factors](/platform/security/posture/advisories/#risk-factors) are attributes that can elevate the risk that a finding poses to your organization.
+[Risk factors](/platform/security/posture/advisories/#risk-factors) are attributes that can raise or lower the risk that a finding poses to your organization.
 
 ### risk score
 

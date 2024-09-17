@@ -10,19 +10,23 @@ The work of improving your security posture can be daunting. Mondoo finds securi
 
 *Cases* allow you to turn security findings into tasks to complete. They integrate with your ticket system (issue tracking software), such as Zendesk or Atlassian Jira, to fit into your existing workflow.
 
-When you see a security finding that requires fixing, you create a case for that finding.In the new case, Mondoo automatically includes the details of the finding, information on the asset(s) that contain the finding, and instructions for fixing it. When you save the case, Mondoo can:
+When you see a security finding that requires fixing, you create a case for that finding.In the new case, Mondoo automatically includes the details of the finding, information on the asset(s) that contain the finding, and instructions for fixing it. When you save the case, Mondoo can do any of these actions:
 
-- automatically and directly create a Jira issue
-
- or
-
-- send an email message to your ticket system's listener service.
+- Directly create a Jira issue
+- Directly create a Zendesk ticket
+- Send an email message to your ticket system (or any destination)
 
 ## Directly integrate cases with Jira
 
 If you directly configure cases with your Jira instance, Mondoo creates a corresponding Jira issue for every new case. Once Mondoo creates an issue in Jira, you can plan, schedule, and track remediation work within your team's existing project workflow.
 
 ![Cases in Mondoo and issues in Jira](/img/platform/cases/cases-jira-diagram.png)
+
+## Directly integrate cases with Zendesk
+
+If you directly configure cases with your Zendesk account, Mondoo creates a corresponding Zendesk ticket for every new case. Once Mondoo creates a ticket in Zendesk, you can plan, schedule, and track remediation work within your team's existing project workflow.
+
+![Cases in Mondoo and tickets in Zendesk](/img/platform/cases/cases-zendesk-diagram.png)
 
 ## Integrate cases with your ticket system using email
 
@@ -40,7 +44,7 @@ The email messages or Jira issues that Mondoo creates based on cases include all
 
 Tracking and fixing findings with cases and your Ticket system involve:
 
-- Setting up cases with a [direct Jira integration](/platform/cases/setup/) or an [email integration](/platform/cases/setup-email/)
+- Setting up cases with a [direct Jira integration](/platform/cases/setup/), a [direct Zendesk integration](/platform/cases/setup-zendesk/), or an [email integration](/platform/cases/setup-email/)
 
 - [Creating cases from advisories](/platform/cases/advisories/)
 

@@ -1,7 +1,7 @@
 ---
 title: Manage Cases
 sidebar_label: Manage Cases
-sidebar_position: 6
+sidebar_position: 7
 description: Cases, which integrate with Atlassian Jira, allow you to track remediation of important security findings. View cases and close them in Mondoo or Jira. Change cases settings in the Mondoo space settings.
 image: /img/featured_img/mondoo-feature.jpg
 ---
@@ -68,23 +68,30 @@ import Partial from "../partials/_editor-owner.mdx";
 
 :::note
 
-Closing an ticket or issue in your ticket system or does not close the corresponding case in Mondoo. If you create cases using a [direct Jira integration], a space-wide setting controls whether closing a case in Mondoo automatically closes the corresponding issue in Jira. To learn more, read the "Change cases settings" below.
+Closing an ticket or issue in your ticket system or does not close the corresponding case in Mondoo. If you create cases using a direct Jira or Zendesk integration, a space-wide setting controls whether closing a case in Mondoo automatically closes the corresponding issue in Jira. To learn more, read the section below.
 
 :::
 
-### Change cases settings
+### Choose whether to closes tickets/issues when you close cases
 
 ![Space-wide cases settings](/img/platform/cases/space-settings.png)
 
-Space-wide settings control the details of how cases work:
+You can choose whether to close the corresponding Jira issue or Zendesk ticket when you close a case in the Mondoo Console. This setting applies only to direct Jira or Zendesk integrations, not to email integrations.
 
-- **Automatically create cases on drift** - When enabled, Mondoo creates a case when an asset that passed a check in a previous scan now fails the check.
+1. Navigate to the space where you want to change the closing behavior.
+
+2. In the navigation sidebar, select **Settings**.
+
+3. Enable or disable **Automatically close tickets**.
+
 
 ## Learn more
 
 - [Track and Fix Findings with Cases and Your Ticket System](/platform/cases/overview/)
 
 - [Set up Cases and Jira](/platform/cases/setup/)
+
+- [Set up Cases and Zendesk](/platform/cases/setup-zendesk/)
 
 - [Set up Cases to Email Your Ticket System](/platform/cases/setup-email)
 

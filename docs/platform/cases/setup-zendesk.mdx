@@ -1,0 +1,69 @@
+---
+title: Set up Cases and Zendesk
+sidebar_label: Set up Cases and Zendesk
+sidebar_position: 3
+description: Mondoo cases, which you can directly integrate with Zendesk, allow you to track remediation of important security findings. Set up an integration with Zendesk to start using cases and include Mondoo data in your Zendesk tickets.
+image: /img/featured_img/mondoo-feature.jpg
+---
+
+Set up cases in a space to allow users in the space to keep track of security tasks and add Zendesk tickets directly from within the Mondoo Console. Cases setup involves configuring Mondoo to integrate with Zendesk.
+
+For an overview of cases, read [Track and Fix Findings with Cases and Your Ticket System](/platform/cases/overview/).
+
+:::note
+
+Mondoo offers an alternative method for sharing cases with Zendesk: an email integration. This approach lets you tap into the automation features of [Zendesk email channel](https://support.zendesk.com/hc/en-us/sections/5437005103002-Setting-up-your-email-channel). To learn how to create an email integration for cases, read [Set up Cases to Email Your Ticket System](/platform/cases/setup-email).
+
+:::
+
+## Prerequisites
+
+- Owner or Editor access to the Mondoo space
+
+- A Zendesk account with access to the channel where you want Mondoo to add tickets
+
+- An API token for Zendesk account access
+
+  To learn how to create and copy an API token, read [Managing API token access to the API](https://support.zendesk.com/hc/en-us/articles/4408889192858-Managing-access-to-the-Zendesk-API#topic_tcb_fk1_2yb) in the Atlassian documentation.
+
+## Add a Zendesk integration
+
+1. In the Mondoo Console, navigate to the space where you want to set up cases and, in the side navigation bar, select **Cases**.
+
+   ![Configure cases in Mondoo](/img/platform/cases/cases-blank.png)
+
+2. Select the **ADD INTEGRATION** button.
+
+   ![Configure cases in Mondoo](/img/platform/cases/cases-integrations.png)
+
+3. Select **Zendesk**.
+
+   ![Configure cases in Mondoo](/img/platform/cases/cases-add-zendesk.png)
+
+4. In the **Choose an integration name** box, enter a name for the integration. Make it a name that clearly shows this is a Zendesk integration.
+
+5. In the **Zendesk domain** box, your Zendesk subdomain. This is the custom part of the URL you use to access Zendesk. For example, if your Zendesk URL is `lunalectric.zendesk.com` then enter `lunalectric` in this box.
+
+6. In the **Email address** box, enter the email address you use to log into your Zendesk instance.
+
+7. In the **API Token** box, paste your API token for access to your Zendesk account. To learn how to create and copy an API token, read [Managing API token access to the API](https://support.zendesk.com/hc/en-us/articles/4408889192858-Managing-access-to-the-Zendesk-API#topic_tcb_fk1_2yb) in the Atlassian documentation.
+
+8. Select the **CREATE INTEGRATION** button.
+
+   ![Configure cases in Mondoo](/img/platform/cases/cases-preferences.png)
+
+9. To close a case in Mondoo when the corresponding Zendesk ticket closes, enable **Automatically close cases**.
+
+10. Select the **FINALIZE UPDATE** button.
+
+## Learn more
+
+- [Create Cases from Advisories](/platform/cases/advisories/)
+
+- [Create Cases from Checks](/platform/cases/checks/)
+
+- [Manage Cases](/platform/cases/manage/)
+
+- [Track and Fix Findings with Cases and Your Ticket System](/platform/cases/overview/)
+
+---

@@ -1,18 +1,18 @@
 ---
 title: Create Cases from Checks
 sidebar_label: Create Cases from Checks
-sidebar_position: 5
-description: Cases, which integrate with Atlassian Jira, allow you to track remediation of important security findings. Create a case from a check to track work on that check within your existing workflow.
+sidebar_position: 6
+description: Cases, which integrate with your ticket system, allow you to track remediation of important security findings. Create a case from a check to track work on that check within your existing workflow.
 image: /img/featured_img/mondoo-feature.jpg
 ---
 
 Use cases to track the work of fixing failed checks in your existing workflow. When a Mondoo space has the [cases feature configured](/platform/cases/overview/), any team member can create a case from an advisory. Creating a case can either:
 
-- create a new a Jira issue
+- Create a new a Jira issue
 
-   or
+- Create a new Zendesk ticket
 
-- send an email message to the recipient of your choice, such as a listener for your ticket, issue tracking, or project management software
+- Send an email message to the recipient of your choice, such as a listener for your ticket, issue tracking, or project management software
 
 For an overview of cases, read [Track and Fix Findings with Cases and Your Ticket System](/platform/cases/overview/).
 
@@ -30,7 +30,7 @@ import Partial from "../partials/_editor-owner.mdx";
 
 4. To the right of the check name, select the **CREATE CASE** button and select **Selected Assets** to jump to the bottom of the page and see all assets affected by the advisory. (You can also select **All Assets** to create a case for all assets affected by the advisory.)
 
-   ![Create a new Jira issue in Mondoo](/img/platform/cases/affected-assets.png)
+   ![Create a new cAW in Mondoo](/img/platform/cases/affected-assets.png)
 
 5. Check the boxes beside all the assets for which you want to track this advisory. Note that this creates a single case (and therefore a single ticket in your ticket system) for all the assets you choose. (If you want to track assets separately, create a new case for each asset.)
 
@@ -46,13 +46,15 @@ import Partial from "../partials/_editor-owner.mdx";
 
 7. Edit the issue summary as you wish and select the **CREATE CASE** button.
 
-  Mondoo creates a new case in the space and either creates a corresponding Jira issue or sends email to the selected recipient.
+   Mondoo creates a new case in the space and then creates a corresponding Jira issue or Zendesk ticket or sends email to the selected recipient.
 
 ## Learn more
 
 - [Track and Fix Findings with Cases and Your Ticket System](/platform/cases/overview/)
 
 - [Set up Cases and Jira](/platform/cases/setup/)
+
+- [Set up Cases and Zendesk](/platform/cases/setup-zendesk/)
 
 - [Set up Cases to Email Your Ticket System](/platform/cases/setup-email)
 

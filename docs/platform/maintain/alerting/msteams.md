@@ -8,29 +8,33 @@ image: /img/featured_img/mondoo-feature.jpg
 
 You can configure Mondoo to send a message to a Microsoft Teams channel whenever there's a change to an asset's security score. You do this by integrating Microsoft Teams with the Mondoo space from which you want to receive alerts.
 
-Before you set up the integration, you must generate a new Microsoft Teams webhook URL.
+Before you set up the integration, you must first create a new workflow in Microsoft Teams.
 
 ## Create a webhook in Microsoft Teams
 
-1. In Microsoft Teams app, select the team and channel where you want Mondoo to send alerts.
+1. In Microsoft Teams, find the Workflows app and (if it isn't already added) add it.
 
-2. On the right side of the selected channel, select the ellipsis (...).
+   ![Find the Workflows app in Microsoft Teams](/img/platform/maintain/alerting/msteams/app.png)
 
-3. Select **Connectors**.
+   ![Add the Workflows app in Microsoft Teams](/img/platform/maintain/alerting/msteams/add-workflows.png)
 
-   ![Add a new Connector to your channel](/img/platform/maintain/alerting/msteams/msteams-webhook-new.png)
+2. Open the Workflows app.
 
-4. Search the Incoming webhook connector and select **Add** or **Configure**.
+   ![Workflows app in Microsoft Teams](/img/platform/maintain/alerting/msteams/workflows.png)
 
-   ![Select a webhook in Microsoft Teams](/img/platform/maintain/alerting/msteams/msteams-webhook-add.png)
+3. Under **Start with a popular Teams template**, select **Post to a channel when a webhook request is received**.
 
-5. Provide a webhook name and icon and select Create.
+   ![Create a new flow in Teams](/img/platform/maintain/alerting/msteams/create-flow.png)
 
-   ![Create a new webhook in Microsoft Teams](/img/platform/maintain/alerting/msteams/msteams-webhook-create.png)
+4. In the **Flow name** box, type a name, such as **Mondoo Alerts**, then select the **Next** button.
 
-6. Select the Copy icon next to the generated webhook URL.
+   ![Configure a new flow Teams](/img/platform/maintain/alerting/msteams/set-up-flow.png)
 
-   ![Copy the confirmed URL](/img/platform/maintain/alerting/msteams/msteams-webhook-created.png)
+5. Choose the team and channel where you want Mondoo to send alerts, then select the **Next** button.
+
+   ![Teams URL for Mondoo webhook](/img/platform/maintain/alerting/msteams/copy-url.png)
+
+6. Copy the URL that Microsoft Teams provides. You need this for the next steps.
 
 ## Set up the integration with your Mondoo space
 

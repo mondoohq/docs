@@ -205,11 +205,17 @@
 # s.b. SentinelOne
 \bSentinal[Oo]ne\b
 \bSentinelone\b
-\bSentinal One\b
+\bSentin[ae]l One\b
 
 # s.b. CrowdStrike
 \bCrowd Strike\b
 \b[Cc]rowdstrike\b
+
+# s.b. Zendesk
+\bZenDesk\b
+
+# s.b. Zendesk
+\bZenDesk\b
 
 #
 # Kubernetes Terms

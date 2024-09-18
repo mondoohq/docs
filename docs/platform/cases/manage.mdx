@@ -1,52 +1,99 @@
 ---
-title: View and Close Cases
-sidebar_label: View and Close Cases
-sidebar_position: 5
-description: Cases, which integrate with Atlassian Jira, allow you to track remediation of important security findings. View cases and close them in Mondoo or Jira.
+title: Manage Cases
+sidebar_label: Manage Cases
+sidebar_position: 7
+description: Cases, which integrate with Atlassian Jira, allow you to track remediation of important security findings. View cases and close them in Mondoo or Jira. Change cases settings in the Mondoo space settings.
 image: /img/featured_img/mondoo-feature.jpg
 ---
 
-## View cases and Jira issues
+Managing cases includes:
 
-On the Cases page in the Mondoo Console, you can view all the cases in a space.
+- Viewing open and closed cases
 
-![Cases in Mondoo](/img/platform/cases/cases-list.png)
+- Examining case details and progress
 
-Select a case to open its corresponding issue in Jira.
+- Closing cases
 
-![Jira issue created by Mondoo](/img/platform/cases/issue-in-jira.png)
+- Changing settings that control how cases work in a space
+
+### View cases
+
+On the Cases page in the Mondoo Console, you can view all the open and closed cases in a space and see the progress made toward fixing the assets they track. To view cases in a space:
+
+1. In the [Mondoo Console](https://console.mondoo.com), [navigate](/platform/start/navigate) to the space.
+
+2. In the side navigation bar, select **Cases**.
+
+   Status bars show progress made by fixing the assets tracked in each case.
+
+   ![Cases in Mondoo](/img/platform/cases/cases-list.png)
+
+3. Select a case to see its details.
+
+   ![Case details in Mondoo](/img/platform/cases/case-detail.png)
 
 :::note
 
-Updating a Jira issue that Mondoo created from a case does not make any changes to the case.
+Changes you make to a Mondoo-case-based ticket in your ticket system do not affect the case in Mondoo. Similarly, making progress on a case in Mondoo doesn't update the corresponding ticket in your ticket system.
 
 :::
 
 ## Close a case
 
-Close a case to indicate that the work is completed or to stop tracking it. By default, when you close a case in the Mondoo Console, Mondoo also closes the corresponding Jira issue. However, you can change this when you first set up cases for the space. To learn how, read [Set up Cases and Jira](/platform/cases/setup/).
-
-:::note
-
-Closing an issue in Jira does not close the corresponding case in Mondoo.
-
-:::
+Close a case to indicate that the work is completed or to stop tracking it. You can close a case from the list of cases or from the case detail page.
 
 import Partial from "../partials/_editor-owner.mdx";
 
 <Partial />{" "}
 
-1. In the Mondoo Console's side navigation bar, select **Cases**.
+1. In the [Mondoo Console](https://console.mondoo.com), [navigate](/platform/start/navigate) to the space.
 
-   ![Configure cases in Mondoo](/img/platform/cases/cases-list.png)
+2. In the side navigation bar, select **Cases**.
 
-2. Select the **CLOSE CASE** button beside on the row of the case you want to close.
+   Status bars show progress made by fixing the assets tracked in each case.
+
+   ![Cases in Mondoo](/img/platform/cases/cases-list.png)
+
+3. To close the case, either:
+
+   - Select the **CLOSE CASE** button on the row of the case you want to close
+
+   ![Close a case in Mondoo from the open cases list](/img/platform/cases/cases-list-close.png)
+
+   or
+
+   - select the case you want to close and then select the **CLOSE CASE** button near the top-right corner of the case detail page.
+
+   ![Close a case in Mondoo from the case detail](/img/platform/cases/cases-list-close.png)
+
+:::note
+
+Closing an ticket or issue in your ticket system or does not close the corresponding case in Mondoo. If you create cases using a direct Jira or Zendesk integration, a space-wide setting controls whether closing a case in Mondoo automatically closes the corresponding issue in Jira. To learn more, read the section below.
+
+:::
+
+### Choose whether to closes tickets/issues when you close cases
+
+![Space-wide cases settings](/img/platform/cases/space-settings.png)
+
+You can choose whether to close the corresponding Jira issue or Zendesk ticket when you close a case in the Mondoo Console. This setting applies only to direct Jira or Zendesk integrations, not to email integrations.
+
+1. Navigate to the space where you want to change the closing behavior.
+
+2. In the navigation sidebar, select **Settings**.
+
+3. Enable or disable **Automatically close tickets**.
+
 
 ## Learn more
 
-- [Track and Fix Findings with Cases and Jira](/platform/cases/overview/)
+- [Track and Fix Findings with Cases and Your Ticket System](/platform/cases/overview/)
 
 - [Set up Cases and Jira](/platform/cases/setup/)
+
+- [Set up Cases and Zendesk](/platform/cases/setup-zendesk/)
+
+- [Set up Cases to Email Your Ticket System](/platform/cases/setup-email)
 
 - [Create Cases from Advisories](/platform/cases/advisories/)
 

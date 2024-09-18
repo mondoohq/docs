@@ -1,12 +1,20 @@
 ---
 title: Create Cases from Advisories
 sidebar_label: Create Cases from Advisories
-sidebar_position: 3
-description: Cases, which integrate with Atlassian Jira, allow you to track remediation of important security findings. Create a case from an advisory.
+sidebar_position: 5
+description: Cases, which integrate with your ticket system, allow you to track remediation of important security findings. Create a case from an advisory to track work on that advisory within your existing workflow.
 image: /img/featured_img/mondoo-feature.jpg
 ---
 
-Use cases to track the work of fixing advisories in your existing workflow. When a Mondoo space has the [cases feature configured](/platform/cases/setup/), any team member can create a case from an advisory. Creating a case creates a new a Jira issue directly from the Mondoo Console.
+Use cases to track the work of fixing advisories in your existing workflow. When a Mondoo space has the [cases feature configured](/platform/cases/overview/), any team member can create a case from an advisory. Creating a case can:
+
+- Create a new a Jira issue
+
+- Create a new Zendesk ticket
+
+- Send an email message to the recipient of your choice, such as a listener for your ticket, issue tracking, or project management software
+
+For an overview of cases, read [Track and Fix Findings with Cases and Your Ticket System](/platform/cases/overview/).
 
 import Partial from "../partials/_editor-owner.mdx";
 
@@ -16,32 +24,42 @@ import Partial from "../partials/_editor-owner.mdx";
 
 2. In the side navigation bar, under **Vulnerabilities**, select **Advisories**.
 
-3. Select the advisory you want to track using a case and a corresponding issue in Jira.
+3. Select the advisory you want to track using a case and a corresponding issue in your ticket system.
 
    ![Add a case in Mondoo](/img/platform/cases/add-case-advisory.png)
 
-4. To the right of the asset name, select the **CREATE CASE** button and select **Selected Assets** to jump to the bottom of the page and see all assets affected by the advisory.
+4. To the right of the advisory name, select the **CREATE CASE** button and select **Selected Assets** to jump to the bottom of the page and see all assets affected by the advisory. (You can also select **All Assets** to create a case for all assets affected by the advisory.)
 
    ![Create a new Jira issue in Mondoo](/img/platform/cases/select-asset.png)
 
-5. Check the boxes beside all the assets for which you want to track this advisory. Note that this creates a single case (and therefore a single Jira issue) for all the assets you choose. (If you want to track assets separately, create a new case for each asset.)
+5. Check the boxes beside all the assets for which you want to track this advisory. Note that this creates a single case (and therefore a single ticket in your ticket system) for all the assets you choose. (If you want to track assets separately, create a new case for each asset.)
 
    Select the **CREATE CASE** button.
 
    ![Create a new case in Mondoo](/img/platform/cases/new-case.png)
 
-6. Select the Jira project in which you want Mondoo to add the issue. Edit the issue name and description as you wish and select the **CREATE CASE** button.
+6. In the **Integration** box, select the where you want Mondoo to add or send the case information and provide a specific destination:
 
-   Mondoo creates a new case in the space and a corresponding Jira issue in the project you selected.
+   - If you select a direct Jira integration, in the **Project** box, select the name of the project where you want to create an issue.
+
+   - If you select an email integration, in the **Recipient** box, select where to send an email message with the case details.
+
+7. Edit the issue summary as you wish and select the **CREATE CASE** button.
+
+  Mondoo creates a new case in the space and then creates a corresponding Jira issue or Zendesk ticket or sends email to the selected recipient.
 
 ## Learn more
 
-- [Track and Fix Findings with Cases and Jira](/platform/cases/overview/)
+- [Track and Fix Findings with Cases and Your Ticket System](/platform/cases/overview/)
 
 - [Set up Cases and Jira](/platform/cases/setup/)
 
+- [Set up Cases and Zendesk](/platform/cases/setup-zendesk/)
+
+- [Set up Cases to Email Your Ticket System](/platform/cases/setup-email/)
+
 - [Create Cases from Checks](/platform/cases/checks/)
 
-- [View and Close Cases](/platform/cases/manage/)
+- [Manage Cases](/platform/cases/manage/)
 
 ---

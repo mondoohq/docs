@@ -2,13 +2,19 @@
 title: Set up Cases and Jira
 sidebar_label: Set up Cases and Jira
 sidebar_position: 2
-description: Cases, which integrate with Atlassian Jira, allow you to track remediation of important security findings. Set up an integration with Jira to start using cases.
+description: Mondoo cases, which you can directly integrate with Atlassian Jira, allow you to track remediation of important security findings. Set up an integration with Jira to start using cases and include Mondoo data in your Jira issues.
 image: /img/featured_img/mondoo-feature.jpg
 ---
 
-Set up cases in a space to allow users in the space to add Jira issues from within the Mondoo Console. Cases setup involves configuring Mondoo to integrate with Jira.
+Set up cases in a space to allow users in the space to keep track of security tasks and add Jira issues directly from within the Mondoo Console. Cases setup involves configuring Mondoo to integrate with Jira.
 
-For an overview of cases, read [Track and Fix Findings with Cases and Jira](/platform/cases/overview/).
+For an overview of cases, read [Track and Fix Findings with Cases and Your Ticket System](/platform/cases/overview/).
+
+:::note
+
+Mondoo offers an alternative method for sharing cases with Jira: an email integration. Although email integrations with Jira don't let you automatically close Jira issues when you close a case, they do let you tap into the automation features of [Jira's incoming mail handler](https://support.atlassian.com/jira-cloud-administration/docs/create-issues-and-comments-from-email/). To learn how to create an email integration for cases, read [Set up Cases to Email Your Ticket System](/platform/cases/setup-email).
+
+:::
 
 ## Prerequisites
 
@@ -28,26 +34,36 @@ For an overview of cases, read [Track and Fix Findings with Cases and Jira](/pla
 
 2. Select the **ADD INTEGRATION** button.
 
+   ![Configure cases in Mondoo](/img/platform/cases/cases-integrations.png)
+
+3. Select **Atlassian Jira**.
+
    ![Configure cases in Mondoo](/img/platform/cases/cases-add-jira.png)
 
-3. In the **Choose an integration name** box, enter a name for the integration. Make it a name that clearly shows this is a Jira integration.
+4. In the **Choose an integration name** box, enter a name for the integration. Make it a name that clearly shows this is a Jira integration.
 
-4. In the **Jira Host** box, type the domain for your Jira instance. Do not include a slash at the end of the domain. Example: `https://lunalectric-workspace.atlassian.net`
+5. In the **Jira host** box, type the domain for your Jira instance. Do not include a slash at the end of the domain. Example: `https://lunalectric-workspace.atlassian.net`
 
-5. In the **Email address** box, enter the email address you use to log into your Jira instance.
+6. In the **Email address** box, enter the email address you use to log into your Jira instance.
 
-6. In the **API Token** box, paste your API token for access to your Jira account. To learn how to create and copy an API token, read [Manage API tokens for your Atlassian account](https://support.atlassian.com/atlassian-account/docs/manage-api-tokens-for-your-atlassian-account/) in the Atlassian documentation.
-
-7. By default, when you close a case in the Mondoo Console, Mondoo also closes the corresponding Jira issue. To stop Mondoo from closing Jira issues, disable **Automatically close cases**.
+7. In the **API token** box, paste your API token for access to your Jira account. To learn how to create and copy an API token, read [Manage API tokens for your Atlassian account](https://support.atlassian.com/atlassian-account/docs/manage-api-tokens-for-your-atlassian-account/) in the Atlassian documentation.
 
 8. Select the **CREATE INTEGRATION** button.
 
-## Learn more
+   ![Configure cases in Mondoo](/img/platform/cases/cases-preferences.png)
 
-- [Track and Fix Findings with Cases and Jira](/platform/cases/overview/)
+9. To close a case in Mondoo when the corresponding Jira issue closes, enable **Automatically close cases**.
+
+10. Select the **FINALIZE UPDATE** button.
+
+## Learn more
 
 - [Create Cases from Advisories](/platform/cases/advisories/)
 
 - [Create Cases from Checks](/platform/cases/checks/)
+
+- [Manage Cases](/platform/cases/manage/)
+
+- [Track and Fix Findings with Cases and Your Ticket System](/platform/cases/overview/)
 
 ---

@@ -1,33 +1,55 @@
 ---
-title: Track and Fix Findings with Cases and Jira
+title: Track and Fix Findings with Cases and Your Ticket System
 sidebar_label: Overview
 sidebar_position: 1
-description: Cases, which integrate with Atlassian Jira, allow you to track remediation of important security findings.
+description: Cases allow you to track remediation of important security findings in your Ticket system of choice, such as Jira or Zendesk.
 image: /img/featured_img/mondoo-feature.jpg
 ---
 
 The work of improving your security posture can be daunting. Mondoo finds security issues in your infrastructure and prioritizes them so you know what problems to fix first. But how do you track the fixes and ensure that the work is completed? How do you communicate the most important tasks to your team?
 
-*Cases* allow you to turn security findings into tasks to complete. They integrate with Atlassian Jira to fit into your existing workflow.
+*Cases* allow you to turn security findings into tasks to complete. They integrate with your ticket system (issue tracking software), such as Zendesk or Atlassian Jira, to fit into your existing workflow.
 
-When you see a security finding that requires fixing, you create a case for that finding. Mondoo automatically includes the details of the finding, information on the asset(s) that contain the finding, and instructions for fixing it. When you save the case, Mondoo automatically creates an issue containing all the same information in your Jira project.
+When you see a security finding that requires fixing, you create a case for that finding.In the new case, Mondoo automatically includes the details of the finding, information on the asset(s) that contain the finding, and instructions for fixing it. When you save the case, Mondoo can do any of these actions:
 
-![Cases in Mondoo and issues in Jira](/img/platform/cases/cases-diagram.png)
+- Directly create a Jira issue
+- Directly create a Zendesk ticket
+- Send an email message to your ticket system (or any destination)
 
-Once Mondoo creates an issue directly in Jira, you can plan, schedule, and track remediation work within your team's existing project workflow. The Jira issues that Mondoo creates from cases include all the details necessary for infrastructure owners to remediate findings, even if they don't have access to Mondoo.
+## Directly integrate cases with Jira
+
+If you directly configure cases with your Jira instance, Mondoo creates a corresponding Jira issue for every new case. Once Mondoo creates an issue in Jira, you can plan, schedule, and track remediation work within your team's existing project workflow.
+
+![Cases in Mondoo and issues in Jira](/img/platform/cases/cases-jira-diagram.png)
+
+## Directly integrate cases with Zendesk
+
+If you directly configure cases with your Zendesk account, Mondoo creates a corresponding Zendesk ticket for every new case. Once Mondoo creates a ticket in Zendesk, you can plan, schedule, and track remediation work within your team's existing project workflow.
+
+![Cases in Mondoo and tickets in Zendesk](/img/platform/cases/cases-zendesk-diagram.png)
+
+## Integrate cases with your ticket system using email
+
+If you configure cases to send email to your ticket system, each time you create a new case, Mondoo sends an email message to the recipient you choose. Typically, this is the email address set up as a listener (or similar service) for your ticket, project management, or issue tracking software. Some examples are the Zendesk email channel, ServiceNow inbound email, and the Jira incoming mail handler.
+
+![Cases in Mondoo and issues in Jira](/img/platform/cases/cases-email-diagram.png)
+
+## Track and fix findings
 
 In the Mondoo Console, if a security finding or an asset has a case associated with it, you can view the case from the finding or the asset. You can also see a list of all cases in a space.
 
-You can also close cases in the Mondoo Console. When you set up cases in a Mondoo space, you choose whether closing a case in the space closes the corresponding issue in Jira.
+You can view and close cases in the Mondoo Console. When you set up cases in a Mondoo space, you choose whether closing a case in the space closes the corresponding issue in Jira (with a direct Jira integration only).
 
-Tracking and fixing issues with cases and Jira involves:
+The email messages or Jira issues that Mondoo creates based on cases include all the details necessary for infrastructure owners to remediate findings. This gives all team members the information they need to address security issues, even if they don't have access to Mondoo.
 
-- [Setting up cases with a Jira integration](/platform/cases/setup/)
+Tracking and fixing findings with cases and your Ticket system involve:
+
+- Setting up cases with a [direct Jira integration](/platform/cases/setup/), a [direct Zendesk integration](/platform/cases/setup-zendesk/), or an [email integration](/platform/cases/setup-email/)
 
 - [Creating cases from advisories](/platform/cases/advisories/)
 
 - [Creating cases from checks](/platform/cases/checks/)
 
-- [Viewing and closing cases](/platform/cases/manage/)
+- [Viewing and closing cases and managing cases settings](/platform/cases/manage/)
 
 ---

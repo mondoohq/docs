@@ -214,9 +214,6 @@
 # s.b. Zendesk
 \bZenDesk\b
 
-# s.b. Zendesk
-\bZenDesk\b
-
 #
 # Kubernetes Terms
 #

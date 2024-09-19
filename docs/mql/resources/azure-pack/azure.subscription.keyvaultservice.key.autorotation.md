@@ -20,5 +20,5 @@ Azure Key Vault key auto-rotation
 
 | ID      | TYPE   | DESCRIPTION                  |
 | ------- | ------ | ---------------------------- |
-| kid     | string | Key ID (Key Identifier)      |
+| kid     | string | Key ID                       |
 | enabled | bool   | Auto-rotation enabled status |

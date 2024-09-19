@@ -1,12 +1,12 @@
 ---
-title: aws.sagemaker.notebookinstance.details
-id: aws.sagemaker.notebookinstance.details
-sidebar_label: aws.sagemaker.notebookinstance.details
+title: aws.sagemaker.notebookinstancedetails
+id: aws.sagemaker.notebookinstancedetails
+sidebar_label: aws.sagemaker.notebookinstancedetails
 displayed_sidebar: MQL
 description: AWS SageMaker notebook instance details
 ---
 
-# aws.sagemaker.notebookinstance.details
+# aws.sagemaker.notebookinstancedetails
 
 **Supported platform**
 

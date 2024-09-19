@@ -18,6 +18,8 @@ Resources included in this pack:
 | [microsoft.application](microsoft.application.md)                                                         | Microsoft Entra ID application registration                                          |
 | [microsoft.application.permission](microsoft.application.permission.md)                                   | Microsoft Service Principal Permission                                               |
 | [microsoft.application.role](microsoft.application.role.md)                                               | Microsoft Entra ID app roles are custom roles to assign permissions to users or apps |
+| [microsoft.conditionalAccess](microsoft.conditionalaccess.md)                                             | Microsoft Conditional Access Policies                                                |
+| [microsoft.conditionalAccess.ipNamedLocation](microsoft.conditionalaccess.ipnamedlocation.md)             | Microsoft Conditional Access IP named location                                       |
 | [microsoft.devicemanagement](microsoft.devicemanagement.md)                                               | Microsoft device management                                                          |
 | [microsoft.devicemanagement.devicecompliancepolicy](microsoft.devicemanagement.devicecompliancepolicy.md) | Microsoft device compliance policy                                                   |
 | [microsoft.devicemanagement.deviceconfiguration](microsoft.devicemanagement.deviceconfiguration.md)       | Microsoft device configuration                                                       |

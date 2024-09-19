@@ -276,6 +276,7 @@ Qwm
 ratebasedstatement
 regexmatchstatement
 regexpatternsetreferencestatement
+remediates
 requiresecuritysignature
 resourcegroup
 restrictnullsessaccess

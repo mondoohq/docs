@@ -1,0 +1,83 @@
+---
+title: Set up Cases and GitHub Issues
+sidebar_label: Set up Cases and GitHub Issues
+sidebar_position: 27
+description: Mondoo cases, which you can directly integrate with GitHub Issues, allow you to track remediation of important security findings. Set up an integration with GitHub to start using cases and include Mondoo data in your GitHub issues.
+image: /img/featured_img/mondoo-feature.jpg
+---
+
+Set up cases in a space to allow users in the space to keep track of security tasks and add GitHub issues directly from within the Mondoo Console. Cases setup involves configuring Mondoo to integrate with GitHub.
+
+For an overview of cases, read [Track and Fix Findings with Cases and Your Ticket System](/platform/cases/overview/).
+
+## Prerequisites
+
+- Owner or Editor access to the Mondoo space
+
+- A GitHub account with access to the project where you want Mondoo to add issues
+
+- Access to a GitHub organization or repository
+
+## Create a GitHub personal access token to give Mondoo access to the repository
+
+A _personal access token_ gives Mondoo the ability to access GitHub resources on your behalf. For Mondoo to continuously create issues in your GitHub repository, you must create a personal access token.
+
+To learn more about personal access tokens, read [Managing your personal access tokens](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) in the GitHub documentation.
+
+1. Log into GitHub. If you haven't verified your email address with GitHub, do that now.
+
+2. In the upper-right corner of any GitHub page, select your profile photo and then select Settings.
+
+3. In the left sidebar, select **Developer settings**.
+
+4. In the left sidebar, under **Personal access tokens**, select **Tokens (classic)**.
+
+5. Near the top-right corner of the page, select the **Generate new token** drop-down and select **Generate new token (classic)**.
+
+6. Under **Note**, explain the purpose of the token, such as `Mondoo cases integration`.
+
+7. Under **Expiration**, specify the number of days before the token expires.
+
+8. Under **Select scopes**, check these boxes:
+
+   - DEETS
+
+9. Select the **Generate token** button.
+
+10. Copy the token that GitHub generates. You need it in the next steps.
+
+## Add a GitHub integration
+
+1. In the Mondoo Console, navigate to the space where you want to set up cases and, in the side navigation bar, select **Cases**.
+
+   ![Configure cases in Mondoo](/img/platform/cases/cases-blank.png)
+
+2. Select the **ADD INTEGRATION** button.
+
+   ![Configure cases in Mondoo](/img/platform/cases/cases-integrations.png)
+
+3. Select **GitHub Issues**.
+
+   ![Configure cases in Mondoo](/img/platform/cases/cases-add-gh.png)
+
+4. In the **Choose an integration name** box, enter a name for the integration. Make it a name that clearly shows this is a GitHub integration.
+
+5. If you have a GitHub Enterprise account, in the **Provide GitHub Enterprise URL** box, type the URL for the account. This is the URL you use to access the home page for your GitHub account. An example is `https://github.mycompany.com`.
+
+6. In the **Provide your personal access token** box, paste the token you copied from GitHub in the steps above.
+
+7. To close a case in Mondoo when the corresponding GitHub issue closes, enable **Automatically close cases**.
+
+8. Select the **CREATE INTEGRATION** button.
+
+## Learn more
+
+- [Create Cases from Advisories](/platform/cases/advisories/)
+
+- [Create Cases from Checks](/platform/cases/checks/)
+
+- [Manage Cases](/platform/cases/manage/)
+
+- [Track and Fix Findings with Cases and Your Ticket System](/platform/cases/overview/)
+
+---

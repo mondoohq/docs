@@ -20,7 +20,8 @@ For an overview of cases, read [Track and Fix Findings with Cases and Your Ticke
 
 ## Create a GitHub personal access token to give Mondoo access to the repository
 
-A _personal access token_ gives Mondoo the ability to access GitHub resources on your behalf. For Mondoo to continuously create issues in your GitHub repository, you must create a personal access token.
+A _personal access token_ gives Mondoo the ability to create GitHub issues on your behalf. A token can grant access to an entire GitHub organization or only to specific repositories. Once
+ you share the token with Mondoo, any new cases created in the [space](/platform/start/organize/spaces/) can write new GitHub issues using that token.
 
 To learn more about personal access tokens, read [Managing your personal access tokens](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) in the GitHub documentation.
 
@@ -30,21 +31,23 @@ To learn more about personal access tokens, read [Managing your personal access 
 
 3. In the left sidebar, select **Developer settings**.
 
-4. In the left sidebar, under **Personal access tokens**, select **Tokens (classic)**.
+4. In the left sidebar, under **Personal access tokens**, select **Fine-grained tokens**.
 
-5. Near the top-right corner of the page, select the **Generate new token** drop-down and select **Generate new token (classic)**.
+5. Near the top-right corner of the page, select the **Generate new token** button.
 
-6. Under **Note**, explain the purpose of the token, such as `Mondoo cases integration`.
+6. In the **Token name** box, enter an easily identifiable   name, such as `Mondoo cases integration`.
 
-7. Under **Expiration**, specify the number of days before the token expires.
+7. In the **Resource owner** drop-down list, select the organization that owns the repository or repositories where you want Mondoo to create issues.
 
-8. Under **Select scopes**, check these boxes:
+8. In the **Expiration** drop-down list, select the number of days before the token expires. (Be sure to note the expiration date so that, as it approaches, you can create a new one without interrupting the Mondoo-GitHub integration.)
 
-   - DEETS
+9. Under **Repository access**, select **All repositories** to give Mondoo access to all the repositories in the chosen organization, or select **Only select repositories** and add the repositories you want to give Mondoo access to.
 
-9. Select the **Generate token** button.
+10. Select **Repository permissions** and, in the **Issues** drop-down list, select **Read and write**.
 
-10. Copy the token that GitHub generates. You need it in the next steps.
+11. Select the **Generate token** button.
+
+12. Copy the token that GitHub generates. You need it in the next steps.
 
 ## Add a GitHub integration
 

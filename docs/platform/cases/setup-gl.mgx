@@ -1,0 +1,7 @@
+---
+title: Set up Cases and GitLab Issues
+sidebar_label: Set up Cases and GitLab Issues
+sidebar_position: 31
+description: Mondoo cases, which you can directly integrate with GitLab Issues, allow you to track remediation of important security findings. Set up an integration with GitLab to start using cases and include Mondoo data in your GitLab issues.
+image: /img/featured_img/mondoo-feature.jpg
+---

@@ -20,3 +20,4 @@ Microsoft policies
 | identitySecurityDefaultsEnforcementPolicy | dict           | Identity security default enforcement policy |
 | adminConsentRequestPolicy                 | dict           | Admin consent request policy                 |
 | permissionGrantPolicies                   | &#91;&#93;dict | Permission grant policies                    |
+| consentPolicySettings                     | dict           | Consent policy settings                      |

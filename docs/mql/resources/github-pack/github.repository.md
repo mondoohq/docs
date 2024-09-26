@@ -61,7 +61,8 @@ github.repository(name string)
 | defaultBranch       | [github.branch](github.branch.md)                       | Default branch                                                     |
 | commits             | &#91;&#93;[github.commit](github.commit.md)             | List of commits for the repository                                 |
 | contributors        | &#91;&#93;[github.user](github.user.md)                 | List of contributors for the repository                            |
-| collaborators       | &#91;&#93;[github.collaborator](github.collaborator.md) | List of collaborators for the repository                           |
+| collaborators       | &#91;&#93;[github.collaborator](github.collaborator.md) | List of all collaborators for the repository                       |
+| adminCollaborators  | &#91;&#93;[github.collaborator](github.collaborator.md) | List of admin collaborators for the repository                     |
 | files               | &#91;&#93;[github.file](github.file.md)                 | List of files in the repository                                    |
 | releases            | &#91;&#93;[github.release](github.release.md)           | List of releases for the repository                                |
 | owner               | [github.user](github.user.md)                           | Repository owner                                                   |
@@ -72,3 +73,6 @@ github.repository(name string)
 | openIssues          | &#91;&#93;[github.issue](github.issue.md)               | List of repository open issues                                     |
 | closedIssues        | &#91;&#93;[github.issue](github.issue.md)               | List of repository closed issues                                   |
 | license             | [github.license](github.license.md)                     | Repository license                                                 |
+| codeOfConductFile   | [github.file](github.file.md)                           | Repository code of conduct                                         |
+| supportFile         | [github.file](github.file.md)                           | Repository support file                                            |
+| securityFile        | [github.file](github.file.md)                           | Repository security file                                           |

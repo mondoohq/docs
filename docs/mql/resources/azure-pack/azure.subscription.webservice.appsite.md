@@ -35,6 +35,7 @@ Azure Web app site
 | connectionSettings     | dict                                                                                                                    | App site connection settings             |
 | stack                  | dict                                                                                                                    | App site stack                           |
 | diagnosticSettings     | &#91;&#93;[azure.subscription.monitorService.diagnosticsetting](azure.subscription.monitorservice.diagnosticsetting.md) | Diagnostic settings for the web app site |
+| functions              | &#91;&#93;[azure.subscription.webService.function](azure.subscription.webservice.function.md)                           | List of functions for the web app site   |
 
 **References**
 

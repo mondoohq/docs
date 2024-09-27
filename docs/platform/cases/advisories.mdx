@@ -1,16 +1,14 @@
 ---
 title: Create Cases from Advisories
 sidebar_label: Create Cases from Advisories
-sidebar_position: 5
+sidebar_position: 70
 description: Cases, which integrate with your ticket system, allow you to track remediation of important security findings. Create a case from an advisory to track work on that advisory within your existing workflow.
 image: /img/featured_img/mondoo-feature.jpg
 ---
 
 Use cases to track the work of fixing advisories in your existing workflow. When a Mondoo space has the [cases feature configured](/platform/cases/overview/), any team member can create a case from an advisory. Creating a case can:
 
-- Create a new a Jira issue
-
-- Create a new Zendesk ticket
+- Directly create a new a Jira issue, GitHub issue, GitLab issue, or Zendesk ticket
 
 - Send an email message to the recipient of your choice, such as a listener for your ticket, issue tracking, or project management software
 
@@ -38,19 +36,19 @@ import Partial from "../partials/_editor-owner.mdx";
 
    ![Create a new case in Mondoo](/img/platform/cases/new-case.png)
 
-6. In the **Integration** box, select the where you want Mondoo to add or send the case information and provide a specific destination:
+6. In the **Integration** box, specify where you want Mondoo to add or send the case information.
 
-   - If you select a direct Jira integration, in the **Project** box, select the name of the project where you want to create an issue.
+7. Edit the issue summary or title as you wish and select the **CREATE CASE** button.
 
-   - If you select an email integration, in the **Recipient** box, select where to send an email message with the case details.
-
-7. Edit the issue summary as you wish and select the **CREATE CASE** button.
-
-  Mondoo creates a new case in the space and then creates a corresponding Jira issue or Zendesk ticket or sends email to the selected recipient.
+  Mondoo creates a new case in the space and then creates a corresponding issue or ticket in your ticket system, or sends email to the selected recipient.
 
 ## Learn more
 
 - [Track and Fix Findings with Cases and Your Ticket System](/platform/cases/overview/)
+
+- [Set up Cases and GitHub](/platform/cases/setup-github/)
+
+- [Set up Cases and GitLab](/platform/cases/setup-gitlab/)
 
 - [Set up Cases and Jira](/platform/cases/setup/)
 

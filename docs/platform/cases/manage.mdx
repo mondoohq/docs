@@ -1,7 +1,7 @@
 ---
 title: Manage Cases
 sidebar_label: Manage Cases
-sidebar_position: 7
+sidebar_position: 90
 description: Cases, which integrate with Atlassian Jira, allow you to track remediation of important security findings. View cases and close them in Mondoo or Jira. Change cases settings in the Mondoo space settings.
 image: /img/featured_img/mondoo-feature.jpg
 ---
@@ -68,19 +68,80 @@ import Partial from "../partials/_editor-owner.mdx";
 
 :::note
 
-Closing an ticket or issue in your ticket system or does not close the corresponding case in Mondoo. If you create cases using a direct Jira or Zendesk integration, a space-wide setting controls whether closing a case in Mondoo automatically closes the corresponding issue in Jira. To learn more, read the section below.
+Closing an ticket or issue in your ticket system or does not close the corresponding case in Mondoo. If you create cases using a direct integration with your ticket system, a space-wide setting controls whether closing a case in Mondoo automatically closes the corresponding issue/ticket in your ticket system. To learn more, read the section below.
 
 :::
 
-### Choose whether to closes tickets/issues when you close cases
+## Automatically create cases on drift
+
+Drift occurs when, instead of improving security, an asset becomes _more_ vulnerable to attack:
+
+- An asset previously passed a check in a policy but is now failing that check
+
+- Mondoo previously did not detect a vulnerability on an asset, but now does detect that vulnerability
+
+It's important to catch drift quickly. Mondoo makes that possible with automatic drift detection. When an asset becomes less secure, Mondoo can automatically create a case to alert you of the change and track the work on resolving the problem.
+
+The space setting **Automatically create cases on drift** controls whether Mondoo creates a case when it detects drift.
+
+![Cases space settings in Mondoo](/img/platform/cases/space-settings.png)
+
+To enable or disable automatic drift cases:
+
+<Partial />{" "}
+
+1. Navigate to the space where you want to change the drift setting.
+
+2. In the navigation sidebar, select **Settings** and then select the **Cases** tab.
+
+3. Enable or disable **Automatically create cases on drift**.
+
+
+### Choose a destination for drift cases
+
+Like all cases, Mondoo can share automatically created drift cases with your ticket system. When you add a new ticket integration for cases, you choose whether to create drift issues/tickets. You can also change this option any time in the space settings: Enable or disable **Create drift issues in this integration**. For direct integrations, you also specify the default destination for drift tickets/issues.
+
+To choose a destination for automatic drift cases:
+
+<Partial />{" "}
+
+1. Navigate to the space where you want to change the drift setting.
+
+2. In the navigation sidebar, select **Settings** and then select the **Cases** tab.
+
+3. Locate the settings for your integration and enable or disable **Create drift issues/tickets in this integration**.
+
+4. For direct integrations, specify where to create drift issues/tickets.
+
+### Group similar drift occurrences into one case
+
+If the same drift occurs on multiple assets, you may not want a separate case for each asset. Mondoo can group the drift detection of multiple assets into a single case. To do this, it waits a configurable period of time before finalizing a case and creating an issue or ticket in your ticket system.
+
+For example, suppose you configure Mondoo to create a new case and a corresponding Jira issue whenever it detects drift. You also configure Mondoo to wait four hours to group multiple instances of the same drift into one case. Mondoo scans asset 1, which fails check X. Mondoo identifies that asset 1 previously passed check X. This is drift, so Mondoo generates a case. However, Mondoo doesn't immediately save the case or create a Jira issue. Instead, Mondoo waits four hours to determine if any other assets also have incurred drift on check X. During these four hours, asset 5 and asset 6, which previously passed check X, now fail check X. Instead of creating new cases for assets 5 and 6, Mondoo adds information about assets 5 and 6 to the case initially created for asset 1. Now there is a single case with information about the three assets that incurred drift on check X. When four hours have passed, Mondoo creates a single Jira issue with the details about asset 1, asset 5, and asset 6 all incurring drift on check X.
+
+The **Aggregation window** space setting controls how long Mondoo waits to group similar drift occurrences in a single case. You either choose a time period or choose **No aggregation** to create a unique case (and corresponding issue or ticket) for each asset that incurs the same drift.
+
+To automatically group similar drift occurrences into one case:
+
+<Partial />{" "}
+
+1. Navigate to the space where you want to change the drift settings.
+
+2. In the navigation sidebar, select **Settings** and then select the **Cases** tab.
+
+3. In the **Aggregation window** drop-down list, choose how long to wait to detect the same drift on other assets before finalizing a case and creating an issue/ticket in your ticket system.
+
+## Choose whether to close tickets/issues when you close cases
 
 ![Space-wide cases settings](/img/platform/cases/space-settings.png)
 
-You can choose whether to close the corresponding Jira issue or Zendesk ticket when you close a case in the Mondoo Console. This setting applies only to direct Jira or Zendesk integrations, not to email integrations.
+You can choose whether to close the corresponding issue or ticket in your ticket system when you close a case in the Mondoo Console. This setting applies only to direct integrations, not to email integrations.
+
+<Partial />{" "}
 
 1. Navigate to the space where you want to change the closing behavior.
 
-2. In the navigation sidebar, select **Settings**.
+2. In the navigation sidebar, select **Settings** and then select the **Cases** tab.
 
 3. Enable or disable **Automatically close tickets**.
 
@@ -88,6 +149,10 @@ You can choose whether to close the corresponding Jira issue or Zendesk ticket w
 ## Learn more
 
 - [Track and Fix Findings with Cases and Your Ticket System](/platform/cases/overview/)
+
+- [Set up Cases and GitHub](/platform/cases/setup-github/)
+
+- [Set up Cases and GitLab](/platform/cases/setup-gitlab/)
 
 - [Set up Cases and Jira](/platform/cases/setup/)
 

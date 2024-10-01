@@ -40,39 +40,7 @@ Yes, Mondoo communicates with your AWS account using [AWS EventBridge](https://d
 
 ## What permissions will the resources created by Mondoo request?
 
-There are three IAM roles created during the CloudFormation install:
-
-- MondooLambdaRole
-  Lambda function role enable AWS account scanning, includes:
-
-  - managed policy: arn:aws:iam::aws:policy/ReadOnlyAccess
-  - managed policy: arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole
-  - managed policy: arn:aws:iam::aws:policy/AmazonEC2FullAccess
-  - limited to resources tagged with `Created By: Mondoo`:
-  - events:PutRule,
-    events:DeleteRule,
-    events:TagResource,
-    iam:CreateRole,
-    iam:CreateServiceLinkedRole,
-    iam:PutRolePolicy,
-    iam:AttachRolePolicy,iam:DetachRolePolicy,iam:DeleteRolePolicy,iam:TagRole
-  - unrestricted: cloudformation:UpdateStack,events:PutTargets, events:RemoveTargets,iam:PassRole,secretsmanager:GetSecretValue,ssm:GetParameter
-  - limited to RunShellScript and RunPowershellScript documents: ssm:SendCommand
-  - limited to Mondoo-\* SSM parameters: ssm:PutParameter,ssm:DeleteParameter,ssm:AddTagsToResource
-  - limited to Mondoo-created SQS queue:sqs:SendMessage,sqs:DeleteMessage,sqs:SetQueueAttributes
-  - limited to Mondoo-created SNS topic:sns:SetTopicAttributes,sns:TagResource
-  - limited to Mondoo Lambda function: lambda:UpdateFunctionConfiguration,lambda:GetFunctionConfiguration,lambda:AddPermission,lambda:UpdateFunctionCode,lambda:InvokeFunction
-
-- MondooEventBusRole
-  Eventbus role to allow Mondoo AWS account to send messages to your AWS account, includes:
-
-  - events:PutEvents on the default event bus
-  - sts:AssumeRole on events.amazonaws.com
-
-- EBSVolumeScanningInstancePolicy
-  Role to be used by the scanner instances in the autoscaling group if EBS volume scanning is active, includes:
-  - limited to resources tagged with `Created By: Mondoo`: ec2:AttachVolume,ec2:DetachVolume,ec2:DeleteVolume,ec2:DeleteSnapshot
-  - unrestricted: ec2:CreateSnapshot,ec2:CreateVolume,ec2:CopySnapshot,ec2:CreateTags,ec2:DescribeInstances,ec2:DescribeVolumes,ec2:DescribeSnapshots,kms:Decrypt,kms:ReEncryptTo,kms:GenerateDataKeyWithoutPlaintext,kms:DescribeKey,kms:ReEncryptFrom
+[This JSON file](https://s3.amazonaws.com/mondoo.us-east-1/mondoo-serverless-v2.json) informs the Mondoo AWS integration and contains all the required permissions.
 
 ## What specific resources will the Mondoo integration create in my AWS account?
 
@@ -138,6 +106,12 @@ The AWS CloudFormation JSON and Lambda zip are available as part of the Mondoo S
 - [Mondoo Stack CloudFormation](https://s3.amazonaws.com/mondoo.us-east-1/mondoo-root-cf.json) (applies only to single-account installations)
 - [Nested Stack CloudFormation](https://s3.amazonaws.com/mondoo.us-east-1/mondoo-lambda-cf.json) (applies only to single-account installations)
 - [Lambda Zip](https://s3.amazonaws.com/mondoo-dev.us-east-1/mondoo-lambda.zip)
+
+### AWS tags
+
+All resources created by the Mondoo AWS Integration have the `Created By: Mondoo` tag. The IAM role attached to the Lambda function lets the integration delete EC2 resources only if they have the `Created By: Mondoo` tag.
+
+For information about AWS tags, read [Tagging your AWS resources](https://docs.aws.amazon.com/tag-editor/latest/userguide/tagging.html) in the AWS documentation.
 
 ## Learn more
 

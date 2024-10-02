@@ -6,7 +6,7 @@ image: /img/featured_img/mondoo-aws.jpg
 description: This document covers how to debug and troubleshoot problems that may come up with the AWS Integration.
 ---
 
-Troubleshoot problems that may come up deploying, running, and updating the serverless Mondoo AWS integration.
+Troubleshoot problems deploying, running, and updating the serverless Mondoo AWS integration.
 
 :::tip
 
@@ -133,9 +133,7 @@ You can manually force an update to the AWS Lambda from within the Mondoo Consol
 
 3. Select **Force Lambda Update**.
 
-## VPC
-
-### Lambda VPC access
+## Lambda VPC access
 
 The [AWSLambdaVPCAccessExecutionRole](https://docs.aws.amazon.com/lambda/latest/dg/lambda-intro-execution-role.html#permissions-executionrole-features) is already attached to the Mondoo Lambda Role in order to discover assets, and run policies against those assets.
 

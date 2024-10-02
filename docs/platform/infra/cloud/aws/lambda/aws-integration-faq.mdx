@@ -8,7 +8,7 @@ sidebar_position: 3
 
 ## What does Mondoo scan?
 
--Mondoo analyzes the configuration of the account settings. It discovers resources (EC2 instances, S3 buckets, RDS instances, etc) across all regions and assesses their configuration according to which [policies have been enabled](/platform/security/posture/pac/).
+Mondoo analyzes the configuration of the account settings. It discovers resources (EC2 instances, S3 buckets, RDS instances, etc) across all regions and assesses their configuration according to which [policies have been enabled](/platform/security/posture/pac/).
 
 ## How does the serverless Mondoo AWS integration work?
 
@@ -36,7 +36,7 @@ If you've set up your AWS organization according to [AWS standard practices](htt
 
 Before deploying, check the configuration of your AWS organization as described in [Requirements for deploying the Mondoo StackSet at the organization level](/platform/infra/cloud/aws/lambda/aws-integration-troubleshooting#requirements-for-deploying-the-mondoo-stackset-at-the-organization-level).
 
-## What information will leave my AWS Account?
+## What information leaves my AWS Account?
 
 Scan report results only.
 
@@ -48,7 +48,7 @@ Mondoo Platform stores the latest report for all scanned assets in the AWS accou
 
 Yes. Mondoo communicates with your AWS account using [AWS EventBridge](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-cross-account.html). The Eventbus policy and rule are created as part of the CloudFormation stack.
 
-## What permissions will the resources created by Mondoo request?
+## What permissions do the resources created by Mondoo request?
 
 [This JSON file](https://s3.amazonaws.com/mondoo.us-east-1/mondoo-serverless-v2.json) informs the Mondoo AWS integration and contains all the required permissions.
 

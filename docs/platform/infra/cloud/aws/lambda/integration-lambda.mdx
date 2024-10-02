@@ -21,7 +21,7 @@ The serverless Mondoo AWS integration supports scanning multiple AWS accounts. T
 
 :::caution IMPORTANT
 
-Before creating a serverless Mondoo deployment on an AWS Organization, make sure to check if the configuration of your AWS organization meets the [requirements](/platform/infra/cloud/aws/lambda/aws-integration-troubleshooting/#requirements-for-deploying-the-mondoo-stackset-at-the-organization-level).
+Before creating a serverless Mondoo deployment on an AWS Organization, be sure the configuration of your AWS Organization meets the [requirements](/platform/infra/cloud/aws/lambda/aws-integration-troubleshooting/#requirements-for-deploying-the-mondoo-stackset-at-the-organization-level).
 
 :::
 
@@ -32,7 +32,7 @@ When you deploy an integration with Mondoo using a StackSet on the organizationa
 
 The [administrator account](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-concepts.html#stacksets-concepts-accts) in which the StackSet for the target accounts resides needs its own separate [single account integration](/platform/infra/cloud/aws/lambda/integration-lambda/#integrate-with-an-entire-organization-or-single-account).
 
-This is intentional and reflects the [architectural concepts of AWS StackSets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-concepts.html).
+This follows the [architectural concepts of AWS StackSets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-concepts.html).
 :::
 
 ## Set up a new AWS integration
@@ -51,34 +51,32 @@ import Partial from "../../../../partials/_editor-owner.mdx";
 
    ![AWS integration options](/img/platform/infra/cloud/aws/hosted-or-serverless.png)
 
-2. Select **Serverless**.
+2. Select the **SELECT SERVERLESS INTEGRATION** button.
 
-   ![integration-create-image](/img/platform/infra/cloud/aws/add-aws-top.png)
+   ![Create a serverless AWS integration in Mondoo](/img/platform/infra/cloud/aws/add-aws-top.png)
 
-3. Select the type of integration:
+3. Give the new integration a name that is easy to recognize as an AWS integration and differentiates it from any other AWS integrations.
+
+4. Select the type of integration:
 
    | Option                     | Description                                       |
    | -------------------------- | ------------------------------------------------- |
    | **Organization install**   | Integrate Mondoo with an entire AWS Organization. |
    | **Single account install** | Integrate Mondoo with a single AWS account.       |
 
-4. Identify the account or Organization and the region:
+5. Select the region in which you want to deploy the integration.
 
-   | If you're integrating with... | Then...                                                                                                                                |
-   | ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-   | An entire AWS Organization    | In the **AWS Organization(s)** box, enter any name for the integration. Select the region in which you want to deploy the integration. |
-   | A single AWS account          | In the **AWS account** box, enter your AWS account ID. Select the region in which you want to deploy the integration.                  |
+6. Choose whether to use the region's default virtual private cloud (VPC) or to create a new VPC dedicated for Mondoo's use.
 
-5. Set the account options:
+   - If you select **AWS default VPC**, be sure the selected region has a default VPC. Every VPCs created after 2013 has a default VPC unless it's been deleted. To check in the AWS console, choose the region, go to the VPC service, and select **VPCs**.
 
-   | Option                                   | Description                                                                                                                                                                                                              |
-   | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-   | **Schedule full scan**                   | Set the interval (in hours) at which to execute a full scan of the AWS account, independent of change [events](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-service-event.html). The default is 12 hours. |
-   | **Trigger on AWS console sign-in event** | Trigger an account scan whenever a user logs into the AWS console.                                                                                                                                                       |
+   - If you select **Mondoo-created VPC**, in the **Configure CIDR** box, specify an IPv4 address range for the VPC that Mondoo creates. To learn more, read [VPC CIDR blocks](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-cidr-blocks.html) in the AWS documentation.
 
-6. Set the EC2 options:
+7. In the **Schedule full scan** box, set the interval (in hours) at which to execute a full scan of the AWS account, independent of change [events](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-service-event.html). The default is 12 hours.
 
-   ![integration-create-image](/img/platform/infra/cloud/aws/add-aws-ec2.png)
+8. Set the EC2 options:
+
+   ![Mondoo serverless AWS integration EC2 options](/img/platform/infra/cloud/aws/add-aws-ec2.png)
 
    | Option                                                                                                                        | Description                                                                                                                        |
    | ----------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
@@ -88,14 +86,9 @@ import Partial from "../../../../partials/_editor-owner.mdx";
    | **Use EC2 Instance Connect for instance connectivity**                                                                        | If an EC2 instance has a public IP, connect using EC2 Instance Connect.                                                            |
    | **Use EBS volume scanning for instance connectivity**                                                                         | Use _EBS volume scanning_ to scan the filesystems of instances that Mondoo otherwise can't reach. This includes stopped instances. |
 
-7. If you enable EBS volume scanning, you can customize these options:
+9. If desired, limit the EC2 instances that Mondoo scans:
 
-   | Option                      | Description                                                                                                                                                                                                                                                                                                                     |
-   | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-   | **EBS targets per scanner** | Customize the number of targets a single scanner instance is responsible for scanning. Setting a low number (such as 5) results in faster scans, but requires AWS to create more scanner instances. Setting a high number (such as 50) reduces the number of scanner instances, but results in slower scans. The default is 20. |
-   | **Max ASG instances**       | Set your own limit for how many instances AWS can spin up in the AutoScalingGroup to perform the filesystem scans. The default is 50.                                                                                                                                                                                           |
-
-8. If desired, limit the EC2 instances that Mondoo scans:
+   ![Mondoo serverless AWS EC2 filtering](/img/platform/infra/cloud/aws/filter-ec2.png)
 
    | Option                     | Description                                                                    | Example                                  |
    | -------------------------- | ------------------------------------------------------------------------------ | ---------------------------------------- |
@@ -103,23 +96,24 @@ import Partial from "../../../../partials/_editor-owner.mdx";
    | **Filter by regions**      | Limit instance scanning to a subset of regions, separating values with commas. | `us-east-1,us-east-2`                    |
    | **Filter by tags**         | To Limit instance scanning to a subset of tags, separated with commas.         | `Name:testname, env:test`                |
 
-9. Set ECS, S3, and ECR options:
+10. Specify if you want to scan containers or container images:
 
-   ![integration-create-image](/img/platform/infra/cloud/aws/add-aws-bottom.png)
+   ![Mondoo serverless AWS integration container options](/img/platform/infra/cloud/aws/containers.png)
 
-   | Option                                                                                                            | Description                                                     |
-   | ----------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- |
-   | **Discover and scan ECS containers**                                                                              | Use Amazon ECS Exec to scan Fargate containers.                 |
-   | **Trigger on S3 bucket [events](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-service-event.html)** | Trigger a scan whenever a change is made to an S3 bucket.       |
-   | **Discover and scan ECR images**                                                                                  | Include ECR images in asset discovery and scan them when found. |
+   | Option                                                                                                                        | Description                                                                                                                        |
+   | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+   | **Discover and scan ECS containers**                                                                                                    | Discover AWS Fargate containers and scan them using [ECS Exec](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-exec.html). |
+   | **Discover and scan container images** | Discover container images and scan them for security misconfigurations. |
 
-10. Select the **START SCANNING** button.
+11. Select the **START SCANNING** button.
+
+   ![Create an AWS integration and launch CloudFormation](/img/platform/infra/cloud/aws/launch-cf.png)
 
 11. Follow the instructions to launch the AWS CloudFormation stack (for an account) or StackSet (for an Organization).
 
 :::caution IMPORTANT
 
-Selecting **Create** does not finalize the integration between Mondoo and AWS. You must launch the AWS CloudFormation stack or StackSet to complete the setup.
+Selecting **START SCANNING** does not finalize the integration between Mondoo and AWS. You must launch the AWS CloudFormation stack or StackSet to complete the setup.
 
 :::
 
@@ -147,16 +141,6 @@ Mondoo shows the status at the top of the integration page, beside the integrati
 
 ![Mondoo AWS integration status and actions](/img/platform/infra/cloud/aws/integration-scan-now.png)
 
-Theses are the possible statuses for an AWS integration:
-
-| Status          | Meaning                                                                                                          |
-| --------------- | ---------------------------------------------------------------------------------------------------------------- |
-| **configuring** | Mondoo is sending the scan configuration options to the integration and the integration is saving those options. |
-| **active**      | The integration is active and healthy.                                                                           |
-| **error**       | Mondoo detected an error during installation.                                                                    |
-| **missing**     | Mondoo hasn't received a check-in from the Lambda function for over an hour.                                     |
-| **deleted**     | CloudFormation for the integration has been deleted.                                                             |
-
 ### Ping an integration
 
 At the top of the integration page, below the integration name, Mondoo shows the time of the last ping.
@@ -173,11 +157,7 @@ To see fresh scan results, select the **SCAN NOW** button. Mondoo retrieves new 
 
 To stop all currently running AWS scans, on the ellipsis menu of the integration page, select **Cancel Scans**.
 
-![Stop an AWS scan in Mondoo](/img/platform/infra/cloud/aws/cancel-scan.png)
-
-### Retry a failed integration setup
-
-If an error occurred during setup and the CloudFormation stack is now up and running but the integration is unhealthy, you can try to return it to a healthy state: Select the ellipsis to the right of the integration name and select **Retry Setup**.
+![Stop an AWS scan in Mondoo](/img/platform/infra/cloud/aws/dotmenu.png)
 
 ### Enable and disable policies for an AWS integration
 
@@ -199,7 +179,7 @@ The **CONFIGURATION** tab on the integration page shows the current settings and
 
 ![Reconfigure a Mondoo AWS integration](/img/platform/infra/cloud/aws/integration-config.png)
 
-To learn about individual settings, read the sections under the _Set up a new AWS integration_ section above.
+To learn about individual settings, read the _Set up a new AWS integration_ section above.
 
 ### Remove an integration
 

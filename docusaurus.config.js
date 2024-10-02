@@ -62,10 +62,6 @@ const legacyRedirects = [
     to: "/platform/infra/cloud/aws/lambda/aws-integration-troubleshooting",
   },
   {
-    from: "/platform/infra/cloud/aws/aws-scan-details",
-    to: "/platform/infra/cloud/aws/lambda/aws-scan-details",
-  },
-  {
     from: "/platform/infra/cloud/aws/aws-ebs-snapshot-scan",
     to: "/cnspec/cloud/aws/aws-ebs-snapshot-scan",
   },

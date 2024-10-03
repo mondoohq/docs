@@ -1,48 +1,60 @@
 tim:
   name: Tim Smith
   title: Mondoo Core Team
-  url: https://github.com/tas50
   image_url: https://github.com/tas50.png
   socials:
-    linkedin: tsmith84
     github: tas50
+    linkedin: tsmith84
 
 chip:
   name: Charles Johnson
   title: Mondoo Core Team
-  url: https://github.com/charlesjohnson
   image_url: https://github.com/charlesjohnson.png
+  socials:
+    github: charlesjohnson
+    linkedin: jeffersonstarchip
 
 chris:
   name: Christoph Hartmann
   title: Mondoo Core Team
-  url: https://github.com/chris-rock
   image_url: https://github.com/chris-rock.png
+  socials:
+    github: chris-rock
+    linkedin: chrihartmann
 
 jay:
   name: Jay Mundrawala
   title: Mondoo Core Team
-  url: https://github.com/jaym
+  socials:
+    github: jaym
 
 vj:
   name: Victoria Jeffrey
   title: Mondoo Core Team
-  url: https://github.com/vjeffrey
   image_url: https://github.com/vjeffrey.png
+  socials:
+    github: vjeffrey
+    linkedin: victoriadjeffrey
 
 anthony:
   name: Anthony Young
   title: Mondoo Core Team
-  url: https://github.com/sleepsonthefloor
+  socials:
+    github: sleepsonthefloor
+    linkedin: anthony-young-bb15211
 
 kyleen:
   name: Kyleen MacGugan
   title: Mondoo Core Team
-  url: https://github.com/kmacgugan
   image_url: https://github.com/kmacgugan.png
+  socials:
+    github: kmacgugan
+    linkedin: macgoogly
 
 dom:
   name: Dominik Richter
   title: Mondoo Core Team
-  url: https://github.com/arlimus
   image_url: https://github.com/arlimus.png
+  socials:
+    github: arlimus
+    linkedin: dominikrichter

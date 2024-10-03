@@ -231,6 +231,7 @@ module.exports = {
   baseUrl: "/docs/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "throw",
+  onBrokenAnchors: "throw",
   trailingSlash: "true",
   favicon: "img/favicon.png",
   organizationName: "Mondoo", // Usually your GitHub org/user name.

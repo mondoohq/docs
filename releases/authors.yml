@@ -3,6 +3,9 @@ tim:
   title: Mondoo Core Team
   url: https://github.com/tas50
   image_url: https://github.com/tas50.png
+  socials:
+    linkedin: tsmith84
+    github: tas50
 
 chip:
   name: Charles Johnson

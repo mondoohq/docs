@@ -27,6 +27,7 @@ Access to the Slack API requires an [Access Token](https://api.slack.com/authent
    - **team:read**
    - **usergroups:read**
    - **users:read**
+   - **users:read.email**
 
 6. Scroll to **OAuth Tokens for Your Workspace** and select **Install to Workspace**. Once you authorize the app, Slack provides a token. Copy the token; you need it to retrieve data from Slack.
 

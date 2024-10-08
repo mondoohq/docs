@@ -80,18 +80,10 @@ You can also create your own policies to meet your specific needs. To learn more
 To assess AWS resources that you don't normally have access to, you can use an [assumed role](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use.html):
 
 ```bash
-cnspec scan aws --option role-arn=ROLEARN
+cnspec scan aws --role ROLE-ARN
 ```
 
-For `ROLEARN`, substitute the role's Amazon resource name (ARN).
-
-cnspec supports assumed roles with [external IDs](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user_externalid.html):
-
-```bash
-cnspec scan aws --option role-arn=ROLEARN --option external-id=EXTERNALID
-```
-
-For `ROLEARN`, substitute the role's Amazon resource name (ARN). For `EXTERNALID`, substitute the external ID for the assumed role.
+For `ROLE-ARN`, substitute the role's Amazon resource name (ARN).
 
 ## Test AWS with the cnspec shell
 

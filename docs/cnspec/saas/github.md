@@ -25,7 +25,13 @@ To scan GitHub organizations and repos, cnspec needs access. You give cnspec the
 
 cnspec needs a personal access token to scan a GitHub organization, public repo, or private repo. The token's level of access determines how much information cnspec can retrieve.
 
-To learn how to create a personal access token, read [Managing your personal access tokens](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) in the GitHub documentation.
+To learn how to create a personal access token, read [Managing your personal access tokens](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) in the GitHub documentation. We recommend creating a classic token with these scopes:
+
+- public_repo
+- read:org
+- read:repo_hook
+- admin:org_hook
+- read:project
 
 #### Configure a GITHUB_TOKEN environment variable
 

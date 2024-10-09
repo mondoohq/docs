@@ -17,7 +17,13 @@ To query GitHub organizations and repos, cnquery needs access. You give cnquery 
 
 cnquery needs a personal access token to query a GitHub organization, public repo, or private repo. The token's level of access determines how much information cnquery can retrieve.
 
-To learn how to create a personal access token, read [Creating a personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) in the GitHub documentation.
+To learn how to create a personal access token, read [Creating a personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) in the GitHub documentation. We recommend creating a classic token with these scopes:
+
+- public_repo
+- read:org
+- read:repo_hook
+- admin:org_hook
+- read:project
 
 #### Configure a GITHUB_TOKEN environment variable
 

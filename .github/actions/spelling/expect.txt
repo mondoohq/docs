@@ -92,6 +92,7 @@ CYEXAMPLEKEY
 datacompute
 datapath
 DATAUSER
+dba
 dcea
 Ddos
 debconf

@@ -7,7 +7,7 @@ Providers add connectivity to all assets
 
 ### Synopsis
 
-Manage your providers. List and install new ones or update existing ones.
+Manage your providers. List and install new ones or update existing ones
 
 ```bash
 cnspec providers [flags]
@@ -32,5 +32,5 @@ cnspec providers [flags]
 ### SEE ALSO
 
 - [cnspec](cnspec.md) - cnspec CLI
-- [cnspec providers install](cnspec_providers_install.md) - Install or update a provider.
-- [cnspec providers list](cnspec_providers_list.md) - List all providers on the system.
+- [cnspec providers install](cnspec_providers_install.md) - Install or update a provider
+- [cnspec providers list](cnspec_providers_list.md) - List all providers on the system

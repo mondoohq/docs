@@ -16,13 +16,13 @@ cnspec run [flags]
 ### Options
 
 ```
-      --ast                  Parse the query and return the abstract syntax tree (AST).
-  -c, --command string       MQL query to executed in the shell.
+      --ast                  Parse the query and return the abstract syntax tree (AST)
+  -c, --command string       MQL query to execute in the shell
   -h, --help                 help for run
-      --info                 Parse the query and provide information about it.
-  -j, --json                 Run the query and return the object in a JSON structure.
-      --parse                Parse the query and return the logical structure.
-      --platform-id string   Select a specific target asset by providing its platform ID.
+      --info                 Parse the query and provide information about it
+  -j, --json                 Run the query and return the object in a JSON structure
+      --parse                Parse the query and return the logical structure
+      --platform-id string   Select a specific target asset by providing its platform ID
 ```
 
 ### Options inherited from parent commands

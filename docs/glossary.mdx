@@ -7,7 +7,7 @@ image: /img/featured_img/mondoo-feature.jpg
 
 ### advisory
 
-An [advisory](/platform/security/posture/advisories/) is a notice released by a software vendors that provides recommendations on how to fix or mitigate a vulnerability in their product.
+An [advisory](/platform/security/posture/advisories/) is a notice released by a software vendor that provides recommendations on how to fix or mitigate a vulnerability in their product.
 
 ### annotation
 
@@ -31,7 +31,7 @@ The [blast radius](/platform/security/posture/findings/#blast-radius) of a findi
 
 ### case
 
-A [case](/platform/cases/overview/) is a security finding (such as an advisory or failed check) that a team member has identified as needing work. For each case, Mondoo creates a corresponding Jira issue so that you can track the case as a part of your team's regular workflow.
+A [case](/platform/cases/overview/) is a task to be completed. Cases are based on one or more security findings (such as advisories or failed checks) that a team member has identified as needing attention.
 
 ### check
 
@@ -40,6 +40,10 @@ A check is a verification of information. For example, a check can assert that a
 ### CI/CD
 
 Continuous integration and continuous delivery/deployment (CI/CD) is a highly automated software development practice in which teams make, test, and deploy frequent, incremental code changes. Mondoo integrates with [major CI/CD platforms](/platform/infra/supply/cicd/overview/) to enable security testing throughout the development process.
+
+### console
+
+The Mondoo console is a browser-based user interface for managing your Mondoo account. Access the Mondoo console at [console.mondoo.com](https://console.mondoo.com).
 
 ### contextual risk factors
 
@@ -63,7 +67,9 @@ A [CVE](/platform/security/posture/vulnerabilities/) (common vulnerability and e
 
 ### integration
 
-An [integration](/platform/infra/overview/) is Mondoo's connection and communication with an [asset](#asset). Integrations allow Mondoo to gather inventory details, assess the security of an asset, and measure compliance.
+An [integration](/platform/infra/overview/) is Mondoo's connection and communication with an external system. Most integrations are with [assets](#asset). They allow Mondoo to gather inventory details, assess the security of an asset, and measure compliance.
+
+A Mondoo integration can also provide communication with a data [export destination](/platform/maintain/export/overview/) or a [project management or ticket system](/platform/cases/overview/).
 
 ### inventory
 

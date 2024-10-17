@@ -1,19 +1,18 @@
 ---
-id: cnspec_vault_add-secret
-title: cnspec vault add-secret
+id: cnspec_framework_disabled
+title: cnspec framework disabled
 ---
 
-Store a secret in a vault
+Change a framework status to disabled
 
 ```
-cnspec vault add-secret SECRETID SECRETVALUE [flags]
+cnspec framework disabled [mrn] [flags]
 ```
 
 ### Options
 
 ```
-  -h, --help                    help for add-secret
-      --inventory-file string   Set the path to the inventory file
+  -h, --help   help for disabled
 ```
 
 ### Options inherited from parent commands
@@ -28,4 +27,4 @@ cnspec vault add-secret SECRETID SECRETVALUE [flags]
 
 ### SEE ALSO
 
-- [cnspec vault](cnspec_vault.md) - Manage vault environments
+- [cnspec framework](cnspec_framework.md) - Manage local and Mondoo Platform hosted compliance frameworks

@@ -25,6 +25,7 @@ Manage local and Mondoo Platform hosted compliance frameworks
 
 - [cnspec](cnspec.md) - cnspec CLI
 - [cnspec framework active](cnspec_framework_active.md) - Change a framework status to active
+- [cnspec framework disabled](cnspec_framework_disabled.md) - Change a framework status to disabled
 - [cnspec framework download](cnspec_framework_download.md) - Download a compliance framework
 - [cnspec framework list](cnspec_framework_list.md) - List available compliance frameworks
 - [cnspec framework preview](cnspec_framework_preview.md) - Change a framework status to preview

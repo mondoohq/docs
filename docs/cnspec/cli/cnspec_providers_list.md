@@ -3,7 +3,7 @@ id: cnspec_providers_list
 title: cnspec providers list
 ---
 
-List all providers on the system.
+List all providers on the system
 
 ```
 cnspec providers list [flags]

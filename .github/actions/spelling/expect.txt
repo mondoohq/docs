@@ -92,6 +92,7 @@ CYEXAMPLEKEY
 datacompute
 datapath
 DATAUSER
+dba
 dcea
 Ddos
 debconf
@@ -327,7 +328,6 @@ teamsmeetingpolicyconfig
 tenantfederationconfig
 testcase
 testdata
-testname
 testring
 testsuite
 tfblock

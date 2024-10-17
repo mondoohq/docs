@@ -19,7 +19,7 @@ cnquery vault configure VAULTNAME [flags]
   -h, --help                    help for configure
       --inventory-file string   Set the path to the inventory file
       --option stringToString   addition vault connection options, multiple options via --option key=value (default [])
-      --type string             possible values: linux-kernel-keyring | hashicorp-vault | gcp-secret-manager | aws-parameter-store | none | keyring | gcp-berglas | memory | encrypted-file | aws-secrets-manager
+      --type string             possible values: encrypted-file | gcp-secret-manager | aws-secrets-manager | aws-parameter-store | gcp-berglas | none | linux-kernel-keyring | hashicorp-vault | memory | keyring
 ```
 
 ### Options inherited from parent commands

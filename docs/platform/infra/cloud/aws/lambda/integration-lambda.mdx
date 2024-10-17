@@ -98,6 +98,16 @@ import Partial from "../../../../partials/_editor-owner.mdx";
 
       - Scan all resources except those that match your deny list
 
+   Choose any combination of filters:
+
+      - Enable **Filter by instance IDs** to limit EC2 instance scanning to a subset of IDs or scan all EC2 instances except specified IDs. This setting does not affect scanning of other types of resources. Enter each ID on a new line.
+         Example:
+         ```
+         i-0d1f840578ca82600
+         i-07ae83fe5d22600a
+         ```
+
+
    | Option                     | Description                                                                    | Example                                  |
    | -------------------------- | ------------------------------------------------------------------------------ | ---------------------------------------- |
    | **Filter by instance IDs** | Limit EC2 instance scanning to a subset of IDs or scan all EC2 instances except specified IDs. This setting does not affect scanning of other types of resources. | `i-0d1f840578ca82600

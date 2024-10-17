@@ -85,6 +85,32 @@ cnspec scan aws --role ROLE-ARN
 
 For `ROLE-ARN`, substitute the role's Amazon resource name (ARN).
 
+### Run a filtered EC2 scan using tags
+
+Use the `--filters` flag to limit the EC2 instances you scan. To scan only EC2 instances that have a certain tag value, run:
+
+```bash
+cnspec scan aws --filters ec2:tag:KEY=VALUE
+```
+
+For example, to include only EC2 instances that have the _owner_ tag _dev_, run:
+
+```bash
+--filters ec2:tag:owner=dev
+```
+
+To scan all resources except EC2 instances with certain tag values, run:
+
+```bash
+cnspec scan aws --filters exclude:ec2:tag:KEY=VALUE1,VALUE2,VALUEX
+```
+
+For example, to scan all resources except EC2 instances that have the _env_ tag _test_ or _qa_, run:
+
+```bash
+--filters exclude:ec2:tag:env=test,qa
+```
+
 ## Test AWS with the cnspec shell
 
 The cnspec shell is handy for quick checks and tests, or for developing your MQL skills. Its auto-complete and help features guide you in writing checks.

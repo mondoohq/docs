@@ -100,23 +100,27 @@ import Partial from "../../../../partials/_editor-owner.mdx";
 
    Choose any combination of filters:
 
-      - Enable **Filter by instance IDs** to limit EC2 instance scanning to a subset of IDs or scan all EC2 instances except specified IDs. This setting does not affect scanning of other types of resources. Enter each ID on a new line. For example:
+      - Enable **Filter by instance IDs** to limit EC2 instance scanning to a subset of IDs or to scan all EC2 instances except specified IDs. This setting does not affect scanning of other types of resources. Enter each ID on a new line. For example:
 
          ```
          i-0d1f840578ca82600
          i-07ae83fe5d22600a
          ```
 
+      - Enable **Filter by regions** to limit scanning to a subset of regions or to scan all resources except those in the region specified. Enter each region on a new line. For example:
 
-   | Option                     | Description                                                                    | Example                                  |
-   | -------------------------- | ------------------------------------------------------------------------------ | ---------------------------------------- |
-   | **Filter by instance IDs** | Limit EC2 instance scanning to a subset of IDs or scan all EC2 instances except specified IDs. This setting does not affect scanning of other types of resources. | `i-0d1f840578ca82600
-   i-07ae83fe5d22600a` |
-   | **Filter by regions**      | Limit scanning to a subset of regions or scan all resources except those in the region specified. | `eu-east-1
-   us-east-2`                    |
-   | **Filter by tags**         | Limit resource scanning to a subset of tags or scan all resources except those with the specified tags. Enter tags using the format `key:value`. To allow or deny multiple values of the same tag key, separate them with commas: `key:value1, value2, value3`. | `Name:test
-   env:test
-   Environment:stage,test,qa,edge`                |
+         ```
+         eu-east-1
+         us-east-2
+         ```
+
+      - Enable **Filter by tags** to limit scanning to resources that have a subset of tags or to scan all resources except those with the specified tags. Enter tags using the format `key:value`. To allow or deny multiple values of the same tag key, separate them with commas. Enter each tag on a new line. For example:
+
+         ```
+         Name:test
+         env:test
+         Environment:stage,test,qa,edge
+         ```               |
 
 10. Specify whether you want to scan containers and container images:
 

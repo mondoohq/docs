@@ -75,6 +75,29 @@ cnspec scan aws -o full
 
 You can also create your own policies to meet your specific needs. To learn more about policies, read [Policies](/cnspec/cnspec-policies/).
 
+### Discover resources during a scan
+
+Use the `--discover` flag to find and scan resources in your AWS account.
+
+Find and scan all EC2 instances:
+
+```bash
+cnspec scan aws --discover instances
+```
+
+Find and scan all S3 buckets:
+
+
+```bash
+cnspec scan aws --discover s3-buckets
+```
+
+For a complete list of `--discover` flag options, run the cnspec help:
+
+```bash
+cnspec scan aws -h
+```
+
 ### Scan using an assumed role
 
 To assess AWS resources that you don't normally have access to, you can use an [assumed role](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use.html):
@@ -84,6 +107,32 @@ cnspec scan aws --role ROLE-ARN
 ```
 
 For `ROLE-ARN`, substitute the role's Amazon resource name (ARN).
+
+### Run a filtered EC2 scan using tags
+
+Use the `--filters` flag to limit the EC2 instances you scan. To scan only EC2 instances that have a certain tag value, run:
+
+```bash
+cnspec scan aws --discover instances --filters ec2:tag:KEY=VALUE
+```
+
+For example, to include only EC2 instances that have the _owner_ tag _dev_, run:
+
+```bash
+--filters --discover instances ec2:tag:owner=dev
+```
+
+To scan all resources except EC2 instances with certain tag values, run:
+
+```bash
+cnspec scan aws --discover instances --filters exclude:ec2:tag:KEY=VALUE1,VALUE2,VALUEX
+```
+
+For example, to scan all resources except EC2 instances that have the _env_ tag _test_ or _qa_, run:
+
+```bash
+cnspec scan aws --discover instances --filters exclude:ec2:tag:env=test,qa
+```
 
 ## Test AWS with the cnspec shell
 

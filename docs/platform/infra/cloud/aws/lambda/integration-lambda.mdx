@@ -86,17 +86,25 @@ import Partial from "../../../../partials/_editor-owner.mdx";
    | **Use EC2 Instance Connect for instance connectivity**                                                                        | If an EC2 instance has a public IP, connect using EC2 Instance Connect.                                                            |
    | **Use EBS volume scanning for instance connectivity**                                                                         | Use _EBS volume scanning_ to scan the filesystems of instances that Mondoo otherwise can't reach. This includes stopped instances. |
 
-9. If desired, limit the EC2 instances that Mondoo scans:
+9. If desired, limit the resources that Mondoo scans:
 
-   ![Mondoo serverless AWS EC2 filtering](/img/platform/infra/cloud/aws/filter-ec2.png)
+   ![Mondoo serverless AWS EC2 filtering](/img/platform/infra/cloud/aws/aws-filter.png)
+
+   For each filtering option, you can either:
+
+      - Scan only the resources that match your allow list
+
+      OR
+
+      - Scan all resources except those that match your deny list
 
    | Option                     | Description                                                                    | Example                                  |
    | -------------------------- | ------------------------------------------------------------------------------ | ---------------------------------------- |
-   | **Filter by instance IDs** | Limit instance scanning to a subset of IDs, separated by commas.               | `i-0d1f840578ca82600,i-07ae83fe5d22600a` |
-   | **Filter by regions**      | Limit instance scanning to a subset of regions, separating values with commas. | `us-east-1,us-east-2`                    |
-   | **Filter by tags**         | To Limit instance scanning to a subset of tags, separated with commas.         | `Name:testname, env:test`                |
+   | **Filter by instance IDs** | Limit EC2 instance scanning to a subset of IDs or scan all EC2 instances except specified IDs. This setting does not affect scanning of other types of resources. | `i-0d1f840578ca82600\ni-07ae83fe5d22600a` |
+   | **Filter by regions**      | Limit scanning to a subset of regions or scan all resources except those in the region specified. | `eu-east-1\nus-east-2`                    |
+   | **Filter by tags**         | Limit resource scanning to a subset of tags or scan all resources except those with the specified tags. Enter tags using the format `key:value`. To allow or deny multiple values of the same tag key, separate them with commas: `key:value1, value2, value3`. | `Name:test\nenv:test\nEnvironment:stage,test,qa,edge`                |
 
-10. Specify if you want to scan containers or container images:
+10. Specify whether you want to scan containers and container images:
 
    ![Mondoo serverless AWS integration container options](/img/platform/infra/cloud/aws/containers.png)
 

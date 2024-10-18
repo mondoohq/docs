@@ -11,6 +11,17 @@
 \bhttps:\/\/github.com\/mondoohq\/.*\/pull\/\d*
 
 #
+# Overly formal style
+#
+
+# s.b. Whether
+\bIndicates whether\b
+\bIndicates if\b
+\bIndicates\b
+\bWhether or not\b
+\bDenotes if\b
+
+#
 # Terms to avoid
 #
 
@@ -204,7 +215,7 @@
 
 # s.b. SentinelOne
 \bSentinal[Oo]ne\b
-\bSentinelone\b
+\bSentin[ae]lone\b
 \bSentin[ae]l One\b
 
 # s.b. CrowdStrike
@@ -213,6 +224,15 @@
 
 # s.b. Zendesk
 \bZenDesk\b
+
+# s.b. ServiceNow
+\bService Now\b
+\bServicenow\b
+
+# disabled due to docs false positives
+# s.b. name server
+# \bnameserver\b
+# \bnameservers\b
 
 #
 # Kubernetes Terms

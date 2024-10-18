@@ -44,6 +44,7 @@ The `aws.ec2.instance` resource provides fields for assessing the configuration 
 | enaSupported          | bool                                                              | Whether enhanced networking with ENA is enabled                                             |
 | instanceType          | string                                                            | Instance type, such as t2.micro                                                             |
 | tags                  | map[string]string                                                 | Tags on the instance                                                                        |
+| iamInstanceProfile    | [aws.iam.instanceProfile](aws.iam.instanceprofile.md)             | Instance profile of the instance                                                            |
 | image                 | [aws.ec2.image](aws.ec2.image.md)                                 | Image that was used for the instance                                                        |
 | launchTime            | time                                                              | Launch time of the instance                                                                 |
 | privateIp             | string                                                            | Private IP address for the instance                                                         |

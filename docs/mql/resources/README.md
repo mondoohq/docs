@@ -29,7 +29,7 @@ The core pack is essential for queries and checks against many different systems
 Some of the resources in the operating system pack span different operating systems, while others are specific to a single operating system.
 
 [**Network resource pack:**](./network-pack)
-The network pack includes resources for querying assets like host names and checking certificate contents.
+The network pack includes resources for querying assets like hostnames and checking certificate contents.
 
 **IaC-specific resource packs:**
 These specialized packs let you examine infrastructure-as-code (IaC) files:

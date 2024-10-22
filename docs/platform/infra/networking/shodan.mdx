@@ -1,0 +1,42 @@
+---
+title: Secure a Domain or IP address with Shodan
+sidebar_label: Secure a Host with Shodan
+sidebar_position: 3
+description: Combine the capabilities of Mondoo and Shodan to secure domains and IP addresses
+---
+
+Mondoo can access [Shodan](https://help.shodan.io/the-basics/what-is-shodan) search results to ensure that your hosts don't have sensitive resources exposed on the internet. To do this, you need:
+
+- A [Shodan account](https://account.shodan.io/) with a payment method set up
+
+- Editor or Owner access to a Mondoo space
+
+To continuously monitor domains or IP addresses with Mondoo and Shodan:
+
+1. Access the Integrations > Add > Shodan page in one of two ways:
+
+   - New space setup: After creating a new Mondoo account or creating a new space, the initial setup guide welcomes you. Select **BROWSE INTEGRATIONS** and then under **Network Security**, select **Shodan**.
+
+     ![Welcome to Mondoo Page](/img/platform/start/welcome_to_mondoo.png)
+
+   - INTEGRATIONS page: In the side navigation bar, under **INTEGRATIONS**, select **Add New Integration**. Under **Network Security**, select **Shodan**.
+
+     ![Continuously scan domain or IP address with Mondoo and Shodan](/img/platform/infra/networking/add-shodan.png)
+
+2. In the **Choose an integration name** box, type a name that makes it clear that this is a Shodan integration and what it secures.
+
+3. In the **Provide your Shodan API key** box, paste your Shodan API key. To retrieve this key, go to your [Shodan Account Overview](https://account.shodan.io/). Next to **API Key** select **Show** and copy the text string key, such as `CjOqiWy14jemimahUpUXdJhnndYM9`.
+
+     ![Shodan API key for Mondoo](/img/platform/infra/networking/shodan-key.png)
+
+4. In the **Add domains or IP addresses** box, enter the domain name (such as lunalectric.com), IP address (such as 123.45.67.89), or IP address range (such as 210.57.57.128/28) of the host(s) to scan.
+
+5. To add more domains or IP addresses, select the plus (+) sign and enter another domain name, address, or address range. Repeat this step to add as many as you want.
+
+6. Select the **START SCANNING** button.
+
+7. On the Recommended Policies page, enable the policies on which you want to base scans of the host. To learn more, read [Manage Policies](/platform/security/posture/policies/).
+
+8. To complete the integration, select the **FINALIZE SETUP** button.
+
+---

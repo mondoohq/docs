@@ -172,8 +172,10 @@ JDAOZ
 jdata
 jdiaz
 jdp
+jemimah
 jglt
 Jhb
+Jhnnd
 jira
 Jivv
 joq
@@ -249,6 +251,7 @@ ocid
 OFafff
 openssh
 openssl
+Oqi
 orstatement
 osoverview
 PACKNAME
@@ -345,6 +348,7 @@ unversioned
 uppercasing
 Utk
 UWl
+UXd
 Vadym
 VALUEX
 VAULTNAME

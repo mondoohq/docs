@@ -51,7 +51,7 @@ Mondoo's Ansible role lets you:
 
 - Run continuous security assessments of the host
 
-Once configured, cnspec authenticates with Mondoo Platform every 60 minutes, running every policy enabled in the registry. It sends results from the scan to Mondoo Platform so you can see the generated scores and reports in the Mondoo Console.
+Once configured, cnspec authenticates with Mondoo Platform every 60 minutes, running every enabled policy. It sends results from the scan to Mondoo Platform so you can see the generated scores and reports in the Mondoo Console.
 
 ### Set up continuous configuration assessments with Mondoo and Ansible
 

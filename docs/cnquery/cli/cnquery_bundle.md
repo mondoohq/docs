@@ -26,4 +26,4 @@ Create, upload, and validate query packs
 - [cnquery](cnquery.md) - cnquery CLI
 - [cnquery bundle init](cnquery_bundle_init.md) - Create an example query pack
 - [cnquery bundle lint](cnquery_bundle_lint.md) - Apply style formatting to a query pack
-- [cnquery bundle publish](cnquery_bundle_publish.md) - Add a user-owned query pack to the Mondoo Security Registry
+- [cnquery bundle publish](cnquery_bundle_publish.md) - Add a user-owned query pack to Mondoo Platform

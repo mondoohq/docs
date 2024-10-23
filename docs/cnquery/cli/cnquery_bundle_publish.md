@@ -3,7 +3,7 @@ id: cnquery_bundle_publish
 title: cnquery bundle publish
 ---
 
-Add a user-owned query pack to the Mondoo Security Registry
+Add a user-owned query pack to Mondoo Platform
 
 ```
 cnquery bundle publish [path] [flags]

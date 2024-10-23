@@ -14,7 +14,7 @@ Mondoo's inventory lets you drill down into an asset's configuration to learn de
 
 ## Enable an inventory
 
-To view an inventory of a space, you must first enable the inventories you want to see for the space. For example, if you want to inventory your AWS infrastructure, you must enable the AWS inventory for the space you want to see. You manage inventories in the registry.
+To view an inventory of a space, you must first enable the inventories you want to see for the space. For example, if you want to inventory your AWS infrastructure, you must enable the AWS inventory for the space you want to see. All inventories are in _query packs_, collections of Mondoo queries.
 
 import Partial from "../partials/_editor-owner.mdx";
 
@@ -22,37 +22,43 @@ import Partial from "../partials/_editor-owner.mdx";
 
 1. In the [Mondoo Console](https://console.mondoo.com), use the top navigation bar to choose the space you want to inventory.
 
-2. In the left navigation menu, select **Registry**.
+2. In the left navigation menu, under **Inventory**, select **Query Packs**.
 
-3. Under **REGISTRY**, select **Query Packs**.
+   The Query Packs page shows all the enabled query packs for the space, including all enabled inventories.
 
-4. In the **Filter** search box, type `inventory`.
+   ![Query packs in Mondoo](/img/platform/intel/query-packs-enable.png)
 
-   The registry shows only inventories. The toggles for enabled inventories are purple. The toggles for disabled inventories are white and gray.
+3. In the top-right corner of the page, select the plus symbol (+).
 
-   ![Registry showing inventories](/img/platform/intel/inventory-policyhub.png)
+   The Enable Query Packs page shows all available query packs, including those already enabled for the space and those not enabled for the space.
 
-5. Select the toggle beside an inventory to enable it.
+   ![Add query packs in Mondoo](/img/platform/intel/query-packs-add.png)
+
+4. To enable an inventory query pack, select the **ADD TO SPACE** button to the right of it.
 
 Mondoo inventories the applicable assets registered to the space.
 
+:::tip
+
+To disable a query pack for a space, select **ADDED** next to the query pack.
+
+:::
+
 ## View asset inventory details in the Inventory view
 
-1. In the [Mondoo Console](https://console.mondoo.com), use the [top navigation bar](/platform/start/navigate) to choose the [organization and space](/platform/start/organize/overview/) you want to view.
-
-   The Inventory view displays by default when you access a different organization or space. If you're currently in a different view, use the [left navigation bar](/platform/start/navigate): Select **Inventory**.
+1. In the [Mondoo Console](https://console.mondoo.com), use the [top navigation bar](/platform/start/navigate) to choose the [organization](/platform/start/organize/overview/) you want to view. Then, in the left navigation, select **Spaces**.
 
    ![Inventory view in the Mondoo Console](/img/platform/security/monitor-org.png)
 
-2. To drill down into a space, select the box representing the space.
+2. To drill down into a space, select the box representing the space. Then, in the left navigation under **Inventory**, select **Assets**.
 
-   Mondoo organizes your space by integration type, showing summary scores for each integration. You can select an integration type box to see only that type of asset, or you can select the **INVENTORY** box to access and search all assets in the space.
+   Mondoo organizes your space by integration type, showing summary scores for each integration. You can select an integration type box to see only that type of asset.
 
    ![Space view in the Mondoo Console](/img/platform/security/monitor-space.png)
 
-3. Select the asset type (such as AWS or GCP) to filter the list of assets to only the type(s) for which you've enabled inventory.
+3. Type a keyword (such as AWS or GCP) to filter the list of assets.
 
-4. Select the asset.
+4. Select the asset you want to examine.
 
 5. To see the results of all the enabled queries on the asset, select the **Data Queries** tab.
 

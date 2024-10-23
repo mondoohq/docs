@@ -31,9 +31,14 @@ Mondoo Platform has a growing list of policies for static analysis of Terraform 
 Start by enabling any Terraform policies in Mondoo Platform you want to run against your Terraform code:
 
 1. Log in to [https://console.mondoo.com](https://console.mondoo.com).
-2. Navigate to **Registry**.
-3. In the **Filter policies...** box, search for "Terraform".
-4. Check the box next to any policies you want to enable, and select the **ENABLE** button.
+
+2. In the left navigation, under **Security**, select **Policies**.
+
+3. In the top-right corner, select the plus icon (+).
+
+4. In the **Filter policies...** box, search for "Terraform".
+
+5. To the right of the policy you want to enable, select the **ADD TO SPACE** button.
 
 ### Scan Terraform code with cnspec
 

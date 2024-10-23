@@ -8,9 +8,7 @@ image: /img/featured_img/mondoo-feature.jpg
 
 Mondoo comes stocked with a constantly growing collection of policies, which are codified benchmarks used to assess your infrastructure. Policies control what misconfigurations and security issues Mondoo checks for when it evaluates your digital business assets. Mondoo's built-in policies are production ready, simple to deploy and customize in any environment, and actionable.
 
-Mondoo continuously assesses your systems according to the policies _you enable_. The **registry** is where you control which policies Mondoo uses to assess your infrastructure.
-
-In Mondoo, you manage policies separately for each space in your organization. When you create a new space, it contains a default set of policies. Each space in your account can have a unique set of policies, which you manage in the registry for that space.
+Mondoo continuously assesses your systems according to the policies _you enable_. In Mondoo, you enable and disable policies separately for each space in your organization. When you create a new space, it contains a default set of policies.
 
 Managing policies involves:
 
@@ -24,41 +22,19 @@ Any policies you enable, disable, preview in a space's registry affect only that
 
 To learn more about Mondoo policies, read [Policy as Code](/platform/security/posture/pac/).
 
-## Access the registry for a space
+## Manage policies for a space
 
 1. In the [Mondoo Console](https://console.mondoo.com), [navigate](/platform/start/navigate) to the space.
 
-2. In the side navigation bar, select **Registry**.
+2. In the side navigation bar, under **Security**, select **Policies**.
 
-   ![Mondoo - navigate to the security registry for a space](/img/platform/security/registry-nav.png)
+   ![Mondoo - navigate to the security policies for a space](/img/platform/security/policies.png)
+
+The Policies page shows all the policies enabled for the space.
 
 :::tip
 
 You can also see enabled policies from the cnspec command line. To learn more, read [cnspec policy list](/cnspec/cli/cnspec_policy_list/).
-
-:::
-
-## Enable policies
-
-Enable a policy to use that policy as a basis for evaluating assets in the space.
-
-import Partial from "../../partials/_editor-owner.mdx";
-
-<Partial />{" "}
-
-1. Access the registry for the space as instructed above.
-
-2. Locate the policy you want to enable by scrolling through the list of available policies or using the **Filter** search box.
-
-3. To enable a policy, select the enable icon (a bar chart) on that policy's row.
-
-   ![Mondoo - enable the policy for a space](/img/platform/security/enable-a-policy.png)
-
-Changes take effect immediately. The next time Mondoo scans applicable assets in the space, it includes this policy.
-
-:::tip
-
-You can also enable a policy from the cnspec command line. To learn more, read [cnspec policy enable](/cnspec/cli/cnspec_policy_enable/).
 
 :::
 
@@ -74,11 +50,13 @@ Disabling a policy deletes any existing reports from that policy in the space.
 
 :::
 
-1. Access the registry for the space as instructed above.
+1. Access the Policies page for the space as instructed above.
 
-2. Locate the policy you want to enable by scrolling through the list of available policies or using the **Filter** search box.
+2. Locate the policy you want to disable by scrolling through the list of available policies or using the **Filter** search box.
 
-3. To disable the policy, select the disable icon (a moon with Zs) on that policy's row.
+   ![Mondoo - find a policy in a space](/img/platform/security/policies-search.png)
+
+3. Check the box next to the policy (or policies) you want to delete and then select the **DELETE POLICY** button.
 
    ![Mondoo - disable a policy for a space](/img/platform/security/disable-a-policy.png)
 
@@ -90,7 +68,7 @@ You can also disable a policy from the cnspec command line. To learn more, read 
 
 :::
 
-## Preview policies
+## Change policies from enabled to preview
 
 Preview a policy to use the policy as a basis for evaluating assets in the space but **not score** the policy. When Mondoo calculates an asset's overall score, it doesn't factor in how the asset performs in the scan based on this policy. When Mondoo calculates a space's or an organization's overall score, it doesn't factor in how any assets perform in a scan based on this policy.
 
@@ -98,13 +76,52 @@ Preview a policy to use the policy as a basis for evaluating assets in the space
 
 1. Access the registry for the space as instructed above.
 
-2. Locate the policy you want to enable by scrolling through the list of available policies or using the **Filter** search box.
+2. Locate the policy you want to preview by scrolling through the list of available policies or using the **Filter** search box.
 
-3. To preview the policy, select the preview icon (a light bulb) on that policy's row.
+   ![Mondoo - find a policy in a space](/img/platform/security/policies-search.png)
 
-   ![Mondoo - preview a policy for a space](/img/platform/security/preview-a-policy.png)
+3. Check the box next to the policy (or policies) you want to delete and then select the **PREVIEW POLICY** button.
+
+   ![Mondoo - preview a policy for a space](/img/platform/security/disable-a-policy.png)
 
 Changes take effect immediately. The next time Mondoo scans applicable assets in the space, it includes this policy's results but not its scores.
+
+## Enable or preview new policies in a space
+
+Enable a policy to use that policy as a basis for evaluating assets in the space.
+
+import Partial from "../../partials/_editor-owner.mdx";
+
+<Partial />{" "}
+
+1. Access the Policies page for the space as instructed above.
+
+   ![Mondoo - add security policies for a space](/img/platform/security/policies.png)
+
+2. In the top-right corner of the Policies page, select the plus symbol (+).
+
+   ![Mondoo - enable policies for a space](/img/platform/security/policies-enable.png)
+
+3. Locate the policy you want to enable by scrolling through the list of available policies or using the **Filter** search box.
+
+   ![Mondoo - navigate to the security policies for a space](/img/platform/security/policies-enable-search.png)
+
+3. Enable or preview the policy:
+
+   - To enable a policy, select the **ADD TO SPACE** button to the right of the policy.
+
+   - To use the policy as a basis for evaluating assets in the space but **not score** the policy, select the three horizontal dots to the right of the policy and then select **PREVIEW**.
+
+   ![Mondoo - enable the policy for a space](/img/platform/security/add-preview.png)
+
+Changes take effect immediately. The next time Mondoo scans applicable assets in the space, it includes this policy.
+
+:::tip
+
+You can also enable a policy from the cnspec command line. To learn more, read [cnspec policy enable](/cnspec/cli/cnspec_policy_enable/).
+
+:::
+
 
 #### See also
 

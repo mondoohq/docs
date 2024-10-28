@@ -32,6 +32,7 @@ Use the `aws.iam` resource to assess the configuration of the AWS IAM service. T
 | accountSummary        | map[string]int                                                                      | IAM account summary                                     |
 | virtualMfaDevices     | &#91;&#93;[aws.iam.virtualmfadevice](aws.iam.virtualmfadevice.md)                   | List of virtual mfs devices associated with the account |
 | serverCertificates    | &#91;&#93;dict                                                                      | List of server certificates stored in IAM               |
+| instanceProfiles      | &#91;&#93;[aws.iam.instanceProfile](aws.iam.instanceprofile.md)                     |                                                         |
 
 **Examples**
 

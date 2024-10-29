@@ -6,7 +6,7 @@ description: Mondoo cases, which you can directly integrate with Azure DevOps, a
 image: /img/featured_img/mondoo-feature.jpg
 ---
 
-Set up cases in a space to allow users in the space to keep track of security tasks and add Azure DevOps issues directly from within the Mondoo Console. Cases setup involves configuring Mondoo to integrate with Azure DevOps.
+Set up cases in a space to allow users in the space to keep track of security tasks and add Azure DevOps issues directly from within the Mondoo Console. Cases setup involves configuring Mondoo to integrate with Azure DevOps. Mondoo uses an app registration to communicate with Azure DevOps.
 
 For an overview of cases, read [Track and Fix Findings with Cases and Your Ticket System](/platform/cases/overview/).
 
@@ -14,11 +14,79 @@ For an overview of cases, read [Track and Fix Findings with Cases and Your Ticke
 
 - Owner or Editor access to the Mondoo space
 
-- An Azure account with access to Azure DevOps and Microsoft Entra ID
+- Owner access to your Azure DevOps organization
 
-- An Azure service principal and client secret
+- Permission to create a service principal in Microsoft Entra ID (global administrator, application administrator or cloud application administrator)
 
-  To learn how to create an Azure service principal and client secret, read [Securing service principals in Microsoft Entra ID](https://learn.microsoft.com/en-us/entra/architecture/service-accounts-principal) in the Microsoft Entra ID documentation.
+## Register and grant permissions to an Azure app
+
+Like any service that integrates with Azure, Mondoo must have Microsoft Entra ID app registration, a service principal in your Azure tenant. To learn about service principals, read [Securing service principals in Microsoft Entra ID](https://learn.microsoft.com/en-us/entra/architecture/service-accounts-principal) in the Microsoft Azure documentation.
+
+1. Log into the Azure portal as a global administrator, application administrator or cloud application administrator.
+
+2. Find and select **Microsoft Entra ID**.
+
+3. In the navigation sidebar, select **App registrations**.
+
+   ![App registrations in Azure](/img/platform/cases/app-reg.png)
+
+4. In the toolbar, select **New registrations**.
+
+   ![New app registration in Azure](/img/platform/cases/new-app-reg.png)
+
+5. In the **Name** box, type a name that lets you recognize that this is a service principal for the Mondoo-DevOps integration.
+
+6. Leave all other fields as the defaults and select the **Register** button.
+
+   ![New app registration in Azure](/img/platform/cases/created-app-reg.png)
+
+   Azure creates the app registration and displays its details.
+
+7. Under **Client Credentials**, select **Add a certificate or secret**.
+
+   ![New app registration secret in Azure](/img/platform/cases/add-cert.png)
+
+8. Select **New client secret**.
+
+   ![New secret in Azure](/img/platform/cases/add-secret.png)
+
+9. Give the client secret a name and select its expiration date. Make note of the expiration date in your records; when the client secret expires, the Mondoo-Azure Devops integration will stop working until you create a new secret.
+
+10. Select the **Add** button.
+
+   ![New secret in Azure](/img/platform/cases/created-secret.png)
+
+Don't close the Entra browser tab. You need this information for later steps.
+
+## Grant the app registration access to your Azure DevOps organization
+
+When you create the app registration as instructed above, Entra saves it as a service principal. Like a user, you can grant a service principal different levels of access to perform tasks in Azure. The app registration you create needs permission to contribute to your Azure DevOps project.
+
+1. In a new tab or window in your browser, access your Azure DevOps organization.
+
+   ![Azure DevOps organization](/img/platform/cases/devops-org.png)
+
+2. At the bottom of the navigation sidebar, select **Organization settings**.
+
+   ![Azure DevOps organization settings](/img/platform/cases/devops-org.png)
+
+3. In the navigation sidebar, select **Users**.
+
+4. Select the **Add users** button.
+
+   ![Add users in Azure DevOps organization settings](/img/platform/cases/add-user.png)
+
+5. In the **Users or Service Principals** box, type and choose the name of the app registration you created for Mondoo.
+
+6. Define this access for the Mondoo app registration service principal:
+
+   - **Access level**: Basic
+   - **Add to projects**: The project to which you want Mondoo to add issues
+   - **Azure DevOps Groups**: Project Contributors
+
+7. Select the *Add** button to give the Mondoo app registration service principal the access it needs.
+
+   Don't close the browser tab containing the Azure DevOps organization settings. You need this information for later steps.
 
 ## Add an Azure DevOps integration
 
@@ -40,13 +108,21 @@ For an overview of cases, read [Track and Fix Findings with Cases and Your Ticke
 
    ![Find your Azure DevOps organization URL](/img/platform/cases/orgurl.png)
 
-6. In the **Enter the directory ID** box, enter your Microsoft Entra tenant ID. To find this ID in Azure DevOps, open the **Organization Settings** and, in the left navigation, select **Microsoft Entra**.
+6. In the **Enter the directory ID** box, enter your Microsoft Entra tenant ID. To find this ID in Azure DevOps, access the **Organization Settings** and, in the navigation sidebar, select **Microsoft Entra**.
 
    ![Find your Azure DevOps tenant ID](/img/platform/cases/tenant-id.png)
 
-7. In the **Provide the service principal ID** box, paste the client ID of your service principal. To learn how to create an Azure service principal and get its client ID, read [Securing service principals in Microsoft Entra ID](https://learn.microsoft.com/en-us/entra/architecture/service-accounts-principal) in the Microsoft Entra ID documentation.
+7. In the **Provide the service principal ID** box, paste the client ID of the app registration service principal you created in the steps above.
 
-8. In the **Provide the client secret** box, paste the client secret of your service principal. To learn how to create an Azure service principal and get its client secret, read [Securing service principals in Microsoft Entra ID](https://learn.microsoft.com/en-us/entra/architecture/service-accounts-principal) in the Microsoft Entra ID documentation.
+   Find this in the **Application (client) ID** field in the app registration essentials.
+
+   ![New app registration in Azure](/img/platform/cases/created-app-reg.png)
+
+8. In the **Provide the client secret** box, paste the client secret you created for your app registration service principal.
+
+   Find this by selecting the **0 certificate, 1 secret** link beside **Client credentials**. On the **Certificates & secrets** page, select the copy icon beside the **Secret ID**.
+
+   ![New secret in Azure](/img/platform/cases/created-secret.png)
 
 9. Select the **CREATE INTEGRATION** button.
 

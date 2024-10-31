@@ -27,8 +27,8 @@ notes:
 	@echo "Generating new release note file\n\n"
 	@read -p 'What version should I use? ' VERSION; \
 	read -p 'What date will this release ship (ex: 2024-11-05)? ' DATE; \
-	cp ./releases/_release_template_file.md ./releases/$${DATE}-mondoo-$${VERSION}-is-out.md; \
-	mkdir -p ./static/img/releases/$${DATE}-mondoo-$${VERSION}-is-out; \
+	cp ./releases/_release_template_file.md "./releases/$${DATE}-mondoo-$${VERSION}-is-out.md"; \
+	mkdir -p "./static/img/releases/$${DATE}-mondoo-$${VERSION}-is-out"; \
 	sed -i '' "s/VERSION/$${VERSION}/g" "./releases/$${DATE}-mondoo-$${VERSION}-is-out.md"
 
 ###

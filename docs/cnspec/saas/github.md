@@ -55,7 +55,7 @@ Mondoo also supports the using [custom GitHub application credentials](https://d
 
 An `APP ID`, `private key`, and `installation id` are required to authenticate the scans.
 
-#### Create the Github Application
+#### Create the GitHub Application
 
 Navigate to `Developer Settings` > `GitHub App` > `New GitHub App`. We recommend the following permissions:
 
@@ -65,7 +65,7 @@ Navigate to `Developer Settings` > `GitHub App` > `New GitHub App`. We recommend
 - admin:org_hook
 - read:project
 
-#### Retrieve the Github App ID
+#### Retrieve the GitHub App ID
 
 After creating the GitHub App, [application settings](https://github.com/settings/apps/) to retrieve:
 
@@ -76,7 +76,7 @@ After creating the GitHub App, [application settings](https://github.com/setting
 
 To retrieve the `Application Installation ID`, a JSON Web Token (JWT) is required via the REST API. Follow these steps to [create a JWT Token](https://docs.github.com/en/apps/creating-github-apps/authenticating-with-a-github-app/generating-a-json-web-token-jwt-for-a-github-app#generating-a-json-web-token-jwt).
 
-- Once the JWT is create, pass it within the `Authorization` header of the API Request shown [here](https://docs.github.com/en/apps/creating-github-apps/authenticating-with-a-github-app/generating-a-json-web-token-jwt-for-a-github-app#about-json-web-tokens-jwts). The `Installion ID` is located in the `access_tokens_url` field of the API response, formatted like: `"access_tokens_url": "https://api.github.com/app/installations/000000/access_tokens"`, where `000000` is the `Installation ID`.
+- Once the JWT is create, pass it within the `Authorization` header of the API Request shown [here](https://docs.github.com/en/apps/creating-github-apps/authenticating-with-a-github-app/generating-a-json-web-token-jwt-for-a-github-app#about-json-web-tokens-jwts). The `installion ID` is located in the `access_tokens_url` field of the API response, formatted like: `"access_tokens_url": "https://api.github.com/app/installations/000000/access_tokens"`, where `000000` is the `Installation ID`.
 
 #### Scan and Authenticate Using GitHub App
 

@@ -53,8 +53,35 @@ $Env:GITHUB_TOKEN = "<personal-access-token>"
 
 Mondoo also supports the using [custom GitHub application credentials](https://docs.github.com/en/apps/creating-github-apps). Create an application and then use the app ID and the private key to authenticate scans:
 
+An `APP ID`, `private key`, and `installation id` are required to authenticate the scans.
+
+#### Create the Github Application
+
+Navigate to `Developer Settings` > `GitHub App` > `New GitHub App`. We recommend the following permissions:
+
+- public_repo
+- read:org
+- read:repo_hook
+- admin:org_hook
+- read:project
+
+#### Retrieve the Github App ID
+
+After creating the GitHub App, [application settings](https://github.com/settings/apps/) to retrieve:
+
+- `App ID` located in the About Section
+- `Private Key` located under `Private Keys` (Please generate a new key if one does not exists or you do not have access to the existing one).
+
+#### Get Application Installation ID
+
+To retrieve the `Application Installation ID`, a JSON Web Token (JWT) is required via the REST API. Follow these steps to [create a JWT Token](https://docs.github.com/en/apps/creating-github-apps/authenticating-with-a-github-app/generating-a-json-web-token-jwt-for-a-github-app#generating-a-json-web-token-jwt).
+
+- Once the JWT is create, pass it within the `Authorization` header of the API Request shown [here](https://docs.github.com/en/apps/creating-github-apps/authenticating-with-a-github-app/generating-a-json-web-token-jwt-for-a-github-app#about-json-web-tokens-jwts). The `Installion` ID is located in the `access_tokens_url` field of the API response, formatted like: `"access_tokens_url": "https://api.github.com/app/installations/000000/access_tokens"`, where `000000` is the `Installation ID`.
+
+#### Scan and Authenticate Using GitHub App
+
 ```bash
-cnquery scan github org <ORG> --app-id <YOUR-APP-ID> --app-installation-id <YOUR-INSTALL-ID> --app-private-key <PATH-TO-PEM-FILE>
+cnquery scan github org <GITHUB-ORG> --app-id <GITHUB-APP-APP-ID> --app-installation-id <GITHUB-APP-INSTALLATION-ID> --app-private-key <PATH-TO-PEM-FILE>
 ```
 
 ## Scan a GitHub organization

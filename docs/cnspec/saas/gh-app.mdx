@@ -15,7 +15,7 @@ To [scan GitHub organizations and repos](/cnspec/saas/github/), cnspec needs to 
 
 For cnspec to authenticate with GitHub using [custom GitHub application credentials](https://docs.github.com/en/apps/creating-github-apps), create a GitHub application and give cnspec the app ID, private key, and installation ID.
 
-## Create a GitHub application
+## Create a GitHub application and get the authentication information cnspec needs
 
 1. In the top-right corner of any page on GitHub, select your profile icon.
 
@@ -25,13 +25,13 @@ For cnspec to authenticate with GitHub using [custom GitHub application credenti
 
    - To create an app owned by an organization, select **Your organizations** and, to the right of the organization you want, select **Settings**.
 
-3. In the navigation sidebar, select **Developer settings**.
+3. In the left sidebar, select **Developer settings**.
 
-4. In the navigation sidebar, select GitHub Apps.
+4. In the left sidebar, select GitHub Apps.
 
 5. Select the **New GitHub App** button.
 
-   ![Add a new GitHub app](/img/cnspec/github/name-new-app.png)
+    ![Add a new GitHub app](/img/cnspec/github/name-new-app.png)
 
 6. In the **GitHub App name** box, type a name for your app that helps you easily recognize that it's for Mondoo. The name must be unique across GitHub.
 
@@ -43,21 +43,21 @@ For cnspec to authenticate with GitHub using [custom GitHub application credenti
 
 10. Under **Webhooks**, uncheck the **Active** box.
 
-   ![Webhooks](/img/cnspec/github/webhook.png)
+    ![Webhooks](/img/cnspec/github/webhook.png)
 
 11. Under **Permissions**, assign **read-only** permission to all repository and organization data.
 
-   ![Permissions](/img/cnspec/github/perms.png)
+    ![Permissions](/img/cnspec/github/perms.png)
 
 12. Under **Where can this GitHub App be installed?**, select **Only on this account**.
 
-   ![Add a new GitHub app](/img/cnspec/github/create-gh-app.png)
+    ![Add a new GitHub app](/img/cnspec/github/create-gh-app.png)
 
 12. Select the **Create GitHub App** button.
 
-   GitHub creates the app and displays its properties.
+    GitHub creates the app and displays its properties.
 
-   ![Created GitHub app](/img/cnspec/github/created-app.png)
+    ![Created GitHub app](/img/cnspec/github/created-app.png)
 
 13. In the **About** section, copy the **App ID** value and save it somewhere that you can access later. You need it when you scan.
 
@@ -65,7 +65,7 @@ For cnspec to authenticate with GitHub using [custom GitHub application credenti
 
     GitHub creates a new private key and downloads it to your workstation in a PEM certificate file. Note the path to the PEM file; you need it when you scan.
 
-15. In the left navigation, select **Install App**.
+15. In the left sidebar, select **Install App**.
 
 16. Install your custom app to any repo so that you can see its installation ID.
 

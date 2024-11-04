@@ -7,7 +7,7 @@ description: Give cnspec access to GitHub using a custom application.
 image: /img/featured_img/mondoo-feature.jpg
 ---
 
-To [scan GitHub organizations and repos](/cnspec/saas/github/), cnspec needs access. There are two ways to do this:
+To [scan GitHub organizations and repos](/cnspec/saas/github/), cnspec needs to authenticate with GitHub. There are two ways to do this:
 
 - Option 1: Give cnspec access using a personal access token and an environment variable. This approach is easier to set up but results in slower scans for large GitHub organizations. To learn how to give cnspec access using a personal access token, read [Give cnspec access using a personal access token and an environment variable](/cnspec/saas/github/).
 
@@ -63,17 +63,17 @@ For cnspec to authenticate with GitHub using [custom GitHub application credenti
 
 14. Scroll down to the **Private keys** section and select the **Generate a private key** button.
 
-   GitHub creates a new private key and downloads it to your workstation in a PEM certificate file. Note the path to the PEM file; you need it when you scan.
+    GitHub creates a new private key and downloads it to your workstation in a PEM certificate file. Note the path to the PEM file; you need it when you scan.
 
 15. In the left navigation, select **Install App**.
 
 16. Install your custom app to any repo so that you can see its installation ID.
 
-   GitHub installs the app and displays a confirmation.
+    GitHub installs the app and displays a confirmation.
 
-   ![Install a new GitHub app](/img/cnspec/github/install-success.png)
+    ![Install a new GitHub app](/img/cnspec/github/install-success.png)
 
-   In your browser's address bar, find the installation ID in the URL, after `/installations/`. For example, the pictured app's installation ID is `56758584`. Copy this value and save it somewhere that you can access later. You need it when you scan.
+    In your browser's address bar, find the installation ID in the URL, after `/installations/`. For example, the pictured app's installation ID is `56758584`. Copy this value and save it somewhere that you can access later. You need it when you scan.
 
 ## Scan using your custom app credentials
 

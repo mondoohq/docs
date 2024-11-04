@@ -1,7 +1,7 @@
 ---
 title: Assess the configuration of GitLab organizations and repositories with cnspec
 sidebar_label: GitLab
-sidebar_position: 3
+sidebar_position: 10
 displayed_sidebar: cnspec
 description: Secure and enforce policy for GitLab
 image: /img/featured_img/mondoo-feature.jpg

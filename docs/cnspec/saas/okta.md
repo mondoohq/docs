@@ -1,7 +1,7 @@
 ---
 title: Assess Okta Security with cnspec
 sidebar_label: Okta
-sidebar_position: 5
+sidebar_position: 40
 displayed_sidebar: cnspec
 description: Secure and enforce policy for Okta
 image: /img/featured_img/mondoo-feature.jpg

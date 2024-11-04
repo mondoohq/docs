@@ -1,5 +1,5 @@
 ---
-title: Assess the configuration of GitHub organizations and repositories with cnspec
+title: Assess the Configuration of GitHub Organizations and Repositories with cnspec
 sidebar_label: GitHub
 sidebar_position: 2
 displayed_sidebar: cnspec
@@ -17,11 +17,19 @@ Open source projects that don't adhere to GitHub's recommended security best pra
 
 :::
 
-## Give cnspec access using the GitHub API
+## Give cnspec access to your GitHub organization
 
-To scan GitHub organizations and repos, cnspec needs access. You give cnspec the access it needs through the GitHub API. First, you create GitHub personal access token. Then you share that token with cnspec using an environment variable.
+To scan GitHub organizations and repos, cnspec needs access. There are two ways to do this:
 
-### Option 1: Create a GitHub personal access token
+- Option 1: Give cnspec access using a personal access token and an environment variable. This approach is easier to set up but isn't recommended for very large GitHub organizations. To learn how to give cnspec access using a personal access token, continue reading below.
+
+- Option 2: Give cnspec access using custom GitHub application credentials. This approach takes longer to set up, but scales for very large GitHub organizations. To learn how to give cnspec access using custom app credentials, read [Give cnspec Access to GitHub Using Custom GitHub App Credentials](/cnspec/saas/gh-app/).
+
+### Give cnspec access using a personal access token and an environment variable
+
+With this approach, you give cnspec the access it needs through the GitHub API. First, you create GitHub personal access token. Then you share that token with cnspec using an environment variable.
+
+#### Create a GitHub personal access token
 
 cnspec needs a personal access token to scan a GitHub organization, public repo, or private repo. The token's level of access determines how much information cnspec can retrieve.
 
@@ -35,26 +43,18 @@ To learn how to create a personal access token, read [Managing your personal acc
 
 #### Configure a GITHUB_TOKEN environment variable
 
-You supply your personal access token to cnspec using the `GITHUB_TOKEN` environment variable.
+You supply your personal access token to cnspec by setting the `GITHUB_TOKEN` environment variable.
 
-#### Linux / macOS
+**On Linux / macOS:**
 
 ```bash
 export GITHUB_TOKEN=<your personal access token>
 ```
 
-#### Windows
+**On Windows, using PowerShell:**
 
 ```powershell
-$Env:GITHUB_TOKEN = "<personal-access-token>"
-```
-
-### Option 2: Use custom GitHub application credentials
-
-Mondoo also supports the using [custom GitHub application credentials](https://docs.github.com/en/apps/creating-github-apps). Create an application and then use the app ID and the private key to authenticate scans:
-
-```bash
-cnquery scan github org <ORG> --app-id <YOUR-APP-ID> --app-installation-id <YOUR-INSTALL-ID> --app-private-key <PATH-TO-PEM-FILE>
+$Env:GITHUB_TOKEN = "<your personal access token>"
 ```
 
 ## Scan a GitHub organization
@@ -62,7 +62,7 @@ cnquery scan github org <ORG> --app-id <YOUR-APP-ID> --app-installation-id <YOUR
 To scan the configuration of your GitHub organization and all repos within it, run this command:
 
 ```bash
-cnspec scan github org <ORG_NAME>
+cnspec scan github org <YOUR-GITHUB-ORG>
 ```
 
 :::caution

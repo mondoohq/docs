@@ -23,7 +23,7 @@ To scan GitHub organizations and repos, cnspec needs access. There are two ways 
 
 - Option 1: Give cnspec access using a personal access token and an environment variable. This approach is easier to set up but isn't recommended for very large GitHub organizations. To learn how to give cnspec access using a personal access token, continue reading below.
 
-- Option 2: Give cnspec access using custom GitHub application credentials. This approach takes longer to set up, but scales for very large GitHub organizations. To learn how to give cnspec access using custom app credentials, read [Give cnspec Access to GitHub Using Custom GitHub App Credentials](/cnspec/saas/gh-app/).
+- Option 2: Give cnspec access using custom GitHub application credentials. This approach takes longer to set up, but scales for very large GitHub organizations (with API rate limits as much as 3x higher than personal access tokens). To learn how to give cnspec access using custom app credentials, read [Give cnspec Access to GitHub Using Custom GitHub App Credentials](/cnspec/saas/gh-app/).
 
 ### Give cnspec access using a personal access token and an environment variable
 

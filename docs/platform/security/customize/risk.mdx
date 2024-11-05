@@ -1,0 +1,71 @@
+---
+title: Customize How Risk Factors Affect Asset Scores
+sidebar_label: Customize Risk Factors
+sidebar_position: 10
+description: Mondoo considers multiple contextual risk factors when evaluating the security of your assets. To customize per your business's security priorities, you can choose which contextual risk factors affect your assets' scores.
+image: /img/featured_img/mondoo-feature.jpg
+---
+
+Mondoo considers multiple [contextual risk factors](https://mondoo.com/docs/platform/security/posture/findings/#factor-contextual-risk) when evaluating the security of your assets. To customize per your business's security priorities, you can choose which contextual risk factors affect your assets' scores.
+
+For a finer degree of control over the impact that risk factors have on asset scores, you can choose not only _whether_ a risk factor affects scores, but _how much_ a risk factor affects scores.
+
+The settings you choose to customize risk factors apply to all assets in the space. If you have multiple spaces, any risk customization you make in one space doesn't affect other spaces.
+
+import Partial from "../../partials/_editor-owner.mdx";
+
+<Partial />{" "}
+
+## Choose which risk factors affect security scores
+
+1. In the [Mondoo Console](https://console.mondoo.com), [navigate](/platform/start/navigate) to the space you want to customize.
+
+2. In the side navigation bar, select **Settings**.
+
+3. Select the **Security Model** tab.
+
+   ![Customize how risk factors affect asset scores in Mondoo](/img/platform/security/custom-risk.png)
+
+4. In the list of risk factors, enable or disable the toggle beside a risk factor:
+
+   - An enabled toggle (purple, with the switch to the right) indicate that the risk factor does affect the security scores of assets in the space.
+
+   - A disabled toggle, (white, with the switch to the left) indicate that the risk factor does not affect the security scores of assets in the space.
+
+   Changes take place immediately.
+
+## Choose how much the different risk factors affect security scores
+
+You can change the weight of impact that a risk factor has on asset security scores.
+
+1. In the [Mondoo Console](https://console.mondoo.com), [navigate](/platform/start/navigate) to the space you want to customize.
+
+2. In the side navigation bar, select **Settings**.
+
+3. Select the **Security Model** tab.
+
+4. Select the **SHOW ADVANCED SETTINGS** button.
+
+   ![Customize how much risk factors affect asset scores in Mondoo](/img/platform/security/custom-risk-advanced.png)
+
+5. For each risk factor:
+
+    - Raise or lower the percentage to control how the risk factor raises or lowers security scores.
+
+       A positive percentage means higher risk. When Mondoo detects the risk factor for an asset, it raises the asset's score (toward high/critical). The higher the positive percentage, the more Mondoo weights the risk factor's presence as a security concern.
+
+       A negative percentage means lower risk. When Mondoo detects the risk factor for an asset, it lowers the asset's score (toward medium/low). The lower the negative percentage, the more Mondoo weights the risk factor's presence as a security aid.
+
+    - Enable or disable the toggle to the left of the risk factor to turn it on or off, as described in the section above.
+
+    :::tip
+
+    To return all settings to the Mondoo defaults, select the **RESET TO DEFAULTS** button.
+
+    :::
+
+6. To save the new settings, select the **SAVE CHANGES** button.
+
+7. To return to the regular Risk Configuration settings without the percentages, select the **HIDE ADVANCED SETTINGS** button.
+
+---

@@ -67,6 +67,6 @@ You can see the vulnerability report as part of the CI/CD job.
 
 Also, it is easy to see the result in your Mondoo Console:
 
-![See report in Mondoo Console](/img/platform/infra/aws/mondoo-cicd-awscodebuild-result-spaces.png)
+![See report in Mondoo Console](/img/platform/infra/aws/mondoo-cicd-awscodebuild-result-dashboard.png)
 
 Note: We prefer to store the agent credentials as secrets. By default, AWS CodeBuild supports retrieving values for environment variables via plaintext and AWS Parameter Store. It also allows the use of AWS Secrets Manager to pass secrets via [AWS Parameter Store into the pipeline](https://docs.aws.amazon.com/systems-manager/latest/userguide/integration-ps-secretsmanager.html). Please be aware that AWS Secrets Manager comes with an additional cost per secret.

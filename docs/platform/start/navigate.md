@@ -36,7 +36,7 @@ If you have privately hosted Enterprise account, you do not select a region.
 
 In this example, if you select the Lunalectric organization and then select Spaces in the side navigation bar, you see all spaces in the Lunalectric organization.
 
-![Mondoo Console spaces](/img/platform/security/monitor-org.png)
+![Mondoo Console spaces](/img/platform/security/spaces.png)
 
 From there you can select any space to access and manage its details. For example, select the Online Store box to view the Online Store space.
 

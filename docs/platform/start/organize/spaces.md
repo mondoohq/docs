@@ -6,7 +6,7 @@ description: This page provides detailed information about spaces in Mondoo Plat
 image: /img/featured_img/mondoo-feature.jpg
 ---
 
-![Spaces](/img/platform/security/monitor-org.png)
+![Spaces](/img/platform/security/spaces.png)
 
 A space is a collection of assets, policies, and reports that you manage together within Mondoo Platform.
 

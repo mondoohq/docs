@@ -18,13 +18,17 @@ Every Mondoo account has at least one organization.
 
 2. Select the **+ ADD ORGANIZATION** box.
 
-3. Enter a name for the organization. The name must be between 4 and 29 characters long and can include letters, numbers, single quotes, hyphens, spaces, and exclamation points.
+    ![add an organization](/img/platform/start/new-org.png)
 
-4. Mondoo picks an organization ID. To customize the ID, select **EDIT** and enter a new ID. The ID must be between 7 and 34 characters and can include lowercase letters, numbers, single quotes, hyphens, spaces, and exclamation points. It must start with a lowercase letter and end with a letter or number.
+3. Mondoo picks an organization ID. To customize the ID, select the pencil icon and enter a new ID. The ID must be between 7 and 34 characters and can include lowercase letters, numbers, single quotes, hyphens, spaces, and exclamation points. It must start with a lowercase letter and end with a letter or number.
 
-5. Check the box to agree to the terms of service and the privacy policy.
+4. Enter a name for the organization. The name must be between 4 and 29 characters long and can include letters, numbers, single quotes, hyphens, spaces, and exclamation points.
 
-6. Select **CREATE ORGANIZATION**
+5. If you want, enter a description for the organization to help your team understand its purpose.
+
+6. Check the box to agree to the terms of service and the privacy policy.
+
+7. Select the **CREATE ORGANIZATION** button.
 
 ## Delete an organization
 

@@ -41,3 +41,4 @@ Microsoft Entra ID user
 | job               | dict                                                                            | Job information                               |
 | contact           | dict                                                                            | Contact information                           |
 | authMethods       | [microsoft.user.authenticationMethods](microsoft.user.authenticationmethods.md) | Authentication information                    |
+| mfaEnabled        | bool                                                                            | Whether MFA is enabled for the user.          |

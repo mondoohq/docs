@@ -26,4 +26,5 @@ Find files on the system
 | regex       | string                    | A regular expression for the file search                       |
 | permissions | int                       | What permissions the file matches                              |
 | name        | string                    | Search name                                                    |
+| depth       | int                       | The depth of the file search.                                  |
 | list        | &#91;&#93;[file](file.md) |                                                                |

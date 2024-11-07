@@ -14,6 +14,6 @@ Microsoft Conditional Access Policies
 
 **Fields**
 
-| ID             | TYPE                                                                                                    | DESCRIPTION       |
-| -------------- | ------------------------------------------------------------------------------------------------------- | ----------------- |
-| namedLocations | &#91;&#93;[microsoft.conditionalAccess.ipNamedLocation](microsoft.conditionalaccess.ipnamedlocation.md) | IP named location |
+| ID             | TYPE                                                                                        | DESCRIPTION               |
+| -------------- | ------------------------------------------------------------------------------------------- | ------------------------- |
+| namedLocations | [microsoft.conditionalAccess.namedLocations](microsoft.conditionalaccess.namedlocations.md) | Named locations container |

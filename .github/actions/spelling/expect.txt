@@ -374,6 +374,8 @@ winsock
 WNl
 wolfi
 wordpress
+efi
+winnt
 Xmit
 xmna
 Xnp

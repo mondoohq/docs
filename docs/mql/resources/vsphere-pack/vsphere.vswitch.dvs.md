@@ -21,6 +21,7 @@ vSphere distributed virtual switch
 
 | ID         | TYPE                                        | DESCRIPTION                                           |
 | ---------- | ------------------------------------------- | ----------------------------------------------------- |
+| moid       | string                                      | vSphere managed object ID                             |
 | name       | string                                      | Virtual switch name                                   |
 | properties | dict                                        | Virtual switch properties                             |
 | uplinks    | &#91;&#93;[vsphere.vmnic](vsphere.vmnic.md) | List of physical NICs currently configured as uplinks |

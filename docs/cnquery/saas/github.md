@@ -9,11 +9,15 @@ image: /img/featured_img/mondoo-feature.jpg
 
 Rely on cnquery to query and inventory your GitHub organizations and private repositories (repos) as well as public repos and open source projects your team depends on.
 
-## Give cnquery access using the GitHub API
+## Give cnquery access to your GitHub organization
 
-To query GitHub organizations and repos, cnquery needs access. You give cnquery the access it needs through the GitHub API. First, you create GitHub personal access token. Then you share that token with cnquery using an environment variable.
+To scan GitHub organizations and repos, cnquery needs access. There are two ways to do this:
 
-### Option 1: Create a GitHub personal access token
+- Option 1: Give cnquery access using a personal access token and an environment variable. This approach is easier to set up but isn't recommended for very large GitHub organizations. To learn how to give cnquery access using a personal access token, continue reading below.
+
+- Option 2: Give cnquery access using custom GitHub application credentials. This approach takes longer to set up, but scales for very large GitHub organizations (with API rate limits as much as 3x higher than personal access tokens). To learn how to give cnquery access using custom app credentials, read [Give cnquery Access to GitHub Using Custom GitHub App Credentials](/cnquery/saas/gh-app/).
+
+### Create a GitHub personal access token
 
 cnquery needs a personal access token to query a GitHub organization, public repo, or private repo. The token's level of access determines how much information cnquery can retrieve.
 
@@ -25,7 +29,7 @@ To learn how to create a personal access token, read [Creating a personal access
 - admin:org_hook
 - read:project
 
-#### Configure a GITHUB_TOKEN environment variable
+### Configure a GITHUB_TOKEN environment variable
 
 You supply your personal access token to cnquery using the `GITHUB_TOKEN` environment variable.
 
@@ -39,14 +43,6 @@ export GITHUB_TOKEN=<your personal access token>
 
 ```powershell
 $Env:GITHUB_TOKEN = "<personal-access-token>"
-```
-
-### Option 2: Use custom GitHub application credentials
-
-Mondoo also supports the using [custom GitHub application credentials](https://docs.github.com/en/apps/creating-github-apps). Create an application and then use the app ID and the private key to authenticate scans:
-
-```bash
-cnquery scan github org <ORG> --app-id <YOUR-APP-ID> --app-installation-id <YOUR-INSTALL-ID> --app-private-key <PATH-TO-PEM-FILE>
 ```
 
 ## Query GitHub

@@ -1,7 +1,7 @@
 ---
 title: Query Okta
 sidebar_label: Okta
-sidebar_position: 5
+sidebar_position: 30
 displayed_sidebar: cnquery
 description: Query Okta configuration with cnquery
 image: /img/featured_img/mondoo-feature.jpg

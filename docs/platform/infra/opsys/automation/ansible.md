@@ -461,16 +461,6 @@ Run the playbook with this command:
 ansible-playbook -i hosts.ini playbook.yml
 ```
 
-:::info
-
-Use the `--insecure` flag for:
-
-- Hosts that have not been added to `~/.ssh/known_hosts`
-
-- Windows WinRM using self-signed certificates
-
-:::
-
 #### Step 4: View scan reports in the Mondoo Console
 
 Once Ansible completes, scan results are sent to Mondoo Platform so you can view asset scores and reports for all assets scanned in the Mondoo Console.

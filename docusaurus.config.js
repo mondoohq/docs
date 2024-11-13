@@ -8,7 +8,7 @@ const legacyRedirects = [
   // From Azure simplification November 2024
   {
     from: "/platform/infra/cloud/azure/azure-integration-scan-group",
-    to: "/platform/infra/cloud/azure/manual-reg-path.mdx",
+    to: "/platform/infra/cloud/azure/manual-reg-path",
   },
   //// July 2024 moved Jira/Cases content to its own high-level section, where it'll grow
   {

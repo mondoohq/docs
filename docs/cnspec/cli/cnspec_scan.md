@@ -177,12 +177,6 @@ cnspec scan vagrant HOST
 cnspec scan --inventory-file FILENAME
 ```
 
-#### Scan an Ansible inventory file
-
-```bash
-ansible-inventory -i hosts.ini --list | cnspec scan --inventory-format-ansible --inventory-file -
-```
-
 ### Options
 
 ```

@@ -232,29 +232,7 @@ instance1 | SUCCESS => {
 
 #### Step 2: Scan the Ansible inventory
 
-The method for scanning an Ansible inventory depends on whether your shell supports `|`.
-
-##### Option A: Pipe the Ansible inventory to cnspec scan
-
-The first option if you are using a shell such as `bash` or `zsh` that supports `|` redirects is to pipe the output of the `ansible-inventory -i hosts.ini --list` command to `cnspec scan --inventory-format-ansible`. For `FILENAME`, substitute the name of the inventory file.
-
-```bash title="Pipe the contents of an Ansible inventory to the cnspec scan command"
-ansible-inventory -i hosts.ini --list | cnspec scan --inventory-format-ansible --insecure
-```
-
-:::info
-
-Use the `--insecure` flag for:
-
-- Hosts that have not been added to `~/.ssh/known_hosts`
-
-- Windows WinRM using self-signed certificates
-
-:::
-
-##### Option B: Scan Ansible inventory hosts.json
-
-If your shell does not support pipes, you can generate a `hosts.json` from the `ansible-inventory` command and then pass that file to `cnspec scan` using the `--inventory-file` flag.
+Generate a `hosts.json` file from the `ansible-inventory` command and then pass that file to `cnspec scan` using the `--inventory-file` flag.
 
 ```bash title="Generate hosts.json and scan with cnspec scan command"
 ansible-inventory -i hosts.ini --list > hosts.json
@@ -482,16 +460,6 @@ Run the playbook with this command:
 ```bash title="Command Line"
 ansible-playbook -i hosts.ini playbook.yml
 ```
-
-:::info
-
-Use the `--insecure` flag for:
-
-- Hosts that have not been added to `~/.ssh/known_hosts`
-
-- Windows WinRM using self-signed certificates
-
-:::
 
 #### Step 4: View scan reports in the Mondoo Console
 

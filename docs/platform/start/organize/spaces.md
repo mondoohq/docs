@@ -32,7 +32,7 @@ You can create new spaces as needed and use them to manage cloud account integra
 
 3. In the top-right corner of the page, select the plus (+) icon.
 
-    ![add a space](/img/platform/start/new-space.png)
+   ![add a space](/img/platform/start/new-space.png)
 
 4. Mondoo picks a space ID. To customize the ID, select the pencil icon and enter a new ID. The ID must be between 7 and 34 characters and can include lowercase letters, numbers, single quotes, hyphens, spaces, and exclamation points. It must start with a lowercase letter and end with a letter or number.
 

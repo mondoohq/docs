@@ -18,7 +18,7 @@ Every Mondoo account has at least one organization.
 
 2. Select the **+ ADD ORGANIZATION** box.
 
-    ![add an organization](/img/platform/start/new-org.png)
+   ![add an organization](/img/platform/start/new-org.png)
 
 3. Mondoo picks an organization ID. To customize the ID, select the pencil icon and enter a new ID. The ID must be between 7 and 34 characters and can include lowercase letters, numbers, single quotes, hyphens, spaces, and exclamation points. It must start with a lowercase letter and end with a letter or number.
 

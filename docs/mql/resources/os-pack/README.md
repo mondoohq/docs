@@ -41,6 +41,8 @@ Resources included in this pack:
 | [file.permissions](file.permissions.md)                 | Access permissions for a given file                        |
 | [files](files.md)                                       |                                                            |
 | [files.find](files.find.md)                             | Find files on the system                                   |
+| [fstab](fstab.md)                                       |                                                            |
+| [fstab.entry](fstab.entry.md)                           |                                                            |
 | [group](group.md)                                       | Group on this system                                       |
 | [groups](groups.md)                                     | Groups configured on this system                           |
 | [ip6tables](ip6tables.md)                               | IPv6 tables                                                |

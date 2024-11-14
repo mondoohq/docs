@@ -11,7 +11,7 @@ Rely on cnspec to ensure your GitLab groups and projects follow recommended secu
 
 ## Give cnspec access using a GitLab personal access token
 
-To scan GitLab groups and projects, cnspec needs access. You give cnspec the access it needs through the GitLab API. First, you create GitLab personal access token. Then you provide that token with cnspec commands. The token's level of access determines how much information cnspec can retrieve.
+To scan GitLab groups and projects, cnspec needs access. You give cnspec the access it needs through the GitLab API. First you create a GitLab personal access token. Then you provide that token when you enter cnspec commands. The token's level of access determines how much information cnspec can retrieve.
 
 To learn how to create a personal access token, read [Personal access tokens](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html) in the GitLab documentation.
 

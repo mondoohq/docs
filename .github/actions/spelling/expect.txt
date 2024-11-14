@@ -141,6 +141,7 @@ geomatchstatement
 getenv
 GGJXG
 gistfile
+glpat
 gmail
 googleusercontent
 gpu

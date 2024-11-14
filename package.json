@@ -15,7 +15,7 @@
     "write-heading-ids": "docusaurus write-heading-ids"
   },
   "dependencies": {
-    "@algolia/client-search": "^5.13.0",
+    "@algolia/client-search": "^5.14.0",
     "@docusaurus/core": "^3.6.1",
     "@docusaurus/plugin-client-redirects": "^3.6.1",
     "@docusaurus/preset-classic": "^3.6.1",

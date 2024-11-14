@@ -4,7 +4,6 @@ Docusaurus doesn't compile this. No user will ever see it.
 
 I've taken the pipe method out of the Ansible doc until we can figure out how to make it work. I removed the --insecure flag. But Patrick still doesn't scan successfully.
 
-
 #### Step 2: Scan the Ansible inventory
 
 The method for scanning an Ansible inventory depends on whether your shell supports `|`.

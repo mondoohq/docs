@@ -8,10 +8,6 @@ description: GitLab project
 
 # gitlab.project
 
-**Maturity**
-
-experimental
-
 **Description**
 
 GitLab project
@@ -51,3 +47,7 @@ GitLab project
 | projectMembers                            | &#91;&#93;[gitlab.project.member](gitlab.project.member.md)                   | List of members in the project with their roles                                |
 | projectFiles                              | &#91;&#93;[gitlab.project.file](gitlab.project.file.md)                       | List of files in the project repository                                        |
 | webhooks                                  | &#91;&#93;[gitlab.project.webhook](gitlab.project.webhook.md)                 | List of webhooks for the project                                               |
+| jobsEnabled                               | bool                                                                          | Whether CI jobs are enabled                                                    |
+| emptyRepo                                 | bool                                                                          | Whether the repo is empty                                                      |
+| sharedRunnersEnabled                      | bool                                                                          | Whether the project is enabled for shared runners                              |
+| groupRunnersEnabled                       | bool                                                                          | Whether the project is enabled for group runners                               |

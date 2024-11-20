@@ -8,10 +8,6 @@ description: GitLab group
 
 # gitlab.group
 
-**Maturity**
-
-experimental
-
 **Description**
 
 GitLab group

@@ -19,6 +19,7 @@ APK
 apparmor
 appengine
 applicationinsight
+approvalsetting
 appsettings
 appstore
 ashburn
@@ -110,6 +111,7 @@ EDE
 efbe
 efc
 efcfc
+efi
 Ehd
 eig
 eip
@@ -371,12 +373,11 @@ Wib
 widescale
 wil
 winhttp
+winnt
 winsock
 WNl
 wolfi
 wordpress
-efi
-winnt
 Xmit
 xmna
 Xnp

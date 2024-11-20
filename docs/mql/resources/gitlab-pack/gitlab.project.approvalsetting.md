@@ -22,3 +22,4 @@ GitLab project approval settings
 | mergeRequestsAuthorApproval               | bool | Whether author of merge request can approve                                          |
 | mergeRequestsDisableCommittersApproval    | bool | Whether users are prevented from overriding a committer's approval for merge request |
 | requirePasswordToApprove                  | bool | Whether a password is required to approve                                            |
+| selectiveCodeOwnerRemovals                | bool | Whether approvals are reset from Code Owners if their files changed                  |

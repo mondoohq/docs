@@ -14,8 +14,10 @@ GitLab project member
 
 **Fields**
 
-| ID   | TYPE   | DESCRIPTION |
-| ---- | ------ | ----------- |
-| id   | int    | Member ID   |
-| name | string | Member name |
-| role | string | Member role |
+| ID       | TYPE   | DESCRIPTION     |
+| -------- | ------ | --------------- |
+| id       | int    | Member ID       |
+| name     | string | Member name     |
+| role     | string | Member role     |
+| username | string | Member username |
+| state    | string | Member state    |

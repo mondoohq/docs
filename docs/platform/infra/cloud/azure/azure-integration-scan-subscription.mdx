@@ -52,9 +52,9 @@ Create an integration to set up continuous Mondoo scanning of your Azure subscri
 
    - INTEGRATIONS page: In the side navigation bar, under **INTEGRATIONS**, select **Add New Integration**. Under Cloud Security, select **Azure**.
 
-     ![********FOO REPLACE IMAGE************](/img/platform/infra/cloud/azure/add-int-azure-top.png)
+     ![Automated approach to adding an Azure integration to Mondoo](/img/platform/infra/cloud/azure/auto-int.png)
 
-2. To automatically discover all Linux and Windows virtual machines (VMs) in your subscription and scan them using Azure Run Command, enable **Scan virtual machines**.
+2. To automatically discover all Linux and Windows virtual machines (VMs) in your subscription and scan them using Azure Run Command, enable **Scan virtual machines**. This requires an Azure user account with the (Global Administrator role)(https://learn.microsoft.com/en-us/azure/active-directory/roles/permissions-reference#global-administrator).
 
 3. Choose which subscriptions to scan and which to skip in your Azure tenant. To see a list of your subscriptions and their IDs, go to **Subscriptions** in the [Azure portal](https://portal.azure.com).
 
@@ -72,9 +72,21 @@ Create an integration to set up continuous Mondoo scanning of your Azure subscri
 
 6. Select the **AZURE CLOUD SHELL** button to open Azure Cloud Shell.
 
-7. Paste the copied command in Azure Cloud Shell.
+   ![Azure Cloud Shell](/img/platform/infra/cloud/azure/cloud-shell.png)
 
-   ********* FOO BAR BAZ add stuff here to manage their expectations for what happens now **********
+7. Paste the copied command in Azure Cloud Shell. Respond to these prompts:
+
+   ![Select a subscription](/img/platform/infra/cloud/azure/select-sub.png)
+
+   - When you select a **primary subscription**, you're not choosing which subscription Mondoo scans; you're specifying where Mondoo creates the resources it needs to perform scans.
+
+   ![Resources Mondoo will create in Azure](/img/platform/infra/cloud/azure/resources.png)
+
+   - The Mondoo automation shows how many resources it must create in order to scan your Azure environment. You can continue creating the integration, see details, or quit to cancel.
+
+   ![Success creating a Mondoo Azure integration](/img/platform/infra/cloud/azure/success.png)
+
+   - When the Mondoo automation resports success, you're finished in Azure Cloud Shell.
 
 8. Return to the Mondoo console and select the **START SCANNING** button.
 

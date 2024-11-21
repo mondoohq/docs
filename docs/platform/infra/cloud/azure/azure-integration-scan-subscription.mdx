@@ -30,7 +30,7 @@ Before you integrate Microsoft Azure with Mondoo, be sure you have:
 
 - An [Azure account](https://azure.microsoft.com/free/?WT.mc_id=A261C142F) with an active subscription and permission to manage applications in Microsoft Entra ID (formerly Active Directory). Any of these [Entra built-in roles](https://learn.microsoft.com/en-us/azure/active-directory/roles/permissions-reference) include the required permissions:
 
-  - [Global Administrator](https://learn.microsoft.com/en-us/azure/active-directory/roles/permissions-reference#global-administrator) (required only if you want to scan Azure VMs)
+  - [Global Administrator](https://learn.microsoft.com/en-us/azure/active-directory/roles/permissions-reference#global-administrator)
 
   - [Application administrator](https://learn.microsoft.com/en-us/azure/active-directory/roles/permissions-reference#application-administrator)
 
@@ -54,7 +54,7 @@ Create an integration to set up continuous Mondoo scanning of your Azure subscri
 
      ![Automated approach to adding an Azure integration to Mondoo](/img/platform/infra/cloud/azure/auto-int.png)
 
-2. To automatically discover all Linux and Windows virtual machines (VMs) in your subscription and scan them using Azure Run Command, enable **Scan virtual machines**. This requires an Azure user account with the (Global Administrator role)[https://learn.microsoft.com/en-us/azure/active-directory/roles/permissions-reference#global-administrator].
+2. To automatically discover all Linux and Windows virtual machines (VMs) in your subscription and scan them using Azure Run Command, enable **Scan virtual machines**. If you choose this option, Mondoo creates a new custom Entra role to perform these scans.
 
 3. Choose which subscriptions to scan and which to skip in your Azure tenant. To see a list of your subscriptions and their IDs, go to **Subscriptions** in the [Azure portal](https://portal.azure.com).
 
@@ -66,7 +66,7 @@ Create an integration to set up continuous Mondoo scanning of your Azure subscri
 
 4. Under **Copy the installation command**, you see a custom command that Mondoo generates for you based on your selections above. Running this command in Azure Cloud Shell creates the Mondoo Azure integration for you.
 
-   By default, the name for the integration (visible in the Mondoo console and in reports) is `new-azure-integration`. You can change this name now in the command or change it any time after you create the integration.
+   Mondoo names the integration for you. Integration names are visible in the Mondoo console and in reports. You can change the name in the command (in quotes after the --integration-name flag) or change it any time after you create the integration. The ID must be between 7 and 34 characters and can include lowercase letters, numbers, single quotes, hyphens, spaces, and exclamation points. It must start with a lowercase letter and end with a letter or number.
 
 5. Select the copy icon in the installation command box to copy your customized command.
 

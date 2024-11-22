@@ -16,10 +16,10 @@
   },
   "dependencies": {
     "@algolia/client-search": "^5.15.0",
-    "@docusaurus/core": "^3.6.2",
-    "@docusaurus/plugin-client-redirects": "^3.6.2",
-    "@docusaurus/preset-classic": "^3.6.2",
-    "@docusaurus/theme-search-algolia": "^3.6.2",
+    "@docusaurus/core": "^3.6.3",
+    "@docusaurus/plugin-client-redirects": "^3.6.3",
+    "@docusaurus/preset-classic": "^3.6.3",
+    "@docusaurus/theme-search-algolia": "^3.6.3",
     "@fontsource/roboto": "^5.1.0",
     "@mdx-js/react": "^3.1.0",
     "@stackql/docusaurus-plugin-hubspot": "^1.1.0",
@@ -58,7 +58,7 @@
     ]
   },
   "devDependencies": {
-    "@docusaurus/tsconfig": "^3.6.2",
+    "@docusaurus/tsconfig": "^3.6.3",
     "@types/react": "^18.3.12",
     "@types/react-helmet": "^6.1.11",
     "@types/react-router-dom": "^5.3.3",

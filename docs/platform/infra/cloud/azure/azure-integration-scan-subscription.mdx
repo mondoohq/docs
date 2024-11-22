@@ -28,17 +28,25 @@ Before you integrate Microsoft Azure with Mondoo, be sure you have:
 
 - A Mondoo account with Editor or Owner permissions for the space in which you want to add the integration.
 
-- An [Azure account](https://azure.microsoft.com/free/?WT.mc_id=A261C142F) with an active subscription and permission to manage applications in Microsoft Entra ID (formerly Active Directory). Any of these [Entra built-in roles](https://learn.microsoft.com/en-us/azure/active-directory/roles/permissions-reference) include the required permissions:
+- [Azure Cloud Shell](https://learn.microsoft.com/en-us/azure/cloud-shell/overview)
 
-  - [Global Administrator](https://learn.microsoft.com/en-us/azure/active-directory/roles/permissions-reference#global-administrator)
+- An [Azure account](https://azure.microsoft.com/free/?WT.mc_id=A261C142F) with an active subscription and permission to manage applications in Microsoft Entra ID (formerly Active Directory). Any of these [Entra built-in roles](https://learn.microsoft.com/en-us/azure/active-directory/roles/permissions-reference) include the required permissions:
 
   - [Application administrator](https://learn.microsoft.com/en-us/azure/active-directory/roles/permissions-reference#application-administrator)
 
   - [Cloud application administrator](https://learn.microsoft.com/en-us/azure/active-directory/roles/permissions-reference#cloud-application-administrator)
 
-  In the Azure portal you can see what roles your user account has: Go to **Microsoft Entra ID > Users > (your user account) > Assigned roles**.
+- If you want to set up the integration to scan Azure virtual machines (VMs), you must have one of these built-in roles:
 
-- [Azure Cloud Shell](https://learn.microsoft.com/en-us/azure/cloud-shell/overview)
+  - [Global Administrator](https://learn.microsoft.com/en-us/azure/active-directory/roles/permissions-reference#global-administrator)
+
+  - [Privileged Role Administrator](https://learn.microsoft.com/en-us/entra/identity/role-based-access-control/permissions-reference#privileged-role-administrator)
+
+:::tip
+
+In the Azure portal you can see what roles your user account has: Go to **Microsoft Entra ID > Users > (your user account) > Assigned roles**.
+
+:::
 
 ## Add a new Azure integration in the Mondoo console
 
@@ -74,19 +82,23 @@ Create an integration to set up continuous Mondoo scanning of your Azure subscri
 
    ![Azure Cloud Shell](/img/platform/infra/cloud/azure/cloud-shell.png)
 
-7. Paste the copied command in Azure Cloud Shell. Respond to these prompts:
+7. Paste the copied command in Azure Cloud Shell and press the Enter or Return key. Respond to these prompts:
 
    ![Select a subscription](/img/platform/infra/cloud/azure/select-sub.png)
 
-   - When you select a **primary subscription**, you're not choosing which subscription Mondoo scans; you're specifying where Mondoo creates the resources it needs to perform scans.
+   a. When you select this **primary subscription**, you're not choosing which Azure subscription Mondoo scans; you're specifying where Mondoo creates the resources it needs to perform scans. Use the down arrow key to select the subscription you want and then press Enter.
 
    ![Resources Mondoo will create in Azure](/img/platform/infra/cloud/azure/resources.png)
 
-   - The Mondoo automation shows how many resources it must create in order to scan your Azure environment. You can continue creating the integration, see details, or quit to cancel.
+   b. The Mondoo automation shows how many resources it must create so it can scan your Azure environment. Press the down arrow key to select **2. Show details** and then press Enter.
+
+   ![Details of Azure automated integration setup](img/platform/infra/cloud/azure/details.png)
+
+   c. Review the list of resources the Mondoo automation must create so it can scan your Azure environment. Press Enter to continue the integration setup.
 
    ![Success creating a Mondoo Azure integration](/img/platform/infra/cloud/azure/success.png)
 
-   - When the Mondoo automation reports success, you're finished in Azure Cloud Shell.
+   - When the Mondoo automation reports success, you're finished in Azure Cloud Shell. If you don't see the success message within 5 minutes, read the [Troubleshoot](#troubleshoot) section below.
 
 8. Return to the Mondoo console and select the **START SCANNING** button.
 
@@ -96,7 +108,13 @@ Create an integration to set up continuous Mondoo scanning of your Azure subscri
 
 Mondoo begins scanning your Azure resources. When it completes, you can see results on the INVENTORY page. To learn more, read [Monitor Your Infrastructure Security](/platform/security/posture/monitor/).
 
-If your integration is unsuccessful, read [Troubleshoot an Azure Configuration](/platform/infra/cloud/azure/troubleshoot/).
+## Troubleshoot
+
+- If the Mondoo automation pauses more than two minutes after you choose the primary subscription, press Control+C to end the process. Paste the copied command and press Enter to run it a second time.
+
+- If the automation fails, be sure you're logged in with an Azure user account that has the required privileges. To learn more, read the [Prerequisites](#prerequisites) section above.
+
+- If you don't see your newly created integration in the Mondoo Console after you select policies and finalize setup, try refreshing the page in your browser.
 
 ## Next steps
 

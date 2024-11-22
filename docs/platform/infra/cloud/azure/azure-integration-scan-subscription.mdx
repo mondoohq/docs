@@ -54,7 +54,7 @@ Create an integration to set up continuous Mondoo scanning of your Azure subscri
 
      ![Automated approach to adding an Azure integration to Mondoo](/img/platform/infra/cloud/azure/auto-int.png)
 
-2. To automatically discover all Linux and Windows virtual machines (VMs) in your subscription and scan them using Azure Run Command, enable **Scan virtual machines**. If you choose this option, Mondoo creates a new custom Entra role to perform these scans.
+2. To automatically discover all Linux and Windows virtual machines (VMs) in your subscription and scan them using Azure Run Command, enable **Scan virtual machines**. If you choose this option, completing the integration setup gives Mondoo permission to read, write, and delete VM run commands through a new role definition.
 
 3. Choose which subscriptions to scan and which to skip in your Azure tenant. To see a list of your subscriptions and their IDs, go to **Subscriptions** in the [Azure portal](https://portal.azure.com).
 

@@ -237,8 +237,7 @@ Generate a `hosts.json` file from the `ansible-inventory` command and then pass 
 ```bash title="Generate hosts.json and scan with cnspec scan command"
 ansible-inventory -i hosts.ini --list > hosts.json
 
-cnspec scan --inventory-file hosts.json --inventory-format-ansible
-
+cnspec scan --inventory-file hosts.json --inventory-file - --inventory-format-ansible
 ```
 
 Both cnspec and the Mondoo Console show results from each policy that runs against your assets.

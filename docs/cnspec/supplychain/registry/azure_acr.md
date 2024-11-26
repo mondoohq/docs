@@ -1,5 +1,5 @@
 ---
-title: Azure Container Registry (ACR)
+title: Assess Risk in the Azure Container Registry (ACR)
 sidebar_label: Azure Container Registry (ACR)
 sidebar_position: 3
 displayed_sidebar: cnspec

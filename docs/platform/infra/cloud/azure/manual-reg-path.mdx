@@ -1,24 +1,28 @@
 ---
-title: Manual Setup - Azure Continuous Scanning
-sidebar_label: Manual Setup - Azure Continuous Scanning
-sidebar_position: 5
+title: Manually Set Up Azure Continuous Scanning
+sidebar_label: Manually Set Up Continuous Scanning
+sidebar_position: 50
 description: Take the manual approach to configuring the Mondoo Azure Integration to scan Azure resources.
 image: /img/featured_img/mondoo-azure.jpg
 ---
 
-Mondoo integration with Azure requires that you register and grant permissions to an Azure app. Follow this "manual" approach to app registration and configuration if:
+## Are you sure you want to set up Azure manually?
 
-- You want to use your own certificates for authentication
+Mondoo offers two approaches to setting up an integration for continuous Azure scanning: automated and manual.
 
-- You use the [key vault access policy](https://learn.microsoft.com/en-us/azure/key-vault/general/rbac-access-policy) permission model for your key vaults
+Follow the **manual setup** described below only in these rare cases:
 
-- Your unique Azure infrastructure doesn't support Microsoft's "automatic" app registration method
+- You want to integrate Mondoo with all subscriptions in a management group
 
-- You followed the steps in [Continuously Scan an Azure Management Group](/platform/infra/cloud/azure/azure-integration-scan-group/) or [Continuously Scan an Azure Subscription](/platform/infra/cloud/azure/azure-integration-scan-subscription/) and didn't successfully integrate Mondoo with Azure.
+- You use the [legacy access policy permission model](https://learn.microsoft.com/en-us/azure/key-vault/general/rbac-access-policy) for your key vaults (instead of RBAC)
+
+- Your Azure environment is unusually large
+
+All other users can follow the [**automatic Azure integration setup**](/platform/infra/cloud/azure/azure-integration-scan-subscription), which takes a fraction of the time.
 
 ## Prerequisites
 
-Before you integrate Microsoft Azure with Mondoo, be sure you have:
+Before you manually integrate Microsoft Azure with Mondoo, be sure you have:
 
 - A Mondoo account with Editor or Owner permissions for the space in which you want to add the integration.
 
@@ -288,5 +292,7 @@ If your integration is unsuccessful, read [Troubleshoot an Azure Configuration](
 ## Next steps
 
 - [Learn more about Mondoo](/platform/start/plat-what-is/)
+
+- [Test or troubleshoot an Azure integration](/platform/infra/cloud/azure/troubleshoot/)
 
 - [Integrate Mondoo with other cloud platforms in your infrastructure](/platform/infra/cloud/overview/)

@@ -5,6 +5,11 @@ const { themes } = require("prism-react-renderer");
 const legacyRedirects = [
   // NOTE: Path / is equivalent to https://mondoo.com/docs/
   //
+  // From Azure simplification November 2024
+  {
+    from: "/platform/infra/cloud/azure/azure-integration-scan-group",
+    to: "/platform/infra/cloud/azure/manual-reg-path",
+  },
   //// July 2024 moved Jira/Cases content to its own high-level section, where it'll grow
   {
     from: "/platform/maintain/jira",

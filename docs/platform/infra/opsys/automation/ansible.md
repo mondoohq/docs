@@ -232,12 +232,31 @@ instance1 | SUCCESS => {
 
 #### Step 2: Scan the Ansible inventory
 
+The method for scanning an Ansible inventory depends on whether your shell supports `|`.
+
+##### Option A: Pipe the Ansible inventory to cnspec scan
+
+The first option if you are using a shell such as `bash` or `zsh` that supports `|` redirects is to pipe the output of the `ansible-inventory -i hosts.ini --list` command to `cnspec scan --inventory-format-ansible`. If the inventory file is
+
+```bash title="Pipe the contents of an Ansible inventory to the cnspec scan command"
+ansible-inventory -i hosts.ini --list | cnspec scan --inventory-file - --inventory-format-ansible
+```
+
+##### Option B: Scan Ansible inventory hosts.json
+
+If your shell does not support pipes, you can generate a `hosts.json` from the `ansible-inventory` command and then pass that file to `cnspec scan` using the `--inventory-file` flag.
+
+```bash title="Generate hosts.json and scan with cnspec scan command"
+ansible-inventory -i hosts.ini --list > hosts.json
+cnspec scan --inventory-file hosts.json --inventory-format-ansible
+```
+
 Generate a `hosts.json` file from the `ansible-inventory` command and then pass that file to `cnspec scan` using the `--inventory-file` flag.
 
 ```bash title="Generate hosts.json and scan with cnspec scan command"
 ansible-inventory -i hosts.ini --list > hosts.json
 
-cnspec scan --inventory-file hosts.json --inventory-file - --inventory-format-ansible
+cnspec scan --inventory-file hosts.json --inventory-format-ansible
 ```
 
 Both cnspec and the Mondoo Console show results from each policy that runs against your assets.

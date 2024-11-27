@@ -36,13 +36,13 @@
     "nth-check": "^2.1.1",
     "path-parse": "^1.0.7",
     "prism-react-renderer": "^2.4.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "react-loadable": "^5.5.0",
     "search-insights": "^2.17.3",
-    "terser": "5.36.0",
+    "terser": "5.37.0",
     "url-loader": "^4.1.1",
-    "webpack": "^5.97.0",
+    "webpack": "^5.97.1",
     "ws": "^8.18.0"
   },
   "browserslist": {
@@ -59,7 +59,7 @@
   },
   "devDependencies": {
     "@docusaurus/tsconfig": "^3.6.3",
-    "@types/react": "^18.3.13",
+    "@types/react": "^19.0.1",
     "@types/react-helmet": "^6.1.11",
     "@types/react-router-dom": "^5.3.3",
     "prettier": "3.4.2",

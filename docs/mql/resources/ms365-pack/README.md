@@ -41,7 +41,10 @@ Resources included in this pack:
 | [microsoft.serviceprincipal.assignment](microsoft.serviceprincipal.assignment.md)                         | Microsoft Service Principal Assignment                                               |
 | [microsoft.tenant](microsoft.tenant.md)                                                                   | Microsoft Entra tenant                                                               |
 | [microsoft.user](microsoft.user.md)                                                                       | Microsoft Entra ID user                                                              |
+| [microsoft.user.auditlog](microsoft.user.auditlog.md)                                                     | Microsoft User Audit log                                                             |
 | [microsoft.user.authenticationMethods](microsoft.user.authenticationmethods.md)                           | Microsoft Entra authentication methods                                               |
+| [microsoft.user.identity](microsoft.user.identity.md)                                                     | Microsoft User Identity                                                              |
+| [microsoft.user.signin](microsoft.user.signin.md)                                                         | Microsoft User Sign in                                                               |
 | [ms365.exchangeonline](ms365.exchangeonline.md)                                                           | Microsoft 365 Exchange Online                                                        |
 | [ms365.exchangeonline.exoMailbox](ms365.exchangeonline.exomailbox.md)                                     | Microsoft 365 Exchange Online Mailbox                                                |
 | [ms365.exchangeonline.externalSender](ms365.exchangeonline.externalsender.md)                             | Microsoft 365 Exchange Online External Sender                                        |

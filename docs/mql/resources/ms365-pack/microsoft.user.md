@@ -42,3 +42,6 @@ Microsoft Entra ID user
 | contact           | dict                                                                            | Contact information                           |
 | authMethods       | [microsoft.user.authenticationMethods](microsoft.user.authenticationmethods.md) | Authentication information                    |
 | mfaEnabled        | bool                                                                            | Whether MFA is enabled for the user.          |
+| creationType      | string                                                                          | The user creation type.                       |
+| identities        | &#91;&#93;[microsoft.user.identity](microsoft.user.identity.md)                 | The user's identities.                        |
+| auditlog          | [microsoft.user.auditlog](microsoft.user.auditlog.md)                           | The user's audit-log.                         |

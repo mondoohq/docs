@@ -45,6 +45,7 @@ These specialized packs let you deep-dive into attributes unique to the platform
 - [Arista resource pack](./arista-pack)
 - [Atlassian resource pack](./atlassian-pack)
 - [Azure resource pack](./azure-pack)
+- [Cloudflare resource pack](./cloudflare-pack)
 - [Equinix Metal resource pack](./equinix-pack)
 - [GitHub resource pack](./github-pack)
 - [GitLab resource pack](./gitlab-pack)

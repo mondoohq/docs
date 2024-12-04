@@ -3,9 +3,14 @@ title: cloudflare.corsHeaders
 id: cloudflare.corsHeaders
 sidebar_label: cloudflare.corsHeaders
 displayed_sidebar: MQL
+description: CORS headers
 ---
 
 # cloudflare.corsHeaders
+
+**Description**
+
+CORS headers
 
 **Fields**
 

@@ -22,8 +22,8 @@ DNS record
 | tags       | &#91;&#93;string | Tags                                                     |
 | proxied    | bool             | Whether the record is proxied (false indicated DNS only) |
 | proxiable  | bool             | Whether the record can be proxied                        |
-| type       | string           | Type of record (A, AAAA, CNAME, etc.)                    |
-| content    | string           | Content of the record (hostname, IP Address, etc.)       |
+| type       | string           | Type of record (e.g., A, AAAA, or CNAME)                 |
+| content    | string           | Content of the record (e.g., hostname or IP Address)     |
 | ttl        | int              | Time to live (in seconds)                                |
 | createdOn  | time             | Time the record was created                              |
 | modifiedOn | time             | Time the record was last modified                        |

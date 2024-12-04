@@ -3,9 +3,14 @@ title: cloudflare.workers.page
 id: cloudflare.workers.page
 sidebar_label: cloudflare.workers.page
 displayed_sidebar: MQL
+description: Cloudflare Pages page
 ---
 
 # cloudflare.workers.page
+
+**Description**
+
+Cloudflare Pages page
 
 **Fields**
 

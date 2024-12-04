@@ -3,9 +3,14 @@ title: cloudflare.zone.account
 id: cloudflare.zone.account
 sidebar_label: cloudflare.zone.account
 displayed_sidebar: MQL
+description: Cloudflare account
 ---
 
 # cloudflare.zone.account
+
+**Description**
+
+Cloudflare account
 
 **Fields**
 

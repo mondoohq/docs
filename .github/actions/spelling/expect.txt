@@ -67,6 +67,7 @@ chainguard
 cim
 classname
 clientid
+cloudflare
 cloudtrails
 Clusterwide
 Clw
@@ -311,6 +312,7 @@ securetty
 securityimages
 SEfirewall
 serviceprincipals
+signin
 singlequeryargument
 sizeconstraintstatement
 skype

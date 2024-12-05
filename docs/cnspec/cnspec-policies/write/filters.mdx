@@ -54,47 +54,6 @@ groups:
 
 Unless the asset is an AWS compute service, cnspec skips all the checks and queries in this group when scanning the asset.
 
-## Apply a filter to a policy
-
-The policy in this bundle has a filter:
-
-<!-- prettier-ignore-start -->
-```yaml showLineNumbers
-policies:
-  - uid: ssh-with-filter
-    name: SSH policy that uses a filter
-
-...
-
-    groups:
-      - title: my-group
-        checks:
-          - uid: sshd-01
-            title: Ensure the port is set to 22
-            mql: sshd.config.params["Port"] == 22
-            impact: 30
-
-          - uid: sshd-02
-            title: Prevent weaker CBC ciphers from being used
-            mql: sshd.config.ciphers.none( /cbc/ )
-            impact: 60
-
-        queries:
-          - uid: sshd-d-1
-            title: Gather SSH config params
-            mql: sshd.config.params
-
-        filters:
-          - mql: asset.family.contains('unix')
-```
-<!-- prettier-ignore-end -->
-
-This bundle contains only one policy, `ssh-with-filter`. The section beginning on line 24 defines _filters_ for the policy. In this case, cnspec uses the policy to scan only assets that are based on UNIX (Linux distributions and macOS).
-
-import Partial from "./_include-lint.mdx";
-
-<Partial />{" "}
-
 ## More examples of filters
 
 This filter limits scans to only GCP projects:

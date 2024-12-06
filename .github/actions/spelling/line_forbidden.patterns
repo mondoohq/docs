@@ -68,6 +68,9 @@
 # Industry Terms
 #
 
+# s.b. NetFlow
+\bNetflow\b
+
 # s.b. Side scanning
 \b[Ss]idescanning\b
 
@@ -102,6 +105,9 @@
 #
 # Product Names
 #
+
+# s.b. Cloudflare
+\bCloudFlare\b
 
 # s.b. Memcached
 \bMemCached\b

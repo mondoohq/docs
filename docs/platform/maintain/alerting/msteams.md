@@ -56,4 +56,25 @@ import Partial from "../../partials/\_editor-owner.mdx";
 
 6. Select the **SAVE** button.
 
+## Additional Information
+
+:::info Testing MS Teams Webhook
+You can test the webhook by locally sending a webhook payload to the endpoint:
+
+```bash
+curl -vH "Content-Type: application/json" -d '{ "type": "message", "attachments": [ { "contentType": "application/vnd.microsoft.card.adaptive", "contentUrl": null, "content": { "$schema": "http://adaptivecards.io/schemas/adaptive-card.json", "type": "AdaptiveCard", "version": "1.2", "body": [ { "type": "TextBlock", "text": "Hello World, this is a Mondoo Test!" } ] } } ] }' "<WEBHOOK_URL>"
+```
+:::
+
+:::warning MS Teams Workflow App Limitations
+The MS Teams Workflow App uses a Service Principal called "Flow Bot", which is not allowed to join private Channels. 
+
+When checking the event runs in [Power Automate](https://make.powerautomate.com/), you might see an error message like: **The bot is not part of the conversation roster.**
+
+There are 2 solutions:
+1. Use a public channel to send the Alerts to.
+Or
+2. Modify the last step in the Workflow (send adaptive card) to send the message as "User" instead of "Flow Bot". The message will then be posted as the User who setup the workflow.
+:::
+
 ---

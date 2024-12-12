@@ -29,18 +29,16 @@ Before you integrate Microsoft Defender for with Mondoo, be sure you have:
 To create a new Microsoft Defender for Cloud integration in Mondoo, perform these steps:
 
 Step A: Register and grant permissions to an Azure app
+
 Step B: Set up authentication for Mondoo
+
 Step C: Add a new Microsoft Defender for Cloud integration in the Mondoo Console
 
 ## Step A: Register and grant permissions to an Azure app
 
-Like any service that integrates with Azure, Mondoo must have Microsoft Entra ID app registration in your Azure tenant. To learn more about creating a new app registration, read [App registration, app objects, and service principals](https://learn.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#app-registration-app-objects-and-service-principals) in the Azure documentation.
+Like any service that integrates with Azure, Mondoo must have a Microsoft Entra ID application registration in your Azure tenant. To learn more about creating a new application registration, read [App registration, app objects, and service principals](https://learn.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#app-registration-app-objects-and-service-principals) in the Azure documentation.
 
-Registering Mondoo with Entra establishes a trust relationship between Mondoo and the Microsoft identity platform. The trust is unidirectional: Mondoo trusts the Microsoft identity platform, and not the other way around. The Entra app registration creates a [service principal](https://learn.microsoft.com/en-us/azure/active-directory/develop/active-directory-how-applications-are-added#what-are-service-principals-and-where-do-they-come-from) to represent Mondoo in any tenants and subscriptions.
-
-The app registration you create gives Mondoo read-only access to Defender data.
-
-To configure your Azure resources you register an app with Microsoft Entra ID and give it permission to read Defender data:
+The application registration you create gives Mondoo read-only access to Defender data:
 
 1. Log into the [Azure portal](https://portal.azure.com/) as a global administrator, application administrator or cloud application administrator.
 

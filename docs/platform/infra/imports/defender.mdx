@@ -26,7 +26,11 @@ Before you integrate Microsoft Defender for with Mondoo, be sure you have:
 
 ## Integrate Mondoo with Microsoft Defender for Cloud
 
-BAZ BOO FOO introduce steps
+To create a new Microsoft Defender for Cloud integration in Mondoo, perform these steps:
+
+Step A: Register and grant permissions to an Azure app
+Step B: Set up authentication for Mondoo
+Step C: Add a new Microsoft Defender for Cloud integration in the Mondoo Console
 
 ## Step A: Register and grant permissions to an Azure app
 
@@ -180,7 +184,7 @@ Upload the certificate to Entra:
 
 4. Select the **Add** button.
 
-## Add a new Microsoft Defender for Cloud integration in the Mondoo Console
+## Step C: Add a new Microsoft Defender for Cloud integration in the Mondoo Console
 
 After you've created and granted permissions to your new app registration, you can create a Mondoo Microsoft Defender integration. You need some values from the app registration you created in the instructions above.
 
@@ -236,8 +240,8 @@ After you've created and granted permissions to your new app registration, you c
 
       b. In the **Drag and drop your .pem file here** box, select the cloud icon and choose the file to upload. Be sure to upload the file that contains both the certificate and the key. The file must follow the conventions described in the _Create a PEM certificate for Mondoo to authenticate with Microsoft section_ above.
 
-8. Select the **START IMPORTING** button.
+7. Select the **START IMPORTING** button.
 
-Mondoo begins connecting to Microsoft Defender for Cloud and collecting data about your assets.
+Mondoo begins connecting to Microsoft Defender for Cloud and collecting data.
 
 ---

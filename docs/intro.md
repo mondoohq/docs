@@ -32,7 +32,6 @@ The Mondoo unified security platform finds and prioritizes vulnerabilities and m
 
 - [Security Data from Third-Party Tools](/platform/infra/imports/overview/)
 
-
 #### [Security](/platform/security/overview/)
 
 #### [Compliance](/platform/compliance/overview/)

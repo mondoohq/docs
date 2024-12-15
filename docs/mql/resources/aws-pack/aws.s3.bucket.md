@@ -39,7 +39,8 @@ The `aws.s3.bucket` resource provides fields for assessing the configuration of 
 | encryption           | dict                                                          | Bucket encryption configuration                               |
 | publicAccessBlock    | dict                                                          | Public access block configuration for the bucket              |
 | exists               | bool                                                          | Whether the bucket still exists (stale reference)             |
-| createdTime          | time                                                          | Date the bucket was created                                   |
+| createdTime          | time                                                          | Deprecated (use `createdAt` instead)                          |
+| createdAt            | time                                                          | Date and time the bucket was created                          |
 
 **References**
 

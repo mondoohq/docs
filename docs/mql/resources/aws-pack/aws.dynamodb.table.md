@@ -31,7 +31,8 @@ The `aws.dynamodb.table` resource provides fields representing a DynamoDB table.
 | provisionedThroughput     | dict              | Provisioned throughput settings for the table                                                                                 |
 | continuousBackups         | dict              | Continuous backups and point-in-time recovery settings for the table                                                          |
 | tags                      | map[string]string | Tags for the table                                                                                                            |
-| createdTime               | time              | Creation time of the table                                                                                                    |
+| createdTime               | time              | Deprecated (use `createdAt` instead)                                                                                          |
+| createdAt                 | time              | Date and time the table was created                                                                                           |
 | deletionProtectionEnabled | bool              | Whether deletion protection is enabled                                                                                        |
 | globalTableVersion        | string            | Global table version                                                                                                          |
 | items                     | int               | Number of items in the table                                                                                                  |

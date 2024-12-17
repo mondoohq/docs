@@ -206,7 +206,6 @@ loggingservice
 LQp
 LThh
 lun
-mailsec
 managedrulegroupstatement
 managedzone
 MANIFESTFILE
@@ -245,6 +244,7 @@ networkinterface
 networkservice
 newkey
 nginx
+nmap
 noarch
 nodegroup
 nodepool
@@ -365,7 +365,7 @@ vdcs
 vjtestpriv
 Vkt
 Vnet
-vnic
+VNic
 Vtpm
 Vtz
 vulnerabilityassessment

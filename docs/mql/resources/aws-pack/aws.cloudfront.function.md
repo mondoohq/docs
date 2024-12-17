@@ -24,7 +24,8 @@ Amazon CloudFront function
 | status           | string | Status of the CloudFront function                |
 | arn              | string | ARN of the CloudFront function                   |
 | lastModifiedTime | time   | Date and time when the function was last updated |
-| createdTime      | time   | Date and time when the function was created      |
+| createdTime      | time   | Deprecated (use `createdAt` instead)             |
+| createdAt        | time   | Date and time the function was created           |
 | stage            | string | Stage that the function is in                    |
 | comment          | string | Comment to describe the function                 |
 | runtime          | string | Runtime environment for the function             |

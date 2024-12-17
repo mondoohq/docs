@@ -55,6 +55,7 @@ These specialized packs let you deep-dive into attributes unique to the platform
 - [Kubernetes resource pack](./k8s-pack)
 - [Microsoft 365 resource pack](./ms365-pack)
 - [Mondoo Platform resource pack](./mondoo-pack)
+- [Nmap resource pack](./nmap-pack)
 - [Okta resource pack](./okta-pack)
 - [OPC UA resource pack](./opcua-pack)
 - [Oracle Cloud Infrastructure (OCI) resource pack](./oci-pack)

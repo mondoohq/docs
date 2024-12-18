@@ -65,17 +65,23 @@ If you don't successfully receive alerts in Microsoft Teams, you can test the we
 ```bash
 curl -vH "Content-Type: application/json" -d '{ "type": "message", "attachments": [ { "contentType": "application/vnd.microsoft.card.adaptive", "contentUrl": null, "content": { "$schema": "http://adaptivecards.io/schemas/adaptive-card.json", "type": "AdaptiveCard", "version": "1.2", "body": [ { "type": "TextBlock", "text": "Hello World, this is a Mondoo Test!" } ] } } ] }' "<WEBHOOK_URL>"
 ```
-:::
 
-:::warning MS Teams Workflow App Limitations
-The MS Teams Workflow App uses a Service Principal called "Flow Bot", which is not allowed to join private Channels. 
+### Error messages in Microsoft Power Automate
 
-When checking the event runs in [Power Automate](https://make.powerautomate.com/), you might see an error message like: **The bot is not part of the conversation roster.**
+When checking the event runs in [Power Automate](https://make.powerautomate.com/), you may see error messages like "The bot is not part of the conversation roster." This can occur if the channel to which you're trying to post Mondoo alerts is private. The Workflow app relies on a service principal (called Flow Bot) that is not allowed to join private channels.
 
-There are 2 solutions:
-1. Use a public channel to send the Alerts to.
-Or
-2. Modify the last step in the Workflow (send adaptive card) to send the message as "User" instead of "Flow Bot". The message will then be posted as the User who setup the workflow.
-:::
+There are two solutions:
+
+- The simplest solution is to send Mondoo alerts to a public channel.
+
+- If you need to send Mondoo alerts to a private channel, you can change the Workflow flow to post alerts as a certain user:
+
+   1. Log into Microsoft Power Automate as the user you want to post Mondoo alerts.
+
+   2. In the left navigation, select **My flows**.
+
+   3. Open the flow you created in the [steps above](#create-a-webhook-in-microsoft-teams).
+
+   4. Change the last step in the flow (send adaptive card) to send the message as **User** instead of **Flow Bot**.
 
 ---

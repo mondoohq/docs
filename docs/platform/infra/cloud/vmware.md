@@ -1,7 +1,7 @@
 ---
 title: Secure VMware with Mondoo
 sidebar_label: VMware
-sidebar_position: 7
+sidebar_position: 80
 description: This page covers how you can use Mondoo to assess VMware vSphere and ESXi hosts for advisories, vulnerabilities, and security misconfigurations.
 image: /img/featured_img/mondoo-vmware.jpg
 ---

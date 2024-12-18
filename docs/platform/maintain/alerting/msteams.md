@@ -60,10 +60,10 @@ import Partial from "../../partials/\_editor-owner.mdx";
 
 ### Send a test alert to Microsoft Teams
 
-If you don't successfully receive alerts in Microsoft Teams, you can test the webhook by sending a webhook payload to the endpoint. Open a shell and enter this command, substituting the URL you copied in Microsoft Teams for <WEBHOOK_URL>:
+If you don't successfully receive alerts in Microsoft Teams, you can test the webhook by sending a webhook payload to the endpoint. Open a shell and enter this command. For `WEBHOOK_URL`, substitute the URL you copied in Microsoft Teams:
 
 ```bash
-curl -vH "Content-Type: application/json" -d '{ "type": "message", "attachments": [ { "contentType": "application/vnd.microsoft.card.adaptive", "contentUrl": null, "content": { "$schema": "http://adaptivecards.io/schemas/adaptive-card.json", "type": "AdaptiveCard", "version": "1.2", "body": [ { "type": "TextBlock", "text": "Hello World, this is a Mondoo Test!" } ] } } ] }' "<WEBHOOK_URL>"
+curl -vH "Content-Type: application/json" -d '{ "type": "message", "attachments": [ { "contentType": "application/vnd.microsoft.card.adaptive", "contentUrl": null, "content": { "$schema": "http://adaptivecards.io/schemas/adaptive-card.json", "type": "AdaptiveCard", "version": "1.2", "body": [ { "type": "TextBlock", "text": "Hello World, this is a Mondoo Test!" } ] } } ] }' "WEBHOOK_URL"
 ```
 
 ### Error messages in Microsoft Power Automate

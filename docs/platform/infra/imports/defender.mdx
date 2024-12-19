@@ -1,0 +1,247 @@
+---
+title: Import Data from Microsoft Defender for Cloud
+sidebar_label: Microsoft Defender for Cloud
+sidebar_position: 20
+description: Import data from Microsoft Defender for Cloud to combine Defender data with your Mondoo security findings.
+image: /img/featured_img/mondoo-azure.jpg
+---
+
+Mondoo can import data from Microsoft Defender for Cloud and incorporate that data with your security findings. With a unified view of all the vulnerabilities in your Azure infrastructure, you can take advantage of Mondoo's security visualization, prioritization, and ticket system integration.
+
+## Prerequisites
+
+Before you integrate Microsoft Defender for Cloud with Mondoo, be sure you have:
+
+- A Mondoo account with Editor or Owner permissions for the space in which you want to add the integration
+
+- An [Azure account](https://azure.microsoft.com/free/?WT.mc_id=A261C142F) with an active subscription and Microsoft Defender for Servers enabled
+
+- Permission to manage applications in Microsoft Entra ID (formerly Active Directory)&mdash;any of these [Entra built-in roles](https://learn.microsoft.com/en-us/azure/active-directory/roles/permissions-reference) include the required permissions:
+
+  - [Global Administrator](https://learn.microsoft.com/en-us/azure/active-directory/roles/permissions-reference#global-administrator)
+
+  - [Application administrator](https://learn.microsoft.com/en-us/azure/active-directory/roles/permissions-reference#application-administrator)
+
+  - [Cloud application administrator](https://learn.microsoft.com/en-us/azure/active-directory/roles/permissions-reference#cloud-application-administrator)
+
+  In the Azure portal you can see what roles your user account has: Go to **Microsoft Entra ID > Users > (your user account) > Assigned roles**.
+
+## Integrate Mondoo with Microsoft Defender for Cloud
+
+To create a new Microsoft Defender for Cloud integration in Mondoo, perform these steps:
+
+Step A: Register and grant permissions to an Azure app
+
+Step B: Set up authentication for Mondoo
+
+Step C: Add a new Microsoft Defender for Cloud integration in the Mondoo Console
+
+### Step A: Register and grant permissions to an Azure app
+
+Like any service that integrates with Azure, Mondoo must have a Microsoft Entra ID application registration in your Azure tenant. To learn more about creating a new application registration, read [App registration, app objects, and service principals](https://learn.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#app-registration-app-objects-and-service-principals) in the Azure documentation.
+
+The application registration you create gives Mondoo read-only access to Defender data:
+
+1. Log into the [Azure portal](https://portal.azure.com/) as a global administrator, application administrator or cloud application administrator.
+
+2. Find and select **Microsoft Entra ID**.
+
+3. In the navigation sidebar, select **App registrations**.
+
+   ![Azure app registrations](/img/platform/infra/cloud/azure/app-regs.png)
+
+4. Select **+ New registration**.
+
+   ![Create a new app registration in Entra](/img/platform/infra/imports/defender/new-app.png)
+
+5. Enter an application name (such as `mondoo-defender`) and select **Accounts in this organizational directory only** as the supported account type. Mondoo does not require an application redirect URI.
+
+6. Select the **Register** button.
+
+   Microsoft creates the application ID and displays it in the application registration overview.
+
+   ![new app registration in Entra](/img/platform/infra/imports/defender/select-api.png)
+
+7. In the left navigation, select **API permissions**.
+
+   ![add permissions](/img/platform/infra/imports/defender/select-add-perm.png)
+
+8. Select **+ Add a permission** and select the **APIs my organization uses** tab.
+
+9. In the APIs filter box, enter `WindowsDefenderATP` and then select that API in the list.
+
+   ![add permissions](/img/platform/infra/imports/defender/perms-type.png)
+
+10. Select **Application permissions**.
+
+11. Select **expand all** and then check these boxes:
+    - AdvancedQuery.Read.All
+    - Alert.Read.All
+    - File.Read.All
+    - Ip.Read.All
+    - Machine.Read.All
+    - RemediationTasks.Read.All
+    - Score.Read.All
+    - SecurityBaselinesAssessment.Read.All
+    - SecurityConfiguration.Read.All
+    - SecurityRecommendation.Read.All
+    - Software.Read.All
+    - Url.Read.All
+    - User.Read.All
+    - Vulnerability.Read.All
+
+    ![add permissions](/img/platform/infra/imports/defender/select-perms.png)
+
+12. Select the **Add permissions** button.
+
+    Entra shows the permissions assigned to the application.
+
+13. Locate the **Status** column in the table listing the permissions. If you see a warning symbol and a message about the permission not being granted, select **Grant admin consent for [your directory name]** above the table. If this option is disabled, it means you don't have sufficient privileges. Ask a Global Administrator to grant consent for the application.
+
+    Keep the current page open as you continue to the next step.
+
+### Step B: Set up authentication for Mondoo
+
+To access Defender data, Mondoo must authenticate with Microsoft. There are two ways you can set up secure authentication for Mondoo: a client secret or a PEM certificate. A client secret is easier to set up. However, Mondoo supports certificates for security teams that require this authentication method.
+
+#### Option 1: Create a client secret for Mondoo to authenticate with Microsoft
+
+1. With your new app registration open in Microsoft Entra, in the left navigation, select **Certificates and secrets**.
+
+   ![add secret](/img/platform/infra/imports/defender/certs-secrets.png)
+
+2. Select **New client secret**.
+
+   ![add secret](/img/platform/infra/imports/defender/new-secret.png)
+
+3. Give your client secret a name that indicates its purpose (such as `mondoo defender secret`) and choose when it expires. Make a note of the expiration date; the Mondoo integration will stop working when the secret expires.
+
+   Select the **Add** button to create the secret.
+
+   ![copy secret](/img/platform/infra/imports/defender/copy-secret.png)
+
+#### Option 2: Create a PEM certificate for Mondoo to authenticate with Microsoft
+
+If you choose the PEM certificate approach to authentication with Microsoft then the app registration and your Mondoo integration must share a [PEM](https://aboutssl.org/what-is-pem-certificate-file/) (privacy-enhanced mail) certificate.
+
+:::note Important
+
+The certificate must not be password protected.
+
+:::
+
+Create a PEM certificate using the method approved by your organization's security team. You need two files:
+
+- The file you upload to Entra must have only the certificate, **not the private key**.
+
+- The file you upload to the Mondoo Console (described in the section below) must have both the private key and the certificate. It must have a `.pem` extension and must use this format and order of information:
+
+```
+-----BEGIN PRIVATE KEY-----
+key goes here
+-----END PRIVATE KEY-----
+-----BEGIN CERTIFICATE-----
+certificate goes here
+-----END CERTIFICATE-----
+```
+
+<details>
+<summary>Generate a self-signed certificate for testing</summary>
+
+For testing purposes only, you can use OpenSSL toolkit together with req to generate a certificate. Run this command in Linux shell, macOS shell, or Azure Cloud shell (bash):
+
+```shell
+openssl req -newkey rsa:4096  -x509  -sha512  -days 365 -nodes -out certificate.pem -keyout privatekey.key
+```
+
+Add the private key to the beginning of the PEM file:
+
+```shell
+cat privatekey.key certificate.pem > certificate.combo.pem
+```
+
+:::tip
+
+See a [simple installation of OpenSSL for Microsoft Windows](https://slproweb.com/products/Win32OpenSSL.html).
+
+:::
+
+</details>
+
+Upload the certificate to Entra:
+
+1. With your new app registration open in Microsoft Entra, in the left navigation, select **Certificates and secrets** and then select the **Certificates** tab.
+
+2. Select **Upload certificate**.
+
+3. Select the PEM certificate and enter a description, such as `Mondoo certificate`.
+
+   :::info
+
+   Be sure to choose the file containing only the certificate, not the private key.
+
+   :::
+
+4. Select the **Add** button.
+
+### Step C: Add a new Microsoft Defender for Cloud integration in the Mondoo Console
+
+After you've created and granted permissions to your new app registration, you can create a Mondoo Microsoft Defender integration. You need some values from the app registration you created in the instructions above.
+
+1. Access the Integrations > Add > Microsoft Defender for Cloud page in one of two ways:
+
+   - New space setup: After creating a new Mondoo account or creating a new space, the initial setup guide welcomes you. Select **BROWSE INTEGRATIONS** and then select **Microsoft Defender for Cloud**.
+
+   ![Welcome to Mondoo Page](/img/platform/start/welcome_to_mondoo.png)
+
+   - INTEGRATIONS page: In the side navigation bar, under **INTEGRATIONS**, select **Add New Integration**. Under Third-Party Data, select **Microsoft Defender for Cloud**.
+
+   ![create a defender integration](/img/platform/infra/imports/defender/add-defender.png)
+
+2. In the **Choose an integration name** box, enter a name for the integration. Make it a name that lets you easily recognize the Azure tenant.
+
+3. In the **Enter the application (client) ID** box, enter the Application (client) ID of the app registration you created in the steps above.
+
+   You can copy it from the app registration's Overview page in Entra.
+
+   ![copy app values](/img/platform/infra/imports/defender/what-to-copy.png)
+
+4. In the **Enter the directory (tenant) ID** box, enter the Directory (tenant) ID of the app registration. You can copy it from the app registration's Overview page in Entra.
+
+5. Specify the subscriptions from which you want Mondoo to continuously import Defender data.
+
+   - To continuously import from all subscriptions in the tenant, leave the **Import Microsoft Defender data from all subscriptions connected to the directory (tenant) ID** toggle enabled.
+
+   - To choose specific subscriptions to scan, disable the **Import Microsoft Defender data from all subscriptions connected to the directory (tenant) ID** toggle, select **Allow list**, and enter the subscription IDs. Enter each subscription ID on a new line.
+
+   - To scan **all** subscriptions **except** those you specify, disable the **Import Microsoft Defender data from all subscriptions connected to the directory (tenant) ID** toggle, select **Deny list** and enter the names of the subscription IDs. Enter each subscription ID on a new line.
+
+6. Provide a way for Mondoo to securely authenticate with Microsoft:
+
+   ![integration-create-image](/img/platform/infra/imports/defender/add-defender-bottom.png)
+
+   - To use a client secret:
+
+      a. In Microsoft Entra, go to the **Certificates and secrets** page for the application you created.
+
+      b. Locate the secret you created and copy the **Value**.
+
+         ![copy the secret value](/img/platform/infra/imports/defender/copy-secret.png)
+
+      c. Return to the Mondoo Console's Integrations > Add > Microsoft Defender for Cloud page and select **Client secret**.
+
+      d. In the **Enter the client secret** box, paste the copied value.
+
+   OR
+
+   - To use a certificate:
+
+      a. Select **Certificate and private key**.
+
+      b. In the **Drag and drop your .pem file here** box, select the cloud icon and choose the file to upload. Be sure to upload the file that contains both the certificate and the key. The file must follow the conventions described in the _Create a PEM certificate for Mondoo to authenticate with Microsoft section_ above.
+
+7. Select the **START IMPORTING** button.
+
+Mondoo begins connecting to Microsoft Defender for Cloud and collecting data.
+
+---

@@ -76,12 +76,12 @@ There are two solutions:
 
 - If you need to send Mondoo alerts to a private channel, you can change the Workflow flow to post alerts as a certain user:
 
-   1. Log into Microsoft Power Automate as the user you want to post Mondoo alerts.
+  1.  Log into Microsoft Power Automate as the user you want to post Mondoo alerts.
 
-   2. In the left navigation, select **My flows**.
+  2.  In the left navigation, select **My flows**.
 
-   3. Open the flow you created in the [steps above](#create-a-webhook-in-microsoft-teams).
+  3.  Open the flow you created in the [steps above](#create-a-webhook-in-microsoft-teams).
 
-   4. Change the last step in the flow (send adaptive card) to send the message as **User** instead of **Flow Bot**.
+  4.  Change the last step in the flow (send adaptive card) to send the message as **User** instead of **Flow Bot**.
 
 ---

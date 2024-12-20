@@ -180,26 +180,23 @@ cnspec scan --inventory-file FILENAME
 ### Options
 
 ```
-      --annotation stringToString   Add an annotation to the asset. (default [])
-      --asset-name string           User-override for the asset name
-      --detect-cicd                 Try to detect CI/CD environments. If detected, set the asset category to 'cicd'. (default true)
-      --discover strings            Enable the discovery of nested assets. Supports: all,auto,container,container-images
-  -h, --help                        help for scan
-      --incognito                   Run in incognito mode. Do not report scan results to  Mondoo Platform.
-      --inventory-format-ansible    Set the inventory format to Ansible.
-      --inventory-format-domainlist Set the inventory format to domain list.
-      --inventory-file string       Set the path to the inventory file.
-  -j, --json                        Run the query and return the object in a JSON structure.
-  -o, --output string               Set output format: compact, csv, full, json, junit, report, summary, yaml (default "compact")
-      --output-target string        Set output target to which the asset report will be sent. Currently only supports AWS SQS topic URLs and local files
-      --platform-id string          Select a specific target asset by providing its platform ID.
-      --policy strings              Lists policies to execute. This requires --policy-bundle. You can pass multiple policies using --policy POLICY.
-  -f, --policy-bundle strings       Path to local policy file
-      --props stringToString        Custom values for properties (default [])
-      --record string               Record all resource calls and use resources in the recording
-      --score-threshold int         If any score falls below the threshold, exit 1.
-      --sudo                        Elevate privileges with sudo.
-      --use-recording string        Use a recording to inject resource data (read-only)
+      --annotation stringToString     Add an annotation to the asset. (default [])
+      --asset-name string             User-override for the asset name
+      --detect-cicd                   Try to detect CI/CD environments. If detected, set the asset category to 'cicd'. (default true)
+  -h, --help                          help for scan
+      --incognito                     Run in incognito mode. Do not report scan results to  Mondoo Platform.
+      --inventory-file string         Set the path to the inventory file.
+      --inventory-format-ansible      Set the inventory format to Ansible.
+      --inventory-format-domainlist   Set the inventory format to domain list.
+  -j, --json                          Run the query and return the object in a JSON structure.
+  -o, --output string                 Set output format: compact, csv, full, json, json-v1, json-v2, junit, report, summary, yaml, yaml-v1, yaml-v2 (default "compact")
+      --output-target string          Set output target to which the asset report will be sent. Currently only supports AWS SQS topic URLs and local files
+      --platform-id string            Select a specific target asset by providing its platform ID.
+      --policy strings                Lists policies to execute. This requires --policy-bundle. You can pass multiple policies using --policy POLICY.
+  -f, --policy-bundle strings         Path to local policy file
+      --props stringToString          Custom values for properties (default [])
+      --score-threshold int           If any score falls below the threshold, exit 1.
+      --trace-id string               Trace identifier
 ```
 
 ### Options inherited from parent commands

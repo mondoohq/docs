@@ -223,6 +223,7 @@ MKGQ
 mmvv
 moids
 mpim
+msdefender
 MSsqm
 multani
 multistring
@@ -300,6 +301,7 @@ rmi
 ROLEARN
 Ronacher
 rrfqiu
+rtsp
 rulegroup
 rulegroupreferencestatement
 saas

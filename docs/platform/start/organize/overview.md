@@ -6,7 +6,7 @@ descriptions: Create a manageable structure for monitoring and securing your inf
 image: /img/featured_img/mondoo-feature.jpg
 ---
 
-You can rely on Mondoo to secure an enormous quantity of assets in your infrastructure&mdash;cloud platforms, workstations, servers, containers, SaaS platforms, and much more. For larger businesses, Mondoo provides asset intelligence, security, and compliance for thousands of assets. To make securing and monitoring your infrastructure manageable, you can arrange your Mondoo assets in regions, organizations, spaces, and workspaces. It's best to plan your infrastructure structure before you begin adding assets to Mondoo.
+You can rely on Mondoo to secure an enormous quantity of assets in your infrastructure&mdash;cloud platforms, workstations, servers, containers, SaaS platforms, and much more. For larger businesses, Mondoo provides asset intelligence, security, and compliance for thousands of assets. To make securing and monitoring your infrastructure manageable, you can arrange your Mondoo assets in regions, organizations, spaces, and workspaces. It's best to plan your infrastructure organization before you begin adding assets to Mondoo.
 
 ![Region, organization, space, and workspace in Mondoo](/img/src/platform/start/organize-basics.png)
 

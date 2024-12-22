@@ -46,12 +46,12 @@ Mondoo currently supports these conditions for including assets in, or excluding
 
 | Condition         | Example values                                                                                                       |
 |------------------|----------------------------------------------------------------------------------------------------------------------|
-| Platform         | Alpine Linux, Atlassian Jira, AWS S3 bucket, GitHub repository, Kubernetes pod, macOS, Slack team, Terraform plan... |
-| Platform version | 3, 4.5, 12.75                                                                                                        |
-| Risk rating      | Critical, High, Medium, Low, None                                                                                    |
-| Asset name      | test, 2024, win, us-east-1, docker-                                                     |
+| Platform         | Alpine Linux, Atlassian Jira, AWS S3 bucket, GitHub repository, Kubernetes pod, macOS, Slack team, Terraform plan ... |
+| Platform version | 3, 4.5, 12.75 ...                                                                                                      |
+| Risk rating      | Critical, High, Medium, Low, None                                                                                     |
+| Asset name      | test, 2024, win, us-east-1, docker- ...                                                  |
 
-:::tip
+:::note
 
 We continue to add new conditions for workspaces. Check back soon for more!
 

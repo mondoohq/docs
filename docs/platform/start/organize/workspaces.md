@@ -40,11 +40,11 @@ To accomplish this, they create a workspace for each type of AWS asset as well a
 
 ## Set up workspaces
 
-You set up a workspace by defining qualifying criteria, attributes that assets must (or must not) have to be included. Mondoo dynamically creates the workspace each time you view it by including assets in the space that currently meet your criteria.
+You set up a workspace by defining qualifying conditions, attributes that assets must (or must not) have to be included. Mondoo dynamically creates the workspace each time you view it by including assets in the space that currently meet your criteria.
 
-Mondoo currently supports these criteria for including assets in, or excluding assets from, a workspace:
+Mondoo currently supports these conditions for including assets in, or excluding assets from, a workspace:
 
-| Criteria         | Example values                                                                                                       |
+| Condition         | Example values                                                                                                       |
 |------------------|----------------------------------------------------------------------------------------------------------------------|
 | Platform         | Alpine Linux, Atlassian Jira, AWS S3 bucket, GitHub repository, Kubernetes pod, macOS, Slack team, Terraform plan... |
 | Platform version | 3, 4.5, 12.75                                                                                                        |
@@ -53,13 +53,13 @@ Mondoo currently supports these criteria for including assets in, or excluding a
 
 :::tip
 
-We continue to add new criteria for workspaces; check back soon for more.
+We continue to add new conditions for workspaces. Check back soon for more!
 
 :::
 
-### Example criteria
+### Example conditions
 
-You can define very simple workspaces like these:
+You can define very simple workspaces like these with one condition:
 
 - Is a GCP compute image
 
@@ -69,7 +69,7 @@ You can define very simple workspaces like these:
 
 - Is a GitHub repository or a GitLab project
 
-Or you can build a simple query to fine-tune workspace contents. These are examples of simple queries:
+You can also combine conditions. These are examples of simple queries with multiple conditions:
 
 - Is a Debian device and version is not 12
 
@@ -77,7 +77,7 @@ Or you can build a simple query to fine-tune workspace contents. These are examp
 
 - Is a macOS device and version is 15.1.0 and name contains `home`
 
-Mondoo workspaces support complex queries as well. For example, this query defines a workspace for viewing all older versions of 2 popular Linux distributions:
+Mondoo workspaces support complex queries as well. For example, this query defines a workspace for viewing all older versions of three popular Linux distributions:
 
    (Is a Debian device and version is not 12)
    and
@@ -95,14 +95,27 @@ When you first view the Urgent AlmaLinux workspace, it contains 25 assets&mdash;
 
 If AlmaLinux releases an advisory about a vulnerability in the newest version, this could mean that even your AlmaLinux devices running the newest version now have Critical or High risk ratings. So the next time you view the workspace, it might contain 40 assets.
 
-### Add a new workspace
+### Workspace query builder
 
 Use the workspace query builder to choose criteria that define what assets Mondoo includes.
 
-BAZ SCREENSHOT
+For each condition in an asset selection, you select a criterion, an operator (IS, NOT, or CONTAINS), and one or more values. If you choose multiple values for a single criterion, the query builder combines them with an OR operator. For example, this query specifies that the asset platform must be either Confluence or Jira:
 
-BAZ discuss how the different chunks work like parentheses in a Boolean query
-BAZ provide examples of how they work together
+![Mondoo workspace query builder multiple values for one criterion](/platform/start/organize/qb-two-values.png)
+
+If you define more than one condition in an asset selection (using the + ADD CONDITION button), you choose whether to combine them with an AND or AND NOT operator. For example, this query specifies that the asset platform must be Debian AND the platform version must not be 12:
+
+![Mondoo workspace query builder multiple values for one criterion](/platform/start/organize/qb-two-conditions.png)
+
+This query specifies that the asset platform must be Azure storage container and the asset name must not contain `eu`:
+
+![Mondoo workspace query builder multiple values for one criterion](/platform/start/organize/qb-two-conditions-not.png)
+
+If you define more than one asset selection in a query (using the + ADD ASSET SELECTION button), the query builder combines them with an OR operator. For example, in this query, asset selection 1 specifies that the platform is Debian and the version is not 12. Asset selection 2 specifies that the platform is Fedora and the version is not 40 or 41. For Mondoo to include an asset in this workspace, the asset must meet either the asset selection 1 requirement OR the asset selection 2 requirement:
+
+![Mondoo workspace query builder](/platform/start/organize/qb-two-selections.png)
+
+### Add a new workspace
 
 1. [Navigate to the space](/platform/start/navigate/) where you want to add a new workspace.
 

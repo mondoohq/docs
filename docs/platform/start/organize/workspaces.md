@@ -20,7 +20,7 @@ A space can contain an unlimited number of workspaces, and their purpose is enti
 
 Suppose our imaginary sample business, Lunalectric, has a space is dedicated to the Rover business group, a division within the company.
 
-![Sample workspaces in Rover space](/img/src/platform/start/mars-rover-space.png)
+![Sample workspaces in Rover space](/img/platform/start/mars-rover-space.png)
 
 This space contains many different types of assets, including the Rover team's Azure and SaaS infrastructure, deployment pipelines, and employee workstations. They use workspaces to accomplish these goals:
 
@@ -34,7 +34,7 @@ This space contains many different types of assets, including the Rover team's A
 
 As another example, suppose Lunalectric has a space that contains all of the company's AWS cloud infrastructure. With hundreds of AWS assets, they need easy ways to break down that space and understand where their security strengths and weaknesses lie.
 
-![Sample workspaces in AWS space](/img/src/platform/start/lunalectric-aws-space.png)
+![Sample workspaces in AWS space](/img/platform/start/lunalectric-aws-space.png)
 
 To accomplish this, they create a workspace for each type of AWS asset as well as an "All AWS urgent" workspace where they can quickly view the AWS assets that pose the greatest risk to Lunalectric.
 
@@ -101,19 +101,19 @@ Use the workspace query builder to choose criteria that define what assets Mondo
 
 For each condition in an asset selection, you select a criterion, an operator (IS, NOT, or CONTAINS), and one or more values. If you choose multiple values for a single criterion, the query builder combines them with an OR operator. For example, this query specifies that the asset platform must be either Confluence or Jira:
 
-![Mondoo workspace query builder multiple values for one criterion](/platform/start/organize/qb-two-values.png)
+![Mondoo workspace query builder multiple values for one criterion](/img/platform/start/organize/qb-two-values.png)
 
 If you define more than one condition in an asset selection (using the + ADD CONDITION button), you choose whether to combine them with an AND or AND NOT operator. For example, this query specifies that the asset platform must be Debian AND the platform version must not be 12:
 
-![Mondoo workspace query builder multiple values for one criterion](/platform/start/organize/qb-two-conditions.png)
+![Mondoo workspace query builder multiple values for one criterion](/img/platform/start/organize/qb-two-conditions.png)
 
 This query specifies that the asset platform must be Azure storage container and the asset name must not contain `eu`:
 
-![Mondoo workspace query builder multiple values for one criterion](/platform/start/organize/qb-two-conditions-not.png)
+![Mondoo workspace query builder multiple values for one criterion](/img/platform/start/organize/qb-two-conditions-not.png)
 
 If you define more than one asset selection in a query (using the + ADD ASSET SELECTION button), the query builder combines them with an OR operator. For example, in this query, asset selection 1 specifies that the platform is Debian and the version is not 12. Asset selection 2 specifies that the platform is Fedora and the version is not 40 or 41. For Mondoo to include an asset in this workspace, the asset must meet either the asset selection 1 requirement OR the asset selection 2 requirement:
 
-![Mondoo workspace query builder](/platform/start/organize/qb-two-selections.png)
+![Mondoo workspace query builder](/img/platform/start/organize/qb-two-selections.png)
 
 ### Add a new workspace
 

@@ -8,7 +8,7 @@ image: /img/featured_img/mondoo-feature.jpg
 
 You can rely on Mondoo to secure an enormous quantity of assets in your infrastructure&mdash;cloud platforms, workstations, servers, containers, SaaS platforms, and much more. For larger businesses, Mondoo provides asset intelligence, security, and compliance for thousands of assets. To make securing and monitoring your infrastructure manageable, you can arrange your Mondoo assets in regions, organizations, spaces, and workspaces. It's best to plan your infrastructure organization before you begin adding assets to Mondoo.
 
-![Region, organization, space, and workspace in Mondoo](/img/src/platform/start/organize-basics.png)
+![Region, organization, space, and workspace in Mondoo](/img/platform/start/organize-basics.png)
 
 - [Regions](/platform/start/organize/regions) let you follow localized data protection requirements such as GDPR. Mondoo currently supports two regions: US and EU. Privately hosted Mondoo Enterprise accounts run in a single region.
 
@@ -28,13 +28,13 @@ Imagine a US-based company called Lunalectric that makes rovers and rockets for 
 
 Here's one way Lunalectric might organize their assets in Mondoo:
 
-![Sample organizational structure in Mondoo](/img/src/platform/start/luna-org-1.png)
+![Sample organizational structure in Mondoo](/img/platform/start/luna-org-1.png)
 
 In this example, Lunalectric creates a single organization that contains a different space for each type of asset they monitor with Mondoo. Their AWS assets go in the Cloud space, all employee laptops are in the Workstations space, and so on. Each space contains many different workspaces for the different views and perspective they need to assess.
 
 Here's an alternative way Lunalectric might organize their assets:
 
-![Sample organizational structure in Mondoo](/img/src/platform/start/luna-org-2.png)
+![Sample organizational structure in Mondoo](/img/platform/start/luna-org-2.png)
 
 In this second example, Lunalectric creates a single organization that contains three spaces: one space for each business division. Each space contains a very large number of assets.
 

@@ -193,7 +193,7 @@ Common cnspec service configuration options:
 | `space_mrn`    | Space Mondoo resource name, identifies the space that the client belongs to |
 | `annotations`  | Annotations that display in the Mondoo Console `condole.mondoo.com`         |
 
-```yaml title=mondoo.yml
+```yaml title="mondoo.yml"
 # service account mrn
 mrn: //agents.api.mondoo.app/spaces/spacex/serviceaccounts/1utIs5XUQ8XayfB6yiQNTLOqPlD
 # agent mrn
@@ -224,7 +224,7 @@ annotations:
 
 cnspec inventory configuration defines a list of targets for cnspec to scan. This example contains an ssh-based scan with annotations:
 
-```yaml title=inventory.yml
+```yaml title="inventory.yml"
 apiVersion: v1
 kind: Inventory
 metadata:
@@ -248,7 +248,7 @@ spec:
 
 This example scans the local machine and all running containers:
 
-```yaml title=inventory.yml
+```yaml title="inventory.yml"
 apiVersion: v1
 kind: Inventory
 metadata:
@@ -267,7 +267,7 @@ spec:
 
 This example scans the local machine and all container images:
 
-```yaml title=inventory.yml
+```yaml title="inventory.yml"
 apiVersion: v1
 kind: Inventory
 metadata:
@@ -286,7 +286,7 @@ spec:
 
 This example scans the vSphere environment with embedded credentials:
 
-```yaml title=inventory.yml
+```yaml title="inventory.yml"
 apiVersion: v1
 kind: Inventory
 metadata:
@@ -310,7 +310,7 @@ spec:
 
 This example scans the vSphere environment with extracted credentials and reference:
 
-```yaml title=inventory.yml
+```yaml title="inventory.yml"
 apiVersion: v1
 kind: Inventory
 metadata:
@@ -337,7 +337,7 @@ spec:
 
 This example scans the vSphere environment with credentials from HashiCorp Vault:
 
-```yaml title=inventory.yml
+```yaml title="inventory.yml"
 apiVersion: v1
 kind: Inventory
 metadata:
@@ -368,7 +368,7 @@ spec:
 
 Example to scan a Microsoft 365 account:
 
-```yaml title=inventory.yml
+```yaml title="inventory.yml"
 apiVersion: v1
 kind: Inventory
 metadata:
@@ -394,7 +394,7 @@ spec:
 
 Example to scan an Azure tenant including all subscriptions:
 
-```yaml title=inventory.yml
+```yaml title="inventory.yml"
 apiVersion: v1
 kind: Inventory
 metadata:
@@ -419,7 +419,7 @@ spec:
 
 Example to scan a Google Workspace account:
 
-```yaml title=inventory.yml
+```yaml title="inventory.yml"
 apiVersion: v1
 kind: Inventory
 metadata:

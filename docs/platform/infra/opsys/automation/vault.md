@@ -27,7 +27,7 @@ vault kv put secret/vcenter/mondoo-read password="< password >" type="password" 
 
 Create an inventory yaml file with HashiCorp Vault:
 
-```yaml title=inventory.yml
+```yaml title="inventory.yml"
 apiVersion: v1
 kind: Inventory
 metadata:

@@ -6,7 +6,7 @@ displayed_sidebar: MQL
 description: The VMware vSphere resource pack lets you use MQL to query and assess the security of your VMware vSphere hosts and services.
 ---
 
-# Mondoo VMware vSphere Resource Pack Reference
+# VMware vSphere MQL Resource Pack Reference
 
 The VMware vSphere resource pack lets you use MQL to query and assess the security of your VMware vSphere hosts and services.
 

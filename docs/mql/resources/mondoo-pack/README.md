@@ -1,12 +1,12 @@
 ---
-title: Mondoo Resource Pack - MQL Resources
-id: mondoo.pack
-sidebar_label: Mondoo Resource Pack
+title: Mondoo Platform Resource Pack - MQL Resources
+id: mondoo.platform.pack
+sidebar_label: Mondoo Platform Resource Pack
 displayed_sidebar: MQL
 description: The Mondoo resource pack lets you interact with Mondoo Platform and its assets and resources.
 ---
 
-# Mondoo Resource Pack Reference
+# Mondoo Platform MQL Resource Pack Reference
 
 The Mondoo resource pack lets you interact with Mondoo Platform and its assets and resources.
 

@@ -6,7 +6,7 @@ displayed_sidebar: MQL
 description: The Azure resource pack lets you use MQL to query and assess the security of your Azure cloud services.
 ---
 
-# Mondoo Azure Resource Pack Reference
+# Azure MQL Resource Pack Reference
 
 The Azure resource pack lets you use MQL to query and assess the security of your Azure cloud services.
 

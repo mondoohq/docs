@@ -6,7 +6,7 @@ displayed_sidebar: MQL
 description: The Arista EOS resource pack lets you use MQL to query and assess the security of your Arista EOS network devices.
 ---
 
-# Mondoo Arista EOS Resource Pack Reference
+# Arista EOS MQL Resource Pack Reference
 
 The Arista EOS resource pack lets you use MQL to query and assess the security of your Arista EOS network devices.
 

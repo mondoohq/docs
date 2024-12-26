@@ -6,7 +6,7 @@ displayed_sidebar: MQL
 description: The Amazon Web Services (AWS) resource pack lets you use MQL to query and assess the security of your AWS cloud services.
 ---
 
-# Mondoo Amazon Web Services (AWS) Resource Pack Reference
+# Amazon Web Services (AWS) MQL Resource Pack Reference
 
 The Amazon Web Services (AWS) resource pack lets you use MQL to query and assess the security of your AWS cloud services.
 

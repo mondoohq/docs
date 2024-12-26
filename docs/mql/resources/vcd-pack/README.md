@@ -6,7 +6,7 @@ displayed_sidebar: MQL
 description: The VMware Cloud Director resource pack lets you use MQL to query and assess the security of your VMware Cloud Director configuration.
 ---
 
-# Mondoo VMware Cloud Director Resource Pack Reference
+# VMware Cloud Director MQL Resource Pack Reference
 
 The VMware Cloud Director resource pack lets you use MQL to query and assess the security of your VMware Cloud Director configuration.
 

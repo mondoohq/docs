@@ -6,7 +6,7 @@ displayed_sidebar: MQL
 description: The Ansible resource pack lets you use MQL to query and assess the security of your Ansible playbooks.
 ---
 
-# Mondoo Ansible Resource Pack Reference
+# Ansible MQL Resource Pack Reference
 
 The Ansible resource pack lets you use MQL to query and assess the security of your Ansible playbooks.
 

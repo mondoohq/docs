@@ -6,7 +6,7 @@ displayed_sidebar: MQL
 description: The GitLab resource pack lets you use MQL to query and assess the security of your GitLab groups and projects.
 ---
 
-# Mondoo GitLab Resource Pack Reference
+# GitLab MQL Resource Pack Reference
 
 The GitLab resource pack lets you use MQL to query and assess the security of your GitLab groups and projects.
 

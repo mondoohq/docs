@@ -6,7 +6,7 @@ displayed_sidebar: MQL
 description: The Snowflake resource pack lets you use MQL to query and assess the security of your Snowflake identities and configuration.
 ---
 
-# Mondoo Snowflake Resource Pack Reference
+# Snowflake MQL Resource Pack Reference
 
 The Snowflake resource pack lets you use MQL to query and assess the security of your Snowflake identities and configuration.
 

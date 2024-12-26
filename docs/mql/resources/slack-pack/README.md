@@ -6,7 +6,7 @@ displayed_sidebar: MQL
 description: The Slack resource pack lets you use MQL to query and assess the security of your Slack identities and configuration.
 ---
 
-# Mondoo Slack Resource Pack Reference
+# Slack MQL Resource Pack Reference
 
 The Slack resource pack lets you use MQL to query and assess the security of your Slack identities and configuration.
 

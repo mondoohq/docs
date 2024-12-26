@@ -6,7 +6,7 @@ displayed_sidebar: MQL
 description: The Cloudflare resource pack lets you use MQL to query and assess the security of your Cloudflare configuration.
 ---
 
-# Mondoo Cloudflare Resource Pack Reference
+# Cloudflare MQL Resource Pack Reference
 
 The Cloudflare resource pack lets you use MQL to query and assess the security of your Cloudflare configuration.
 

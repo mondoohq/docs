@@ -6,7 +6,7 @@ displayed_sidebar: MQL
 description: The Nmap resource pack lets you use MQL to query and assess the network devices with Nmap.
 ---
 
-# Mondoo Nmap Resource Pack Reference
+# Nmap MQL Resource Pack Reference
 
 The Nmap resource pack lets you use MQL to query and assess the network devices with Nmap.
 

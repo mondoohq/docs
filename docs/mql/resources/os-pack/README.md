@@ -6,7 +6,7 @@ displayed_sidebar: MQL
 description: The Operating Systems (OS) resource pack lets you use MQL to query and assess the security of your operating system packages and configuration.
 ---
 
-# Mondoo Operating Systems (OS) Resource Pack Reference
+# Operating Systems (OS) MQL Resource Pack Reference
 
 The Operating Systems (OS) resource pack lets you use MQL to query and assess the security of your operating system packages and configuration.
 

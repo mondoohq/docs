@@ -6,7 +6,7 @@ displayed_sidebar: MQL
 description: The Google Workspace resource pack lets you use MQL to query and assess the security of your Google Workspace identities and configuration.
 ---
 
-# Mondoo Google Workspace Resource Pack Reference
+# Google Workspace MQL Resource Pack Reference
 
 The Google Workspace resource pack lets you use MQL to query and assess the security of your Google Workspace identities and configuration.
 

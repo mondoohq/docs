@@ -6,7 +6,7 @@ displayed_sidebar: MQL
 description: The Shodan resource pack lets you use MQL to query and assess IP and DNS information via Shodan service.
 ---
 
-# Mondoo Shodan Resource Pack Reference
+# Shodan MQL Resource Pack Reference
 
 The Shodan resource pack lets you use MQL to query and assess IP and DNS information via Shodan service.
 

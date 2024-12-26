@@ -6,7 +6,7 @@ displayed_sidebar: MQL
 description: The AWS CloudFormation resource pack lets you use MQL to query and assess the security of your AWS CloudFormation.
 ---
 
-# Mondoo AWS CloudFormation Resource Pack Reference
+# AWS CloudFormation MQL Resource Pack Reference
 
 The AWS CloudFormation resource pack lets you use MQL to query and assess the security of your AWS CloudFormation.
 

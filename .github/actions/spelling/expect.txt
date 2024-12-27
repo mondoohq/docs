@@ -72,7 +72,6 @@ cloudtrails
 Clusterwide
 Clw
 cmek
-cnames
 cni
 CODENAME
 codeql
@@ -216,7 +215,6 @@ mcnulty
 MDENG
 Merica
 messagestoragepolicy
-Metasploit
 mfs
 Mjk
 MKGQ
@@ -367,7 +365,6 @@ vdcs
 vjtestpriv
 Vkt
 Vnet
-VNic
 Vtpm
 Vtz
 vulnerabilityassessment

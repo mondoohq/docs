@@ -106,6 +106,9 @@
 # Product Names
 #
 
+# s.b. DigiCert
+\bDigicert\b
+
 # s.b. Cloudflare
 \bCloudFlare\b
 

@@ -6,7 +6,7 @@ description: This page provides detailed information about workspaces in Mondoo 
 image: /img/featured_img/mondoo-feature.jpg
 ---
 
-FOO BAR BAZ start with a screenshot
+![Mondoo workspaces](/img/platform/start/workspaces-cards.png)
 
 Workspaces are ad hoc groups of assets you want to view together. You might have a workspace for a project, another for monitoring urgent problems across your infrastructure, and another for a type of asset.
 
@@ -48,7 +48,7 @@ Mondoo currently supports these conditions for including assets in, or excluding
 |------------------|----------------------------------------------------------------------------------------------------------------------|
 | Platform         | Alpine Linux, Atlassian Jira, AWS S3 bucket, GitHub repository, Kubernetes pod, macOS, Slack team, Terraform plan ... |
 | Platform version | 3, 4.5, 12.75 ...                                                                                                      |
-| Risk rating      | Critical, High, Medium, Low, None                                                                                     |
+| Risk rating      | Critical, High, Medium, Low, None (fixed values)                                                                      |
 | Asset name      | test, 2024, win, us-east-1, docker- ...                                                  |
 
 :::note
@@ -79,11 +79,11 @@ You can also combine conditions. These are examples of simple queries with multi
 
 Mondoo workspaces support complex queries as well. For example, this query defines a workspace for viewing all older versions of three popular Linux distributions:
 
-   (Is a Debian device and version is not 12)
+- (Is a Debian device and version is not 12)
    and
-   (Is a Fedora device and version is not 40 or 41)
+- (Is a Fedora device and version is not 40 or 41)
    and
-   (Is a Red Hat (RHEL) device and is not version 9.5)
+- (Is a Red Hat (RHEL) device and is not version 9.5)
 
 ### Workspaces are dynamic
 
@@ -155,12 +155,62 @@ If you define more than one asset selection in a query (using the + ADD ASSET SE
 
 7. Select the **CREATE WORKSPACE** button.
 
+Mondoo builds the workspace based on your criteria and then displays a security overview of the assets in the workspace.
+
 ## View workspaces
+
+![Mondoo workspace navigation](/img/platform/start/workspace-topnav.png)
+
+Quickly access a workspace from any page in the Mondoo Console using the top navigation bar.
+
+![Mondoo workspace navigation drop-down](/img/platform/start/workspace-dropdown.png)
+
+The drop-down menu shows all the workspaces in the current space. If you have a long list of workspaces, you can type part or all of the workspace name to filter the list. Select a workspace to see a security overview of the assets in the workspace.
+
+![Mondoo workspace overview](/img/platform/start/workspace-dash.png)
 
 ## Manage workspaces
 
+You can change the query that defines the assets in a workspace. You can also delete a workspace.
+
 ### Edit a workspace
 
+You can modify a workspace by changing the criteria that determine what assets are and are not included in the workspace. You can also change the name or description.
+
+1. Navigate to the workspace you want to edit. For instructions, read the [View workspaces section](#view-workspaces) above.
+
+   ![Mondoo workspace overview](/img/platform/start/workspace-dash.png)
+
+2. Near the top-right corner of the page, select **Show Details**.
+
+   ![Mondoo workspace overview](/img/platform/start/workspace-details.png)
+
+3. Near the top-right corner of the page, select **Edit**.
+
+   ![Mondoo workspace overview](/img/platform/start/workspace-settings.png)
+
+4. Change the query that defines which assets are included in or excluded from the workspace, or change the workspace name or description.
+
+   Mondoo saves your changes as you work.
+
 ### Remove a workspace
+
+1. Navigate to the workspace you want to remove. For instructions, read the [View workspaces section](#view-workspaces) above.
+
+   ![Mondoo workspace overview](/img/platform/start/workspace-dash.png)
+
+2. Near the top-right corner of the page, select **Show Details**.
+
+   ![Mondoo workspace overview](/img/platform/start/workspace-details.png)
+
+3. Near the top-right corner of the page, select **Edit**.
+
+   ![Mondoo workspace overview](/img/platform/start/workspace-settings.png)
+
+4. Scroll to the **Danger zone** at the bottom of the page.
+
+   ![Mondoo workspace delete](/img/platform/start/workspace-delete.png)
+
+5. Check the box to confirm that you want to delete the workspace and then select the **DELETE** button.
 
 ---

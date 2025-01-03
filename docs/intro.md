@@ -18,6 +18,8 @@ The Mondoo unified security platform finds and prioritizes vulnerabilities and m
 
 - [What Is Mondoo?](/platform/start/plat-what-is/)
 
+- [Plan your Mondoo Organization](/platform/start/organize/overview/)
+
 #### [Integrate Your Infrastructure with Mondoo](/platform/infra/overview/)
 
 - [Cloud](/platform/infra/cloud/overview/)

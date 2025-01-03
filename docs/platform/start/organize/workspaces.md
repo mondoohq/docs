@@ -121,9 +121,13 @@ If you define more than one asset selection in a query (using the + ADD ASSET SE
 
 2. In the side navigation bar, select **Workspaces**.
 
-3. Select the plus sign (+) near the top-right corner of the page.
+   ![Mondoo workspace start](/img/platform/start/no-workspaces.png)
 
-4. Create a query to define the assets you want Mondoo to dynamically include in the workspace:
+3. Select the plus sign (+) near the top-right corner of the page. The Create a Workspace page displays, showing the query builder.
+
+   ![Mondoo workspace query builder](/img/platform/start/create-workspace.png)
+
+4. Create a query to define the assets you want Mondoo to dynamically include in the workspace. To learn how workspace queries work, read the sections above.
 
    a. Under **Asset selection 1**, select the plus sign (+) and select the the criteria to define.
 
@@ -143,9 +147,13 @@ If you define more than one asset selection in a query (using the + ADD ASSET SE
 
    g. Repeat steps d-f to define as many conditions as you want.
 
-5. To create a complex query with another set of criteria, select
+5. To create a complex query with another set of criteria, select **+ ADD ASSET SELECTION** and follow steps a-g above. To learn how workspace queries with multiple asset selections work, read the sections above.
 
-NOT FINISHED FOO BAR BAZ
+6. Type a name and a full description for the new workspace. Be clear about the workspace's purpose.
+
+   ![Mondoo workspace name and describe](/img/platform/start/name-workspace.png)
+
+7. Select the **CREATE WORKSPACE** button.
 
 ## View workspaces
 

@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@algolia/client-search": "^5.18.0",
-    "@docusaurus/core": "^3.6.3",
+    "@docusaurus/core": "^3.7.0",
     "@docusaurus/plugin-client-redirects": "^3.6.3",
     "@docusaurus/preset-classic": "^3.6.3",
     "@docusaurus/theme-search-algolia": "^3.6.3",

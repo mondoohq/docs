@@ -22,6 +22,12 @@ Find vulnerabilities for assets in a space:
 
 1. In the [Mondoo Console](https://console.mondoo.com), [navigate to the space](/platform/start/navigate) in which you want to see vulnerabilities.
 
+   :::tip
+
+   You can also select a [workspace](/platform/start/organize/workspaces/) to view a subset of assets within a space.
+
+   :::
+
 2. In the left navigation bar, under **Vulnerabilities**, select **CVEs**.
 
    ![Find vulnerabilities](/img/platform/security/cves.png)

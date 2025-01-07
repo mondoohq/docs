@@ -129,7 +129,7 @@ If you define more than one asset selection in a query (using the + ADD ASSET SE
 
 4. Create a query to define the assets you want Mondoo to dynamically include in the workspace. To learn how workspace queries work, read the sections above.
 
-   a. Under **Asset selection 1**, select the plus sign (+) and select the the criteria to define.
+   a. Under **Asset selection 1**, select the plus sign (+) and select the criteria to define.
 
    b. Choose the operator: **IS**, **NOT**, or **CONTAINS**.
 
@@ -159,7 +159,7 @@ Mondoo builds the workspace based on your criteria and then displays a security 
 
 ## View workspaces
 
-![Mondoo workspace navigation](/img/platform/start/workspace-topnav.png)
+![Mondoo workspace navigation](/img/platform/start/workspaces-topnav.png)
 
 Quickly access a workspace from any page in the Mondoo Console using the top navigation bar.
 

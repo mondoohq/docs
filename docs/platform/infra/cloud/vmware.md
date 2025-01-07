@@ -241,7 +241,7 @@ sudo cnspec login -t <paste token here> --config /etc/opt/mondoo/mondoo.yml
 
 ```bash
 # vSphere 6.x / 7.x
-cnspec scan vsphere user@host --ask-pass
+cnspec scan vsphere mondoo-read@vsphere.local@host --ask-pass
 ```
 
 4. Activate the policies against which Mondoo assesses your VMware.
@@ -253,7 +253,7 @@ A good place to start scanning is the `VMware vSphere ESXi Security Baseline by 
 5. Now, with the policy of your choice activated, scan again:
 
 ```bash
-cnspec scan vsphere user@host --ask-pass
+cnspec scan vsphere mondoo-read@vsphere.local@host --ask-pass
 ```
 
 Because you did not pass the `--incognito` switch, the command output includes a link to the Mondoo Console, where you can review the scan results.

@@ -12,7 +12,7 @@ Workspaces are ad hoc groups of assets you want to view together. You might have
 
 Think of workspaces more as views rather than as structural divisions of your Mondoo organization. A single asset can be included in multiple workspaces.
 
-For example, suppose your infrastructure includes an employee's macOS workstation, which has a *critical* risk rating. The workstation is in a single [space](/platform/start/organize/spaces), which is in a single [organization](/platform/start/organize/organizations). But it can appear in both a macOS devices workspace and a workspace that shows all critical assets.
+For example, suppose your infrastructure includes an employee's macOS workstation, which has a _critical_ risk rating. The workstation is in a single [space](/platform/start/organize/spaces), which is in a single [organization](/platform/start/organize/organizations). But it can appear in both a macOS devices workspace and a workspace that shows all critical assets.
 
 A space can contain an unlimited number of workspaces, and their purpose is entirely up to you. Their flexibility lets them meet your unique business needs.
 
@@ -44,12 +44,12 @@ You set up a workspace by defining qualifying conditions, attributes that assets
 
 Mondoo currently supports these conditions for including assets in, or excluding assets from, a workspace:
 
-| Condition         | Example values                                                                                                       |
-|------------------|----------------------------------------------------------------------------------------------------------------------|
+| Condition        | Example values                                                                                                        |
+| ---------------- | --------------------------------------------------------------------------------------------------------------------- |
 | Platform         | Alpine Linux, Atlassian Jira, AWS S3 bucket, GitHub repository, Kubernetes pod, macOS, Slack team, Terraform plan ... |
-| Platform version | 3, 4.5, 12.75 ...                                                                                                      |
+| Platform version | 3, 4.5, 12.75 ...                                                                                                     |
 | Risk rating      | Critical, High, Medium, Low, None (fixed values)                                                                      |
-| Asset name      | test, 2024, win, us-east-1, docker- ...                                                  |
+| Asset name       | test, 2024, win, us-east-1, docker- ...                                                                               |
 
 :::note
 
@@ -80,9 +80,9 @@ You can also combine conditions. These are examples of simple queries with multi
 Mondoo workspaces support complex queries as well. For example, this query defines a workspace for viewing all older versions of three popular Linux distributions:
 
 - (Is a Debian device and version is not 12)
-   and
+  and
 - (Is a Fedora device and version is not 40 or 41)
-   and
+  and
 - (Is a Red Hat (RHEL) device and is not version 9.5)
 
 ### Workspaces are dynamic
@@ -139,9 +139,9 @@ If you define more than one asset selection in a query (using the + ADD ASSET SE
 
    e. Choose how to combine the conditions:
 
-      - To include assets only if they meet both conditions, select **AND**.
+   - To include assets only if they meet both conditions, select **AND**.
 
-      - To include assets that meet at least one condition, select **OR**.
+   - To include assets that meet at least one condition, select **OR**.
 
    f. Choose the criteria, operator, and value for the condition.
 

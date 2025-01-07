@@ -25,3 +25,4 @@ Azure Policy assignment
 | scope           | string | Policy scope            |
 | description     | string | Policy description      |
 | enforcementMode | string | Policy enforcement Mode |
+| parameters      | dict   | Policy parameters       |

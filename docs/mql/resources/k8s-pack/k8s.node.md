@@ -18,15 +18,18 @@ Kubernetes node
 
 **Fields**
 
-| ID              | TYPE              | DESCRIPTION                         |
-| --------------- | ----------------- | ----------------------------------- |
-| id              | string            | Mondoo ID for the Kubernetes object |
-| uid             | string            | Kubernetes object UID               |
-| labels          | map[string]string | Kubernetes labels                   |
-| annotations     | map[string]string | Kubernetes annotations              |
-| resourceVersion | string            | Kubernetes resource version         |
-| name            | string            | Plural name of the resource         |
-| kind            | string            | Kubernetes object type              |
+| ID              | TYPE              | DESCRIPTION                          |
+| --------------- | ----------------- | ------------------------------------ |
+| id              | string            | Mondoo ID for the Kubernetes object  |
+| uid             | string            | Kubernetes object UID                |
+| labels          | map[string]string | Kubernetes labels                    |
+| annotations     | map[string]string | Kubernetes annotations               |
+| resourceVersion | string            | Kubernetes resource version          |
+| name            | string            | Plural name of the resource          |
+| kind            | string            | Kubernetes object type               |
+| created         | time              | Kubernetes object creation timestamp |
+| nodeInfo        | dict              | Node configuration information       |
+| kubeletPort     | int               | Kubelet port                         |
 
 **References**
 

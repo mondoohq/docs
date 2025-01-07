@@ -163,7 +163,7 @@ Mondoo builds the workspace based on your criteria and then displays a security 
 
 Quickly access a workspace from any page in the Mondoo Console using the top navigation bar.
 
-![Mondoo workspace navigation drop-down](/img/platform/start/workspace-dropdown.png)
+![Mondoo workspace navigation drop-down](/img/platform/start/workspaces-dropdown.png)
 
 The drop-down menu shows all the workspaces in the current space. If you have a long list of workspaces, you can type part or all of the workspace name to filter the list. Select a workspace to see a security overview of the assets in the workspace.
 

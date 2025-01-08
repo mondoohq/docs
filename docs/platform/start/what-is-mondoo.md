@@ -44,7 +44,7 @@ Misconfigurations and unpatched vulnerabilities pose the biggest risk to the tec
 
 - **Software supply chain** - Azure Pipelines, CircleCI, GitHub Actions, GitLab CI/CD, and more
 
-- **Networking** - Arista, Shodan, NMap, HTTP headers, SSL/TLS certificates
+- **Networking** - Arista, Shodan, NMap, HTTP headers, and SSL/TLS certificates
 
 - **Applications** - Nginx, Exchange
 

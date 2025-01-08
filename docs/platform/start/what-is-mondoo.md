@@ -46,7 +46,7 @@ Misconfigurations and unpatched vulnerabilities pose the biggest risk to the tec
 
 - **Networking** - Arista, Shodan, NMap, HTTP headers, and SSL/TLS certificates
 
-- **Applications** - Nginx, Exchange
+- **Applications** - Nginx and Exchange
 
 - **Certificates** - SSL and TLS
 

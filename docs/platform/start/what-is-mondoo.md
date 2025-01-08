@@ -40,9 +40,13 @@ Misconfigurations and unpatched vulnerabilities pose the biggest risk to the tec
 
 - **Servers, mainframes, and endpoints** - Linux, IBM AIX, Windows, FreeBSD, and macOS
 
-- **SaaS services** - Microsoft 365, Google Workspace, Okta, GitHub, GitLab, and Slack
+- **SaaS services** - Microsoft 365, Google Workspace, Okta, GitHub, GitLab, Cloudflare, and Slack
 
 - **Software supply chain** - Azure Pipelines, CircleCI, GitHub Actions, GitLab CI/CD, and more
+
+- **Networking** - Arista, Shodan, NMap, HTTP headers, and SSL/TLS certificates
+
+- **Applications** - Nginx and Exchange
 
 - **Certificates** - SSL and TLS
 

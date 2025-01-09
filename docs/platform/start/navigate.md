@@ -18,13 +18,13 @@ The sun/moon icon on the toolbar lets you switch the console display between lig
 
 :::
 
-## Navigate regions, organizations, and spaces
+## Navigate regions, organizations, spaces, and workspaces
 
 ![Mondoo Console top navigation menu](/img/platform/start/nav-top.png)
 
-The assets in your infrastructure are [organized](/platform/start/organize/overview) into [regions](/platform/start/organize/regions), [organizations](/platform/start/organize/organizations), and [spaces](/platform/start/organize/spaces). You move between regions, organizations, and spaces, by selecting the top navigation menu (shown above) and the boxes that represent organizations or spaces.
+The assets in your infrastructure are [organized](/platform/start/organize/overview) into [regions](/platform/start/organize/regions), [organizations](/platform/start/organize/organizations) [spaces](/platform/start/organize/spaces), AND [workspaces](/platform/start/organize/workspaces). You move between regions, organizations, spaces, and workspaces using the drop-downs on the top navigation menu (shown above).
 
-For example, the image below shows all organizations in the US region. Select an organization to explore and manage it:
+You can also navigate using the Organizations, Spaces, and Workspaces pages: For example, the image below shows all organizations in the US region. Select an organization to explore and manage it:
 
 ![Mondoo Console organizations](/img/platform/start/organizations.png)
 
@@ -41,6 +41,8 @@ In this example, if you select the Lunalectric organization and then select Spac
 From there you can select any space to access and manage its details. For example, select the Online Store box to view the Online Store space.
 
 You can filter spaces to see a subset of spaces or find a specific one. Type in the **Filter Spaces** box to see only spaces with names that match what you type. The filter is case sensitive and includes partial matches.
+
+Select Workspaces in the side navigation bar to see all the workspaces in a space. Select a workspace to view it.
 
 ## Perform tasks within a space
 

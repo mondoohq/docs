@@ -50,7 +50,7 @@ Mondoo currently supports these conditions for including assets in, or excluding
 | Platform version | Enter a version number such as 3, 4.5, or 12.75.9                                                                                                                                                                            |
 | Risk rating      | Select one or more options: Critical, High, Medium, Low, or None                                                                                                                                                             |
 | Asset name       | Type a full or partial name, such as test, 2024, win, us-east-1, or docker-                                                                                                                                                  |
-| Kind             | Select one or more options: API, Baremetal system (operating systems that are not containers), Infrastructure as code, Container, Container image, or Network (Arista, Shodan, NMap, HTTP headers, and SSL/TLS certificates) |
+| Kind             | Select one or more options: API, Bare metal system (operating systems that are not containers), Infrastructure as code, Container, Container image, or Network (Arista, Shodan, NMap, HTTP headers, and SSL/TLS certificates) |
 
 :::note
 

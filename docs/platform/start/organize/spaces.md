@@ -8,7 +8,7 @@ image: /img/featured_img/mondoo-feature.jpg
 
 ![Spaces](/img/platform/security/spaces.png)
 
-A space is a collection of assets, policies, and reports that you manage together within Mondoo Platform. A space exists in a single [organization](/platform/start/organiza/organizations). An asset (a physical or virtual computing, network, or storage device or other component of your information environment) can exist in only one space.
+A space is a collection of assets, policies, and reports that you manage together within Mondoo Platform. A space exists in a single [organization](/platform/start/organize/organizations). An asset (a physical or virtual computing, network, or storage device or other component of your information environment) can exist in only one space.
 
 Spaces allow for a great degree of flexibility in managing shared resources. For example, teams may organize their deployments in spaces, setting their own policies and quickly gaining insights for everything they manage.
 

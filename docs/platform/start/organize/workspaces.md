@@ -44,13 +44,13 @@ You set up a workspace by defining qualifying conditions, attributes that assets
 
 Mondoo currently supports these conditions for including assets in, or excluding assets from, a workspace:
 
-| Condition        | Values                                                                                                                                                                                                              |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Platform         | Select one or more options such as Alpine Linux, Atlassian Jira, AWS S3 bucket, GitHub repository, Kubernetes pod, macOS, Slack team, Terraform plan, and more                                                      |
-| Platform version | Enter a version number such as 3, 4.5, or 12.75.9                                                                                                                                                                   |
-| Risk rating      | Select one or more options: Critical, High, Medium, Low, or None                                                                                                                                                    |
-| Asset name       | Type a full or partial name, such as test, 2024, win, us-east-1, or docker-                                                                                                                                         |
-| Kind             | Select one or more options: API, Baremetal system (OSs that are not containers), Infrastructure as code, Container, Container image, or Network (Arista, Shodan, NMap, HTTP headers, and SSL/TLS certificates) |
+| Condition        | Values                                                                                                                                                                                                                       |
+| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Platform         | Select one or more options such as Alpine Linux, Atlassian Jira, AWS S3 bucket, GitHub repository, Kubernetes pod, macOS, Slack team, Terraform plan, and more                                                               |
+| Platform version | Enter a version number such as 3, 4.5, or 12.75.9                                                                                                                                                                            |
+| Risk rating      | Select one or more options: Critical, High, Medium, Low, or None                                                                                                                                                             |
+| Asset name       | Type a full or partial name, such as test, 2024, win, us-east-1, or docker-                                                                                                                                                  |
+| Kind             | Select one or more options: API, Baremetal system (operating systems that are not containers), Infrastructure as code, Container, Container image, or Network (Arista, Shodan, NMap, HTTP headers, and SSL/TLS certificates) |
 
 :::note
 

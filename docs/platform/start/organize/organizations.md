@@ -12,7 +12,6 @@ Organizations provide a way to group [spaces](/platform/start/organize/spaces) t
 
 Every Mondoo account has at least one organization. You can manage team member access and some Mondoo configuration (such as service accounts and tokens) by organization.
 
-
 ## Create a new organization
 
 1. In the top-left corner of the Mondoo Console, select the [region](regions.md) in which to create the organization. (Enterprise customers with privately hosted accounts do not have to select a region.)

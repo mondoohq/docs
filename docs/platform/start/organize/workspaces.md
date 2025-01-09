@@ -10,9 +10,9 @@ image: /img/featured_img/mondoo-feature.jpg
 
 Workspaces are ad hoc groups of assets you want to view together. You might have a workspace for a project, another for monitoring urgent problems across your infrastructure, and another for a type of asset.
 
-Think of workspaces more as views rather than as structural divisions of your Mondoo organization. A single asset can be included in multiple workspaces.
+Think of workspaces more as views rather than as structural divisions of your Mondoo organization. A single asset can be included in multiple workspaces. You can't manage team member access, security policies, or Mondoo configuration workspace by workspace. They are merely superficial collections of assets.
 
-For example, suppose your infrastructure includes an employee's macOS workstation, which has a _critical_ risk rating. The workstation is in a single [space](/platform/start/organize/spaces), which is in a single [organization](/platform/start/organize/organizations). But it can appear in both a macOS devices workspace and a workspace that shows all critical assets.
+For example, suppose your infrastructure includes an employee's macOS workstation, which has a _critical_ risk rating. The workstation is in a single [space](/platform/start/organize/spaces), which is in a single [organization](/platform/start/organize/organizations). The space settings determine the asset's team member access, security model, and policies. But it can appear in many workspaces, such as a macOS devices workspace, a workspace that shows all critical assets, and more.
 
 A space can contain an unlimited number of workspaces, and their purpose is entirely up to you. Their flexibility lets them meet your unique business needs.
 
@@ -44,13 +44,13 @@ You set up a workspace by defining qualifying conditions, attributes that assets
 
 Mondoo currently supports these conditions for including assets in, or excluding assets from, a workspace:
 
-| Condition        | Values                                                                                                                                                                                                              |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Platform         | Select one or more options such as Alpine Linux, Atlassian Jira, AWS S3 bucket, GitHub repository, Kubernetes pod, macOS, Slack team, Terraform plan, and more                                                      |
-| Platform version | Enter a version number such as 3, 4.5, or 12.75.9                                                                                                                                                                   |
-| Risk rating      | Select one or more options: Critical, High, Medium, Low, or None                                                                                                                                                    |
-| Asset name       | Type a full or partial name, such as test, 2024, win, us-east-1, or docker-                                                                                                                                         |
-| Kind             | Select one or more options: API, Baremetal system (anything that is not a container), Infrastructure as code, Container, Container image, or Network (Arista, Shodan, NMap, HTTP headers, and SSL/TLS certificates) |
+| Condition        | Values                                                                                                                                                                                                                       |
+| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Platform         | Select one or more options such as Alpine Linux, Atlassian Jira, AWS S3 bucket, GitHub repository, Kubernetes pod, macOS, Slack team, Terraform plan, and more                                                               |
+| Platform version | Enter a version number such as 3, 4.5, or 12.75.9                                                                                                                                                                            |
+| Risk rating      | Select one or more options: Critical, High, Medium, Low, or None                                                                                                                                                             |
+| Asset name       | Type a full or partial name, such as test, 2024, win, us-east-1, or docker-                                                                                                                                                  |
+| Kind             | Select one or more options: API, Bare metal system (operating systems that are not containers), Infrastructure as code, Container, Container image, or Network (Arista, Shodan, NMap, HTTP headers, and SSL/TLS certificates) |
 
 :::note
 

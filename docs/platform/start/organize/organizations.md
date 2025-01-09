@@ -10,7 +10,8 @@ image: /img/featured_img/mondoo-feature.jpg
 
 Organizations provide a way to group [spaces](/platform/start/organize/spaces) together and manage team members and access.
 
-Every Mondoo account has at least one organization.
+Every Mondoo account has at least one organization. You can manage team member access and some Mondoo configuration (such as service accounts and tokens) by organization.
+
 
 ## Create a new organization
 

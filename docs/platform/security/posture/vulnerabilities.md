@@ -40,7 +40,7 @@ Find vulnerabilities for assets in a space:
 
    - To show only risks for a certain platform, enter all or part of the platform name. For example, type `windows`, `debian`, or `google`.
 
-   - To find a specific CVE number, enter all or part of the number. For example, type `2023-21755` or `1325`.
+   - To find a specific CVE number, enter all or part of the number. For example, type `2025-21755` or `1325`.
 
    - To find risks to a certain service, tool, API, or other technology, enter all or part of its name. For example, enter `winsock`, `curl`, or `cim`.
 

@@ -29,7 +29,8 @@ The `aws.iam.policy` resource provides fields for assessing the configuration of
 | description     | string                                                      | Description of the policy                                                              |
 | isAttachable    | bool                                                        | Whether the policy can be attached                                                     |
 | attachmentCount | int                                                         | Number of principal entities (users, groups, and roles) that the policy is attached to |
-| createDate      | time                                                        | Time when the policy was created                                                       |
+| createDate      | time                                                        | Time when the policy was created: deprecated, use createdAt                            |
+| createdAt       | time                                                        | Time when the policy was created                                                       |
 | updateDate      | time                                                        | Time when the policy was updated                                                       |
 | scope           | string                                                      | Scope of the policy                                                                    |
 | versions        | &#91;&#93;[aws.iam.policyversion](aws.iam.policyversion.md) | List of versions for the policy                                                        |

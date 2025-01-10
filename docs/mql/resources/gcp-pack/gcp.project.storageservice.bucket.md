@@ -33,6 +33,7 @@ Google Cloud (GCP) Storage bucket
 | iamPolicy        | &#91;&#93;[gcp.resourcemanager.binding](gcp.resourcemanager.binding.md) | IAM policy            |
 | iamConfiguration | dict                                                                    | IAM configuration     |
 | retentionPolicy  | dict                                                                    | Retention policy      |
+| encryption       | dict                                                                    | Encryption            |
 
 **References**
 

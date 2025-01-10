@@ -29,6 +29,7 @@ cnspec is a cloud-native security testing tool for your entire infrastructure
 - [cnspec policy](cnspec_policy.md) - Manage local and upstream policies
 - [cnspec providers](cnspec_providers.md) - Providers add connectivity to all assets
 - [cnspec run](cnspec_run.md) - Run an MQL query
+- [cnspec scan](cnspec_scan.md) - Scan assets with one or more policies
 - [cnspec serve](cnspec_serve.md) - Start cnspec in background mode
 - [cnspec status](cnspec_status.md) - Verify access to Mondoo Platform
 - [cnspec vault](cnspec_vault.md) - Manage vault environments

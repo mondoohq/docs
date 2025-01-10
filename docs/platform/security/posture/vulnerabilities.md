@@ -34,13 +34,13 @@ Find vulnerabilities for assets in a space:
 
    The list shows CVEs found in your infrastructure. For each CVE, Mondoo shows a rank (priority compared to other CVEs), score (CRITICAL, HIGH, MEDIUM, OR LOW), blast radius (calculated based on the affected assets), any [risk factors](#risk-factors), and when the vulnerability was first found in your infrastructure.
 
-   To learn how Mondoo calculates risk and rank, read [Security Findings](/platform/security/posture/findings/).
+   To learn how Mondoo calculates risk and rank, read [Security Findings](/platform/security/posture findings/).
 
 3. To filter the list, enter text in the search bar. These are some examples:
 
    - To show only risks for a certain platform, enter all or part of the platform name. For example, type `windows`, `debian`, or `google`.
 
-   - To find a specific CVE number, enter all or part of the number. For example, type `2023-21755` or `1325`.
+   - To find a specific CVE number, enter all or part of the number. For example, type `2025-21755` or `1325`.
 
    - To find risks to a certain service, tool, API, or other technology, enter all or part of its name. For example, enter `winsock`, `curl`, or `cim`.
 

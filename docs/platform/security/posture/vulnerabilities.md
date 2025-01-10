@@ -34,7 +34,7 @@ Find vulnerabilities for assets in a space:
 
    The list shows CVEs found in your infrastructure. For each CVE, Mondoo shows a rank (priority compared to other CVEs), score (CRITICAL, HIGH, MEDIUM, OR LOW), blast radius (calculated based on the affected assets), any [risk factors](#risk-factors), and when the vulnerability was first found in your infrastructure.
 
-   To learn how Mondoo calculates risk and rank, read [Security Findings](/platform/security/posture findings/).
+   To learn how Mondoo calculates risk and rank, read [Security Findings](/platform/security/posture/findings/).
 
 3. To filter the list, enter text in the search bar. These are some examples:
 

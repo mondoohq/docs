@@ -1,0 +1,120 @@
+---
+title: Import Data from CrowdStrike Falcon Spotlight
+sidebar_label: CrowdStrike Falcon
+sidebar_position: 20
+description: Import data from CrowdStrike Falcon Spotlight to combine CrowdStrike data with your Mondoo security findings.
+image: /img/featured_img/mondoo-feature.jpg
+---
+
+Mondoo can import data from CrowdStrike Falcon Spotlight and incorporate that data with your security findings. With a unified view of CrowdStrike's exposure management and Mondoo scan results, you can take advantage of Mondoo's powerful security visualization, prioritization, and ticket system integration.
+
+## Prerequisites
+
+Before you integrate CrowdStrike Falcon with Mondoo, be sure you have:
+
+- A Mondoo account with Editor or Owner permissions for the space in which you want to add the integration
+
+- A [CrowdStrike Falcon account](https://www.crowdstrike.com/platform/) with Spotlight exposure management enabled
+
+- Falcon Administrator access to your CrowdStrike Falcon account
+
+
+## Integrate Mondoo with CrowdStrike Falcon
+
+To create a new CrowdStrike Falcon integration in Mondoo, perform these steps:
+
+Step A: Create a CrowdStrike Falcon API client to give Mondoo access to CrowdStrike data
+
+Step B: Add a new CrowdStrike integration in the Mondoo Console
+
+### Step A: Create a CrowdStrike Falcon API client
+
+Like any service that integrates with CrowdStrike, Mondoo must have a CrowdStrike Falcon API client that gives it access to CrowdStrike data. To learn about API clients, read [CrowdStrike OAuth2-Based APIs](https://falcon.us-2.crowdstrike.com/documentation/page/a2a7fc0e/crowdstrike-oauth2-based-apis) in the Falcon documentation.
+
+1. Log into the Falcon console as a Falcon Administrator.
+
+2. In the left navigation, select **Support and resources**. Under **Resources and tools**, select **API clients and keys**.
+
+   SCRNSHOT
+
+3. Near the top-right corner, select the **Create API client** button.
+
+   SCRNSHOT
+
+4. Give the new client a name that lets you know it's for Mondoo.
+
+   SCRNSHOT
+
+5. In the **Scopes** table, check these boxes in the **Read** column to allow Mondoo to read data:
+
+   - Apps
+
+   - Detections
+
+   - Device content
+
+   - Device control policies
+
+   - Hosts
+
+   - Assets
+
+   - Vulnerabilities
+
+6. Select the **Create** button.
+
+    CrowdStrike Falcon shows the API client details that you need to give Mondoo. Keep this page open in your browser as you continue to the next step.
+
+### Step B: Add a new CrowdStrike Falcon integration in the Mondoo Console
+
+After you've created your new API client, you can create a Mondoo CrowdStrike Falcon integration. You need information from the API client you created in the instructions above.
+
+1. Access the Integrations > Add > CrowdStrike page in one of two ways:
+
+   - New space setup: After creating a new Mondoo account or creating a new space, the initial setup guide welcomes you. Select **BROWSE INTEGRATIONS** and then select **CrowdStrike**.
+
+   ![Welcome to Mondoo Page](/img/platform/start/welcome_to_mondoo.png)
+
+   - INTEGRATIONS page: In the side navigation bar, under **INTEGRATIONS**, select **Add New Integration**. Under Third-Party Data, select **CrowdStrike**.
+
+   SCRNSHOT
+
+2. In the **Choose an integration name** box, enter a name for the integration.
+
+3. In the **Provide the client ID** box, paste the client ID from the API client you created in the steps above.
+
+   SCRNSHOT
+
+4. In the **Provide the secret** box, paste the secret from the API client you created in the steps above.
+
+5. In the **Provide the base URL** box, paste the base URL from the API client you created in the steps above.
+
+6. Nearly all Mondoo customers can leave the **Export data from a specific member CID** option disabled. In the unlikely event that the API client you created for Mondoo has access to multiple member CIDs, read the Multiple CrowdStrike Falcon CIDs section below. Enable **Export data from a specific member CID** and, in the **Provide the member CID** box, paste the member CID from which you want to import data.
+
+7. Select the **START IMPORTING** button.
+
+Mondoo begins connecting to CrowdStrike Falcon Spotlight and collecting data.
+
+### Multiple CrowdStrike CIDs
+
+A minority of CrowdStrike users (usually those working with a managed provider) have multiple CIDs (customer identities). These are the only users who need to concern themselves with the **Configure member CID usage** section in when they create a new Mondoo CrowdStrike Falcon integration.
+
+If you were logged in as an administrator that manages of multiple CIDs, then the CrowdStrike Falcon API client you created can provide access to data belonging to any of those CIDs. Mondoo lets you specify a single CID from which to import data.
+
+Get the CrowdStrike member CID from the CrowdStrike Falcon console:
+
+SCRNSHOT
+
+1. In the left navigation, select **Host setup and management**. Under **Deploy**, select **Sensor downloads**.
+
+2. Under HOW TO INSTALL, select the copy icon beside the **Customer ID**. This is the value you paste in the Mondoo **Provide the member CID** box as described above.
+
+## View a CrowdStrike Falcon integration
+
+DEETS
+
+## Delete a CrowdStrike Falcon integration
+
+DEETS
+
+---

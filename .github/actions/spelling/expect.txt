@@ -64,6 +64,7 @@ cfee
 cfeed
 cgr
 chainguard
+CIDs
 cim
 classname
 clientid

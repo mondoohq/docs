@@ -33,17 +33,17 @@ Like any service that integrates with CrowdStrike, Mondoo must have a CrowdStrik
 
 1. Log into the Falcon console as a Falcon Administrator.
 
+   ![CrowdStrike Falcon menu](/img/platform/infra/imports/crowdstrike/cs-menu-client.png)
+
 2. In the left navigation, select **Support and resources**. Under **Resources and tools**, select **API clients and keys**.
 
-   SCRNSHOT
+   ![CrowdStrike Falcon API clients](/img/platform/infra/imports/crowdstrike/cs-clients.png)
 
 3. Near the top-right corner, select the **Create API client** button.
 
-   SCRNSHOT
+   ![CrowdStrike Falcon create API client](/img/platform/infra/imports/crowdstrike/cs-create-client.png)
 
 4. Give the new client a name that lets you know it's for Mondoo.
-
-   SCRNSHOT
 
 5. In the **Scopes** table, check these boxes in the **Read** column to allow Mondoo to read data:
 
@@ -62,6 +62,8 @@ Like any service that integrates with CrowdStrike, Mondoo must have a CrowdStrik
    - Vulnerabilities
 
 6. Select the **Create** button.
+
+   ![CrowdStrike Falcon new API client details](/img/platform/infra/imports/crowdstrike/cs-client-created.png)
 
     CrowdStrike Falcon shows the API client details that you need to give Mondoo. Keep this page open in your browser as you continue to the next step.
 
@@ -103,18 +105,30 @@ If you were logged in as an administrator that manages of multiple CIDs, then th
 
 Get the CrowdStrike member CID from the CrowdStrike Falcon console:
 
-SCRNSHOT
+![CrowdStrike Falcon menu](/img/platform/infra/imports/crowdstrike/cs-menu-cid.png)
 
 1. In the left navigation, select **Host setup and management**. Under **Deploy**, select **Sensor downloads**.
 
+   ![CrowdStrike Falcon CID](/img/platform/infra/imports/crowdstrike/cs-cid.png)
+
 2. Under HOW TO INSTALL, select the copy icon beside the **Customer ID**. This is the value you paste in the Mondoo **Provide the member CID** box as described above.
 
-## View a CrowdStrike Falcon integration
+## View, edit, or remove a CrowdStrike Falcon integration
 
-DEETS
+1. In the left navigation, under **Integrations**, select **All Integrations**.
 
-## Delete a CrowdStrike Falcon integration
+2. Select CrowdStrike and then select the integration you want.
 
-DEETS
+   ![Mondoo CrowdStrike integration] SCRNSHT
+
+3. Use the options in near the top-right corner of the page:
+
+   - To change the integration settings, select the edit (pencil) icon.
+
+   - To import data from CrowdStrike as soon as possible, select the **SCHEDULE NOW** button.
+
+   - To pause or resume importing data from CrowdStrike, select the ellipsis (...) menu and then select Pause Imports or Resume Imports.
+
+   - To remove the integration, select the delete (trash can) icon.
 
 ---

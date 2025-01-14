@@ -1,0 +1,80 @@
+---
+title: Import Data from SentinelOne
+sidebar_label: SentinelOne
+sidebar_position: 20
+description: Import data from SentinelOne to combine SentinelOne vulnerabilities with your Mondoo security findings.
+image: /img/featured_img/mondoo-feature.jpg
+---
+
+Mondoo can import data from SentinelOne and incorporate that data with your security findings. With a unified view of SentinelOne's vulnerabilities and Mondoo scan results, you can take advantage of Mondoo's powerful security visualization, prioritization, and ticket system integration.
+
+## Prerequisites
+
+Before you integrate SentinelOne with Mondoo, be sure you have:
+
+- A Mondoo account with Editor or Owner permissions for the space in which you want to add the integration
+
+- A [SentinelOne account](??????) with DEETS
+
+- access DEETS
+
+
+## Integrate Mondoo with SentinelOne
+
+To create a new SentinelOne integration in Mondoo, perform these steps:
+
+Step A: Create a SentinelOne DEETS to give Mondoo access to SentinelOne data
+
+Step B: Add a new SentinelOne integration in the Mondoo Console
+
+### Step A: Create a SentinelOne DEETS
+
+Like any service that integrates with SentinelOne, Mondoo must have a DEETS that gives it access to SentinelOne data. To learn about DEETS
+
+1. Log into the SentinelOne console as a DEETS.
+
+   ![DEETS](/img/platform/infra/imports/sentinelone/DEETS.png)
+
+2.
+
+### Step B: Add a new SentinelOne integration in the Mondoo Console
+
+After you've created your new API client, you can create a Mondoo SentinelOne integration. You need information from the DEETS you created in the instructions above.
+
+1. Access the Integrations > Add > SentinelOne page in one of two ways:
+
+   - New space setup: After creating a new Mondoo account or creating a new space, the initial setup guide welcomes you. Select **BROWSE INTEGRATIONS** and then select **SentinelOne**.
+
+   ![Welcome to Mondoo Page](/img/platform/start/welcome_to_mondoo.png)
+
+   - INTEGRATIONS page: In the side navigation bar, under **INTEGRATIONS**, select **Add New Integration**. Under Third-Party Data, select **SentinelOne**.
+
+   SCRNSHOT
+
+2. In the **Choose an integration name** box, enter a name for the integration.
+
+3. DEETS
+
+7. Select the **START IMPORTING** button.
+
+Mondoo begins connecting to DEETS and collecting data.
+
+## View, edit, or remove a SentinelOne integration
+
+1. In the left navigation, under **Integrations**, select **All Integrations**.
+
+2. Select **SentinelOne** and then select the integration you want.
+
+   ![Mondoo SentinelOne integration] SCRNSHT
+
+3. Use the options in near the top-right corner of the page:
+
+   - To change the integration settings, select the edit (pencil) icon.
+
+   - To import data from SentinelOne as soon as possible, select the **SCHEDULE NOW** button.
+
+   - To pause or resume importing data from SentinelOne, select the ellipsis (...) menu and then select Pause Imports or Resume Imports.
+
+   - To remove the integration, select the delete (trash can) icon.
+
+---

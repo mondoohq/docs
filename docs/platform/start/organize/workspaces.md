@@ -53,12 +53,12 @@ Mondoo currently supports these conditions for including assets in, or excluding
 | Risk rating      | Select one or more options: Critical, High, Medium, Low, or None                                                                                                                                                              |
 | Asset name       | Type a full or partial name, such as test, 2024, win, us-east-1, or docker-                                                                                                                                                   |
 | Kind             | Select one or more options: API, Bare metal system (operating systems that are not containers), Infrastructure as code, Container, Container image, or Network (Arista, Shodan, NMap, HTTP headers, and SSL/TLS certificates) |
-| Labels           | Select one or more key-value pairs. Labels are metadata defined and stored in the asset's platform. They include AWS, Azure, VMware, Google Cloud, and other tags as well as Kubernetes and Google Cloud labels.              |
+| Tags/Labels      | Select one or more key-value pairs. This metadata defined and stored in the asset's platform can include AWS, Azure, VMware, Google Cloud, and other tags as well as Kubernetes and Google Cloud labels.                      |
 | Annotations      | Select one or more key-value pairs. [Annotations](/platform/intel/annotations/) are Mondoo-specific metadata.                                                                                                                 |
 
-:::note
+:::tip Tags/labels vs. annotations
 
-We continue to add new conditions for workspaces. Check back soon for more!
+Annotations are metadata generated with and stored in Mondoo. Labels and tags are metadata that Mondoo collects when scanning assets.
 
 :::
 

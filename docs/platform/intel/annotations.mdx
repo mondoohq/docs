@@ -1,12 +1,12 @@
 ---
-title: Annotate (Tag) Assets
-sidebar_label: Annotate (Tag) Assets
+title: Annotate Assets
+sidebar_label: Annotate Assets
 sidebar_position: 4
-description: Add Mondoo annotations (similar to tags) to the assets in your infrastructure
+description: Add Mondoo annotations (similar to tags or labels) to the assets in your infrastructure
 image: /img/featured_img/mondoo-feature.jpg
 ---
 
-Use Mondoo annotations to add metadata to an asset. Annotations are key-value pairs that let you tag or categorize your assets. Add whatever metadata you need. Some examples are:
+Use Mondoo annotations to add metadata to an asset. Annotations are key-value pairs that let you tag, label, or categorize your assets. Add whatever metadata you need. Some examples are:
 
 | Example key | Example value         |
 | ----------- | --------------------- |
@@ -22,6 +22,12 @@ For example, suppose you want to create annotations that match the physical asse
 As another example, you might assign the key `build` and the value `terraform` to every asset in your inventory that is built using Terraform.
 
 Annotations display in the Mondoo Console when you view an asset. When you export data from Mondoo, annotations are included. You can search for assets based on their annotations. To learn how, read [Search Your Inventory](/platform/intel/search/)
+
+:::tip
+
+Don't confuse Mondoo annotations with tags and other metadata created and stored on the asset platform. The two are distinct.
+
+:::
 
 ## Add annotations
 

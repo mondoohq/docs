@@ -316,6 +316,7 @@ SECRETVALUE
 securetty
 securityimages
 SEfirewall
+sentinelone
 serviceprincipals
 signin
 singlequeryargument

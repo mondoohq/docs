@@ -14,6 +14,8 @@ Import security data from:
 
 - [Microsoft Defender for Cloud](/platform/infra/imports/defender/)
 
+- [SentinelOne](/platform/infra/imports/sentinelone/)
+
 - Check back for more integrations soon!
 
 ## Get help

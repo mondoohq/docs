@@ -208,15 +208,7 @@ After you've created and granted permissions to your new app registration, you c
 
 4. In the **Enter the directory (tenant) ID** box, enter the Directory (tenant) ID of the app registration. You can copy it from the app registration's Overview page in Entra.
 
-5. Specify the subscriptions from which you want Mondoo to continuously import Defender data.
-
-   - To continuously import from all subscriptions in the tenant, leave the **Import Microsoft Defender data from all subscriptions connected to the directory (tenant) ID** toggle enabled.
-
-   - To choose specific subscriptions to scan, disable the **Import Microsoft Defender data from all subscriptions connected to the directory (tenant) ID** toggle, select **Allow list**, and enter the subscription IDs. Enter each subscription ID on a new line.
-
-   - To scan **all** subscriptions **except** those you specify, disable the **Import Microsoft Defender data from all subscriptions connected to the directory (tenant) ID** toggle, select **Deny list** and enter the names of the subscription IDs. Enter each subscription ID on a new line.
-
-6. Provide a way for Mondoo to securely authenticate with Microsoft:
+5. Provide a way for Mondoo to securely authenticate with Microsoft:
 
    ![integration-create-image](/img/platform/infra/imports/defender/add-defender-bottom.png)
 
@@ -240,7 +232,7 @@ After you've created and granted permissions to your new app registration, you c
 
       b. In the **Drag and drop your .pem file here** box, select the cloud icon and choose the file to upload. Be sure to upload the file that contains both the certificate and the key. The file must follow the conventions described in the _Create a PEM certificate for Mondoo to authenticate with Microsoft section_ above.
 
-7. Select the **START IMPORTING** button.
+6. Select the **START IMPORTING** button.
 
 Mondoo begins connecting to Microsoft Defender for Cloud and collecting data.
 

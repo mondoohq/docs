@@ -15,6 +15,7 @@ Microsoft Entra ID application registration
 **Init**
 
 microsoft.application(name string)
+microsoft.application(id string)
 
 **Fields**
 

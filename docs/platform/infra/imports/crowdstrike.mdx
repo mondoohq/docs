@@ -14,10 +14,11 @@ Before you integrate CrowdStrike Falcon with Mondoo, be sure you have:
 
 - A Mondoo account with Editor or Owner permissions for the space in which you want to add the integration
 
-- A [CrowdStrike Falcon account](https://www.crowdstrike.com/platform/) with Spotlight exposure management enabled
+- Administrator access to a [CrowdStrike Falcon account](https://www.crowdstrike.com/platform/)
 
-- Falcon Administrator access to your CrowdStrike Falcon account
+- Falcon Spotlight exposure management enabled
 
+- Falcon Discover enabled (if you want Mondoo to collect information from CrowdStrike about software running on your assets)
 
 ## Integrate Mondoo with CrowdStrike Falcon
 
@@ -56,6 +57,8 @@ Like any service that integrates with CrowdStrike, Mondoo must have a CrowdStrik
    - Device control policies
 
    - Hosts
+
+   - Assets (only available if Falcon Discover is enabled for your CrowdStrike account)
 
    - Vulnerabilities
 

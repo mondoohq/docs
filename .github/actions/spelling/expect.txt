@@ -106,6 +106,7 @@ Dlp
 dlq
 dmark
 Drack
+eaa
 eae
 Ecn
 eddqq
@@ -113,6 +114,7 @@ EDE
 efbe
 efc
 efcfc
+efd
 efi
 Ehd
 eig
@@ -237,6 +239,7 @@ mysystem
 mytarget
 myuser
 nameterraform
+nametest
 natgateway
 NDdh
 NDgz

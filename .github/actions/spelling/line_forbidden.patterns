@@ -106,6 +106,18 @@
 # Product Names
 #
 
+# s.b. OpenLDAP
+\bOpen LDAP\b
+
+# s.b. WebSphere
+\bWebsphere\b
+
+# s.b. JBoss
+\bJboss\b
+
+# s.b. WildFly
+\bWildfly\b
+
 # s.b. DigiCert
 \bDigicert\b
 

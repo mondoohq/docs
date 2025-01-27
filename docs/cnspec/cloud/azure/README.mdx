@@ -85,9 +85,9 @@ cnspec scan azure --subscription YOUR-SUBSCRIPTION-ID
 
 cnspec follows these steps to load policies on which it bases the scan:
 
-- cnspec tries to read a config file, mondoo.yml, which includes the certificate and private key for authenticating with Mondoo Platform. If it finds the config, it loads the policies enabled for the Azure integration in the Mondoo space this Azure environment belongs to. You can enter `cnspec status` to see if the config file exists and cnspec is registered.
+1. cnspec tries to read a config file, mondoo.yml, which includes the certificate and private key for authenticating with Mondoo Platform. If it finds the config, it loads the policies enabled for the Azure integration in the Mondoo space this Azure environment belongs to. You can enter `cnspec status` to see if the config file exists and cnspec is registered.
 
-2.  If there is no config file (you have not registered cnspec or you've removed the mondoo.yml file), then cnspec loads Mondoo's open source policies and scans based on those.
+2. If there is no config file (you have not registered cnspec or you've removed the mondoo.yml file), then cnspec loads Mondoo's open source policies and scans based on those.
 
 :::info
 

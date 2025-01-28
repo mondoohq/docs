@@ -45,10 +45,12 @@ bdc
 bdn
 bigquery
 BJHy
+bluesky
 BMDH
 BNdp
 bqthk
 bsdutils
+bsky
 BUGZILLA
 BVWP
 byh

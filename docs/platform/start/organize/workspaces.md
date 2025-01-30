@@ -175,6 +175,10 @@ The drop-down menu shows all the workspaces in the current space. If you have a 
 
 ![Mondoo workspace overview](/img/platform/start/workspace-dash.png)
 
+To find an asset in the workspace type characters in the **Search in Workspace** bar at the top-right corner of the page. To learn about searching in Mondoo, read [Search Your Inventory](/platform/intel/search/).
+
+To see all the cases in the workspace, select **Cases** in the side navigation bar. To learn about cases in Mondoo, read [Track and Fix Findings with Cases and Your Ticket System](/platform/cases/overview/).
+
 ## Manage workspaces
 
 You can change the query that defines the assets in a workspace. You can also delete a workspace.

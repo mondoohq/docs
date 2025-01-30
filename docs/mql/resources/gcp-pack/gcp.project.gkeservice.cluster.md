@@ -57,6 +57,7 @@ Google Kubernetes Engine (GKE) cluster
 | confidentialNodesConfig        | dict                                                                                                      | Configuration of Confidential Nodes                                                                |
 | identityServiceConfig          | dict                                                                                                      | Configuration for Identity Service component                                                       |
 | networkPolicyConfig            | dict                                                                                                      | Configuration options for the NetworkPolicy feature                                                |
+| releaseChannel                 | string                                                                                                    | The release channel that the cluster is subscribed to                                              |
 
 **References**
 

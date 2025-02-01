@@ -106,6 +106,30 @@
 # Product Names
 #
 
+# s.b. TeamCity
+\bTeamcity\b
+
+# s.b. Bitbucket
+\bBitBucket\b
+
+# s.b. Logstash
+\bLogStash\b
+
+# s.b. CyberArk
+\bCyberark\b
+
+# s.b. Chef Infra Server
+\bChef Server\b
+
+# s.b. Chef Infra Client
+\bChef Client\b
+
+# s.b. containerd
+\bContainerd\b
+
+# s.b. systemd
+\bSystemd\b
+
 # s.b. OpenLDAP
 \bOpen LDAP\b
 
@@ -299,6 +323,9 @@
 #
 # Microsoft Products
 #
+
+# s.b. Entra ID
+\bEntraID\b
 
 # s.b. Microsoft
 \bMicroSoft\b

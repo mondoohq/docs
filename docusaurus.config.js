@@ -273,6 +273,13 @@ module.exports = {
                 "/platform/supplychain",
               ),
             ];
+          }  else if (existingPath.includes("/platform/ticketing")) {
+            return [
+              existingPath.replace(
+                "/platform/ticketing",
+                "/platform/cases",
+              ),
+            ];
           }
           return undefined; // Return a falsy value: no redirect created
         },

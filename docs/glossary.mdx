@@ -29,10 +29,6 @@ Each finding that Mondoo reveals has a [base score](/platform/security/posture/f
 
 The [blast radius](/platform/security/posture/findings/#blast-radius) of a finding is the number of assets in the space where Mondoo detected the finding.
 
-### case
-
-A [case](/platform/cases/overview/) is a task to be completed. Cases are based on one or more security findings (such as advisories or failed checks) that a team member has identified as needing attention.
-
 ### check
 
 A check is a verification of information. For example, a check can assert that an asset has a certain setting enabled or a software version installed. To learn more, read [Policy as Code](/platform/security/posture/pac/).
@@ -73,7 +69,7 @@ See [security drift](#security-drift).
 
 An [integration](/platform/infra/overview/) is Mondoo's connection and communication with an external system. Most integrations are with [assets](#asset). They allow Mondoo to gather inventory details, assess the security of an asset, and measure compliance.
 
-A Mondoo integration can also provide communication with a data [export destination](/platform/maintain/export/overview/) or a [project management or ticket system](/platform/cases/overview/).
+A Mondoo integration can also provide communication with a data [export destination](/platform/maintain/export/overview/) or a [project management or ticket system](/platform/ticketing/overview/).
 
 ### inventory
 
@@ -121,7 +117,7 @@ Mondoo gives each asset and space a security score that represents its ability t
 
 ### security drift
 
-Security drift (also known as "security posture drift" or just "drift") occurs when your infrastructure becomes more vulnerable to attack. Security practices and controls can deteriorate over time as your system configurations deviate from your established baselines. It's important to catch drift before it becomes a big problem. You can configure Mondoo to [automatically create a ticket](/platform/cases/manage/#automatically-create-cases-on-drift) in your tracking system (such as Jira or ServiceNow) when it detects drift.
+Security drift (also known as "security posture drift" or just "drift") occurs when your infrastructure becomes more vulnerable to attack. Security practices and controls can deteriorate over time as your system configurations deviate from your established baselines. It's important to catch drift before it becomes a big problem. You can configure Mondoo to [automatically create a ticket](/platform/ticketing/manage/#automatically-create-tickets-on-drift) in your tracking system (such as Jira or ServiceNow) when it detects drift.
 
 ### security posture
 
@@ -138,6 +134,10 @@ A [space](/platform/start/organize/spaces/) is a collection of [assets](#asset),
 ### team member
 
 A [team member](/platform/maintain/access/team_members/) is a person in your organization who has access to Mondoo.
+
+### ticket
+
+A [ticket](/platform/ticketing/overview/) is a task to be completed. Tickets are based on one or more security findings (such as advisories or failed checks) that a team member has identified as needing attention.
 
 ### vulnerability
 

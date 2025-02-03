@@ -1,0 +1,171 @@
+---
+title: Manage Ticketing
+sidebar_label: Manage Ticketing
+sidebar_position: 90
+description: Mondoo tickets, which integrate with your external ticketing system, allow you to track remediation of important security findings. View tickets and close them in Mondoo or your external tracking system. Change ticketing settings in the Mondoo space settings.
+image: /img/featured_img/mondoo-feature.jpg
+---
+
+Managing tickets includes:
+
+- Viewing open and closed tickets
+
+- Examining ticket details and progress
+
+- Closing tickets
+
+- Changing settings that control how tickets work in a space
+
+### View tickets
+
+On the Ticketing page in the Mondoo Console, you can view all the open and closed tickets in a space and see the progress made toward fixing the assets they track. To view tickets in a space:
+
+1. In the [Mondoo Console](https://console.mondoo.com), [navigate](/platform/start/navigate) to the space.
+
+   To view only the tickets in a certain [workspace](/platform/start/organize/workspaces/), [navigate](https://mondoo.com/docs/platform/start/organize/workspaces/#view-workspaces) to that workspace.
+
+2. In the side navigation bar, select **Ticketing**.
+
+   Mondoo lists all the open tickets in the space or workspace. (You can view closed tickets by selecting the **Closed Tickets** tab.) Status bars show progress made by fixing the assets tracked in each ticket. With each ticket, the list shows the date created, the policy that revealed the finding, and affected assets. If the ticket was created in a [workspace](/platform/start/organize/workspaces/), the list includes the workspace name.
+
+   ![Ticketing in Mondoo](/img/platform/ticketing/ticketing-list.png)
+
+3. Select a ticket to see its details.
+
+   ![Ticket details in Mondoo](/img/platform/ticketing/ticket-detail.png)
+
+:::note
+
+Changes you make to a Mondoo-based ticket in your external tracking system do not affect the ticket in Mondoo. Similarly, making progress on a ticket in Mondoo doesn't update the corresponding ticket in your external tracking system.
+
+:::
+
+## Close a ticket
+
+Close a ticket to indicate that the work is completed or to stop tracking it. You can close a ticket from the list of tickets or from the ticket detail page.
+
+import Partial from "../partials/_editor-owner.mdx";
+
+<Partial />{" "}
+
+1. In the [Mondoo Console](https://console.mondoo.com), [navigate](/platform/start/navigate) to the space.
+
+2. In the side navigation bar, select **Ticketing**.
+
+   Status bars show progress made by fixing the assets tracked in each ticket.
+
+   ![Ticketing in Mondoo](/img/platform/ticketing/ticketing-list.png)
+
+3. To close the ticket, either:
+
+   - Select the **CLOSE TICKET** button on the row of the ticket you want to close.
+
+   ![Close a ticket in Mondoo from the open tickets list](/img/platform/ticketing/ticketing-list-close.png)
+
+   Or
+
+   - Select the ticket you want to close and then select the **CLOSE TICKET** button near the top-right corner of the ticket detail page.
+
+   ![Close a ticket in Mondoo from the ticket detail](/img/platform/ticketing/ticketing-list-close.png)
+
+:::note
+
+Closing an ticket or issue in your external tracking system does not close the corresponding ticket in Mondoo. If you create tickets using a direct integration with your ticket system, a space-wide setting controls whether closing a ticket in Mondoo automatically closes the corresponding issue/ticket in your external tracking system. To learn more, read the section below.
+
+:::
+
+## Automatically create tickets on drift
+
+Drift occurs when, instead of improving security, an asset becomes _more_ vulnerable to attack:
+
+- An asset previously passed a check in a policy but is now failing that check
+
+- Mondoo previously did not detect a vulnerability on an asset, but now does detect that vulnerability
+
+It's important to catch drift quickly. Mondoo makes that possible with automatic drift detection. When an asset becomes less secure, Mondoo can automatically create a ticket to alert you of the change and track the work on resolving the problem.
+
+The space setting **Automatically create tickets on drift** controls whether Mondoo creates a ticket when it detects drift.
+
+![Ticketing space settings in Mondoo](/img/platform/ticketing/space-settings.png)
+
+To enable or disable automatic drift tickets:
+
+<Partial />{" "}
+
+1. Navigate to the space where you want to change the drift setting.
+
+2. In the navigation sidebar, select **Settings** and then select the **Ticketing** tab.
+
+3. Enable or disable **Automatically create tickets on drift**.
+
+
+### Choose a destination for drift tickets
+
+Like all tickets, Mondoo can share automatically created drift tickets with your ticket system. When you add a new ticketing integration, you choose whether to create drift tickets. You can also change this option any time in the space settings: Enable or disable **Create drift issues/tickets in this integration**. For direct integrations, you also specify the default destination for drift tickets.
+
+To choose a destination for automatic drift tickets:
+
+<Partial />{" "}
+
+1. Navigate to the space where you want to change the drift setting.
+
+2. In the navigation sidebar, select **Settings** and then select the **Ticketing** tab.
+
+3. Locate the settings for your integration and enable or disable **Create drift issues/tickets in this integration**.
+
+4. For direct integrations, specify where to create drift issues/tickets.
+
+### Group similar drift occurrences into one ticket
+
+If the same drift occurs on multiple assets, you may not want a separate ticket for each asset. Mondoo can group the drift detection of multiple assets into a single ticket. To do this, it waits a configurable period of time before finalizing the Mondoo ticket and creating an issue or ticket in your external tracking system.
+
+For example, suppose you configure Mondoo to create a new ticket and a corresponding Jira issue whenever it detects drift. You also configure Mondoo to wait four hours to group multiple instances of the same drift into one ticket. Mondoo scans asset 1, which fails check X. Mondoo identifies that asset 1 previously passed check X. This is drift, so Mondoo generates a ticket. However, Mondoo doesn't immediately save the ticket or create a Jira issue. Instead, Mondoo waits four hours to determine if any other assets also have incurred drift on check X. During these four hours, asset 5 and asset 6, which previously passed check X, now fail check X. Instead of creating new tickets for assets 5 and 6, Mondoo adds information about assets 5 and 6 to the ticket initially created for asset 1. Now there is a single ticket with information about the three assets that incurred drift on check X. When four hours have passed, Mondoo creates a single Jira issue with the details about asset 1, asset 5, and asset 6 all incurring drift on check X.
+
+The **Aggregation window** space setting controls how long Mondoo waits to group similar drift occurrences in a single ticket. You either choose a time period or choose **No aggregation** to create a unique ticket (and corresponding issue or ticket) for each asset that incurs the same drift.
+
+To automatically group similar drift occurrences into one ticket:
+
+<Partial />{" "}
+
+1. Navigate to the space where you want to change the drift settings.
+
+2. In the navigation sidebar, select **Settings** and then select the **Ticketing** tab.
+
+3. In the **Aggregation window** drop-down list, choose how long to wait to detect the same drift on other assets before finalizing a ticket and creating an issue/ticket in your ticket system.
+
+## Choose whether to close external tickets/issues when you close Mondoo tickets
+
+![Space-wide ticketing settings](/img/platform/ticketing/space-settings.png)
+
+You can choose whether to close the corresponding issue or ticket in your external tracking system when you close a Mondoo ticket in the Mondoo Console. This setting applies only to direct integrations, not to email integrations.
+
+<Partial />{" "}
+
+1. Navigate to the space where you want to change the closing behavior.
+
+2. In the navigation sidebar, select **Settings** and then select the **Ticketing** tab.
+
+3. Enable or disable **Automatically close tickets**.
+
+
+## Learn more
+
+- [Track and Fix Findings with Ticketing](/platform/ticketing/overview/)
+
+- [Set up Ticketing and Azure DevOps](/platform/ticketing/setup-azuredevops/)
+
+- [Set up Ticketing and GitHub](/platform/ticketing/setup-github/)
+
+- [Set up Ticketing and GitLab](/platform/ticketing/setup-gitlab/)
+
+- [Set up Ticketing and Jira](/platform/ticketing/setup/)
+
+- [Set up Ticketing and Zendesk](/platform/ticketing/setup-zendesk/)
+
+- [Set up Ticketing to Email Your External Ticket System](/platform/ticketing/setup-email)
+
+- [Create Tickets from Advisories](/platform/ticketing/advisories/)
+
+- [Create Tickets from Checks](/platform/ticketing/checks/)
+
+---

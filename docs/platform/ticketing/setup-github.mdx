@@ -1,14 +1,14 @@
 ---
-title: Set up Cases and GitHub Issues
-sidebar_label: Set up Cases and GitHub Issues
+title: Set up Ticketing and GitHub Issues
+sidebar_label: Set up Ticketing and GitHub Issues
 sidebar_position: 22
-description: Mondoo cases, which you can directly integrate with GitHub Issues, allow you to track remediation of important security findings. Set up an integration with GitHub to start using cases and include Mondoo data in your GitHub issues.
+description: Mondoo tickets, which you can directly integrate with GitHub Issues, allow you to track remediation of important security findings. Set up an integration with GitHub to start using tickets and include Mondoo data in your GitHub issues.
 image: /img/featured_img/mondoo-feature.jpg
 ---
 
-Set up cases in a space to allow users in the space to keep track of security tasks and add GitHub issues directly from within the Mondoo Console. Cases setup involves configuring Mondoo to integrate with GitHub.
+Set up ticketing in a space to allow users in the space to keep track of security tasks and add GitHub issues directly from within the Mondoo Console. Ticketing setup involves configuring Mondoo to integrate with GitHub.
 
-For an overview of cases, read [Track and Fix Findings with Cases and Your Ticket System](/platform/cases/overview/).
+For an overview of ticketing, read [Track and Fix Findings with Ticketing](/platform/ticketing/overview/).
 
 ## Prerequisites
 
@@ -21,7 +21,7 @@ For an overview of cases, read [Track and Fix Findings with Cases and Your Ticke
 ## Create a GitHub personal access token to give Mondoo access to the repository
 
 A _personal access token_ gives Mondoo the ability to create GitHub issues on your behalf. A token can grant access to an entire GitHub organization or only to specific repositories. Once
- you share the token with Mondoo, any new cases created in the [space](/platform/start/organize/spaces/) can write new GitHub issues using that token.
+ you share the token with Mondoo, any new tickets created in the [space](/platform/start/organize/spaces/) can write new GitHub issues using that token.
 
 To learn more about personal access tokens, read [Managing your personal access tokens](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) in the GitHub documentation.
 
@@ -35,7 +35,7 @@ To learn more about personal access tokens, read [Managing your personal access 
 
 5. Near the top-right corner of the page, select the **Generate new token** button.
 
-6. In the **Token name** box, enter an easily identifiable name, such as `Mondoo cases integration`.
+6. In the **Token name** box, enter an easily identifiable name, such as `Mondoo ticketing integration`.
 
 7. In the **Resource owner** drop-down list, select the organization that owns the repository or repositories where you want Mondoo to create issues.
 
@@ -63,17 +63,17 @@ If you prefer, you can create a classic personal access token. Assign the `repo`
 
 ## Add a GitHub integration
 
-1. In the Mondoo Console, navigate to the space where you want to set up cases and, in the side navigation bar, select **Cases**.
+1. In the Mondoo Console, navigate to the space where you want to set up ticketing and, in the side navigation bar, select **Ticketing**.
 
-   ![Configure cases in Mondoo](/img/platform/cases/cases-blank.png)
+   ![Configure ticketing in Mondoo](/img/platform/ticketing/ticketing-blank.png)
 
 2. Select the **ADD INTEGRATION** button.
 
-   ![Configure cases in Mondoo](/img/platform/cases/cases-integrations.png)
+   ![Configure ticketing in Mondoo](/img/platform/ticketing/ticketing-integrations.png)
 
 3. Select **GitHub Issues**.
 
-   ![Configure cases in Mondoo](/img/platform/cases/cases-add-gh.png)
+   ![Configure ticketing in Mondoo](/img/platform/ticketing/ticketing-add-gh.png)
 
 4. In the **Choose an integration name** box, enter a name for the integration. Make it a name that clearly shows this is a GitHub integration.
 
@@ -81,20 +81,20 @@ If you prefer, you can create a classic personal access token. Assign the `repo`
 
 6. In the **Provide your personal access token** box, paste the token you copied from GitHub in the steps above.
 
-7. To close a case in Mondoo when the corresponding GitHub issue closes, enable **Automatically close cases**.
+7. To close a ticket in Mondoo when the corresponding GitHub issue closes, enable **Automatically close tickets**.
 
-8. To create a case and a corresponding GitHub issue when an asset becomes more exposed to attack, enable **Create drift issues in this integration** and enter the GitHub organization and repository where you want to create new issues. To learn more, read [Automatically create cases on drift](/platform/cases/manage#automatically-create-cases-on-drift).
+8. To create a Mondoo ticket and a corresponding GitHub issue when an asset becomes more exposed to attack, enable **Create drift issues in this integration** and enter the GitHub organization and repository where you want to create new issues. To learn more, read [Automatically create tickets on drift](/platform/ticketing/manage#automatically-create-tickets-on-drift).
 
 9. Select the **CREATE INTEGRATION** button.
 
 ## Learn more
 
-- [Create Cases from Advisories](/platform/cases/advisories/)
+- [Create Tickets from Advisories](/platform/ticketing/advisories/)
 
-- [Create Cases from Checks](/platform/cases/checks/)
+- [Create Tickets from Checks](/platform/ticketing/checks/)
 
-- [Manage Cases](/platform/cases/manage/)
+- [Manage Ticketing](/platform/ticketing/manage/)
 
-- [Track and Fix Findings with Cases and Your Ticket System](/platform/cases/overview/)
+- [Track and Fix Findings with Ticketing](/platform/ticketing/overview/)
 
 ---

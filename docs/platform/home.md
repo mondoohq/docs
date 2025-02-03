@@ -34,7 +34,7 @@ The Mondoo unified security platform finds and prioritizes vulnerabilities and m
 
 ### [Reach Continuous Compliance](/platform/compliance/overview/)
 
-### [Track and Fix Findings with Cases and Your Ticket System](/platform/cases/overview/)
+### [Track and Fix Findings with Ticketing](/platform/ticketing/overview/)
 
 ### [Gain Asset Intelligence](/platform/intel/overview/)
 

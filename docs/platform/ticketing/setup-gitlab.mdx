@@ -1,14 +1,14 @@
 ---
-title: Set up Cases and GitLab Issues
-sidebar_label: Set up Cases and GitLab Issues
+title: Set up Ticketing and GitLab Issues
+sidebar_label: Set up Ticketing and GitLab Issues
 sidebar_position: 25
-description: Mondoo cases, which you can directly integrate with GitLab Issues, allow you to track remediation of important security findings. Set up an integration with GitLab to start using cases and include Mondoo data in your GitLab issues.
+description: Mondoo tickets, which you can directly integrate with GitLab Issues, allow you to track remediation of important security findings. Set up an integration with GitLab to start using ticketing and include Mondoo data in your GitLab issues.
 image: /img/featured_img/mondoo-feature.jpg
 ---
 
-Set up cases in a space to allow users in the space to keep track of security tasks and add GitLab issues directly from within the Mondoo Console. Cases setup involves configuring Mondoo to integrate with GitLab.
+Set up ticketing in a space to allow users in the space to keep track of security tasks and add GitLab issues directly from within the Mondoo Console. Ticketing setup involves configuring Mondoo to integrate with GitLab.
 
-For an overview of cases, read [Track and Fix Findings with Cases and Your Ticket System](/platform/cases/overview/).
+For an overview of ticketing, read [Track and Fix Findings with Ticketing](/platform/ticketing/overview/).
 
 ## Prerequisites
 
@@ -42,17 +42,17 @@ To learn more, read [Create a personal access token](https://docs.gitlab.com/ee/
 
 ## Add a GitLab integration
 
-1. In the Mondoo Console, navigate to the space where you want to set up cases and, in the side navigation bar, select **Cases**.
+1. In the Mondoo Console, navigate to the space where you want to set up ticketing and, in the side navigation bar, select **Ticketing**.
 
-   ![Configure cases in Mondoo](/img/platform/cases/cases-blank.png)
+   ![Configure ticketing in Mondoo](/img/platform/ticketing/ticketing-blank.png)
 
 2. Select the **ADD INTEGRATION** button.
 
-   ![Configure cases in Mondoo](/img/platform/cases/cases-integrations.png)
+   ![Configure ticketing in Mondoo](/img/platform/ticketing/ticketing-integrations.png)
 
 3. Select **GitLab Issues**.
 
-   ![Configure cases in Mondoo](/img/platform/cases/cases-add-gh.png)
+   ![Configure ticketing in Mondoo](/img/platform/ticketing/ticketing-add-gh.png)
 
 4. In the **Choose an integration name** box, enter a name for the integration. Make it a name that clearly shows this is a GitLab integration.
 
@@ -60,20 +60,20 @@ To learn more, read [Create a personal access token](https://docs.gitlab.com/ee/
 
 6. In the **Provide your personal access token** box, paste the token you copied from GitLab in the steps above.
 
-7. To close a case in Mondoo when the corresponding GitLab issue closes, enable **Automatically close cases**.
+7. To close a ticket in Mondoo when the corresponding GitLab issue closes, enable **Automatically close tickets**.
 
-8. To create a case and a corresponding GitLab issue when an asset becomes more exposed to attack, enable **Create drift issues in this integration** and enter the GitLab project where you want to create new issues. To learn more, read [Automatically create cases on drift](/platform/cases/manage#automatically-create-cases-on-drift).
+8. To create a Mondoo ticket and a corresponding GitLab issue when an asset becomes more exposed to attack, enable **Create drift issues in this integration** and enter the GitLab project where you want to create new issues. To learn more, read [Automatically create tickets on drift](/platform/ticketing/manage#automatically-create-tickets-on-drift).
 
 9. Select the **CREATE INTEGRATION** button.
 
 ## Learn more
 
-- [Create Cases from Advisories](/platform/cases/advisories/)
+- [Create Tickets from Advisories](/platform/ticketing/advisories/)
 
-- [Create Cases from Checks](/platform/cases/checks/)
+- [Create Tickets from Checks](/platform/ticketing/checks/)
 
-- [Manage Cases](/platform/cases/manage/)
+- [Manage Ticketing](/platform/ticketing/manage/)
 
-- [Track and Fix Findings with Cases and Your Ticket System](/platform/cases/overview/)
+- [Track and Fix Findings with Ticketing](/platform/ticketing/overview/)
 
 ---

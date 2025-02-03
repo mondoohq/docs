@@ -1,0 +1,71 @@
+---
+title: Set up Ticketing and Jira
+sidebar_label: Set up Ticketing and Jira
+sidebar_position: 27
+description: Mondoo tickets, which you can directly integrate with Atlassian Jira, allow you to track remediation of important security findings. Set up an integration with Jira to start using ticketing and include Mondoo data in your Jira issues.
+image: /img/featured_img/mondoo-feature.jpg
+---
+
+Set up ticketing in a space to allow users in the space to keep track of security tasks and add Jira issues directly from within the Mondoo Console. Ticketing setup involves configuring Mondoo to integrate with Jira.
+
+For an overview of ticketing, read [Track and Fix Findings with Ticketing](/platform/ticketing/overview/).
+
+:::note
+
+Mondoo offers an alternative method for sharing tickets with Jira: an email integration. This approach lets you tap into the automation features of [Jira's incoming mail handler](https://support.atlassian.com/jira-cloud-administration/docs/create-issues-and-comments-from-email/). To learn how to create an email integration for ticketing, read [Set up Ticketing to Email Your External Ticket System](/platform/ticketing/setup-email).
+
+:::
+
+## Prerequisites
+
+- Owner or Editor access to the Mondoo space
+
+- A Jira account with access to the project where you want Mondoo to add issues
+
+- An API token for Jira account access
+
+  To learn how to create and copy an API token, read [Manage API tokens for your Atlassian account](https://support.atlassian.com/atlassian-account/docs/manage-api-tokens-for-your-atlassian-account/) in the Atlassian documentation.
+
+## Add a Jira integration
+
+1. In the Mondoo Console, navigate to the space where you want to set up ticketing and, in the side navigation bar, select **Ticketing**.
+
+   ![Configure ticketing in Mondoo](/img/platform/ticketing/ticketing-blank.png)
+
+2. Select the **ADD INTEGRATION** button.
+
+   ![Configure ticketing in Mondoo](/img/platform/ticketing/ticketing-integrations.png)
+
+3. Select **Atlassian Jira**.
+
+   ![Configure ticketing in Mondoo](/img/platform/ticketing/ticketing-add-jira.png)
+
+4. In the **Choose an integration name** box, enter a name for the integration. Make it a name that clearly shows this is a Jira integration.
+
+5. In the **Jira host** box, type the domain for your Jira instance. Do not include a slash at the end of the domain. Example: `https://lunalectric-workspace.atlassian.net`
+
+6. In the **Email address** box, enter the email address you use to log into your Jira instance.
+
+7. In the **API token** box, paste your API token for access to your Jira account. To learn how to create and copy an API token, read [Manage API tokens for your Atlassian account](https://support.atlassian.com/atlassian-account/docs/manage-api-tokens-for-your-atlassian-account/) in the Atlassian documentation.
+
+8. Select the **CREATE INTEGRATION** button.
+
+   ![Configure ticketing in Mondoo](/img/platform/ticketing/ticketing-preferences.png)
+
+9. To close a ticket in Mondoo when the corresponding Jira issue closes, enable **Automatically close tickets**.
+
+10. To create a Mondoo ticket and a corresponding Jira issue when an asset becomes more exposed to attack, enable **Create drift issues in this integration** and choose the destination project. To learn more, read [Automatically create tickets on drift](/platform/ticketing/manage#automatically-create-tickets-on-drift).
+
+11. Select the **FINALIZE UPDATE** button.
+
+## Learn more
+
+- [Create Tickets from Advisories](/platform/ticketing/advisories/)
+
+- [Create Tickets from Checks](/platform/ticketing/checks/)
+
+- [Manage Ticketing](/platform/ticketing/manage/)
+
+- [Track and Fix Findings with Ticketing](/platform/ticketing/overview/)
+
+---

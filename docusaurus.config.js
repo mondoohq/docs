@@ -13,7 +13,7 @@ const legacyRedirects = [
   //// July 2024 moved Jira/Cases content to its own high-level section, where it'll grow
   {
     from: "/platform/maintain/jira",
-    to: "/platform/cases/overview",
+    to: "/platform/ticketing/overview",
   },
   //// June 2024 reworked cnquery structure: made a /cloud dir
   {
@@ -271,6 +271,13 @@ module.exports = {
               existingPath.replace(
                 "/platform/infra/supply",
                 "/platform/supplychain",
+              ),
+            ];
+          }  else if (existingPath.includes("/platform/ticketing")) {
+            return [
+              existingPath.replace(
+                "/platform/ticketing",
+                "/platform/cases",
               ),
             ];
           }

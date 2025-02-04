@@ -177,7 +177,7 @@ The drop-down menu shows all the workspaces in the current space. If you have a 
 
 To find an asset in the workspace type characters in the **Search in Workspace** bar at the top-right corner of the page. To learn about searching in Mondoo, read [Search Your Inventory](/platform/intel/search/).
 
-To see all the cases in the workspace, select **Cases** in the side navigation bar. To learn about cases in Mondoo, read [Track and Fix Findings with Cases and Your Ticket System](/platform/cases/overview/).
+To see all the tickets in the workspace, select **Ticketing** in the side navigation bar. To learn about ticketing in Mondoo, read [Track and Fix Findings with Ticketing](/platform/ticketing/overview/).
 
 ## Manage workspaces
 

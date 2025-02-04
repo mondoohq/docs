@@ -6,11 +6,9 @@ description: This page provides an overview of how you can import security data 
 image: /img/featured_img/mondoo-feature.jpg
 ---
 
-Mondoo can import data from third-party security tools.
+To make impactful changes to your security posture, you need a unified view of your entire attack surface. That way you can best prioritize fixes for the greatest overall improvement. Mondoo makes this possible by allowing you to import data from these third-party security tools:
 
-## Third-party security tools
-
-Import security data from:
+- [CrowdStrike Falcon Spotlight](/platform/infra/imports/crowdstrike/)
 
 - [Microsoft Defender for Cloud](/platform/infra/imports/defender/)
 

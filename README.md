@@ -60,5 +60,5 @@ Thank you for your contribution!
 
 ## Legal
 
-- **Copyright:** 2018-2024, Mondoo, Inc.
+- **Copyright:** 2018-2025, Mondoo, Inc.
 - **License:** MPL 2.0

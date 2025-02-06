@@ -184,7 +184,7 @@ cnspec scan --inventory-file FILENAME
       --asset-name string             User-override for the asset name
       --detect-cicd                   Try to detect CI/CD environments. If detected, set the asset category to 'cicd'. (default true)
   -h, --help                          help for scan
-      --incognito                     Run in incognito mode. Do not report scan results to  Mondoo Platform.
+      --incognito                     Run in incognito mode. Do not report scan results to Mondoo Platform.
       --inventory-file string         Set the path to the inventory file.
       --inventory-format-ansible      Set the inventory format to Ansible.
       --inventory-format-domainlist   Set the inventory format to domain list.

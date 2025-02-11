@@ -116,3 +116,6 @@ MII[BCEJ]\w*
 
 # UID in MQL policy
 - uid: \S*
+
+# Mondoo registration token
+MONDOO_REGISTRATION_TOKEN='\S*'

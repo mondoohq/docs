@@ -42,7 +42,7 @@ This example installs cnspec on an AWS EC2 instance:
    ```bash title="Example cnspec install on an AWS EC2 instance"
    cat > mondoo-cloudinit.sh << EOF
    #!/bin/bash
-   export MONDOO_REGISTRATION_TOKEN='sample-api-token-CI6Ii8vYWdlbnRzABEL775kb28uYXBwL3NwYWNlcy9mcmllbmRseS1jb3JpLTY1NjU5Ni9zZXJ2aWNlYWNjb3VudHMvMnNqM21aSVhvczloZGxHQ0J2aE1kVVJ3N1g5IiwidHlwIjoiSldUIn0.eyJpYXQiOjE3Mzg5HANNAsImlzcyI6Im1vbmRvby9hbDEWEYuYmYiOjE3Mzg5NTUzMTUsInN1YiI6Ii8vYWdlbnRzLmFwaS5tb25kb28uYXBwL3NwYWNlcy9mcmllbmRseS1jb3JpLTY1NjU5Ni9zZXJ2aWNlYWNjb3VudHMvMnNqM21aSVhvczloZGxHQ0J2aE1kVVJ3N1g5In0.Xz_N4lRFQtu5RqoLRep7V_JGhZrOm_1s7_hrrnaKyqYT0bYyUhJXzno0_r8nJj_Z6w-GGZgC6DZutK2GkC-6pic3f2oU3YKPBxH5atBH7AEaQpcmCOSMOL42ErGzt4D'
+   export MONDOO_REGISTRATION_TOKEN='sample-token-CI6Ii8vYWdlbnRzABEL775kb28uYXBwL3NwYWNlcy9mcmllbmRseS1jb3JpLTY1NjU5Ni9zZXJ2aWNlYWNjb3VudHMvMnNqM21aSVhvczloZGxHQ0J2aE1kVVJ3N1g5IiwidHlwIjoiSldUIn0.eyJpYXQiOjE3Mzg5HANNAsImlzcyI6Im1vbmRvby9hbDEWEYuYmYiOjE3Mzg5NTUzMTUsInN1YiI6Ii8vYWdlbnRzLmFwaS5tb25kb28uYXBwL3NwYWNlcy9mcmllbmRseS1jb3JpLTY1NjU5Ni9zZXJ2aWNlYWNjb3VudHMvMnNqM21aSVhvczloZGxHQ0J2aE1kVVJ3N1g5In0.Xz_N4lRFQtu5RqoLRep7V_JGhZrOm_1s7_hrrnaKyqYT0bYyUhJXzno0_r8nJj_Z6w-GGZgC6DZutK2GkC-6pic3f2oU3YKPBxH5atBH7AEaQpcmCOSMOL42ErGzt4D'
    curl -sSL https://install.mondoo.com/sh | bash -s -- -u enable -s enable -t $MONDOO_REGISTRATION_TOKEN
    EOF
    ```

@@ -27,9 +27,11 @@
   --ifm-shadow-color: rgba(200, 200, 200, 0.2);
   --ifm-shadow-color2: rgba(200, 200, 200, 0.14);
   --ifm-shadow-color3: rgba(200, 200, 200, 0.12);
-  --ifm-shadow: 0 3px 1px -2px var(--ifm-shadow-color),
+  --ifm-shadow:
+    0 3px 1px -2px var(--ifm-shadow-color),
     0 2px 2px 0 var(--ifm-shadow-color2), 0 1px 5px 0 var(--ifm-shadow-color3);
-  --ifm-shadow-selected: 0 2px 4px -1px var(--ifm-shadow-color),
+  --ifm-shadow-selected:
+    0 2px 4px -1px var(--ifm-shadow-color),
     0 4px 5px 0 var(--ifm-shadow-color2), 0 1px 10px 0 var(--ifm-shadow-color3);
 
   --ifm-color-primary: #9147ff;

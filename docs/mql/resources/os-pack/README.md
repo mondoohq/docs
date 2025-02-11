@@ -38,6 +38,7 @@ Resources included in this pack:
 | [docker.file.user](docker.file.user.md)                 | Dockerfile USER instructions                               |
 | [docker.image](docker.image.md)                         | Docker image                                               |
 | [file](file.md)                                         | File on the system                                         |
+| [file.context](file.context.md)                         | File context is a range of lines/columns in a file         |
 | [file.permissions](file.permissions.md)                 | Access permissions for a given file                        |
 | [files](files.md)                                       |                                                            |
 | [files.find](files.find.md)                             | Find files on the system                                   |
@@ -109,7 +110,7 @@ Resources included in this pack:
 | [shadow.entry](shadow.entry.md)                         | Shadowed password file entry                               |
 | [sshd](sshd.md)                                         | SSH server resource                                        |
 | [sshd.config](sshd.config.md)                           | SSH server configuration                                   |
-| [sshd.config.matchBlock](sshd.config.matchblock.md)     |                                                            |
+| [sshd.config.matchBlock](sshd.config.matchblock.md)     | A block of SSH server configuration                        |
 | [user](user.md)                                         | User on this system                                        |
 | [users](users.md)                                       | Users configured on this system                            |
 | [vuln.advisory](vuln.advisory.md)                       | Advisory information                                       |

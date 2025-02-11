@@ -33,6 +33,9 @@ Microsoft Defender for Cloud
 | defenderForResourceManager      | dict                                                                                                                            | Microsoft Defender for Resource Manager configuration                 |
 | defenderForContainers           | dict                                                                                                                            | Defender for Containers components configuration                      |
 | securityContacts                | &#91;&#93;[azure.subscription.cloudDefenderService.securityContact](azure.subscription.clouddefenderservice.securitycontact.md) | List of configured security contacts                                  |
+| settingsMCAS                    | [azure.subscription.cloudDefenderService.settings](azure.subscription.clouddefenderservice.settings.md)                         | Settings for MCAS                                                     |
+| settingsWDATP                   | [azure.subscription.cloudDefenderService.settings](azure.subscription.clouddefenderservice.settings.md)                         | Settings for WDATP                                                    |
+| settingsSentinel                | [azure.subscription.cloudDefenderService.settings](azure.subscription.clouddefenderservice.settings.md)                         | Settings for Sentinel                                                 |
 
 **References**
 

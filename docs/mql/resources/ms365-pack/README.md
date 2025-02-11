@@ -34,6 +34,7 @@ Resources included in this pack:
 | [microsoft.rolemanagement](microsoft.rolemanagement.md)                                                   | Deprecated: use `microsoft.roles` instead                                            |
 | [microsoft.rolemanagement.roleassignment](microsoft.rolemanagement.roleassignment.md)                     | Microsoft role assignment                                                            |
 | [microsoft.rolemanagement.roledefinition](microsoft.rolemanagement.roledefinition.md)                     | Microsoft role definition                                                            |
+| [microsoft.roles](microsoft.roles.md)                                                                     | List of Microsoft Entra role definitions with optional filters                       |
 | [microsoft.security](microsoft.security.md)                                                               | Microsoft Security                                                                   |
 | [microsoft.security.riskyUser](microsoft.security.riskyuser.md)                                           | Microsoft Entra users who are at risk                                                |
 | [microsoft.security.securityscore](microsoft.security.securityscore.md)                                   | Microsoft Secure Score                                                               |
@@ -45,6 +46,7 @@ Resources included in this pack:
 | [microsoft.user.authenticationMethods](microsoft.user.authenticationmethods.md)                           | Microsoft Entra authentication methods                                               |
 | [microsoft.user.identity](microsoft.user.identity.md)                                                     | Microsoft user identity                                                              |
 | [microsoft.user.signin](microsoft.user.signin.md)                                                         | Microsoft user sign-in                                                               |
+| [microsoft.users](microsoft.users.md)                                                                     | List of Microsoft Entra users with optional filters                                  |
 | [ms365.exchangeonline](ms365.exchangeonline.md)                                                           | Microsoft 365 Exchange Online                                                        |
 | [ms365.exchangeonline.exoMailbox](ms365.exchangeonline.exomailbox.md)                                     | Microsoft 365 Exchange Online Mailbox                                                |
 | [ms365.exchangeonline.externalSender](ms365.exchangeonline.externalsender.md)                             | Microsoft 365 Exchange Online External Sender                                        |

@@ -14,6 +14,6 @@ Deprecated: use `microsoft.roles` instead
 
 **Fields**
 
-| ID              | TYPE                                                                                            | DESCRIPTION                               |
-| --------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------- |
-| roleDefinitions | &#91;&#93;[microsoft.rolemanagement.roledefinition](microsoft.rolemanagement.roledefinition.md) | Deprecated: use `microsoft.roles` instead |
+| ID              | TYPE                                  | DESCRIPTION                               |
+| --------------- | ------------------------------------- | ----------------------------------------- |
+| roleDefinitions | [microsoft.roles](microsoft.roles.md) | Deprecated: use `microsoft.roles` instead |

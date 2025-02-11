@@ -315,6 +315,7 @@ saasure
 Sas
 sbom
 scim
+scm
 scsd
 Scz
 SECRETID

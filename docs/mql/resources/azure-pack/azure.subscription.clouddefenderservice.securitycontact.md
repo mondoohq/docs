@@ -18,13 +18,14 @@ Microsoft Defender for Cloud security contact
 
 **Fields**
 
-| ID                  | TYPE             | DESCRIPTION                         |
-| ------------------- | ---------------- | ----------------------------------- |
-| id                  | string           | ID of the security contact          |
-| name                | string           | Name of the security contact        |
-| emails              | &#91;&#93;string | Emails that receive security alerts |
-| alertNotifications  | dict             | Alerts notification settings        |
-| notificationsByRole | dict             | Notifications by role settings      |
+| ID                  | TYPE             | DESCRIPTION                                                   |
+| ------------------- | ---------------- | ------------------------------------------------------------- |
+| id                  | string           | ID of the security contact                                    |
+| name                | string           | Name of the security contact                                  |
+| emails              | &#91;&#93;string | Emails that receive security alerts                           |
+| alertNotifications  | dict             | Deprecated: use `notificationSources` instead                 |
+| notificationSources | dict             | A collection of sources which evaluate the email notification |
+| notificationsByRole | dict             | Notifications by role settings                                |
 
 **References**
 

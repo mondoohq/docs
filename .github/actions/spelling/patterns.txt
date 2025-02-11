@@ -114,11 +114,18 @@ db.\w{2}.\w*
 # rsa private keys
 MII[BCEJ]\w*
 
-# UID in MQL policy
+# ID data MQL policies / query packs
 - uid: \S*
+secret_id: \S*
+secret: \S*
+publicKeyData: \S*
+fingerprint: "\S*
+p=MII\S*
+BackupPlanVersion\S*
 
 # Mondoo registration token https://rubular.com/r/3UzGvhUamOAa0U
 MONDOO_REGISTRATION_TOKEN='\S*'
 
-# Fingerprint data in our MQL GCP/AWS output https://rubular.com/r/ACip5j6PdC0wqK
-fingerprint: "\S*"
+# AWS keys
+aws_access_key_id = \S*
+aws_secret_access_key = \S*

@@ -117,5 +117,8 @@ MII[BCEJ]\w*
 # UID in MQL policy
 - uid: \S*
 
-# Mondoo registration token
+# Mondoo registration token https://rubular.com/r/3UzGvhUamOAa0U
 MONDOO_REGISTRATION_TOKEN='\S*'
+
+# Fingerprint data in our MQL GCP/AWS output https://rubular.com/r/ACip5j6PdC0wqK
+fingerprint: "\S*"

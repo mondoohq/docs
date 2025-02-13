@@ -106,6 +106,9 @@
 # Product Names
 #
 
+# s.b. Tailscale
+\bTailScale\b
+
 # s.b. TeamCity
 \bTeamcity\b
 

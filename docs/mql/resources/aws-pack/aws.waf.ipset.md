@@ -26,4 +26,4 @@ Amazon WAF IP set (defining IP Ranges)
 | name        | string | Name of the IP set            |
 | description | string | Description of the IP set     |
 | addressType | string | Address type: ipv4 or ipv6    |
-| addresses   | dict   | list of IP addresses          |
+| addresses   | dict   | List of IP addresses          |

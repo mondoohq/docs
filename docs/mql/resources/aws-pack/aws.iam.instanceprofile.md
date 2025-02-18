@@ -26,4 +26,4 @@ AWS IAM instance profile
 | instanceProfileId   | string                                    | ID of the IAM instance profile                                        |
 | instanceProfileName | string                                    | Name of the instance profile                                          |
 | tags                | map[string]string                         | Tags for the instance profile                                         |
-| iamRoles            | &#91;&#93;[aws.iam.role](aws.iam.role.md) | role attached to the instanceProfile                                  |
+| iamRoles            | &#91;&#93;[aws.iam.role](aws.iam.role.md) | Role attached to the instanceProfile                                  |

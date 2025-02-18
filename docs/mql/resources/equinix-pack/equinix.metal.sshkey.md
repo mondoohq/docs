@@ -25,7 +25,7 @@ Equinix Metal SSH key
 | ID          | TYPE   | DESCRIPTION                   |
 | ----------- | ------ | ----------------------------- |
 | id          | string | ID of the SSH key             |
-| label       | string | label of the SSH key          |
+| label       | string | Label of the SSH key          |
 | key         | string | Key                           |
 | fingerPrint | string | Finger print                  |
 | createdAt   | time   | When the key was created      |

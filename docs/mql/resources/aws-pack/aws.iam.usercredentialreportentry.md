@@ -26,7 +26,7 @@ aws.iam.usercredentialreportentry(properties map[string]string)
 
 | ID                        | TYPE                            | DESCRIPTION                                           |
 | ------------------------- | ------------------------------- | ----------------------------------------------------- |
-| properties                | map[string]string               | properties on the IAM user credential report          |
+| properties                | map[string]string               | Properties on the IAM user credential report          |
 | arn                       | string                          | ARN for the credential report                         |
 | accessKey1Active          | bool                            | Whether the access key is active                      |
 | accessKey1LastRotated     | time                            | Time when key was last rotated                        |

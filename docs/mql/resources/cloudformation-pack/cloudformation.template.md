@@ -26,4 +26,4 @@ AWS CloudFormation Template
 | conditions  | map[string]dict                                                 | Template conditions      |
 | resources   | &#91;&#93;[cloudformation.resource](cloudformation.resource.md) | Template resources       |
 | outputs     | &#91;&#93;[cloudformation.output](cloudformation.output.md)     | Template outputs         |
-| types       | &#91;&#93;string                                                | supported resource types |
+| types       | &#91;&#93;string                                                | Supported resource types |

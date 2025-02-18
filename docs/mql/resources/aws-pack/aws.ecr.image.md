@@ -29,7 +29,7 @@ Use the `aws.ecr.image` resource to assess a container image stored in an Amazon
 | repoName             | string           | Name of the repository for the image                                                      |
 | region               | string           | Region where the ECR image is located                                                     |
 | arn                  | string           | ARN for the image                                                                         |
-| uri                  | string           | uri for the image repository                                                              |
+| uri                  | string           | URI for the image repository                                                              |
 | pushedAt             | time             | Time the image was pushed                                                                 |
 | sizeInBytes          | int              | Size of the image in bytes                                                                |
 | lastRecordedPullTime | time             | Time of the most recent image pull (Amazon only refreshes this data once every 24 hours.) |

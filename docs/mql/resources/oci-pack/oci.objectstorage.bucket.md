@@ -23,7 +23,7 @@ Oracle Cloud Infrastructure (OCI) Object Storage bucket
 | region              | [oci.region](oci.region.md) | Region                                              |
 | publicAccessType    | string                      | Type of public access enabled                       |
 | storageTier         | string                      | Storage tier type                                   |
-| autoTiering         | string                      | auto tiering status                                 |
+| autoTiering         | string                      | Auto tiering status                                 |
 | versioning          | string                      | Bucket versioning                                   |
 | objectEventsEnabled | bool                        | Whether events are emitted for object state changes |
 | replicationEnabled  | bool                        | Whether the bucket is a replication source          |

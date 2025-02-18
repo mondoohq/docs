@@ -24,7 +24,7 @@ npm.packages(path string)
 
 | ID                 | TYPE                                    | DESCRIPTION                          |
 | ------------------ | --------------------------------------- | ------------------------------------ |
-| path               | string                                  | optional path to search for packages |
+| path               | string                                  | Optional path to search for packages |
 | root               | [npm.package](npm.package.md)           | Root Package (may not exist)         |
 | directDependencies | &#91;&#93;[npm.package](npm.package.md) | List of direct dependencies          |
 | files              | &#91;&#93;[pkgFileInfo](pkgfileinfo.md) | Files used to determine the packages |

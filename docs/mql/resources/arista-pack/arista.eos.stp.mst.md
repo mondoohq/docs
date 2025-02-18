@@ -26,4 +26,4 @@ Arista Multiple Spanning Tree Protocol (MSTP) resource instance
 | bridge             | dict                                                                    | Detailed bridge information (Forward Delay, MAC, Priority) |
 | rootBridge         | dict                                                                    | Root bridge information                                    |
 | regionalRootBridge | dict                                                                    | Regional root bridge information                           |
-| interfaces         | &#91;&#93;[arista.eos.spt.mstInterface](arista.eos.spt.mstinterface.md) | interfaces on the specified MST instances                  |
+| interfaces         | &#91;&#93;[arista.eos.spt.mstInterface](arista.eos.spt.mstinterface.md) | Interfaces on the specified MST instances                  |

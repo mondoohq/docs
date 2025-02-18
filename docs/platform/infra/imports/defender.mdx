@@ -14,7 +14,13 @@ Before you integrate Microsoft Defender for Cloud with Mondoo, be sure you have:
 
 - A Mondoo account with Editor or Owner permissions for the space in which you want to add the integration
 
-- An [Azure account](https://azure.microsoft.com/free/?WT.mc_id=A261C142F) with an active subscription and Microsoft Defender for Servers enabled
+- An [Azure account](https://azure.microsoft.com/free/?WT.mc_id=A261C142F) with an active subscription and these services enabled:
+
+  - [Microsoft Defender for Cloud](https://learn.microsoft.com/en-us/azure/defender-for-cloud/connect-azure-subscription)
+
+  - [Microsoft Defender for Servers](https://learn.microsoft.com/en-us/azure/defender-for-cloud/tutorial-enable-servers-plan)
+
+  - [Microsoft Defender Vulnerability Management](https://learn.microsoft.com/en-us/defender-vulnerability-management/tvm-prerequisites) (formerly known as Threat & Vulnerability Management or TVM) enabled in your Azure account
 
 - Permission to manage applications in Microsoft Entra ID (formerly Active Directory)&mdash;any of these [Entra built-in roles](https://learn.microsoft.com/en-us/azure/active-directory/roles/permissions-reference) include the required permissions:
 

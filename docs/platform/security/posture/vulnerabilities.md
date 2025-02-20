@@ -28,7 +28,7 @@ Find vulnerabilities for assets in a space:
 
    :::
 
-2. In the left navigation bar, under **Vulnerabilities**, select **CVEs**.
+2. In the left navigation, under **Findings**, select **CVEs**.
 
    ![Find vulnerabilities](/img/platform/security/cves.png)
 

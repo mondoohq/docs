@@ -31,13 +31,23 @@ The **Dashboard** of a space gives you a quick understanding of your security po
 
    ![Space dashboard in the Mondoo Console](/img/platform/security/dashboard.png)
 
-   The Space Dashboard shows:
+   The upper portion of the space dashboard shows the most important information about the space:
 
-   - An interactive chart of all the assets in the space
+   - An interactive chart of all the types of assets in the space and their risks
 
-   - A list of the most important vulnerabilities to fix (based on risks and affected assets)
+   - The number of critical- and high-risk findings in the space
 
-   - A list of the most important security findings (such as configuration settings that put your organization at risk)
+   - A list of the most important findings that need to be fixed
+
+   ![Space dashboard in the Mondoo Console](/img/platform/security/dashboard-bottom.png)
+
+   The lower portion of the space dashboard shows remediation statistics and finding details:
+
+   - An interactive display of the mean time to remediate (MTTR) findings (select a risk score to show the MTTR for findings with that level of risk)
+
+   - Vulnerability counts broken down by type of finding (advisories and CVEs)
+
+   - An overview of enabled policies
 
    To learn how Mondoo ranks the top vulnerabilities and findings, read [Prioritize Security Findings](/platform/security/posture/findings/).
 

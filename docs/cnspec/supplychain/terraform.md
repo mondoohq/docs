@@ -32,7 +32,7 @@ Start by enabling any Terraform policies in Mondoo Platform you want to run agai
 
 1. Log in to [https://console.mondoo.com](https://console.mondoo.com).
 
-2. In the left navigation, under **Security**, select **Policies**.
+2. In the left navigation, under **Findings**, select **Policies**.
 
 3. In the top-right corner, select the plus icon (+).
 

@@ -26,7 +26,7 @@ Find advisories for assets in a space:
 
    :::
 
-2. In the left navigation bar, under **Vulnerabilities**, select **Advisories**.
+2. In the left navigation, under **Findings**, select **Advisories**.
 
    ![Find Advisories](/img/platform/security/advisories.png)
 

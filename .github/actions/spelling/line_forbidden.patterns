@@ -68,6 +68,9 @@
 # Industry Terms
 #
 
+# s.b. Nmap
+\b[Nn]Map\b
+
 # s.b. NetFlow
 \bNetflow\b
 

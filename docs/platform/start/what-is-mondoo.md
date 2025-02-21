@@ -30,11 +30,11 @@ With Mondoo, you can:
 
 Misconfigurations and unpatched vulnerabilities pose the biggest risk to the technology, infrastructure, and services that power your business. Protect your:
 
-- **Public cloud** - AWS, Microsoft Azure, and Google Cloud
+- **Public cloud** - AWS, Microsoft Azure, Google Cloud, and OCI
 
 - **Private cloud** - VMware (vCenter / ESXi)
 
-- **Kubernetes** - Kubernetes clusters (EKS, GKE, AKS, self-managed) and Kubernetes manifests
+- **Kubernetes** - Kubernetes clusters (EKS, GKE, AKS, OpenShift, self-managed) and Kubernetes manifests
 
 - **Containers** - Container registries (ECR, ACR, GCR, Harbor, Docker Hub) and running Docker containers
 
@@ -44,7 +44,7 @@ Misconfigurations and unpatched vulnerabilities pose the biggest risk to the tec
 
 - **Software supply chain** - Azure Pipelines, CircleCI, GitHub Actions, GitLab CI/CD, and more
 
-- **Networking** - Arista, Shodan, NMap, HTTP headers, and SSL/TLS certificates
+- **Networking** - Arista, Shodan, Nmap, HTTP headers, and SSL/TLS certificates
 
 - **Applications** - Nginx and Exchange
 

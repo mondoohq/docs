@@ -68,9 +68,6 @@
 # Industry Terms
 #
 
-# s.b. Nmap
-\b[Nn]Map\b
-
 # s.b. NetFlow
 \bNetflow\b
 
@@ -288,6 +285,9 @@
 # s.b. name server
 # \bnameserver\b
 # \bnameservers\b
+
+# s.b. Nmap
+\b[Nn]Map\b
 
 #
 # Kubernetes Terms

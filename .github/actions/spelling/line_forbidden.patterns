@@ -286,6 +286,9 @@
 # \bnameserver\b
 # \bnameservers\b
 
+# s.b. Nmap
+\b[Nn]Map\b
+
 #
 # Kubernetes Terms
 #

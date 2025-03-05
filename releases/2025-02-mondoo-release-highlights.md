@@ -6,7 +6,7 @@ image: /img/release-highlights/2025-02/feb2025.png
 tags: [release, mondoo]
 ---
 
-## Integrations with CrowdStrike and SentinelOne, priority asset customization, optimized dashboards that give you exactly what you need to start your day informed… Nobody told us it was a short month! Learn about these and many more additions and improvements we made to Mondoo in February.
+#### Integrations with CrowdStrike and SentinelOne, priority asset customization, optimized dashboards that give you exactly what you need to start your day informed… Nobody told us it was a short month! Learn about these and many more additions and improvements we made to Mondoo in February.
 
 ![Mondoo Release Highlights February 2025](/img/release-highlights/2025-02/feb2025.png)
 
@@ -16,7 +16,7 @@ Do you wish there was an easy way to centralize data from multiple security tool
 
 [Centralizing findings in Mondoo](https://mondoo.com/blog/unify-findings-from-crowdstrike-sentinelone-and-microsoft-defender-in-mondoo) from external security tools is easy in Mondoo. And this month we added SentinelOne and CrowdStrike Falcon to our list of third-party security integrations.
 
-![Third-party integrations in Mondoo][/img/releases/2025-02-04-mondoo-11.40-is-out/3rd-party.png]
+![Third-party integrations in Mondoo](/img/releases/2025-02-04-mondoo-11.40-is-out/3rd-party.png)
 
 With these integrations, you can take advantage of Mondoo's security visualization, prioritization, and ticketing capabilities. Consolidating the data in Mondoo lets you understand your biggest risks and make the most impactful changes to boost your security posture.
 
@@ -32,7 +32,7 @@ You now have even more control over how Mondoo evaluates risk in your infrastruc
 
 Now, you can rest assured that any risks that endanger your most critical assets are automatically assigned a higher priority. At the same time, you can reduce noise by specifying which assets are less important to your business.
 
-![High- and low-priority assets in Mondoo][/img/release-highlights/2025-02/priority.png]
+![High- and low-priority assets in Mondoo](/img/release-highlights/2025-02/priority.png)
 
 ### Enhanced space dashboard
 
@@ -103,19 +103,19 @@ You can now use Terraform to automate creating [Mondoo workspaces](https://mondo
 
 AWS account scans now include automatic discovery of RDS clusters. Cluster assets appear on the Assets page in a new RDS Clusters group. Each asset includes full inventory information.
 
-![RDS Cluster Scan][/img/releases/2025-02-11-mondoo-11.41-is-out/rds.png]
+![RDS Cluster Scan](/img/releases/2025-02-11-mondoo-11.41-is-out/rds.png)
 
 ### More view options for asset lists
 
 We've updated the Assets page to make finding and selecting the assets you care about easier than ever. Improved search results show only the asset groups that include results. It's also now more clear when no assets match your search. New group and list icons let you switch between views: Organize by platform groups or display a single list so you can sort and select all assets in a group at once.
 
-![Asset selection][/img/releases/2025-02-11-mondoo-11.41-is-out/assets.gif]
+![Asset selection](/img/releases/2025-02-11-mondoo-11.41-is-out/assets.gif)
 
 ## Risk factors on assets
 
 The detail page for an asset now shows any risk factors present on the asset, such as an end-of-life operating system or an incompletely removed package. Hover over a risk factor icon to see the risk factor.
 
-![Risk factors on assets in Mondoo][/img/release-highlights/2025-02/risk-on-asset.png]
+![Risk factors on assets in Mondoo](/img/release-highlights/2025-02/risk-on-asset.png)
 
 ## Improved search experience
 
@@ -131,7 +131,7 @@ We made loads of changes to all the different searches you perform in the Mondoo
 
 On the Checks tab of asset detail pages, we reorganized the information displayed about each policy check. It's easier than ever to find the remediation steps you need most.
 
-![Asset details in Mondoo][/img/release-highlights/2025-02/check.png]
+![Asset details in Mondoo](/img/release-highlights/2025-02/check.png)
 
 ## Easier prioritization
 
@@ -165,44 +165,44 @@ We expanded and improved how Mondoo weighs risk factors to calculate a final ris
 
 Blast radius icons now reflect the size of the blast radius.
 
-![Blast radius in Mondoo][/img/release-highlights/2025-02/blast.png]
+![Blast radius in Mondoo](/img/release-highlights/2025-02/blast.png)
 
 ## Expanded Google Kubernetes support to include GKE 1.7
 
 Our CIS benchmark policies now include support for the latest Google Kubernetes Engine (GKE) version, 1.7.0. To see the newest CIS benchmarks for Kubernetes, go to the [CIS website](https://www.cisecurity.org/benchmark/kubernetes).
 
-### Resource updates
+## Resource updates
 
-#### `azure.subscription.cloudDefenderService`
+### azure.subscription.cloudDefenderService
 
 * New `settingsMCAS`, `settingsWDATP`, and `settingsSentinel` fields using the new `azure.subscription.cloudDefenderService.settings` resource
 
-#### `azure.subscription.cloudDefenderService.securityContact`
+### azure.subscription.cloudDefenderService.securityContact
 
 * Deprecate `alertNotifications` in favor of the new `notificationSources` field
 
-#### `azure.subscription.webService.appsite`
+### azure.subscription.webService.appsite
 
 * New `ftp` and `scm` fields using the new `azure.subscription.webService.appsite.basicPublishingCredentialsPolicies` resource
 
-#### `gcp.project.gke.cluster`
+### gcp.project.gke.cluster
 
 * New `releaseChannel` field
 
-#### `microsoft`
+### microsoft
 
 * New `users` field using the new `microsoft.users` resource
 
 * New `roles` field using the new `microsoft.roles` resource
 
-#### `sshd.config`
+### sshd.config
 
 * New `context` field using the new `file.context` resource
 
-#### `microsoft.applications.length`
+### microsoft.applications.length
 
 * Improve performance
 
-#### `microsoft.groups.length`
+### microsoft.groups.length
 
 * Improve performance

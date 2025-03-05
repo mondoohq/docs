@@ -44,21 +44,21 @@ The top ten findings, based on risk score and blast radius, display prominently 
 
 Remediation information lets you quickly assess security and operations team performance on vulnerabilities. All remediation data is grouped by risk level:
 
-* The mean time it takes the team to remediate findings (MTTR)
-*  The number of vulnerabilities remediated
+- The mean time it takes the team to remediate findings (MTTR)
+- The number of vulnerabilities remediated
 
 ![Mondoo space dashboard](/img/release-highlights/2025-02/dashbottom.png)
 
 Summary counts provide a more detailed overview of your current security posture, including risk level and status:
 
-* Vulnerable assets
-* Advisories
-* CVEs
+- Vulnerable assets
+- Advisories
+- CVEs
 
 Lastly, policy information describes the measures you have in place to assess your environment:
 
-* How your infrastructure is currently performing against your enabled policies
-* The types of policies you've enabled
+- How your infrastructure is currently performing against your enabled policies
+- The types of policies you've enabled
 
 All combined, the space dashboard provides a holistic view of your security and compliance at a glance.
 
@@ -121,11 +121,11 @@ The detail page for an asset now shows any risk factors present on the asset, su
 
 We made loads of changes to all the different searches you perform in the Mondoo Console. These are a few examples:
 
-* Application search results now include the risk rating.
-* Asset search results now include the platform.
-* You can now search for an advisory based on a corresponding CVE.
-* We reduced false-positive results for CVE searches.
-* You can now search for software based on a present CVE.
+- Application search results now include the risk rating.
+- Asset search results now include the platform.
+- You can now search for an advisory based on a corresponding CVE.
+- We reduced false-positive results for CVE searches.
+- You can now search for software based on a present CVE.
 
 ## Improved layout of finding details on assets
 
@@ -137,17 +137,17 @@ On the Checks tab of asset detail pages, we reorganized the information displaye
 
 In a few different ways, we provided extra help prioritizing the assets and findings that most need your attention:
 
-* In lists throughout the Mondoo Console, we display the assets or findings with the worst scores first.
-* On dashboards and other pages, we display final scores that are adjusted per Mondoo's contextual risk factors (instead of just base scores).
-* On dashboards and other pages, we consider risk factors when choosing the most important data to display.
+- In lists throughout the Mondoo Console, we display the assets or findings with the worst scores first.
+- On dashboards and other pages, we display final scores that are adjusted per Mondoo's contextual risk factors (instead of just base scores).
+- On dashboards and other pages, we consider risk factors when choosing the most important data to display.
 
 ## Mondoo AWS security policy improvements
 
 The Mondoo AWS security policy now does an even better job of identifying misconfigurations and other issues in your AWS infrastructure:
 
-* We expanded descriptions and remediation information to help you better understand the problem and the solution.
-* We run checks on more (fine-grained) assets for better score visibility.
-* We added checks for insecure security groups that allow remote access to systems (VNC/RDP).
+- We expanded descriptions and remediation information to help you better understand the problem and the solution.
+- We run checks on more (fine-grained) assets for better score visibility.
+- We added checks for insecure security groups that allow remote access to systems (VNC/RDP).
 
 ## Directly open individual PDF reports
 
@@ -157,9 +157,9 @@ If you run a single report in Mondoo, there's no need to download a zip file and
 
 We expanded and improved how Mondoo weighs risk factors to calculate a final risk score:
 
-* We improved how we apply risk factors and your customized security model.
-* Scoring now better prioritizes risks.
-* We updated vulnerability risk factors to work on a wider range of Linux distributions.
+- We improved how we apply risk factors and your customized security model.
+- Scoring now better prioritizes risks.
+- We updated vulnerability risk factors to work on a wider range of Linux distributions.
 
 ## Represent blast radius visually
 
@@ -175,34 +175,34 @@ Our CIS benchmark policies now include support for the latest Google Kubernetes 
 
 ### azure.subscription.cloudDefenderService
 
-* New `settingsMCAS`, `settingsWDATP`, and `settingsSentinel` fields using the new `azure.subscription.cloudDefenderService.settings` resource
+- New `settingsMCAS`, `settingsWDATP`, and `settingsSentinel` fields using the new `azure.subscription.cloudDefenderService.settings` resource
 
 ### azure.subscription.cloudDefenderService.securityContact
 
-* Deprecate `alertNotifications` in favor of the new `notificationSources` field
+- Deprecate `alertNotifications` in favor of the new `notificationSources` field
 
 ### azure.subscription.webService.appsite
 
-* New `ftp` and `scm` fields using the new `azure.subscription.webService.appsite.basicPublishingCredentialsPolicies` resource
+- New `ftp` and `scm` fields using the new `azure.subscription.webService.appsite.basicPublishingCredentialsPolicies` resource
 
 ### gcp.project.gke.cluster
 
-* New `releaseChannel` field
+- New `releaseChannel` field
 
 ### microsoft
 
-* New `users` field using the new `microsoft.users` resource
+- New `users` field using the new `microsoft.users` resource
 
-* New `roles` field using the new `microsoft.roles` resource
+- New `roles` field using the new `microsoft.roles` resource
 
 ### sshd.config
 
-* New `context` field using the new `file.context` resource
+- New `context` field using the new `file.context` resource
 
 ### microsoft.applications.length
 
-* Improve performance
+- Improve performance
 
 ### microsoft.groups.length
 
-* Improve performance
+- Improve performance

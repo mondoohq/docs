@@ -1,7 +1,7 @@
 ---
 title: Mondoo Release Highlights February 2025
 description: Integrations with CrowdStrike and SentinelOne, priority asset customization, optimized dashboards that give you exactly what you need to start your day informed… Nobody told us it was a short month! Learn about these and many more additions and improvements we made to Mondoo in February.
-authors: [letha, tim]
+authors: [letha]
 image: /img/release-highlights/2025-02/feb2025.png
 tags: [release, mondoo]
 ---
@@ -22,7 +22,7 @@ With these integrations, you can take advantage of Mondoo's security visualizati
 
 Mondoo includes Microsoft Defender, SentinelOne, and CrowdStrike data alongside findings from Mondoo's own scans, and deduplicates so you don't have to.
 
-![Third-party data on an asset in Mondoo][/img/releases/2025-02-04-mondoo-11.40-is-out/cve-falcon.png]
+![Third-party data on an asset in Mondoo](/img/releases/2025-02-04-mondoo-11.40-is-out/cve-falcon.png)
 
 To learn the benefits of pulling all your security data into Mondoo, read [Unify Findings from CrowdStrike, SentinelOne, and Microsoft Defender in Mondoo](https://mondoo.com/blog/unify-findings-from-crowdstrike-sentinelone-and-microsoft-defender-in-mondoo).
 

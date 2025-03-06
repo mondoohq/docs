@@ -195,10 +195,6 @@ Our CIS benchmark policies now include support for the latest Google Kubernetes 
 
 - New `roles` field using the new `microsoft.roles` resource
 
-### sshd.config
-
-- New `context` field using the new `file.context` resource
-
 ### microsoft.applications.length
 
 - Improve performance
@@ -206,3 +202,7 @@ Our CIS benchmark policies now include support for the latest Google Kubernetes 
 ### microsoft.groups.length
 
 - Improve performance
+
+### sshd.config
+
+- New `context` field using the new `file.context` resource

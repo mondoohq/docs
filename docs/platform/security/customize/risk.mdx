@@ -2,11 +2,13 @@
 title: Customize How Risk Factors Affect Asset Scores
 sidebar_label: Customize Risk Factors
 sidebar_position: 10
-description: Mondoo considers multiple contextual risk factors when evaluating the security of your assets. To customize per your business's security priorities, you can choose which contextual risk factors affect your assets' scores.
+description: Mondoo considers multiple contextual risk factors when evaluating the security of your assets. To customize per your business's security priorities, you can choose which contextual risk factors affect your assets' scores. You can also choose tags, labels, and annotations that affect risk scores.
 image: /img/featured_img/mondoo-feature.jpg
 ---
 
 Mondoo considers multiple [contextual risk factors](https://mondoo.com/docs/platform/security/posture/findings/#factor-contextual-risk) when evaluating the security of your assets. To customize per your business's security priorities, you can choose which contextual risk factors affect your assets' scores.
+
+You can also define risk using metadata: Use cloud tags or labels or Mondoo annotations to flag high-risk and low-risk assets.
 
 For a finer degree of control over the impact that risk factors have on asset scores, you can choose not only _whether_ a risk factor affects scores, but _how much_ a risk factor affects scores.
 
@@ -28,11 +30,65 @@ import Partial from "../../partials/_editor-owner.mdx";
 
 4. In the list of risk factors, enable or disable the toggle beside a risk factor:
 
-   - An enabled toggle (purple, with the switch to the right) indicate that the risk factor does affect the security scores of assets in the space.
+    - An enabled toggle (purple, with the switch to the right) indicate that the risk factor does affect the security scores of assets in the space.
 
-   - A disabled toggle, (white, with the switch to the left) indicate that the risk factor does not affect the security scores of assets in the space.
+    - A disabled toggle, (white, with the switch to the left) indicate that the risk factor does not affect the security scores of assets in the space.
 
-   Changes take place immediately.
+5. Select the **SAVE CHANGES** button. Changes take place immediately.
+
+## Flag high-risk or low-risk assets using metadata
+
+You can configure Mondoo to adjust risk based on metadata on an asset. There are two types of metadata that Mondoo tracks:
+
+- **Tags and labels** assigned in your cloud platform
+
+  - Tags: AWS, Azure, VMware, and Google Cloud
+
+  - Labels: Kubernetes and Google Cloud
+
+- **[Annotations]**(/platform/intel/annotations/) you assign using Mondoo
+
+You can use this metadata to influence the way Mondoo evaluates risk. Choose the tags, labels, or annotations that either indicate high-risk assets or indicate low-risk assets.
+
+For example, suppose in Azure you use a **dept** tag to identify which company departments rely on your different cloud resources. The key is **dept** and the values are **finance**, **sales**, **research**, and so on. Because the resources used by your finance department process and store banking data, you want Mondoo to consider all Azure resources with the **dept:finance** tag to be high-priority assets.
+
+To specify tags, labels, or annotations that indicate high-priority or low-priority assets, you create conditions, simple queries that must be true for Mondoo to treat the asset as high or low priority.
+
+1. In the [Mondoo Console](https://console.mondoo.com), [navigate](/platform/start/navigate) to the space you want to customize.
+
+2. In the side navigation bar, select **Settings**.
+
+3. Select the **Security Model** tab.
+
+4. Scroll to the bottom of the tab.
+
+   ![Define assets as high or low risk based on metadata in Mondoo](/img/platform/security/hi-lo-pri.png)
+
+5. Under **High-priority asset** or **Low-priority asset**, select the plus (+) button to add a condition.
+
+   ![Define assets as high or low risk based on metadata in Mondoo](/img/platform/security/add-first-condition.png)
+
+6. Choose whether to assign priority based on a cloud tag/label or a Mondoo annotation.
+
+   ![Add a condition](/img/platform/security/hi-lo-pri.png)
+
+7. Select the plus (+) button to the right and choose the metadata key for the condition. To be flagged high or low priority, an asset must have a tag, label, or annotation with this key.
+
+   ![Choose the key](/img/platform/security/choose-key.png)
+
+8. Choose the value for the condition. To be flagged high or low priority, an asset must have a tag, label, or annotation with this key value.
+
+   ![Choose the value](/img/platform/security/choose-value.png)
+
+   Mondoo shows the complete condition that assets must meet to be flagged high or low priority.
+
+   ![Full condition](/img/platform/security/one-condition.png)
+
+9. To add another condition, select **+ ADD CONDITION** and follow steps 6-8 again. If you define multiple conditions, an asset only must meet one (or more) of the conditions to be flagged high or low priority. (They're combined with a Boolean OR.)
+
+   ![Add another condition](/img/platform/security/another-condition.png)
+
+10. Select the **SAVE CHANGES** button. Changes take place immediately.
 
 ## Choose how much the different risk factors affect security scores
 

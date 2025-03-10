@@ -53,6 +53,7 @@ github.repository(name string)
 | hasDownloads        | bool                                                    | Whether the repository has downloads                               |
 | hasDiscussions      | bool                                                    | Whether the repository has discussions                             |
 | isTemplate          | bool                                                    | Whether the repository is an organization repository template      |
+| customProperties    | dict                                                    | Repository custom properties                                       |
 | openMergeRequests   | &#91;&#93;[github.mergeRequest](github.mergerequest.md) | List of open merge requests for the repository                     |
 | closedMergeRequests | &#91;&#93;[github.mergeRequest](github.mergerequest.md) | List of closed merge requests for the repository                   |
 | allMergeRequests    | &#91;&#93;[github.mergeRequest](github.mergerequest.md) | List of all merge requests for the repository                      |

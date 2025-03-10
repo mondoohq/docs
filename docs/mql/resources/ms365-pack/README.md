@@ -18,6 +18,7 @@ Resources included in this pack:
 | [microsoft.application](microsoft.application.md)                                                         | Microsoft Entra ID application registration                                          |
 | [microsoft.application.permission](microsoft.application.permission.md)                                   | Microsoft Service Principal Permission                                               |
 | [microsoft.application.role](microsoft.application.role.md)                                               | Microsoft Entra ID app roles are custom roles to assign permissions to users or apps |
+| [microsoft.applications](microsoft.applications.md)                                                       | List of Microsoft Entra ID application registrations                                 |
 | [microsoft.conditionalAccess](microsoft.conditionalaccess.md)                                             | Microsoft Conditional Access Policies                                                |
 | [microsoft.conditionalAccess.countryNamedLocation](microsoft.conditionalaccess.countrynamedlocation.md)   | Microsoft Conditional Access Country named location                                  |
 | [microsoft.conditionalAccess.ipNamedLocation](microsoft.conditionalaccess.ipnamedlocation.md)             | Microsoft Conditional Access IP named location                                       |
@@ -28,6 +29,7 @@ Resources included in this pack:
 | [microsoft.domain](microsoft.domain.md)                                                                   | Microsoft domain                                                                     |
 | [microsoft.domaindnsrecord](microsoft.domaindnsrecord.md)                                                 | Microsoft domain DNS record                                                          |
 | [microsoft.group](microsoft.group.md)                                                                     | Microsoft group                                                                      |
+| [microsoft.groups](microsoft.groups.md)                                                                   | Microsoft groups                                                                     |
 | [microsoft.keyCredential](microsoft.keycredential.md)                                                     | Microsoft Entra AD Application certificate                                           |
 | [microsoft.passwordCredential](microsoft.passwordcredential.md)                                           | Microsoft Entra AD Application secrets                                               |
 | [microsoft.policies](microsoft.policies.md)                                                               | Microsoft policies                                                                   |

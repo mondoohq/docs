@@ -140,7 +140,7 @@ The output is the same.
 
 When writing a check in a policy that you'll execute in the Mondoo Console, you must use helper variables inside blocks. If you don't, Mondoo can't render the check output.
 
-##### Incorrect:
+**Incorrect:**
 
 ```coffeescript
 command("ip6tables -L") {
@@ -149,7 +149,7 @@ command("ip6tables -L") {
 }
 ```
 
-##### Correct:
+**Correct:**
 
 ```coffeescript
 command("ip6tables -L") {

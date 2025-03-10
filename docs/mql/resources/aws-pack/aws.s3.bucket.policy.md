@@ -20,13 +20,14 @@ Bucket policies grant permission to your Amazon S3 resources
 
 **Fields**
 
-| ID         | TYPE           | DESCRIPTION                       |
-| ---------- | -------------- | --------------------------------- |
-| id         | string         | Unique ID for the policy          |
-| name       | string         | Name for the policy               |
-| document   | string         | Document for the policy           |
-| version    | string         | Version of the policy             |
-| statements | &#91;&#93;dict | List of statements for the policy |
+| ID         | TYPE           | DESCRIPTION                          |
+| ---------- | -------------- | ------------------------------------ |
+| id         | string         | Unique ID for the policy             |
+| name       | string         | Deprecated. Use `bucketName` instead |
+| bucketName | string         | Bucket name that this policy belongs |
+| document   | string         | Document for the policy              |
+| version    | string         | Version of the policy                |
+| statements | &#91;&#93;dict | List of statements for the policy    |
 
 **References**
 

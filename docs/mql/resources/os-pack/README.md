@@ -23,6 +23,8 @@ Resources included in this pack:
 | [auditpol.entry](auditpol.entry.md)                     | Windows audit policy                                       |
 | [authorizedkeys](authorizedkeys.md)                     | List of SSH authorized keys                                |
 | [authorizedkeys.entry](authorizedkeys.entry.md)         | SSH authorized key                                         |
+| [cloud](cloud.md)                                       | Details about an asset in the cloud                        |
+| [cloudInstance](cloudinstance.md)                       | Cloud instance metadata                                    |
 | [command](command.md)                                   | Results of running a command on the system                 |
 | [container.image](container.image.md)                   | Container image                                            |
 | [container.repository](container.repository.md)         | Container registry repository                              |
@@ -49,6 +51,7 @@ Resources included in this pack:
 | [ip6tables](ip6tables.md)                               | IPv6 tables                                                |
 | [iptables](iptables.md)                                 | IPv4 tables                                                |
 | [iptables.entry](iptables.entry.md)                     |                                                            |
+| [ipv4Address](ipv4address.md)                           | IPv4 address with additional networking details            |
 | [kernel](kernel.md)                                     | System kernel information                                  |
 | [kernel.module](kernel.module.md)                       | System kernel module information                           |
 | [kubelet](kubelet.md)                                   | Kubernetes kubelet configuration                           |

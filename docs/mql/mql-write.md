@@ -149,6 +149,30 @@ sshd.config {
 }
 ```
 
+#### Warning: Currently, we need to use helper variables inside blocks to ensure correct output in the Mondoo console.
+
+When writing MQL that is to be executed within the Mondoo console, you need to make sure to use helper variables within code blocks `{ }`, otherwise the output to this check will not be rendered correctly.
+
+##### Bad example
+```coffeescript
+command("ip6tables -L") {
+  stdout.contains("Chain INPUT (policy DROP)")
+  stdout.contains("Chain OUTPUT (policy DROP)")
+}
+```
+
+##### Good example
+```coffeescript
+command("ip6tables -L") {
+  inputPolicyDrop = stdout.contains("Chain INPUT (policy DROP)")
+  chainPolicyDrop = stdout.contains("Chain OUTPUT (policy DROP)")
+  inputPolicyDrop
+  inputPolicyDrop
+}
+```
+
+*Note: This is only relevant when writing policies aimed to be deployed in the Mondoo Console, ad-hoc policies or just executing a query from the MQL check does not depend on this constraint.*
+
 #### Request all fields from a resource
 
 A quick way to request all fields from a resource is by using `{*}`. For example, this requests all fields from the `services` resource:

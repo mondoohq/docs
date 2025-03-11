@@ -62,6 +62,7 @@ These specialized packs let you deep-dive into attributes unique to the platform
 - [Shodan Search Engine resource pack](./shodan-pack)
 - [Slack resource pack](./slack-pack)
 - [Snowflake resource pack](./snowflake-pack)
+- [Tailscale resource pack](./tailscale-pack)
 - [VMware Cloud Director resource pack](./vcd-pack/)
 - [VMware vSphere resource pack](./vsphere-pack)
 

@@ -136,6 +136,34 @@ sshd.config {
 
 The output is the same.
 
+:::warning
+
+When writing a check in a policy that you'll execute in the Mondoo Console, you must use helper variables inside blocks. If you don't, Mondoo can't render the check output.
+
+**Incorrect:**
+
+```coffeescript
+command("ip6tables -L") {
+  stdout.contains("Chain INPUT (policy DROP)")
+  stdout.contains("Chain OUTPUT (policy DROP)")
+}
+```
+
+**Correct:**
+
+```coffeescript
+command("ip6tables -L") {
+  inputPolicyDrop = stdout.contains("Chain INPUT (policy DROP)")
+  chainPolicyDrop = stdout.contains("Chain OUTPUT (policy DROP)")
+  inputPolicyDrop
+  inputPolicyDrop
+}
+```
+
+This requirement applies only to policies you plan to deploy in the Mondoo Console. If you're writing ad hoc policies or running queries in cnquery or cnspec, you don't need helper variables inside blocks.
+
+:::
+
 #### Nest blocks
 
 You can nest blocks:

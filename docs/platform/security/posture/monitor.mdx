@@ -11,7 +11,7 @@ import fidget2 from "/img/platform/security/fidget-hover-2.png";
 
 Mondoo provides continuous security monitoring of the assets in your digital infrastructure. In the [Mondoo Console](https://console.mondoo.com), you can always see up-to-date scan results for all the assets registered with your account.
 
-The **Organization Overview**, **Dashboard**, and **Security Overview** in the Mondoo Console provide many ways to monitor your overall infrastructure security. From these pages, you can drill down into the security of individual assets, and even how they score on different checks in a policy.
+The **Organization Overview**, **Dashboard**, and **Security Overview** in the Mondoo Console provide many ways to monitor your overall infrastructure security. From these pages, you can drill down into the security of individual assets and learn about the individual findings on those assets.
 
 ## Assess your security posture
 
@@ -43,7 +43,7 @@ The **Dashboard** of a space gives you a quick understanding of your security po
 
    The lower portion of the space dashboard shows remediation statistics and finding details:
 
-   - An interactive display of the mean time to remediate (MTTR) findings (select a risk score to show the MTTR for findings with that level of risk)
+   - Your team's performance on remediating risk, including measurement against your service level agreement (SLA) and the mean time to remediate (MTTR) findings, grouped by risk level
 
    - Vulnerability counts broken down by type of finding (advisories and CVEs)
 
@@ -117,8 +117,9 @@ The tabs on the asset detail page show different details:
 | -------------------------------------------------------------------------------------------------------------------------- | ------------------ |
 | General security and configuration                                                                                         | Overview           |
 | The [policies](/platform/security/posture/policies/) that apply to the asset, plus how the asset scores on those policies  | Policies           |
-| All the [checks](/platform/security/posture/pac/) in all the policies that apply to the asset, plus scores on those checks | Checks             |
-| All queries that retrieve data on the asset, plus the results of those queries                                             | Queries            |
+| All the [checks](/platform/security/posture/pac/) in all the policies that apply to the asset, plus scores on those checks | Findings             |
+| All queries that retrieve data on the asset, plus the results of those queries                                             | Data Queries            |
+| Any issues found in the operating systems and applications installed on the asset                                          | Software            |
 | Known [vulnerabilities](/platform/security/posture/vulnerabilities/) discovered on the asset                               | Vulnerabilities    |
 | Publicly announced [advisories](/platform/security/posture/advisories/) discovered on the asset                            | Advisories         |
 | Resources connected with the asset                                                                                         | Resources          |

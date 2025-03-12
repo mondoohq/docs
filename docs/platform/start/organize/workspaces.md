@@ -16,6 +16,12 @@ For example, suppose your infrastructure includes an employee's macOS workstatio
 
 A space can contain an unlimited number of workspaces, and their purpose is entirely up to you. Their flexibility lets them meet your unique business needs.
 
+:::tip
+
+To understand the difference between workspaces and spaces, read [Plan Your Mondoo Organization - Overview](/platform/start/organize/overview/).
+
+:::
+
 ## Example workspaces
 
 Suppose our imaginary sample business, Lunalectric, has a space is dedicated to the Rover business group, a division within the company.

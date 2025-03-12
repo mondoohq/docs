@@ -14,6 +14,12 @@ Spaces allow for a great degree of flexibility in managing shared resources. For
 
 Furthermore, users may decide to configure separate spaces for development, staging, and production environments, or specific compliance requirements such as HIPAA or SOC 2.
 
+:::tip
+
+To understand the difference between spaces and workspaces, read [Plan Your Mondoo Organization - Overview](/platform/start/organize/overview/).
+
+:::
+
 You can manage team member access and the majority of your Mondoo configuration (such as your security model, service accounts, and tokens) space by space.
 
 :::note

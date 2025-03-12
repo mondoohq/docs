@@ -14,6 +14,6 @@ Give people and software access to your Mondoo organizations and spaces:
 
 - Integrate Mondoo with [Microsoft Entra](/platform/maintain/access/scim-ms) to provide single-sign-on with OIDC and manage user access with SCIM 2.0.
 
-- Use [service accounts](/platform/maintain/access/service_accounts) or [API tokens](/platform/maintain/access/api-tokens) to authenticate external services (such as CI pipelines) with the Mondoo Platform APIs.
+- Grant Mondoo access to services, scripts, and applications, and other [non-human users](/platform/maintain/access/non-human/overview/).
 
 ---

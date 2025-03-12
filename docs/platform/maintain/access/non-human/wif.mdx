@@ -1,0 +1,71 @@
+---
+title: Grant Keyless Non-Human Access to Mondoo
+sidebar_label: Grant Keyless Access (WIF)
+sidebar_position: 3
+description: Concerned about storing and maintaining credentials for Mondoo service accounts? Use an external workload identity federation (WIF) provider instead. WIF providers give non-human users secure access to Mondoo without requiring stored credentials (keys). Apps, services, infrastructure as code, and scripts can authenticate using a WIF provider to read or write data in a Mondoo space.
+image: /img/featured_img/mondoo-feature.jpg
+---
+
+If you're concerned about storing and maintaining credentials for Mondoo service accounts, you can use an external workload identity federation (WIF) provider instead. WIF providers give non-human users secure access to Mondoo without requiring stored credentials (keys). Apps, services, infrastructure as code, and scripts can authenticate using a WIF provider to read or write data in a Mondoo space.
+
+## What is a WIF provider?
+
+A WIF provider is an external identity service that allows _workloads_ running outside of Mondoo to authenticate and access your Mondoo data without the burden of service account key credentials. Example workloads include infrastructure as code, apps, services, and automation tools. These external workloads use a WIF provider to exchange an external identity token for a Mondoo [service account](/platform/maintain/access/non-human/service_accounts) access token, giving them access without the risk and hassle of storing and maintaining credentials.
+
+## Why use a WIF provider?
+
+For a workload to access your Mondoo space, it must authenticate with Mondoo. Traditionally a service account with public and private key credentials provides this authentication. These credentials pose a security risk; anyone with access to them can authenticate with Mondoo. You must store them securely, rotate them regularly, and carefully manage their distribution.
+
+With WIF, an external workload authenticates with Mondoo without storing any keys. When a workload needs to access your space, it sends a trusted identity token (from the WIF provider) to Mondoo and retrieves a Mondoo access token. This process eliminates the need to manually manage credentials and lowers the risk of stolen keys.
+
+With WIF you can:
+
+Improve security&mdash;You don't have to rely on long-lived, static service account keys that can be compromised.
+
+Reduce maintenance&mdash;There's no need to manage and rotate service account keys.
+
+Use what you already have&mdash;Tap into your existing identity infrastructure for authentication instead of adding and maintaining yet another account.
+
+## Which WIF providers does Mondoo support?
+
+Mondoo trusts these WIF providers for authentication:
+
+- Google Cloud
+
+- GitHub
+
+- OpenShift
+
+- Azure
+
+- Custom OpenID Connect (OIDC) providers
+
+## How does a workload use a WIF provider to authenticate with Mondoo?
+
+The process of authenticating an external workload with Mondoo using a WIF provider is a series of requests and token exchanges:
+
+![The flow of requests and token exchanges in Mondoo WIF authentication](/img/platform/maintain/access/wif/wif-diagram.png)
+
+1. The external workload requests a token from the WIF provider.
+
+2. The WIF provider issues a token to the external workload.
+
+3. The external workload requests an access token from Mondoo, providing the WIF-issued token for authentication.
+
+4. Mondoo validates the external token.
+
+5. Mondoo determines what space the external workload is allowed to access.
+
+6. Mondoo issues an access token to the external workload.
+
+7. The external workload accesses your space, authenticated as a service principal.
+
+## Set up WIF authentication
+
+Setting up WIF authentication for Mondoo involves these steps:
+
+1. Create a trust relationship between Mondoo and a WIF provider.
+
+2.
+
+

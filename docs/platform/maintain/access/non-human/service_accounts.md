@@ -1,7 +1,7 @@
 ---
 title: Create and Manage Service Accounts
 sidebar_label: Manage Service Accounts
-sidebar_position: 6
+sidebar_position: 2
 description: Create and manage service accounts that provide machine access to Mondoo Platform.
 image: /img/featured_img/mondoo-feature.jpg
 ---

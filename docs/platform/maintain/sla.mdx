@@ -1,0 +1,52 @@
+---
+title: Define Your Team's Service-Level Agreement
+sidebar_label: Define Your SLA
+sidebar_position: 30
+description: Mondoo measures your team's performance against your service-level agreement. It compares your committed time to remediate security findings against the actual time. You can customize this service level agreement to match your business goals.
+---
+
+Mondoo measures your team's security improvement performance against your service-level agreement (SLA). On your space dashboard, a chart compares your _committed_ time to remediate security findings against the _actual_ time.
+
+![SLA and MTTR on a Mondoo space dashboard](/img/platform/maintain/sla-mttr-dash.png)
+
+Mondoo breaks down your SLA by risk score. It shows:
+- Your mean time to remediate findings (MTTR) from when they're first discovered
+
+- The number of findings that are past their SLA date and still not remediated
+
+- The number of findings that are not yet remediated and have an SLA date approaching
+
+These are the default commitments for remediating findings, based on risk score:
+
+|: Risk score |: Days to remediate |: Days until _approaching_ |
+| ----------- | ------------------ | ------------------------- |
+| Critical    | 30                 | 23                        |
+| High        | 30                 | 23                        |
+| Medium      | 60                 | 53                        |
+| Low         | 90                 | 83                        |
+
+Mondoo lets you customize the SLA to match your business goals. Define the SLA in the space settings.
+
+import Partial from "../../partials/\_editor-owner.mdx";
+
+<Partial />{" "}
+
+1. [Navigate](/platform/start/navigate/) to the space in which you want to customize your SLA.
+
+2. In the left navigation, select **Settings**. Then select the **Security Model** tab.
+
+   ![SLA configuration in Mondoo](/img/platform/maintain/sla-set.png)
+
+3. For each risk score, type a number or use the arrows to define:
+
+   - How many days from discovery does your team commit to remediating the finding?
+
+   - How many days after discovery do you want Mondoo to consider the SLA date _approaching_?
+
+:: Tip
+
+If you type new numbers, be sure to press ENTER or TAB after typing to save the change.
+
+::
+
+---

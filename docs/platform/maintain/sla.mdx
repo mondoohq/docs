@@ -5,7 +5,7 @@ sidebar_position: 30
 description: Mondoo measures your team's performance against your service-level agreement. It compares your committed time to remediate security findings against the actual time. You can customize this service level agreement to match your business goals.
 ---
 
-Mondoo measures your team's security improvement performance against your service-level agreement (SLA). On your space dashboard, a chart compares your _committed_ time to remediate security findings against the _actual_ time.
+Mondoo measures your team's security improvement performance against your service-level agreement (SLA). On your space dashboard, a chart compares your _committed_ time to remediate security findings against the _actual_ mean time your team takes.
 
 ![SLA and MTTR on a Mondoo space dashboard](/img/platform/maintain/sla-mttr-dash.png)
 
@@ -18,7 +18,7 @@ Mondoo breaks down your SLA by risk score. It shows:
 
 These are the default commitments for remediating findings, based on risk score:
 
-|: Risk score |: Days to remediate |: Days until _approaching_ |
+| Risk score  | Days to remediate  | Days until _approaching_  |
 | ----------- | ------------------ | ------------------------- |
 | Critical    | 30                 | 23                        |
 | High        | 30                 | 23                        |
@@ -41,7 +41,7 @@ import Partial from "../partials/_editor-owner.mdx";
 
    - How many days from discovery does your team commit to remediating the finding?
 
-   - How many days after discovery do you want Mondoo to consider the SLA date _approaching_?
+   - How many days after discovery do you want Mondoo to consider the SLA date _approaching_ and warn you on the space dashboard?
 
 :: Tip
 

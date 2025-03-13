@@ -4,7 +4,6 @@ sidebar_label: February Highlights
 description: Integrations with CrowdStrike and SentinelOne, priority asset customization, optimized dashboards that give you exactly what you need to start your day informed… Nobody told us it was a short month! Learn about these and many more additions and improvements we made to Mondoo in February.
 authors: [letha]
 image: /img/release-highlights/2025-02/feb2025.png
-tags: [release, mondoo]
 ---
 
 #### Integrations with CrowdStrike and SentinelOne, priority asset customization, optimized dashboards that give you exactly what you need to start your day informed… Nobody told us it was a short month! Learn about these and many more additions and improvements we made to Mondoo in February.

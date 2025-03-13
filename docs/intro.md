@@ -40,6 +40,8 @@ The Mondoo unified security platform finds and prioritizes vulnerabilities and m
 
 #### [Track and Fix Findings with Ticketing](/platform/ticketing/overview/)
 
+#### [Run Reports](/platform/reporting/overview/)
+
 #### [Asset Intelligence](/platform/intel/overview/)
 
 #### [Manage Mondoo](/platform/maintain/overview/)

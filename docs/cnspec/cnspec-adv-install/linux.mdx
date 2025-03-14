@@ -27,7 +27,6 @@ Check internet connectivity from the terminal:
 
 ```powershell
 curl -I https://mondoo.com
-
 ```
 
 If you get the status **200 OK** and the website’s headers, you internet connection is working.
@@ -46,11 +45,11 @@ To make this configuration permanent, you can set the proxy in system-wide confi
 Be sure you have access to these systems from the terminal:
 
 ```powershell
-install.mondoo.com                Port 443/https
-releases.mondoo.com               Port 443/https
-eu.api.mondoo.com         			 Port 443/https
-us.api.mondoo.com         			 Port 443/https
-registry.api.mondoo.com 			 Port 443/https
+install.mondoo.com                  Port 443/https
+releases.mondoo.com                 Port 443/https
+eu.api.mondoo.com                   Port 443/https
+us.api.mondoo.com                   Port 443/https
+registry.api.mondoo.com             Port 443/https
 ```
 
 If your organization's [region](/platform/start/organize/regions/) (in the Mondoo Console) is US, you must be able to access us.api.mondoo.com. If your region is EU, you must be able to access eu.api.mondoo.com.

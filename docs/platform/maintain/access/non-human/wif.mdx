@@ -60,24 +60,28 @@ The process of authenticating an external workload with Mondoo using a WIF provi
 
 7. The external workload accesses your space, authenticated as a service principal.
 
-## Set up WIF authentication
+## Set up keyless authentication for workloads
 
 Setting up WIF authentication for Mondoo involves these steps:
 
-Step 1. Choose your WIF provider and get SOMETHINGSOMETHING
+Step 1. Gather the information you need from your WIF provider.
 
-Step 2. Use GraphQL to create a trust relationship between Mondoo and a WIF provider.
+Step 2. Create an identity provider in Mondoo.
 
-Step 3. SOMETHINGSOMETHING
+Step 3. Use the configuration information that Mondoo provides to authenticate your workload.
 
 
-### Step 1: Get xxx from your WIF provider
+### Step 1: Gather information from your WIF provider
 
-Choose the WIF provider you want to enable keyless Mondoo authentication for your external workload. Mondoo supports OIDC providers, including Google Cloud, GitHub, OpenShift, and more.
+Prerequisites:
 
-From the WIF provider you need:
+- WIF configured in Google Cloud, GitHub, Azure, or your custom solution (and sufficient privileges in that platform to access the configuration)
 
-- Issuer URI
+- Editor or Owner privileges in the Mondoo space to which your workload needs access
+
+To set up keyless authentication for workloads, you need this information from your WIF provider:
+
+- **Issuer URL** is the address of the WIF provider.
 
 - Subject
 

@@ -46,6 +46,8 @@ Find vulnerabilities for assets in a space:
 
 4. Select the CVE to see its description and a detailed analysis.
 
+   ![Vulnerability in Mondoo](/img/platform/security/vulnerability-top.png)
+
    ![Vulnerability in Mondoo](/img/platform/security/vulnerability-affected.png)
 
    The summary on the CVE detail page shows the number of assets affected by this CVE. Select that information to jump to a list of affected assets.

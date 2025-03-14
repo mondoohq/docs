@@ -203,8 +203,6 @@ You can modify a workspace by changing the criteria that determine what assets a
 
 3. Near the top-right corner of the page, select **Edit**.
 
-   ![Mondoo workspace overview](/img/platform/start/workspace-settings.png)
-
 4. Change the query that defines which assets are included in or excluded from the workspace, or change the workspace name or description.
 
    Mondoo saves your changes as you work.

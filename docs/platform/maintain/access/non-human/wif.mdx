@@ -30,13 +30,13 @@ Use what you already have&mdash;Tap into your existing identity infrastructure f
 
 Mondoo trusts these WIF providers for authentication:
 
-- Google Cloud
+- Azure
 
 - GitHub
 
-- OpenShift
+- Google Cloud
 
-- Azure
+- OpenShift
 
 - Custom OpenID Connect (OIDC) providers
 
@@ -64,33 +64,29 @@ The process of authenticating an external workload with Mondoo using a WIF provi
 
 Setting up WIF authentication for Mondoo involves these steps:
 
-Step 1. Gather the information you need from your WIF provider.
+1. Gather the information you need from your WIF provider.
 
-Step 2. Create an identity provider in Mondoo.
+2. Create an identity provider in Mondoo.
 
-Step 3. Use the configuration information that Mondoo provides to authenticate your workload.
+3. Use the configuration information from Mondoo to authenticate your workload.
 
+Select your WIF provider for detailed instructions:
+<Tabs>
+  <TabItem value="GCP" label="GitLab">
+    GCP content goes here.
+  </TabItem>
+  <TabItem value="azure" label="Azure" default>
+    Azure content goes here.
+  </TabItem>
+  <TabItem value="github" label="GitHub">
+    GitHub content goes here.
+  </TabItem>
+  <TabItem value="openshift" label="OpenShift">
+    OpenShift content goes here.
+  </TabItem>
+  <TabItem value="custom" label="Custom">
+    Custom OIDC content goes here.
+  </TabItem>
+</Tabs>
 
-### Step 1: Gather information from your WIF provider
-
-Prerequisites:
-
-- WIF configured in Google Cloud, GitHub, Azure, or your custom solution (and sufficient privileges in that platform to access the configuration)
-
-- Editor or Owner privileges in the Mondoo space to which your workload needs access
-
-To set up keyless authentication for workloads, you need this information from your WIF provider:
-
-- **Issuer URL** is the address of the WIF provider.
-
-- Subject
-
-
-
-### Step 2: Create a trust relationship between Mondoo and your WIF provider
-
-You can do this on the command line or in a script, such as a Terraform file or a GitHub Action.
-
-
-
-### Step 3: SOMOEHTHIGNRGINDCNJ
+---

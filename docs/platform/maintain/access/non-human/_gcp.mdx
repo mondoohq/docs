@@ -6,7 +6,7 @@
 
 - Editor or Owner privileges in the Mondoo space to which your workload needs access
 
-#### Prepare your GCP environment for WIF
+#### Step 1: Prepare your GCP environment for WIF
 
 1. Create a GCP Service Account. To learn how, read [Create service accounts](https://cloud.google.com/iam/docs/service-accounts-create).
 
@@ -14,25 +14,31 @@
 
 3. Assign the managed identity to a virtual machine or another resource where your workload runs. To learn how, read [Create a VM and attach the service account](https://cloud.google.com/compute/docs/access/create-enable-service-accounts-for-instances#using).
 
-#### Create an identity provider in Mondoo
+#### Step 2: Retrieve credentials from GCP
 
-To create an HCP workload identity provider for GCP, you must provide the following configuration values:
+Open Google Cloud Shell and run this command:
 
-The unique ID of the GCP service account you created
+```bash
+curl -H "Metadata-Flavor: Google" "http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/default/identity?audience=foo"
+```
 
-1. [Navigate](/platform/start/navigate/) to the space in which you want to set up keyless access for non-human users.
+GCP returns the token that you need to create a trust relationship between Mondoo and GCP.
+
+#### Step 3: Create an identity provider in Mondoo
+
+1. In the Mondoo Console, [navigate](/platform/start/navigate/) to the space in which you want to set up keyless access for non-human users.
 
 2. In the left navigation, select **Settings**. Then select the **Identity Providers** tab.
 
-   Screenshot to come.
+   Screenshot to come. deets
 
 3. Select the **ADD IDENTITY PROVIDER** button or the plus (+) symbol near the top-right corner of the tab.
 
-   Screenshot to come.
+   Screenshot to come. deets
 
 4. Select **Google**.
 
-   Screenshot to come.
+   Screenshot to come. deets
 
 5. In the **Issuer URL** box, keep the default `https://accounts.google.com`.
 
@@ -44,8 +50,31 @@ The unique ID of the GCP service account you created
 
 9. Select the **ADD IDENTITY PROVIDER** button.
 
-   Screenshot to come.
+   Screenshot to come. deets
 
-   Mondoo establishes a trust relationship with GCP for WIF authentication. It generates and displays the configuration parameters that your workload needs to use this identity provider to authenticate with Mondoo. You can use that information on your command line, in automation scripts, or however you want your workload to access your Mondoo space data.
+   Mondoo generates and displays the configuration values that you need to create a trust relationship between Mondoo and GCP.
 
-Hey VJ, is that enough or should we walk through an example maybe?
+#### Step 4: Create a trust between Mondoo and GCP
+
+Make a curl call to exchange a local token for a short-lived Mondoo service account:
+
+```bash
+curl --request POST \
+  --url 'UNIVERSE_DOMAIN/SecureTokenService/ExchangeExternalToken?=' \
+  --header 'content-type: application/json' \
+  --data '{
+  "audience": "AUDIENCE",
+  "issuer_uri": "ISSUER",
+  "jwt_token": "TOKEN"
+  }'
+```
+
+| For...   | Substitute... |
+| -------- | ------------- |
+| AUDIENCE | The `audience` value Mondoo provided when you followed the instructions in **Step 3** above. |
+| ISSUER   | The `issuer` value Mondoo provided when you followed the instructions in **Step 3** above.   |
+| TOKEN    | The token GCP provided when you followed the the instructions in **Step 2** above              |
+
+This call returns a Mondoo service account in the form of a `base64_credential` value, which your workload can use to access the Mondoo space.
+
+Screenshot to come. deets

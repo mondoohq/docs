@@ -42,6 +42,4 @@ There are many ways to use Mondoo within the software development process:
 
   - [Docker Hub](/cnspec/supplychain/registry/docker_hub/)
 
-  - [Harbor Container Registry](/cnspec/supplychain/registry/harbor/)
-
 ---

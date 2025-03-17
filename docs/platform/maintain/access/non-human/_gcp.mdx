@@ -1,129 +1,51 @@
 ### Set up keyless authentication with GCP
 
-Prerequisites:
+#### Prerequisites
 
-- WIF configured in Google Cloud, GitHub, Azure, or your custom solution (and sufficient privileges in that platform to access the configuration)
+- Sufficient GCP privileges to create and manage service accounts
 
 - Editor or Owner privileges in the Mondoo space to which your workload needs access
 
-#### Prepare your GCP environment for WIF:
+#### Prepare your GCP environment for WIF
 
-1. Create a GCP Service Account.
+1. Create a GCP Service Account. To learn how, read [Create service accounts](https://cloud.google.com/iam/docs/service-accounts-create).
 
 2. Go the **Service account details** page and note the service account’s unique ID. You need this value when you configure the workload identity provider.
 
-3. Assign the managed identity to a virtual machine or another resource where your application runs.
+3. Assign the managed identity to a virtual machine or another resource where your workload runs. To learn how, read [Create a VM and attach the service account](https://cloud.google.com/compute/docs/access/create-enable-service-accounts-for-instances#using).
 
-#### Configure an external workload identity provider for GCP
+#### Create an identity provider in Mondoo
 
 To create an HCP workload identity provider for GCP, you must provide the following configuration values:
 
-The Unique ID of the Service Account you created
-A conditional access statement
+The unique ID of the GCP service account you created
 
-Conditional access statement
-When federating workload identity, one of the requirements is a conditional access statement. This statement is a boolean expression that has access to the identity claims and restricts which external identities are allowed.
+1. [Navigate](/platform/start/navigate/) to the space in which you want to set up keyless access for non-human users.
 
-When exchanging a GCP token for access to HCP, the conditional access statement has access to all the claims in the token with the jwt_claims. prefix. For most scenarios, we recommend using the sub claim that matches the Unique ID of the Service Account attached to the workload. For more information, refer to the access token claim reference in the GCP documentation.
+2. In the left navigation, select **Settings**. Then select the **Identity Providers** tab.
 
-The following example conditional access statement restricts access to HCP services to GCP workloads assigned the Service Account whose Unique ID is 106356042740441904560.
+   Screenshot to come.
 
-`jwt_claims.sub == "106356042740441904560"`
+3. Select the **ADD IDENTITY PROVIDER** button or the plus (+) symbol near the top-right corner of the tab.
 
-For a complete list of claims you can reference, complete the following steps:
+   Screenshot to come.
 
-Create a VM that has the Service Account assigned to it.
+4. Select **Google**.
 
-SSH to the VM.
+   Screenshot to come.
 
-Obtain an identity token using the metadata server. The following example uses hcp for its AUD claim, and specifies full for the format.
+5. In the **Issuer URL** box, keep the default `https://accounts.google.com`.
 
-curl -H "Metadata-Flavor: Google" \
-'http://metadata/computeMetadata/v1/instance/service-accounts/default/identity?audience=hcp&format=full'
+6. In the **Subject** box, enter the unique ID of the GCP server account you created in the previous instructions.
 
-To view the claims, copy the access token and paste it into a browser-based token decoder. The claims listed are values available when creating the conditional access statement.
+7. In the **Expiration time** list, choose the duration of sessions authenticated with this WIF provider.
 
+8. In the **Name** and **Description** boxes, provide a short name and longer description that help you and your teammates recognize the source and purpose of the identity provider.
 
+9. Select the **ADD IDENTITY PROVIDER** button.
 
+   Screenshot to come.
 
+   Mondoo establishes a trust relationship with GCP for WIF authentication. It generates and displays the configuration parameters that your workload needs to use this identity provider to authenticate with Mondoo. You can use that information on your command line, in automation scripts, or however you want your workload to access your Mondoo space data.
 
-
-
-
-
-To set up keyless authentication for workloads, you need this information from your WIF provider:
-
-- **Issuer URL** is the address of the WIF provider.
-
-- Subject
-
-
-
-#### Step 2: Create a trust relationship between Mondoo and GCP
-
-You can do this on the command line or in a script, such as a Terraform file or a GitHub Action.
-
-
-
-#### Step 3: SOMOEHTHIGNRGINDCNJ
-
-
-
-Prerequisites
-
-
-
-Create the workload identity provider
-After you gather the information you need, create the workload identity provider for GCP.
-
-
-HCP CLI
-
-Terraform
-Use the hcp iam workload-identity-providers create-oidc command.
-
-$ hcp iam workload-identity-providers create-oidc <PROVIDER_NAME> \
-  --service-principal=<SP_RESOURCE_NAME> \
-  --issuer=https://accounts.google.com \
-  --conditional-access=<CONDITION> \
-  --description=<DESCRIPTION>
-
-This command requires the following information that is specific to your HCP and GCP accounts:
-
-<PROVIDER_NAME>: The name of workload identity provider to create.
-<SP_RESOURCE_NAME>:The service principal’s resource name, in the format iam/project/<PROJECT_ID>/service-principal/<NAME>.
-<CONDITION>: The conditional access statement that restricts access to the specified GCP workload.
-<DESCRIPTION>: An optional description for the provider.
-The following example creates a workload identity provider named gcp-example. This provider configures HCP to restrict access to external workloads by requiring that their JWT token have 106356042740441904560 as a sub claim. Workloads that are granted access to HCP services use the my-app-runtime service principal.
-
-$ hcp iam workload-identity-providers create-oidc gcp-example \
-  --service-principal=iam/project/dcffbc8c-0873-4acc-bf96-4c79a4c3fd1a/service-principal/my-app-runtime \
-  --issuer=https://accounts.google.com \
-  --conditional-access='jwt_claims.sub == "106356042740441904560"' \
-  --description="Allow my-app Service Account on GCP to act as my-app-runtime service principal"
-
-Authenticate the workload's credentials
-You can use the HCP CLI, HCP Terraform Provider, or HCP Go SDK to automatically retrieve external credentials and exchange them for an HCP access token. This process uses a credential file that contains the information required to obtain external credentials and the workload identity provider to exchange them with.
-
-For more information, refer to credential files.
-
-Create the credential file for GCP
-Use the hcp iam workload-identity-providers create-cred-file command.
-
-$ hcp iam workload-identity-providers create-cred-file <PROVIDER_NAME> \
-  --gcp \
-  --output-file=credentials.json
-
-This command requires the following information that is specific to your HCP account:
-
-<PROVIDER_NAME>: The name of workload identity provider to exchange credentials with, in the format iam/project/<PROJECT_ID>/service-principal/<SP_NAME>/workload-identity-provider/<PROVIDER_NAME>.
-The following example creates a credentials.json file using the gcp-example provider, which is associated with the my-app-runtime service principal.
-
-$ hcp iam workload-identity-providers create-cred-file \
-  iam/project/dcffbc8c-0873-4acc-bf96-4c79a4c3fd1a/service-principal/my-app-runtime/workload-identity-provider/gcp-example \
-  --gcp \
-  --output-file=credentials.json
-
-Ensure the credential file exists in the runtime environment. Because the credential file contains no secret values, you can store the credential file in the VM image. Alternatively, you can generate it at runtime.
-
-To use the credential file to authenticate, you can use the HCP CLI, the HCP Terraform provider, or the HCP Go SDK. Refer to use a credential file to authenticate for more information.
+Hey VJ, is that enough or should we walk through an example maybe?

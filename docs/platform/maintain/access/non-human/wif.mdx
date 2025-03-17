@@ -5,6 +5,9 @@ sidebar_position: 3
 description: Concerned about storing and maintaining credentials for Mondoo service accounts? Use an external workload identity federation (WIF) provider instead. WIF providers give non-human users secure access to Mondoo without requiring stored credentials (keys). Apps, services, infrastructure as code, and scripts can authenticate using a WIF provider to read or write data in a Mondoo space.
 image: /img/featured_img/mondoo-feature.jpg
 ---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import Partial from "_gcp.mdx";
 
 If you're concerned about storing and maintaining credentials for Mondoo service accounts, you can use an external workload identity federation (WIF) provider instead. WIF providers give non-human users secure access to Mondoo without requiring stored credentials (keys). Apps, services, infrastructure as code, and scripts can authenticate using a WIF provider to read or write data in a Mondoo space.
 
@@ -72,8 +75,8 @@ Setting up WIF authentication for Mondoo involves these steps:
 
 Select your WIF provider for detailed instructions:
 <Tabs>
-  <TabItem value="GCP" label="GitLab">
-    GCP content goes here.
+  <TabItem value="GCP" label="GitLab" default>
+   <Partial />{" "}
   </TabItem>
   <TabItem value="azure" label="Azure" default>
     Azure content goes here.

@@ -29,3 +29,5 @@ Amazon Virtual Private Cloud (VPC) subnet
 | assignIpv6AddressOnCreation | bool   | Whether a network interface created in this subnet (including a network interface created by RunInstances ) receives an IPv6 address |
 | state                       | string | State of the subnet: pending or available                                                                                            |
 | region                      | string | Region in which the VPC subnet exists                                                                                                |
+| availableIpAddressCount     | int    | The number of available IP addresses in the subnet                                                                                   |
+| internetGatewayBlockMode    | string | Internet gateway blocking mode: block-bidirectional, block-ingress, or off                                                           |

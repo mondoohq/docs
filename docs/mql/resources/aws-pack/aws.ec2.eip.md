@@ -22,7 +22,7 @@ Amazon Elastic IP (EIP)
 | ----------------------- | --------------------------------------- | ------------------------------------------------------------------------------------------- |
 | publicIp                | string                                  | Public IP address of the EIP                                                                |
 | attached                | bool                                    | Whether the Elastic IP is associated with an instance (false if no allocationId is present) |
-| instance                | [aws.ec2.instance](aws.ec2.instance.md) | Ec2 instance associated with the EIP                                                        |
+| instance                | [aws.ec2.instance](aws.ec2.instance.md) | EC2 instance associated with the EIP                                                        |
 | networkInterfaceId      | string                                  | ID of the network interface                                                                 |
 | networkInterfaceOwnerId | string                                  | ID of the network interface owner                                                           |
 | privateIpAddress        | string                                  | Private IP address for the EIP                                                              |

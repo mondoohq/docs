@@ -46,22 +46,70 @@ Find advisories for assets in a space:
 
 ## Risk factors
 
-Risk factors are attributes that can elevate the risk that an advisory poses to your organization. Advisories can have their own risk factors:
+Risk factors are attributes that can elevate the risk that an advisory poses to your organization. Risk factors can be attributes of the advisory, CVE, or asset.
+
+| Icon                                                          | Risk factor                              | Description                       |
+|:------------------------------------------------------------- |:---------------------------------------- |:--------------------------------- |
+| ![EOL icon](/img/platform/security/eol.svg)                   | End of life (EOL)                        | An operating system version is approaching or has reached EOL (no longer supported). This means that there can be any number of vulnerabilities that are unreported and have no fixes. |
+| ![Remote exec icon](/img/platform/security/remote-exec.svg)   | Remote execution                         | An attacker can run malicious code on a target system without physically accessing the asset.   |
+| ![Known exploit icon](/img/platform/security/exploitable.svg) | Known exploited vulnerability            | There are known exploits in the wild. Attackers know how to breach a system using this defect and have already shown it can be done. |
+| ![Database icon](/img/platform/security/db.svg)               | Database server running                  | At least one asset with this advisory hosts a running database (MySQL or PostgreSQL).                                                                                               |
+| ![In use icon](/img/platform/security/use.svg)                | Service listening on open host ports | At least one asset with this advisory has a running service or is in active use. Examples are assets running sshd, OpenSSH, NGINX, or Apache. |
+| ![Defensive icon](/img/platform/security/defensive.svg)       | Defensive countermeasures                | At least one asset with this advisory has defensive countermeasures in place (SELinux or AppArmor).                                                                                |
+|                                                               | Vulnerability in a server or service     | At least one asset with this advisory has a vulnerable server or service running and can be exploited by attackers. (These include SSHd, chrony, Docker, NFS server, collectd server, cups, Samba, vsftpd, ProFTPD, Pure-FTPd, OpenLDAP, Nginx, Apache HTTP Server, SQL, MySQL, MariaDB Server, OpenSearch, ElasticSearch, Cassandra, MongoDB Server, and other processes.) |
+| ![Keys icon](/img/platform/security/keys.svg)                 | Private SSH keys                         | At least one asset with this advisory has stored private SSH credentials.                                                                                           |
+
+
+
+
+SELinux is active
+
+SELinux is active on the system.
+
+AppArmor is active
+
+AppArmor is active on the system.
+
+Microsoft Exchange Server
+
+The Microsoft Exchange Server is running on the system.
+
+Domain controller
+
+The Active Directory Domain Service is running on the system.
+
+Microsoft SQL Server
+
+Microsoft SQL Server is running on the system.
+
+Microsoft SQL Server listening on public port
+
+Microsoft SQL Server is listening on a public port.
+
+Microsoft IIS
+
+Microsoft IIS is running on the system.
+
+Internet Exposed
+
+Cloud asset is exposed to the internet.
+
+Incompletely removed packages
+
+The system has incompletely removed packages, which may still contain configuration data.
 
 | Icon                                                             | Risk factor                                                                                                                                                |
 | ---------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![Exploitable icon](/img/platform/security/exploitable.svg)      | **Exploitable** advisories have known exploits in the wild. Attackers know how to breach a system using this defect and have already shown it can be done. |
-| ![Remote execution icon](/img/platform/security/remote-exec.svg) | **Remote execution** advisories are known to present remote code execution over the network. They let an attacker run malicious code on a target system.   |
+
 
 Mondoo also flags an advisory if the _assets_ that contain the advisory have factors that increase or decrease risk. These are _contextual_ risk factors for an advisory:
 
 | Icon                                                    | Risk factor                                                                                                                                                                                                     |
 | ------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![Keys icon](/img/platform/security/keys.svg)           | **Accessible keys** indicates that key or credential information is exposed on at least one asset with this advisory.                                                                                           |
-| ![EOL icon](/img/platform/security/eol.svg)             | **End-of-life (EOL)** indicates that at least one asset with this advisory is running an operating system version that is approaching or has reached EOL (no longer supported).                                 |
-| ![Database icon](/img/platform/security/db.svg)         | **Database** indicates that at least one asset with this advisory hosts a running database (MySQL or PostgreSQL).                                                                                               |
-| ![In use icon](/img/platform/security/use.svg)          | **In use** indicates that at least one asset with this advisory has a running service or is in active use. Examples are assets running sshd, OpenSSH, NGINX, or Apache, or assets with open or listening ports. |
-| ![Defensive icon](/img/platform/security/defensive.svg) | **Defensive** indicates that at least one asset with this advisory has defensive countermeasures in place (SELinux or AppArmor).                                                                                |
+
+
+
+
 
 #### See also
 

@@ -27,9 +27,11 @@ The `aws.ec2.snapshot` resource provides fields for assessing the configuration 
 | region                 | string            | Region where the snapshot exists                                             |
 | createVolumePermission | &#91;&#93;dict    | Users/groups that have the permissions to create volumes from the snapshot   |
 | volumeId               | string            | ID of the volume used to create the snapshot                                 |
-| startTime              | time              | Time when the snapshot was initiated                                         |
+| startTime              | time              | Time when the snapshot began                                                 |
+| completionTime         | time              | Time when the snapshot completed                                             |
 | tags                   | map[string]string | Tags for the snapshot                                                        |
 | state                  | string            | State of the snapshot: pending, completed, error, recoverable, or recovering |
 | volumeSize             | int               | Size of the volume, in GiB                                                   |
 | description            | string            | Description of the snapshot                                                  |
 | encrypted              | bool              | Whether the snapshot is encrypted                                            |
+| storageTier            | string            | The storage tier in which the snapshot is stored                             |

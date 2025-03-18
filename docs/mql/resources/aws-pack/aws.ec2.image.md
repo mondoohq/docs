@@ -20,13 +20,15 @@ The `aws.ec2.image` resource provides fields for assessing AMIs within an accoun
 
 **Fields**
 
-| ID           | TYPE   | DESCRIPTION                            |
-| ------------ | ------ | -------------------------------------- |
-| arn          | string | ARN for the AMI                        |
-| id           | string | ID of the image                        |
-| name         | string | Name for the image                     |
-| architecture | string | Architecture associated with the image |
-| ownerId      | string | AWS account ID of the image owner      |
-| ownerAlias   | string | Alias for the image owner              |
-| createdAt    | time   | Date the image was created             |
-| deprecatedAt | time   | Date the image was deprecated          |
+| ID           | TYPE   | DESCRIPTION                                                                                   |
+| ------------ | ------ | --------------------------------------------------------------------------------------------- |
+| arn          | string | ARN for the AMI                                                                               |
+| id           | string | ID of the image                                                                               |
+| name         | string | Name for the image                                                                            |
+| architecture | string | Architecture associated with the image                                                        |
+| ownerId      | string | AWS account ID of the image owner                                                             |
+| ownerAlias   | string | Alias for the image owner                                                                     |
+| createdAt    | time   | Date the image was created                                                                    |
+| deprecatedAt | time   | Date the image was deprecated                                                                 |
+| enaSupport   | bool   | Whether enhanced networking with ENA is enabled                                               |
+| tpmSupport   | string | The supported TPM version. If the image is configured for NitroTPM support, the value is v2.0 |

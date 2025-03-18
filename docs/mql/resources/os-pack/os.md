@@ -23,6 +23,7 @@ Operating system information
 | updates       | &#91;&#93;[os.update](os.update.md) | List of available OS updates                             |
 | rebootpending | bool                                | Whether a reboot is pending                              |
 | hostname      | string                              | Hostname for this OS                                     |
+| hypervisor    | string                              | Hypervisor for this OS                                   |
 | machineid     | string                              | Machine ID for this OS                                   |
 
 **Examples**

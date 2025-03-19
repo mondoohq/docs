@@ -258,6 +258,7 @@ signin
 singlequeryargument
 sizeconstraintstatement
 skype
+SLAs
 sle
 Snat
 spdx

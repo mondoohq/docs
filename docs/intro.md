@@ -36,7 +36,15 @@ The Mondoo unified security platform finds and prioritizes vulnerabilities and m
 
 #### [Security](/platform/security/overview/)
 
+- [Assess and Improve Security](/platform/security/posture/overview/)
+
+- [Customize Security](/platform/security/customize/overview/)
+
 #### [Compliance](/platform/compliance/overview/)
+
+- [Monitor Compliance](/platform/compliance/monitor/overview/)
+
+- [Customize Compliance](/platform/compliance/customize/overview/)
 
 #### [Track and Fix Findings with Ticketing](/platform/ticketing/overview/)
 

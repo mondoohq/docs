@@ -68,7 +68,6 @@ To allow users to log into the Mondoo Console with their Okta-provided credentia
 
 The Mondoo team uses the Client ID and Issuer ID to enable Okta single sign-on for your Mondoo Enterprise account. After we let you know we've executed this final step, it can take 10-20 minutes before users can log into Mondoo using Okta single sign-on.
 
-
 ## Manage Mondoo users with Okta (using SCIM)
 
 To centralize user management for your organization, give your Okta account full control over who can access organizations and spaces and perform different tasks in Mondoo. This implementation relies on the System for Cross-domain Identity Management (SCIM) protocol. Mondoo's SCIM support lets you give Okta groups access to organizations and spaces in your Mondoo Enterprise instance.
@@ -198,10 +197,10 @@ Create a new file named `scim-mapping.gql` and containing a GraphQL request base
 }
 ```
 
-| For...         | Substitute...                                                        |
-| -------------- | -------------------------------------------------------------------- |
-| YOUR-ORG-ID    | The ID of the organization to which you want to grant a group access |
-| YOUR-SPACE-ID  | The ID of the space to which you want to grant a group access        |
+| For...        | Substitute...                                                        |
+| ------------- | -------------------------------------------------------------------- |
+| YOUR-ORG-ID   | The ID of the organization to which you want to grant a group access |
+| YOUR-SPACE-ID | The ID of the space to which you want to grant a group access        |
 
 Execute the query:
 

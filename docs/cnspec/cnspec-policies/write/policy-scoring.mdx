@@ -9,15 +9,15 @@ image: /img/featured_img/mondoo-feature.jpg
 
 Now that you've [explored the very basic elements of a policy and a policy bundle](/cnspec/cnspec-policies/write/simple/), you can decide how to calculate asset security based on this policy.
 
-Each scanned target receives a letter score that summarizes how well it compares to the checks in the policy. Letter scores are based on numeric scores between 0 and 100. These are the ranges for Mondoo letter scores:
+Each scanned target receives a risk score that summarizes how well it compares to the checks in the policy. Risk scores are based on numeric scores between 0 and 100. These are the ranges for Mondoo risk scores:
 
-| From... | To... | Letter score |
-|:-------:|:-----:|:------------:|
-| 80      | 100   | A            |
-| 60      | 79    | B            |
-| 30      | 59    | C            |
-| 10      | 29    | D            |
-| 0       | 9     | F            |
+| From... | To... | Risk score |                  Description                   |
+| :-----: | :---: | :--------: | :--------------------------------------------: |
+|    0    |  10   |  CRITICAL  |   Presents extreme risk to your organization   |
+|   11    |  30   |    HIGH    | Presents significant risk to your organization |
+|   31    |  60   |   MEDIUM   |  Presents moderate risk to your organization   |
+|   61    |  99   |    LOW     |   Presents little risk to your organization    |
+|   100   |  100  |    NONE    |     Presents no risk to your organization      |
 
 The score is based on the number of checks that return a `true` value (pass) compared to how many return a `false` value (fail).
 
@@ -82,12 +82,12 @@ Our simple example query above contains:
 
 These are the possible asset scores on this policy:
 
-| Port check (impact 90) | Cipher check (impact 80) | Overall score                       |
-| :--------------------- | :----------------------- | :---------------------------------- |
-| Pass (100)             | Pass (100)               | (100 + 100) / 2 = **100** or **A+** |
-| Pass (100)             | Fail (100 - 80 = 20)     | (100 + 20) / 2 = **60** or **B**    |
-| Fail (100 - 90 = 10)   | Pass (100)               | (10 + 100) / 2 = **55** or **C**    |
-| Fail (100 - 90 = 10)   | Fail (100 - 80 = 20)     | (10 + 20) / 2 = **15** or **D**     |
+| Port check (impact 90) | Cipher check (impact 80) | Overall score                         |
+| :--------------------- | :----------------------- | :------------------------------------ |
+| Pass (100)             | Pass (100)               | (100 + 100) / 2 = **100** or **None** |
+| Pass (100)             | Fail (100 - 80 = 20)     | (100 + 20) / 2 = **60** or **Medium** |
+| Fail (100 - 90 = 10)   | Pass (100)               | (10 + 100) / 2 = **55** or **Medium** |
+| Fail (100 - 90 = 10)   | Fail (100 - 80 = 20)     | (10 + 20) / 2 = **15** or **High**    |
 
 :::note
 
@@ -129,12 +129,12 @@ policies:
 
 The banded scoring system groups checks into these bands based on their impact values:
 
-| Band      | From... | To... |
-| :-------- | :------ | :---- |
-| Critical  | 90      | 100   |
-| High      | 70      | 89    |
-| Medium    | 40      | 69    |
-| Low       | 0       | 39    |
+| Band     | From... | To... |
+| :------- | :------ | :---- |
+| Critical | 90      | 100   |
+| High     | 70      | 89    |
+| Medium   | 40      | 69    |
+| Low      | 0       | 39    |
 
 For example, a check with an `impact` value of 90 is in the critical band; it has critical impact. A check with an `impact` value of 10 is in the low band; it has low impact.
 
@@ -241,12 +241,12 @@ When Mondoo first scans the asset based on the example policy, the asset:
 
 These are the scores the different systems calculate for the asset:
 
-| System         | Score | Letter grade |
-|:---------------|:------|:-------------|
-| Average        | 85    | A            |
-| Banded         | 11    | D            |
-| Decayed        | 4     | F            |
-| Highest impact | 0     | F            |
+| System         | Score | Risk Score |
+| :------------- | :---- | :--------- |
+| Average        | 85    | Low        |
+| Banded         | 11    | High       |
+| Decayed        | 4     | Critical   |
+| Highest impact | 0     | Critical   |
 
 Note that the average scoring system gives the asset an A even though it's failing half the critical-impact checks in the policy. The other scoring system accurately reflect these important failures.
 
@@ -260,12 +260,12 @@ Suppose the team fixes the asset so that it now passes 5 of the high-impact chec
 
 - Fails 1 of 45 low-impact checks
 
-| System         | Score | Letter grade |
-|:---------------|:------|:-------------|
-| Average        | 89    | A            |
-| Banded         | 17    | D            |
-| Decayed        | 11    | D            |
-| Highest impact | 0     | F            |
+| System         | Score | Risk Score |
+| :------------- | :---- | :--------- |
+| Average        | 89    | Low        |
+| Banded         | 17    | High       |
+| Decayed        | 11    | High       |
+| Highest impact | 0     | Critical   |
 
 The average scoring system continues to report sunny results. The banded scoring system still reflects the high quantity of critical-impact failures. The decayed scoring system reflects the improvement. And the highest impact scoring system doesn't change.
 
@@ -279,12 +279,12 @@ Now suppose the team makes improvements to the asset so that it now passes anoth
 
 - Fails 1 of 45 low-impact checks
 
-| System         | Score | Letter grade |
-|:---------------|:------|:-------------|
-| Average        | 93    | A            |
-| Banded         | 30    | C            |
-| Decayed        | 25    | D            |
-| Highest impact | 0     | F            |
+| System         | Score | Risk Score |
+| :------------- | :---- | :--------- |
+| Average        | 93    | Low        |
+| Banded         | 30    | High       |
+| Decayed        | 25    | High       |
+| Highest impact | 0     | Critical   |
 
 There's no change in the average, decayed, or highest impact scores. The banded scoring system shows improvement with a D.
 
@@ -298,12 +298,12 @@ Finally, the team fixes all but one critical issue. The asset now:
 
 - Fails 1 of 45 low-impact checks
 
-| System         | Score | Letter grade |
-|:---------------|:------|:-------------|
-| Average        | 94    | A            |
-| Banded         | 34    | C            |
-| Decayed        | 31    | C            |
-| Highest impact | 0     | F            |
+| System         | Score | Risk Score |
+| :------------- | :---- | :--------- |
+| Average        | 94    | Low        |
+| Banded         | 34    | Medium     |
+| Decayed        | 31    | Medium     |
+| Highest impact | 0     | Critical   |
 
 There's still no change in the average or highest impact scores. The banded score also remains a C and the decayed score rises to a C as well.
 

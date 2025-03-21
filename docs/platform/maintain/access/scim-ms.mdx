@@ -138,11 +138,10 @@ If this test is unsuccessful, contact your Mondoo representative.
 11. Scroll down to the **Attribute Mappings** and make sure that these attributes are mapped:
 
 | Mondoo Attribute | Microsoft Entra ID Attribute |
-|------------------|------------------------------|
+| ---------------- | ---------------------------- |
 | userName         | userPrincipalName            |
 | displayName      | displayName                  |
 | externalId       | objectId                     |
-
 
 ### Step E: Identify Mondoo organization and space IDs
 
@@ -174,10 +173,10 @@ Create a new file named `scim-mapping.gql` and containing a GraphQL request base
 }
 ```
 
-| For...         | Substitute...                                                        |
-| -------------- | -------------------------------------------------------------------- |
-| YOUR-ORG-ID    | The ID of the organization to which you want to grant a group access |
-| YOUR-SPACE-ID  | The ID of the space to which you want to grant a group access        |
+| For...        | Substitute...                                                        |
+| ------------- | -------------------------------------------------------------------- |
+| YOUR-ORG-ID   | The ID of the organization to which you want to grant a group access |
+| YOUR-SPACE-ID | The ID of the space to which you want to grant a group access        |
 
 Execute the query:
 

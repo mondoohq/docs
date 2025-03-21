@@ -6,15 +6,15 @@ description: Change the scoring system Mondoo uses to evaluate assets against a 
 image: /img/featured_img/mondoo-feature.jpg
 ---
 
-Each target that Mondoo scans receives a letter score that summarizes what percentage of the policy's [checks](/cnspec/cnspec-policies/write/simple/#checks) the asset passes. Letter scores are based on numeric scores between 0 and 100. These are the ranges for Mondoo letter scores:
+Each target that Mondoo scans receives a risk score that summarizes what percentage of the policy's [checks](/cnspec/cnspec-policies/write/simple/#checks) the asset passes. Risk scores are based on numeric scores between 0 and 100. These are the ranges for Mondoo risk scores:
 
-| From... | To... | Letter score |
-|:-------:|:-----:|:------------:|
-| 80      | 100   | A            |
-| 60      | 79    | B            |
-| 30      | 59    | C            |
-| 10      | 29    | D            |
-| 0       | 9     | F            |
+| From... | To... | Risk score |                  Description                   |
+| :-----: | :---: | :--------: | :--------------------------------------------: |
+|    0    |  10   |  CRITICAL  |   Presents extreme risk to your organization   |
+|   11    |  30   |    HIGH    | Presents significant risk to your organization |
+|   31    |  60   |   MEDIUM   |  Presents moderate risk to your organization   |
+|   61    |  99   |    LOW     |   Presents little risk to your organization    |
+|   100   |  100  |    NONE    |     Presents no risk to your organization      |
 
 You can control how Mondoo calculates an asset's score on a policy.
 

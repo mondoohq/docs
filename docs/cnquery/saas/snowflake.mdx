@@ -19,7 +19,7 @@ To analyze and explore your Snowflake account with cnquery, you must have:
 
 ## Connect to Snowflake
 
-To explore Snowflake with cnquery, you  must first authenticate with Snowflake. To do so, create a RSA key pair and assign the public key to your user account using Snowsight. To learn how, read [Key-pair authentication and key-pair rotation](https://docs.snowflake.com/en/user-guide/key-pair-auth) in the Snowflake documentation.
+To explore Snowflake with cnquery, you must first authenticate with Snowflake. To do so, create a RSA key pair and assign the public key to your user account using Snowsight. To learn how, read [Key-pair authentication and key-pair rotation](https://docs.snowflake.com/en/user-guide/key-pair-auth) in the Snowflake documentation.
 
 In your shell, run:
 
@@ -28,12 +28,12 @@ shell snowflake --account ACCOUNT-ID --region REGION --user YOUR-ID  --role YOUR
 ```
 
 | For...       | Substitute...                                                                                                                                                                                                                                                                            |
-|--------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ACCOUNT-ID   | The ID of the Snowflake account to explore (To learn how to get your Snowflake account ID, read [Finding the organization and account name for an account](https://docs.snowflake.com/en/user-guide/admin-account-identifier#finding-the-organization-and-account-name-for-an-account).) |
 | REGION       | Your account's region                                                                                                                                                                                                                                                                    |
 | YOUR-USER-ID | The ID you use to log into Snowflake                                                                                                                                                                                                                                                     |
-| YOUR-ROLE    | The role you use (To learn about roles, read [System-defined roles](https://docs.snowflake.com/en/user-guide/security-access-control-overview#system-defined-roles).)                                                                                                                     |
-| YOUR-KEY     | The path to your private key you generated and assigned to your account                                                                                                                                                                                                                     |
+| YOUR-ROLE    | The role you use (To learn about roles, read [System-defined roles](https://docs.snowflake.com/en/user-guide/security-access-control-overview#system-defined-roles).)                                                                                                                    |
+| YOUR-KEY     | The path to your private key you generated and assigned to your account                                                                                                                                                                                                                  |
 
 For example, run:
 
@@ -49,19 +49,17 @@ Use this command to open cnquery shell and query your Snowflake configuration an
 cnquery shell snowflake --account ACCOUNT-ID --region REGION -- user YOUR-USER-ID -- role YOUR-ROLE --ask-pass~/.ssh/id_rsa
 ```
 
-
 | For...       | Substitute...                                                                                                                                                                                                                                                                            |
-|--------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ACCOUNT-ID   | The ID of the Snowflake account to explore (To learn how to get your Snowflake account ID, read [Finding the organization and account name for an account](https://docs.snowflake.com/en/user-guide/admin-account-identifier#finding-the-organization-and-account-name-for-an-account).) |
 | REGION       | Your account's region                                                                                                                                                                                                                                                                    |
 | YOUR-USER-ID | The ID you use to log into Snowflake                                                                                                                                                                                                                                                     |
-| YOUR-ROLE    | The role you use (To learn about roles, read [System-defined roles](https://docs.snowflake.com/en/user-guide/security-access-control-overview#system-defined-roles).)                                                                                                                     |
-| YOUR-KEY     | The path to your private key you generated and assigned to your account                                                                                                                                                                                                                     |
+| YOUR-ROLE    | The role you use (To learn about roles, read [System-defined roles](https://docs.snowflake.com/en/user-guide/security-access-control-overview#system-defined-roles).)                                                                                                                    |
+| YOUR-KEY     | The path to your private key you generated and assigned to your account                                                                                                                                                                                                                  |
 
 ```shell
 cnquery shell snowflake --account zc74621 --region us-central1.gcp -- user STELLA -- role ACCOUNTADMIN --private-key ~/.ssh/id_rsa
 ```
-
 
 ### Example queries
 

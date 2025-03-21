@@ -8,7 +8,7 @@ image: /img/featured_img/mondoo-feature.jpg
 
 Learn how to manage your account, data, and organization(s) in Mondoo:
 
-- [Manage team members and accounts that can access Mondoo](/platform/maintain/access/overview)
+- [Manage team members' and non-human users' access to your Mondoo organization and spaces](/platform/maintain/access/overview)
 
 - [Export data from Mondoo](/platform/maintain/export/overview)
 

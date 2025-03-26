@@ -1,0 +1,70 @@
+### Set up keyless authentication with Azure (Microsoft Entra ID)
+
+#### Prerequisites
+
+- Sufficient Microsoft Entra ID privileges to create and manage service principals
+
+- Editor or Owner privileges in the Mondoo space to which your workload needs access
+
+#### Step A: Prepare your Microsoft environment for WIF
+
+1. [Register a Microsoft Entra app and create a service principal](https://docs.microsoft.com/en-au/azure/active-directory/develop/howto-create-service-principal-portal#register-an-application-with-azure-ad-and-create-a-service-principal). You can use the default Application (client) ID or specify a custom URI. Be sure to note the Application ID URI. You need this value when you configure the workload identity provider.
+
+2. [Create a managed identity](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/how-to-manage-ua-identity-portal). Be sure to note its Object ID. You need this value when you configure the workload identity provider.
+
+3. Assign the managed identity to a virtual machine or another resource where your workload runs. To learn how, read [User-assigned managed identity](https://learn.microsoft.com/en-us/entra/identity/managed-identities-azure-resources/how-to-configure-managed-identities?pivots=qs-configure-portal-windows-vm#user-assigned-managed-identity).
+
+#### Step B: Create an identity provider in Mondoo
+
+1. In the Mondoo Console, [navigate](/platform/start/navigate/) to the space in which you want to set up keyless access for non-human users.
+
+2. In the left navigation, select **Settings**. Then select the **Identity Providers** tab.
+
+   Screenshot to come. deets
+
+3. Select the **ADD IDENTITY PROVIDER** button or the plus (+) symbol near the top-right corner of the tab.
+
+   Screenshot to come. deets
+
+4. Select **Azure**.
+
+   Screenshot to come. deets
+
+5. In the **Issuer URL** box, enter `https://sts.windows.net/YOUR_TENANT_ID`. For YOUR_TENANT_ID, substitute the [tenant ID](https://learn.microsoft.com/en-us/azure/azure-portal/get-subscription-tenant-id#find-your-microsoft-entra-tenant) of the Microsoft directory in which you created the service principal.
+
+6. In the **Subject** box, enter the Application ID URI from Step A.
+
+7. In the **Expiration time** list, choose the duration of sessions authenticated with this WIF provider.
+
+8. In the **Name** and **Description** boxes, provide a short name and longer description that help you and your teammates recognize the source and purpose of the identity provider.
+
+9. Select the **ADD IDENTITY PROVIDER** button.
+
+   Screenshot to come. deets
+
+   Mondoo generates and displays the configuration values that you need to give your workload access to your Mondoo space.
+
+#### Step C: Exchange your token for access to the Mondoo space
+
+Make a curl call to exchange a local token for a short-lived Mondoo service account:
+
+```bash
+curl --request POST \
+  --url 'UNIVERSE_DOMAIN/SecureTokenService/ExchangeExternalToken?=' \
+  --header 'content-type: application/json' \
+  --data '{
+  "audience": "AUDIENCE",
+  "issuer_uri": "ISSUER",
+  "jwt_token": "TOKEN"
+  }'
+```
+
+| For...   | Substitute...                                                                               |
+|:-------- |:------------------------------------------------------------------------------------------- |
+| AUDIENCE | The `audience` value Mondoo provided when you followed the instructions in **Step C** above |
+| ISSUER   | The `issuer` value Mondoo provided when you followed the instructions in **Step C** above   |
+| TOKEN    | The Microsoft-issued, locally available token                                                |
+
+This call returns a Mondoo service account in the form of a `base64_credential` value, which your workload can use to access the Mondoo space.
+
+Screenshot to come. deets

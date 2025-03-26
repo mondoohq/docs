@@ -1,0 +1,64 @@
+### Set up keyless authentication with GitHub
+
+To configure keyless authentication to Mondoo using GitHub as your WIF provider, you use a GitHub Actions workflow in a GitHub repository. Choose an existing repository in your GitHub organization or create a new one just for this purpose.
+
+#### Prerequisites
+
+- Sufficient privileges in your GitHub repository to create and manage GitHub Actions workflows
+
+- Editor or Owner privileges in the Mondoo space to which your workload needs access
+
+#### Step A: Create a workload identity provider in Mondoo
+
+1. In the Mondoo Console, [navigate](/platform/start/navigate/) to the space in which you want to set up keyless access for non-human users.
+
+2. In the left navigation, select **Settings**. Then select the **Workload Identity** tab.
+
+   Screenshot to come. deets
+
+3. Select the **ADD PROVIDER** button or the plus (+) symbol near the top-right corner of the tab.
+
+   Screenshot to come. deets
+
+4. Select **GitHub**.
+
+   Screenshot to come. deets
+
+5. In the **Issuer URL** box, keep the default `https://token.actions.githubusercontent.com`.
+
+6. In the **Subject** box, enter the organization and repository where you plan to create your GitHub Actions workflow.
+
+7. In the **Expiration time** list, choose the duration of sessions authenticated with this WIF provider.
+
+8. In the **Name** and **Description** boxes, provide a short name and longer description that help you and your teammates recognize the source and purpose of the workload identity provider.
+
+9. Select the **ADD PROVIDER** button.
+
+   Screenshot to come. deets
+
+   Mondoo generates and displays the configuration values that you need to give your workload access to your Mondoo space.
+
+#### Step B: Create a GitHub Actions workflow
+
+Create a GitHub Actions workflow in the repository you chose.
+
+Set the `id-token` value to `write`.
+
+Configure the workflow to run these commands:
+
+```
+export MY_TOKEN=$(curl -H "Authorization: bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" "$ACTIONS_ID_TOKEN_REQUEST_URL&audience=vjtest" | jq -r '.value')
+export MONDOO_CONFIG_BASE64=$(curl --request POST --url 'https://api.edge.mondoo.com/SecureTokenService/ExchangeExternalToken' --header 'content-type: application/json' --data '{"audience": "AUDIENCE","issuer_uri": "ISSUER","jwt_token": "'"${MY_TOKEN}"'"}' | jq -r '.base64_credential')
+bash -c "$(curl -sSL https://install.mondoo.com/sh)"
+cnspec status
+if [ $(echo $?) != 0 ]; then echo "failed to reach mondoo" exit 1; fi
+```
+
+| For...   | Substitute...                                                                               |
+|:-------- |:------------------------------------------------------------------------------------------- |
+| AUDIENCE | The `audience` value Mondoo provided when you followed the instructions in **Step D** above |
+| ISSUER   | The `issuer` value Mondoo provided when you followed the instructions in **Step D** above   |
+
+This call returns a Mondoo service account in the form of a `base64_credential` value, which your workload can use to access the Mondoo space.
+
+Screenshot to come. deets

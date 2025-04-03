@@ -49,9 +49,9 @@ Resources included in this pack:
 | [group](group.md)                                       | Group on this system                                       |
 | [groups](groups.md)                                     | Groups configured on this system                           |
 | [ip6tables](ip6tables.md)                               | IPv6 tables                                                |
+| [ipAddress](ipaddress.md)                               | IP address (v4 or v6) with additional networking details   |
 | [iptables](iptables.md)                                 | IPv4 tables                                                |
 | [iptables.entry](iptables.entry.md)                     |                                                            |
-| [ipv4Address](ipv4address.md)                           | IPv4 address with additional networking details            |
 | [kernel](kernel.md)                                     | System kernel information                                  |
 | [kernel.module](kernel.module.md)                       | System kernel module information                           |
 | [kubelet](kubelet.md)                                   | Kubernetes kubelet configuration                           |
@@ -71,6 +71,8 @@ Resources included in this pack:
 | [mondoo.eol](mondoo.eol.md)                             | Platform end-of-life information                           |
 | [mount](mount.md)                                       | Unix mounted file system                                   |
 | [mount.point](mount.point.md)                           | Unix mount point                                           |
+| [network](network.md)                                   | Network information on this system                         |
+| [networkInterface](networkinterface.md)                 | Detailed information of a network interface                |
 | [npm.package](npm.package.md)                           |                                                            |
 | [npm.packages](npm.packages.md)                         | npm packages                                               |
 | [ntp.conf](ntp.conf.md)                                 | NTP service configuration                                  |

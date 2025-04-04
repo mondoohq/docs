@@ -21,7 +21,7 @@ Use Mondoo's [Bash installer script](/cnspec/cnspec-adv-install/linux.mdx) for c
 
 1. In the Mondoo console, [navigate](/platform/start/navigate/) to the space in which you want to add hosts.
 
-2. [Create a new API token](/platform/maintain/access/api-tokens/).
+2. [Create a new API token](/platform/maintain/access/non-human/api-tokens/).
 
 3. Copy the new token and paste it in this command in place of `your-api-token`:
 

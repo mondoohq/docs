@@ -5,6 +5,15 @@ const { themes } = require("prism-react-renderer");
 const legacyRedirects = [
   // NOTE: Path / is equivalent to https://mondoo.com/docs/
   //
+  // From March 2025 created non-human access subsection under manage access
+  {
+    from: "/platform/maintain/access/api-tokens",
+    to: "/platform/maintain/access/non-human/api-tokens",
+  },
+  {
+    from: "/platform/maintain/access/service_accounts",
+    to: "/platform/maintain/access/non-human/service_accounts",
+  },
   // From Azure simplification November 2024
   {
     from: "/platform/infra/cloud/azure/azure-integration-scan-group",

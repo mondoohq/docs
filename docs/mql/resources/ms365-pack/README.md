@@ -23,9 +23,11 @@ Resources included in this pack:
 | [microsoft.conditionalAccess.countryNamedLocation](microsoft.conditionalaccess.countrynamedlocation.md)   | Microsoft Conditional Access Country named location                                  |
 | [microsoft.conditionalAccess.ipNamedLocation](microsoft.conditionalaccess.ipnamedlocation.md)             | Microsoft Conditional Access IP named location                                       |
 | [microsoft.conditionalAccess.namedLocations](microsoft.conditionalaccess.namedlocations.md)               | Container for Microsoft Conditional Access Named Locations                           |
+| [microsoft.device](microsoft.device.md)                                                                   | Microsoft device                                                                     |
 | [microsoft.devicemanagement](microsoft.devicemanagement.md)                                               | Microsoft device management                                                          |
 | [microsoft.devicemanagement.devicecompliancepolicy](microsoft.devicemanagement.devicecompliancepolicy.md) | Microsoft device compliance policy                                                   |
 | [microsoft.devicemanagement.deviceconfiguration](microsoft.devicemanagement.deviceconfiguration.md)       | Microsoft device configuration                                                       |
+| [microsoft.devices](microsoft.devices.md)                                                                 | List of Microsoft Entra devices                                                      |
 | [microsoft.domain](microsoft.domain.md)                                                                   | Microsoft domain                                                                     |
 | [microsoft.domaindnsrecord](microsoft.domaindnsrecord.md)                                                 | Microsoft domain DNS record                                                          |
 | [microsoft.group](microsoft.group.md)                                                                     | Microsoft group                                                                      |

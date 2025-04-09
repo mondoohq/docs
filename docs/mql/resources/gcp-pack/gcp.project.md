@@ -50,6 +50,7 @@ Google Cloud (GCP) project
 | storage                | [gcp.project.storageService](gcp.project.storageservice.md)                         | GCP Storage resources                                  |
 | monitoring             | [gcp.project.monitoringService](gcp.project.monitoringservice.md)                   | Monitoring resources                                   |
 | binaryAuthorization    | [gcp.project.binaryAuthorizationControl](gcp.project.binaryauthorizationcontrol.md) | Binary Authorization resources                         |
+| redis                  | [gcp.project.redisService](gcp.project.redisservice.md)                             | GCP Redis resources                                    |
 
 **References**
 

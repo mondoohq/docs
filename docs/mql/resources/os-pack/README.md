@@ -116,6 +116,8 @@ Resources included in this pack:
 | [sshd](sshd.md)                                         | SSH server resource                                        |
 | [sshd.config](sshd.config.md)                           | SSH server configuration                                   |
 | [sshd.config.matchBlock](sshd.config.matchblock.md)     | A block of SSH server configuration                        |
+| [usb](usb.md)                                           | Experimental: USB resource                                 |
+| [usb.device](usb.device.md)                             | Experimental: USB device                                   |
 | [user](user.md)                                         | User on this system                                        |
 | [users](users.md)                                       | Users configured on this system                            |
 | [vuln.advisory](vuln.advisory.md)                       | Advisory information                                       |

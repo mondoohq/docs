@@ -41,6 +41,12 @@ To learn how to create a personal access token, read [Managing your personal acc
 - admin:org_hook
 - read:project
 
+:::note
+
+If you would also like to scan private repositories, you need to select the entire **repo** scope instead of only **public_repo**.
+
+:::
+
 #### Configure a GITHUB_TOKEN environment variable
 
 You supply your personal access token to cnspec by setting the `GITHUB_TOKEN` environment variable.

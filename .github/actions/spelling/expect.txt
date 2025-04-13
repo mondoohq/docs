@@ -293,6 +293,7 @@ tsuki
 uksouth
 unversioned
 uppercasing
+usb
 UXd
 VALUEX
 VAULTNAME

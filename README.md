@@ -12,7 +12,7 @@ Install Docusaurus environment so you can build and test your contributions.
 
 ### Install Node and Yarn
 
-This project uses Node.js version 20 and the Yarn package manager. If you don't already have these installed:
+This project uses Node.js version 22 and the Yarn package manager. If you don't already have these installed:
 
 - [Get Node.js](https://nodejs.org/en/download/)
 - [Get Yarn](https://yarnpkg.com/getting-started/install)

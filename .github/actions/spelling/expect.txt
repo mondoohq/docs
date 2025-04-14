@@ -40,7 +40,6 @@ bsky
 BUGZILLA
 byh
 bytematchstatement
-CABTk
 cavium
 cbc
 cdn
@@ -79,7 +78,6 @@ datacompute
 datapath
 DATAUSER
 dba
-dcea
 Ddos
 debconf
 deliverychannel
@@ -145,6 +143,7 @@ Jhb
 Jhnnd
 jira
 jsonbody
+jwt
 KEYFILE
 keyout
 KKBUGHG
@@ -216,7 +215,6 @@ Pesoa
 Pids
 pki
 pkr
-pmh
 portgroup
 postgre
 PROFILENAME
@@ -246,7 +244,6 @@ sbom
 scim
 scm
 scsd
-Scz
 SECRETID
 SECRETVALUE
 securetty
@@ -309,6 +306,7 @@ vulnmgmt
 webserver
 westeurope
 widescale
+WIF
 wil
 winhttp
 winnt

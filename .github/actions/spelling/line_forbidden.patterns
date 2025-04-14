@@ -106,6 +106,9 @@
 # Product Names
 #
 
+# s.b. WatchGuard
+\bWatchguard\b
+
 # s.b. Airtable
 \bAirTable\b
 

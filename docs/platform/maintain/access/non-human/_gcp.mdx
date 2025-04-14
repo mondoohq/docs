@@ -30,27 +30,21 @@ GCP returns the token that you need to create a trust relationship between Mondo
 
 2. In the left navigation, select **Settings**. Then select the **Workload Identity** tab.
 
-   Screenshot to come. deets
+   ![Settings - Workload Identity](/img/platform/maintain/access/wif/wif-settings.png)
 
-3. Select the **ADD PROVIDER** button or the plus (+) symbol near the top-right corner of the tab.
+3. Select the **ADD PROVIDER** button or the plus (+) symbol near the top-right corner of the tab and select **Google**.
 
-   Screenshot to come. deets
+4. In the **Issuer URL** box, keep the default `https://accounts.google.com`.
 
-4. Select **Google**.
+5. In the **Subject** box, enter the unique ID of the GCP service account you created in Step A.
 
-   Screenshot to come. deets
+6. In the **Expiration time** list, choose the duration of sessions authenticated with this WIF provider.
 
-5. In the **Issuer URL** box, keep the default `https://accounts.google.com`.
+7. In the **Name** and **Description** boxes, provide a short name and longer description that help you and your teammates recognize the source and purpose of the provider.
 
-6. In the **Subject** box, enter the unique ID of the GCP service account you created in Step A.
+8. Select the **ADD PROVIDER** button.
 
-7. In the **Expiration time** list, choose the duration of sessions authenticated with this WIF provider.
-
-8. In the **Name** and **Description** boxes, provide a short name and longer description that help you and your teammates recognize the source and purpose of the provider.
-
-9. Select the **ADD   PROVIDER** button.
-
-   Screenshot to come. deets
+   ![Settings - Workload Identity](/img/platform/maintain/access/wif/wif-gcp.png)
 
    Mondoo generates and displays the configuration values that you need to give your workload access to your Mondoo space.
 
@@ -75,6 +69,5 @@ curl --request POST \
 | ISSUER   | The `issuer` value Mondoo provided when you followed the instructions in **Step C** above   |
 | TOKEN    | The token GCP provided when you followed the the instructions in **Step B** above                                                |
 
-This call returns a Mondoo service account in the form of a `base64_credential` value, which your workload can use to access the Mondoo space.
+This call returns a Mondoo service account in the form of a `base64_credential` value, which your workload can use to access the Mondoo space by setting MONDOO_CONFIG_BASE64 to the returned value.
 
-Screenshot to come. deets

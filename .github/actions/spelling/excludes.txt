@@ -8,7 +8,6 @@
 (?:^|/)pyproject.toml
 (?:^|/)requirements(?:-dev|-doc|-test|)\.txt$
 (?:^|/)vendor/
-ignore$
 \.a$
 \.ai$
 \.all-contributorsrc$
@@ -81,4 +80,6 @@ ignore$
 \.zip$
 ^\.github/actions/spelling/
 ^\Q.github/workflows/spelling.yml\E$
+^\Qdocs/platform/compliance/customize/_custom-frameworks.mdx\E$
 _release_template_file.md
+ignore$

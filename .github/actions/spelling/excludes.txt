@@ -80,6 +80,5 @@
 \.zip$
 ^\.github/actions/spelling/
 ^\Q.github/workflows/spelling.yml\E$
-^\Qdocs/platform/compliance/customize/_custom-frameworks.mdx\E$
 _release_template_file.md
 ignore$

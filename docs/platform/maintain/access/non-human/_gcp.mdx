@@ -14,17 +14,7 @@
 
 3. Assign the managed identity to a virtual machine or another resource where your workload runs. To learn how, read [Create a VM and attach the service account](https://cloud.google.com/compute/docs/access/create-enable-service-accounts-for-instances#using).
 
-#### Step B: Retrieve credentials from GCP
-
-Open [Google Cloud Shell](https://cloud.google.com/shell/docs/launching-cloud-shell) and run this command:
-
-```bash
-curl -H "Metadata-Flavor: Google" "http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/default/identity?audience=foo"
-```
-
-GCP returns the token that you need to create a trust relationship between Mondoo and GCP.
-
-#### Step C: Create a new workload identity provider in Mondoo
+#### Step B: Create a new workload identity provider in Mondoo
 
 1. In the Mondoo Console, [navigate](/platform/start/navigate/) to the space in which you want to set up keyless access for non-human users.
 
@@ -48,7 +38,12 @@ GCP returns the token that you need to create a trust relationship between Mondo
 
    Mondoo generates and displays the configuration values that you need to give your workload access to your Mondoo space.
 
-#### Step D: Exchange your token for access to the Mondoo space
+#### Step C: Exchange your token for access to the Mondoo space
+
+Fetch the local token:
+```bash
+curl -H "Metadata-Flavor: Google" "http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/default/identity?audience=test"
+```
 
 Make a curl call to exchange a local token for a short-lived Mondoo service account:
 

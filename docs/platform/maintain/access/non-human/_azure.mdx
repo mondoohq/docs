@@ -40,6 +40,11 @@
 
 #### Step C: Exchange your token for access to the Mondoo space
 
+Fetch the local token:
+```bash
+curl http://localhost:50342/oauth2/token --data "resource=https://management.azure.com/" -H Metadata:true -s | jq -r ".access_token"
+```
+
 Make a curl call to exchange a local token for a short-lived Mondoo service account:
 
 ```bash

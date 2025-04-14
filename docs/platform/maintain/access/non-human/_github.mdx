@@ -44,12 +44,14 @@ Configure the workflow to run these commands:
 # generate a token
 export MY_TOKEN=$(curl -H "Authorization: bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" "$ACTIONS_ID_TOKEN_REQUEST_URL&audience=test" | jq -r '.value')
 # exchange the token
-export MONDOO_CONFIG_BASE64=$(curl --request POST --url 'https://api.edge.mondoo.com/SecureTokenService/ExchangeExternalToken' --header 'content-type: application/json' --data '{"audience": "AUDIENCE","issuer_uri": "ISSUER","jwt_token": "'"${MY_TOKEN}"'"}' | jq -r '.base64_credential')
+export MONDOO_CONFIG_BASE64=$(curl --request POST --url 'UNIVERSE_DOMAIN/SecureTokenService/ExchangeExternalToken' --header 'content-type: application/json' --data '{"audience": "AUDIENCE","issuer_uri": "ISSUER","jwt_token": "'"${MY_TOKEN}"'"}' | jq -r '.base64_credential')
 # install cnspec
 bash -c "$(curl -sSL https://install.mondoo.com/sh)"
 # run cnspec status to check for platform connectivity
 cnspec status
 if [ $(echo $?) != 0 ]; then echo "failed to reach mondoo" exit 1; fi
+# run the scan
+cnspec scan
 ```
 
 | For...   | Substitute...                                                                               |
@@ -57,5 +59,4 @@ if [ $(echo $?) != 0 ]; then echo "failed to reach mondoo" exit 1; fi
 | AUDIENCE | The `audience` value Mondoo provided when you followed the instructions in **Step D** above |
 | ISSUER   | The `issuer` value Mondoo provided when you followed the instructions in **Step D** above   |
 
-This call returns a Mondoo service account in the form of a `base64_credential` value, which your workload can use to access the Mondoo space by setting MONDOO_CONFIG_BASE64 to the returned value.
 

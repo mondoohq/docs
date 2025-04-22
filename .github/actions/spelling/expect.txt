@@ -23,6 +23,7 @@ auditlog
 authorizationservice
 auths
 autodisconnect
+autoprovisioned
 autoremove
 autoscaler
 backupconfiguration

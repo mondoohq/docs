@@ -622,6 +622,7 @@
 # s.b. Memorystore
 \bMemoryStore\b
 \bMemory Store\b
+\bMem[Ss]tore\b
 
 # s.b. Pub/Sub
 \bPubSub\b
@@ -642,9 +643,6 @@
 
 # s.b. Datastore
 \bDataStore\b
-
-# s.b. Memorystore
-\bMemoryStore\b
 
 #
 # Azure Products

@@ -30,6 +30,7 @@ Google Kubernetes Engine (GKE) cluster node pool
 | instanceGroupUrls | &#91;&#93;string                                                                                                  | The resource URLs of the managed instance groups associated with this node pool         |
 | status            | string                                                                                                            | The current status of this node pool                                                    |
 | management        | dict                                                                                                              | Node management configuration                                                           |
+| autoscaling       | [gcp.project.gkeService.cluster.nodepool.autoscaling](gcp.project.gkeservice.cluster.nodepool.autoscaling.md)     | Autoscaler configuration for this NodePool                                              |
 
 **References**
 

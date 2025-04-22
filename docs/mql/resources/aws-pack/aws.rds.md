@@ -27,6 +27,8 @@ Use the `aws.rds` resource to assess the configuration of AWS RDS deployments. T
 | dbClusters                   | &#91;&#93;[aws.rds.dbcluster](aws.rds.dbcluster.md)                               | Deprecated: Use `clusters` instead                                |
 | clusters                     | &#91;&#93;[aws.rds.dbcluster](aws.rds.dbcluster.md)                               | List of RDS database clusters                                     |
 | allPendingMaintenanceActions | &#91;&#93;[aws.rds.pendingMaintenanceAction](aws.rds.pendingmaintenanceaction.md) | List of all pending maintenance actions for the database instance |
+| parameterGroups              | &#91;&#93;[aws.rds.parameterGroup](aws.rds.parametergroup.md)                     | List of all parameter groups                                      |
+| clusterParameterGroups       | &#91;&#93;[aws.rds.clusterParameterGroup](aws.rds.clusterparametergroup.md)       | List of all cluster parameter groups                              |
 
 **Examples**
 

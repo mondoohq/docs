@@ -19,6 +19,7 @@ Resources included in this pack:
 | [audit.advisory](audit.advisory.md)                     | Platform/package advisory                                  |
 | [audit.cve](audit.cve.md)                               | Common Vulnerabilities and Exposures (CVEs)                |
 | [audit.cvss](audit.cvss.md)                             | Common Vulnerability Scoring System (CVSS) score           |
+| [auditd.config](auditd.config.md)                       | auditd (Linux Audit Daemon) configuration                  |
 | [auditpol](auditpol.md)                                 | Windows audit policies                                     |
 | [auditpol.entry](auditpol.entry.md)                     | Windows audit policy                                       |
 | [authorizedkeys](authorizedkeys.md)                     | List of SSH authorized keys                                |
@@ -91,6 +92,7 @@ Resources included in this pack:
 | [parse.json](parse.json.md)                             | Parse JSON files                                           |
 | [parse.openpgp](parse.openpgp.md)                       | Parse OpenPGP from files                                   |
 | [parse.plist](parse.plist.md)                           | Parse plist files                                          |
+| [parse.xml](parse.xml.md)                               | Parse XML files                                            |
 | [parse.yaml](parse.yaml.md)                             | Parse YAML files                                           |
 | [pkgFileInfo](pkgfileinfo.md)                           |                                                            |
 | [platform](platform.md)                                 |                                                            |

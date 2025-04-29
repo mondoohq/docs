@@ -6,18 +6,18 @@ description: Use Mondoo to monitor the security of your entire infrastructure
 image: /img/featured_img/mondoo-feature.jpg
 ---
 
-When Mondoo scans an asset, it calculates a percentage score to assess the risk the assets presents to your business.
+When Mondoo scans an asset, it calculates a risk score that summarizes what percentage of the policy's checks the asset fails, weighted by each check’s impact.
 
 Mondoo scoring is based on [policies](/platform/security/posture/pac/) that match the type of asset scanned. For example, there are policies for Windows, Linux, Kubernetes clusters, and so on. You [choose which policies are enabled](/platform/security/posture/policies/) in a space. If an asset matches multiple policies enabled in a space, Mondoo combines all matching policies to evaluate the asset's risk.
 
-Mondoo scores policies from 0 (critical risk) to 100 (no risk) based on percentage scores:
+Mondoo scores policies from 0 (no risk) to 100 (critical risk) based on the weighted percentage of failed checks:
 
-| From... | To... | Risk score |                  Description                   |
-| :-----: | :---: | :--------: | :--------------------------------------------: |
-|    0    |  10   |  CRITICAL  |   Presents extreme risk to your organization   |
-|   11    |  30   |    HIGH    | Presents significant risk to your organization |
-|   31    |  60   |   MEDIUM   |  Presents moderate risk to your organization   |
-|   61    |  99   |    LOW     |   Presents little risk to your organization    |
-|   100   |  100  |    NONE    |     Presents no risk to your organization      |
+| From… | To…  | Risk score |                  Description                   |
+|:-----:|:----:|:----------:|:----------------------------------------------:|
+|   90   | 100  |  CRITICAL  |   Presents extreme risk to your organization   |
+|   70   |  89  |    HIGH    | Presents significant risk to your organization |
+|   40   |  69  |   MEDIUM   |  Presents moderate risk to your organization   |
+|    1   |  39  |    LOW     |   Presents little risk to your organization    |
+|    0   |   0  |    NONE    |     Presents no risk to your organization      |
 
 To learn more about scoring, read [Change a Policy's Scoring System](/platform/security/customize/score/).

@@ -18,11 +18,11 @@ Azure Web
 
 **Fields**
 
-| ID                | TYPE                                                                                        | DESCRIPTION             |
-| ----------------- | ------------------------------------------------------------------------------------------- | ----------------------- |
-| subscriptionId    | string                                                                                      | Subscription identifier |
-| apps              | &#91;&#93;[azure.subscription.webService.appsite](azure.subscription.webservice.appsite.md) | List of web apps        |
-| availableRuntimes | &#91;&#93;dict                                                                              | Available runtimes      |
+| ID                | TYPE                                                                                                        | DESCRIPTION             |
+| ----------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------- |
+| subscriptionId    | string                                                                                                      | Subscription identifier |
+| apps              | &#91;&#93;[azure.subscription.webService.appsite](azure.subscription.webservice.appsite.md)                 | List of web apps        |
+| availableRuntimes | &#91;&#93;[azure.subscription.webService.appRuntimeStack](azure.subscription.webservice.appruntimestack.md) | Available runtimes      |
 
 **References**
 

@@ -8,7 +8,7 @@ tags: [release, mondoo]
 date: 2025-05-09
 ---
 
-#### A new Mondoo Model Context Protocol (MCP) server for AI accelerated findings remediation, expanded vulnerability detection support, remediations in ticketing, centralized exceptions management, and space-wide exceptions. April was all about exposing the most critical findings in your environment and taking action on those findings quickly. Discovery everything new to keep your assets secure.
+#### April was all about helping you find and fix critical security issues faster. We rolled out a new Mondoo Model Context Protocol (MCP) server to power AI-assisted remediation, expanded vulnerability detection, added remediations to ticketing, and launched centralized and space-wide exception management. Explore everything new this month to secure your infrastructure.
 
 ![Mondoo Release Highlights April 2025](/img/release-highlights/2025-04/april2025.jpg)
 

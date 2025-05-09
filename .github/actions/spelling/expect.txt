@@ -25,7 +25,6 @@ auths
 autodisconnect
 autoprovisioned
 autoremove
-autoscaler
 backupconfiguration
 backupsetting
 badssm
@@ -144,7 +143,6 @@ Jhb
 Jhnnd
 jira
 jsonbody
-jwt
 KEYFILE
 keyout
 KKBUGHG
@@ -298,6 +296,7 @@ VAULTNAME
 vdcs
 virtualmachine
 vjtestpriv
+vmaqs
 Vnet
 Vtpm
 Vtz
@@ -307,7 +306,6 @@ vulnmgmt
 webserver
 westeurope
 widescale
-WIF
 wil
 winhttp
 winnt

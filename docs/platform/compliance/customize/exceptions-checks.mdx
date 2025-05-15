@@ -1,20 +1,22 @@
 ---
-title: Snooze or Disable Checks
-sidebar_label: Snooze or Disable Checks
+title: Set Exceptions on Checks
+sidebar_label: Set Exceptions on Checks
 sidebar_position: 4
-description: Snooze or disable a check in a framework to customize how Mondoo evaluates your compliance with that framework
+description: Set exceptions for checks within a compliance framework control to customize how Mondoo evaluates your compliance with that framework
 image: /img/featured_img/mondoo-feature.jpg
 ---
 
-_Exceptions_ let you customize how Mondoo evaluates your compliance with a framework and communicate the reasons for that customization. They tell Mondoo to exclude certain [checks](/platform/compliance/monitor/frameworks/) when calculating your progress toward full compliance. There are two types of exceptions for checks:
+_Exceptions_ let you customize how Mondoo evaluates your compliance with a framework and communicate the reasons for that customization.
 
-- _Snooze_ a check to temporarily or indefinitely exclude its results from your overall compliance progress percentage. Snoozing is useful when you intend to comply with a check eventually but don't want it distracting your team right now.
+Exceptions tell Mondoo to exclude certain [checks](/platform/compliance/monitor/frameworks/) when calculating your progress toward full compliance. There are two types of exceptions for checks:
 
-- _Disable_ a check to instruct Mondoo to exclude it from your compliance score and explain this exclusion to your team. A check remains disabled unless you re-enable it.
+- _Risk Acceptance_: Temporarily exclude check results from your overall compliance progress percentage. Risk acceptance is useful when you intend to comply with a control eventually but don't want it distracting your team right now. You can write a note justifying the delay to your team and your auditor.
+
+- _Disable_ Permanently exclude a check from your compliance score and explain this exclusion to team. A control remains disabled unless you re-enable it.
 
 :::info
 
-When you snooze or disable a check, you snooze or disable it for the entire space. A check exception applies to the policy containing the check and impacts all compliance frameworks that use the check.
+When you set an exception on a check, you set that exception for the entire space. A check exception applies to the policy containing the check and impacts all compliance frameworks that use the check.
 
 To learn about frameworks, policies, controls, and checks, read [Enable Compliance Frameworks](/platform/compliance/monitor/frameworks/).
 
@@ -22,11 +24,11 @@ To learn about frameworks, policies, controls, and checks, read [Enable Complian
 
 :::tip
 
-You can also snooze or disable an entire control in a Framework. To learn more, read [Snooze or Disable Controls](/platform/compliance/customize/exceptions/).
+You can also set exceptions for an entire control in a Framework. To learn more, read [Set Exceptions on Controls](/platform/compliance/customize/exceptions/).
 
 :::
 
-## Snooze or disable a check
+## Set exceptions for a check
 
 import Partial from "../../partials/_editor-owner.mdx";
 
@@ -36,7 +38,7 @@ import Partial from "../../partials/_editor-owner.mdx";
 
    ![Space in the Mondoo Console](/img/platform/security/dashboard.png)
 
-2. In the side navigation bar, under **Compliance**, select **Frameworks**.
+2. In the side navigation bar, select **Compliance**
 
    ![Compliance in the Mondoo Console](/img/platform/compliance/home.png)
 
@@ -44,23 +46,21 @@ import Partial from "../../partials/_editor-owner.mdx";
 
    ![Controls in a compliance framework in the Mondoo Console](/img/platform/compliance/controls.png)
 
-4. Select the control containing the check you want to snooze or disable and then select the **Checks** tab.
-
-5. Select the box beside the check you want to snooze or disable.
+4. Select the control containing the check you want to set an exception for and select the check box beside that check.
 
    ![Check in the Mondoo Console](/img/platform/compliance/select-check.png)
 
-6. Select the **SET EXCEPTION** button.
+5. Select the **SET EXCEPTION** button.
 
    ![Mondoo compliance - set an exception](/img/platform/compliance/set-exception-check.png)
 
-7. Select whether to **Snooze** or **Disable** the checks.
+6. Select the exception type.
 
-   If you select Snooze, select how long to snooze the check. Select **Indefinitely** to keep the check snoozed unless you un-snooze it.
+   Select to either disable the check or accept the risk. When you accept the risk, you can choose to skip the check for a specific time period.
 
-8. Write a justification for the exception.
+7. Write a justification for the exception.
 
-9. Select the **SAVE EXCEPTION** button.
+8. Select the **SAVE EXCEPTION** button.
 
 ## Approve or reject an exception
 
@@ -70,7 +70,7 @@ Exceptions take effect the moment they're added. However, as an extra tracking s
 
 - Approving an exception allows it to remain.
 
-- Rejecting an exception removes it and re-enables/unsnoozes the check.
+- Rejecting an exception removes it and re-enables the check.
 
 To approve or reject an exception:
 
@@ -86,17 +86,13 @@ To approve or reject an exception:
 
    ![Compliance framework in the Mondoo Console](/img/platform/compliance/controls.png)
 
-4. Select the control containing the check you want to snooze or disable and then select the **Exceptions** tab.
+4. Select the control containing the check exception you want to approve and then select the **Exceptions** tab.
 
-   ![Exception on a check in the Mondoo Console](/img/platform/compliance/checks-with-exception.png)
-
-5. Find the snoozed or disabled check you want to approve or reject.
-
-   ![Accept or reject a check exception in the Mondoo Console](/img/platform/compliance/accept-reject.png)
+   ![Exception on a check in the Mondoo Console](/img/platform/compliance/exception-on-check.png)
 
 6. Select the **Reject** button to remove the exception, or select the **Approve** button to keep the exception with your approval.
 
-## Un-snooze or re-enable a check
+## Re-enable a check
 
 <Partial />{" "}
 
@@ -108,13 +104,11 @@ To approve or reject an exception:
 
    ![Compliance in the Mondoo Console](/img/platform/compliance/home.png)
 
-3. Select the framework you want to work in and scroll down to the list of controls.
-
-4. Select the control containing the check you want to un-snooze or re-enable and select the **Checks** tab.
+3. Select the framework you want to work in and select the control containing the check you want to re-enable.
 
    ![Compliance framework in the Mondoo Console](/img/platform/compliance/checks-with-exception.png)
 
-5. Select the snoozed or disabled check you want to un-snooze or re-enable.
+5. Select the snoozed or disabled check you want to re-enable.
 
    ![Compliance check in the Mondoo Console](/img/platform/compliance/re-enable-check.png)
 

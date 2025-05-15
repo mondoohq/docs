@@ -1,8 +1,8 @@
 ---
-title: Snooze or Disable Controls
-sidebar_label: Snooze or Disable Controls
+title: Set Exceptions on Controls
+sidebar_label: Set Exceptions on Controls
 sidebar_position: 3
-description: Snooze or disable a control in a framework to customize how Mondoo evaluates your compliance with that framework
+description: Set exceptions for controls in a framework to customize how Mondoo evaluates your compliance with that framework
 image: /img/featured_img/mondoo-feature.jpg
 ---
 
@@ -10,9 +10,9 @@ _Exceptions_ let you customize how Mondoo evaluates your compliance with a frame
 
 Exceptions tell Mondoo to exclude certain [controls](/platform/compliance/monitor/frameworks/) when calculating your progress toward full compliance. There are two types of exceptions for controls:
 
-- _Snooze_ a control to temporarily or indefinitely exclude its results from your overall compliance progress percentage. Snoozing is useful when you intend to comply with a control eventually but don't want it distracting your team right now. You can write a note justifying the delay to your team and your auditor.
+- _Risk Acceptance_: Temporarily exclude control results from your overall compliance progress percentage. Risk acceptance is useful when you intend to comply with a control eventually but don't want it distracting your team right now. You can write a note justifying the delay to your team and your auditor.
 
-- _Disable_ a control to instruct Mondoo to exclude it from your compliance score and explain this exclusion to team. A control remains disabled unless you re-enable it.
+- _Disable_ Permanently exclude a control from your compliance score and explain this exclusion to team. A control remains disabled unless you re-enable it.
 
 :::tip
 
@@ -22,11 +22,11 @@ To exclude a control entirely from the compliance report to your auditor, [set i
 
 :::tip
 
-You can also snooze or disable individual checks within a control. To learn more, read [Snooze or Disable Checks](/platform/compliance/customize/exceptions-checks/).
+You can also set exceptions on individual checks within a control. To learn more, read [Set Exceptions on Checks](/platform/compliance/customize/exceptions-checks/).
 
 :::
 
-## Snooze or disable a control
+## Set exceptions on a control
 
 import Partial from "../../partials/_editor-owner.mdx";
 
@@ -36,7 +36,7 @@ import Partial from "../../partials/_editor-owner.mdx";
 
    ![Space in the Mondoo Console](/img/platform/security/dashboard.png)
 
-2. In the side navigation bar, under **Compliance**, select **Frameworks**.
+2. In the side navigation bar, select **Compliance**
 
    ![Compliance in the Mondoo Console](/img/platform/compliance/home.png)
 
@@ -44,7 +44,7 @@ import Partial from "../../partials/_editor-owner.mdx";
 
    ![Compliance framework in the Mondoo Console](/img/platform/compliance/controls.png)
 
-4. Select the control you want to snooze or disable. Mondoo displays a page with control details.
+4. Select the control you want to set an exception for. Mondoo displays a page with control details.
 
    ![Control in the Mondoo Console](/img/platform/compliance/control.png)
 
@@ -52,15 +52,15 @@ import Partial from "../../partials/_editor-owner.mdx";
 
    ![Mondoo compliance - set an exception](/img/platform/compliance/set-exception-2.png)
 
-6. Select whether to **Snooze** or **Disable** the controls.
+6. Select the exception type.
 
-   If you select Snooze, select how long to snooze the control. Select **Indefinitely** to keep the control snoozed unless you un-snooze it.
+   Select to either **disable** the control or **accept the risk**. When you accept the risk, you can choose to skip the control for a specific time period.
 
 7. Write a justification for the exception.
 
 8. Select the **SAVE EXCEPTION** button.
 
-## Snooze or disable multiple controls at once
+## Setting multiple exceptions on controls at once
 
 <Partial />{" "}
 
@@ -68,7 +68,7 @@ import Partial from "../../partials/_editor-owner.mdx";
 
    ![Space in the Mondoo Console](/img/platform/security/dashboard.png)
 
-2. In the side navigation bar, under **Compliance**, select **Frameworks**.
+2. In the side navigation bar, select **Compliance**
 
    ![Compliance in the Mondoo Console](/img/platform/compliance/home.png)
 
@@ -84,9 +84,9 @@ import Partial from "../../partials/_editor-owner.mdx";
 
    ![Mondoo compliance - set an exception](/img/platform/compliance/set-exception.png)
 
-6. Select whether to **Snooze** or **Disable** the controls.
+6. Select the exception type.
 
-   If you select Snooze, select how long to snooze the control. Select **Indefinitely** to keep the control snoozed unless you un-snooze it.
+   Select to either **disable** the control or **accept the risk**. When you accept the risk, you can choose to skip the control for a specific time period.
 
 7. Write a justification for the exception.
 
@@ -98,7 +98,7 @@ Exceptions take effect the moment they're added. However, as an extra tracking s
 
 - Approving an exception allows it to remain.
 
-- Rejecting an exception removes it and re-enables/un-snoozes the control.
+- Rejecting an exception removes it and re-enables the control.
 
 <Partial />{" "}
 
@@ -116,13 +116,13 @@ To approve or reject an exception:
 
    ![Compliance framework in the Mondoo Console](/img/platform/compliance/controls.png)
 
-4. Select the snoozed or disabled control you want to approve or reject.
+4. Select the control with an exception you want to approve or reject.
 
    ![Compliance control in the Mondoo Console](/img/platform/compliance/accept-reject.png)
 
 5. Select the **Reject** button to remove the exception, or select the **Approve** button to keep the exception with your approval.
 
-## Un-snooze or re-enable a control
+## Re-enable a control
 
 <Partial />{" "}
 
@@ -136,12 +136,10 @@ To approve or reject an exception:
 
 3. Select the framework you want to work in and scroll down to the list of controls.
 
-   ![Compliance framework in the Mondoo Console](/img/platform/compliance/controls.png)
+   ![Controls in compliance framework showing control with exception](/img/platform/compliance/controls-with-exception.png)
 
-4. Select the snoozed or disabled control you want to un-snooze or re-enable.
+4. Select the control you wish to enable and select **Remove Exception and Enable**.
 
-   ![Compliance control in the Mondoo Console](/img/platform/compliance/control-snoozed.png)
-
-5. Select **Delete Exception and Enable**.
+   ![Control with exception selected showing Remove Exception and Enable button](/img/platform/compliance/enable-control.png)
 
 ---

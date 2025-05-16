@@ -23,7 +23,7 @@ jobs:
     steps:
       - name: check-spelling
         id: spelling
-        uses: check-spelling/check-spelling@v0.0.24
+        uses: check-spelling/check-spelling@v0.0.25
         with:
           disable_checks: noisy-file
           suppress_push_for_open_pull_request: 1
@@ -35,6 +35,7 @@ jobs:
             cspell:filetypes/filetypes.txt
             cspell:software-terms/src/software-terms.txt
             cspell:software-terms/src/software-tools.txt
+            cspell:k8s/dict/k8s.txt
             mondoo:mondoo_dictionary.txt
 
   comment:
@@ -47,7 +48,7 @@ jobs:
     if: (success() || failure()) && needs.spelling.outputs.followup
     steps:
       - name: comment
-        uses: check-spelling/check-spelling@v0.0.24
+        uses: check-spelling/check-spelling@v0.0.25
         with:
           checkout: true
           task: ${{ needs.spelling.outputs.followup }}

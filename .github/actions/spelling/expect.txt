@@ -44,7 +44,6 @@ cavium
 cbc
 cdn
 cdzrr
-Ceph
 certificatechains
 cfeed
 cgr
@@ -62,7 +61,6 @@ CODENAME
 codeql
 computeservice
 connectionstrings
-Cooldown
 coreutils
 cosmosdb
 cpe
@@ -96,6 +94,7 @@ ekm
 eksbuild
 enableforcedlogoff
 enablesecuritysignature
+EOL'ed
 exo
 EXTERNALID
 externalsender
@@ -157,7 +156,6 @@ liveanalytics
 logd
 logfiles
 loggingservice
-lun
 managedrulegroupstatement
 managedzone
 MANIFESTFILE
@@ -192,7 +190,6 @@ netsh
 networkinterface
 networkservice
 newkey
-nginx
 nmap
 noarch
 nodegroup
@@ -303,7 +300,6 @@ Vtz
 vulnerabilityassessment
 vulnerabilityassessmentsettings
 vulnmgmt
-webserver
 westeurope
 widescale
 wil

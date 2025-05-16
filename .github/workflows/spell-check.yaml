@@ -35,6 +35,7 @@ jobs:
             cspell:filetypes/filetypes.txt
             cspell:software-terms/src/software-terms.txt
             cspell:software-terms/src/software-tools.txt
+            cspell:k8s/dict/k8s.txt
             mondoo:mondoo_dictionary.txt
 
   comment:

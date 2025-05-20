@@ -24,3 +24,4 @@ Resources included in this pack:
 | [regex](regex.md)                                                     | Built-in regular expression functions                    |
 | [time](time.md)                                                       | Date and time functions                                  |
 | [uuid](uuid.md)                                                       | UUIDs based on RFC 4122 and DCE 1.1                      |
+| [vulnerability.exchange](vulnerability.exchange.md)                   | Experimental: Vulnerability Exchange information         |

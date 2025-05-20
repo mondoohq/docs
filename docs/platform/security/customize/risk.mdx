@@ -22,19 +22,17 @@ import Partial from "../../partials/_editor-owner.mdx";
 
 1. In the [Mondoo Console](https://console.mondoo.com), [navigate](/platform/start/navigate) to the space you want to customize.
 
-2. In the side navigation bar, select **Settings**.
-
-3. Select the **Security Model** tab.
+2. In the side navigation bar, expand the **Security Model** section and select **Risk Factors**.
 
    ![Customize how risk factors affect asset scores in Mondoo](/img/platform/security/custom-risk.png)
 
-4. In the list of risk factors, enable or disable the toggle beside a risk factor:
+3. In the list of risk factors, enable or disable the toggle beside a risk factor:
 
     - An enabled toggle (purple, with the switch to the right) indicate that the risk factor does affect the security scores of assets in the space.
 
     - A disabled toggle, (white, with the switch to the left) indicate that the risk factor does not affect the security scores of assets in the space.
 
-5. Select the **SAVE CHANGES** button. Changes take place immediately.
+4. Select the **SAVE CHANGES** button. Changes take place immediately.
 
 ## Flag high-priority or low-priority assets using metadata
 
@@ -56,25 +54,23 @@ To specify tags, labels, or annotations that indicate high-priority or low-prior
 
 1. In the [Mondoo Console](https://console.mondoo.com), [navigate](/platform/start/navigate) to the space you want to customize.
 
-2. In the side navigation bar, select **Settings**.
+2. In the side navigation bar, expand the **Security Model** section and select **Risk Factors**.
 
-3. Select the **Security Model** tab.
-
-4. Scroll to the bottom of the tab.
+3. Scroll to the bottom of the tab.
 
    ![Define assets as high or low priority based on metadata in Mondoo](/img/platform/security/hi-lo-pri.png)
 
-5. Under **High-priority asset** or **Low-priority asset**, select the plus (+) button to add a condition.
+4. Under **High-priority asset** or **Low-priority asset**, select the plus (+) button to add a condition.
 
-   ![Define assets as high or low risk based on metadata in Mondoo](/img/platform/security/add-first-condition.png)
+  ![Define assets as high or low risk based on metadata in Mondoo](/img/platform/security/add-first-condition.png)
 
-6. Choose whether to assign priority based on a cloud tag/label or a Mondoo annotation.
+5. Choose whether to assign priority based on a cloud tag/label or a Mondoo annotation.
 
-7. Select the plus (+) button to the right and choose the metadata key for the condition. To be flagged high or low priority, an asset must have a tag, label, or annotation with this key.
+6. Select the plus (+) button to the right and choose the metadata key for the condition. To be flagged high or low priority, an asset must have a tag, label, or annotation with this key.
 
    ![Choose the key](/img/platform/security/choose-key.png)
 
-8. Choose the value for the condition. To be flagged high or low priority, an asset must have a tag, label, or annotation with this key value.
+7. Choose the value for the condition. To be flagged high or low priority, an asset must have a tag, label, or annotation with this key value.
 
    ![Choose the value](/img/platform/security/choose-value.png)
 
@@ -82,11 +78,11 @@ To specify tags, labels, or annotations that indicate high-priority or low-prior
 
    ![Full condition](/img/platform/security/one-condition.png)
 
-9. To add another condition, select **+ ADD CONDITION** and follow steps 6-8 again. If you define multiple conditions, an asset only must meet one (or more) of the conditions to be flagged high or low priority. (They're combined with a Boolean OR.)
+8. To add another condition, select **+ ADD CONDITION** and follow steps 6-8 again. If you define multiple conditions, an asset only must meet one (or more) of the conditions to be flagged high or low priority. (They're combined with a Boolean OR.)
 
    ![Add another condition](/img/platform/security/another-condition.png)
 
-10. Select the **SAVE CHANGES** button. Changes take place immediately.
+9. Select the **SAVE CHANGES** button. Changes take place immediately.
 
 ## Choose how much the different risk factors affect security scores
 
@@ -94,15 +90,13 @@ You can change the weight of impact that a risk factor has on asset security sco
 
 1. In the [Mondoo Console](https://console.mondoo.com), [navigate](/platform/start/navigate) to the space you want to customize.
 
-2. In the side navigation bar, select **Settings**.
+2. In the side navigation bar, expand the **Security Model** section and select **Risk Factors**.
 
-3. Select the **Security Model** tab.
-
-4. Select the **SHOW ADVANCED SETTINGS** button.
+3. Select the **SHOW ADVANCED SETTINGS** button.
 
    ![Customize how much risk factors affect asset scores in Mondoo](/img/platform/security/custom-risk-advanced.png)
 
-5. For each risk factor:
+4. For each risk factor:
 
     - Raise or lower the percentage to control how the risk factor raises or lowers security scores.
 
@@ -118,8 +112,8 @@ You can change the weight of impact that a risk factor has on asset security sco
 
     :::
 
-6. To save the new settings, select the **SAVE CHANGES** button.
+5. To save the new settings, select the **SAVE CHANGES** button.
 
-7. To return to the regular Risk Configuration settings without the percentages, select the **HIDE ADVANCED SETTINGS** button.
+6. To return to the regular Risk Configuration settings without the percentages, select the **HIDE ADVANCED SETTINGS** button.
 
 ---

@@ -3,6 +3,7 @@ title: k8s.admission.validatingwebhookconfiguration
 id: k8s.admission.validatingwebhookconfiguration
 sidebar_label: k8s.admission.validatingwebhookconfiguration
 displayed_sidebar: MQL
+description: Kubernetes Validating Webhook Configuration
 ---
 
 # k8s.admission.validatingwebhookconfiguration
@@ -10,6 +11,10 @@ displayed_sidebar: MQL
 **Supported platform**
 
 - kubernetes
+
+**Description**
+
+Kubernetes Validating Webhook Configuration
 
 **Fields**
 

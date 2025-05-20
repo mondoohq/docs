@@ -44,6 +44,7 @@ Kubernetes cluster
 | networkPolicies                 | &#91;&#93;[k8s.networkpolicy](k8s.networkpolicy.md)                                                       | Kubernetes network policies                                                      |
 | customresources                 | &#91;&#93;[k8s.customresource](k8s.customresource.md)                                                     | Kubernetes custom resources                                                      |
 | validatingWebhookConfigurations | &#91;&#93;[k8s.admission.validatingwebhookconfiguration](k8s.admission.validatingwebhookconfiguration.md) | Kubernetes admission webhook configurations                                      |
+| apps                            | &#91;&#93;[k8s.app](k8s.app.md)                                                                           | Kubernetes applications                                                          |
 
 **Examples**
 

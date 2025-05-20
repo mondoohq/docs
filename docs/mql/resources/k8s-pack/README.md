@@ -15,10 +15,11 @@ Resources included in this pack:
 | ID                                                                                              | DESCRIPTION                                                      |
 | ----------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
 | [k8s](k8s.md)                                                                                   | Kubernetes cluster                                               |
-| [k8s.admission.validatingwebhookconfiguration](k8s.admission.validatingwebhookconfiguration.md) |                                                                  |
+| [k8s.admission.validatingwebhookconfiguration](k8s.admission.validatingwebhookconfiguration.md) | Kubernetes Validating Webhook Configuration                      |
 | [k8s.admissionrequest](k8s.admissionrequest.md)                                                 | Kubernetes AdmissionRequest                                      |
 | [k8s.admissionreview](k8s.admissionreview.md)                                                   | Kubernetes AdmissionReview                                       |
 | [k8s.apiresource](k8s.apiresource.md)                                                           | Kubernetes API resources                                         |
+| [k8s.app](k8s.app.md)                                                                           | Kubernetes Application                                           |
 | [k8s.configmap](k8s.configmap.md)                                                               | Kubernetes ConfigMap                                             |
 | [k8s.container](k8s.container.md)                                                               | Kubernetes workload container                                    |
 | [k8s.cronjob](k8s.cronjob.md)                                                                   | Kubernetes CronJob                                               |

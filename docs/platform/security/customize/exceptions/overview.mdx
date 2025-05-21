@@ -1,0 +1,48 @@
+---
+title: Exceptions for Findings - Overview
+sidebar_label: Overview
+sidebar_position: 1
+description: Control how Mondoo evaluates and scores findings with exceptions
+image: /img/featured_img/mondoo-feature.jpg
+---
+
+Exceptions allow you to control how Mondoo evaluates findings and how you communicate the status of those findings to your team. You can use exceptions to:
+
+- Exclude specific checks from running on assets
+- Exclude specific findings from impacting asset scores
+- Scope security or compliance efforts to specific checks.
+- Communicate false positives, workarounds, and other situations that necessitate ignoring a finding
+
+Exceptions apply immediately, but they can be approved or rejected later. This allows you to track the status of exceptions along with the specific reason why they were created.
+
+## Types of exceptions
+
+Mondoo includes two types of exceptions:
+
+- **Disabled**: A disabled exception tells Mondoo to skip the evaluation of a check entirely. This means that the check won't run on the asset, and it won't impact the asset's risk score. Use this option when you want to completely ignore a check or to avoid potential performance / stability impacts in evaluating the check.
+- **Risk Accepted**: A risk accepted exception tells Mondoo to continue evaluating a finding, but skip scoring the finding for a specific period of time. Use this option when you plan to address the finding later but want to prevent it from impacting your team's current priorities.
+
+## Where exceptions are set
+
+Exceptions can be set space-wide or on individual assets.
+
+**Space wide**:
+
+- Policy checks
+- Vulnerabilities
+- Vendor advisories
+- Compliance framework controls
+- Compliance framework control checks
+
+**On individual assets**:
+
+- Checks on an asset
+- Vulnerabilities on an asset
+- Vendor advisories on an asset
+
+## Managing Exceptions
+
+Mondoo includes a centralized exceptions page that allows you to view all exceptions created in a space. This page provides a comprehensive overview of all exceptions, including their status and details. You can also use this page to approve or reject exceptions and to discover exceptions that are expiring soon.
+
+![Space in the Mondoo Console](/img/platform/security/exceptions_page.png)
+---

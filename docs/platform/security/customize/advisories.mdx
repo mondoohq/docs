@@ -1,16 +1,16 @@
 ---
-title: Snooze or Disable Advisories for Assets
-sidebar_label: Disable/Snooze Advisories
+title: Set Exceptions on Asset Advisories
+sidebar_label: Set Exceptions on Asset Advisories
 sidebar_position: 4
 description: Control which advisories Mondoo uses to assess an asset's vulnerability
 image: /img/featured_img/mondoo-feature.jpg
 ---
 
-Make _advisory exceptions_ to customize how Mondoo evaluates your assets. Advisory exceptions tell Mondoo to exclude certain [advisories](/platform/security/posture/advisories/) when assessing an asset's security posture.
+Set _advisory exceptions_ to customize how Mondoo evaluates your assets. Advisory exceptions tell Mondoo to exclude certain [advisories](/platform/security/posture/advisories/) when assessing an asset's security posture.
 
-If an asset has some advisories that, for any reason, you don't want to include in your assessments, you can _disable_ them. Doing so instructs Mondoo to skip them entirely. Mondoo doesn't prioritize disabled advisories or include them when evaluating the asset's vulnerability to attack.
+If an asset has advisories that, for any reason, you don't want to include in your assessments, you can _disable_ them. Doing so instructs Mondoo to skip them entirely. Mondoo doesn't prioritize disabled advisories or include them when evaluating the asset's vulnerability to attack.
 
-To temporarily or indefinitely exclude an advisory, you can _snooze_ it. While an advisory is snoozed, it doesn't affect the asset's vulnerability score. Snoozing is useful when you intend to fix an advisory eventually but don't want it distracting your team right now.
+You can temporarily exclude an advisory by setting it to Risk Accepted. While an advisory is in this state, it won't affect the asset's vulnerability score. Use Risk Acceptance when you intend to address an advisory later but want to prevent it from impacting your team's current priorities.
 
 ## Disable or snooze an advisory
 
@@ -34,7 +34,7 @@ import Partial from "../../partials/_editor-owner.mdx";
 
    ![Advisories tab for an asset](/img/platform/security/advisories-tab.png)
 
-4. Check the boxes to the left of the advisories you want to snooze or disable.
+4. Check the boxes to the left of the advisories you want to set an exception for.
 
    ![Mondoo advisories - set an exception](/img/platform/security/selected-advisories.png)
 
@@ -42,9 +42,9 @@ import Partial from "../../partials/_editor-owner.mdx";
 
    ![Mondoo exception](/img/platform/security/set-exception-advisory.png)
 
-6. Select whether to **Snooze** or **Disable** the check and write an explanation for the exception.
+6. Select the exception type and write an explanation for the exception.
 
-   If you select Snooze, select how long to snooze the check. Select **Indefinitely** to keep the check snoozed unless you un-snooze it.
+   If you select Risk Accepted, select the time period of the exception.
 
 7. Select the **SAVE EXCEPTION** button.
 
@@ -74,15 +74,15 @@ To approve or reject an exception:
 
 3. Select the **Exceptions** tab to see all the exceptions for the asset.
 
-   ![Security policies in the Mondoo Console](/img/platform/security/approve-reject.png)
+   ![Exceptions tab on an asset](/img/platform/security/approve-reject.png)
 
 4. Select the **Reject** button to remove the exception, or select the **Approve** button to keep the exception with your approval.
 
-## Un-snooze or re-enable an advisory
+## Re-enable an advisory
 
 <Partial />{" "}
 
-1. In the [Mondoo Console](https://console.mondoo.com), [navigate](/platform/start/navigate/) to the space in which you want to disable a check.
+1. In the [Mondoo Console](https://console.mondoo.com), [navigate](/platform/start/navigate/) to the space in which you want to re-enable a check.
 
    ![Space in the Mondoo Console](/img/platform/security/dashboard.png)
 
@@ -96,9 +96,9 @@ To approve or reject an exception:
 
 3. Select the **Advisories** tab.
 
-4. Check the boxes to the left of the advisories you want to un-snooze or re-enable.
+4. Check the boxes to the left of the advisories you want to re-enable.
 
-   ![Mondoo security - un-snooze or re-enable advisories](/img/platform/security/remove.png)
+   ![Mondoo security - re-enable advisories](/img/platform/security/remove.png)
 
 5. Select **Remove Exception and Enable**.
 

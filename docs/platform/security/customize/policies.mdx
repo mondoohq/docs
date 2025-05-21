@@ -1,6 +1,6 @@
 ---
-title: Snooze or Disable Checks in Policies
-sidebar_label: Disable/Snooze Checks
+title: Set Exceptions on Policies
+sidebar_label: Set Exceptions on Policies
 sidebar_position: 2
 description: Control which portions of policies Mondoo uses to assess your infrastructure
 image: /img/featured_img/mondoo-feature.jpg
@@ -10,15 +10,15 @@ Make _exceptions_ in a policy to customize how Mondoo evaluates your assets. Exc
 
 If a policy contains some checks that don't apply to your space or that, for any reason, you don't want to include in your security assessments, you can _disable_ them. Doing so instructs Mondoo to skip them entirely. Mondoo doesn't track disabled checks, report their progress, or include them in your overall score.
 
-To temporarily or indefinitely exclude a check from your overall results, you can _snooze_ it. While a check is snoozed, its failures don't affect your asset or space scores. Snoozing is useful when you intend to comply with a guideline eventually but don't want it distracting your team right now.
+To temporarily exclude a check from your overall results, you can set it to _Risk Accepted_. While in this state, its failures don't affect your asset or space scores. Risk Acceptance is useful when you intend to comply with a guideline eventually but don't want it distracting your team right now.
 
-## Disable or snooze checks
+## Setting exceptions
 
 import Partial from "../../partials/_editor-owner.mdx";
 
 <Partial />{" "}
 
-1. In the [Mondoo Console](https://console.mondoo.com), [navigate](/platform/start/navigate/) to the space in which you want to disable a check.
+1. In the [Mondoo Console](https://console.mondoo.com), [navigate](/platform/start/navigate/) to the space in which you want to set an exception.
 
    ![Space in the Mondoo Console](/img/platform/security/dashboard.png)
 
@@ -30,7 +30,7 @@ import Partial from "../../partials/_editor-owner.mdx";
 
 4. Select the **Checks** tab to see all the checks in the policy.
 
-5. Check the boxes to the left of the checks you want to snooze or disable.
+5. Check the boxes to the left of the checks you want to set exceptions for.
 
    ![Mondoo security - set an exception](/img/platform/security/set-exception.png)
 

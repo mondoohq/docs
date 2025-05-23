@@ -6,10 +6,10 @@ description: Mondoo provides automation to fix findings via established infrastr
 image: /img/featured_img/mondoo-feature.jpg
 ---
 
-import click2fixDiagram from "/img/platform/ticketing/click2fix-diagram.png";
-import click2fixRepo from "/img/platform/ticketing/click2fix-repo-setup.png";
-import click2fixPR from "/img/platform/ticketing/click2fix-pr.png";
-import click2fixPRdetails from "/img/platform/ticketing/click2fix-pr-details.png";
+import click2fix_Diagram from "/img/platform/ticketing/click2fix-diagram.png";
+import click2fix_Repo from "/img/platform/ticketing/click2fix-repo-setup.png";
+import click2fix_PR from "/img/platform/ticketing/click2fix-pr.png";
+import click2fix_PR_Details from "/img/platform/ticketing/click2fix-pr-details.png";
 
 ## Summary
 
@@ -45,7 +45,7 @@ Mondoo's platform works by either integrating into a customer's IaC automation O
 
 The following section applies the design specifically for Ansible and GitHub, but the concepts are transferable to other combinations as well.
 
-<img src={click2fixDiagram} width="700" />
+<img src={click2fix_Diagram} width="700" />
 
 The above image outlines the flows for the Click2Fix automation. In this diagram, you can see the endpoints that are going to be fixed at the top. These servers can be a variety of operating systems, ranging from Linux distributions, Windows, and macOS (for endpoints).
 
@@ -75,7 +75,7 @@ click2fix repo init lunalectric/auto-patch --source-control github
 
 This will generate the new repository:
 
-<img src={click2fixRepo} width="700" />
+<img src={click2fix_Repo} width="700" />
 
 
 ### Create a fix
@@ -88,13 +88,13 @@ click2fix pr create lunalectric/auto-patch --source-control github
 
 This will create a new pull request that includes the latest patches for the system:
 
-<img src={click2fixPR} width="700" />
+<img src={click2fix_PR} width="700" />
 
 This covers all details for the vulnerabilities that are fixed, the associated advisories, and any other findings that are covered. This command populates the automation pipeline with all necessary packages for the systems that are targeted.
 
 At this point users may review the change and either approve, reject, or modify it. Any PR can be modified fully to only cover packages and systems that the administrator wants to. Nothing in this automation is hidden, everything is in the pull-request and fully visible before the changes are accepted.
 
-<img src={click2fixPRdetails} width="700" />
+<img src={click2fix_PR_Details} width="700" />
 
 Once these changes are reviewed and accepted, users can "Merge pull request". This kicks off the automation to roll out the patches to all systems.
 

@@ -47,11 +47,11 @@ The following section applies the design specifically for Ansible and GitHub, bu
 
 <img src={click2fixDiagram} width="700" />
 
-The above image outlines the flows for the Click2Fix automation. In this diagram, you can see the endpoints that are going to be fixed at the top. These servers can be a variety of operating systems, ranging from Linux distributions, Windows, and MacOS (for endpoints).
+The above image outlines the flows for the Click2Fix automation. In this diagram, you can see the endpoints that are going to be fixed at the top. These servers can be a variety of operating systems, ranging from Linux distributions, Windows, and macOS (for endpoints).
 
-We use cnspec (left) to continuously test these endpoints for security vulnerabilities and misconfigurations. Cnspec may be used in agent-based or agentless mode. Once set up, cnspec provides the Mondoo platform with all necessary information to set up the system in the automation pipeline.
+We use cnspec (left) to continuously test these endpoints for security vulnerabilities and misconfigurations. Cnspec may be used in agent-based or agentless mode. Once set up, cnspec provides the Mondoo Platform with all necessary information to set up the system in the automation pipeline.
 
-The Mondoo platform (bottom left) contains the orchestration for this automation. It also collects vulnerabilities and misconfigurations in real-time and evaluates them based on the risk profile of the user.
+The Mondoo Platform (bottom left) contains the orchestration for this automation. It also collects vulnerabilities and misconfigurations in real-time and evaluates them based on the risk profile of the user.
 
 Once you set up Click2Fix, it configures the GitHub repository (bottom right) and sets up the infrastructure automation (Ansible in this case), the inventory, and the patch tasks.
 
@@ -96,25 +96,5 @@ At this point users may review the change and either approve, reject, or modify 
 
 <img src={click2fixPRdetails} width="700" />
 
+Once these changes are reviewed and accepted, users can "Merge pull request". This kicks off the automation to roll out the patches to all systems.
 
-
-
-### GitHub + Ansible automation
-
-As a first step, we implement the complete flow for Ansible + GitHub. This allows us to focus on a specific use case and test it out with customers early.
-
-**User Journey in the Console**
-
-- Ansible integration
-    - Instructions to create GitHub repo
-    - Assign new GitHub repo via GitHub App, we browse the list of GitHub repos
-    - Do you want to generate the SSH Key
-        - Yes ⇒ Create ssh private and public key
-        - No ⇒ User uploads private key
-    - Show instruction how users can add the ssh key to windows and linux, show powershell + bash snippets
-    - Question if user wants to initialize the git repo
-        - generate repo structure
-        - generate inventory.yaml
-        - setup GitHub actions to run Ansible and use the ssh key, if permissions are missing show instructions to the user
-- Create PR from Findings page
-    - Read assigned package score and generate the ansible task for the playbook

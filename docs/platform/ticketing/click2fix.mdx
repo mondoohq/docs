@@ -1,0 +1,100 @@
+---
+title: Click2Fix automation
+sidebar_label: Click2Fix
+sidebar_position: 1
+description: Mondoo provides automation to fix findings via established infrastructure automation platforms like Terraform, Ansible, Intune and others.
+image: /img/featured_img/mondoo-feature.jpg
+---
+
+import click2fix_Diagram from "/img/platform/ticketing/click2fix-diagram.png";
+import click2fix_Repo from "/img/platform/ticketing/click2fix-repo-setup.png";
+import click2fix_PR from "/img/platform/ticketing/click2fix-pr.png";
+import click2fix_PR_Details from "/img/platform/ticketing/click2fix-pr-details.png";
+
+## Summary
+
+Mondoo is amazing at identifying vulnerabilities and misconfiguration across all systems in your fleet and making them actionable. The provided remediations can be set up in automation pipelines that make fixing systems safe, scalable, and simple. Fixes can be applied to production infrastructure faster which helps users to stay protected.
+
+This is done via out of the box automation pipelines that Mondoo rolls out. All that users require is a GitHub repository and access to the systems. This automation pipeline allows users to review changes before they are applied, test them, and roll them back if they don't work.
+
+### Mondoo's approach
+
+Instead of building a custom patch client, Mondoo believes that infrastructure automation like Terraform and Ansible should be used. These platforms have been tested extensively in all environments and configurations around the world in many of the larges companies as well as small and medium-sized businesses with less dedicated expertise. Automation frameworks like these have world-wide communities formed around them, are thoroughly documented, with training courses, videos, and LLM-based solutions that work out of the box.
+
+Therefore, Mondoo combines Infrastructure as Code (IaC) with our thorough experience in managing infrastructure at scale and making it accessible to users who don't use IaC like Terraform or Ansible today. We believe in using standardized solutions that are future-proof, with an easy access to experts and learning resources, to help our users succeed.
+
+### Supported tools
+
+**Supported Solutions Environments:**
+
+- Ansible - Automation for operating systems, patches, and configuration.
+- Terraform - Automation of all cloud environments and services (like GitHub, Okta, MS365 and more).
+- Microsoft Intune - Microsoft's standard solution for managing endpoints.
+- Jamf - Widespread solution for device management (MDM), particularly Apple devices.
+- Kandji - Similar to Jamf, a widespread MDM with focus on Apple devices.
+
+Mondoo's platform works by either integrating into a customer's IaC automation OR providing our own security and patching pipeline for them out of the box.
+
+**Supported Git Environments:**
+
+- GitHub
+- GitLab
+- Local environments and custom automation via click2fix CLI
+
+### Detailed design
+
+The following section applies the design specifically for Ansible and GitHub, but the concepts are transferable to other combinations as well.
+
+<img src={click2fix_Diagram} width="700" />
+
+The above image outlines the flows for the Click2Fix automation. In this diagram, you can see the endpoints that are going to be fixed at the top. These servers can be a variety of operating systems, ranging from Linux distributions, Windows, and macOS (for endpoints).
+
+We use cnspec (left) to continuously test these endpoints for security vulnerabilities and misconfigurations. Cnspec may be used in agent-based or agentless mode. Once set up, cnspec provides the Mondoo Platform with all necessary information to set up the system in the automation pipeline.
+
+The Mondoo Platform (bottom left) contains the orchestration for this automation. It also collects vulnerabilities and misconfigurations in real-time and evaluates them based on the risk profile of the user.
+
+Once you set up Click2Fix, it configures the GitHub repository (bottom right) and sets up the infrastructure automation (Ansible in this case), the inventory, and the patch tasks.
+
+
+## Setup
+
+**Prerequisites**
+
+To use this automation, you first require:
+
+- A git integration (either GitHub or GitLab). You can either point Mondoo to a repository or have ask Mondoo to create a repository (see below).
+- SSH keys to manage endpoints.
+
+**Create the git repository**
+
+Mondoo can create the repository for you via. In this example we create a repository `auto-patch` in the `lunalectric` organization in GitHub:
+
+```
+click2fix repo init lunalectric/auto-patch --source-control github
+```
+
+This will generate the new repository:
+
+<img src={click2fix_Repo} width="700" />
+
+
+### Create a fix
+
+To manually trigger a fix, you can use this command:
+
+```
+click2fix pr create lunalectric/auto-patch --source-control github
+```
+
+This will create a new pull request that includes the latest patches for the system:
+
+<img src={click2fix_PR} width="700" />
+
+This covers all details for the vulnerabilities that are fixed, the associated advisories, and any other findings that are covered. This command populates the automation pipeline with all necessary packages for the systems that are targeted.
+
+At this point users may review the change and either approve, reject, or modify it. Any PR can be modified fully to only cover packages and systems that the administrator wants to. Nothing in this automation is hidden, everything is in the pull-request and fully visible before the changes are accepted.
+
+<img src={click2fix_PR_Details} width="700" />
+
+Once these changes are reviewed and accepted, users can "Merge pull request". This kicks off the automation to roll out the patches to all systems.
+

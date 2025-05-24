@@ -1,26 +1,22 @@
-name: "Optimize Images"
-
+name: Compress Images
 on:
-  workflow_dispatch:
-  push:
-    branches:
-      - main
+  pull_request:
     paths:
-      - "**.jpg"
-      - "**.jpeg"
-      - "**.png"
-      - "**.gif"
-      - "**.svg"
-      - "**.webp"
-
+      - '**.jpg'
+      - '**.jpeg'
+      - '**.png'
+      - '**.webp'
 jobs:
-  imgcmp:
+  build:
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    name: calibreapp/image-actions
+    permissions: write-all
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      pull-requests: write
     steps:
-      - uses: 9sako6/imgcmp@v2.0.4
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Compress Images
+        uses: calibreapp/image-actions@main
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-        continue-on-error: true
+          githubToken: ${{ secrets.GITHUB_TOKEN }}

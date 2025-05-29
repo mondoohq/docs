@@ -17,10 +17,14 @@ Exceptions take effect immediately but can later be approved or rejected, enabli
 
 ## Types of exceptions
 
-Mondoo includes two types of exceptions:
+Mondoo includes four types of exceptions:
 
-- **Disabled**: A disabled exception tells Mondoo to skip the evaluation of a check entirely. This means that the check won't run on the asset, and it won't impact the asset's risk score. Use this option when you want to completely ignore a check or to avoid potential performance / stability impacts in evaluating the check.
-- **Risk Accepted**: A risk accepted exception tells Mondoo to continue evaluating a finding, but skip scoring the finding for a specific period of time. Use this option when you plan to address the finding later but want to prevent it from impacting your team's current priorities.
+| Exception Type | Finding Impact                                  | When to Use                                                                                                                          |
+| -------------- | ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| Risk Accepted  | Check runs; finding does not impact asset score | You're aware of the risk and plan to fix it at a later date.                                                                         |
+| Workaround     | Check runs; finding does not impact asset score | A workaround, sometimes referred to as a compensating control, is in place that mitigates the need to directly address this finding. |
+| False Positive | Check runs; finding does not impact asset score | The finding is inaccurate or not applicable to your environment.                                                                     |
+| Disable        | Check does not run or impact asset score        | You wan to avoid potential stability or performance impacts of evaluating this finding.                                              |
 
 ## Where exceptions are set
 
@@ -45,4 +49,3 @@ Exceptions can be set space-wide or on individual assets.
 Mondoo includes a centralized exceptions page that allows you to view all exceptions created in a space. This page provides a comprehensive overview of all exceptions, including their status and details. You can also use this page to approve or reject exceptions and to discover exceptions that are expiring soon.
 
 ![Space in the Mondoo Console](/img/platform/security/exceptions_page.png)
----

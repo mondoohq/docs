@@ -59,9 +59,9 @@ To create a Base64-encoded service account:
 
 1. [Navigate](/platform/start/navigate/) to the space in which you want to create a service account.
 2. In the left navigation, select **Settings**. Then select the **Service Accounts** tab.
-3. Select **ADD ACCOUNT**.
-4. Check the **Base64-encoded** box to Base64-encode the credentials.
-5. Select **GENERATE NEW CREDENTIALS**.
+3. Select the purple plus sign to add a new service account.
+4. Provide a **Name** and optionally a **Description** for the service account.
+5. Under permissions select **Agent** and select **Generate Service Account**.
 6. Copy the Base64-encoded credentials to the clipboard.
 7. Open a terminal and run:
 
@@ -307,7 +307,7 @@ During the build process you will see scan results similar to this:
 
 ### View the report in Mondoo Platform
 
-Packer Plugin Mondoo sends the scan results to your account in Mondoo Platform. To view the scan report in the Mondoo Console, go to **INVENTORY** and find the report. You might need to refresh your browser.
+Packer Plugin Mondoo sends the scan results to your account in Mondoo Platform. To view the scan report in the Mondoo Console, navigate to **INVENTORY**, then **ASSETS** and select your asset. You may need to refresh your browser.
 
 ![Mondoo scan report from HashiCorp Packer build](/img/cnspec/gcp/packer-asset.png)
 

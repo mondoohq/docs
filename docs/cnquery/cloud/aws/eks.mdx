@@ -13,7 +13,13 @@ We'll continue working in the cnquery shell, which makes running individual quer
 
 ## EKS resources
 
-cnquery provides answers to any question about your EKS clusters. To discover all the resources and fields you can query, read [aws.eks](/mql/resources/aws-pack/aws.eks/). You can also use the `help` command in the shell:
+To launch a shell into your AWS environment, enter:
+
+```bash
+cnquery shell aws
+```
+
+Once you're in the shell, cnquery provides answers to any question about your EKS clusters. To discover all the resources and fields you can query, read [aws.eks](/mql/resources/aws-pack/aws.eks/). You can also use the `help` command in the shell:
 
 ```coffeescript
 help aws.eks
@@ -29,7 +35,7 @@ This query gathers all your EKS clusters:
 aws.eks.clusters
 ```
 
-It returns each cluster's ARN and current state:
+It returns each cluster's ARN, version, and current state:
 
 ```coffeescript
 aws.eks.clusters: [

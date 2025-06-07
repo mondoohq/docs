@@ -8,7 +8,7 @@ description: Query packs let you bundle multiple queries together to meet specif
 image: /img/featured_img/mondoo-feature.jpg
 ---
 
-To run multiple queries together, you can combine queries into query packs. You can find query packs in Mondoo's [cnquery-packs](https://github.com/mondoohq/cnquery-packs) GitHub repo.
+To run multiple queries together, you can combine queries into query packs. You can find query packs in Mondoo's [cnquery](https://github.com/mondoohq/cnquery) GitHub repo.
 
 ## Let cnquery choose the right query pack​
 

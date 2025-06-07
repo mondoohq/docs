@@ -68,9 +68,9 @@ To create a Base64-encoded service account:
 
 1. [Navigate](/platform/start/navigate/) to the space in which you want to create a service account.
 2. In the left navigation, select **Settings**. Then select the **Service Accounts** tab.
-3. Select **ADD ACCOUNT**.
-4. Check the **Base64-encoded** box to Base64-encode the credentials.
-5. Select **GENERATE NEW CREDENTIALS**.
+3. Select the purple plus sign to add a new service account.
+4. Provide a **Name** and optionally a **Description** for the service account.
+5. Under permissions select **Agent** and select **Generate Service Account**.
 6. Copy the Base64-encoded credentials to the clipboard.
 7. Open a terminal and run:
 
@@ -275,19 +275,19 @@ us-east-1: ami-0b3e9a14e02dd8f37
 
 ### View the scan report in Mondoo Platform (registered mode only)
 
-To view the scan report in the Mondoo Console, go to **INVENTORY** and find the report. You might need to refresh your browser.
+To view the scan report in the Mondoo Console, navigate to **INVENTORY**, then **ASSETS** and select your asset. You may need to refresh your browser.
 
 ![Mondoo scan report from HashiCorp Packer build](/img/cnspec/aws/packer-asset.png)
 
-### View the control details
+### View the checks details
 
-Select the Controls tab.
+Select the Checks tab.
 
-![Controls tab in a Mondoo scan report from HashiCorp Packer build](/img/cnspec/aws/controls-tab.png)
+![Checks tab in a Mondoo scan report from HashiCorp Packer build](/img/cnspec/aws/checks-tab.png)
 
 Expand any of the checks in the policies that ran against your build to show additional documentation, audit, and remediation steps:
 
-![Control details in a Mondoo scan result](/img/cnspec/aws/control-details.png)
+![Checks details in a Mondoo scan result](/img/cnspec/aws/checks-details.png)
 
 ## View the image AWS Management Console
 

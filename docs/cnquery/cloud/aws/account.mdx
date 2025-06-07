@@ -126,8 +126,8 @@ For every user, cnquery provides information about their IAM activity and settin
     user: aws.iam.user arn="arn:aws:iam::921877552404:user/suki"
     properties: {
       access_key_1_active: "true"
-      access_key_1_last_rotated: "2021-06-15T07:11:58+00:00"
-      access_key_1_last_used_date: "2022-12-02T04:33:00+00:00"
+      access_key_1_last_rotated: "2025-01-15T07:11:58+00:00"
+      access_key_1_last_used_date: "2025-05-02T04:33:00+00:00"
       access_key_1_last_used_region: "eu-north-1"
       access_key_1_last_used_service: "ec2"
       access_key_2_active: "false"
@@ -146,7 +146,7 @@ For every user, cnquery provides information about their IAM activity and settin
       password_last_used: "N/A"
       password_next_rotation: "N/A"
       user: "suki-m1"
-      user_creation_time: "2021-06-15T07:11:58+00:00"
+      user_creation_time: "2025-01-15T07:11:58+00:00"
     }
     cert1Active: false
     accessKey2LastUsedRegion: "N/A"
@@ -157,14 +157,14 @@ For every user, cnquery provides information about their IAM activity and settin
     cert2Active: false
     accessKey2Active: false
     accessKey2LastUsedService: "N/A"
-    accessKey1LastRotated: 2021-06-15 07:11:58 +0000 +0000
+    accessKey1LastRotated: 2025-01-15 07:11:58 +0000 +0000
     cert2LastRotated: Never
     cert1LastRotated: Never
-    accessKey1LastUsedDate: 2022-12-02 04:33:00 +0000 +0000
+    accessKey1LastUsedDate: 2025-05-02 04:33:00 +0000 +0000
     accessKey2LastRotated: Never
     arn: "arn:aws:iam::921877552404:user/suki"
     mfaActive: false
-    userCreationTime: 2021-06-15 07:11:58 +0000 +0000
+    userCreationTime: 2025-01-15 07:11:58 +0000 +0000
     accessKey2LastUsedDate: Never
     passwordEnabled: false
   }
@@ -183,17 +183,17 @@ cnquery returns results like this:
 ```coffeescript
 aws.iam.credentialReport: [
   0: {
-    passwordLastChanged: 2022-11-30 12:15:58 +0000 +0000
+    passwordLastChanged: 2025-01-30 12:15:58 +0000 +0000
     arn: "arn:aws:iam::921877552404:user/suki"
     mfaActive: true
   }
   1: {
-    passwordLastChanged: 2022-08-25 20:40:44 +0000 +0000
+    passwordLastChanged: 2025-02-25 20:40:44 +0000 +0000
     arn: "arn:aws:iam::921877552404:user/tembe"
     mfaActive: true
   }
   2: {
-    passwordLastChanged: 2022-12-01 20:58:11 +0000 +0000
+    passwordLastChanged: 2025-05-01 20:58:11 +0000 +0000
     arn: "arn:aws:iam::921877552404:user/amos"
     mfaActive: true
   }

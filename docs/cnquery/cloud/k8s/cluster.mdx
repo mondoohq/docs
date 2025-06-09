@@ -23,22 +23,22 @@ cnquery shell k8s
 cnquery automatically discovers all the Kubernetes assets available to query:
 
 ```coffeescript
-→ resolved assets resolved-assets=20
-
     Available assets
 
-    8. luna/luna-frontend-7fb96c846b-2k5j7 (k8s-pod)
-  > 9. luna/luna-frontend-7fb96c846b-8b94j (k8s-pod)
-    10. luna/luna-frontend-7fb96c846b-jglt9 (k8s-pod)
-    11. kube-system/kube-controller-manager-minikube (k8s-pod)
-    12. kube-system/kube-proxy-cdzrr (k8s-pod)
-    13. kube-system/kube-scheduler-minikube (k8s-pod)
-    14. kube-system/storage-provisioner (k8s-pod)
+  > 1. K8s Cluster prod-k8s (Kubernetes Cluster)
+    2. kube-system (Kubernetes Namespace)
+    3. kube-node-lease (Kubernetes Namespace)
+    4. kube-public (Kubernetes Namespace)
+    5. default/kubernetes (Kubernetes Service)
+    6. mondoo-operator (Kubernetes Namespace)
+    7. kube-system/etcd-prod-k8s (Kubernetes Pod)
 
-    •••
+    ••••
+
+    ↑/k up • ↓/j down • q quit • ? more
 ```
 
-Arrow through the list and select Enter to choose the asset you want to explore.
+Arrow through the list and select Enter to choose the asset you want to explore. To query the entire Kubernetes cluster as well as all workloads running on the cluster make sure to select a "Kubernetes Cluster" asset.
 
 ### Discover capabilities with the `help` command
 
@@ -72,11 +72,11 @@ cnquery returns a list of all the namespaces in the cluster and their creation d
 
 ```coffeescript
 k8s.namespaces: [
-  0: k8s.namespace name="default" created=2022-12-14 15:17:35 -0800 PST
-  1: k8s.namespace name="kube-node-lease" created=2022-12-14 15:17:34 -0800 PST
-  2: k8s.namespace name="kube-public" created=2022-12-14 15:17:34 -0800 PST
-  3: k8s.namespace name="kube-system" created=2022-12-14 15:17:34 -0800 PST
-  4: k8s.namespace name="luna" created=2022-12-14 15:26:38 -0800 PST
+  0: k8s.namespace name="default" created=2025-01-29 17:37:00 -0800 PST
+  1: k8s.namespace name="kube-node-lease" created=2025-01-29 17:37:00 -0800 PST
+  2: k8s.namespace name="kube-public" created=2025-01-29 17:37:00 -0800 PST
+  3: k8s.namespace name="kube-system" created=2025-01-29 17:36:59 -0800 PST
+  4: k8s.namespace name="luna" created=2025-01-29 17:38:15 -0800 PST
 ]
 ```
 
@@ -91,14 +91,19 @@ cnquery groups the information by namespace:
 ```coffeescript
 k8s.namespaces: [
   0: {
-    uid: "2cf29aad-c9cd-47fc-98fa-1fbc80b64ccb"
+    labels: {
+      kubernetes.io/metadata.name: "default"
+    }
+    uid: "a6809146-53e4-4086-b289-0d368ba298d4"
     id: "namespace:default"
-    created: 2022-12-14 15:17:35 -0800 PST
+    created: 2025-01-29 17:37:00 -0800 PST
+    kind: "Namespace"
+    annotations: {}
     manifest: {
       apiVersion: "v1"
       kind: "Namespace"
       metadata: {
-        creationTimestamp: "2022-12-14T23:17:35Z"
+        creationTimestamp: "2025-01-30T01:37:00Z"
         labels: {
           kubernetes.io/metadata.name: "default"
         }
@@ -116,12 +121,12 @@ k8s.namespaces: [
             }
             manager: "kube-apiserver"
             operation: "Update"
-            time: "2022-12-14T23:17:35Z"
+            time: "2025-01-30T01:37:00Z"
           }
         ]
         name: "default"
-        resourceVersion: "192"
-        uid: "2cf29aad-c9cd-47fc-98fa-1fbc80b64ccb"
+        resourceVersion: "67"
+        uid: "a6809146-53e4-4086-b289-0d368ba298d4"
       }
       spec: {
         finalizers: [
@@ -135,14 +140,19 @@ k8s.namespaces: [
     name: "default"
   }
   1: {
-    uid: "d0b8a89f-42c1-43d1-88e5-976231c85e43"
+    labels: {
+      kubernetes.io/metadata.name: "kube-node-lease"
+    }
+    uid: "ff713841-9c94-478f-ab0d-0ff534199eca"
     id: "namespace:kube-node-lease"
-    created: 2022-12-14 15:17:34 -0800 PST
+    created: 2025-01-29 17:37:00 -0800 PST
+    kind: "Namespace"
+    annotations: {}
     manifest: {
       apiVersion: "v1"
       kind: "Namespace"
       metadata: {
-        creationTimestamp: "2022-12-14T23:17:34Z"
+        creationTimestamp: "2025-01-30T01:37:00Z"
         labels: {
           kubernetes.io/metadata.name: "kube-node-lease"
         }
@@ -160,12 +170,12 @@ k8s.namespaces: [
             }
             manager: "kube-apiserver"
             operation: "Update"
-            time: "2022-12-14T23:17:34Z"
+            time: "2025-01-30T01:37:00Z"
           }
         ]
         name: "kube-node-lease"
-        resourceVersion: "53"
-        uid: "d0b8a89f-42c1-43d1-88e5-976231c85e43"
+        resourceVersion: "69"
+        uid: "ff713841-9c94-478f-ab0d-0ff534199eca"
       }
       spec: {
         finalizers: [
@@ -193,23 +203,23 @@ cnquery returns only the information you requested:
 ```coffeescript
 k8s.namespaces: [
   0: {
-    uid: "2cf29aad-c9cd-47fc-98fa-1fbc80b64ccb"
+    uid: "a6809146-53e4-4086-b289-0d368ba298d4"
     name: "default"
   }
   1: {
-    uid: "d0b8a89f-42c1-43d1-88e5-976231c85e43"
+    uid: "ff713841-9c94-478f-ab0d-0ff534199eca"
     name: "kube-node-lease"
   }
   2: {
-    uid: "fec9c3f7-a49b-4dbd-b17d-98dd3dd4d344"
+    uid: "bf23cfde-b05e-4cc4-8c81-ed7bf1d6e47f"
     name: "kube-public"
   }
   3: {
-    uid: "f249e61c-7a6c-4ea6-a4e0-b903ed469664"
+    uid: "73ce97b9-b3d7-42ad-bf4f-a9fef35d6f67"
     name: "kube-system"
   }
   4: {
-    uid: "e00334c6-7ce4-4a32-b4a7-1e64e30b70c4"
+    uid: "33792a74-e541-4c71-8e18-f3e0dab7ddee"
     name: "luna"
   }
 ]
@@ -316,14 +326,14 @@ To exit the cnquery shell, either press `Ctrl + D` or type `exit`.
 
 ## Analyze your environment with Kubernetes query packs
 
-Mondoo makes these [core Kubernetes query packs](https://github.com/mondoohq/cnquery-packs) available in GitHub:
+Mondoo makes these [core Kubernetes query packs](https://github.com/mondoohq/cnquery) available in GitHub:
 
-- [Mondoo Kubernetes Cluster Inventory](https://github.com/mondoohq/cnquery-packs/blob/main/core/mondoo-kubernetes-inventory.mql.yaml) provides information about all your Kubernetes assets and their configuration.
-- [Mondoo Kubernetes Cluster Incident Response](https://github.com/mondoohq/cnquery-packs/blob/main/core/mondoo-kubernetes-incident-response.mql.yaml) helps you investigate and minimize damage when a security incident occurs.
+- [Mondoo Kubernetes Cluster Inventory](https://github.com/mondoohq/cnquery/blob/main/content/mondoo-kubernetes-inventory.mql.yaml) provides information about all your Kubernetes assets and their configuration.
+- [Mondoo Kubernetes Cluster Incident Response](https://github.com/mondoohq/cnquery/blob/main/content/mondoo-kubernetes-incident-response.mql.yaml) helps you investigate and minimize damage when a security incident occurs.
 
 To run one of these purpose-built collections of Kubernetes-specific queries:
 
-1. In Mondoo's [cnquery-packs GitHub repo](https://github.com/mondoohq/cnquery-packs), go to the `core` directory and find the Kubernetes query pack you want to run.
+1. In Mondoo's [cnquery GitHub repo](https://github.com/mondoohq/cnquery), go to the `content` directory and find the Kubernetes query pack you want to run.
 
 2. Download the YAML file to a local directory and, in your terminal, move to that directory.
 

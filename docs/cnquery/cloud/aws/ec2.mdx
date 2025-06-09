@@ -13,7 +13,13 @@ We'll continue working in the cnquery shell, which makes running individual quer
 
 ## EC2 resources
 
-cnquery provides answers to any question about your EC2 instances. To discover all the resources and fields you can query, read [aws.ec2](/mql/resources/aws-pack/aws.ec2/). You can also use the `help` command in the shell:
+To launch a shell into your AWS environment, enter:
+
+```bash
+cnquery shell aws
+```
+
+Once you're in the shell, cnquery provides answers to any question about your EC2 instances. To discover all the resources and fields you can query, read [aws.ec2](/mql/resources/aws-pack/aws.ec2/). You can also use the `help` command in the shell:
 
 ```coffeescript
 help aws.ec2
@@ -29,15 +35,15 @@ This query gathers all your EC2 instances:
 aws.ec2.instances
 ```
 
-It returns each instance's ARN and current state:
+It returns information on all your EC2 instances, including their ID, type, and state:
 
 ```coffeescript
 aws.ec2.instances: [
-  0: aws.ec2.instance arn="arn:aws:ec2:us-east-1:921877552404:instance/i-06e2eaa19a4fa883e" state="stopped"
-  1: aws.ec2.instance arn="arn:aws:ec2:us-east-1:921877552404:instance/i-0facc86d89af823af" state="stopped"
-  2: aws.ec2.instance arn="arn:aws:ec2:us-east-1:921877552404:instance/i-0b24443c8d18fdbab" state="running"
-  3: aws.ec2.instance arn="arn:aws:ec2:us-west-1:921877552404:instance/i-020eed3b1e4965d8d" state="running"
-  4: aws.ec2.instance arn="arn:aws:ec2:us-west-1:921877552404:instance/i-08f2ba2424027454a" state="running"
+  0: aws.ec2.instance instanceId="i-0684b0bfd6464a123" region="us-east-1" state="running" instanceType="t2.large" architecture="x86_64" platformDetails="Linux/UNIX"
+  1: aws.ec2.instance instanceId="i-0568d8a10045a2456" region="us-east-1" state="running" instanceType="t3.small" architecture="x86_64" platformDetails="Linux/UNIX"
+  2: aws.ec2.instance instanceId="i-037bfef314c571789" region="us-east-1" state="running" instanceType="t3.small" architecture="x86_64" platformDetails="Linux/UNIX"
+  3: aws.ec2.instance instanceId="i-028f66fe019847abc" region="us-east-1" state="running" instanceType="m3.medium" architecture="x86_64" platformDetails="Windows"
+  4: aws.ec2.instance instanceId="i-0f6e7f42454f4cdef" region="us-east-1" state="running" instanceType="t3.small" architecture="x86_64" platformDetails="Linux/UNIX"
 ]
 ```
 
@@ -100,10 +106,10 @@ It lists each instance's ARN and status:
 
 ```coffeescript
 aws.ec2.instances.where: [
-  0: aws.ec2.instance arn="arn:aws:ec2:us-east-1:921877552404:instance/i-06e2eaa19a4fa883e" state="stopped"
-  1: aws.ec2.instance arn="arn:aws:ec2:us-east-1:921877552404:instance/i-0facc86d89af823af" state="stopped"
-  2: aws.ec2.instance arn="arn:aws:ec2:us-west-1:921877552404:instance/i-020eed3b1e4965d8d" state="running"
-  3: aws.ec2.instance arn="arn:aws:ec2:us-west-1:921877552404:instance/i-08f2ba2424027454a" state="running"
+  0: aws.ec2.instance instanceId="i-0684b0bfd6464a123" region="us-east-1" state="running" instanceType="t2.large" architecture="x86_64" platformDetails="Linux/UNIX"
+  1: aws.ec2.instance instanceId="i-0568d8a10045a2456" region="us-east-1" state="running" instanceType="t3.small" architecture="x86_64" platformDetails="Linux/UNIX"
+  2: aws.ec2.instance instanceId="i-037bfef314c571789" region="us-east-1" state="running" instanceType="t3.small" architecture="x86_64" platformDetails="Linux/UNIX"
+  3: aws.ec2.instance instanceId="i-028f66fe019847abc" region="us-east-1" state="running" instanceType="m3.medium" architecture="x86_64" platformDetails="Windows"
 ]
 ```
 

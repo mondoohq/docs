@@ -17,3 +17,4 @@ Microsoft Conditional Access Policies
 | ID             | TYPE                                                                                        | DESCRIPTION               |
 | -------------- | ------------------------------------------------------------------------------------------- | ------------------------- |
 | namedLocations | [microsoft.conditionalAccess.namedLocations](microsoft.conditionalaccess.namedlocations.md) | Named locations container |
+| policies       | &#91;&#93;[microsoft.conditionalAccess.policy](microsoft.conditionalaccess.policy.md)       | Policies collection       |

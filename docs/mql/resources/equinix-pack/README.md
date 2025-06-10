@@ -1,14 +1,14 @@
 ---
-title: Equinix Resource Pack - MQL Resources
-id: equinix.pack
-sidebar_label: Equinix Resource Pack
+title: Equinix Metal Resource Pack - MQL Resources
+id: equinix.metal.pack
+sidebar_label: Equinix Metal Resource Pack
 displayed_sidebar: MQL
-description: The Equinix resource pack lets you use MQL to query and assess the security of your Equinix Metal assets.
+description: The Equinix Metal resource pack lets you use MQL to query and assess the security of your Equinix Metal assets.
 ---
 
-# Equinix MQL Resource Pack Reference
+# Equinix Metal MQL Resource Pack Reference
 
-The Equinix resource pack lets you use MQL to query and assess the security of your Equinix Metal assets.
+The Equinix Metal resource pack lets you use MQL to query and assess the security of your Equinix Metal assets.
 
 Resources included in this pack:
 

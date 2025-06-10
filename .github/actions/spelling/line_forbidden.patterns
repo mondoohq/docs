@@ -157,6 +157,9 @@
 # s.b. systemd
 \bSystemd\b
 
+# s.b. journald
+\bJournald\b
+
 # s.b. OpenLDAP
 \bOpen LDAP\b
 

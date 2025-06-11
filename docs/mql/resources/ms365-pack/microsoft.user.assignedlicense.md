@@ -3,14 +3,14 @@ title: microsoft.user.assignedLicense
 id: microsoft.user.assignedLicense
 sidebar_label: microsoft.user.assignedLicense
 displayed_sidebar: MQL
-description: This type represents a single license assigned to a user.
+description: A single license assigned to a user
 ---
 
 # microsoft.user.assignedLicense
 
 **Description**
 
-This type represents a single license assigned to a user.
+A single license assigned to a user
 
 **Fields**
 

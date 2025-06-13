@@ -29,3 +29,5 @@ shodan.host(ip string)
 | hostnames       | &#91;&#93;string | List of hostnames assigned to the IP |
 | ports           | &#91;&#93;int    | Open ports                           |
 | vulnerabilities | &#91;&#93;string | Vulnerabilities                      |
+| country         | string           | Country                              |
+| city            | string           | City                                 |

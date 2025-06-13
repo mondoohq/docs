@@ -20,6 +20,11 @@ Resources included in this pack:
 | [audit.cve](audit.cve.md)                               | Common Vulnerabilities and Exposures (CVEs)                |
 | [audit.cvss](audit.cvss.md)                             | Common Vulnerability Scoring System (CVSS) score           |
 | [auditd.config](auditd.config.md)                       | auditd (Linux Audit Daemon) configuration                  |
+| [auditd.rule](auditd.rule.md)                           | auditd (Linux Audit Daemon) rule                           |
+| [auditd.rule.control](auditd.rule.control.md)           | auditd (Linux Audit Daemon) rule for a control             |
+| [auditd.rule.file](auditd.rule.file.md)                 | auditd (Linux Audit Daemon) rule for a file                |
+| [auditd.rule.syscall](auditd.rule.syscall.md)           | auditd (Linux Audit Daemon) rule for a syscall             |
+| [auditd.rules](auditd.rules.md)                         | auditd (Linux Audit Daemon) rules aggregated on disk       |
 | [auditpol](auditpol.md)                                 | Windows audit policies                                     |
 | [auditpol.entry](auditpol.entry.md)                     | Windows audit policy                                       |
 | [authorizedkeys](authorizedkeys.md)                     | List of SSH authorized keys                                |

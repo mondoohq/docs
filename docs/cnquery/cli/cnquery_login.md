@@ -16,7 +16,7 @@ using the '--token' argument.
 
 You remain logged in until you explicitly log out using the 'logout' subcommand.
 
-```bash
+```
 cnquery login [flags]
 ```
 

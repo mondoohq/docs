@@ -1,14 +1,14 @@
 ---
-title: Microsoft 365 (MS365) Resource Pack - MQL Resources
-id: microsoft.365.ms365.pack
-sidebar_label: Microsoft 365 (MS365) Resource Pack
+title: Microsoft 365 (M365) Resource Pack - MQL Resources
+id: microsoft.365.m365.pack
+sidebar_label: Microsoft 365 (M365) Resource Pack
 displayed_sidebar: MQL
-description: The Microsoft 365 (MS365) resource pack lets you use MQL to query and assess the security of your Microsoft 365 identities and configuration.
+description: The Microsoft 365 (M365) resource pack lets you use MQL to query and assess the security of your Microsoft 365 identities and configuration.
 ---
 
-# Microsoft 365 (MS365) MQL Resource Pack Reference
+# Microsoft 365 (M365) MQL Resource Pack Reference
 
-The Microsoft 365 (MS365) resource pack lets you use MQL to query and assess the security of your Microsoft 365 identities and configuration.
+The Microsoft 365 (M365) resource pack lets you use MQL to query and assess the security of your Microsoft 365 identities and configuration.
 
 Resources included in this pack:
 

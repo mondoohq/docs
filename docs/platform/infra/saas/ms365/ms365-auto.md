@@ -15,7 +15,6 @@ Before you integrate Microsoft 365 with Mondoo, be sure you:
 - Have a Mondoo account with Editor or Owner permissions for the space in which you want to add the integration.
 
 - Have an [Azure account](https://azure.microsoft.com/free/?WT.mc_id=A261C142F) with an active subscription and permission to manage applications in Microsoft Entra ID (formerly Active Directory). Any of these [Microsoft Entra ID roles](https://learn.microsoft.com/en-us/azure/active-directory/roles/permissions-reference) include the required permissions:
-
   - [Global Administrator](https://learn.microsoft.com/en-us/azure/active-directory/roles/permissions-reference#global-administrator) - Create and manage all aspects of app registrations and enterprise apps.
 
   - [Application administrator](https://learn.microsoft.com/en-us/azure/active-directory/roles/permissions-reference#application-administrator) - Create and manage all aspects of app registrations and enterprise apps.
@@ -23,7 +22,6 @@ Before you integrate Microsoft 365 with Mondoo, be sure you:
   - [Cloud application administrator](https://learn.microsoft.com/en-us/azure/active-directory/roles/permissions-reference#cloud-application-administrator) - Create and manage all aspects of app registrations and enterprise apps except App Proxy.
 
 - Are logged into Azure using the Azure CLI.
-
   - If you use the Azure Cloud Shell, you don't need to also log into the Azure CLI. To learn more, read the [Quick start for Azure Cloud Shell](https://learn.microsoft.com/en-us/azure/cloud-shell/quickstart?tabs=azurecli).
 
   - If you use a Linux shell or macOS shell, log into the Azure CLI.
@@ -216,7 +214,6 @@ For YOUR-APP-ID, substitute the ID of the app you created.
 After you've created and granted permissions to a new app registration, you can create a Mondoo Microsoft 365 integration. You need some values from the app registration you created in the instructions above.
 
 1. Access the Integrations > Add > Microsoft 365 page in one of two ways:
-
    - New space setup: After creating a new Mondoo account or creating a new space, the initial setup guide welcomes you. Select **BROWSE INTEGRATIONS** and then select **Microsoft 365**.
 
      ![Welcome to Mondoo Page](/img/platform/start/welcome_to_mondoo.png)

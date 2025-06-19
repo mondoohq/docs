@@ -65,7 +65,6 @@ The team member receives an invitation inviting them to the space.
 4. To see pending invitations, select the **INVITATIONS** tab.
 
    ![Managing team invites](/img/platform/maintain/access/invitations.png)
-
    - To resend an invitation, select the circular arrow icon beside the invitation's status.
 
    - To revoke an invitation, select the X icon beside the invitation's status.

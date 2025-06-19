@@ -75,7 +75,6 @@ There are two solutions:
 - The simplest solution is to send Mondoo alerts to a public channel.
 
 - If you need to send Mondoo alerts to a private channel, you can change the Workflow flow to post alerts as a certain user:
-
   1.  Log into Microsoft Power Automate as the user you want to post Mondoo alerts.
 
   2.  In the left navigation, select **My flows**.

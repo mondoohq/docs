@@ -35,7 +35,6 @@ Find advisories for assets in a space:
    To learn how Mondoo calculates risk and rank, read [Security Findings](/platform/security/posture/findings/).
 
 3. To filter the list, enter text in the search bar. These are some examples:
-
    - To show only advisories for a certain platform, enter all or part of the platform name. For example, type `windows`, `debian`, or `google`.
 
    - To find an advisory related to a specific CVE number, enter all or part of the number. For example, type `2024-21755` or `1325`.

@@ -14,7 +14,7 @@ Platforms included in and excluded from the policy scope.
 
 **Fields**
 
-| ID               | TYPE             | DESCRIPTION                                                                                      |
-| ---------------- | ---------------- | ------------------------------------------------------------------------------------------------ |
-| excludePlatforms | &#91;&#93;string | Possible values are: android, iOS, windows, windowsPhone, macOS, linux, all, unknownFutureValue. |
-| includePlatforms | &#91;&#93;string | Possible values are: android, iOS, windows, windowsPhone, macOS, linux, all, unknownFutureValue. |
+| ID               | TYPE             | DESCRIPTION                                                                                     |
+| ---------------- | ---------------- | ----------------------------------------------------------------------------------------------- |
+| excludePlatforms | &#91;&#93;string | Possible values are: android, iOS, windows, windowsPhone, macOS, linux, all, unknownFutureValue |
+| includePlatforms | &#91;&#93;string | Possible values are: android, iOS, windows, windowsPhone, macOS, linux, all, unknownFutureValue |

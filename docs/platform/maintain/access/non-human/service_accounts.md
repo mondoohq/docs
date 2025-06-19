@@ -31,7 +31,6 @@ import Partial from "../../../partials/\_editor-owner.mdx";
 4. Enter a unique name and description for the service account that help you recognize its purpose.
 
 5. Check the Mondoo permissions you want to give to programs that use this service account:
-
    - **Viewer** permissions let the program browse most information in the space but not make changes.
 
    - **Editor** permissions let the program make all changes possible in the space except deleting the space itself or reporting scan results.
@@ -61,7 +60,6 @@ import Partial from "../../../partials/\_editor-owner.mdx";
 4. Enter a unique name and description for the service account that helps you recognize its purpose.
 
 5. Check the Mondoo permissions you want to give to programs that use this service account:
-
    - **Viewer** permissions let the program browse most information in all spaces in the organization but not make changes.
 
    - **Editor** permissions let the program make all changes possible in all spaces in the organization except deleting the organization or spaces or reporting scan results.

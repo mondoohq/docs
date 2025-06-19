@@ -3,14 +3,14 @@ title: microsoft.conditionalAccess.policy.sessionControls.signInFrequency
 id: microsoft.conditionalAccess.policy.sessionControls.signInFrequency
 sidebar_label: microsoft.conditionalAccess.policy.sessionControls.signInFrequency
 displayed_sidebar: MQL
-description: Session control to enforce sign-in frequency.
+description: Session control to enforce sign-in frequency
 ---
 
 # microsoft.conditionalAccess.policy.sessionControls.signInFrequency
 
 **Description**
 
-Session control to enforce sign-in frequency.
+Session control to enforce sign-in frequency
 
 **Fields**
 

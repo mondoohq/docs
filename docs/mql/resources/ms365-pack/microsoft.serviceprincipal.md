@@ -30,7 +30,7 @@ Microsoft service principal (Enterprise application)
 | assignmentRequired         | bool                                                                                        | Whether users or other apps must be assigned to this service principal before using it |
 | visibleToUsers             | bool                                                                                        | Whether the service principal is visible to users                                      |
 | notes                      | string                                                                                      | Service principal notes                                                                |
-| assignments                | &#91;&#93;[microsoft.serviceprincipal.assignment](microsoft.serviceprincipal.assignment.md) | List of assignments (users and groups) this service principal has                      |
+| assignments                | &#91;&#93;[microsoft.serviceprincipal.assignment](microsoft.serviceprincipal.assignment.md) | List of users and groups assigned to this service principal                            |
 | applicationTemplateId      | string                                                                                      | Application template ID                                                                |
 | verifiedPublisher          | dict                                                                                        | Application publisher                                                                  |
 | loginUrl                   | string                                                                                      | Login URL                                                                              |

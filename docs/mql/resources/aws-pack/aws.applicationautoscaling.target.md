@@ -1,12 +1,12 @@
 ---
-title: aws.applicationautoscaling.target
-id: aws.applicationautoscaling.target
-sidebar_label: aws.applicationautoscaling.target
+title: aws.applicationAutoscaling.target
+id: aws.applicationAutoscaling.target
+sidebar_label: aws.applicationAutoscaling.target
 displayed_sidebar: MQL
 description: AWS Application Auto Scaling target
 ---
 
-# aws.applicationautoscaling.target
+# aws.applicationAutoscaling.target
 
 **Supported platform**
 

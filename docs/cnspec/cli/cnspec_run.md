@@ -18,6 +18,7 @@ cnspec run [flags]
 ```
       --ast                  Parse the query and return the abstract syntax tree (AST)
   -c, --command string       MQL query to execute in the shell
+      --exit-1-on-failure    Exit with error code 1 if one or more query results fail
   -h, --help                 help for run
       --info                 Parse the query and provide information about it
   -j, --json                 Run the query and return the object in a JSON structure

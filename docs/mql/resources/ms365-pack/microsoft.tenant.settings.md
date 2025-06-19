@@ -18,4 +18,4 @@ Company-wide configuration for apps and services.
 | ---------------------------- | ------ | ------------------------------------------------------------------------------------------------ |
 | id                           | string | Unique synthetic ID based on the parent tenant.                                                  |
 | isAppAndServicesTrialEnabled | bool   | Controls whether users can start trial subscriptions for apps and services in your organization. |
-| isOfficeStoreEnabled         | bool   | Controls whether users can access the Microsoft Store.                                           |
+| isOfficeStoreEnabled         | bool   | Controls whether users can access the Microsoft Store                                            |

@@ -26,3 +26,4 @@ Microsoft
 | roles                  | [microsoft.roles](microsoft.roles.md)                                 | List of roles                              |
 | settings               | dict                                                                  | Microsoft 365 settings                     |
 | tenantDomainName       | string                                                                | The connected tenant's default domain name |
+| identityAndAccess      | [microsoft.identityAndAccess](microsoft.identityandaccess.md)         | Identity and Access policies               |

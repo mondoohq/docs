@@ -142,7 +142,7 @@ To further automate and scale the creation of Mondoo organizations, we’ve adde
 - Removed duplicate checks on subscriptions in Azure Security
 - Added chapters to improve organization in the GCP, Azure, and Windows policy
 - Improved check descriptions and remediations in the Windows policy
-- Improved remediation steps in the MS365 security policy
+- Improved remediation steps in the M365 security policy
 - Improved support for Intune in CIS Windows checks
 
 ## MQL Improvements

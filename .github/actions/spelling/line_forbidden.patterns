@@ -360,6 +360,9 @@
 # Microsoft Products
 #
 
+# s.b. M365
+\bMS365\b
+
 # s.b. Entra ID
 \bEntraID\b
 

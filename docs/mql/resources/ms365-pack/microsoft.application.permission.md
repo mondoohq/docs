@@ -16,7 +16,7 @@ Microsoft Service Principal Permission
 
 | ID          | TYPE   | DESCRIPTION                           |
 | ----------- | ------ | ------------------------------------- |
-| appId       | string | Id of the API                         |
+| appId       | string | ID of the API                         |
 | appName     | string | Name of the API                       |
 | id          | string | Permission ID                         |
 | name        | string | Permission name                       |

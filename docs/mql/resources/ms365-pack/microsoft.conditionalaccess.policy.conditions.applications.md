@@ -18,4 +18,4 @@ Represents the applications and user actions included in and excluded from the c
 | ------------------- | ---------------- | ------------------------------------------------------------------------- |
 | includeApplications | &#91;&#93;string | Can be one of the following: appId, All, Office365, MicrosoftAdminPortals |
 | excludeApplications | &#91;&#93;string | Can be one of the following: appId, All, Office365, MicrosoftAdminPortals |
-| includeUserActions  | &#91;&#93;string | User actions to include.                                                  |
+| includeUserActions  | &#91;&#93;string | User actions to include                                                   |

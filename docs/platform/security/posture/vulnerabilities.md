@@ -37,7 +37,6 @@ Find vulnerabilities for assets in a space:
    To learn how Mondoo calculates risk and rank, read [Security Findings](/platform/security/posture/findings/).
 
 3. To filter the list, enter text in the search bar. These are some examples:
-
    - To show only risks for a certain platform, enter all or part of the platform name. For example, type `windows`, `debian`, or `google`.
 
    - To find a specific CVE number, enter all or part of the number. For example, type `2025-21755` or `1325`.
@@ -95,7 +94,6 @@ The CVSS base score is calculated based on exploitability metrics, a scope metri
 These metrics reflect how easy the CVE is to exploit:
 
 - **Attack vector** is the means by which an attacker can exploit a CVE, such as over a network. An exploit is more likely if an attacker can be access the vulnerable component remotely. Possible values are:
-
   - Network
 
   - Adjacent
@@ -105,13 +103,11 @@ These metrics reflect how easy the CVE is to exploit:
   - Physical
 
 - **Attack complexity** indicates the amount of effort (beyond the attack itself), such as key theft or an additional attack. Possible values are:
-
   - Low
 
   - High
 
 - **Privileges required** describes the level of access an attacker needs to succeed. Possible values are:
-
   - None (no privileges)
 
   - Low (basic privileges)
@@ -119,7 +115,6 @@ These metrics reflect how easy the CVE is to exploit:
   - High (broad access to sensitive resources)
 
 - **User interaction** reflects whether the attacker needs the help of an inside human user. Possible values are:
-
   - None (does not require another person)
 
   - Passive (requires an unknowing person)
@@ -147,7 +142,6 @@ These metrics reflect the possible results of the exploit:
 - None (no loss of confidentiality)
 
 - **Integrity** evaluates how much the exploit diminishes the integrity of the victim's infrastructure. Possible values are:
-
   - High (for example, attacker can modify protected files with serious consequences)
 
   - Low (attacker has less control or consequences are not as serious)
@@ -155,7 +149,6 @@ These metrics reflect the possible results of the exploit:
   - None (no loss of integrity)
 
 - **Availability** shows the impact to the availability of the exploited component. Possible values are:
-
   - High (total loss of availability)
 
   - Low (reduced performance or interruptions)

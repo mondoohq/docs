@@ -9,7 +9,6 @@ image: /img/featured_img/mondoo-feature.jpg
 Mondoo works seamlessly with configuration management tools in the DevOps ecosystem. For businesses already using Ansible to automate their environments, there are two primary ways to use Mondoo and Ansible together:
 
 - [**Continuously assess host configuration**](#run-continuous-configuration-assessments-with-mondoo-and-ansible): Use Ansible to:
-
   - Install and configure [cnspec](/platform/infra/opsys/mondoo-cnspec/) on supported Linux and Windows hosts
 
   - Register hosts with Mondoo Platform

@@ -18,7 +18,6 @@ Access to the Slack API requires an [Access Token](https://api.slack.com/authent
 3. Select **Create App**.
 4. In the left-side navigation, select **OAuth & Permissions**.
 5. Scroll to **Scopes**. Under **User Token Scopes**, add these scopes:
-
    - **admin**: (This permission is required to view access logs. For details, read [scopes: admin](https://api.slack.com/scopes/admin).)
    - **channels:read**
    - **groups:read**

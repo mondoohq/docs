@@ -35,7 +35,6 @@ import Partial from "../../../partials/\_editor-owner.mdx";
 <Partial />{" "}
 
 1. To set up a Mondoo Kubernetes Operator integration, access the Integrations > Add > GCP page in one of two ways:
-
    - New space setup: After creating a new Mondoo account or creating a new space, the initial setup guide welcomes you. Select **BROWSE INTEGRATIONS** and then select **Kubernetes**.
 
      ![Welcome to Mondoo Page](/img/platform/start/welcome_to_mondoo.png)
@@ -49,7 +48,6 @@ import Partial from "../../../partials/\_editor-owner.mdx";
 3. To continuously assess the security posture of nodes in your Kubernetes cluster, enable **Scan nodes**.
 
    Choose how to scan cluster nodes:
-
    - We strongly recommend that you leave **CronJob-based** selected. It's ideal for most infrastructures. A CronJob executes regularly to run the scans without permanently allocating any resources for Mondoo on cluster nodes.
 
    - If your nodes tend to run near 100% resource utilization, that leaves no resources available for a CronJob to run a Mondoo scan. If you experience consistently failing Mondoo node scans, select **DaemonSet-based** scanning instead. This approach reserves resources for Mondoo on each cluster node. It relies on a DaemonSet to assure that Mondoo scans the nodes continuously, even during high-traffic times.

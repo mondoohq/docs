@@ -13,7 +13,6 @@ Mondoo integrates into existing developer software development workflows with mi
 There are many ways to use Mondoo within the software development process:
 
 - **CI/CD testing** - Mondoo integrates easily into all major CI tooling, such as:
-
   - [Azure Pipelines](/platform/infra/supply/cicd/azure-pipelines/)
 
   - [CircleCI](/platform/infra/supply/cicd/circleci/)
@@ -25,7 +24,6 @@ There are many ways to use Mondoo within the software development process:
   - [Jenkins](/platform/infra/supply/cicd/jenkins/)
 
 - **Secure base images** - Use cnspec to ensure you build virtual instances that are free of security vulnerabilities. It integrates with:
-
   - [Docker](/cnspec/supplychain/docker/)
 
   - [HashiCorp Packer](/cnspec/supplychain/packer/)
@@ -33,7 +31,6 @@ There are many ways to use Mondoo within the software development process:
   - [HashiCorp Terraform](/cnspec/supplychain/terraform/)
 
 - **Container image security** - Use [cnspec](/cnspec/cnspec-about/) to test containers for security vulnerabilities during development on your workstation before publishing to container registries, including:
-
   - [AWS Elastic Container Registry](/cnspec/supplychain/registry/aws_ecr/)
 
   - [Azure Container Registry](/cnspec/supplychain/registry/azure_acr/)

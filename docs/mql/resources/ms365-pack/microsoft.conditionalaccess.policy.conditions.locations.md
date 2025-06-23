@@ -14,7 +14,7 @@ Represents locations included in and excluded from the scope of a conditional ac
 
 **Fields**
 
-| ID               | TYPE             | DESCRIPTION                                                                     |
-| ---------------- | ---------------- | ------------------------------------------------------------------------------- |
-| includeLocations | &#91;&#93;string | Location IDs in scope of policy unless explicitly excluded, All, or AllTrusted. |
-| excludeLocations | &#91;&#93;string | Location IDs excluded from scope of policy.                                     |
+| ID               | TYPE             | DESCRIPTION                                                                    |
+| ---------------- | ---------------- | ------------------------------------------------------------------------------ |
+| includeLocations | &#91;&#93;string | Location IDs in scope of policy unless explicitly excluded, All, or AllTrusted |
+| excludeLocations | &#91;&#93;string | Location IDs excluded from scope of policy                                     |

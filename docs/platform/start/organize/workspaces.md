@@ -150,7 +150,6 @@ If you define more than one asset selection in a query (using the + ADD ASSET SE
    d. To add another condition for the query, select **+ ADD CONDITION**.
 
    e. Choose how to combine the conditions:
-
    - To include assets only if they meet both conditions, select **AND**.
 
    - To include assets that meet at least one condition, select **OR**.

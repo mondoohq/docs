@@ -14,7 +14,8 @@ Microsoft Conditional Access Policies
 
 **Fields**
 
-| ID             | TYPE                                                                                        | DESCRIPTION               |
-| -------------- | ------------------------------------------------------------------------------------------- | ------------------------- |
-| namedLocations | [microsoft.conditionalAccess.namedLocations](microsoft.conditionalaccess.namedlocations.md) | Named locations container |
-| policies       | &#91;&#93;[microsoft.conditionalAccess.policy](microsoft.conditionalaccess.policy.md)       | Policies collection       |
+| ID                          | TYPE                                                                                                                  | DESCRIPTION                               |
+| --------------------------- | --------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- |
+| namedLocations              | [microsoft.conditionalAccess.namedLocations](microsoft.conditionalaccess.namedlocations.md)                           | Named locations container                 |
+| policies                    | &#91;&#93;[microsoft.conditionalAccess.policy](microsoft.conditionalaccess.policy.md)                                 | Policies collection                       |
+| authenticationMethodsPolicy | [microsoft.conditionalAccess.authenticationMethodsPolicy](microsoft.conditionalaccess.authenticationmethodspolicy.md) | Tenant-wide authentication methods policy |

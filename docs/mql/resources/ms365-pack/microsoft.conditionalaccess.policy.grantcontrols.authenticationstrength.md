@@ -3,14 +3,14 @@ title: microsoft.conditionalAccess.policy.grantControls.authenticationStrength
 id: microsoft.conditionalAccess.policy.grantControls.authenticationStrength
 sidebar_label: microsoft.conditionalAccess.policy.grantControls.authenticationStrength
 displayed_sidebar: MQL
-description: A collection of settings that define specific combinations of authentication methods and metadata.
+description: A collection of settings that define specific combinations of authentication methods and metadata
 ---
 
 # microsoft.conditionalAccess.policy.grantControls.authenticationStrength
 
 **Description**
 
-A collection of settings that define specific combinations of authentication methods and metadata.
+A collection of settings that define specific combinations of authentication methods and metadata
 
 **Fields**
 

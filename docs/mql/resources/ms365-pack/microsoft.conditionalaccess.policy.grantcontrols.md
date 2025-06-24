@@ -3,14 +3,14 @@ title: microsoft.conditionalAccess.policy.grantControls
 id: microsoft.conditionalAccess.policy.grantControls
 sidebar_label: microsoft.conditionalAccess.policy.grantControls
 displayed_sidebar: MQL
-description: Represents grant controls that must be fulfilled to pass the policy.
+description: Represents grant controls that must be fulfilled to pass the policy
 ---
 
 # microsoft.conditionalAccess.policy.grantControls
 
 **Description**
 
-Represents grant controls that must be fulfilled to pass the policy.
+Represents grant controls that must be fulfilled to pass the policy
 
 **Fields**
 

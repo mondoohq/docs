@@ -3,14 +3,14 @@ title: microsoft.conditionalAccess.policy.conditions.authenticationFlows
 id: microsoft.conditionalAccess.policy.conditions.authenticationFlows
 sidebar_label: microsoft.conditionalAccess.policy.conditions.authenticationFlows
 displayed_sidebar: MQL
-description: Represents the authentication flows in scope for the policy.
+description: The authentication flows in scope for a Microsoft Entra Conditional Access policy
 ---
 
 # microsoft.conditionalAccess.policy.conditions.authenticationFlows
 
 **Description**
 
-Represents the authentication flows in scope for the policy.
+The authentication flows in scope for a Microsoft Entra Conditional Access policy
 
 **Fields**
 

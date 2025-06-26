@@ -3,14 +3,14 @@ title: microsoft.conditionalAccess.policy.conditions.locations
 id: microsoft.conditionalAccess.policy.conditions.locations
 sidebar_label: microsoft.conditionalAccess.policy.conditions.locations
 displayed_sidebar: MQL
-description: Represents locations included in and excluded from the scope of a conditional access policy. Locations can be countries and regions or IP addresses.
+description: Locations included in and excluded from the scope of a Microsoft Entra Conditional Access policy. Locations can be countries and regions or IP addresses.
 ---
 
 # microsoft.conditionalAccess.policy.conditions.locations
 
 **Description**
 
-Represents locations included in and excluded from the scope of a conditional access policy. Locations can be countries and regions or IP addresses.
+Locations included in and excluded from the scope of a Microsoft Entra Conditional Access policy. Locations can be countries and regions or IP addresses.
 
 **Fields**
 

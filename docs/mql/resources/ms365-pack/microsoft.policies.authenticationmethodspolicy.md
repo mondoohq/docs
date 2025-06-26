@@ -3,14 +3,14 @@ title: microsoft.policies.authenticationMethodsPolicy
 id: microsoft.policies.authenticationMethodsPolicy
 sidebar_label: microsoft.policies.authenticationMethodsPolicy
 displayed_sidebar: MQL
-description: The tenant-wide policy that controls which authentication methods are allowed.
+description: The tenant-wide policy that controls which authentication methods are allowed
 ---
 
 # microsoft.policies.authenticationMethodsPolicy
 
 **Description**
 
-The tenant-wide policy that controls which authentication methods are allowed.
+The tenant-wide policy that controls which authentication methods are allowed
 
 **Fields**
 

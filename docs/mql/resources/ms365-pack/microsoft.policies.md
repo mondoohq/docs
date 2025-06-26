@@ -18,7 +18,7 @@ Microsoft policies
 | ----------------------------------------- | --------------------------------------------------------------------------------------------------- | -------------------------------------------- |
 | authorizationPolicy                       | dict                                                                                                | Authorization policy                         |
 | identitySecurityDefaultsEnforcementPolicy | dict                                                                                                | Identity security default enforcement policy |
-| adminConsentRequestPolicy                 | dict                                                                                                | Admin consent request policy                 |
+| adminConsentRequestPolicy                 | [microsoft.adminConsentRequestPolicy](microsoft.adminconsentrequestpolicy.md)                       | Admin consent request policy                 |
 | permissionGrantPolicies                   | &#91;&#93;dict                                                                                      | Permission grant policies                    |
 | consentPolicySettings                     | dict                                                                                                | Consent policy settings                      |
 | authenticationMethodsPolicy               | [microsoft.policies.authenticationMethodsPolicy](microsoft.policies.authenticationmethodspolicy.md) | Authentication methods policy                |

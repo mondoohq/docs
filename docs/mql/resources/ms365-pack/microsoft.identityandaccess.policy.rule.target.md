@@ -3,14 +3,14 @@ title: microsoft.identityAndAccess.policy.rule.target
 id: microsoft.identityAndAccess.policy.rule.target
 sidebar_label: microsoft.identityAndAccess.policy.rule.target
 displayed_sidebar: MQL
-description: Defines details of the scope that's targeted by role management policy rule.
+description: Defines details of the scope that's targeted by role management policy rule
 ---
 
 # microsoft.identityAndAccess.policy.rule.target
 
 **Description**
 
-Defines details of the scope that's targeted by role management policy rule.
+Defines details of the scope that's targeted by role management policy rule
 
 **Fields**
 

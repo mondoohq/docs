@@ -46,4 +46,5 @@ Microsoft Entra ID user
 | identities                 | &#91;&#93;[microsoft.user.identity](microsoft.user.identity.md)                           | The user's identities                                                                  |
 | auditlog                   | [microsoft.user.auditlog](microsoft.user.auditlog.md)                                     | The user's audit log                                                                   |
 | assignedLicenses           | &#91;&#93;[microsoft.user.assignedLicense](microsoft.user.assignedlicense.md)             | The licenses that are assigned to the user, including inherited (group-based) licenses |
+| licenseDetails             | &#91;&#93;[microsoft.user.licenseDetail](microsoft.user.licensedetail.md)                 | A collection of this user's license details                                            |
 | authenticationRequirements | [microsoft.user.authenticationRequirements](microsoft.user.authenticationrequirements.md) | Authentication requirements information                                                |

@@ -3,14 +3,14 @@ title: microsoft.conditionalAccess.policy.sessionControls
 id: microsoft.conditionalAccess.policy.sessionControls
 sidebar_label: microsoft.conditionalAccess.policy.sessionControls
 displayed_sidebar: MQL
-description: Microsoft Conditional Access Policy Session Controls
+description: Microsoft Entra Conditional Access Policy Session Controls
 ---
 
 # microsoft.conditionalAccess.policy.sessionControls
 
 **Description**
 
-Microsoft Conditional Access Policy Session Controls
+Microsoft Entra Conditional Access Policy Session Controls
 
 **Fields**
 

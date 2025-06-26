@@ -3,14 +3,14 @@ title: microsoft.identityAndAccess.policy
 id: microsoft.identityAndAccess.policy
 sidebar_label: microsoft.identityAndAccess.policy
 displayed_sidebar: MQL
-description: A PIM role management policy for Microsoft Entra ID roles.
+description: A PIM role management policy for Microsoft Entra ID roles
 ---
 
 # microsoft.identityAndAccess.policy
 
 **Description**
 
-A PIM role management policy for Microsoft Entra ID roles.
+A PIM role management policy for Microsoft Entra ID roles
 
 **Fields**
 

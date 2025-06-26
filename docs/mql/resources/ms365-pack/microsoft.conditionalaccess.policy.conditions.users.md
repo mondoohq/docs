@@ -3,14 +3,14 @@ title: microsoft.conditionalAccess.policy.conditions.users
 id: microsoft.conditionalAccess.policy.conditions.users
 sidebar_label: microsoft.conditionalAccess.policy.conditions.users
 displayed_sidebar: MQL
-description: Represents users, groups, and roles included in and excluded from the policy scope.
+description: Users, groups, and roles included in and excluded from a Microsoft Entra Conditional Access policy scope
 ---
 
 # microsoft.conditionalAccess.policy.conditions.users
 
 **Description**
 
-Represents users, groups, and roles included in and excluded from the policy scope.
+Users, groups, and roles included in and excluded from a Microsoft Entra Conditional Access policy scope
 
 **Fields**
 

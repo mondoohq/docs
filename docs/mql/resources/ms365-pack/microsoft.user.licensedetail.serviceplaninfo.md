@@ -3,9 +3,14 @@ title: microsoft.user.licenseDetail.servicePlanInfo
 id: microsoft.user.licenseDetail.servicePlanInfo
 sidebar_label: microsoft.user.licenseDetail.servicePlanInfo
 displayed_sidebar: MQL
+description: Contains information about a service plan associated with a subscribed SKU
 ---
 
 # microsoft.user.licenseDetail.servicePlanInfo
+
+**Description**
+
+Contains information about a service plan associated with a subscribed SKU
 
 **Fields**
 

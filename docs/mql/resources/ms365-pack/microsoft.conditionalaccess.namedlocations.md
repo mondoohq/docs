@@ -3,14 +3,14 @@ title: microsoft.conditionalAccess.namedLocations
 id: microsoft.conditionalAccess.namedLocations
 sidebar_label: microsoft.conditionalAccess.namedLocations
 displayed_sidebar: MQL
-description: Container for Microsoft Conditional Access Named Locations
+description: Container for Microsoft Entra Conditional Access Named Locations
 ---
 
 # microsoft.conditionalAccess.namedLocations
 
 **Description**
 
-Container for Microsoft Conditional Access Named Locations
+Container for Microsoft Entra Conditional Access Named Locations
 
 **Fields**
 

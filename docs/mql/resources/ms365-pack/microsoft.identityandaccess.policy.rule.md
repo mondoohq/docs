@@ -3,14 +3,14 @@ title: microsoft.identityAndAccess.policy.rule
 id: microsoft.identityAndAccess.policy.rule
 sidebar_label: microsoft.identityAndAccess.policy.rule
 displayed_sidebar: MQL
-description: A rule defined for a PIM role management policy.
+description: A rule defined for a PIM role management policy
 ---
 
 # microsoft.identityAndAccess.policy.rule
 
 **Description**
 
-A rule defined for a PIM role management policy.
+A rule defined for a PIM role management policy
 
 **Fields**
 

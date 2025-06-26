@@ -3,14 +3,14 @@ title: microsoft.conditionalAccess
 id: microsoft.conditionalAccess
 sidebar_label: microsoft.conditionalAccess
 displayed_sidebar: MQL
-description: Microsoft Conditional Access Policies
+description: Microsoft Entra Conditional Access Policies
 ---
 
 # microsoft.conditionalAccess
 
 **Description**
 
-Microsoft Conditional Access Policies
+Microsoft Entra Conditional Access Policies
 
 **Fields**
 

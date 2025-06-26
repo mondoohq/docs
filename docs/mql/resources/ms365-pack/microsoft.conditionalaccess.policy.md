@@ -3,14 +3,14 @@ title: microsoft.conditionalAccess.policy
 id: microsoft.conditionalAccess.policy
 sidebar_label: microsoft.conditionalAccess.policy
 displayed_sidebar: MQL
-description: Represents a Microsoft Entra Conditional Access policy. Conditional access policies are custom rules that define an access scenario.
+description: A Microsoft Entra Conditional Access policy. Conditional access policies are custom rules that define an access scenario.
 ---
 
 # microsoft.conditionalAccess.policy
 
 **Description**
 
-Represents a Microsoft Entra Conditional Access policy. Conditional access policies are custom rules that define an access scenario.
+A Microsoft Entra Conditional Access policy. Conditional access policies are custom rules that define an access scenario.
 
 **Fields**
 

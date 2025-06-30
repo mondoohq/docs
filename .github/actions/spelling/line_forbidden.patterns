@@ -319,6 +319,9 @@
 # s.b. Nmap
 \b[Nn]Map\b
 
+# s.b. LinuxONE
+\bLinuxOne\b
+
 #
 # Kubernetes Terms
 #

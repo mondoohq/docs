@@ -92,8 +92,8 @@ Mondoo begins scanning your Microsoft 365 resources. When it completes, you can 
 
 - [Learn more about Mondoo](/platform/start/plat-what-is/)
 
-- [Test or troubleshoot a Microsoft 365 integration](/platform/infra/cloud/ms365/troubleshoot/)
+- [Test or troubleshoot a Microsoft 365 integration](/platform/infra/saas/ms365/troubleshoot/)
 
-- [Integrate Mondoo with other cloud platforms in your infrastructure](/platform/infra/cloud/overview/)
+- [Integrate Mondoo with other SaaS platforms in your infrastructure](/platform/infra/saas/overview/)
 
 ---

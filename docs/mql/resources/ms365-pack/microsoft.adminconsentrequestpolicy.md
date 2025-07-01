@@ -3,9 +3,14 @@ title: microsoft.adminConsentRequestPolicy
 id: microsoft.adminConsentRequestPolicy
 sidebar_label: microsoft.adminConsentRequestPolicy
 displayed_sidebar: MQL
+description: Policy for enabling or disabling the Microsoft Entra admin consent workflow
 ---
 
 # microsoft.adminConsentRequestPolicy
+
+**Description**
+
+Policy for enabling or disabling the Microsoft Entra admin consent workflow
 
 **Fields**
 

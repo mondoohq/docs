@@ -17,7 +17,6 @@ Before you integrate Microsoft 365 with Mondoo, be sure you have:
 - [Azure Cloud Shell](https://learn.microsoft.com/en-us/azure/cloud-shell/overview)
 
 - An [Azure account](https://azure.microsoft.com/free/?WT.mc_id=A261C142F) with an active subscription and permission to manage applications in Microsoft Entra ID (formerly Active Directory). Any of these [Entra built-in roles](https://learn.microsoft.com/en-us/azure/active-directory/roles/permissions-reference) include the required permissions:
-
   - [Global Administrator](https://learn.microsoft.com/en-us/azure/active-directory/roles/permissions-reference#global-administrator)
 
   - [Application administrator](https://learn.microsoft.com/en-us/azure/active-directory/roles/permissions-reference#application-administrator)
@@ -35,7 +34,6 @@ In the Azure portal you can see what roles your user account has: Go to **Micros
 Create an integration to set up continuous Mondoo scanning of your Microsoft 365 environment.
 
 1. Access the Integrations > Add > Microsoft 365 page in one of two ways:
-
    - New space setup: After creating a new Mondoo account or creating a new space, the initial setup guide welcomes you. Select **BROWSE INTEGRATIONS** and then select **Microsoft 365**.
 
      ![Welcome to Mondoo Page](/img/platform/start/welcome_to_mondoo.png)
@@ -69,14 +67,13 @@ Create an integration to set up continuous Mondoo scanning of your Microsoft 365
    c. Review the list of resources the Mondoo automation must create so it can scan your Microsoft 365 environment. Press Enter to continue the integration setup.
 
    ![Success creating a Mondoo Microsoft 365 integration](/img/platform/infra/saas/ms365/success.png)
-
    - When the Mondoo automation reports success, you're finished in Azure Cloud Shell. If you don't see the success message within 5 minutes, read the [Troubleshoot](#troubleshoot) section below.
 
-8. Return to the Mondoo console and select the **START SCANNING** button.
+6. Return to the Mondoo console and select the **START SCANNING** button.
 
-9. On the Recommended Policies page, enable the policies on which you want to base assessments of your Microsoft 365 environment. To learn more, read [Manage Policies](/platform/security/posture/policies/).
+7. On the Recommended Policies page, enable the policies on which you want to base assessments of your Microsoft 365 environment. To learn more, read [Manage Policies](/platform/security/posture/policies/).
 
-10. Select **FINALIZE SETUP**.
+8. Select **FINALIZE SETUP**.
 
 Mondoo begins scanning your Microsoft 365 resources. When it completes, you can see results on the INVENTORY page. To learn more, read [Monitor Your Infrastructure Security](/platform/security/posture/monitor/).
 

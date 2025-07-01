@@ -3,9 +3,14 @@ title: microsoft.graph.accessReviewReviewerScope
 id: microsoft.graph.accessReviewReviewerScope
 sidebar_label: microsoft.graph.accessReviewReviewerScope
 displayed_sidebar: MQL
+description: List of reviewers for the admin consent
 ---
 
 # microsoft.graph.accessReviewReviewerScope
+
+**Description**
+
+List of reviewers for the admin consent
 
 **Fields**
 

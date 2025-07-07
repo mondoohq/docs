@@ -19,3 +19,4 @@ Microsoft Security
 | secureScores       | &#91;&#93;[microsoft.security.securityscore](microsoft.security.securityscore.md) | List of security scores                    |
 | latestSecureScores | [microsoft.security.securityscore](microsoft.security.securityscore.md)           | Latest security score                      |
 | riskyUsers         | &#91;&#93;[microsoft.security.riskyUser](microsoft.security.riskyuser.md)         | List Microsoft Entra users who are at risk |
+| exchange           | [microsoft.security.exchange](microsoft.security.exchange.md)                     | Exchange security settings                 |

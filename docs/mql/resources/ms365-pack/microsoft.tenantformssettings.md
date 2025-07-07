@@ -1,12 +1,12 @@
 ---
-title: microsoft.tenant.formsSettings
-id: microsoft.tenant.formsSettings
-sidebar_label: microsoft.tenant.formsSettings
+title: microsoft.tenantFormsSettings
+id: microsoft.tenantFormsSettings
+sidebar_label: microsoft.tenantFormsSettings
 displayed_sidebar: MQL
 description: Company-wide settings for Microsoft Forms
 ---
 
-# microsoft.tenant.formsSettings
+# microsoft.tenantFormsSettings
 
 **Description**
 

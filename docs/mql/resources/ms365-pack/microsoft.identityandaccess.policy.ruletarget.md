@@ -1,12 +1,12 @@
 ---
-title: microsoft.identityAndAccess.policy.rule.target
-id: microsoft.identityAndAccess.policy.rule.target
-sidebar_label: microsoft.identityAndAccess.policy.rule.target
+title: microsoft.identityAndAccess.policy.ruleTarget
+id: microsoft.identityAndAccess.policy.ruleTarget
+sidebar_label: microsoft.identityAndAccess.policy.ruleTarget
 displayed_sidebar: MQL
 description: Defines details of the scope that's targeted by role management policy rule
 ---
 
-# microsoft.identityAndAccess.policy.rule.target
+# microsoft.identityAndAccess.policy.ruleTarget
 
 **Description**
 

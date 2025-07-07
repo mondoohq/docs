@@ -14,7 +14,7 @@ A rule defined for a PIM role management policy
 
 **Fields**
 
-| ID     | TYPE                                                                                                | DESCRIPTION                                                             |
-| ------ | --------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| id     | string                                                                                              | The unique identifier for the rule                                      |
-| target | [microsoft.identityAndAccess.policy.rule.target](microsoft.identityandaccess.policy.rule.target.md) | Defines details of scope that's targeted by role management policy rule |
+| ID     | TYPE                                                                                              | DESCRIPTION                                                             |
+| ------ | ------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| id     | string                                                                                            | The unique identifier for the rule                                      |
+| target | [microsoft.identityAndAccess.policy.ruleTarget](microsoft.identityandaccess.policy.ruletarget.md) | Defines details of scope that's targeted by role management policy rule |

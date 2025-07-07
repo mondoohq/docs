@@ -33,7 +33,8 @@ cnquery sbom [flags]
   -h, --help                        help for sbom
   -o, --output string               Set output format: json, cyclonedx-json, cyclonedx-xml, spdx-json, spdx-tag-value, table (default "list")
       --output-target string        Set output target to which the SBOM report will be written
-      --with-evidence               Display evidence for each component
+      --with-cpes                   Generate CPEs for each component
+      --with-evidence               Include evidence for each component
 ```
 
 ### Options inherited from parent commands

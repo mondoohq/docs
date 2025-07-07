@@ -1,12 +1,12 @@
 ---
-title: microsoft.tenant.settings
-id: microsoft.tenant.settings
-sidebar_label: microsoft.tenant.settings
+title: microsoft.tenantSettings
+id: microsoft.tenantSettings
+sidebar_label: microsoft.tenantSettings
 displayed_sidebar: MQL
 description: Company-wide configuration for apps and services.
 ---
 
-# microsoft.tenant.settings
+# microsoft.tenantSettings
 
 **Description**
 

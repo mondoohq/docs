@@ -114,9 +114,23 @@
 # s.b. Wi-Fi
 \bWi[Ff]i\b
 
+# s.b. screensaver
+\bscreen saver\b
+
+# s.b. SmartCard
+\bSmartcard\b
+\bSmart Card\b
+
 #
 # Product Names
 #
+
+# s.b. YubiKey
+\bYubikey\b
+\bYubi Key\b
+
+# s.b. ChatGPT
+\bChat GPT\b
 
 # s.b. Copilot
 \bCoPilot\b
@@ -202,14 +216,6 @@
 \bCentos\b
 \bCent OS\b
 \bcentOS\b
-
-# s.b. macOS
-\bOS X\b
-\bMacOS\b
-\bMac OS\b
-
-# s.b. AirDrop
-\bAirdrop\b
 
 # s.b. Bluetooth
 \bBlueTooth\b
@@ -330,6 +336,35 @@
 
 # s.b. Nmap
 \b[Nn]Map\b
+
+
+#
+# Apple Terms
+#
+
+# s.b. macOS
+\bOS X\b
+\bMacOS\b
+\b[Mm]ac OS\b
+
+# s.b. AirDrop
+\bAirdrop\b
+
+# s.b. iPadOS
+\biPad OS\b
+
+# s.b. AppleScript
+\bApplescript\b
+
+# s.b. FileVault
+\bFilevault\b
+\bFile Vault\b
+
+# s.b. Apple Pay
+\bApplePay\b
+
+# s.b. Touch ID
+\bTouchID\b
 
 #
 # Kubernetes Terms

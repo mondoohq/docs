@@ -366,6 +366,12 @@
 # s.b. Touch ID
 \bTouchID\b
 
+# s.b. AppleID
+\bAppleID\b
+
+# s.b. XProtect
+\bX Protect\b
+
 #
 # Kubernetes Terms
 #

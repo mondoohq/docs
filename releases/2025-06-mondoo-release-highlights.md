@@ -1,7 +1,7 @@
 ---
 title: Mondoo Release Highlights June 2025
 sidebar_label: June Highlights
-description: DEETS
+description: It’s been a scorching month of June but that hasn’t stopped the Mondoo engineering team. This month we focused on supporting new operating systems, platforms, and CIS benchmarks. Plus, we've enhanced our UI for faster remediation with improved exception management and direct links to assets. Read the blog to get all the details.
 authors: [tim]
 image: /img/release-highlights/2025-06/banner.png
 tags: [release, mondoo]
@@ -99,7 +99,7 @@ If you want to automate processes effectively, the ability to set exceptions is 
 
 ## Remediation enhancements
 
-Having clear remediation instructions and code snippets significantly speeds up issue resolution by eliminating guesswork and providing a direct path to fixing problems. This reduces downtime, ensures consistency in how issues are handled, and allows even less-experienced team members to act with confidence. This is why we place great importance on providing accurate and complete remediation information in the Mondoo platform, and are continually making improvements. This month we worked on:
+Having clear remediation instructions and code snippets significantly speeds up issue resolution by eliminating guesswork and providing a direct path to fixing problems. This reduces downtime, ensures consistency in how issues are handled, and allows even less-experienced team members to act with confidence. This is why we place great importance on providing accurate and complete remediation information in the Mondoo Platform, and are continually making improvements. This month we worked on:
 
 - Terraform remediations in GitHub and GitLab policies
 - Further enhanced descriptions and remediation information in Kubernetes policies
@@ -113,4 +113,63 @@ Having clear remediation instructions and code snippets significantly speeds up 
 
 ## MQL Improvements
 
-DEETS
+### New auditd resources
+
+- auditd.rule
+- auditd.rule.control
+- auditd.rule.file
+- auditd.rule.syscall
+- auditd.rules
+
+### New Microsoft 365 resources
+
+- microsoft.conditionalAccess.authenticationMethodConfiguration
+- microsoft.conditionalAccess.authenticationMethodsPolicy
+- microsoft.conditionalAccess.policy
+- microsoft.conditionalAccess.policy.conditions
+- microsoft.conditionalAccess.policy.conditions.applications
+- microsoft.conditionalAccess.policy.conditions.authenticationFlows
+- microsoft.conditionalAccess.policy.conditions.clientApplications
+- microsoft.conditionalAccess.policy.conditions.locations
+- microsoft.conditionalAccess.policy.conditions.platforms
+- microsoft.conditionalAccess.policy.conditions.users
+- microsoft.conditionalAccess.policy.grantControls
+- microsoft.conditionalAccess.policy.grantControls.authenticationStrength
+- microsoft.conditionalAccess.policy.sessionControls
+- microsoft.conditionalAccess.policy.sessionControls.applicationEnforcedRestrictions
+- microsoft.conditionalAccess.policy.sessionControls.cloudAppSecurity
+- microsoft.conditionalAccess.policy.sessionControls.persistentBrowser
+- microsoft.conditionalAccess.policy.sessionControls.signInFrequency
+- microsoft.devicemanagement.deviceEnrollmentConfiguration
+- microsoft.devicemanagement.manageddevice
+- microsoft.graph.accessReviewReviewerScope
+- microsoft.identityAndAccess
+- microsoft.identityAndAccess.policy
+- microsoft.identityAndAccess.policy.rule
+- microsoft.identityAndAccess.policy.rule.target
+- microsoft.identityAndAccess.roleEligibilityScheduleInstance
+- microsoft.policies.authenticationMethodConfiguration
+- microsoft.policies.authenticationMethodsPolicy
+- microsoft.tenant.formsSettings
+- microsoft.tenant.settings
+- microsoft.user.assignedLicense
+- microsoft.user.authenticationMethods.userRegistrationDetails
+- microsoft.user.authenticationRequirements
+- microsoft.user.licenseDetail
+- microsoft.user.licenseDetail.servicePlanInfo
+- ms365.exchangeonline.mailbox
+- ms365.exchangeonline.securityAndCompliance
+
+### aws.rds.dbcluster
+
+- New `databaseInsightsMode` field
+- New `globalClusterIdentifier` field
+
+### shodan.hosts
+
+- New `city` field
+- New `country` field
+
+### parse.yaml
+
+- New `documents` field

@@ -18,7 +18,7 @@ Security findings are potential issues that can make your infrastructure vulnera
 
 Mondoo scans your assets and discovers any of these issues that exist on each asset, assigns each one a **risk score** and **blast radius** unique to your environment, and **ranks** them compared to other findings. This rank helps you decide which findings are most important to fix.
 
-## Risk score
+## Risk score {#risk-score}
 
 Mondoo assigns a risk score of Low, Medium, High, or Critical to each finding. The risk score is calculated using a base score and contextual risks.
 
@@ -48,7 +48,7 @@ Contextual risk factors allow Mondoo to more accurately assess the risk of a fin
 
 You can customize the degree of impact that different risk factors have on asset security scores. To learn how, read [Customize How Risk Factors Affect Asset Scores](/platform/security/customize/risk/).
 
-## Blast radius
+## Blast radius {#blast-radius}
 
 The _blast radius_ of a finding is the impact that the finding has on a space. Mondoo can expose the same finding on multiple assets in a space. It calculates blast radius of the finding using the risk scores of all of the assets in the space that have that finding.
 

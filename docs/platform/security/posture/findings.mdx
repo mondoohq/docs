@@ -18,7 +18,7 @@ Security findings are potential issues that can make your infrastructure vulnera
 - Known vulnerabilities (or CVEs, common vulnerabilities and exposures) in the software installed on your assets
 - Advisories published by software makers to alert the public about gaps in their products
 
-### How Mondoo Calculates Risk Score
+### How Mondoo Calculates Risk Score {#risk-score}
 
 The foundation of prioritization is an accurate, contextual Risk Score. Mondoo assigns a score of Low, Medium, High, or Critical to each finding by combining a base score with contextual risk factors.
 
@@ -42,6 +42,10 @@ Base scores evaluate a threat in a vacuum. Mondoo makes them more accurate by ap
 | **End-of-life (EOL)** | The asset is running an EOL operating system. | Raise |
 | **Database** | The asset hosts a running database. | Raise |
 | **Defensive** | The asset has defensive countermeasures (SELinux or AppArmor). | Lower |
+
+### Blast Radius
+
+Mondoo uses the number of times a finding is present in the space to calculate a blast radius for the finding.
 
 ### From Risk Score to Top Actions
 

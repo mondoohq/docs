@@ -1,0 +1,44 @@
+---
+title: How the Space Risk Score Is Calculated
+sidebar_label: Space Risk Score
+---
+
+The **Space Risk Score** is a single, quantifiable metric from 0-100 that represents the overall security risk for a given space in Mondoo. A higher score indicates a higher risk posture, while a lower score means the space is more secure.
+
+This score provides a high-level benchmark of your security posture, allowing you to track improvements over time. It is the score that the **Risk Reduction** metric for each Top Action directly impacts.
+
+### How the Score Is Calculated
+
+The calculation is designed to provide an intuitive measure of risk by averaging the scores of all findings and then inverting the result.
+
+The final formula is:
+
+**Space Risk Score = 100 - ( (Sum of All Finding Risk Scores) / (Total Number of Findings) )**
+
+Let's break down the components:
+
+* **Finding Risk Score:** Each individual finding has its own risk score from 0-100. A score of `100` is perfect (e.g., a passing check), while a score closer to `0` indicates a more severe risk. (Learn more in [How Mondoo Prioritizes Security Findings](../findings.mdx)).
+
+* **Sum of All Finding Risk Scores:** We iterate through every asset in the space and sum the individual `Risk Score` of every finding.
+
+* **Total Number of Findings:** This is a simple count of all findings across all assets within the scope of the calculation.
+
+* **The 100-Minus Inversion:** The average of all finding scores results in a "health score" where 100 is good. We subtract this average from 100 to create a final "risk score," where a higher number intuitively means higher risk.
+
+### How Exceptions Are Handled
+
+The calculation intelligently handles exceptions. When a finding is marked as `Risk Accepted`, `False Positive`, or has a `Workaround`, its contribution to the sum is treated as a perfect `100`. This effectively removes its negative impact from the overall average.
+
+### Example Calculation
+
+Imagine a space with 2 assets and a total of 3 findings:
+
+* Finding A (Critical CVE): `Risk Score = 5`
+* Finding B (High Check Failure): `Risk Score = 20`
+* Finding C (Medium CVE, Risk Accepted): Treated as `Risk Score = 100`
+
+The calculation would be:
+
+1.  **Sum of Scores**: `5 + 20 + 100 = 125`
+2.  **Average Score**: `125 / 3 = 41.67`
+3.  **Space Risk Score**: `100 - 41.67 =` **58.33**

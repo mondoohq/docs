@@ -5,33 +5,113 @@ sidebar_label: Effort
 
 The **Effort** metric, shown in your **Top Actions** list, estimates the time required to remediate a finding. To provide a clear understanding of the work involved and the value of automation, we calculate Effort using two distinct models.
 
-### 1. Industry Standard Effort (The Manual Way)
+### At a Glance: Effort Models
 
-This metric benchmarks the time required for the **entire manual remediation lifecycle**. We model this at **10 minutes per affected asset**. This estimate goes beyond simply applying a patch and reflects the real-world, time-consuming tasks that operations teams face:
+Mondoo presents two effort calculations to help you prioritize work and quantify the value of automation.
 
-* Researching the correct fix for different OS versions and environments.
-* Packaging and testing the fix to ensure it doesn't break dependencies.
-* Performing staged rollouts across the fleet.
-* Verifying that the fix was successful and the vulnerability is closed.
+#### 1. Mondoo Automated Effort
 
-For a finding on 400 assets, this equates to **4,000 minutes (over 66 hours)** of manual work.
+This metric models the time required using Mondoo's **end-to-end automated remediation**. The time is calculated based on the number of affected assets, reflecting the minimal hands-on time needed when the entire lifecycle is automated.
 
-### 2. Mondoo Automated Effort (The "Fix Forever" Way)
+| Assets Affected | Mondoo Automated Effort |
+| :--- | :--- |
+| **1 - 30 Assets** | 5 minutes |
+| **31 - 180 Assets** | 10 minutes |
+| **181 - 400 Assets** | 20 minutes |
 
-This metric models the time required using Mondoo's **end-to-end automated remediation**. We calculate this at a highly efficient rate of **5 minutes for every 100 assets**.
+#### 2. Industry Standard Effort (Manual)
 
-The dramatic time savings come from automating the entire lifecycle that the "Industry Standard" number represents.
+This metric benchmarks the time required for the full **manual remediation lifecycle**, based on a model aligned with NIST and SANS Institute frameworks. The effort scales based on the number of affected assets and the threat type (e.g., a Zero-Day requires significantly more effort).
 
-For the same finding on 400 assets, the Mondoo Effort is just **20 minutes**.
+| Assets Affected | Standard Vulnerability | Zero-Day Vulnerability |
+| :--- | :--- | :--- |
+| **1-10 Assets** | 7.5 hours | 22.5 hours |
+| **11-100 Assets** | 10.5 hours | 31.5 hours |
+| **101-1,000 Assets** | 21 hours | 63 hours |
+| **1,001+ Assets** | 36 hours | 108 hours |
 
-### At a Glance
+## Manual Effort Calculation Methodology
 
-The following table shows the powerful contrast between the two effort models for common findings:
+### Overview
 
-| Finding             | Assets | Industry Standard Effort | Mondoo Automated Effort |
-| ------------------- | ------ | ---------------------- | ----------------------- |
-| Windows KB #1       | 400    | 4000 min (66.7 hours)  | 20 min                  |
-| Linux (setuptools)  | 180    | 1800 min (30 hours)    | 10 min                  |
-| Windows KB #2       | 30     | 300 min (5 hours)      | 5 min                   |
-| AIX Vulnerability   | 20     | 200 min (3.3 hours)    | 5 min                   |
-| VMSA                | 8      | 80 min (1.3 hours)     | 5 min                   |
+This document provides a transparent breakdown of the methodology used to calculate the "Industry Standard Effort" estimate. This model is designed to provide a credible and conservative estimate of the hands-on-keyboard time required for a security or IT engineer to remediate a single, prioritized vulnerability.
+
+The model assumes a modern IT environment with standard tools (e.g., patch deployment utilities, vulnerability scanners) and quantifies the manual human effort required to operate and manage them through the remediation lifecycle.
+
+Our methodology is built upon established industry frameworks from trusted, independent sources, including the **National Institute of Standards and Technology (NIST)** and the **SANS Institute**. By aligning with these standards, we ensure our model reflects real-world operational processes.
+
+### The Four-Phase Remediation Framework
+
+Our model deconstructs the manual remediation process into four distinct technical phases. This structure is a practical application of the lifecycle defined in **NIST Special Publication 800-40 Rev. 4, "Guide to Enterprise Patch Management Planning,"** which outlines the core process as identifying, prioritizing, acquiring, installing, and verifying patches.
+
+* **Research & Planning**
+    This phase covers the initial technical investigation required to understand the vulnerability and plan the remediation. It includes the hands-on effort to research the CVE, analyze vendor advisories, and determine the specific technical steps and potential operational impacts. This work aligns directly with the "Identification" and "Assessment" phases of the NIST vulnerability management process [1] and the "Analyze" focus area of the **SANS Vulnerability Management Maturity Model** [2].
+
+* **Scripting & Testing**
+    This phase focuses on preparing the fix for deployment. It includes the manual, hands-on work of creating or adapting a deployment script (e.g., PowerShell, Ansible playbook), configuring a representative lab or test environment, applying the patch, and performing technical validation to ensure the fix is effective and does not cause system instability. This testing phase is a critical best practice cited by numerous security frameworks to avoid operational disruptions [3].
+
+* **Staged Rollout**
+    This phase represents the manual effort required to manage and oversee the deployment using an existing patch utility. While the tool executes the patch, an engineer must perform numerous hands-on tasks: configuring the deployment jobs, defining target groups for each stage, manually promoting the patch from pilot to broader rings, actively monitoring the rollout for failures, and manually troubleshooting the inevitable percentage of endpoints where the automation fails.
+
+* **Verification**
+    This final technical step involves confirming that the patch was successfully deployed and the vulnerability is no longer present. In a manual workflow, this includes the time to initiate post-remediation scans with a vulnerability scanner, review the raw output or logs to confirm the fix, and formally close the technical work ticket. This aligns with the "Verification" phase explicitly defined in NIST SP 800-40.
+
+### Detailed Time Estimation Model
+
+Our time estimates are based on a dynamic model that accounts for two critical real-world variables: the threat type of the vulnerability and the scale of the deployment. The following sections provide a detailed justification for the time allocated to each phase.
+
+#### Phase 1: Research & Planning
+
+* **Activities:** This phase involves an engineer's focused effort to read the vulnerability disclosure (CVE), understand vendor-specific advisories, identify which assets and software versions in their inventory are affected, and determine the technical steps for remediation. This aligns with the "Analyze" phase of the **SANS Vulnerability Management Maturity Model**, where practitioners move beyond simple CVSS scores to understand the true risk and context [2].
+* **Time Justification:** This is a high-skill, fixed-cost activity. The intellectual effort to understand a vulnerability is largely the same whether the fix will be applied to 10 or 1,000 assets. We allocate a baseline of **2 hours** for this task. This is a conservative estimate derived from industry data, which suggests an average of **6 hours of total engineering cost** to fix a single vulnerability [4]. Allocating one-third of this core engineering time to the initial analysis is a reasonable starting point for a moderately complex issue. The time increases slightly at higher asset tiers to account for the added complexity of analyzing impacts in more diverse and heterogeneous environments [5].
+
+#### Phase 2: Scripting & Testing
+
+* **Activities:** This phase includes creating or adapting a script to deploy the patch, setting up a representative test environment, applying the patch, and performing functional tests to ensure the fix does not disrupt business-critical applications. The need for a dedicated testing environment is a common challenge that consumes significant time [6].
+* **Time Justification:** Like planning, this is a front-loaded, fixed-cost activity. The core remediation script is developed and tested once. We allocate a baseline of **4 hours** for this work. This represents the remaining two-thirds of the 6-hour average engineering benchmark [4] and covers the hands-on-keyboard time for scripting and executing tests in a lab environment. The time increases modestly at higher tiers to account for the added effort of testing against a wider variety of system configurations and applications, a necessity in complex enterprise environments [5].
+
+#### Phase 3: Staged Rollout
+
+* **Activities:** This is the manual, hands-on process of an engineer **managing the automated deployment**. This includes configuring the patch utility, defining deployment rings, monitoring job progress, and manually intervening when the automation fails on certain assets—a common occurrence.
+* **Time Justification:** This is the primary phase where effort scales with the number of assets. Our non-linear scaling model reflects that patching the first few assets is relatively quick (**1 hour**). The effort increases more significantly as the rollout expands to cover dozens (**4 hours**) or hundreds (**12 hours**) of assets, reflecting the manual coordination and execution across different teams and environments.
+
+#### Phase 4: Verification
+
+* **Activities:** This phase involves the final confirmation that the remediation was successful. In a modern IT environment, this is typically not a manual re-scan of every asset. Instead, it involves an engineer initiating a verification scan using an existing vulnerability management tool, reviewing the resulting report or dashboard, and closing the corresponding ticket.
+* **Time Justification:** As the scanning itself is automated, the manual effort is minimal. We allocate a baseline of **0.5 hours (30 minutes)** for an engineer to perform these final administrative actions. This time increases slightly at higher tiers to account for reviewing larger, more complex scan reports and confirming the status across a wider range of assets, as prescribed by the "Verification" stage in **NIST SP 800-40**.
+
+### Calculation Summary
+
+The final calculation combines the time estimates from each phase, adjusted for threat type and asset scale.
+
+#### Threat Type Modifier
+
+* **Non-Zero-Day (Baseline 1.0x):** Represents the vast majority of known vulnerabilities with available patches. Our baseline estimates are for this scenario.
+* **Zero-Day (Multiplier 3.0x):** Represents a novel, actively exploited vulnerability requiring an emergency response. The chaotic, multi-patch response required for the **Log4j vulnerability (CVE-2021-44228)** is a quintessential example of the significantly elevated effort required, justifying a conservative 3.0x multiplier [7].
+
+#### Manual Effort Calculation Table
+
+The following table provides the baseline effort in hours for a **Non-Zero-Day** vulnerability.
+
+**Table 1: Manual Technical Effort Calculation Model (Baseline: Non-Zero-Day Vulnerability)**
+
+| Remediation Phase | Tier 1 (1-10 Assets) | Tier 2 (11-100 Assets) | Tier 3 (101-1,000 Assets) | Tier 4 (1,001+ Assets) | Rationale & Supporting References |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **1. Research & Planning** | 2 hours | 2 hours | 3 hours | 4 hours | High fixed cost for initial analysis. Scales modestly with the complexity of researching impacts in more diverse environments, as outlined in **NIST** and **SANS** frameworks. |
+| **2. Scripting & Testing** | 4 hours | 4 hours | 5 hours | 6 hours | High fixed cost for core engineering. Scales modestly to account for testing against a wider variety of configurations, a key step in the **NIST** patch management guide [3]. |
+| **3. Staged Rollout** | 1 hour | 4 hours | 12 hours | 24 hours | This is the primary driver of scaling. Effort reflects the hands-on time to **manage the automated tool** across progressively larger and more diverse groups of assets [5]. |
+| **4. Verification** | 0.5 hours | 0.5 hours | 1 hour | 2 hours | Minimal manual effort to initiate automated validation scans and review the output, acknowledging modern tooling but retaining the final manual check required by **NIST**. |
+| **Total (Non-Zero-Day)** | **7.5 hours** | **10.5 hours** | **21 hours** | **36 hours** | ***Apply Threat Type Multiplier:** Zero-Day (3.0x)* |
+
+This transparent, reference-backed model provides a credible and conservative estimate of the manual effort required for vulnerability remediation, forming a solid basis for understanding the value of automation.
+
+### Works Cited
+
+1.  What Is Vulnerability Management Lifecycle? - Picus Security, accessed July 24, 2025, `https://www.picussecurity.com/resource/glossary/what-is-vulnerability-management-lifecycle`
+2.  Using the SANS Vulnerability Management Maturity ... - RH-ISAC, accessed July 24, 2025, `https://rhisac.org/vulnerability-management/sans-maturity-model-process/`
+3.  What is Vulnerability Remediation? Practices & Process - Jamf, accessed July 24, 2025, `https://www.jamf.com/blog/vulnerability-remediation-why-your-security-relies-on-it/`
+4.  Security Remediation Budgeting: A Simple Guide, accessed July 24, 2025, `https://www.opus.security/blog/guide-security-remediation-budgeting`
+5.  Why it Takes so Long to Patch a Vulnerability - JetPatch, accessed July 24, 2025, `https://jetpatch.com/blog/patch-management/why-it-takes-so-long-to-patch-a-vulnerability-and-how-you-can-speed-the-process/`
+6.  Vulnerability Remediation: How To Automate Your Process - PurpleSec, accessed July 24, 2025, `https://purplesec.us/learn/vulnerability-remediation/`
+7.  Unraveling Log4Shell: Analyzing the Impact and Response to the Log4j Vulnerability - arXiv, accessed July 24, 2025, `https://arxiv.org/html/2501.17760v1`
+8.  What is the Log4j Vulnerability? - IBM, accessed July 24, 2025, `https://www.ibm.com/think/topics/log4j`

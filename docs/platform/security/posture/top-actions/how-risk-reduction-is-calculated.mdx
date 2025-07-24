@@ -1,0 +1,36 @@
+---
+title: How Risk Reduction Is Calculated
+sidebar_label: Risk Reduction
+---
+
+The **Risk Reduction** metric is the core calculation that powers Mondoo's **Top Actions** feature. It is designed to show you the exact impact that fixing a finding will have on your overall [Space Risk Score](./understanding-space-risk-score.mdx), helping you focus on the changes that provide the biggest security improvements.
+
+The calculation is a two-step process that measures the total potential improvement for a specific finding and then averages it across all findings in your space to determine its true impact.
+
+### Step 1: Calculate the Total Potential Improvement for a Finding
+
+First, for a single finding (e.g., `CVE-2023-1234`), we identify every asset it affects. For each of those assets, we calculate the "improvement gap," which is the difference between its current risk score and a perfect score of 100.
+
+We then sum these individual improvement gaps together to get the total potential improvement for that single finding.
+
+**Example:** `CVE-2023-1234` affects three assets:
+
+* Asset A (Risk Score 10) -> Improvement = `100 - 10 = 90`
+* Asset B (Risk Score 20) -> Improvement = `100 - 20 = 80`
+* Asset C (Risk Score 10) -> Improvement = `100 - 10 = 90`
+
+The **Total Potential Improvement** for fixing `CVE-2023-1234` is `90 + 80 + 90 = 260` points.
+
+### Step 2: Determine the Impact on the Overall Space Score
+
+Next, to put that total improvement in context, we divide it by the **total number of findings across the entire space**. This gives us the actual value that your Space Risk Score would decrease by if you remediated that finding on all affected assets.
+
+The final formula is:
+
+**Risk Reduction = (Sum of Improvement Gaps for a Finding) / (Total Findings in Space)**
+
+**Continuing the Example:** If your space has **5,000 total findings**:
+
+* **Risk Reduction:** `260 / 5000 = 0.052`
+
+This means fixing `CVE-2023-1234` everywhere will improve your overall Space Risk Score by **0.052 points**. This method allows Mondoo to sort all findings by their true impact and present the top 30 to you as your **Top Actions**.

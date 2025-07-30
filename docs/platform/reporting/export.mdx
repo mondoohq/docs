@@ -3,21 +3,42 @@ title: Export Data for Reports and Analysis
 sidebar_label: Export Data for Reports & Analysis
 hide_table_of_contents: true
 sidebar_position: 20
-description: Export your space data to a .csv file to import it into your business intelligence, analytics, and reporting tools. You can open the .csv file in Microsoft Excel, Tableau, Zoho Analytics, Power BI, SAP Crystal Reports, or any software that can read data in a comma-separated value format. This lets you manipulate your security and compliance data and include it in reports that exactly suit your business needs.
+description: Export your security and compliance data from Mondoo in CSV or JSONL format for reporting, dashboards, and analysis in your preferred tools.
 image: /img/featured_img/mondoo-feature.jpg
 ---
 
-Export your space data to a .csv file to import it into your business intelligence, analytics, and reporting tools. You can open or import the .csv file in Microsoft Excel, Tableau, Zoho Analytics, Power BI, SAP Crystal Reports, or any software that can read data in a comma-separated value format. This lets you manipulate your security and compliance data and include it in reports that exactly suit your business needs.
+You can export your Mondoo space data in **CSV** or **JSONL** format for use in business intelligence, analytics, and reporting tools. This includes Excel, Power BI, Tableau, Zoho Analytics, or any platform that supports structured data input.
 
-## Run a .csv export report
+Exports are designed to help you visualize security posture, track compliance KPIs, investigate vulnerabilities, and integrate Mondoo data into custom reporting workflows.
 
-1. In the [Mondoo Console](https://console.mondoo.com), [navigate](/platform/start/navigate) to the space with the data you want to export.
+---
+
+## What gets exported
+
+Each export includes a collection of structured files that represent key dimensions of your space’s security and compliance data. You can choose between `.csv` (comma-separated values) or `.jsonl` (JSON Lines) when generating the export.
+
+| File Name       | Description                                                                 |
+|----------------|-----------------------------------------------------------------------------|
+| `assets`        | Inventory of scanned assets (hosts, cloud accounts, containers, SaaS apps) |
+| `checks`        | Individual policy check results across assets                               |
+| `controls`      | Groups of checks, typically mapped to compliance frameworks or policies     |
+| `vuln`          | Vulnerability data including CVEs, severity, and remediation info           |
+| `packages`      | Installed software packages per asset (used for vuln correlation)           |
+| `queries`       | MQL queries used during evaluations (includes code, name, description)      |
+
+Data can be joined across files using consistent keys such as `asset_id`, `check_id`, and `policy_id`.
+
+---
+
+## How to generate a data export
+
+1. In the [Mondoo Console](https://console.mondoo.com), [navigate](/platform/start/navigate) to the space you want to export.
 
 2. In the side navigation bar, select **Reporting**.
 
    ![Reporting page in Mondoo](/img/platform/reporting/add-report.png)
 
-3. Select the plus (+) sign near the top-right corner of the page.
+3. Click the **+** icon in the top-right corner.
 
    ![Generate reports in Mondoo](/img/platform/reporting/generate-reports.png)
 
@@ -25,20 +46,29 @@ Export your space data to a .csv file to import it into your business intelligen
 
    ![Report name in Mondoo](/img/platform/reporting/report-name.png)
 
-5. If you want, customize the name of the .csv file Mondoo creates.
+5. (Optional) Customize the report name and select your preferred format: **CSV** or **JSONL**.
 
-6. Select the **GENERATE REPORT** button.
+6. Click **Generate Report**.
 
    ![Reports in Mondoo](/img/platform/reporting/reports-list.png)
 
-7. Because Mondoo spaces contain a great deal of data, it can take a few minutes to create the .csv file. Mondoo shows the generating file in progress. When it's finished, you can download it: On the row for the report you want, select the download icon.
+7. Mondoo will begin generating the report. When it’s ready, download the `.zip` archive containing your exported files.
 
-## Manage reports
+---
 
-Mondoo keeps all reports you generate in a space. At any time, you can return to the Reporting page and view or download a report you previously generated.
+## Manage your exports
 
-If you no longer need a particular report, you can delete it: On the row for the report you want to delete, select the trash can icon.
+- All previously generated reports are saved in the space’s Reporting page.
+- To delete a report, click the trash icon next to its entry.
+- To delete multiple reports at once, check the boxes and select **Delete**.
 
-To delete multiple reports at once, check the boxes beside the reports you want to delete and select the **DELETE** button.
+---
+
+## Tips for using export data
+
+- Load CSV or JSONL files into tools like Excel, Power BI, or Jupyter Notebooks for analysis.
+- Use `vuln` data to build custom CVE dashboards or risk trending views.
+- Join `assets`, `checks`, and `controls` for complete compliance reporting.
+- JSONL format is ideal for programmatic ingestion into data pipelines and cloud storage.
 
 ---

@@ -11,13 +11,13 @@ Mondoo presents two effort calculations to help you prioritize work and quantify
 
 #### 1. Mondoo Automated Effort
 
-This metric models the time required using Mondoo's **end-to-end automated remediation**. The time is calculated based on the number of affected assets, reflecting the minimal hands-on time needed when the entire lifecycle is automated.
+This metric models the time required using Mondoo's **end-to-end automated remediation**. The time is calculated with a formula: a **10-minute fixed time, plus 5 minutes for every 100 affected assets**. This model reflects the minimal hands-on time needed to initiate and monitor the automated lifecycle.
 
-| Assets Affected | Mondoo Automated Effort |
+| Example Asset Count | Mondoo Automated Effort |
 | :--- | :--- |
-| **1 - 30 Assets** | 5 minutes |
-| **31 - 180 Assets** | 10 minutes |
-| **181 - 400 Assets** | 20 minutes |
+| **100 Assets** | 15 minutes |
+| **400 Assets** | 30 minutes |
+| **1,000 Assets** | 60 minutes |
 
 #### 2. Industry Standard Effort (Manual)
 
@@ -45,16 +45,16 @@ Our methodology is built upon established industry frameworks from trusted, inde
 Our model deconstructs the manual remediation process into four distinct technical phases. This structure is a practical application of the lifecycle defined in **NIST Special Publication 800-40 Rev. 4, "Guide to Enterprise Patch Management Planning,"** which outlines the core process as identifying, prioritizing, acquiring, installing, and verifying patches.
 
 * **Research & Planning**
-    This phase covers the initial technical investigation required to understand the vulnerability and plan the remediation. It includes the hands-on effort to research the CVE, analyze vendor advisories, and determine the specific technical steps and potential operational impacts. This work aligns directly with the "Identification" and "Assessment" phases of the NIST vulnerability management process [1] and the "Analyze" focus area of the **SANS Vulnerability Management Maturity Model** [2].
+    This phase covers the initial technical investigation required to understand the vulnerability and plan the remediation. It includes the hands-on effort to research the CVE, analyze vendor advisories, and determine the specific technical steps and potential operational impacts. This work aligns directly with the "Identification" and "Assessment" phases of the NIST vulnerability management process [1] and the "Analyze" focus area of the **SANS Vulnerability Management Maturity Model** [2].
 
 * **Scripting & Testing**
-    This phase focuses on preparing the fix for deployment. It includes the manual, hands-on work of creating or adapting a deployment script (e.g., PowerShell, Ansible playbook), configuring a representative lab or test environment, applying the patch, and performing technical validation to ensure the fix is effective and does not cause system instability. This testing phase is a critical best practice cited by numerous security frameworks to avoid operational disruptions [3].
+    This phase focuses on preparing the fix for deployment. It includes the manual, hands-on work of creating or adapting a deployment script (e.g., PowerShell, Ansible playbook), configuring a representative lab or test environment, applying the patch, and performing technical validation to ensure the fix is effective and does not cause system instability. This testing phase is a critical best practice cited by numerous security frameworks to avoid operational disruptions [3].
 
 * **Staged Rollout**
-    This phase represents the manual effort required to manage and oversee the deployment using an existing patch utility. While the tool executes the patch, an engineer must perform numerous hands-on tasks: configuring the deployment jobs, defining target groups for each stage, manually promoting the patch from pilot to broader rings, actively monitoring the rollout for failures, and manually troubleshooting the inevitable percentage of endpoints where the automation fails.
+    This phase represents the manual effort required to manage and oversee the deployment using an existing patch utility. While the tool executes the patch, an engineer must perform numerous hands-on tasks: configuring the deployment jobs, defining target groups for each stage, manually promoting the patch from pilot to broader rings, actively monitoring the rollout for failures, and manually troubleshooting the inevitable percentage of endpoints where the automation fails.
 
 * **Verification**
-    This final technical step involves confirming that the patch was successfully deployed and the vulnerability is no longer present. In a manual workflow, this includes the time to initiate post-remediation scans with a vulnerability scanner, review the raw output or logs to confirm the fix, and formally close the technical work ticket. This aligns with the "Verification" phase explicitly defined in NIST SP 800-40.
+    This final technical step involves confirming that the patch was successfully deployed and the vulnerability is no longer present. In a manual workflow, this includes the time to initiate post-remediation scans with a vulnerability scanner, review the raw output or logs to confirm the fix, and formally close the technical work ticket. This aligns with the "Verification" phase explicitly defined in NIST SP 800-40.
 
 ### Detailed Time Estimation Model
 
@@ -107,11 +107,11 @@ This transparent, reference-backed model provides a credible and conservative es
 
 ### Works Cited
 
-1.  What Is Vulnerability Management Lifecycle? - Picus Security, accessed July 24, 2025, `https://www.picussecurity.com/resource/glossary/what-is-vulnerability-management-lifecycle`
-2.  Using the SANS Vulnerability Management Maturity ... - RH-ISAC, accessed July 24, 2025, `https://rhisac.org/vulnerability-management/sans-maturity-model-process/`
-3.  What is Vulnerability Remediation? Practices & Process - Jamf, accessed July 24, 2025, `https://www.jamf.com/blog/vulnerability-remediation-why-your-security-relies-on-it/`
-4.  Security Remediation Budgeting: A Simple Guide, accessed July 24, 2025, `https://www.opus.security/blog/guide-security-remediation-budgeting`
-5.  Why it Takes so Long to Patch a Vulnerability - JetPatch, accessed July 24, 2025, `https://jetpatch.com/blog/patch-management/why-it-takes-so-long-to-patch-a-vulnerability-and-how-you-can-speed-the-process/`
-6.  Vulnerability Remediation: How To Automate Your Process - PurpleSec, accessed July 24, 2025, `https://purplesec.us/learn/vulnerability-remediation/`
-7.  Unraveling Log4Shell: Analyzing the Impact and Response to the Log4j Vulnerability - arXiv, accessed July 24, 2025, `https://arxiv.org/html/2501.17760v1`
-8.  What is the Log4j Vulnerability? - IBM, accessed July 24, 2025, `https://www.ibm.com/think/topics/log4j`
+1.  What Is Vulnerability Management Lifecycle? - Picus Security, accessed July 24, 2025, `https://www.picussecurity.com/resource/glossary/what-is-vulnerability-management-lifecycle`
+2.  Using the SANS Vulnerability Management Maturity ... - RH-ISAC, accessed July 24, 2025, `https://rhisac.org/vulnerability-management/sans-maturity-model-process/`
+3.  What is Vulnerability Remediation? Practices & Process - Jamf, accessed July 24, 2025, `https://www.jamf.com/blog/vulnerability-remediation-why-your-security-relies-on-it/`
+4.  Security Remediation Budgeting: A Simple Guide, accessed July 24, 2025, `https://www.opus.security/blog/guide-security-remediation-budgeting`
+5.  Why it Takes so Long to Patch a Vulnerability - JetPatch, accessed July 24, 2025, `https://jetpatch.com/blog/patch-management/why-it-takes-so-long-to-patch-a-vulnerability-and-how-you-can-speed-the-process/`
+6.  Vulnerability Remediation: How To Automate Your Process - PurpleSec, accessed July 24, 2025, `https://purplesec.us/learn/vulnerability-remediation/`
+7.  Unraveling Log4Shell: Analyzing the Impact and Response to the Log4j Vulnerability - arXiv, accessed July 24, 2025, `https://arxiv.org/html/2501.17760v1`
+8.  What is the Log4j Vulnerability? - IBM, accessed July 24, 2025, `https://www.ibm.com/think/topics/log4j`

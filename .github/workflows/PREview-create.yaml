@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - uses: mshick/add-pr-comment@v2
         with:
           message: |
@@ -48,7 +48,7 @@ jobs:
       BRANCH: ${{ steps.data.outputs.BRANCH }}
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Obtain URL
         id: data
         uses: ./.github/actions/PREview-data
@@ -72,7 +72,7 @@ jobs:
     needs: [deploy-update]
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Obtain Bucket Name
         uses: ./.github/actions/PREview-data
       - uses: mshick/add-pr-comment@v2

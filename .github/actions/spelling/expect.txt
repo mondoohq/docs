@@ -47,8 +47,6 @@ cdn
 cdzrr
 certificatechains
 cfeed
-cgr
-chainguard
 CIDs
 cim
 classname
@@ -111,7 +109,6 @@ geomatchstatement
 getenv
 GGJXG
 gistfile
-glpat
 gmail
 googleusercontent
 gpu
@@ -280,7 +277,6 @@ tde
 teamsmeetingpolicyconfig
 tenantfederationconfig
 testcase
-testdata
 testring
 testsuite
 tfblock

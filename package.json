@@ -24,7 +24,7 @@
     "@mdx-js/react": "^3.1.0",
     "@stackql/docusaurus-plugin-hubspot": "^1.1.0",
     "@svgr/webpack": "^8.1.0",
-    "ansi-regex": "^6.1.0",
+    "ansi-regex": "^6.2.0",
     "clsx": "^2.1.1",
     "cross-fetch": "^4.1.0",
     "docusaurus-gtm-plugin": "^0.0.2",
@@ -42,7 +42,7 @@
     "search-insights": "^2.17.3",
     "terser": "5.43.1",
     "url-loader": "^4.1.1",
-    "webpack": "^5.101.0",
+    "webpack": "^5.101.2",
     "ws": "^8.18.3"
   },
   "browserslist": {
@@ -59,7 +59,7 @@
   },
   "devDependencies": {
     "@docusaurus/tsconfig": "^3.8.1",
-    "@types/react": "^19.1.9",
+    "@types/react": "^19.1.10",
     "@types/react-helmet": "^6.1.11",
     "@types/react-router-dom": "^5.3.3",
     "prettier": "3.6.2",

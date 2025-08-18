@@ -121,11 +121,6 @@
 \bSmartcard\b
 \bSmart Card\b
 
-# disabled due to docs false positives
-# s.b. name server
-# \bnameserver\b
-# \bnameservers\b
-
 # s.b. 802.1Q, etc. Letter is always uppercase
 \b802.1[a-f]\b
 
@@ -345,6 +340,7 @@
 
 # s.b. NX-OS
 \bNX OS\b
+\bNXOS\b
 
 #
 # Apple Terms

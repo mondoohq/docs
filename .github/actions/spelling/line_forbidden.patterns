@@ -137,6 +137,9 @@
 # s.b. Fortinet
 \bFortiNet\b
 
+# s.b. FortiGuard
+\bFortiguard\b
+
 # s.b. YubiKey
 \bYubikey\b
 \bYubi Key\b

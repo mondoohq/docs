@@ -131,6 +131,12 @@
 # Product Names
 #
 
+# s.b. FortiGate
+\bFortigate\b
+
+# s.b. Fortinet
+\bFortiNet\b
+
 # s.b. YubiKey
 \bYubikey\b
 \bYubi Key\b

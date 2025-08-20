@@ -364,6 +364,9 @@
 # s.b. FortiManager
 \bFortimanager\b
 
+# s.b. FortiOS
+\bForti OS\b
+
 #
 # Apple Terms
 #

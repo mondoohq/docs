@@ -3635,9 +3635,9 @@ css-what@^6.0.1, css-what@^6.1.0:
   integrity sha512-u/O3vwbptzhMs3L1fQE82ZSLHQQfto5gyZzwteVIEyeaY5Fc7R4dapF/BvRoSYFeqfBk4m0V1Vafq5Pjv25wvA==
 
 cssdb@^8.3.0:
-  version "8.3.1"
-  resolved "https://registry.yarnpkg.com/cssdb/-/cssdb-8.3.1.tgz#0ac96395b7092ffee14563e948cf43c2019b051e"
-  integrity sha512-XnDRQMXucLueX92yDe0LPKupXetWoFOgawr4O4X41l5TltgK2NVbJJVDnnOywDYfW1sTJ28AcXGKOqdRKwCcmQ==
+  version "8.4.0"
+  resolved "https://registry.yarnpkg.com/cssdb/-/cssdb-8.4.0.tgz#232a1aa7751983ed2b40331634902d4c93f0456c"
+  integrity sha512-lyATYGyvXwQ8h55WeQeEHXhI+47rl52pXSYkFK/ZrCbAJSgVIaPFjYc3RM8TpRHKk7W3wsAZImmLps+P5VyN9g==
 
 cssesc@^3.0.0:
   version "3.0.0"

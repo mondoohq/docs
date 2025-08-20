@@ -134,15 +134,6 @@
 # Product Names
 #
 
-# s.b. FortiGate
-\bFortigate\b
-
-# s.b. Fortinet
-\bFortiNet\b
-
-# s.b. FortiGuard
-\bFortiguard\b
-
 # s.b. YubiKey
 \bYubikey\b
 \bYubi Key\b
@@ -353,6 +344,25 @@
 # s.b. NX-OS
 \bNX OS\b
 \bNXOS\b
+
+#
+# Fortinet Terms
+#
+
+# s.b. FortiGate
+\bFortigate\b
+
+# s.b. Fortinet
+\bFortiNet\b
+
+# s.b. FortiGuard
+\bFortiguard\b
+
+# s.b. FortiAnalyzer
+\bFortianalyzer\b
+
+# s.b. FortiManager
+\bFortimanager\b
 
 #
 # Apple Terms

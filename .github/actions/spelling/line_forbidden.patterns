@@ -71,6 +71,9 @@
 # s.b. NetFlow
 \bNetflow\b
 
+# s.b. IPsec
+\bIPSec\b
+
 # s.b. Side scanning
 \b[Ss]idescanning\b
 
@@ -341,6 +344,28 @@
 # s.b. NX-OS
 \bNX OS\b
 \bNXOS\b
+
+#
+# Fortinet Terms
+#
+
+# s.b. FortiGate
+\bFortigate\b
+
+# s.b. Fortinet
+\bFortiNet\b
+
+# s.b. FortiGuard
+\bFortiguard\b
+
+# s.b. FortiAnalyzer
+\bFortianalyzer\b
+
+# s.b. FortiManager
+\bFortimanager\b
+
+# s.b. FortiOS
+\bForti OS\b
 
 #
 # Apple Terms

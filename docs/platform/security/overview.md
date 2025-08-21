@@ -9,7 +9,7 @@ image: /img/featured_img/mondoo-feature.jpg
 
 Mondoo continuously assesses the security of your IT infrastructure throughout the development cycle and in production. Using Mondoo's deep integrations and automated scanning, you can identify risks, vulnerabilities, and misconfigurations in order to improve your overall security posture.
 
-Mondoo features out-of-the-box security and best practice policies certified by Mondoo and the Center for Internet Security. You integrate your infrastructure with Mondoo, enable the policies you want to adhere to, and Mondoo does the heavy lifting. It continuously scans, providing up-to-date information on your security and instructions for improving.
+Mondoo features out-of-the-box security and best practice policies certified by Mondoo and the Center for Internet Security. You integrate your infrastructure with Mondoo, enable the policies you want to adhere to, and Mondoo does the heavy lifting. Mondoo continuously scans, providing up-to-date information on your security and instructions for improving.
 
 ## Secure your infrastructure
 

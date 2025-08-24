@@ -7,8 +7,7 @@ id: mql.write
 description: How to write queries, checks, and policies in MQL
 image: /img/featured_img/mondoo-feature.jpg
 ---
-
-We built MQL for searching, filtering, and testing infrastructure configuration data. Easy, lightweight, and fast, MQL’s data extraction resembles GraphQL, while its intuitive scripting approach is similar to JavaScript.
+The Mondoo Query Language (MQL) is a graph-based, lightweight, and high-performance language, purpose-built for querying infrastructure configuration data and constructing security/compliance policies. It enables intuitive exploration and validation of systems via a declarative, fast syntax.
 
 This page describes the conventions for writing queries and checks in MQL. It contains these sections:
 
@@ -937,3 +936,167 @@ func (md *MqlDiscovery) RunQuery(query string) interface{} {
 ```
 
 ---
+
+# The Interactive Shell
+
+Both `cnspec` and `cnquery` provide a **built-in interactive shell** that acts like an IDE for MQL. This is one of the most powerful tools for:
+
+- **Learning MQL**: experiment with selectors, built-ins, regex, and comparisons live.
+- **Testing policies**: copy queries from a policy file and run them interactively.
+- **Investigating live systems**: connect to a cloud account, Kubernetes cluster, or host to query live state.
+- **Incident response**: during a security event, you can ask questions of your infrastructure in real time, without writing code or waiting for dashboards to refresh.
+
+Think of the shell as a REPL (Read–Eval–Print Loop) for your infrastructure. You type MQL queries, it evaluates them against your connected system, and prints results immediately.
+
+---
+
+## How to launch the interactive shell
+
+Pick a target and start a shell:
+
+```bash
+# Local OS
+cnspec shell local
+
+# AWS account (uses your AWS credentials)
+cnspec shell aws
+
+# GCP project (replace with your project ID)
+cnspec shell gcp project <project-id>
+
+# Azure — lists your subscriptions, select one by number
+cnspec shell azure
+
+# Kubernetes — uses current KUBECONFIG and lists clusters/namespaces to select
+cnspec shell k8s
+```
+
+When you connect, you’ll see a banner confirming the provider and the asset you are connected to.
+
+---
+
+## Built-in Help
+
+The shell has a built-in help command. Use it to explore what resources are available and what fields they expose.
+
+Provider-level help:
+
+```
+cnspec> help aws
+cnspec> help gcp
+cnspec> help k8s
+```
+
+Resource-level help:
+```
+cnspec> help aws.ec2.instance
+cnspec> help gcp.project
+cnspec> help k8s.deployment
+```
+
+Each `help` command shows `fields`, `types`, and nested resources you can query.
+
+## Examples of Shell in Action
+
+Investigating a live security incident
+
+**Which AWS EC2 instances have a public IP?**
+```
+aws.ec2.instances.where(publicIp != empty) { instanceId region state tags publicIp }
+```
+
+**Which GCP compute instances are running with external NAT?**
+```
+gcp.compute.instances.where(networkInterfaces.where(_['accessConfigs'].where(_['name'] == "External NAT")))
+```
+
+**Which Kubernetes pods are not in Running state?**
+```
+k8s.pods.where(status.phase != "Running") { name namespace status.phase }
+```
+
+**Which Linux services are running?**
+```
+services.where(running == true) { name enabled type }
+```
+
+These queries can be run live during incident response to quickly answer pressing questions.
+
+## Why the shell matters
+
+The interactive shell is more than a convenience:
+
+- It is the fastest way to learn MQL by trial and error.
+- It provides deep visibility into resources through help.
+- It allows ad-hoc investigation without pre-built dashboards.
+- It bridges the gap between development (writing policies) and operations (running live checks).
+
+By practicing built-ins in the shell, you not only master MQL syntax but also learn how to apply it to real-world infrastructure problems on the fly.
+
+Now that you have a solid foundation for using the interactive shell, the next step is mastering MQL built-ins. The shell is the perfect environment to practice these built-ins live.
+
+---
+
+# What are MQL built-ins?
+
+Built-ins are the core language features that let you filter, transform, and make assertions across collections of data. They are the difference between just retrieving raw data and turning that data into meaningful answers.
+
+Think of built-ins as the verbs of MQL:
+
+- `.where()` narrows down what you’re looking at.
+- `.map()` transforms the results.
+- `.all()`, `.any()`, `.none()`, `.one()` let you assert truth over collections.
+- `.list`, `.length`, and `.containsOnly` help you structure and compare results.
+
+In the following sections we’ll explore each built-in in detail, with examples you can run in the shell. You’ll see both policy-style checks and inventory-style queries so you can use them in compliance scenarios as well as live investigation.
+
+## Quick Reference for MQL Built-ins
+
+| Built-in          | Input types                  | Output   | Typical use                                         |
+|-------------------|------------------------------|----------|-----------------------------------------------------|
+| `address`         | string (CIDR)                | string   | Return the network address of a CIDR                |
+| `all(cond)`       | arrays, iterables            | boolean  | Assert all elements match (universal requirement)   |
+| `any(cond)`       | arrays, iterables            | boolean  | Assert at least one element matches                 |
+| `camelcase`       | string                       | string   | Convert to camelCase                                |
+| `cidr`            | string (CIDR)                | string   | Return the CIDR block                               |
+| `contains(val)`   | arrays, strings              | boolean  | Check membership or substring presence              |
+| `containsAll([])` | arrays, strings              | boolean  | Assert all listed values are present                |
+| `containsNone([])`| arrays, strings              | boolean  | Assert none of the listed values are present        |
+| `containsOnly([])`| arrays of scalars            | boolean  | Assert only allowed values are present              |
+| `date`            | time, epoch                  | string   | Format or display a date                            |
+| `days`            | integer                      | duration | Convert number into days duration                   |
+| `downcase`        | string                       | string   | Convert to lowercase                                |
+| `duplicates`      | arrays                       | array    | Return duplicate elements                           |
+| `duration`        | integer, epoch difference    | duration | Represent elapsed time                              |
+| `epoch`           | time                         | int      | Return Unix epoch                                   |
+| `find(params)`    | provider resources           | array    | Discover resources in a scope                       |
+| `first`           | arrays                       | element  | Return the first element                            |
+| `flat`            | nested arrays                | array    | Flatten nested arrays                               |
+| `hours`           | integer                      | duration | Convert number into hours duration                  |
+| `in(list)`        | scalar, list                 | boolean  | Test membership in a list                           |
+| `inRange(val,min,max)` | numbers                 | boolean  | Check if value is within range                      |
+| `isUnspecified`   | string (IP or CIDR)          | boolean  | Test if value is unspecified (e.g., 0.0.0.0)        |
+| `keys`            | map/dict                     | array    | Return keys of a dictionary                         |
+| `last`            | arrays                       | element  | Return the last element                             |
+| `length`          | arrays, strings              | integer  | Count elements or characters                        |
+| `lines`           | string                       | array    | Split into lines                                    |
+| `map(expr)`       | arrays, iterables            | array    | Transform or project values                         |
+| `minutes`         | integer                      | duration | Convert number into minutes duration                |
+| `none(cond)`      | arrays, iterables            | boolean  | Assert no elements match                            |
+| `notIn(list)`     | scalar, list                 | boolean  | Test value is not in list                           |
+| `one(cond)`       | arrays, iterables            | boolean  | Assert exactly one element matches                  |
+| `prefix`          | string (CIDR)                | string   | Return network prefix                               |
+| `prefixLength`    | string (CIDR)                | integer  | Return prefix length                                |
+| `recurse`         | nested resources             | array    | Traverse nested structures                          |
+| `sample`          | arrays                       | element  | Return a random element                             |
+| `seconds`         | integer                      | duration | Convert number into seconds duration                |
+| `split`           | string                       | array    | Split by delimiter                                  |
+| `subnet`          | string (CIDR)                | string   | Return subnet portion                               |
+| `suffix`          | string                       | string   | Return suffix (network utility)                     |
+| `trim`            | string                       | string   | Remove leading/trailing whitespace                  |
+| `unique`          | arrays                       | array    | Return only unique elements                         |
+| `unix`            | epoch                        | time     | Convert epoch to time                               |
+| `upcase`          | string                       | string   | Convert to uppercase                                |
+| `values`          | map/dict                     | array    | Return values of a dictionary                       |
+| `version`         | string (semver)              | version  | Parse and compare version strings                   |
+| `where(cond)`     | arrays, iterables            | array    | Filter a collection by condition                    |

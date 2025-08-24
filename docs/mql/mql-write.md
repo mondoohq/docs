@@ -14,8 +14,10 @@ This page describes the conventions for writing queries and checks in MQL. It co
 
 - [Introduction](#introduction)
   - [Installation](#installation)
+  - [Alternative usage](#alternative-usage)
 - [Basic structure](#basic-structure)
   - [Anatomy of MQL](#anatomy-of-mql)
+  - [Commenting](#commenting)
   - [Types](#types)
   - [Schemas](#schemas)
   - [UTF-8 encoding](#utf-8-encoding)
@@ -46,7 +48,6 @@ This page describes the conventions for writing queries and checks in MQL. It co
 - [Error handling](#error-handling)
   - [Null chaining](#null-chaining)
 - [Concurrency](#concurrency)
-- [Commenting](#commenting)
 - [Embedding](#embedding)
   - [CLI](#cli)
   - [Code embedding](#code-embedding)
@@ -188,6 +189,16 @@ MQL queries are often short code snippets that either extract data or contain an
 - **Value**: Fixed values are often used in MQL for filtering, data processing, and assertions. For example, the `/ssl/i` value is a regular expression that will be matched against the name of each package. The suffix `i` on the regular expression indicates that it is case-insensitive, i.e. it will match both "SSL" and "ssl" or "sSl".
 - **Block**: The last element are the GraphQL-inspired block calls for accessing and extracting data. Everything up to the block is an array of packages that have been filtered. The block tells us to get us the name and version of each package in this list. You will learn more in the [blocks](#blocks) section below.
 
+### Comments
+
+MQL supports comments via `#`, because it works really well inside of YAML policies and querypacks.
+
+```coffee
+"hi" # I am a comment
+```
+
+We also support comments via `//` if you prefer.
+
 ### Types
 
 MQL comes with a set of core types:
@@ -269,7 +280,7 @@ Each resource has one or more _fields_, pieces of information you can request fr
 
 This example requests the platform of an asset. `asset` is the resource and `platform` is the field:
 
-```coffeescript
+```coffee
 asset.platform
 ```
 
@@ -277,7 +288,7 @@ The output would be `redhat`, `windows`, `k8s-pod`, or similar.
 
 Access related resources
 
-```coffeescript
+```coffee
 sshd.config.file
 => file("/etc/sshd/sshd_config")
 
@@ -295,7 +306,7 @@ _Blocks_ are a convenient way to group and extract information. They save you th
 
 Instead of making individual requests like this:
 
-```coffeescript
+```coffee
 sshd.config.file
 sshd.config.params
 sshd.config.ciphers
@@ -303,7 +314,7 @@ sshd.config.ciphers
 
 You can combine them into a block:
 
-```coffeescript
+```coffee
 sshd.config {
   file
   params
@@ -319,7 +330,7 @@ When writing a check in a policy that you'll execute in the Mondoo Console, you 
 
 **Incorrect:**
 
-```coffeescript
+```coffee
 command("ip6tables -L") {
   stdout.contains("Chain INPUT (policy DROP)")
   stdout.contains("Chain OUTPUT (policy DROP)")
@@ -328,7 +339,7 @@ command("ip6tables -L") {
 
 **Correct:**
 
-```coffeescript
+```coffee
 command("ip6tables -L") {
   inputPolicyDrop = stdout.contains("Chain INPUT (policy DROP)")
   chainPolicyDrop = stdout.contains("Chain OUTPUT (policy DROP)")
@@ -345,7 +356,7 @@ This requirement applies only to policies you plan to deploy in the Mondoo Conso
 
 You can nest blocks:
 
-```coffeescript
+```coffee
 sshd.config {
   file {
     path
@@ -358,7 +369,7 @@ sshd.config {
 
 A quick way to request all fields from a resource is by using `{*}`. For example, this requests all fields from the `services` resource:
 
-```coffeescript
+```coffee
 services { * }
 ```
 
@@ -368,7 +379,7 @@ This expands all _immediate_ fields of the given resource. It does not cascade t
 
 Some resources provide information in _lists_. For example, this requests a list of users, a list of packages, and a list of services:
 
-```coffeescript
+```coffee
 users
 packages
 services
@@ -376,7 +387,7 @@ services
 
 Using blocks, you can access specific field values from every item in a list. For example, this requests the `name`, `uid`, and `home` field values for each result in a list of users:
 
-```coffeescript
+```coffee
 users {
   name
   uid
@@ -388,7 +399,7 @@ users {
 
 These help to take action on resources and fields. Some of the most important functions exist on lists and include `where`, `all`, `none`, and more.
 
-```coffeescript
+```coffee
 users.where( uid >= 1000 ) {
   name
   uid
@@ -409,7 +420,7 @@ These are the control structures that organize the flow of control in MQL:
 
 In MQL a simple `if` statement looks like this:
 
-```coffeescript
+```coffee
 if( x > 0 ) {
   return y
 }
@@ -417,7 +428,7 @@ if( x > 0 ) {
 
 You can also chain statements with `else if` and `else`:
 
-```coffeescript
+```coffee
 if( x > 10 ) {
 return 1
 } else if( x > 0 ) {
@@ -431,7 +442,7 @@ return -1
 
 You can more easily chain multiple conditionals together using `switch`:
 
-```coffeescript
+```coffee
 switch( x ) {
 case _ > 10:
   return 1
@@ -459,13 +470,13 @@ MQL supports these conditional operators:
 
 Use `inRange` to check if an integer, float, or dict is in a numeric range. Follow this format:
 
-```coffeescript
+```coffee
 VALUE.inRange(MIN,  MAX)
 ```
 
 Examples:
 
-```coffeescript
+```coffee
 
 3.inRange(3, 5)
 
@@ -478,7 +489,7 @@ Although MQL is type-safe and compiled, it’s also forgiving. You can easily ex
 
 Here’s a simple example:
 
-```coffeescript
+```coffee
 a = 2
 b = "2"
 
@@ -487,7 +498,7 @@ a == 2 && b == 2
 
 Here’s a real-world example:
 
-```coffeescript
+```coffee
 sshd.config.params["Port"] == 22
 ```
 
@@ -495,7 +506,7 @@ sshd.config.params["Port"] == 22
 
 Many conditional operators allow soft comparisons:
 
-```coffeescript
+```coffee
 "2" == 2
 
 "2" == 2.0
@@ -507,7 +518,7 @@ Many conditional operators allow soft comparisons:
 
 This simplifies the usage of regular expressions as well:
 
-```coffeescript
+```coffee
 "Hello world" == /H.*o/
 ```
 
@@ -524,13 +535,13 @@ To learn about conditional operators with maps, see [Maps](#maps).
 
 Many fields take unnamed parameters by default:
 
-```coffeescript
+```coffee
 sshd.config( "/path/to/my/sshd" )
 ```
 
 You can also use named parameters to initialize resources.:
 
-```coffeescript
+```coffee
 parse.json(
   command('lsblk --json').stdout
 )
@@ -540,7 +551,7 @@ parse.json(
 
 You can call many functions with an embedded function. An example is `where`:
 
-```coffeescript
+```coffee
 users.where( uid >= 1000 )
 ```
 
@@ -548,13 +559,13 @@ The function takes an embedded function as an argument, which is executed agains
 
 You can combine these with global resources and variables:
 
-```coffeescript
+```coffee
 users.where( name == regex.email )
 ```
 
 Some functions support both embedded and static values:
 
-```coffeescript
+```coffee
 [1,2,3].contains( 3 )
 [1,2,3].contains( _ > 2 )
 ```
@@ -563,7 +574,7 @@ Some functions support both embedded and static values:
 
 You can set a named argument in a function. This is useful in situations where you can only use one expression (such as with `all` or `one`). It also makes the code easier to understand, especially when nesting across multiple objects, as in this example:
 
-```coffeescript
+```coffee
 users.all(user:
   groups.contains(group:
     user.uid == group.gid
@@ -584,7 +595,7 @@ Learn about these data types in MQL:
 
 MQL's basic data types are:
 
-```coffeescript
+```coffee
 s1 = "I am a string"
 s2 = 'I am also a string'
 re = /Reg.* Expression/
@@ -599,7 +610,7 @@ b  = true || false
 
 For regular expressions, you can access a lot of pre-built expressions in the `regex` resource. These are a few examples:
 
-```coffeescript
+```coffee
 "anya@forger.com" == regex.email
 
 "10.0.0.255" == regex.ipv4
@@ -614,7 +625,7 @@ To learn about all the pre-build expressions, read the [`regex`](/mql/resources/
 
 MQL’s built-in time functions make these assertions easy:
 
-```coffeescript
+```coffee
 time.now
 # 2022-10-13 14:42:35 -0700 PDT
 
@@ -635,13 +646,13 @@ parse.date("2022-10-12T14:42:35Z")
 
 Use `inRange` to check if a date and time is in a range. Follow this format:
 
-```coffeescript
+```coffee
 DATE.inRange(MIN, MAX)
 ```
 
 Example:
 
-```coffeescript
+```coffee
 time.inRange(yesterday, tomorrow)
 ```
 
@@ -649,7 +660,7 @@ time.inRange(yesterday, tomorrow)
 
 MQL also can parse durations:
 
-```coffeescript
+```coffee
 parse.duration("3days")
 
 parse.duration("1y")
@@ -676,7 +687,7 @@ The `empty` data type saves you the trouble of checking for different kinds of e
 
 For example, this query finds any type of empty value:
 
-```coffeescript
+```coffee
 users.list == empty
 ```
 
@@ -684,13 +695,13 @@ users.list == empty
 
 Use the `semver` type for semantic versioning. Create a semver using the `semver` keyword, which takes a string as an argument:
 
-```coffeescript
+```coffee
 semver('3.12.1')
 ```
 
 You can compare a semver with another semver or with a string:
 
-```coffeescript
+```coffee
 semver('1.2.3') < semver('2.3')
 
 semver('1.10') >= '1.2'
@@ -700,7 +711,7 @@ semver('1.10') >= '1.2'
 
 Many resources contain lists of entries, like this example:
 
-```coffeescript
+```coffee
 users {
   name
   uid
@@ -709,7 +720,7 @@ users {
 
 You can filter these lists using the `where` clause:
 
-```coffeescript
+```coffee
 users.where( uid >= 1000 ) {
   name
   uid
@@ -720,13 +731,13 @@ users.where( uid >= 1000 ) {
 
 To avoid unnecessary loops, MQL provides some keywords that make assertions on lists a lot simpler. For example:
 
-```coffeescript
+```coffee
 users.all( uid >= 0 )
 ```
 
 Failures to these print the affected elements:
 
-```coffeescript
+```coffee
 > users.all( uid > 0 )
 [failed] users.all()
   actual:   [
@@ -736,7 +747,7 @@ Failures to these print the affected elements:
 
 The available assertions for all lists are:
 
-```coffeescript
+```coffee
 users.all( name != "anya" )   <= make sure no user is called anya
 users.one( name == "anya" )   <= one user must exist, but no more than one
 users.none( name == "anya" )  <= no user exists with the name anya
@@ -745,19 +756,19 @@ users.contains( uid >= 1000 ) <= contains one or more users with uid >= 1000
 
 For lists of strings, you can use the `in` assertion, which is the inverse of `contains`:
 
-```coffeescript
+```coffee
 "anya".in(["abel","amos","anya"])
 ```
 
 An ideal use for `in` is to combine it with [properties](/cnspec/cnspec-policies/write/properties/). For example, if you define a property named `allowedCiphers`, you can assert that a configured cipher is in that list:
 
-```coffeescript
+```coffee
 sshd.config.ciphers.in( props.allowedCiphers )
 ```
 
 Another useful assertion for lists of strings is `containsAll`:
 
-```coffeescript
+```coffee
 ["abel","amos","anya"].containsAll(["abel","amos"])
 ```
 
@@ -765,7 +776,7 @@ Another useful assertion for lists of strings is `containsAll`:
 
 With block extraction, MQL provides arrays of maps:
 
-```coffeescript
+```coffee
 > users { name }
 [
   0: { name: "root" }
@@ -777,7 +788,7 @@ With block extraction, MQL provides arrays of maps:
 
 You can map these values into a simple list:
 
-```coffeescript
+```coffee
 > users.map(name)
 [
   0: "root",
@@ -789,7 +800,7 @@ You can map these values into a simple list:
 
 This makes many queries and assertions easier:
 
-```coffeescript
+```coffee
 users.map(name).contains( "anya" )
 ```
 
@@ -799,7 +810,7 @@ _Maps_ are key-value structures in which the key is a string and the value can b
 
 These are simple examples:
 
-```coffeescript
+```coffee
 m = {"a": 1, "b": 2}
 
 > m.b
@@ -823,7 +834,7 @@ This is a real-life example:
 
 The available assertions for maps are:
 
-```coffeescript
+```coffee
 {'a': 1, 'b': 2}.contains( key == 'b' )
 {'a': 1, 'b': 2}.all( value > 0 )
 {'a': 1, 'b': 2}.one( value != 1 )
@@ -836,7 +847,7 @@ _Dicts_ are similar to maps but have one key difference: Maps are statically typ
 
 That’s not the case when you process unknown data such as JSON. This presents a challenge, and the solution is `dict`:
 
-```coffeescript
+```coffee
 > parse.json("my.json")
 parse.json.params: {
   1: 1.000000
@@ -857,7 +868,7 @@ As you can see, there can be mixed values for all supported base types.
 
 All other operations work as expected:
 
-```coffeescript
+```coffee
 > parse.json("my.json").params.keys
 parse.json.params.keys: [
   0: "int-array"
@@ -903,11 +914,11 @@ Because of the varying data types, finding users in this structure is difficult 
 
 `recurse` eliminates that difficulty:
 
-```coffeescript
+```coffee
 jdata.recurse( name != empty )
 ```
 
-```coffeescript
+```coffee
 [
   0: {
     name: "bob"
@@ -921,11 +932,11 @@ jdata.recurse( name != empty )
 
 You can then map the user names:
 
-```coffeescript
+```coffee
 jdata.recurse( name != empty ).map(name)
 ```
 
-```coffeescript
+```coffee
 [
   0: "bob"
   1: "joy"
@@ -936,7 +947,7 @@ jdata.recurse( name != empty ).map(name)
 
 JSON, Terraform, and Kubernetes artifacts can include nested structures that make data a challenge to access. To make these easier to query, MQL supports simple accessors:
 
-```coffeescript
+```coffee
 tfblock {
   attributes.account_id.value
 }
@@ -946,7 +957,7 @@ tfblock {
 
 Helpers let you convert data to the type you need:
 
-```coffeescript
+```coffee
 > int(1.23)
 1
 
@@ -967,7 +978,7 @@ true
 
 For values that cannot be accessed, MQL provides errors:
 
-```coffeescript
+```coffee
 > file("/etc/shadow").content
 [failed] file.content
   error: open /etc/shadow: permission denied
@@ -977,7 +988,7 @@ For values that cannot be accessed, MQL provides errors:
 
 In general, `null` values are chained across their access:
 
-```coffeescript
+```coffee
 > sshd.config.params["NONE"].downcase == null
 [ok] value: _
 ```
@@ -988,7 +999,7 @@ MQL supports concurrent execution by default. All code that you write is execute
 
 For example:
 
-```coffeescript
+```coffee
 hosts = [
   tls("mondoo.com"),
   tls("mondoo.io"),
@@ -1006,17 +1017,6 @@ This call checks all TLS ciphers on all the hosts that were previously defined. 
 It doesn’t matter if the data is retrieved from an API, file, system command or other call; MQL always executes calls in parallel.
 
 You don't have to configure or think about concurrency or parallel value assignment in MQL; concurrency is automatic on all available streams.
-
-## Commenting
-
-MQL supports `#` commenting, which works best with YAML.
-
-```coffeescript
-# I am a comment
-sshd.config.params
-```
-
-MQL also supports `//`.
 
 ## Embedding
 

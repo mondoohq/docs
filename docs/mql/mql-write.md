@@ -13,12 +13,14 @@ The Mondoo Query Language (MQL) is a graph-based, lightweight, and high-performa
 This page describes the conventions for writing queries and checks in MQL. It contains these sections:
 
 - [Introduction](#introduction)
+  - [Installation](#installation)
 - [Basic structure](#basic-structure)
+  - [Anatomy of MQL](#anatomy-of-mql)
+  - [Types](#types)
+  - [Schemas](#schemas)
+  - [UTF-8 encoding](#utf-8-encoding)
   - [Resources and fields](#resources-and-fields)
-    - [Child resources](#child-resources)
   - [Blocks](#blocks)
-    - [Nest blocks](#nest-blocks)
-    - [Request all fields from a resource](#request-all-fields-from-a-resource)
   - [Lists](#lists)
   - [Basic functions](#basic-functions)
 - [Control structures](#control-structures)
@@ -139,6 +141,8 @@ In both cases we are connected to your local operating systems and running the c
 
 As you can see, you can run commands in `cnspec` using either `run` for immediate CLI output or via `shell` for an interactive shell.
 
+For the rest of this guide we will use MQL queries without referencing specific commands like `cnspec shell`. You can run these MQL queries in whichever way you prefer. For new users the shell is often easiest to learn because it provides interactive feedback.
+
 ### Alternative usage
 
 There are a few alternatives to using MQL: cnquery, cnspec policies and embedded MQL.
@@ -164,17 +168,84 @@ Finally there is embedding MQL into your own stack. At the time of writing we su
 
 ## Basic structure
 
-All MQL code is in UTF-8 to support any characters. MQL is a type-safe and compiled language that can also be executed on the fly.
+MQL is a type-safe, compiled language that is inspired by marrying GraphQL with a lightweight scripting.
 
-These are the basic tools of MQL:
-[Resources and fields](#resources-and-fields)
-[Blocks](#blocks)
-[Lists](#lists)
-[Basic functions](#basic-functions)
+- It has base types like string, number, boolean, array, map, and resource. Types are explaind in the [types](#types) section below.
+- It is compiled to make sure your code is going to work at runtime. Often you don't even realize it uses compiled code because it can execute MQL on the fly.
+- GraphQL inspired the way we extract data through blocks (as seen below)
+- We mixed lightweight scripting into it which allows us to transform data and write assertions
 
+### Anatomy of MQL
 
-- **MQL is a declarative language:** You specify what you need and MQL figures out how to get it for you.
-- **MQL is a compiled language:**
+MQL queries are often short code snippets that either extract data or contain an assertion. Here is an exammple:
+
+![MQL Anatomy](/img/mql/mql-structure.png)
+
+- **Resource**: An object containing information about a component in your infrastructure or code. In this example we use the `packages` resource to access the operating system's list of packages. See more [below](#resources-and-fields)
+- **Functions**: These are calls that accomplish some kind of task. In this example we use `where` to filter the list of packages.
+- **Function call**: Is attached to a function to specify arguments. Here we use a filter in the argument that will only pick packages whose name matches the regular expression.
+- **Fields**: Contain pieces of information about a resource. Here we use the `name` field of each package both in the `where` filter and in the block call at the end, along with the `version` field.
+- **Value**: Fixed values are often used in MQL for filtering, data processing, and assertions. For example, the `/ssl/i` value is a regular expression that will be matched against the name of each package. The suffix `i` on the regular expression indicates that it is case-insensitive, i.e. it will match both "SSL" and "ssl" or "sSl".
+- **Block**: The last element are the GraphQL-inspired block calls for accessing and extracting data. Everything up to the block is an array of packages that have been filtered. The block tells us to get us the name and version of each package in this list. You will learn more in the [blocks](#blocks) section below.
+
+### Types
+
+MQL comes with a set of core types:
+
+- **String**: A normal string like `"Hello!"
+- **Number**: Can represent an integer like `123` or a float like `1.23`
+- **Bool**: For `true` and `false`
+- **Regex**: For matching regular expressions like `/my.*re/i`
+- **Array**: A list of values like `[1,2,3]`
+- **Map**: A key-value pair like `{a: 23}`
+- **Time**: To reprersent time like `time.now` or `time.today`
+- **Version**: Often used for software and package versions like `version("1.2.3-rc1")`
+- **IP**: For IP addresses, supporting IPv4 `ip("1.2.3.4/24")` and IPv6 `ip("2001:db8::1")`
+
+There are also a few special keywords and types:
+
+- **Null**: Is reserved for the `null` value when something isn't set
+- **Empty**: Can be used to check if something is empty (e.g. empty arrays, empty strings, empty maps, or null values)
+
+Finally there is one special type we track for representing JSON data. Since we don't know the exact type information of JSON at compile-time we created a type to interact with data that is restricted to the primitive types that JSON supports. You will run into it when you access JSON files via e.g. `parse.json("my.json").params`.
+
+### Schemas
+
+The previous section covered builtin types. Most often, however, MQL is used to interact with IT systems in your environments. These are accessed via a structured data graph that exposes all the information.
+
+If you havea been following these examples, you have already used one such schema: The OS schema. When you `cnspec shell` without additional arguments you are using the `os` provider to connect to your local system.
+
+**Providers** expose all types of systems to your MQL queries. They populate your MQL namespace with keywords that allow you to interact with your system.
+
+For example, if you are connected to your local OS, you can use resources like:
+
+```
+users
+packages
+services
+```
+
+However, if you connect to a cloud environment like AWS, Azure, or Google Cloud you get different keywords like:
+
+```
+aw2.ec2.instances
+```
+
+To learn more about what providers are available and what resouruces they contain check out [our reference page](../../mql/resources/#resources). To learn more about managing providers, check out [this guide](../../cnspec/cnspec-adv-install/providers/).
+
+### UTF-8 encoding
+
+All MQL code is encoded in UTF-8 to support arbitrary characters from other languages, symbols, or even emojis:
+
+```coffee
+"UTF-8 in 日本 and 中文 👍".find(regex.emoji)
+```
+
+```
+find: [
+  0: "👍"
+]
+```
 
 ### Resources and fields
 

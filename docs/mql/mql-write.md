@@ -7,10 +7,12 @@ id: mql.write
 description: How to write queries, checks, and policies in MQL
 image: /img/featured_img/mondoo-feature.jpg
 ---
+
 The Mondoo Query Language (MQL) is a graph-based, lightweight, and high-performance language, purpose-built for querying infrastructure configuration data and constructing security/compliance policies. It enables intuitive exploration and validation of systems via a declarative, fast syntax.
 
 This page describes the conventions for writing queries and checks in MQL. It contains these sections:
 
+- [Introduction](#introduction)
 - [Basic structure](#basic-structure)
   - [Resources and fields](#resources-and-fields)
     - [Child resources](#child-resources)
@@ -46,18 +48,119 @@ This page describes the conventions for writing queries and checks in MQL. It co
 - [Embedding](#embedding)
   - [CLI](#cli)
   - [Code embedding](#code-embedding)
+- [Additional resources](#additional-resources)
 
-These are other helpful resources in the Mondoo docs:
+## Introduction
 
-| Page                                                     | Purpose                                                                                                     |
-| -------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| [Policy Authoring Guide](/cnspec/cnspec-policies/write/) | Describes how to write Mondoo security policies                                                             |
-| [MQL Resources](/mql/resources/)                         | Lists all of the information that MQL can retrieve from infrastructure assets and describes how to use them |
-| [Get Started with cnquery](/cnquery/)                    | Describes how to use the cnquery shell for ad hoc MQL queries                                               |
-| [Query Your Infrastructure](/cnquery/cnquery-query)      | Describes how to write queries to execute from the command line or to use in automation                     |
-| [cnquery CLI commands](/cnquery/cli/cnquery/)            | Details all commands in the cnquery command line interface                                                  |
-| [Create Checks in cnspec Shell](/cnspec/cnspec-scan/)    | Describes how to use the cnspec shell for ad hoc MQL assertions                                             |
-| [cnspec CLI commands](/cnspec/cli/cnspec/)               | Details all commands in the cnspec command line interface                                                   |
+MQL is a query and assertion language for asset inventories and policy as code.
+
+Example 1: You can use it to find all packages with "ssl" in their name on your system and get their name and version:
+
+```coffee
+packages.where( name == /ssl/i ) { name version }
+```
+
+```
+packages.where.list: [
+  0: {
+    version: "3.5.2-1"
+    name: "openssl"
+  }
+]
+```
+
+Example 2: You can use it to write assertions, i.e. checks on your system that have to be true. Here we write a check that makes sure "bob" isn't a user on the system (sorry Bob):
+
+```coffee
+users.none( name == "bob" )
+```
+
+```
+[ok] value: true
+```
+
+### Installation
+
+For most audiencdes we recommend to install [cnspec](https://github.com/mondoohq/cnspec) as outlined on the website. Cnspec is a utility for creating and executing MQL policies and offers a way to scale your security and policy efforts.
+
+Once you have it installed, you can either run the above check in your shell like this:
+
+```bash
+cnspec run -c "packages.where( name == /ssl/i ) { name version }"
+```
+
+```
+→ Connecting to your local system. To learn how to scan other platforms, use the --help flag.
+→ no Mondoo configuration file provided, using defaults
+packages.where.list: [
+  0: {
+    version: "3.5.2-1"
+    name: "openssl"
+  }
+]
+```
+
+Or you can open the interactive shell on your system and paste the check right in there:
+
+```
+cnspec shell
+```
+
+This will open:
+
+```bash
+→ Connecting to your local system. To learn how to scan other platforms, use the --help flag.
+→ no Mondoo configuration file provided, using defaults
+→ connected to Arch Linux
+  ___ _ __  ___ _ __   ___  ___
+ / __| '_ \/ __| '_ \ / _ \/ __|
+| (__| | | \__ \ |_) |  __/ (__
+ \___|_| |_|___/ .__/ \___|\___|
+   mondoo™     |_|
+cnspec>
+```
+
+Now you can just paste the check as listed above:
+
+```coffee
+packages.where( name == /ssl/i ) { name version }
+```
+
+```
+packages.where.list: [
+  0: {
+    version: "3.5.2-1"
+    name: "openssl"
+  }
+]
+```
+
+In both cases we are connected to your local operating systems and running the commands on it in cnspec.
+
+As you can see, you can run commands in `cnspec` using either `run` for immediate CLI output or via `shell` for an interactive shell.
+
+### Alternative usage
+
+There are a few alternatives to using MQL: cnquery, cnspec policies and embedded MQL.
+
+**cnquery**
+
+The easiest substitution to the above examples is [cnquery](https://github.com/mondoohq/cnquery). It contains the MQL language, provides connectivity through providers, and offers Querypacks. It is the foundation that cnspec is bulit on. As such, you can run the examples in this guide on cnquery as well. For example:
+
+```bash
+cnquery run -c "packages.where( name == /ssl/i ) { name version }"
+```
+
+**MQL policies**
+
+Next are MQL policies in cnspec. This are built around MQL queries and assertions (i.e. the core of this guide) but add a full policy structure around it. This means you get things like titles, authors, versions, remediation guidance, references and much more. You can find more in the [policy guide](http://localhost:3000/docs/cnspec/cnspec-policies/write/).
+
+We recommend you explore policies after you understand the MQL basics in this page.
+
+**Embedded MQL**
+
+Finally there is embedding MQL into your own stack. At the time of writing we support embedding the Go-based MQL runtime. It is found in [cnquery](https://github.com/mondoohq/cnquery) and can be used as a standalone solution. Please [ping us](https://github.com/orgs/mondoohq/discussions) in discussions if you are interested in embedding MQL and we will share the guide.
+
 
 ## Basic structure
 
@@ -68,6 +171,10 @@ These are the basic tools of MQL:
 [Blocks](#blocks)
 [Lists](#lists)
 [Basic functions](#basic-functions)
+
+
+- **MQL is a declarative language:** You specify what you need and MQL figures out how to get it for you.
+- **MQL is a compiled language:**
 
 ### Resources and fields
 
@@ -988,6 +1095,7 @@ cnspec> help k8s
 ```
 
 Resource-level help:
+
 ```
 cnspec> help aws.ec2.instance
 cnspec> help gcp.project
@@ -1001,21 +1109,25 @@ Each `help` command shows `fields`, `types`, and nested resources you can query.
 Investigating a live security incident
 
 **Which AWS EC2 instances have a public IP?**
+
 ```
 aws.ec2.instances.where(publicIp != empty) { instanceId region state tags publicIp }
 ```
 
 **Which GCP compute instances are running with external NAT?**
+
 ```
 gcp.compute.instances.where(networkInterfaces.where(_['accessConfigs'].where(_['name'] == "External NAT")))
 ```
 
 **Which Kubernetes pods are not in Running state?**
+
 ```
 k8s.pods.where(status.phase != "Running") { name namespace status.phase }
 ```
 
 **Which Linux services are running?**
+
 ```
 services.where(running == true) { name enabled type }
 ```
@@ -1052,51 +1164,65 @@ In the following sections we’ll explore each built-in in detail, with examples
 
 ## Quick Reference for MQL Built-ins
 
-| Built-in          | Input types                  | Output   | Typical use                                         |
-|-------------------|------------------------------|----------|-----------------------------------------------------|
-| `address`         | string (CIDR)                | string   | Return the network address of a CIDR                |
-| `all(cond)`       | arrays, iterables            | boolean  | Assert all elements match (universal requirement)   |
-| `any(cond)`       | arrays, iterables            | boolean  | Assert at least one element matches                 |
-| `camelcase`       | string                       | string   | Convert to camelCase                                |
-| `cidr`            | string (CIDR)                | string   | Return the CIDR block                               |
-| `contains(val)`   | arrays, strings              | boolean  | Check membership or substring presence              |
-| `containsAll([])` | arrays, strings              | boolean  | Assert all listed values are present                |
-| `containsNone([])`| arrays, strings              | boolean  | Assert none of the listed values are present        |
-| `containsOnly([])`| arrays of scalars            | boolean  | Assert only allowed values are present              |
-| `date`            | time, epoch                  | string   | Format or display a date                            |
-| `days`            | integer                      | duration | Convert number into days duration                   |
-| `downcase`        | string                       | string   | Convert to lowercase                                |
-| `duplicates`      | arrays                       | array    | Return duplicate elements                           |
-| `duration`        | integer, epoch difference    | duration | Represent elapsed time                              |
-| `epoch`           | time                         | int      | Return Unix epoch                                   |
-| `find(params)`    | provider resources           | array    | Discover resources in a scope                       |
-| `first`           | arrays                       | element  | Return the first element                            |
-| `flat`            | nested arrays                | array    | Flatten nested arrays                               |
-| `hours`           | integer                      | duration | Convert number into hours duration                  |
-| `in(list)`        | scalar, list                 | boolean  | Test membership in a list                           |
-| `inRange(val,min,max)` | numbers                 | boolean  | Check if value is within range                      |
-| `isUnspecified`   | string (IP or CIDR)          | boolean  | Test if value is unspecified (e.g., 0.0.0.0)        |
-| `keys`            | map/dict                     | array    | Return keys of a dictionary                         |
-| `last`            | arrays                       | element  | Return the last element                             |
-| `length`          | arrays, strings              | integer  | Count elements or characters                        |
-| `lines`           | string                       | array    | Split into lines                                    |
-| `map(expr)`       | arrays, iterables            | array    | Transform or project values                         |
-| `minutes`         | integer                      | duration | Convert number into minutes duration                |
-| `none(cond)`      | arrays, iterables            | boolean  | Assert no elements match                            |
-| `notIn(list)`     | scalar, list                 | boolean  | Test value is not in list                           |
-| `one(cond)`       | arrays, iterables            | boolean  | Assert exactly one element matches                  |
-| `prefix`          | string (CIDR)                | string   | Return network prefix                               |
-| `prefixLength`    | string (CIDR)                | integer  | Return prefix length                                |
-| `recurse`         | nested resources             | array    | Traverse nested structures                          |
-| `sample`          | arrays                       | element  | Return a random element                             |
-| `seconds`         | integer                      | duration | Convert number into seconds duration                |
-| `split`           | string                       | array    | Split by delimiter                                  |
-| `subnet`          | string (CIDR)                | string   | Return subnet portion                               |
-| `suffix`          | string                       | string   | Return suffix (network utility)                     |
-| `trim`            | string                       | string   | Remove leading/trailing whitespace                  |
-| `unique`          | arrays                       | array    | Return only unique elements                         |
-| `unix`            | epoch                        | time     | Convert epoch to time                               |
-| `upcase`          | string                       | string   | Convert to uppercase                                |
-| `values`          | map/dict                     | array    | Return values of a dictionary                       |
-| `version`         | string (semver)              | version  | Parse and compare version strings                   |
-| `where(cond)`     | arrays, iterables            | array    | Filter a collection by condition                    |
+| Built-in               | Input types               | Output   | Typical use                                       |
+| ---------------------- | ------------------------- | -------- | ------------------------------------------------- |
+| `address`              | string (CIDR)             | string   | Return the network address of a CIDR              |
+| `all(cond)`            | arrays, iterables         | boolean  | Assert all elements match (universal requirement) |
+| `any(cond)`            | arrays, iterables         | boolean  | Assert at least one element matches               |
+| `camelcase`            | string                    | string   | Convert to camelCase                              |
+| `cidr`                 | string (CIDR)             | string   | Return the CIDR block                             |
+| `contains(val)`        | arrays, strings           | boolean  | Check membership or substring presence            |
+| `containsAll([])`      | arrays, strings           | boolean  | Assert all listed values are present              |
+| `containsNone([])`     | arrays, strings           | boolean  | Assert none of the listed values are present      |
+| `containsOnly([])`     | arrays of scalars         | boolean  | Assert only allowed values are present            |
+| `date`                 | time, epoch               | string   | Format or display a date                          |
+| `days`                 | integer                   | duration | Convert number into days duration                 |
+| `downcase`             | string                    | string   | Convert to lowercase                              |
+| `duplicates`           | arrays                    | array    | Return duplicate elements                         |
+| `duration`             | integer, epoch difference | duration | Represent elapsed time                            |
+| `epoch`                | time                      | int      | Return Unix epoch                                 |
+| `find(params)`         | provider resources        | array    | Discover resources in a scope                     |
+| `first`                | arrays                    | element  | Return the first element                          |
+| `flat`                 | nested arrays             | array    | Flatten nested arrays                             |
+| `hours`                | integer                   | duration | Convert number into hours duration                |
+| `in(list)`             | scalar, list              | boolean  | Test membership in a list                         |
+| `inRange(val,min,max)` | numbers                   | boolean  | Check if value is within range                    |
+| `isUnspecified`        | string (IP or CIDR)       | boolean  | Test if value is unspecified (e.g., 0.0.0.0)      |
+| `keys`                 | map/dict                  | array    | Return keys of a dictionary                       |
+| `last`                 | arrays                    | element  | Return the last element                           |
+| `length`               | arrays, strings           | integer  | Count elements or characters                      |
+| `lines`                | string                    | array    | Split into lines                                  |
+| `map(expr)`            | arrays, iterables         | array    | Transform or project values                       |
+| `minutes`              | integer                   | duration | Convert number into minutes duration              |
+| `none(cond)`           | arrays, iterables         | boolean  | Assert no elements match                          |
+| `notIn(list)`          | scalar, list              | boolean  | Test value is not in list                         |
+| `one(cond)`            | arrays, iterables         | boolean  | Assert exactly one element matches                |
+| `prefix`               | string (CIDR)             | string   | Return network prefix                             |
+| `prefixLength`         | string (CIDR)             | integer  | Return prefix length                              |
+| `recurse`              | nested resources          | array    | Traverse nested structures                        |
+| `sample`               | arrays                    | element  | Return a random element                           |
+| `seconds`              | integer                   | duration | Convert number into seconds duration              |
+| `split`                | string                    | array    | Split by delimiter                                |
+| `subnet`               | string (CIDR)             | string   | Return subnet portion                             |
+| `suffix`               | string                    | string   | Return suffix (network utility)                   |
+| `trim`                 | string                    | string   | Remove leading/trailing whitespace                |
+| `unique`               | arrays                    | array    | Return only unique elements                       |
+| `unix`                 | epoch                     | time     | Convert epoch to time                             |
+| `upcase`               | string                    | string   | Convert to uppercase                              |
+| `values`               | map/dict                  | array    | Return values of a dictionary                     |
+| `version`              | string (semver)           | version  | Parse and compare version strings                 |
+| `where(cond)`          | arrays, iterables         | array    | Filter a collection by condition                  |
+
+## Additional resources
+
+These are other helpful resources in the Mondoo docs:
+
+| Page                                                     | Purpose                                                                                                     |
+| -------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| [Policy Authoring Guide](/cnspec/cnspec-policies/write/) | Describes how to write Mondoo security policies                                                             |
+| [MQL Resources](/mql/resources/)                         | Lists all of the information that MQL can retrieve from infrastructure assets and describes how to use them |
+| [Get Started with cnquery](/cnquery/)                    | Describes how to use the cnquery shell for ad hoc MQL queries                                               |
+| [Query Your Infrastructure](/cnquery/cnquery-query)      | Describes how to write queries to execute from the command line or to use in automation                     |
+| [cnquery CLI commands](/cnquery/cli/cnquery/)            | Details all commands in the cnquery command line interface                                                  |
+| [Create Checks in cnspec Shell](/cnspec/cnspec-scan/)    | Describes how to use the cnspec shell for ad hoc MQL assertions                                             |
+| [cnspec CLI commands](/cnspec/cli/cnspec/)               | Details all commands in the cnspec command line interface                                                   |

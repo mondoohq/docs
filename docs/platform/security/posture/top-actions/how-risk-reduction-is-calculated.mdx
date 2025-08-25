@@ -15,9 +15,9 @@ We then sum these individual improvement gaps together to get the total potentia
 
 **Example:** `CVE-2023-1234` affects three assets:
 
-* Asset A (Risk Score 10) -> Improvement = `100 - 10 = 90`
-* Asset B (Risk Score 20) -> Improvement = `100 - 20 = 80`
-* Asset C (Risk Score 10) -> Improvement = `100 - 10 = 90`
+- Asset A (Risk Score 10) -> Improvement = `100 - 10 = 90`
+- Asset B (Risk Score 20) -> Improvement = `100 - 20 = 80`
+- Asset C (Risk Score 10) -> Improvement = `100 - 10 = 90`
 
 The **Total Potential Improvement** for fixing `CVE-2023-1234` is `90 + 80 + 90 = 260` points.
 
@@ -31,6 +31,6 @@ The final formula is:
 
 **Continuing the Example:** If your space has **5,000 total findings**:
 
-* **Risk Reduction:** `260 / 5000 = 0.052`
+- **Risk Reduction:** `260 / 5000 = 0.052`
 
 This means fixing `CVE-2023-1234` everywhere will improve your overall Space Risk Score by **0.052 points**. This method allows Mondoo to sort all findings by their true impact and present the top 30 to you as your **Top Actions**.

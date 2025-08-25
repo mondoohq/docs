@@ -17,7 +17,6 @@ Before you integrate Microsoft Azure with Mondoo, be sure you have:
 - A Mondoo account with Editor or Owner permissions for the space in which you want to add the integration.
 
 - An [Azure account](https://azure.microsoft.com/free/?WT.mc_id=A261C142F) with an active subscription and permission to manage applications in Microsoft Entra ID (formerly Active Directory). Any of these [Entra built-in roles](https://learn.microsoft.com/en-us/azure/active-directory/roles/permissions-reference) include the required permissions:
-
   - [Global Administrator](https://learn.microsoft.com/en-us/azure/active-directory/roles/permissions-reference#global-administrator)
 
   - [Application administrator](https://learn.microsoft.com/en-us/azure/active-directory/roles/permissions-reference#application-administrator)
@@ -27,7 +26,6 @@ Before you integrate Microsoft Azure with Mondoo, be sure you have:
   In the Azure portal you can see what roles your user account has: Go to **Microsoft Entra ID > Users > (your user account) > Assigned roles**.
 
 - Command-line access to Azure using either:
-
   - [Azure Cloud Shell](https://learn.microsoft.com/en-us/azure/cloud-shell/quickstart?tabs=azurecli)
 
   - <details>
@@ -337,7 +335,6 @@ To assign this role across all subscriptions under a management group, follow th
 After you've created, granted permissions to, and tested a new app registration, you can create a Mondoo Azure integration. You need some values from the app registration you created in the instructions above.
 
 1. Access the Integrations > Add > Azure page in one of two ways:
-
    - New space setup: After creating a new Mondoo account or creating a new space, the initial setup guide welcomes you. Select **BROWSE INTEGRATIONS** and then select **Azure**.
 
      ![Welcome to Mondoo Page](/img/platform/start/welcome_to_mondoo.png)
@@ -353,7 +350,6 @@ After you've created, granted permissions to, and tested a new app registration,
 4. In the **Enter the directory (tenant) ID** box, enter the `tenantId` value you copied in Step A.
 
 5. Specify the subscriptions for Mondoo to continuously scan. You copied at least one subscription ID in step A.
-
    - To continuously scan all subscriptions in the tenant, leave the **Scan all subscriptions connected to the directory (tenant) ID** toggle enabled.
 
    - To choose the subscriptions to scan, disable the **Scan all subscriptions connected to the directory (tenant) ID** toggle, select **Allow list** and enter the subscription ID to scan.

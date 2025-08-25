@@ -11,13 +11,13 @@ Now that you've [explored the very basic elements of a policy and a policy bundl
 
 Each scanned target receives a risk score that summarizes how well it compares to the checks in the policy. Risk scores are based on numeric scores between 0 and 100. These are the ranges for Mondoo risk scores:
 
-| From… | To…  | Risk score |                  Description                   |
-|:-----:|:----:|:----------:|:----------------------------------------------:|
-|   90   | 100  |  CRITICAL  |   Presents extreme risk to your organization   |
-|   70   |  89  |    HIGH    | Presents significant risk to your organization |
-|   40   |  69  |   MEDIUM   |  Presents moderate risk to your organization   |
-|    1   |  39  |    LOW     |   Presents little risk to your organization    |
-|    0   |   0  |    NONE    |     Presents no risk to your organization      |
+| From… | To… | Risk score |                  Description                   |
+| :---: | :-: | :--------: | :--------------------------------------------: |
+|  90   | 100 |  CRITICAL  |   Presents extreme risk to your organization   |
+|  70   | 89  |    HIGH    | Presents significant risk to your organization |
+|  40   | 69  |   MEDIUM   |  Presents moderate risk to your organization   |
+|   1   | 39  |    LOW     |   Presents little risk to your organization    |
+|   0   |  0  |    NONE    |     Presents no risk to your organization      |
 
 The score is based on the number of checks that return a `true` value (pass) compared to how many return a `false` value (fail).
 
@@ -82,12 +82,12 @@ Our simple example query above contains:
 
 These are the possible asset scores on this policy:
 
-| Port check (impact 90) | Cipher check (impact 80) | Overall score                         |
-| :--------------------- | :----------------------- | :------------------------------------ |
-| Pass (0)               | Pass (0)                  | (0 + 0) / 2 = **0** or **None**        |
-| Pass (0)               | Fail (80)                 | (0 + 80) / 2 = **40** or **Medium**    |
-| Fail (90)              | Pass (0)                  | (90 + 0) / 2 = **45** or **Medium**    |
-| Fail (90)              | Fail (80)                 | (90 + 80) / 2 = **85** or **High**     |
+| Port check (impact 90) | Cipher check (impact 80) | Overall score                       |
+| :--------------------- | :----------------------- | :---------------------------------- |
+| Pass (0)               | Pass (0)                 | (0 + 0) / 2 = **0** or **None**     |
+| Pass (0)               | Fail (80)                | (0 + 80) / 2 = **40** or **Medium** |
+| Fail (90)              | Pass (0)                 | (90 + 0) / 2 = **45** or **Medium** |
+| Fail (90)              | Fail (80)                | (90 + 80) / 2 = **85** or **High**  |
 
 :::note
 

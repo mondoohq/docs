@@ -17,13 +17,13 @@ The final formula is:
 
 Let's break down the components:
 
-* **Finding Risk Score:** Each individual finding has its own risk score from 0-100. A score of `100` is perfect (e.g., a passing check), while a score closer to `0` indicates a more severe risk. (Learn more in [How Mondoo Prioritizes Security Findings](../findings.mdx)).
+- **Finding Risk Score:** Each individual finding has its own risk score from 0-100. A score of `100` is perfect (e.g., a passing check), while a score closer to `0` indicates a more severe risk. (Learn more in [How Mondoo Prioritizes Security Findings](../findings.mdx)).
 
-* **Sum of All Finding Risk Scores:** We iterate through every asset in the space and sum the individual `Risk Score` of every finding.
+- **Sum of All Finding Risk Scores:** We iterate through every asset in the space and sum the individual `Risk Score` of every finding.
 
-* **Total Number of Findings:** This is a simple count of all findings across all assets within the scope of the calculation.
+- **Total Number of Findings:** This is a simple count of all findings across all assets within the scope of the calculation.
 
-* **The 100-Minus Inversion:** The average of all finding scores results in a "health score" where 100 is good. We subtract this average from 100 to create a final "risk score," where a higher number intuitively means higher risk.
+- **The 100-Minus Inversion:** The average of all finding scores results in a "health score" where 100 is good. We subtract this average from 100 to create a final "risk score," where a higher number intuitively means higher risk.
 
 ### How Exceptions Are Handled
 
@@ -33,9 +33,9 @@ The calculation intelligently handles exceptions. When a finding is marked as `R
 
 Imagine a space with 2 assets and a total of 3 findings:
 
-* Finding A (Critical CVE): `Risk Score = 5`
-* Finding B (High Check Failure): `Risk Score = 20`
-* Finding C (Medium CVE, Risk Accepted): Treated as `Risk Score = 100`
+- Finding A (Critical CVE): `Risk Score = 5`
+- Finding B (High Check Failure): `Risk Score = 20`
+- Finding C (Medium CVE, Risk Accepted): Treated as `Risk Score = 100`
 
 The calculation would be:
 

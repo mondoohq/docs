@@ -84,7 +84,7 @@ users.none( name == "bob" )
 
 ### Installation
 
-For most audiencdes we recommend to install [cnspec](https://github.com/mondoohq/cnspec) as outlined on the website. Cnspec is a utility for creating and executing MQL policies and offers a way to scale your security and policy efforts.
+For most users, we recommend to install [cnspec](https://github.com/mondoohq/cnspec) as outlined on the website. Cnspec is a utility for creating and executing MQL policies and offers a way to scale your security and policy efforts.
 
 Once you have cnspec installed, you can either run the above check in your shell like this:
 
@@ -150,7 +150,7 @@ There are a few alternatives to using MQL: cnquery, cnspec policies and embedded
 
 **cnquery**
 
-The easiest substitution to the above examples is [cnquery](https://github.com/mondoohq/cnquery). It contains the MQL language, provides connectivity through providers, and offers Querypacks. It is the foundation that cnspec is bulit on. As such, you can run the examples in this guide on cnquery as well. For example:
+The easiest substitution to the above examples is [cnquery](https://github.com/mondoohq/cnquery). It contains the MQL language, provides connectivity through providers, and offers Querypacks. It is the foundation that cnspec is built on. As such, you can run the examples in this guide on cnquery as well. For example:
 
 ```bash
 cnquery run -c "packages.where( name == /ssl/i ) { name version }"
@@ -171,14 +171,14 @@ Finally there is embedding MQL into your own stack. At the time of writing we su
 
 MQL is a type-safe, compiled language that is inspired by marrying GraphQL with lightweight scripting.
 
-- It has base types like string, number, boolean, array, map, and resource. Types are explaind in the [types](#types) section below.
+- It has base types like string, number, boolean, array, map, and resource. Types are explained in the [types](#types) section below.
 - It is compiled to make sure your code is going to work at runtime. Often you don't even realize it uses compiled code because it can execute MQL on the fly.
 - GraphQL inspired the way we extract data through blocks (as seen below)
 - We mixed lightweight scripting into it which allows us to transform data and write assertions
 
 ### Anatomy of MQL
 
-MQL queries are often short code snippets that either extract data or contain an assertion. Here is an exammple:
+MQL queries are often short code snippets that either extract data or contain an assertion. Here is an example:
 
 ![MQL Anatomy](/img/mql/mql-structure.png)
 
@@ -209,7 +209,7 @@ MQL comes with a set of core types:
 - **Regex**: For matching regular expressions like `/my.*re/i`
 - **Array**: A list of values like `[1,2,3]`
 - **Map**: A key-value pair like `{a: 23}`
-- **Time**: To reprersent time like `time.now` or `time.today`
+- **Time**: To represent time like `time.now` or `time.today`
 - **Version**: Often used for software and package versions like `version("1.2.3-rc1")`
 - **IP**: For IP addresses, supporting IPv4 `ip("1.2.3.4/24")` and IPv6 `ip("2001:db8::1")`
 
@@ -224,7 +224,7 @@ Finally there is one special type we track for representing JSON data. Since we 
 
 The previous section covered builtin types. Most often, however, MQL is used to interact with IT systems in your environments. These are accessed via a structured data graph that exposes all the information.
 
-If you havea been following these examples, you have already used one such schema: The OS schema. When you `cnspec shell` without additional arguments you are using the `os` provider to connect to your local system.
+If you have a been following these examples, you have already used one such schema: The OS schema. When you `cnspec shell` without additional arguments you are using the `os` provider to connect to your local system.
 
 **Providers** expose all types of systems to your MQL queries. They populate your MQL namespace with keywords that allow you to interact with your system.
 
@@ -242,7 +242,7 @@ However, if you connect to a cloud environment like AWS, Azure, or Google Cloud 
 aw2.ec2.instances
 ```
 
-To learn more about what providers are available and what resouruces they contain check out [our reference page](../../mql/resources/#resources). To learn more about managing providers, check out [this guide](../../cnspec/cnspec-adv-install/providers/).
+To learn more about what providers are available and what resources they contain check out [our reference page](../../mql/resources/#resources). To learn more about managing providers, check out [this guide](../../cnspec/cnspec-adv-install/providers/).
 
 ### UTF-8 encoding
 

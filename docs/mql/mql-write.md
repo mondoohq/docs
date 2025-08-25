@@ -86,7 +86,7 @@ users.none( name == "bob" )
 
 For most audiencdes we recommend to install [cnspec](https://github.com/mondoohq/cnspec) as outlined on the website. Cnspec is a utility for creating and executing MQL policies and offers a way to scale your security and policy efforts.
 
-Once you have it installed, you can either run the above check in your shell like this:
+Once you have cnspec installed, you can either run the above check in your shell like this:
 
 ```bash
 cnspec run -c "packages.where( name == /ssl/i ) { name version }"

@@ -17,9 +17,9 @@ MQL is a graph-based query language built for exploring and validating infrastru
 
 Dive into creating queries, checks, and policies.
 
-### [Builtin MQL reference](/mql/builtin)
+### [MQL built-in functions reference](/mql/Functions/overview)
 
-A complete reference of builtin MQL functions.
+A complete reference of built-in MQL functions.
 
 ### [MQL Reference](/mql/resources/)
 

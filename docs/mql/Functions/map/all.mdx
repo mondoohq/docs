@@ -7,6 +7,7 @@ Assert that all entries in the map satisfy a condition. Empty maps return `true`
 ## Examples
 
 All `net.*` kernel parameters are non-zero:
+
 ```coffee
 kernel.parameters.where(key == /^net\./).all(value != 0)
 ```

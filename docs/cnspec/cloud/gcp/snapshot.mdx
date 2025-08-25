@@ -16,7 +16,6 @@ To snapshot scan a GCP instance, you create a VM instance and scan from that VM.
 To create and scan a snapshot of a GCP instance, you must create a service account for the VM instance from which you execute the snapshot scan. The service account you create needs specific permissions, which you provide using a custom role.
 
 1. In the [Google Cloud console](https://console.cloud.google.com/iam-admin/roles), create a new role named **cnspec-snapshot-scanner** with these permissions:
-
    - compute.disks.create
    - compute.disks.createSnapshot
    - compute.disks.delete
@@ -36,7 +35,6 @@ To create and scan a snapshot of a GCP instance, you must create a service accou
    To learn how, read [Grant an IAM role by using the Google Cloud console](https://cloud.google.com/iam/docs/grant-role-console) in the GCP documentation.
 
 2. In the [Google Cloud console](https://console.cloud.google.com/projectselector2/iam-admin/serviceaccounts), create a new service account and assign it these roles:
-
    - cnspec-snapshot-scanner
    - Service Account User
 

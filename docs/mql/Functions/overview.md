@@ -6,7 +6,7 @@ description: Learn how to use MQL built-in functions
 image: /img/featured_img/mondoo-feature.jpg
 ---
 
-# Overview
+## Overview
 
 Built-ins are the core language features that let you filter, transform, and make assertions across collections of data. They are the difference between just retrieving raw data and turning that data into meaningful answers.
 
@@ -19,14 +19,14 @@ Think of built-ins as the verbs of MQL:
 
 In the following sections we’ll explore each built-in in detail, with examples you can run in the shell. You’ll see both policy-style checks and inventory-style queries so you can use them in compliance scenarios as well as live investigation.
 
-# MQL Built-in Functions
+## MQL Built-in Functions
 
 This page gives an overview of all built-in functions available in MQL, grouped by type.
 Each function links to a dedicated documentation page with examples.
 
 ---
 
-## Array Functions
+### Array Functions
 
 | Function                                 | Summary                                                |
 | ---------------------------------------- | ------------------------------------------------------ |
@@ -50,7 +50,7 @@ Each function links to a dedicated documentation page with examples.
 
 ---
 
-## Map Functions
+### Map Functions
 
 | Function                       | Summary                                         |
 | ------------------------------ | ----------------------------------------------- |
@@ -67,7 +67,7 @@ Each function links to a dedicated documentation page with examples.
 
 ---
 
-## String Functions
+### String Functions
 
 | Function                            | Summary                                               |
 | ----------------------------------- | ----------------------------------------------------- |
@@ -86,7 +86,7 @@ Each function links to a dedicated documentation page with examples.
 
 ---
 
-## Number Functions
+### Number Functions
 
 | Function                        | Summary                             |
 | ------------------------------- | ----------------------------------- |
@@ -105,7 +105,7 @@ Each function links to a dedicated documentation page with examples.
 
 ---
 
-## IP / Network Functions
+### IP / Network Functions
 
 | Function                                | Summary                                    |
 | --------------------------------------- | ------------------------------------------ |

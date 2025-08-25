@@ -7,6 +7,7 @@ Check that all elements in an array are from an allowlist. Returns `true` if no 
 ## Examples
 
 Ensure only `root` and `shadow` groups own `/etc/gshadow`:
+
 ```coffee
 ["/etc/gshadow"].where(file(_).exists) {
   file(_) {

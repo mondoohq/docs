@@ -5,6 +5,12 @@ const { themes } = require("prism-react-renderer");
 const legacyRedirects = [
   // NOTE: Path / is equivalent to https://mondoo.com/docs/
   //
+
+  // From Aug 2025 align the ticketing paths
+  {
+    from: "/platform/ticketing/setup",
+    to: "/platform/ticketing/setup-jira/",
+  },
   // From March 2025 created non-human access subsection under manage access
   {
     from: "/platform/maintain/access/api-tokens",

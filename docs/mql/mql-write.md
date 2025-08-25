@@ -17,7 +17,7 @@ This page describes the conventions for writing queries and checks in MQL. It co
   - [Alternative usage](#alternative-usage)
 - [Basic structure](#basic-structure)
   - [Anatomy of MQL](#anatomy-of-mql)
-  - [Commenting](#commenting)
+  - [Comments](#comments)
   - [Types](#types)
   - [Schemas](#schemas)
   - [UTF-8 encoding](#utf-8-encoding)

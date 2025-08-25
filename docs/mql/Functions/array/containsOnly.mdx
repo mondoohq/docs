@@ -1,0 +1,16 @@
+# `containsOnly`
+
+Check that all elements in an array are from an allowlist. Returns `true` if no other values appear.
+
+---
+
+## Examples
+
+Ensure only `root` and `shadow` groups own `/etc/gshadow`:
+```coffee
+["/etc/gshadow"].where(file(_).exists) {
+  file(_) {
+    group.name.lines.containsOnly(["root","shadow"])
+  }
+}
+```

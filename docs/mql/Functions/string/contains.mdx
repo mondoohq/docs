@@ -1,0 +1,12 @@
+# `contains`
+
+Check if a string contains a substring or matches a regex. Returns `true` if found.
+
+---
+
+## Examples
+
+Check if `/etc/passwd` content contains `root`:
+```coffee
+file("/etc/passwd").content.contains("root")
+```

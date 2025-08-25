@@ -1,0 +1,17 @@
+# `isUnspecified`
+
+Return `true` if the IP is unspecified (`0.0.0.0` for IPv4 or `::` for IPv6).
+
+---
+
+## Examples
+
+Unspecified IPv4:
+```coffee
+"0.0.0.0/0".isUnspecified
+```
+
+Unspecified IPv6:
+```coffee
+"::/0".isUnspecified
+```

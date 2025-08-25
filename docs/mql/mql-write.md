@@ -169,7 +169,7 @@ Finally there is embedding MQL into your own stack. At the time of writing we su
 
 ## Basic structure
 
-MQL is a type-safe, compiled language that is inspired by marrying GraphQL with a lightweight scripting.
+MQL is a type-safe, compiled language that is inspired by marrying GraphQL with lightweight scripting.
 
 - It has base types like string, number, boolean, array, map, and resource. Types are explaind in the [types](#types) section below.
 - It is compiled to make sure your code is going to work at runtime. Often you don't even realize it uses compiled code because it can execute MQL on the fly.

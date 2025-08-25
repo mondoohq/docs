@@ -166,7 +166,6 @@ We recommend you explore policies after you understand the MQL basics in this pa
 
 Finally there is embedding MQL into your own stack. At the time of writing we support embedding the Go-based MQL runtime. It is found in [cnquery](https://github.com/mondoohq/cnquery) and can be used as a standalone solution. Please [ping us](https://github.com/orgs/mondoohq/discussions) in discussions if you are interested in embedding MQL and we will share the guide.
 
-
 ## Basic structure
 
 MQL is a type-safe, compiled language that is inspired by marrying GraphQL with lightweight scripting.

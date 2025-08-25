@@ -1,0 +1,12 @@
+# `where`
+
+Filter map entries by a boolean condition. Returns a new map with only the matching key/value pairs.
+
+---
+
+## Examples
+
+Kernel parameters with names starting with `net.`:
+```coffee
+kernel.parameters.where(key == /^net\./)
+```

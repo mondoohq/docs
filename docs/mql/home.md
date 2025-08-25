@@ -13,13 +13,13 @@ hide_title: true
 
 MQL is a graph-based query language built for exploring and validating infrastructure configuration data and building security policies.
 
-### [What is MQL?](/mql/resources/)
-
-Learn the MQL basics.
-
-### [Write Effective MQL](/mql/mql.write)
+### [A guide to Effective MQL](/mql/mql.write)
 
 Dive into creating queries, checks, and policies.
+
+### [MQL built-in functions reference](/mql/Functions/overview)
+
+A complete reference of built-in MQL functions.
 
 ### [MQL Reference](/mql/resources/)
 

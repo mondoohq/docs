@@ -8,16 +8,21 @@ description: How to write queries, checks, and policies in MQL
 image: /img/featured_img/mondoo-feature.jpg
 ---
 
-We built MQL for searching, filtering, and testing infrastructure configuration data. Easy, lightweight, and fast, MQL’s data extraction resembles GraphQL, while its intuitive scripting approach is similar to JavaScript.
+The Mondoo Query Language (MQL) is a graph-based, lightweight, and high-performance language, purpose-built for querying infrastructure configuration data and constructing security/compliance policies. It enables intuitive exploration and validation of systems via a declarative, fast syntax.
 
 This page describes the conventions for writing queries and checks in MQL. It contains these sections:
 
+- [Introduction](#introduction)
+  - [Installation](#installation)
+  - [Alternative usage](#alternative-usage)
 - [Basic structure](#basic-structure)
+  - [Anatomy of MQL](#anatomy-of-mql)
+  - [Comments](#comments)
+  - [Types](#types)
+  - [Schemas](#schemas)
+  - [UTF-8 encoding](#utf-8-encoding)
   - [Resources and fields](#resources-and-fields)
-    - [Child resources](#child-resources)
   - [Blocks](#blocks)
-    - [Nest blocks](#nest-blocks)
-    - [Request all fields from a resource](#request-all-fields-from-a-resource)
   - [Lists](#lists)
   - [Basic functions](#basic-functions)
 - [Control structures](#control-structures)
@@ -43,32 +48,214 @@ This page describes the conventions for writing queries and checks in MQL. It co
 - [Error handling](#error-handling)
   - [Null chaining](#null-chaining)
 - [Concurrency](#concurrency)
-- [Commenting](#commenting)
 - [Embedding](#embedding)
   - [CLI](#cli)
   - [Code embedding](#code-embedding)
+- [Additional resources](#additional-resources)
 
-These are other helpful resources in the Mondoo docs:
+## Introduction
 
-| Page                                                     | Purpose                                                                                                     |
-| -------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| [Policy Authoring Guide](/cnspec/cnspec-policies/write/) | Describes how to write Mondoo security policies                                                             |
-| [MQL Resources](/mql/resources/)                         | Lists all of the information that MQL can retrieve from infrastructure assets and describes how to use them |
-| [Get Started with cnquery](/cnquery/)                    | Describes how to use the cnquery shell for ad hoc MQL queries                                               |
-| [Query Your Infrastructure](/cnquery/cnquery-query)      | Describes how to write queries to execute from the command line or to use in automation                     |
-| [cnquery CLI commands](/cnquery/cli/cnquery/)            | Details all commands in the cnquery command line interface                                                  |
-| [Create Checks in cnspec Shell](/cnspec/cnspec-scan/)    | Describes how to use the cnspec shell for ad hoc MQL assertions                                             |
-| [cnspec CLI commands](/cnspec/cli/cnspec/)               | Details all commands in the cnspec command line interface                                                   |
+MQL is a query and assertion language for asset inventories and policy as code.
+
+Example 1: You can use it to find all packages with "ssl" in their name on your system and get their name and version:
+
+```coffee
+packages.where( name == /ssl/i ) { name version }
+```
+
+```
+packages.where.list: [
+  0: {
+    version: "3.5.2-1"
+    name: "openssl"
+  }
+]
+```
+
+Example 2: You can use it to write assertions, i.e. checks on your system that have to be true. Here we write a check that makes sure "bob" isn't a user on the system (sorry Bob):
+
+```coffee
+users.none( name == "bob" )
+```
+
+```
+[ok] value: true
+```
+
+### Installation
+
+For most users, we recommend to install [cnspec](https://github.com/mondoohq/cnspec) as outlined on the website. Cnspec is a utility for creating and executing MQL policies and offers a way to scale your security and policy efforts.
+
+Once you have cnspec installed, you can either run the above check in your shell like this:
+
+```bash
+cnspec run -c "packages.where( name == /ssl/i ) { name version }"
+```
+
+```
+→ Connecting to your local system. To learn how to scan other platforms, use the --help flag.
+→ no Mondoo configuration file provided, using defaults
+packages.where.list: [
+  0: {
+    version: "3.5.2-1"
+    name: "openssl"
+  }
+]
+```
+
+Or you can open the interactive shell on your system and paste the check right in there:
+
+```
+cnspec shell
+```
+
+This will open:
+
+```bash
+→ Connecting to your local system. To learn how to scan other platforms, use the --help flag.
+→ no Mondoo configuration file provided, using defaults
+→ connected to Arch Linux
+  ___ _ __  ___ _ __   ___  ___
+ / __| '_ \/ __| '_ \ / _ \/ __|
+| (__| | | \__ \ |_) |  __/ (__
+ \___|_| |_|___/ .__/ \___|\___|
+   mondoo™     |_|
+cnspec>
+```
+
+Now you can just paste the check as listed above:
+
+```coffee
+packages.where( name == /ssl/i ) { name version }
+```
+
+```
+packages.where.list: [
+  0: {
+    version: "3.5.2-1"
+    name: "openssl"
+  }
+]
+```
+
+In both cases we are connected to your local operating systems and running the commands on it in cnspec.
+
+As you can see, you can run commands in `cnspec` using either `run` for immediate CLI output or via `shell` for an interactive shell.
+
+For the rest of this guide we will use MQL queries without referencing specific commands like `cnspec shell`. You can run these MQL queries in whichever way you prefer. For new users the shell is often easiest to learn because it provides interactive feedback.
+
+### Alternative usage
+
+There are a few alternatives to using MQL: cnquery, cnspec policies and embedded MQL.
+
+**cnquery**
+
+The easiest substitution to the above examples is [cnquery](https://github.com/mondoohq/cnquery). It contains the MQL language, provides connectivity through providers, and offers Querypacks. It is the foundation that cnspec is built on. As such, you can run the examples in this guide on cnquery as well. For example:
+
+```bash
+cnquery run -c "packages.where( name == /ssl/i ) { name version }"
+```
+
+**MQL policies**
+
+Next are MQL policies in cnspec. This are built around MQL queries and assertions (i.e. the core of this guide) but add a full policy structure around it. This means you get things like titles, authors, versions, remediation guidance, references and much more. You can find more in the [policy guide](http://localhost:3000/docs/cnspec/cnspec-policies/write/).
+
+We recommend you explore policies after you understand the MQL basics in this page.
+
+**Embedded MQL**
+
+Finally there is embedding MQL into your own stack. At the time of writing we support embedding the Go-based MQL runtime. It is found in [cnquery](https://github.com/mondoohq/cnquery) and can be used as a standalone solution. Please [ping us](https://github.com/orgs/mondoohq/discussions) in discussions if you are interested in embedding MQL and we will share the guide.
 
 ## Basic structure
 
-All MQL code is in UTF-8 to support any characters. MQL is a type-safe and compiled language that can also be executed on the fly.
+MQL is a type-safe, compiled language that is inspired by marrying GraphQL with lightweight scripting.
 
-These are the basic tools of MQL:
-[Resources and fields](#resources-and-fields)
-[Blocks](#blocks)
-[Lists](#lists)
-[Basic functions](#basic-functions)
+- It has base types like string, number, boolean, array, map, and resource. Types are explained in the [types](#types) section below.
+- It is compiled to make sure your code is going to work at runtime. Often you don't even realize it uses compiled code because it can execute MQL on the fly.
+- GraphQL inspired the way we extract data through blocks (as seen below)
+- We mixed lightweight scripting into it which allows us to transform data and write assertions
+
+### Anatomy of MQL
+
+MQL queries are often short code snippets that either extract data or contain an assertion. Here is an example:
+
+![MQL Anatomy](/img/mql/mql-structure.png)
+
+- **Resource**: An object containing information about a component in your infrastructure or code. In this example we use the `packages` resource to access the operating system's list of packages. See more [below](#resources-and-fields)
+- **Functions**: These are calls that accomplish some kind of task. In this example we use `where` to filter the list of packages.
+- **Function call**: Is attached to a function to specify arguments. Here we use a filter in the argument that will only pick packages whose name matches the regular expression.
+- **Fields**: Contain pieces of information about a resource. Here we use the `name` field of each package both in the `where` filter and in the block call at the end, along with the `version` field.
+- **Value**: Fixed values are often used in MQL for filtering, data processing, and assertions. For example, the `/ssl/i` value is a regular expression that will be matched against the name of each package. The suffix `i` on the regular expression indicates that it is case-insensitive, i.e. it will match both "SSL" and "ssl" or "sSl".
+- **Block**: The last element are the GraphQL-inspired block calls for accessing and extracting data. Everything up to the block is an array of packages that have been filtered. The block tells us to get us the name and version of each package in this list. You will learn more in the [blocks](#blocks) section below.
+
+### Comments
+
+MQL supports comments via `#`, because it works really well inside of YAML policies and querypacks.
+
+```coffee
+"hi" # I am a comment
+```
+
+We also support comments via `//` if you prefer.
+
+### Types
+
+MQL comes with a set of core types:
+
+- **String**: A normal string like `"Hello!"
+- **Number**: Can represent an integer like `123` or a float like `1.23`
+- **Bool**: For `true` and `false`
+- **Regex**: For matching regular expressions like `/my.*re/i`
+- **Array**: A list of values like `[1,2,3]`
+- **Map**: A key-value pair like `{a: 23}`
+- **Time**: To represent time like `time.now` or `time.today`
+- **Version**: Often used for software and package versions like `version("1.2.3-rc1")`
+- **IP**: For IP addresses, supporting IPv4 `ip("1.2.3.4/24")` and IPv6 `ip("2001:db8::1")`
+
+There are also a few special keywords and types:
+
+- **Null**: Is reserved for the `null` value when something isn't set
+- **Empty**: Can be used to check if something is empty (e.g. empty arrays, empty strings, empty maps, or null values)
+
+Finally there is one special type we track for representing JSON data. Since we don't know the exact type information of JSON at compile-time we created a type to interact with data that is restricted to the primitive types that JSON supports. You will run into it when you access JSON files via e.g. `parse.json("my.json").params`.
+
+### Schemas
+
+The previous section covered builtin types. Most often, however, MQL is used to interact with IT systems in your environments. These are accessed via a structured data graph that exposes all the information.
+
+If you have a been following these examples, you have already used one such schema: The OS schema. When you `cnspec shell` without additional arguments you are using the `os` provider to connect to your local system.
+
+**Providers** expose all types of systems to your MQL queries. They populate your MQL namespace with keywords that allow you to interact with your system.
+
+For example, if you are connected to your local OS, you can use resources like:
+
+```
+users
+packages
+services
+```
+
+However, if you connect to a cloud environment like AWS, Azure, or Google Cloud you get different keywords like:
+
+```
+aw2.ec2.instances
+```
+
+To learn more about what providers are available and what resources they contain check out [our reference page](../../mql/resources/#resources). To learn more about managing providers, check out [this guide](../../cnspec/cnspec-adv-install/providers/).
+
+### UTF-8 encoding
+
+All MQL code is encoded in UTF-8 to support arbitrary characters from other languages, symbols, or even emojis:
+
+```coffee
+"UTF-8 in 日本 and 中文 👍".find(regex.emoji)
+```
+
+```
+find: [
+  0: "👍"
+]
+```
 
 ### Resources and fields
 
@@ -92,7 +279,7 @@ Each resource has one or more _fields_, pieces of information you can request fr
 
 This example requests the platform of an asset. `asset` is the resource and `platform` is the field:
 
-```coffeescript
+```coffee
 asset.platform
 ```
 
@@ -100,7 +287,7 @@ The output would be `redhat`, `windows`, `k8s-pod`, or similar.
 
 Access related resources
 
-```coffeescript
+```coffee
 sshd.config.file
 => file("/etc/sshd/sshd_config")
 
@@ -118,7 +305,7 @@ _Blocks_ are a convenient way to group and extract information. They save you th
 
 Instead of making individual requests like this:
 
-```coffeescript
+```coffee
 sshd.config.file
 sshd.config.params
 sshd.config.ciphers
@@ -126,7 +313,7 @@ sshd.config.ciphers
 
 You can combine them into a block:
 
-```coffeescript
+```coffee
 sshd.config {
   file
   params
@@ -142,7 +329,7 @@ When writing a check in a policy that you'll execute in the Mondoo Console, you 
 
 **Incorrect:**
 
-```coffeescript
+```coffee
 command("ip6tables -L") {
   stdout.contains("Chain INPUT (policy DROP)")
   stdout.contains("Chain OUTPUT (policy DROP)")
@@ -151,7 +338,7 @@ command("ip6tables -L") {
 
 **Correct:**
 
-```coffeescript
+```coffee
 command("ip6tables -L") {
   inputPolicyDrop = stdout.contains("Chain INPUT (policy DROP)")
   chainPolicyDrop = stdout.contains("Chain OUTPUT (policy DROP)")
@@ -168,7 +355,7 @@ This requirement applies only to policies you plan to deploy in the Mondoo Conso
 
 You can nest blocks:
 
-```coffeescript
+```coffee
 sshd.config {
   file {
     path
@@ -181,7 +368,7 @@ sshd.config {
 
 A quick way to request all fields from a resource is by using `{*}`. For example, this requests all fields from the `services` resource:
 
-```coffeescript
+```coffee
 services { * }
 ```
 
@@ -191,7 +378,7 @@ This expands all _immediate_ fields of the given resource. It does not cascade t
 
 Some resources provide information in _lists_. For example, this requests a list of users, a list of packages, and a list of services:
 
-```coffeescript
+```coffee
 users
 packages
 services
@@ -199,7 +386,7 @@ services
 
 Using blocks, you can access specific field values from every item in a list. For example, this requests the `name`, `uid`, and `home` field values for each result in a list of users:
 
-```coffeescript
+```coffee
 users {
   name
   uid
@@ -211,7 +398,7 @@ users {
 
 These help to take action on resources and fields. Some of the most important functions exist on lists and include `where`, `all`, `none`, and more.
 
-```coffeescript
+```coffee
 users.where( uid >= 1000 ) {
   name
   uid
@@ -232,7 +419,7 @@ These are the control structures that organize the flow of control in MQL:
 
 In MQL a simple `if` statement looks like this:
 
-```coffeescript
+```coffee
 if( x > 0 ) {
   return y
 }
@@ -240,7 +427,7 @@ if( x > 0 ) {
 
 You can also chain statements with `else if` and `else`:
 
-```coffeescript
+```coffee
 if( x > 10 ) {
 return 1
 } else if( x > 0 ) {
@@ -254,7 +441,7 @@ return -1
 
 You can more easily chain multiple conditionals together using `switch`:
 
-```coffeescript
+```coffee
 switch( x ) {
 case _ > 10:
   return 1
@@ -282,13 +469,13 @@ MQL supports these conditional operators:
 
 Use `inRange` to check if an integer, float, or dict is in a numeric range. Follow this format:
 
-```coffeescript
+```coffee
 VALUE.inRange(MIN,  MAX)
 ```
 
 Examples:
 
-```coffeescript
+```coffee
 
 3.inRange(3, 5)
 
@@ -301,7 +488,7 @@ Although MQL is type-safe and compiled, it’s also forgiving. You can easily ex
 
 Here’s a simple example:
 
-```coffeescript
+```coffee
 a = 2
 b = "2"
 
@@ -310,7 +497,7 @@ a == 2 && b == 2
 
 Here’s a real-world example:
 
-```coffeescript
+```coffee
 sshd.config.params["Port"] == 22
 ```
 
@@ -318,7 +505,7 @@ sshd.config.params["Port"] == 22
 
 Many conditional operators allow soft comparisons:
 
-```coffeescript
+```coffee
 "2" == 2
 
 "2" == 2.0
@@ -330,7 +517,7 @@ Many conditional operators allow soft comparisons:
 
 This simplifies the usage of regular expressions as well:
 
-```coffeescript
+```coffee
 "Hello world" == /H.*o/
 ```
 
@@ -347,13 +534,13 @@ To learn about conditional operators with maps, see [Maps](#maps).
 
 Many fields take unnamed parameters by default:
 
-```coffeescript
+```coffee
 sshd.config( "/path/to/my/sshd" )
 ```
 
 You can also use named parameters to initialize resources.:
 
-```coffeescript
+```coffee
 parse.json(
   command('lsblk --json').stdout
 )
@@ -363,7 +550,7 @@ parse.json(
 
 You can call many functions with an embedded function. An example is `where`:
 
-```coffeescript
+```coffee
 users.where( uid >= 1000 )
 ```
 
@@ -371,13 +558,13 @@ The function takes an embedded function as an argument, which is executed agains
 
 You can combine these with global resources and variables:
 
-```coffeescript
+```coffee
 users.where( name == regex.email )
 ```
 
 Some functions support both embedded and static values:
 
-```coffeescript
+```coffee
 [1,2,3].contains( 3 )
 [1,2,3].contains( _ > 2 )
 ```
@@ -386,7 +573,7 @@ Some functions support both embedded and static values:
 
 You can set a named argument in a function. This is useful in situations where you can only use one expression (such as with `all` or `one`). It also makes the code easier to understand, especially when nesting across multiple objects, as in this example:
 
-```coffeescript
+```coffee
 users.all(user:
   groups.contains(group:
     user.uid == group.gid
@@ -407,7 +594,7 @@ Learn about these data types in MQL:
 
 MQL's basic data types are:
 
-```coffeescript
+```coffee
 s1 = "I am a string"
 s2 = 'I am also a string'
 re = /Reg.* Expression/
@@ -422,7 +609,7 @@ b  = true || false
 
 For regular expressions, you can access a lot of pre-built expressions in the `regex` resource. These are a few examples:
 
-```coffeescript
+```coffee
 "anya@forger.com" == regex.email
 
 "10.0.0.255" == regex.ipv4
@@ -437,7 +624,7 @@ To learn about all the pre-build expressions, read the [`regex`](/mql/resources/
 
 MQL’s built-in time functions make these assertions easy:
 
-```coffeescript
+```coffee
 time.now
 # 2022-10-13 14:42:35 -0700 PDT
 
@@ -458,13 +645,13 @@ parse.date("2022-10-12T14:42:35Z")
 
 Use `inRange` to check if a date and time is in a range. Follow this format:
 
-```coffeescript
+```coffee
 DATE.inRange(MIN, MAX)
 ```
 
 Example:
 
-```coffeescript
+```coffee
 time.inRange(yesterday, tomorrow)
 ```
 
@@ -472,7 +659,7 @@ time.inRange(yesterday, tomorrow)
 
 MQL also can parse durations:
 
-```coffeescript
+```coffee
 parse.duration("3days")
 
 parse.duration("1y")
@@ -499,7 +686,7 @@ The `empty` data type saves you the trouble of checking for different kinds of e
 
 For example, this query finds any type of empty value:
 
-```coffeescript
+```coffee
 users.list == empty
 ```
 
@@ -507,13 +694,13 @@ users.list == empty
 
 Use the `semver` type for semantic versioning. Create a semver using the `semver` keyword, which takes a string as an argument:
 
-```coffeescript
+```coffee
 semver('3.12.1')
 ```
 
 You can compare a semver with another semver or with a string:
 
-```coffeescript
+```coffee
 semver('1.2.3') < semver('2.3')
 
 semver('1.10') >= '1.2'
@@ -523,7 +710,7 @@ semver('1.10') >= '1.2'
 
 Many resources contain lists of entries, like this example:
 
-```coffeescript
+```coffee
 users {
   name
   uid
@@ -532,7 +719,7 @@ users {
 
 You can filter these lists using the `where` clause:
 
-```coffeescript
+```coffee
 users.where( uid >= 1000 ) {
   name
   uid
@@ -543,13 +730,13 @@ users.where( uid >= 1000 ) {
 
 To avoid unnecessary loops, MQL provides some keywords that make assertions on lists a lot simpler. For example:
 
-```coffeescript
+```coffee
 users.all( uid >= 0 )
 ```
 
 Failures to these print the affected elements:
 
-```coffeescript
+```coffee
 > users.all( uid > 0 )
 [failed] users.all()
   actual:   [
@@ -559,7 +746,7 @@ Failures to these print the affected elements:
 
 The available assertions for all lists are:
 
-```coffeescript
+```coffee
 users.all( name != "anya" )   <= make sure no user is called anya
 users.one( name == "anya" )   <= one user must exist, but no more than one
 users.none( name == "anya" )  <= no user exists with the name anya
@@ -568,19 +755,19 @@ users.contains( uid >= 1000 ) <= contains one or more users with uid >= 1000
 
 For lists of strings, you can use the `in` assertion, which is the inverse of `contains`:
 
-```coffeescript
+```coffee
 "anya".in(["abel","amos","anya"])
 ```
 
 An ideal use for `in` is to combine it with [properties](/cnspec/cnspec-policies/write/properties/). For example, if you define a property named `allowedCiphers`, you can assert that a configured cipher is in that list:
 
-```coffeescript
+```coffee
 sshd.config.ciphers.in( props.allowedCiphers )
 ```
 
 Another useful assertion for lists of strings is `containsAll`:
 
-```coffeescript
+```coffee
 ["abel","amos","anya"].containsAll(["abel","amos"])
 ```
 
@@ -588,7 +775,7 @@ Another useful assertion for lists of strings is `containsAll`:
 
 With block extraction, MQL provides arrays of maps:
 
-```coffeescript
+```coffee
 > users { name }
 [
   0: { name: "root" }
@@ -600,7 +787,7 @@ With block extraction, MQL provides arrays of maps:
 
 You can map these values into a simple list:
 
-```coffeescript
+```coffee
 > users.map(name)
 [
   0: "root",
@@ -612,7 +799,7 @@ You can map these values into a simple list:
 
 This makes many queries and assertions easier:
 
-```coffeescript
+```coffee
 users.map(name).contains( "anya" )
 ```
 
@@ -622,7 +809,7 @@ _Maps_ are key-value structures in which the key is a string and the value can b
 
 These are simple examples:
 
-```coffeescript
+```coffee
 m = {"a": 1, "b": 2}
 
 > m.b
@@ -646,7 +833,7 @@ This is a real-life example:
 
 The available assertions for maps are:
 
-```coffeescript
+```coffee
 {'a': 1, 'b': 2}.contains( key == 'b' )
 {'a': 1, 'b': 2}.all( value > 0 )
 {'a': 1, 'b': 2}.one( value != 1 )
@@ -659,7 +846,7 @@ _Dicts_ are similar to maps but have one key difference: Maps are statically typ
 
 That’s not the case when you process unknown data such as JSON. This presents a challenge, and the solution is `dict`:
 
-```coffeescript
+```coffee
 > parse.json("my.json")
 parse.json.params: {
   1: 1.000000
@@ -680,7 +867,7 @@ As you can see, there can be mixed values for all supported base types.
 
 All other operations work as expected:
 
-```coffeescript
+```coffee
 > parse.json("my.json").params.keys
 parse.json.params.keys: [
   0: "int-array"
@@ -726,11 +913,11 @@ Because of the varying data types, finding users in this structure is difficult 
 
 `recurse` eliminates that difficulty:
 
-```coffeescript
+```coffee
 jdata.recurse( name != empty )
 ```
 
-```coffeescript
+```coffee
 [
   0: {
     name: "bob"
@@ -744,11 +931,11 @@ jdata.recurse( name != empty )
 
 You can then map the user names:
 
-```coffeescript
+```coffee
 jdata.recurse( name != empty ).map(name)
 ```
 
-```coffeescript
+```coffee
 [
   0: "bob"
   1: "joy"
@@ -759,7 +946,7 @@ jdata.recurse( name != empty ).map(name)
 
 JSON, Terraform, and Kubernetes artifacts can include nested structures that make data a challenge to access. To make these easier to query, MQL supports simple accessors:
 
-```coffeescript
+```coffee
 tfblock {
   attributes.account_id.value
 }
@@ -769,7 +956,7 @@ tfblock {
 
 Helpers let you convert data to the type you need:
 
-```coffeescript
+```coffee
 > int(1.23)
 1
 
@@ -790,7 +977,7 @@ true
 
 For values that cannot be accessed, MQL provides errors:
 
-```coffeescript
+```coffee
 > file("/etc/shadow").content
 [failed] file.content
   error: open /etc/shadow: permission denied
@@ -800,7 +987,7 @@ For values that cannot be accessed, MQL provides errors:
 
 In general, `null` values are chained across their access:
 
-```coffeescript
+```coffee
 > sshd.config.params["NONE"].downcase == null
 [ok] value: _
 ```
@@ -811,7 +998,7 @@ MQL supports concurrent execution by default. All code that you write is execute
 
 For example:
 
-```coffeescript
+```coffee
 hosts = [
   tls("mondoo.com"),
   tls("mondoo.io"),
@@ -829,17 +1016,6 @@ This call checks all TLS ciphers on all the hosts that were previously defined. 
 It doesn’t matter if the data is retrieved from an API, file, system command or other call; MQL always executes calls in parallel.
 
 You don't have to configure or think about concurrency or parallel value assignment in MQL; concurrency is automatic on all available streams.
-
-## Commenting
-
-MQL supports `#` commenting, which works best with YAML.
-
-```coffeescript
-# I am a comment
-sshd.config.params
-```
-
-MQL also supports `//`.
 
 ## Embedding
 
@@ -937,3 +1113,186 @@ func (md *MqlDiscovery) RunQuery(query string) interface{} {
 ```
 
 ---
+
+# The Interactive Shell
+
+Both `cnspec` and `cnquery` provide a **built-in interactive shell** that acts like an IDE for MQL. This is one of the most powerful tools for:
+
+- **Learning MQL**: experiment with selectors, built-ins, regex, and comparisons live.
+- **Testing policies**: copy queries from a policy file and run them interactively.
+- **Investigating live systems**: connect to a cloud account, Kubernetes cluster, or host to query live state.
+- **Incident response**: during a security event, you can ask questions of your infrastructure in real time, without writing code or waiting for dashboards to refresh.
+
+Think of the shell as a REPL (Read–Eval–Print Loop) for your infrastructure. You type MQL queries, it evaluates them against your connected system, and prints results immediately.
+
+---
+
+## How to launch the interactive shell
+
+Pick a target and start a shell:
+
+```bash
+# Local OS
+cnspec shell local
+
+# AWS account (uses your AWS credentials)
+cnspec shell aws
+
+# GCP project (replace with your project ID)
+cnspec shell gcp project <project-id>
+
+# Azure — lists your subscriptions, select one by number
+cnspec shell azure
+
+# Kubernetes — uses current KUBECONFIG and lists clusters/namespaces to select
+cnspec shell k8s
+```
+
+When you connect, you’ll see a banner confirming the provider and the asset you are connected to.
+
+---
+
+## Built-in Help
+
+The shell has a built-in help command. Use it to explore what resources are available and what fields they expose.
+
+Provider-level help:
+
+```
+cnspec> help aws
+cnspec> help gcp
+cnspec> help k8s
+```
+
+Resource-level help:
+
+```
+cnspec> help aws.ec2.instance
+cnspec> help gcp.project
+cnspec> help k8s.deployment
+```
+
+Each `help` command shows `fields`, `types`, and nested resources you can query.
+
+## Examples of Shell in Action
+
+Investigating a live security incident
+
+**Which AWS EC2 instances have a public IP?**
+
+```
+aws.ec2.instances.where(publicIp != empty) { instanceId region state tags publicIp }
+```
+
+**Which GCP compute instances are running with external NAT?**
+
+```
+gcp.compute.instances.where(networkInterfaces.where(_['accessConfigs'].where(_['name'] == "External NAT")))
+```
+
+**Which Kubernetes pods are not in Running state?**
+
+```
+k8s.pods.where(status.phase != "Running") { name namespace status.phase }
+```
+
+**Which Linux services are running?**
+
+```
+services.where(running == true) { name enabled type }
+```
+
+These queries can be run live during incident response to quickly answer pressing questions.
+
+## Why the shell matters
+
+The interactive shell is more than a convenience:
+
+- It is the fastest way to learn MQL by trial and error.
+- It provides deep visibility into resources through help.
+- It allows ad-hoc investigation without pre-built dashboards.
+- It bridges the gap between development (writing policies) and operations (running live checks).
+
+By practicing built-ins in the shell, you not only master MQL syntax but also learn how to apply it to real-world infrastructure problems on the fly.
+
+Now that you have a solid foundation for using the interactive shell, the next step is mastering MQL built-ins. The shell is the perfect environment to practice these built-ins live.
+
+---
+
+# What are MQL built-ins?
+
+Built-ins are the core language features that let you filter, transform, and make assertions across collections of data. They are the difference between just retrieving raw data and turning that data into meaningful answers.
+
+Think of built-ins as the verbs of MQL:
+
+- `.where()` narrows down what you’re looking at.
+- `.map()` transforms the results.
+- `.all()`, `.any()`, `.none()`, `.one()` let you assert truth over collections.
+- `.list`, `.length`, and `.containsOnly` help you structure and compare results.
+
+In the following sections we’ll explore each built-in in detail, with examples you can run in the shell. You’ll see both policy-style checks and inventory-style queries so you can use them in compliance scenarios as well as live investigation.
+
+## Quick Reference for MQL Built-ins
+
+| Built-in               | Input types               | Output   | Typical use                                       |
+| ---------------------- | ------------------------- | -------- | ------------------------------------------------- |
+| `address`              | string (CIDR)             | string   | Return the network address of a CIDR              |
+| `all(cond)`            | arrays, iterables         | boolean  | Assert all elements match (universal requirement) |
+| `any(cond)`            | arrays, iterables         | boolean  | Assert at least one element matches               |
+| `camelcase`            | string                    | string   | Convert to camelCase                              |
+| `cidr`                 | string (CIDR)             | string   | Return the CIDR block                             |
+| `contains(val)`        | arrays, strings           | boolean  | Check membership or substring presence            |
+| `containsAll([])`      | arrays, strings           | boolean  | Assert all listed values are present              |
+| `containsNone([])`     | arrays, strings           | boolean  | Assert none of the listed values are present      |
+| `containsOnly([])`     | arrays of scalars         | boolean  | Assert only allowed values are present            |
+| `date`                 | time, epoch               | string   | Format or display a date                          |
+| `days`                 | integer                   | duration | Convert number into days duration                 |
+| `downcase`             | string                    | string   | Convert to lowercase                              |
+| `duplicates`           | arrays                    | array    | Return duplicate elements                         |
+| `duration`             | integer, epoch difference | duration | Represent elapsed time                            |
+| `epoch`                | time                      | int      | Return Unix epoch                                 |
+| `find(params)`         | provider resources        | array    | Discover resources in a scope                     |
+| `first`                | arrays                    | element  | Return the first element                          |
+| `flat`                 | nested arrays             | array    | Flatten nested arrays                             |
+| `hours`                | integer                   | duration | Convert number into hours duration                |
+| `in(list)`             | scalar, list              | boolean  | Test membership in a list                         |
+| `inRange(val,min,max)` | numbers                   | boolean  | Check if value is within range                    |
+| `isUnspecified`        | string (IP or CIDR)       | boolean  | Test if value is unspecified (e.g., 0.0.0.0)      |
+| `keys`                 | map/dict                  | array    | Return keys of a dictionary                       |
+| `last`                 | arrays                    | element  | Return the last element                           |
+| `length`               | arrays, strings           | integer  | Count elements or characters                      |
+| `lines`                | string                    | array    | Split into lines                                  |
+| `map(expr)`            | arrays, iterables         | array    | Transform or project values                       |
+| `minutes`              | integer                   | duration | Convert number into minutes duration              |
+| `none(cond)`           | arrays, iterables         | boolean  | Assert no elements match                          |
+| `notIn(list)`          | scalar, list              | boolean  | Test value is not in list                         |
+| `one(cond)`            | arrays, iterables         | boolean  | Assert exactly one element matches                |
+| `prefix`               | string (CIDR)             | string   | Return network prefix                             |
+| `prefixLength`         | string (CIDR)             | integer  | Return prefix length                              |
+| `recurse`              | nested resources          | array    | Traverse nested structures                        |
+| `sample`               | arrays                    | element  | Return a random element                           |
+| `seconds`              | integer                   | duration | Convert number into seconds duration              |
+| `split`                | string                    | array    | Split by delimiter                                |
+| `subnet`               | string (CIDR)             | string   | Return subnet portion                             |
+| `suffix`               | string                    | string   | Return suffix (network utility)                   |
+| `trim`                 | string                    | string   | Remove leading/trailing whitespace                |
+| `unique`               | arrays                    | array    | Return only unique elements                       |
+| `unix`                 | epoch                     | time     | Convert epoch to time                             |
+| `upcase`               | string                    | string   | Convert to uppercase                              |
+| `values`               | map/dict                  | array    | Return values of a dictionary                     |
+| `version`              | string (semver)           | version  | Parse and compare version strings                 |
+| `where(cond)`          | arrays, iterables         | array    | Filter a collection by condition                  |
+
+## Additional resources
+
+These are other helpful resources in the Mondoo docs:
+
+| Page                                                     | Purpose                                                                                                     |
+| -------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| [Policy Authoring Guide](/cnspec/cnspec-policies/write/) | Describes how to write Mondoo security policies                                                             |
+| [MQL Resources](/mql/resources/)                         | Lists all of the information that MQL can retrieve from infrastructure assets and describes how to use them |
+| [Get Started with cnquery](/cnquery/)                    | Describes how to use the cnquery shell for ad hoc MQL queries                                               |
+| [Query Your Infrastructure](/cnquery/cnquery-query)      | Describes how to write queries to execute from the command line or to use in automation                     |
+| [cnquery CLI commands](/cnquery/cli/cnquery/)            | Details all commands in the cnquery command line interface                                                  |
+| [Create Checks in cnspec Shell](/cnspec/cnspec-scan/)    | Describes how to use the cnspec shell for ad hoc MQL assertions                                             |
+| [cnspec CLI commands](/cnspec/cli/cnspec/)               | Details all commands in the cnspec command line interface                                                   |

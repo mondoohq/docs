@@ -1,0 +1,20 @@
+# `contains`
+
+Check if an array contains a specific value or if any element matches a predicate. Returns `true` if found.
+
+---
+
+## Examples
+
+Check if any package is named `openssl`:
+```coffee
+packages.map(name).contains("openssl")
+```
+
+Example output:
+```bash
+packages.map(name).contains("openssl")
+[failed] [].contains()
+  expected: > 0
+  actual:   0
+```

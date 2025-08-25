@@ -1,0 +1,12 @@
+# `any`
+
+Assert that at least one element in an array satisfies the condition. Empty arrays return `false`.
+
+---
+
+## Examples
+
+Check if at least one SSH service is running:
+```coffee
+services.any(name == "sshd" && running == true)
+```

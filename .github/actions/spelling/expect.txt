@@ -166,6 +166,7 @@ maxsize
 Mbeze
 mcnulty
 meid
+memstore
 Merica
 messagestoragepolicy
 mfs
@@ -263,6 +264,7 @@ sqli
 sqlimatchstatement
 sqlserver
 sqlservice
+SRE
 srvsvc
 Sspr
 stdevel
@@ -324,4 +326,5 @@ ZRg
 zxkk
 camelcase
 kptr
+UBLA
 UAD

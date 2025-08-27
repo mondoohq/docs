@@ -28,11 +28,22 @@ In this guide you’ll:
 
 ## Mondoo Terraform Provider Overview
 
-Mondoo’s Terraform provider is a plugin for cnspec/cnquery that:
+What are Mondoo Providers?
 
-- Exposes a normalized `terraform.resources` inventory for HCL, Plan, and State.
-- Provides a transport for scanning directories and files.
-- Enables consistent MQL across IaC stages via policy variants.
+Mondoo providers are plugins for cnspec/cnquery that let you connect Mondoo to different platforms and data sources. Each provider understands how to talk to a specific technology (like AWS, GCP, Azure, Kubernetes, or Terraform) and exposes that environment in a way you can query with MQL.
+
+Think of providers as connectors: they translate an external system’s data (cloud APIs, config files, Terraform plans, etc.) into Mondoo’s queryable objects.
+
+### The cnspec Terraform Provider
+
+Mondoo's Terraform provider for cnspec is not the same thing as a HashiCorp Terraform provider. Instead, it’s a cnspec plugin that knows how to parse Terraform data and make it available in MQL.
+
+With the Terraform provider you can:
+
+- **Scan Terraform code and outputs:** HCL files, Plan JSON, and State JSON. 
+- **Query resources consistently:** Exposes Terraform resources as `terraform.resources` (HCL), `terraform.plan.resourceChanges` (Plan) or `terraform.state.resources` (State), so you can write the same style of MQL across all stages of a Terraform development lifecycle.
+- **Use policy variants:** Define a check once and run it against Terraform HCL, Plan, State, and even runtime cloud APIs.
+
 
 ### Install the Terraform provider
 

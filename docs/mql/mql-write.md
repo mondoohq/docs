@@ -241,7 +241,7 @@ However, if you connect to a cloud environment like AWS, Azure, or Google Cloud 
 aw2.ec2.instances
 ```
 
-To learn more about what providers are available and what resources they contain check out [our reference page](../../mql/resources/#resources). To learn more about managing providers, check out [this guide](../../cnspec/cnspec-adv-install/providers/).
+To learn more about what providers are available and what resources they contain check out [our reference page](../../mql/resources/#resource-packs). To learn more about managing providers, check out [this guide](../../cnspec/cnspec-adv-install/providers/).
 
 ### UTF-8 encoding
 

@@ -166,6 +166,7 @@ maxsize
 Mbeze
 mcnulty
 meid
+memstore
 Merica
 messagestoragepolicy
 mfs
@@ -324,4 +325,5 @@ ZRg
 zxkk
 camelcase
 kptr
+UBLA
 UAD

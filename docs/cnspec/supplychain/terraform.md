@@ -139,7 +139,7 @@ Filtering by `aws_s3_bucket` resources returns a list of objects that contains f
 To access the nested block, the MQL query calls the `block` field on the results from `terraform.resources.where( nameLabel == 'aws_s3_bucket')`, which returns a list of all `blocks` with each `aws_s3_bucket` resource. To illustrate this further, consider this query in cnspec Shell that shows all of the available fields for the `terraform.block` resource:
 
 ```mql
-mondoo> terraform.resources.where( nameLabel == 'aws_s3_bucket') { blocks {*} }
+mondoo> terraform.resources.where( nameLabel == 'aws_s3_bucket') { blocks { * } }
 terraform.resources.where: [
   0: {
     blocks: [

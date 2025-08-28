@@ -366,7 +366,7 @@ sshd.config {
 
 #### Request all fields from a resource
 
-A quick way to request all fields from a resource is by using `{*}`. For example, this requests all fields from the `services` resource:
+A quick way to request all fields from a resource is by using `{ * }`. For example, this requests all fields from the `services` resource:
 
 ```coffee
 services { * }
@@ -1180,25 +1180,25 @@ Investigating a live security incident
 
 **Which AWS EC2 instances have a public IP?**
 
-```
+```coffee
 aws.ec2.instances.where(publicIp != empty) { instanceId region state tags publicIp }
 ```
 
 **Which GCP compute instances are running with external NAT?**
 
-```
+```coffee
 gcp.compute.instances.where(networkInterfaces.where(_['accessConfigs'].where(_['name'] == "External NAT")))
 ```
 
 **Which Kubernetes pods are not in Running state?**
 
-```
+```coffee
 k8s.pods.where(status.phase != "Running") { name namespace status.phase }
 ```
 
 **Which Linux services are running?**
 
-```
+```coffee
 services.where(running == true) { name enabled type }
 ```
 

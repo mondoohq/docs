@@ -70,7 +70,7 @@ Our new `tailscale` provider lets you query devices, users, DNS namespaces, and 
 
 This example retrieves details on a single device:
 
-```cnquery> tailscale.device(id: "55161288425123456") {*}
+```cnquery> tailscale.device(id: "55161288425123456") { * }
 tailscale.device: {
   id: "55161282215123456"
   isExternal: false

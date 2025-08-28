@@ -13,9 +13,7 @@ For an overview of ticketing, read [Track and Fix Findings with Ticketing](/plat
 ## Prerequisites
 
 - Owner or Editor access to the Mondoo space
-
 - Owner access to your Azure DevOps organization
-
 - Permission to create a service principal in Microsoft Entra ID (global administrator, application administrator or cloud application administrator)
 
 ## Register and grant permissions to an Azure app
@@ -56,7 +54,7 @@ Like any service that integrates with Azure, Mondoo must have Microsoft Entra ID
 
    ![New secret in Azure](/img/platform/ticketing/created-secret.png)
 
-Don't close the Entra browser tab. You need this information for later steps.
+   Don't close the Entra browser tab. You need this information for later steps.
 
 ## Grant the app registration access to your Azure DevOps organization
 
@@ -79,12 +77,11 @@ When you create the app registration as instructed above, Entra saves it as a se
 5. In the **Users or Service Principals** box, type and choose the name of the app registration you created for Mondoo.
 
 6. Define this access for the Mondoo app registration service principal:
-
    - **Access level**: Basic
    - **Add to projects**: The project to which you want Mondoo to add issues
    - **Azure DevOps Groups**: Project Contributors
 
-7. Select the *Add** button to give the Mondoo app registration service principal the access it needs.
+7. Select the \*Add\*\* button to give the Mondoo app registration service principal the access it needs.
 
    Don't close the browser tab containing the Azure DevOps organization settings. You need this information for later steps.
 
@@ -137,11 +134,8 @@ When you create the app registration as instructed above, Entra saves it as a se
 ## Learn more
 
 - [Create Tickets from Advisories](/platform/ticketing/advisories/)
-
 - [Create Tickets from Checks](/platform/ticketing/checks/)
-
 - [Manage Ticketing](/platform/ticketing/manage/)
-
 - [Track and Fix Findings with Ticketing](/platform/ticketing/overview/)
 
 ---

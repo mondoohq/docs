@@ -60,15 +60,10 @@ Each control maps to one or more _checks_, the individual practices and settings
 For example, the Center for Internet Security's CIS Controls framework includes this control: "Implement and manage a firewall on end-user devices." Mondoo's security team analyzed the control and identified nearly 200 checks for different types of end-user devices. These are just a few examples:
 
 - On Ubuntu devices, install Uncomplicated Firewall (UFW)
-
 - On Ubuntu devices, configure iptables to deny incoming traffic by default
-
-- On Windows 11 devices, set the Windows Firewall to block incoming connections by default
-
-- On Windows 12 devices, log when Windows Firewall drops an incoming packet
-
+- On Windows 10 devices, set the Windows Firewall to block incoming connections by default
+- On Windows 11 devices, log when Windows Firewall drops an incoming packet
 - On macOS 12 devices, enable firewall stealth mode
-
 - On Red Hat 9 devices, employ a single firewall configuration utility
 
 When you enable a compliance framework, you tell Mondoo to verify all of the checks in all of the controls in that framework.
@@ -100,9 +95,7 @@ import Partial from "../../partials/_editor-owner.mdx";
    ![Compliance framework in the Mondoo Console](/img/platform/compliance/active-or-preview.png)
 
 5. Choose how to identify your work on the framework:
-
    - **ACTIVE** shows your team that you're working toward an upcoming audit based on this framework.
-
    - **PREVIEW** reflects that you're in the early stages of work toward complying with the framework and not yet striving to pass an audit.
 
 6. Select the **ADD FRAMEWORK** button.

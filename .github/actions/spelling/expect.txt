@@ -264,7 +264,6 @@ sqli
 sqlimatchstatement
 sqlserver
 sqlservice
-SRE
 srvsvc
 Sspr
 stdevel

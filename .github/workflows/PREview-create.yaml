@@ -23,7 +23,7 @@ jobs:
         with:
           credentials_json: "${{secrets.GCP_SERVICE_ACCOUNT}}"
       - name: "Set up Cloud SDK"
-        uses: "google-github-actions/setup-gcloud@v2"
+        uses: "google-github-actions/setup-gcloud@v3"
       - name: Create PReview bucket
         run: gsutil mb gs://${BUCKET}
       - name: Configure bucket for public access

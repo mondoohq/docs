@@ -7,6 +7,7 @@ Assert that all elements in an array satisfy the condition. Empty arrays return 
 ## Examples
 
 Ensure all EC2 instances do not have a public Ip address:
+
 ```coffee
 aws.ec2.instances.all( publicIp == empty )
 ```

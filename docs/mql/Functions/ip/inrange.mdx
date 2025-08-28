@@ -7,12 +7,14 @@ Check whether an IP (or network) is within another network (inclusive). Returns 
 ## Examples
 
 IPv4 address in a CIDR:
+
 ```coffee
-"10.0.5.7/32".inRange("10.0.0.0/16")
+ip("10.0.5.7/32").inRange("10.0.0.0/16")
 ```
 
 IPv6 address in a CIDR:
+
 ```coffee
-"2001:db8::123/128".inRange("2001:db8::/48")
+ip("2001:db8::123/128").inRange("2001:db8::/48")
 ```
 

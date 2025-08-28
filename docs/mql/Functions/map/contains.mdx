@@ -7,6 +7,7 @@ Check whether any entry in the map satisfies a condition. Returns `true` if at l
 ## Examples
 
 At least one kernel parameter `vm.swappiness` is set to 60 or less:
+
 ```coffee
 kernel.parameters.contains(key == "vm.swappiness" && value <= 60)
 ```

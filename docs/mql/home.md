@@ -13,7 +13,7 @@ hide_title: true
 
 MQL is a graph-based query language built for exploring and validating infrastructure configuration data and building security policies.
 
-### [A guide to Effective MQL](/mql/mql.write)
+### [A guide to effective MQL](/mql/mql.write)
 
 Dive into creating queries, checks, and policies.
 
@@ -21,13 +21,13 @@ Dive into creating queries, checks, and policies.
 
 A complete reference of built-in MQL functions.
 
-### [MQL Reference](/mql/resources/)
+### [MQL resource reference](/mql/resources/)
 
 Find all the resources you can query with MQL.
 
 <hr/>
 
-#### See also:
+#### See also
 
 To learn how to structure and build your own policies, read the Mondoo [Policy Authoring Guide](/cnspec/cnspec-policies/write/).
 

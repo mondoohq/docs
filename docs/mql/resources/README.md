@@ -1,9 +1,9 @@
 ---
-title: MQL Reference
-sidebar_label: Overview
+title: MQL Resource Reference
+sidebar_label: Resource Reference
 sidebar_position: 3
 displayed_sidebar: MQL
-id: mql.reference
+id: resources
 description: Learn about all of the available MQL resources and how you can use them to query your infrastructure and to create security policies.
 image: /img/featured_img/mondoo-feature.jpg
 ---
@@ -18,7 +18,7 @@ For an introduction to MQL, read the [MQL intro slide deck](https://mondoohq.git
 
 To learn how to create queries, checks, and policies in MQL, read [Write Effective MQL](/mql/mql.write/).
 
-## Resources
+## Resource Packs
 
 A _resource_ is a source of information about an asset in your infrastructure, such as a file, a container image, or an AWS EC2 instance. We've organized MQL resources into packs to make it easy to find what you need.
 

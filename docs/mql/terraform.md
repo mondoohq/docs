@@ -40,10 +40,9 @@ Mondoo's Terraform provider for cnspec is not the same thing as a HashiCorp Terr
 
 With the Terraform provider you can:
 
-- **Scan Terraform code and outputs:** HCL files, Plan JSON, and State JSON. 
+- **Scan Terraform code and outputs:** HCL files, Plan JSON, and State JSON.
 - **Query resources consistently:** Exposes Terraform resources as `terraform.resources` (HCL), `terraform.plan.resourceChanges` (Plan) or `terraform.state.resources` (State), so you can write the same style of MQL across all stages of a Terraform development lifecycle.
 - **Use policy variants:** Define a check once and run it against Terraform HCL, Plan, State, and even runtime cloud APIs.
-
 
 ### Install the Terraform provider
 

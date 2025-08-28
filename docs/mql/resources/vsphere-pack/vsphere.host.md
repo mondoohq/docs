@@ -37,6 +37,7 @@ vSphere ESXi host resource
 | timezone          | [esxi.timezone](esxi.timezone.md)                                 | Host timezone settings                                     |
 | ntp               | [esxi.ntpconfig](esxi.ntpconfig.md)                               | Host NTP configuration                                     |
 | snmp              | map[string]string                                                 | Host SNMP configuration                                    |
+| tags              | &#91;&#93;string                                                  | Host tags                                                  |
 
 **Examples**
 

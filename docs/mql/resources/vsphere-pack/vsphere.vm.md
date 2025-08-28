@@ -26,3 +26,4 @@ vSphere VM resource
 | inventoryPath    | string            | vSphere inventory path              |
 | properties       | dict              | Virtual machine properties          |
 | advancedSettings | map[string]string | Virtual machine advanced properties |
+| tags             | &#91;&#93;string  | VM tags                             |

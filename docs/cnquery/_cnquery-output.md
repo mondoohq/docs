@@ -15,7 +15,7 @@ You can see verbose query results, output results to JSON, and share results wit
 To see detailed progress as the query runs, use `-v` or `--verbose`. For example:
 
 ```bash
-cnquery run local -c "services.list{*}" -v
+cnquery run local -c "services.list{ * }" -v
 ```
 
 ## Output results to JSON​
@@ -23,7 +23,7 @@ cnquery run local -c "services.list{*}" -v
 To convert the output of your query to JSON, use `-j` or `--json`. For example:
 
 ```bash
-cnquery run local -c "services.list{*}" -j
+cnquery run local -c "services.list{ * }" -j
 ```
 
 You can then pipe the output to jq or other applications.

@@ -200,7 +200,7 @@ usb.devices: [
 A new resource for inspecting network interfaces and IP addresses on Linux, macOS, and Windows.
 
 ```coffee
-cnquery> network.interfaces.where(name == 'en0'){*}
+cnquery> network.interfaces.where(name == 'en0'){ * }
 network.interfaces.where: [
   0: {
     mtu: 1500

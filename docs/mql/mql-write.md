@@ -366,7 +366,7 @@ sshd.config {
 
 #### Request all fields from a resource
 
-A quick way to request all fields from a resource is by using `{*}`. For example, this requests all fields from the `services` resource:
+A quick way to request all fields from a resource is by using `{ * }`. For example, this requests all fields from the `services` resource:
 
 ```coffee
 services { * }

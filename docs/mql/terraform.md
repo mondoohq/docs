@@ -223,7 +223,7 @@ terraform.plan.resourceChanges { *  }
 ### 2) Filter to a specific resource type
 
 ```coffee
-terraform.plan.resourceChanges.where( type == "google_storage_bucket" ) {*}
+terraform.plan.resourceChanges.where( type == "google_storage_bucket" ) { * }
 ```
 
 :::note

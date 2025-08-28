@@ -11,3 +11,14 @@ Ensure both `root` and `ec2-user` exist:
 ```coffee
 users.map(name).containsAll(["root","ec2-user"])
 ```
+
+Example output:
+
+```
+users.map(name).containsAll(["root","ec2-user"])
+[failed] [].containsAll()
+  expected: == []
+  actual:   [
+    0: "ec2-user"
+  ]
+```

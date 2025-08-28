@@ -11,3 +11,14 @@ Ensure no insecure packages are installed:
 ```coffee
 packages.map(name).containsNone(["telnet","rsh"])
 ```
+
+Example output:
+
+```
+packages.map(name).containsNone(["telnet","rsh"])
+[failed] [].containsNone()
+  expected: == []
+  actual:   [
+    0: "telnet"
+  ]
+```

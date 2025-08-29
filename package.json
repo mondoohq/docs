@@ -21,7 +21,7 @@
     "@docusaurus/preset-classic": "^3.8.1",
     "@docusaurus/theme-search-algolia": "^3.8.1",
     "@fontsource/roboto": "^5.2.6",
-    "@mdx-js/react": "^3.1.0",
+    "@mdx-js/react": "^3.1.1",
     "@stackql/docusaurus-plugin-hubspot": "^1.1.0",
     "@svgr/webpack": "^8.1.0",
     "ansi-regex": "^6.2.0",

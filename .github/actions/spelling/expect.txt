@@ -193,6 +193,7 @@ nameterraform
 nametest
 natgateway
 netsh
+networkdiscovery
 networkinterface
 networkservice
 newkey

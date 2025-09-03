@@ -44,7 +44,6 @@ Use the `azure.subscription` resource to assess the configuration of Azure subsc
 | cosmosDb              | [azure.subscription.cosmosDbService](azure.subscription.cosmosdbservice.md)           | Cosmos DB resources in the subscription       |
 | keyVault              | [azure.subscription.keyVaultService](azure.subscription.keyvaultservice.md)           | Azure Key Vault resources in the subscription |
 | iam                   | [azure.subscription.authorizationService](azure.subscription.authorizationservice.md) | Authorization resources in the subscription   |
-| authorization         | [azure.subscription.authorizationService](azure.subscription.authorizationservice.md) | Deprecated: use `iam` instead                 |
 | monitor               | [azure.subscription.monitorService](azure.subscription.monitorservice.md)             | Monitor resources in the subscription         |
 | cloudDefender         | [azure.subscription.cloudDefenderService](azure.subscription.clouddefenderservice.md) | Cloud defender resources in the subscription  |
 | aks                   | [azure.subscription.aksService](azure.subscription.aksservice.md)                     | AKS resources in the subscription             |

@@ -35,7 +35,7 @@ aws.guardduty.detectors {
   region
   status
   findingPublishingFrequency
-  unarchivedFindings
+  findings
 }
 ```
 

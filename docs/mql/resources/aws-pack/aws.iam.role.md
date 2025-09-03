@@ -27,6 +27,5 @@ The `aws.iam.role` resource provides fields for assessing the configuration of i
 | name                     | string            | Name of the role                                                    |
 | description              | string            | Description of the role                                             |
 | tags                     | map[string]string | Tags associated with the role                                       |
-| createDate               | time              | Time when the role was created: deprecated, use createdAt           |
 | createdAt                | time              | Time when the role was created                                      |
 | assumeRolePolicyDocument | dict              | Policy document that grants an entity permission to assume the role |

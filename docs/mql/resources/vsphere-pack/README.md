@@ -23,7 +23,6 @@ Resources included in this pack:
 | [esxi.service](esxi.service.md)                           | vSphere ESXi management service resource                  |
 | [esxi.timezone](esxi.timezone.md)                         | vSphere ESXi timezone resource                            |
 | [esxi.vib](esxi.vib.md)                                   | vSphere installation bundle resource                      |
-| [platform](platform.md)                                   | vSphere platform resource (deprecated)                    |
 | [vsphere](vsphere.md)                                     | VMware vSphere resource                                   |
 | [vsphere.cluster](vsphere.cluster.md)                     | vSphere cluster resource                                  |
 | [vsphere.datacenter](vsphere.datacenter.md)               | vSphere datacenter inventory                              |

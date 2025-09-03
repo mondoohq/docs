@@ -24,7 +24,6 @@ Azure role definition
 | description | string                                                                                                                                              | Description of the role definition                   |
 | name        | string                                                                                                                                              | Name of the role definition                          |
 | type        | string                                                                                                                                              | Role type                                            |
-| isCustom    | bool                                                                                                                                                | Deprecated: use `type` instead                       |
 | scopes      | &#91;&#93;string                                                                                                                                    | Scopes for which the role definition applies         |
 | permissions | &#91;&#93;[azure.subscription.authorizationService.roleDefinition.permission](azure.subscription.authorizationservice.roledefinition.permission.md) | Permissions that are attached to the role definition |
 

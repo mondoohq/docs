@@ -23,7 +23,6 @@ Kubernetes workload container
 | uid             | string             | Kubernetes object UID                                   |
 | name            | string             | Name of the container                                   |
 | imageName       | string             | Container image name                                    |
-| image           | string             | Deprecated; use `imageName` instead                     |
 | containerImage  | os.container.image | Container image                                         |
 | command         | &#91;&#93;string   | Entry point array                                       |
 | args            | &#91;&#93;string   | Arguments to the entry point                            |

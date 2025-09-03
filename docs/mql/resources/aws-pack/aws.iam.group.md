@@ -20,11 +20,10 @@ The `aws.iam.group` resource provides fields for assessing the configuration of 
 
 **Fields**
 
-| ID         | TYPE             | DESCRIPTION                                                |
-| ---------- | ---------------- | ---------------------------------------------------------- |
-| arn        | string           | ARN of the group                                           |
-| id         | string           | ID of the group                                            |
-| name       | string           | Name of the group                                          |
-| createDate | time             | Time when the group was created: deprecated, use createdAt |
-| createdAt  | time             | Time when the group was created                            |
-| usernames  | &#91;&#93;string | List of usernames that belong to the group                 |
+| ID        | TYPE             | DESCRIPTION                                |
+| --------- | ---------------- | ------------------------------------------ |
+| arn       | string           | ARN of the group                           |
+| id        | string           | ID of the group                            |
+| name      | string           | Name of the group                          |
+| createdAt | time             | Time when the group was created            |
+| usernames | &#91;&#93;string | List of usernames that belong to the group |

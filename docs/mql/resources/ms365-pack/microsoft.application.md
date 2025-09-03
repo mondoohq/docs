@@ -24,7 +24,6 @@ microsoft.application(id string)
 | id                                | string                                                                    | Object ID                                                   |
 | appId                             | string                                                                    | Application (client) ID                                     |
 | name                              | string                                                                    | Application display name                                    |
-| displayName                       | string                                                                    | Deprecated: Use `name` instead                              |
 | description                       | string                                                                    | Description                                                 |
 | notes                             | string                                                                    | Notes                                                       |
 | tags                              | &#91;&#93;string                                                          | Tags                                                        |
@@ -32,7 +31,6 @@ microsoft.application(id string)
 | disabledByMicrosoftStatus         | string                                                                    | Microsoft disabled status                                   |
 | groupMembershipClaims             | string                                                                    | Group membership claims                                     |
 | createdAt                         | time                                                                      | Application creation date                                   |
-| createdDateTime                   | time                                                                      | Deprecated: Use `createdAt` instead                         |
 | identifierUris                    | &#91;&#93;string                                                          | Application identifier URIs                                 |
 | publisherDomain                   | string                                                                    | Application publisher domain                                |
 | signInAudience                    | string                                                                    | Application sign-in audience                                |

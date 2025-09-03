@@ -31,7 +31,7 @@ The `aws.ecr` resource to assess the configuration of an Amazon Elastic Containe
 Return a `aws.ecr` resource representing the Elastic Container Registry.
 
 ```coffee
-aws.ecr { * }
+aws.ecr {*}
 ```
 
 **References**

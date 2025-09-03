@@ -23,7 +23,6 @@ Kubernetes init container
 | uid             | string             | Kubernetes object UID                                   |
 | name            | string             | Name of the container                                   |
 | imageName       | string             | Container image name                                    |
-| image           | string             | Deprecated. Use `imageName` instead.                    |
 | containerImage  | os.container.image | Container image                                         |
 | command         | &#91;&#93;string   | Entrypoint array                                        |
 | args            | &#91;&#93;string   | Arguments to the entrypoint                             |

@@ -70,7 +70,7 @@ aws.iam.credentialReport.
   where(
     passwordEnabled &&
     accessKey1Active &&
-    userCreationTime < time.today
+    createdAt < time.today
   ).
   all(
     accessKey1LastUsedDate != null

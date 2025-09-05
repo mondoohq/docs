@@ -8,7 +8,7 @@ description: Use cnquery's interactive shell to learn about checks
 image: /img/featured_img/mondoo-feature.jpg
 ---
 
-cnspec provides an interactive shell in which you can explore. It helps you understand the checks that cnspec policies use, and write your own as well. It’s also a great way to interact with both local and remote targets on the fly.
+cnspec provides an interactive shell in which you can explore. It helps you understand the checks that cnspec policies use, and write your own as well. It's also a great way to interact with both local and remote targets on the fly.
 
 Run the shell:
 

@@ -26,7 +26,7 @@ We expanded coverage for critical Microsoft apps, including SharePoint, Entra ID
 
 ## Expanded remediation guidance
 
-Since at Mondoo it's our priority to not only tell you what’s wrong, but to actually help you fix it as quickly as possible, we’re constantly making improvements to our guided remediation. This month we introduced the following enhancements:
+Since at Mondoo it's our priority to not only tell you what's wrong, but to actually help you fix it as quickly as possible, we're constantly making improvements to our guided remediation. This month we introduced the following enhancements:
 
 - Remediations are now shown as you browse for new policies to apply in your environment so you can evaluate the work involved before you even pull the trigger to enable new policies.
 - The Mondoo Linux policy now includes Bash remediation scripts as well as expanded CLI and Ansible remediations. These standalone remediation scripts include logging and error handling logic, making them perfect to hand off to less experienced team members.
@@ -48,7 +48,7 @@ Redesigned tables now include key information on checks, vulnerabilities, adviso
 
 ## Easily navigate sprawling infrastructure
 
-For Mondoo users with large infrastructures, we’ve added a new list view for spaces and workspaces, allowing you to quickly navigate hundreds and thousands of spaces. Depending on your needs, you can toggle between a tile view and a list view:
+For Mondoo users with large infrastructures, we've added a new list view for spaces and workspaces, allowing you to quickly navigate hundreds and thousands of spaces. Depending on your needs, you can toggle between a tile view and a list view:
 
 - **Tile view**: This view allows you to see the trend lines for the total priority findings in your spaces and workspaces. At a glance, you will be able to see if there are any sharp increases in trendlines, indicating rapid growth of vulnerabilities or misconfigurations in the space, so you can investigate and take immediate action if necessary.
 
@@ -60,7 +60,7 @@ For Mondoo users with large infrastructures, we’ve added a new list view for s
 
 ## Take control of exceptions
 
-There will be times when you’ll need to remove an exception, even if it has already been approved. Now you can remove approved exceptions from the exceptions page or policy/asset/finding exception tabs. Once an exception has been removed, checks will be applied and scores updated.
+There will be times when you'll need to remove an exception, even if it has already been approved. Now you can remove approved exceptions from the exceptions page or policy/asset/finding exception tabs. Once an exception has been removed, checks will be applied and scores updated.
 
 ![Removing an exception from Mondoo](/img/release-highlights/2025-07/remove_exception.png)
 
@@ -68,11 +68,11 @@ A new space setting now also allows you to specify whether you want exceptions t
 
 ![Specify whether you want exceptions to apply immediately or require approval](/img/release-highlights/2025-07/exception_setting.png)
 
-Finally, it’s easier to understand how exceptions impact asset security scores, with improved exception visibility at the assets level, including exceptions set in policies that are applied to those assets.
+Finally, it's easier to understand how exceptions impact asset security scores, with improved exception visibility at the assets level, including exceptions set in policies that are applied to those assets.
 
 ## Other improvements
 
-Further enhancements we’ve worked on in July:
+Further enhancements we've worked on in July:
 
 - Red Hat OpenShift Virtualization detection.
 - A new simplified interface for setting user roles in organizations and spaces.
@@ -81,4 +81,4 @@ Further enhancements we’ve worked on in July:
 - A new `mondoo.com/internet-exposed`: "true asset annotation allows you to define any asset as internet exposed for risk factor calculation.
 - Improved CLI output makes it easier to quickly see which checks are failing and which are passing.
 
-That’s a wrap for our July updates! Check back to see what’s new in August.
+That's a wrap for our July updates! Check back to see what's new in August.

@@ -16,11 +16,11 @@ date: 2025-05-09
 
 With the [Mondoo MCP server](https://mondoo.com/blog/introducing-mcp-for-mondoo-unlocking-ai-to-fix-cves-faster), you can now use your favorite AI assistant, such as ChatGPT, Anthropic's Claude or GitHub Copilot to access Mondoo security data for real-time answers and faster vulnerability resolution. Imagine asking your favorite LLM to find and fix critical security findings. With Mondoo's MCP, this is now a reality. Watch the video to see it in action [Mondoo MCP: Use your favorite AI assistant to communicate with Mondoo](https://www.youtube.com/watch?v=WjVhLmk2TFQ)
 
-Mondoo MCP Server is available for private preview for Mondoo customers, please contact your customer success manager if you’d like to try it out.
+Mondoo MCP Server is available for private preview for Mondoo customers, please contact your customer success manager if you'd like to try it out.
 
-## Critical vulnerabilities can’t hide from Mondoo
+## Critical vulnerabilities can't hide from Mondoo
 
-Last month we unveiled our all-new vulnerability detection engine. Now that we launched the new codebase we’ve kicked things into high gear this month with new vulnerability detection capabilities. Mondoo now includes vulnerability detection for Python, NodeJS, Google COS, and even Kubernetes installations.
+Last month we unveiled our all-new vulnerability detection engine. Now that we launched the new codebase we've kicked things into high gear this month with new vulnerability detection capabilities. Mondoo now includes vulnerability detection for Python, NodeJS, Google COS, and even Kubernetes installations.
 
 Along with these new capabilities we improved the parsing of vendor advisories, added support for AIX efixes, improved support for third-party vulnerability data from systems like SentinelOne, and improved the reliability of software detection on assets. Stay tuned for even more expanded vulnerability detection capabilities coming to the platform soon.
 
@@ -38,19 +38,19 @@ Unlike other platforms that use many different modules - all with their own exce
 
 ## Space-wide exceptions for checks, advisories, and CVEs
 
-With the launch of the new Exceptions page, users can now create space-wide exceptions for security checks, vendor advisories, and CVEs. This makes it easier for teams to prioritize what matters by snoozing or disabling entire classes of findings across a space. It’s especially useful for aligning with internal risk tolerances or temporarily deferring non-critical work during high-pressure sprints or audits.
+With the launch of the new Exceptions page, users can now create space-wide exceptions for security checks, vendor advisories, and CVEs. This makes it easier for teams to prioritize what matters by snoozing or disabling entire classes of findings across a space. It's especially useful for aligning with internal risk tolerances or temporarily deferring non-critical work during high-pressure sprints or audits.
 
 ![Creating an exception on a CVE](/img/release-highlights/2025-04/exceptions_modal.png)
 
 ## Easily deploy Mondoo at scale using WIF
 
-We’ve introduced Workload Identity Federation (WIF) support, making Mondoo deployment easier than ever. This removes the need to manage Mondoo credentials at scale. Zero-configuration, zero-trust, fully secure Mondoo clients allowing you to add Mondoo Policy-as-code to 6,000 pipelines in a day.
+We've introduced Workload Identity Federation (WIF) support, making Mondoo deployment easier than ever. This removes the need to manage Mondoo credentials at scale. Zero-configuration, zero-trust, fully secure Mondoo clients allowing you to add Mondoo Policy-as-code to 6,000 pipelines in a day.
 
 ![WIF configuration](/img/release-highlights/2025-04/wif.png)
 
 ## Increased detection of exposed risks
 
-Mondoo’s risk factors allow us to raise, or lower, the priority of vulnerabilities or security findings so you can focus on the most important work first. This month we expanded our risk factors capabilities with new expanded cloud internet exposures including:
+Mondoo's risk factors allow us to raise, or lower, the priority of vulnerabilities or security findings so you can focus on the most important work first. This month we expanded our risk factors capabilities with new expanded cloud internet exposures including:
 
 - Public S3 Buckets
 - RDS Instances / Clusters with public endpoints
@@ -59,7 +59,7 @@ Mondoo’s risk factors allow us to raise, or lower, the priority of vulnerabili
 
 ![Public S3 bucket with risk factor](/img/release-highlights/2025-04/s3_bucket.png)
 
-In addition, if a CVE is remotely exploitable, we mark it with the new ‘Remotely exploitable vulnerability’ risk factor and increase the risk score.
+In addition, if a CVE is remotely exploitable, we mark it with the new 'Remotely exploitable vulnerability' risk factor and increase the risk score.
 
 ![Remotely exploitable vulnerability risk factor](/img/release-highlights/2025-04/remote_code_exploit.png)
 
@@ -77,13 +77,13 @@ Generate reports on a specific CVE or advisory to find more information about th
 
 ## New and updated policies
 
-Policies are at the core of detecting security misconfigurations, and this month we’ve expanded Mondoo’s scanning capabilities with a wave of powerful new and updated policies.
+Policies are at the core of detecting security misconfigurations, and this month we've expanded Mondoo's scanning capabilities with a wave of powerful new and updated policies.
 
 - New CIS AIX 7 benchmark policy – New checks, improved remediation steps, and support for all versions of AIX 7
 - New Google Cloud Cost Control Policy – A new policy to avoid unwanted cloud spend by enforcing corporate standards in CI Terraform pipelines
 - New Google Cloud Tagging Policy – A new policy to enforce corporate tagging standards on assets before they reach production via CI Terraform scanning.
 
-We’ve completely rewritten our Mondoo policies for GCP and AWS from the ground up, adding over a dozen new checks focused on your most critical cloud assets. Every existing check has been refined with clearer descriptions and detailed remediation steps across the cloud console, CLI, Terraform, and CloudFormation. To help teams catch misconfigurations early, both policies now include full support for scanning Infrastructure as Code, making it easy to integrate Mondoo directly into your CI pipelines.
+We've completely rewritten our Mondoo policies for GCP and AWS from the ground up, adding over a dozen new checks focused on your most critical cloud assets. Every existing check has been refined with clearer descriptions and detailed remediation steps across the cloud console, CLI, Terraform, and CloudFormation. To help teams catch misconfigurations early, both policies now include full support for scanning Infrastructure as Code, making it easy to integrate Mondoo directly into your CI pipelines.
 
 ## Improved creation of spaces using cloud tags and Mondoo annotations
 

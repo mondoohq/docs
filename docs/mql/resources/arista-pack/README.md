@@ -19,8 +19,8 @@ Resources included in this pack:
 | [arista.eos.ipInterface](arista.eos.ipinterface.md)                     | Arista EOS IP interface                                                      |
 | [arista.eos.ntpSetting](arista.eos.ntpsetting.md)                       | Arista EOS NTP information resource                                          |
 | [arista.eos.role](arista.eos.role.md)                                   | Arista EOS role resource                                                     |
-| [arista.eos.runningConfig](arista.eos.runningconfig.md)                 | Arista EOS system’s operating configuration                                  |
-| [arista.eos.runningConfig.section](arista.eos.runningconfig.section.md) | Arista EOS system’s operating configuration for a specific section           |
+| [arista.eos.runningConfig](arista.eos.runningconfig.md)                 | Arista EOS system's operating configuration                                  |
+| [arista.eos.runningConfig.section](arista.eos.runningconfig.section.md) | Arista EOS system's operating configuration for a specific section           |
 | [arista.eos.snmpSetting](arista.eos.snmpsetting.md)                     | Arista EOS SNMP information resource                                         |
 | [arista.eos.spt.mstInterface](arista.eos.spt.mstinterface.md)           | Multiple Spanning Tree Protocol (MSTP) information for a specified interface |
 | [arista.eos.stp](arista.eos.stp.md)                                     | Arista Spanning Tree Protocol (STP) resource                                 |

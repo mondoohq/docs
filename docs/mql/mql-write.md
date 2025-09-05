@@ -484,9 +484,9 @@ password.length.inRange(9, 15)
 
 :::
 
-Although MQL is type-safe and compiled, it’s also forgiving. You can easily express your assertions without having to fight with the type-safety.
+Although MQL is type-safe and compiled, it's also forgiving. You can easily express your assertions without having to fight with the type-safety.
 
-Here’s a simple example:
+Here's a simple example:
 
 ```coffee
 a = 2
@@ -495,7 +495,7 @@ b = "2"
 a == 2 && b == 2
 ```
 
-Here’s a real-world example:
+Here's a real-world example:
 
 ```coffee
 sshd.config.params["Port"] == 22
@@ -622,7 +622,7 @@ To learn about all the pre-build expressions, read the [`regex`](/mql/resources/
 
 #### Time
 
-MQL’s built-in time functions make these assertions easy:
+MQL's built-in time functions make these assertions easy:
 
 ```coffee
 time.now
@@ -844,7 +844,7 @@ The available assertions for maps are:
 
 _Dicts_ are similar to maps but have one key difference: Maps are statically typed ahead of time; they have known value types.
 
-That’s not the case when you process unknown data such as JSON. This presents a challenge, and the solution is `dict`:
+That's not the case when you process unknown data such as JSON. This presents a challenge, and the solution is `dict`:
 
 ```coffee
 > parse.json("my.json")
@@ -1013,13 +1013,13 @@ hosts.all(
 
 This call checks all TLS ciphers on all the hosts that were previously defined. Such calls can take a while to execute if done serially. However, MQL looks for the entry points where data is being processed and executes those in parallel. In the example above, the TLS requests to all hosts will run in parallel and aggregate.
 
-It doesn’t matter if the data is retrieved from an API, file, system command or other call; MQL always executes calls in parallel.
+It doesn't matter if the data is retrieved from an API, file, system command or other call; MQL always executes calls in parallel.
 
 You don't have to configure or think about concurrency or parallel value assignment in MQL; concurrency is automatic on all available streams.
 
 ## Embedding
 
-It’s easy to embed MQL in your code.
+It's easy to embed MQL in your code.
 
 ### CLI
 
@@ -1148,7 +1148,7 @@ cnspec shell azure
 cnspec shell k8s
 ```
 
-When you connect, you’ll see a banner confirming the provider and the asset you are connected to.
+When you connect, you'll see a banner confirming the provider and the asset you are connected to.
 
 ---
 
@@ -1225,12 +1225,12 @@ Built-ins are the core language features that let you filter, transform, and mak
 
 Think of built-ins as the verbs of MQL:
 
-- `.where()` narrows down what you’re looking at.
+- `.where()` narrows down what you're looking at.
 - `.map()` transforms the results.
 - `.all()`, `.any()`, `.none()`, `.one()` let you assert truth over collections.
 - `.list`, `.length`, and `.containsOnly` help you structure and compare results.
 
-In the following sections we’ll explore each built-in in detail, with examples you can run in the shell. You’ll see both policy-style checks and inventory-style queries so you can use them in compliance scenarios as well as live investigation.
+In the following sections we'll explore each built-in in detail, with examples you can run in the shell. You'll see both policy-style checks and inventory-style queries so you can use them in compliance scenarios as well as live investigation.
 
 ## Quick Reference for MQL Built-ins
 

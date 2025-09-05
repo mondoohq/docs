@@ -7,7 +7,7 @@ description: This page provides details on registering cnspec with Mondoo Platfo
 image: /img/featured_img/mondoo-feature.jpg
 ---
 
-If you install cnspec on an asset using a system package instead of Mondoo’s automated installation script, you must register the asset manually.
+If you install cnspec on an asset using a system package instead of Mondoo's automated installation script, you must register the asset manually.
 
 :::note
 

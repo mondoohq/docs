@@ -3,7 +3,7 @@ title: arista.eos.runningConfig.section
 id: arista.eos.runningConfig.section
 sidebar_label: arista.eos.runningConfig.section
 displayed_sidebar: MQL
-description: Arista EOS system’s operating configuration for a specific section
+description: Arista EOS system's operating configuration for a specific section
 ---
 
 # arista.eos.runningConfig.section
@@ -14,7 +14,7 @@ description: Arista EOS system’s operating configuration for a specific sectio
 
 **Description**
 
-Arista EOS system’s operating configuration for a specific section
+Arista EOS system's operating configuration for a specific section
 
 **Fields**
 

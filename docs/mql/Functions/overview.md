@@ -12,12 +12,12 @@ Built-ins are the core language features that let you filter, transform, and mak
 
 Think of built-ins as the verbs of MQL:
 
-- `.where()` narrows down what you’re looking at.
+- `.where()` narrows down what you're looking at.
 - `.map()` transforms the results.
 - `.all()`, `.any()`, `.none()`, `.one()` let you assert truth over collections.
 - `.list`, `.length`, and `.containsOnly` help you structure and compare results.
 
-In the following sections we’ll explore each built-in in detail, with examples you can run in the shell. You’ll see both policy-style checks and inventory-style queries so you can use them in compliance scenarios as well as live investigation.
+In the following sections we'll explore each built-in in detail, with examples you can run in the shell. You'll see both policy-style checks and inventory-style queries so you can use them in compliance scenarios as well as live investigation.
 
 ## MQL Built-in Functions
 

@@ -1,28 +1,28 @@
 ---
 title: Mondoo Release Highlights June 2025
 sidebar_label: June Highlights
-description: It’s been a scorching month of June but that hasn’t stopped the Mondoo engineering team. This month we focused on supporting new operating systems, platforms, and CIS benchmarks. Plus, we've enhanced our UI for faster remediation with improved exception management and direct links to assets. Read the blog to get all the details.
+description: It's been a scorching month of June but that hasn't stopped the Mondoo engineering team. This month we focused on supporting new operating systems, platforms, and CIS benchmarks. Plus, we've enhanced our UI for faster remediation with improved exception management and direct links to assets. Read the blog to get all the details.
 authors: [tim]
 image: /img/release-highlights/2025-06/banner.png
 tags: [release, mondoo]
 date: 2025-07-15
 ---
 
-#### It’s been a scorching month of June but that hasn’t stopped the Mondoo engineering team. This month we focused on supporting new operating systems, platforms, and CIS benchmarks. Plus, we've enhanced our UI for faster remediation with improved exception management and direct links to assets. Read the blog to get all the details.
+#### It's been a scorching month of June but that hasn't stopped the Mondoo engineering team. This month we focused on supporting new operating systems, platforms, and CIS benchmarks. Plus, we've enhanced our UI for faster remediation with improved exception management and direct links to assets. Read the blog to get all the details.
 
 ![Mondoo Release Highlights June 2025](/img/release-highlights/2025-06/banner.png)
 
 ## Thirty providers and counting
 
-We’ve now reached 30 providers in Mondoo and passed the 1,000 mark in resources with a new total of 1,026! Mondoo uses providers for each technology that Mondoo cnquery scans. Mondoo providers include AWS, GCP, Azure, Kubernetes, OCI, VMware, containers, Windows, macOS, and Linux operating systems, GitHub, GitLab, Okta, M365, Google Workspace, Slack, IaC, domains, and more.
+We've now reached 30 providers in Mondoo and passed the 1,000 mark in resources with a new total of 1,026! Mondoo uses providers for each technology that Mondoo cnquery scans. Mondoo providers include AWS, GCP, Azure, Kubernetes, OCI, VMware, containers, Windows, macOS, and Linux operating systems, GitHub, GitLab, Okta, M365, Google Workspace, Slack, IaC, domains, and more.
 
-Resources inspect asset configuration details, including information about infrastructure and operating systems, users, packages, files, cloud asset configurations, and more, depending on the specific resource type and platform. Spoiler alert: we’re going to be adding many exciting new providers and resources in the coming months!
+Resources inspect asset configuration details, including information about infrastructure and operating systems, users, packages, files, cloud asset configurations, and more, depending on the specific resource type and platform. Spoiler alert: we're going to be adding many exciting new providers and resources in the coming months!
 
 ## Microsoft 365 CIS benchmark 5.0
 
 [Microsoft 365 CIS benchmark 5.0](https://mondoo.com/blog/microsoft-365-cis-benchmark-5-0-what-you-need-to-know) is here with added checks and improved remediation instructions. Version 5.0 is a significant update from the previous version and adds many new guidelines and remediations.
 
-Another important improvement is that we’ve now fully automated the Microsoft 365 setup process, allowing you to get up and running quickly and saving hours of manual work that is often required by other security tools integrating with M365.
+Another important improvement is that we've now fully automated the Microsoft 365 setup process, allowing you to get up and running quickly and saving hours of manual work that is often required by other security tools integrating with M365.
 
 This month we also added a new Microsoft 365 inventory pack (a collection of pre-defined queries designed to gather specific information about your M365 assets). This additional information is included in the M365 asset overview, including services, applications, user accounts, permissions, sharing settings, and security configurations.
 
@@ -30,7 +30,7 @@ This month we also added a new Microsoft 365 inventory pack (a collection of pre
 
 ## New LinuxONE support
 
-Mondoo now [supports IBM LinuxONE](https://mondoo.com/blog/mondoo-offers-security-and-compliance-for-ibm-linuxone-workloads) (including Red Hat, Ubuntu, and SUSE on Z), providing unified and automated security and compliance for mission-critical workloads and hybrid cloud environments. Mondoo’s unique ability to cover cloud and on-prem from a single user interface as well as automate policy creation and remediation processes, allows IBM LinuxONE users to reduce manual work and accelerate remediation- significantly improving their security posture.
+Mondoo now [supports IBM LinuxONE](https://mondoo.com/blog/mondoo-offers-security-and-compliance-for-ibm-linuxone-workloads) (including Red Hat, Ubuntu, and SUSE on Z), providing unified and automated security and compliance for mission-critical workloads and hybrid cloud environments. Mondoo's unique ability to cover cloud and on-prem from a single user interface as well as automate policy creation and remediation processes, allows IBM LinuxONE users to reduce manual work and accelerate remediation- significantly improving their security posture.
 
 Mondoo also covers [AIX and IBM Power Systems](https://mondoo.com/blog/mondoo-detects-and-fixes-critical-ibm-aix-vulnerabilities-cve-2024-56346-and-cve-2024-56347) which many enterprises still run in addition to LinuxONE, enabling all systems to be secured from one platform.
 
@@ -43,7 +43,7 @@ Mondoo also covers [AIX and IBM Power Systems](https://mondoo.com/blog/mondoo-de
 
 ## Expanded SLES Support
 
-This month we’ve expanded our support for SUSE Linux Enterprise Server (SLES). Track the end of life status or your SLES install no matter what version you run with EOL support for SUSE for SAP and SLES Long Term Service Pack Support (LTSS). Expose critical weaknesses in your systems with the newly updated CIS SLES 15 2.0.1 benchmark policy which includes 22 new checks and improved remediation instructions.
+This month we've expanded our support for SUSE Linux Enterprise Server (SLES). Track the end of life status or your SLES install no matter what version you run with EOL support for SUSE for SAP and SLES Long Term Service Pack Support (LTSS). Expose critical weaknesses in your systems with the newly updated CIS SLES 15 2.0.1 benchmark policy which includes 22 new checks and improved remediation instructions.
 
 ## CIS Windows 2025 server benchmark 1.0
 
@@ -58,13 +58,13 @@ We added 6 all-new CIS benchmark policies for the latest Windows Server 2025 rel
 
 ## See historical trends for spaces and workspaces
 
-Mondoo dashboards now allow you to track progress and catch anomalies in Mondoo spaces and workspaces by viewing the trend of total priority findings over the last 28 days. The asset count is also displayed so you can compare trends and detect peaks and dips. This allows you to get granular insights into progress across team, location, technology, focus, and any other way you’ve configured your Mondoo workspaces.
+Mondoo dashboards now allow you to track progress and catch anomalies in Mondoo spaces and workspaces by viewing the trend of total priority findings over the last 28 days. The asset count is also displayed so you can compare trends and detect peaks and dips. This allows you to get granular insights into progress across team, location, technology, focus, and any other way you've configured your Mondoo workspaces.
 
 ![The Mondoo dashboard shows trends in asset count and priority findings for each space](/img/release-highlights/2025-06/historical_data.png)
 
 ## Open asset directly from findings
 
-An important way to achieve faster remediation is by reducing your investigation time. We’ve now made it easier to directly access the asset that Mondoo is alerting you to so you can quickly do further investigations if needed. By including a button in the configuration overview for the asset, it’s now just one click away to go to the source of truth. We already included links for AWS assets, but we’ve now also added links for the following asset types:
+An important way to achieve faster remediation is by reducing your investigation time. We've now made it easier to directly access the asset that Mondoo is alerting you to so you can quickly do further investigations if needed. By including a button in the configuration overview for the asset, it's now just one click away to go to the source of truth. We already included links for AWS assets, but we've now also added links for the following asset types:
 
 - GCP
 - Azure
@@ -81,13 +81,13 @@ If you want to automate processes effectively, the ability to set exceptions is 
 
 - **Exceptions approval process**: By default, exceptions now require an approval before they take effect. This can be turned off with a space setting if you want to keep immediate exception application.
 
-- **Exception approver role**: We’ve added a Mondoo user role that has the ability to approve and deny exceptions so you can assign approves no matter their Mondoo base role.
+- **Exception approver role**: We've added a Mondoo user role that has the ability to approve and deny exceptions so you can assign approves no matter their Mondoo base role.
 
 - **Improved compliance views**: Better understand exceptions set on checks, vulnerabilities, and exceptions with a new simplified exceptions list view so you can easily see multiple exceptions and sort them however you need.
 
 - **New exception types in Compliance**: Exceptions have been expanded for compliance controls, and now include Risk Accepted, Workaround, False Positive, and Disable.
 
-- **UI enhancements**: Changes are now instantly shown when you set exceptions (spinners, state changes, and updates to tables). Space/workspace dashboards include the latest exceptions in all graphs. And there’s a new simplified view in exceptions tabs on findings and assets.
+- **UI enhancements**: Changes are now instantly shown when you set exceptions (spinners, state changes, and updates to tables). Space/workspace dashboards include the latest exceptions in all graphs. And there's a new simplified view in exceptions tabs on findings and assets.
 
 ## Support for the latest Linux versions
 

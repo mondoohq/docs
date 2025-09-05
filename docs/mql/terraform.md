@@ -8,7 +8,7 @@ image: /img/featured_img/mondoo-feature.jpg
 
 :::tip
 
-This guide shows you how to write effective Mondoo MQL checks against Terraform HCL, Terraform Plan (JSON), and Terraform State (JSON). Throughout, we’ll use the `cnspec shell` as interactive development environment to connect to Terraform content and iterate on queries quickly.
+This guide shows you how to write effective Mondoo MQL checks against Terraform HCL, Terraform Plan (JSON), and Terraform State (JSON). Throughout, we'll use the `cnspec shell` as interactive development environment to connect to Terraform content and iterate on queries quickly.
 
 :::
 
@@ -18,7 +18,7 @@ When teams scale Terraform, Policy as Code becomes essential to guarantee securi
 - Terraform Plan (JSON) (the proposed changes).
 - Terraform State (JSON) (what exists according to Terraform).
 
-In this guide you’ll:
+In this guide you'll:
 
 - Install and use the Mondoo Terraform provider in the `cnspec shell`.
 - Explore Terraform resources with MQL, Write checks using selectors, filters, and aggregators like `.where()` and `.all()`.
@@ -32,11 +32,11 @@ What are Mondoo Providers?
 
 Mondoo providers are plugins for cnspec/cnquery that let you connect Mondoo to different platforms and data sources. Each provider understands how to talk to a specific technology (like AWS, GCP, Azure, Kubernetes, or Terraform) and exposes that environment in a way you can query with MQL.
 
-Think of providers as connectors: they translate an external system’s data (cloud APIs, config files, Terraform plans, etc.) into Mondoo’s queryable objects.
+Think of providers as connectors: they translate an external system's data (cloud APIs, config files, Terraform plans, etc.) into Mondoo's queryable objects.
 
 ### The cnspec Terraform Provider
 
-Mondoo's Terraform provider for cnspec is not the same thing as a HashiCorp Terraform provider. Instead, it’s a cnspec plugin that knows how to parse Terraform data and make it available in MQL.
+Mondoo's Terraform provider for cnspec is not the same thing as a HashiCorp Terraform provider. Instead, it's a cnspec plugin that knows how to parse Terraform data and make it available in MQL.
 
 With the Terraform provider you can:
 
@@ -197,7 +197,7 @@ filters: asset.platform == "terraform-hcl" && terraform.resources.contains(nameL
 
 ## Terraform Plan (JSON)
 
-Terraform Plan checks catch misconfigurations before they land in State or production. Mondoo’s Terraform provider normalizes Plan data so your MQL patterns look the same as HCL/State—ideal for PR gating in CI.
+Terraform Plan checks catch misconfigurations before they land in State or production. Mondoo's Terraform provider normalizes Plan data so your MQL patterns look the same as HCL/State—ideal for PR gating in CI.
 
 ### Open a cnspec shell against a Plan file
 
@@ -228,7 +228,7 @@ terraform.plan.resourceChanges.where( type == "google_storage_bucket" ) { * }
 
 :::note
 
-`{ * } `expands all fields so you can see what’s present in the planned configuration.
+`{ * } `expands all fields so you can see what's present in the planned configuration.
 
 :::
 

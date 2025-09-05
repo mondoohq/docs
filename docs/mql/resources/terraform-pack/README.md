@@ -24,6 +24,7 @@ Resources included in this pack:
 | [terraform.plan.proposedChange](terraform.plan.proposedchange.md) | Terraform plan proposed change                            |
 | [terraform.plan.resourceChange](terraform.plan.resourcechange.md) | Terraform plan resource change                            |
 | [terraform.plan.variable](terraform.plan.variable.md)             | Terraform plan variable                                   |
+| [terraform.resources](terraform.resources.md)                     | All blocks with the type resource                         |
 | [terraform.settings](terraform.settings.md)                       | Terraform settings                                        |
 | [terraform.state](terraform.state.md)                             | Terraform state                                           |
 | [terraform.state.module](terraform.state.module.md)               | Terraform state module                                    |

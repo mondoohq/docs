@@ -18,14 +18,12 @@ Amazon VPC Peering Connection Peering VPC
 
 **Fields**
 
-| ID                                         | TYPE                  | DESCRIPTION                                                                        |
-| ------------------------------------------ | --------------------- | ---------------------------------------------------------------------------------- |
-| allowDnsResolutionFromRemoteVpc            | bool                  | Whether DNS resolution from the remote VPC is allowed                              |
-| allowEgressFromLocalClassicLinkToRemoteVpc | bool                  | Whether egress is allowed from a local classic link to the remote VPC              |
-| allowEgressFromLocalVpcToRemoteClassicLink | bool                  | Whether egress is allowed from a local VPC to a classic link                       |
-| ipv4CiderBlocks                            | &#91;&#93;string      | List of IPv4 CIDR blocks for peering connection                                    |
-| ipv6CiderBlocks                            | &#91;&#93;string      | List of IPv6 CIDR blocks for peering connection                                    |
-| ownerID                                    | string                | Owner ID of the peering connection                                                 |
-| region                                     | string                | Region of the peering connection                                                   |
-| vpc                                        | [aws.vpc](aws.vpc.md) | VPC associated with the peering connection (populated if it's in the same account) |
-| vpcId                                      | string                | ID of the VPC associated with the peering connection                               |
+| ID                              | TYPE                  | DESCRIPTION                                                                        |
+| ------------------------------- | --------------------- | ---------------------------------------------------------------------------------- |
+| allowDnsResolutionFromRemoteVpc | bool                  | Whether DNS resolution from the remote VPC is allowed                              |
+| ipv4CiderBlocks                 | &#91;&#93;string      | List of IPv4 CIDR blocks for peering connection                                    |
+| ipv6CiderBlocks                 | &#91;&#93;string      | List of IPv6 CIDR blocks for peering connection                                    |
+| ownerID                         | string                | Owner ID of the peering connection                                                 |
+| region                          | string                | Region of the peering connection                                                   |
+| vpc                             | [aws.vpc](aws.vpc.md) | VPC associated with the peering connection (populated if it's in the same account) |
+| vpcId                           | string                | ID of the VPC associated with the peering connection                               |

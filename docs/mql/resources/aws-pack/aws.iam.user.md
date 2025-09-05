@@ -25,7 +25,6 @@ The `aws.iam.user` resource provides fields for assessing the configuration of i
 | arn              | string                                          | ARN of the IAM user                                   |
 | id               | string                                          | ID of the IAM user                                    |
 | name             | string                                          | Name of the user                                      |
-| createDate       | time                                            | Time when user was created: deprecated, use createdAt |
 | createdAt        | time                                            | Time when user was created                            |
 | passwordLastUsed | time                                            | Time when password was last used                      |
 | tags             | map[string]string                               | Tags for the IAM user                                 |

@@ -30,7 +30,6 @@ Terraform configuration files
 | blocks      | &#91;&#93;[terraform.block](terraform.block.md)   | Raw HCL blocks                                              |
 | providers   | &#91;&#93;[terraform.block](terraform.block.md)   | Provider blocks                                             |
 | datasources | &#91;&#93;[terraform.block](terraform.block.md)   | Data sources blocks                                         |
-| resources   | &#91;&#93;[terraform.block](terraform.block.md)   | All blocks with the type resource                           |
 | variables   | &#91;&#93;[terraform.block](terraform.block.md)   | Variable blocks                                             |
 | outputs     | &#91;&#93;[terraform.block](terraform.block.md)   | Output blocks                                               |
 

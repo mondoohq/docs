@@ -29,4 +29,3 @@ The `aws.guardduty.detector` resource provides fields for assessing the configur
 | tags                       | map[string]string                                           | Tags for the project                        |
 | findingPublishingFrequency | string                                                      | Publishing frequency for the detector       |
 | findings                   | &#91;&#93;[aws.guardduty.finding](aws.guardduty.finding.md) | List of active findings by the detector     |
-| unarchivedFindings         | &#91;&#93;dict                                              | Deprecated (use `findings` instead)         |

@@ -22,9 +22,7 @@ Use the `aws.rds` resource to assess the configuration of AWS RDS deployments. T
 
 | ID                           | TYPE                                                                              | DESCRIPTION                                                       |
 | ---------------------------- | --------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
-| dbInstances                  | &#91;&#93;[aws.rds.dbinstance](aws.rds.dbinstance.md)                             | Deprecated: Use `instances` instead                               |
 | instances                    | &#91;&#93;[aws.rds.dbinstance](aws.rds.dbinstance.md)                             | List of database instances                                        |
-| dbClusters                   | &#91;&#93;[aws.rds.dbcluster](aws.rds.dbcluster.md)                               | Deprecated: Use `clusters` instead                                |
 | clusters                     | &#91;&#93;[aws.rds.dbcluster](aws.rds.dbcluster.md)                               | List of RDS database clusters                                     |
 | allPendingMaintenanceActions | &#91;&#93;[aws.rds.pendingMaintenanceAction](aws.rds.pendingmaintenanceaction.md) | List of all pending maintenance actions for the database instance |
 | parameterGroups              | &#91;&#93;[aws.rds.parameterGroup](aws.rds.parametergroup.md)                     | List of all parameter groups                                      |
@@ -35,19 +33,19 @@ Use the `aws.rds` resource to assess the configuration of AWS RDS deployments. T
 Check whether RDS DB instances have backups enabled
 
 ```coffee
-aws.rds.dbInstances.all(snapshots.length > 0)
+aws.rds.instances.all(snapshots.length > 0)
 ```
 
 Check whether high availability is enabled for all rds instances
 
 ```coffee
-aws.rds.dbInstances.all(multiAZ == true)
+aws.rds.instances.all(multiAZ == true)
 ```
 
 Return a list of RDS Clusters across all regions where snapshots are not encrypted and return the `arn` `region` and `id` for the cluster
 
 ```coffee
-aws.rds.dbClusters { snapshots.where( encrypted == false) } { arn region id }
+aws.rds.clusters { snapshots.where( encrypted == false) } { arn region id }
 ```
 
 **References**

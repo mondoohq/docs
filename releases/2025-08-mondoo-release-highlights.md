@@ -78,9 +78,39 @@ We're always adding more remediation instructions to our platform, including cod
 We made the following improvements to our Mondoo Query Language (MQL) to further simplify writing custom policies in cnspec.
 
 - New option to define 'check impact' with human friendly values (critical, high, low, and none) instead of just using numeric values.
-- Added new `.first` and `.last` MQL helpers for grabbing the first or last output from a resource (For example: users.first)
-- Slowly roll new custom checks to your users DEETS
-- Improved the policy linter to better discover incorrectly formatted policies or MQL queries
+- Added new `.first` and `.last` MQL helpers for grabbing the first or last output from a resource (For example: users.first).
+- Discover malformed policies the easy way with improved query linting in cnspec.
+- Roll out checks that warn but don't immediately impact asset scores with new overrides directly in your policies:
+
+  ```yaml
+  policies:
+  - uid: example1
+      name: Example policy 1
+      groups:
+      - filters:
+          - mql: asset.family.contains('unix')
+          checks:
+          - uid: check-05
+              title: SSHd should only use very secure ciphers
+              mql: |
+              sshd.config.ciphers.all( _ == /ctr/ )
+              impact: 95
+
+      - type: override
+          title: Exception for strong ciphers until September
+          valid:
+          until: 2025-09-01
+          checks:
+          - uid: check-05
+              action: preview
+  ```
+
+  This displays as a remediation deadline when scanning on the command line:
+
+  ```text
+  Remediation deadline: 2025/08/31 (in a month)
+  ✕ CRITICAL (5):   SSHd should only use very secure ciphers
+  ```
 
 ## Exceptions management
 
@@ -98,6 +128,7 @@ Other notable enhancements that we added in August:
 
 - The Mondoo GCP security policy now includes checks for the Cloud Key Management Service (KMS), that manages cryptographic keys to secure data within cloud environments and applications.
 - “Host” assets like mondoo.com now include the proper custom icon in affected asset tables.
-- DEETS
+- Expose AWS EKS Cluster deletion protection status a new resource field: `aws.eks.cluster.deletionProtection`.
+- Scan any valid resources within a malformed Kubernetes manifest file.
 
 That's it for August. We hope you're enjoying all our new additions and improvements, and we're looking forward to showing you everything we're working on next in September!

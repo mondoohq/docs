@@ -12,7 +12,6 @@ The network discovery resource pack lets you use MQL to query and assess the sec
 
 Resources included in this pack:
 
-| ID                                                    | DESCRIPTION                                 |
-| ----------------------------------------------------- | ------------------------------------------- |
-| [networkdiscovery](networkdiscovery.md)               | Network discovery for subdomain enumeration |
-| [networkdiscovery.domain](networkdiscovery.domain.md) | Network Discovery Domain                    |
+| ID                                                    | DESCRIPTION              |
+| ----------------------------------------------------- | ------------------------ |
+| [networkdiscovery.domain](networkdiscovery.domain.md) | Network Discovery Domain |

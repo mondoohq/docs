@@ -6,7 +6,7 @@ description: Staying ahead of evolving security threats requires both deeper vis
 authors: [tim]
 image: /img/release-highlights/2025-08/banner.png
 tags: [release, mondoo]
-date: 2025-09-05
+date: 2025-09-04
 ---
 
 #### Staying ahead of evolving security threats requires both deeper visibility and faster, more effective remediation. This month, we've expanded our vulnerability detections, added more Ansible, Bash, and Terraform remediation snippets, and included the latest CIS benchmarks to strengthen security and compliance. We've also added some enhancements to the Mondoo Query Language (MQL) to further simplify the creation of custom policies. These improvements are all about helping your team save time, remediate faster, reduce risk, and stay ahead of attackers. Let's jump in!

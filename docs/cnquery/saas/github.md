@@ -93,7 +93,9 @@ github.repository.branches.where( protected == true )
 
 ### Exit the cnquery shell
 
-To exit the cnquery shell, either press `Ctrl + D` or type `exit`.## Query a GitHub organization
+To exit the cnquery shell, either press `Ctrl + D` or type `exit`.
+
+## Query a GitHub organization
 
 To query the configuration of your GitHub organization, run this command:
 

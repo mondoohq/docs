@@ -11,3 +11,15 @@ Ensure all EC2 instances do not have a public IP address:
 ```coffee
 aws.ec2.instances.all( publicIp == empty )
 ```
+
+Example output:
+
+```
+aws.ec2.instances.all( publicIp == empty )
+[failed] [].all()
+  actual:   [
+    0: aws.ec2.instance region="us-east-1" state="running" instanceType="t2.large" instanceId="i-0684b0bfd64641234" architecture="x86_64" platformDetails="Linux/UNIX" {
+      publicIp: "54.144.152.249"
+    }
+  ]
+```

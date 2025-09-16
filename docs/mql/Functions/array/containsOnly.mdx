@@ -15,3 +15,17 @@ Ensure only `root` and `shadow` groups own `/etc/gshadow`:
   }
 }
 ```
+
+Example output:
+
+```
+["/etc/gshadow"].where(file(_).exists) {
+} } group.name.lines.containsOnly(["root","shadow"])
+where: [
+  0: {
+    file: {
+      [].containsOnly(): true
+    }
+  }
+]
+```

@@ -32,6 +32,7 @@ badssm
 baselayout
 BDc
 bdn
+bia
 bigquery
 BJHy
 bluesky
@@ -45,6 +46,8 @@ camelcase
 cavium
 cbc
 cdn
+cdp
+CDPv
 cdzrr
 certificatechains
 cfeed
@@ -117,6 +120,7 @@ gql
 gvnic
 hashs
 headerorder
+holdtime
 hostkeys
 hvm
 iac
@@ -129,7 +133,10 @@ imagetools
 imei
 infosec
 ingresstls
+Inprogress
 installassistant
+iosxe
+iosxr
 ipconfiguration
 ipsetforwardedipconfig
 ipsetreferencestatement
@@ -163,6 +170,7 @@ manageddevice
 managedrulegroupstatement
 managedzone
 MANIFESTFILE
+masterkey
 maxbackup
 maxsize
 Mbeze
@@ -184,6 +192,7 @@ Mvc
 mwezi
 myemail
 mypro
+mypubkey
 mypwd
 mysupernotexistingbucket
 mysystem
@@ -192,7 +201,9 @@ myuser
 nameterraform
 nametest
 natgateway
+netconf
 netsh
+networkdevices
 networkdiscovery
 networkinterface
 networkservice
@@ -206,6 +217,8 @@ notebookinstancedetails
 nsrecord
 nsurlsessiond
 Nsxr
+ntc
+nxos
 openssh
 openssl
 Oqi
@@ -275,6 +288,7 @@ Stupakov
 sudolog
 suki
 SXp
+tacacs
 tailscale
 targetgroup
 tde
@@ -283,6 +297,7 @@ tenantfederationconfig
 testcase
 testring
 testsuite
+textfsm
 tfblock
 Thu
 timestream
@@ -304,7 +319,9 @@ virtualmachine
 vjtestpriv
 vmaqs
 Vnet
+vrf
 Vtpm
+vty
 Vtz
 vulnerabilityassessment
 vulnerabilityassessmentsettings

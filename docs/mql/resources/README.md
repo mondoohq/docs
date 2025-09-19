@@ -31,7 +31,8 @@ Some of the resources in the operating system pack span different operating syst
 **Network resource packs:**
 These packs include resources for querying assets like hostnames, checking certificate contents, and discovering network resources.
 
-- [Network resource pack](./network-pack)
+- [Network (host/DNS/certs) resource pack](./network-pack)
+- [Network Devices resource pack](./networkdevices-pack)
 - [Network Discovery resource pack](./networkdiscovery-pack)
 
 **IaC-specific resource packs:**

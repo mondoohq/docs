@@ -175,6 +175,7 @@ maxbackup
 maxsize
 Mbeze
 mcnulty
+mcp
 meid
 memstore
 Merica
@@ -219,6 +220,7 @@ nsurlsessiond
 Nsxr
 ntc
 nxos
+onnx
 openssh
 openssl
 Oqi
@@ -229,6 +231,7 @@ pagerduty
 pcx
 Pesoa
 Pids
+pii
 pki
 pkr
 portgroup
@@ -308,6 +311,7 @@ tsuki
 UAD
 udid
 uksouth
+unicode
 unversioned
 uppercasing
 usb

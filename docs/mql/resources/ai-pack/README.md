@@ -13,7 +13,7 @@ The ai resource pack lets use AI/ML in MQL and access MCP servers.
 Resources included in this pack:
 
 | ID                                                | DESCRIPTION                                 |
-|---------------------------------------------------|---------------------------------------------|
+| ------------------------------------------------- | ------------------------------------------- |
 | [explicit.content](explicit.content.md)           | Explicit Content Detection                  |
 | [mcp](mcp.md)                                     | Model Context Protocol Provider             |
 | [mcp.prompt](mcp.prompt.md)                       | Model Context Protocol Prompt               |
@@ -27,4 +27,3 @@ Resources included in this pack:
 | [unicode](unicode.md)                             | Unicode Text Classification                 |
 | [unicode.category](unicode.category.md)           | Unicode Category Information                |
 | [unicode.charInfo](unicode.charinfo.md)           | Unicode Character Information               |
-

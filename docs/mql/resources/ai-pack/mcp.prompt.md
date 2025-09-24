@@ -15,9 +15,8 @@ Model Context Protocol Prompt
 **Fields**
 
 | ID          | TYPE           | DESCRIPTION |
-|-------------|----------------|-------------|
+| ----------- | -------------- | ----------- |
 | name        | string         | Name        |
 | title       | string         | Title       |
 | description | string         | Description |
 | arguments   | &#91;&#93;dict | Arguments   |
-

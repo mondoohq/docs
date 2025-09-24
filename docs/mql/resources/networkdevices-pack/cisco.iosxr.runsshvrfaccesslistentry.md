@@ -3,9 +3,14 @@ title: cisco.iosxr.runSshVrfAccessListEntry
 id: cisco.iosxr.runSshVrfAccessListEntry
 sidebar_label: cisco.iosxr.runSshVrfAccessListEntry
 displayed_sidebar: MQL
+description: Cisco IOS XR SSH VRF access-list from running config
 ---
 
 # cisco.iosxr.runSshVrfAccessListEntry
+
+**Description**
+
+Cisco IOS XR SSH VRF access-list from running config
 
 **Fields**
 

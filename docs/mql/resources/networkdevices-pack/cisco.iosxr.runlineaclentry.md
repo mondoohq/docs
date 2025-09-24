@@ -3,9 +3,14 @@ title: cisco.iosxr.runLineAclEntry
 id: cisco.iosxr.runLineAclEntry
 sidebar_label: cisco.iosxr.runLineAclEntry
 displayed_sidebar: MQL
+description: Cisco IOS XR Line ACL from running config
 ---
 
 # cisco.iosxr.runLineAclEntry
+
+**Description**
+
+Cisco IOS XR Line ACL from running config
 
 **Fields**
 

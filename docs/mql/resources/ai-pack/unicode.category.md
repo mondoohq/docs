@@ -15,9 +15,8 @@ Unicode Category Information
 **Fields**
 
 | ID            | TYPE   | DESCRIPTION    |
-|---------------|--------|----------------|
+| ------------- | ------ | -------------- |
 | category      | string | Category value |
 | majorCategory | string | Major Category |
 | description   | string | Description    |
 | count         | int    | Category count |
-

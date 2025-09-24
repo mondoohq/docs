@@ -3,9 +3,14 @@ title: cisco.interface
 id: cisco.interface
 sidebar_label: cisco.interface
 displayed_sidebar: MQL
+description: Cisco generic interface parser
 ---
 
 # cisco.interface
+
+**Description**
+
+Cisco generic interface parser
 
 **Init**
 

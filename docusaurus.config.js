@@ -250,7 +250,11 @@ module.exports = {
   url: "https://mondoo.com",
   baseUrl: "/docs/",
   onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "throw",
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: "throw",
+    },
+  },
   onBrokenAnchors: "throw",
   trailingSlash: "true",
   favicon: "img/favicon.png",

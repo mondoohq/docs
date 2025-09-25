@@ -3,9 +3,14 @@ title: cisco.iosxr.cdpConf
 id: cisco.iosxr.cdpConf
 sidebar_label: cisco.iosxr.cdpConf
 displayed_sidebar: MQL
+description: Cisco IOS XR CDP configuration from `show cdp`
 ---
 
 # cisco.iosxr.cdpConf
+
+**Description**
+
+Cisco IOS XR CDP configuration from `show cdp`
 
 **Fields**
 

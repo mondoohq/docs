@@ -19,7 +19,6 @@ prompt.injection(input string)
 **Fields**
 
 | ID      | TYPE           | DESCRIPTION |
-|---------|----------------|-------------|
+| ------- | -------------- | ----------- |
 | input   | string         | Input text  |
 | results | &#91;&#93;dict | Results     |
-

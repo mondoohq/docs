@@ -28,6 +28,9 @@ The core pack is essential for queries and checks against many different systems
 [**Operating system resource pack:**](./os-pack)
 Some of the resources in the operating system pack span different operating systems, while others are specific to a single operating system.
 
+[**AI resource pack:**](./ai-pack)
+Secure AI MCP servers and use AI within any MQL query using resources in the AI resource pack.
+
 **Network resource packs:**
 These packs include resources for querying assets like hostnames, checking certificate contents, and discovering network resources.
 

@@ -15,8 +15,7 @@ Model Context Protocol Resource
 **Fields**
 
 | ID          | TYPE   | DESCRIPTION |
-|-------------|--------|-------------|
+| ----------- | ------ | ----------- |
 | name        | string | Name        |
 | title       | string | Title       |
 | description | string | Description |
-

@@ -15,9 +15,8 @@ Model Context Protocol Tool
 **Fields**
 
 | ID          | TYPE                                          | DESCRIPTION      |
-|-------------|-----------------------------------------------|------------------|
+| ----------- | --------------------------------------------- | ---------------- |
 | name        | string                                        | Name             |
 | description | string                                        | Description      |
 | annotations | dict                                          | Tool annotations |
 | inputSchema | [mcp.toolInputSchema](mcp.toolinputschema.md) | Tool schema      |
-

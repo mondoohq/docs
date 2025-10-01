@@ -59,11 +59,11 @@
   },
   "devDependencies": {
     "@docusaurus/tsconfig": "^3.9.1",
-    "@types/react": "^19.1.15",
+    "@types/react": "^19.1.16",
     "@types/react-helmet": "^6.1.11",
     "@types/react-router-dom": "^5.3.3",
     "prettier": "3.6.2",
-    "typescript": "^5.9.2"
+    "typescript": "^5.9.3"
   },
   "engines": {
     "node": ">=22.0"

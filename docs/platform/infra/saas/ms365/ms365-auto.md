@@ -90,7 +90,7 @@ Mondoo begins scanning your Microsoft 365 resources. When it completes, you can 
 The application certificate, that was created as part of adding the Microsoft 365 integration, only has a limited lifetime (by default 1 year). When this certificate has expired the integration will no longer function.
 Renewing the application certificate can be done from the Azure CLI:
 
-1. Go to the app registration you created for Mondoo as part of the integration. Copy the application ID for the next steps.
+1. Navigate to the app registration you created for Mondoo as part of the integration. Copy the application ID for the next steps.
 
 2. Open the Azure Cloud Shell (top right of the window). We will be renewing the certificate with a newly created one.
 

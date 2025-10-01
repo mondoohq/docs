@@ -109,7 +109,7 @@ To learn more, read [Assess Google Workspace Security with cnspec](/cnspec/saas/
 cnspec scan atlassian jira --host HOST_URL --user USER@DOMAIN --user-token YOUR_TOKEN
 ```
 
-#### Scan Microsoft 365 (MS 365)
+#### Scan Microsoft 365 (M365)
 
 ```bash
 cnspec scan ms365 --certificate-path certificate.combo.pem --tenant-id YOUR_TENANT_ID --client-id YOUR_CLIENT_ID

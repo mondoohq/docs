@@ -77,7 +77,7 @@ cnspec shell google-workspace --customer-id 5amp13iD --impersonated-user-email a
 
 To learn more, read [Assess Google Workspace Security with cnspec](/cnspec/saas/google_workspace/).
 
-#### Query Microsoft 365 (MS 365)
+#### Query Microsoft 365 (M365)
 
 ```bash
 cnspec shell ms365 --certificate-path certificate.combo.pem --tenant-id YOUR_TENANT_ID --client-id YOUR_CLIENT_ID

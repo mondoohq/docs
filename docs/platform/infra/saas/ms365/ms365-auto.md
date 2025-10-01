@@ -85,6 +85,27 @@ Mondoo begins scanning your Microsoft 365 resources. When it completes, you can 
 
 - If you don't see your newly created integration in the Mondoo Console after you select policies and finalize setup, try refreshing the page in your browser.
 
+## Renew application certificate
+
+The application certificate, that was created as part of adding the Microsoft 365 integration, only has a limited lifetime (by default 1 year). When this certificate has expired the integration will no longer function.
+Renewing the application certificate can be done from the Azure CLI:
+
+1. Go to the app registration you created for Mondoo as part of the integration. Copy the application ID for the next steps.
+
+2. Open the Azure Cloud Shell (top right of the window). We will be renewing the certificate with a newly created one.
+
+3. Enter the following command, inserting the application ID you copied: `az ad app credential reset --id XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX --create-cert`
+
+4. The certificate will be stored in your cloud shell. You can download it from there through the "Manage files" button of the Azure Cloud Shell.
+
+5. Navigate to the Integrations > Microsoft 365 > your M365 integration page in the Mondoo Console.
+
+6. Edit the integration and scroll down to point 5. You should see the following field where you can upload the created certificate:
+
+   ![Refresh certificate image](/img/platform/infra/cloud/azure/refresh-app-cert.png)
+
+7. Upload your newly created certificate and save your updated configuration. The Microsoft 365 integration will start using the new certificate for communication with M365.
+
 ## Next steps
 
 - [Learn more about Mondoo](/platform/start/plat-what-is/)

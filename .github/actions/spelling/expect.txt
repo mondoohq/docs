@@ -114,6 +114,7 @@ geomatchstatement
 getenv
 GGJXG
 gistfile
+GITLABTOKEN
 gmail
 googleusercontent
 gpu
@@ -233,6 +234,7 @@ pcx
 Pesoa
 Pids
 pii
+pipefail
 pki
 pkr
 portgroup

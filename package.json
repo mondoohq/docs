@@ -36,7 +36,7 @@
     "nth-check": "^2.1.1",
     "path-parse": "^1.0.7",
     "prism-react-renderer": "^2.4.1",
-    "react": "^19.1.1",
+    "react": "^19.2.0",
     "react-dom": "^19.1.1",
     "react-loadable": "^5.5.0",
     "search-insights": "^2.17.3",
@@ -59,7 +59,7 @@
   },
   "devDependencies": {
     "@docusaurus/tsconfig": "^3.9.1",
-    "@types/react": "^19.1.17",
+    "@types/react": "^19.2.0",
     "@types/react-helmet": "^6.1.11",
     "@types/react-router-dom": "^5.3.3",
     "prettier": "3.6.2",

@@ -108,7 +108,7 @@ To set up scanning from a GitLab pipeline:
 
 Now create a GitLab pipeline by creating a [`.gitlab-ci.yml`](https://docs.gitlab.com/ee/ci/yaml/gitlab_ci_yaml.html) configuration file.
 
-This example will create a Gitlab pipeline that scans the instance it is running on using the `mondoo client` Docker image. The scan will run on a schedule you will have to define. You can change discovery options of the scan by changing the `--discover` parameter.
+This example will create a GitLab pipeline that scans the instance it is running on using the `mondoo client` Docker image. The scan will run on a schedule you will have to define. You can change discovery options of the scan by changing the `--discover` parameter.
 
 ```yml title=".gitlab-ci.yml"
 stages: [security]

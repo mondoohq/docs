@@ -137,6 +137,12 @@
 # Product Names
 #
 
+# s.b. EulerOS
+\bEuler OS\b
+
+# s.b. openEuler
+\bOpen[Ee]uler\b
+
 # s.b. Smart Net Total Care
 \bSMARTnet\b
 

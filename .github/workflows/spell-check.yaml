@@ -9,13 +9,14 @@ jobs:
   spelling:
     name: Run spell check
     permissions:
+      actions: read
       contents: read
       pull-requests: read
-      actions: read
+      security-events: write
     outputs:
       followup: ${{ steps.spelling.outputs.followup }}
     runs-on: ubuntu-latest
-    if: "contains(github.event_name, 'pull_request') || github.event_name == 'push'"
+    if: "${{ contains(github.event_name, 'pull_request') || github.event_name == 'push' }}"
     concurrency:
       group: spelling-${{ github.event.pull_request.number || github.ref }}
       # note: If you use only_check_changed_files, you do not want cancel-in-progress
@@ -25,6 +26,7 @@ jobs:
         id: spelling
         uses: check-spelling/check-spelling@c635c2f3f714eec2fcf27b643a1919b9a811ef2e # v0.0.25
         with:
+          use_sarif: 1
           disable_checks: noisy-file
           suppress_push_for_open_pull_request: 1
           checkout: true

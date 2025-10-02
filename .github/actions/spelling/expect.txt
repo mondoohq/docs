@@ -14,6 +14,7 @@ appengine
 applicationinsight
 approvalsetting
 appsettings
+appslot
 appstore
 ashburn
 assetid

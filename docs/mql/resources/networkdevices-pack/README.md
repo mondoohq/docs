@@ -21,6 +21,8 @@ Resources included in this pack:
 | [cisco.iosxe.aaaAuthentication.methodGroup](cisco.iosxe.aaaauthentication.methodgroup.md)                     | Method group for AAA authentication login entry                                        |
 | [cisco.iosxe.aaaAuthenticationEnableEntry](cisco.iosxe.aaaauthenticationenableentry.md)                       | Cisco IOS XE AAA enable configuration                                                  |
 | [cisco.iosxe.aaaAuthenticationLoginEntry](cisco.iosxe.aaaauthenticationloginentry.md)                         | Cisco IOS XE AAA login configuration                                                   |
+| [cisco.iosxe.accessListEntry](cisco.iosxe.accesslistentry.md)                                                 |                                                                                        |
+| [cisco.iosxe.accessListEntry.rule](cisco.iosxe.accesslistentry.rule.md)                                       |                                                                                        |
 | [cisco.iosxe.accounting.server](cisco.iosxe.accounting.server.md)                                             | Cisco accounting entry server. These servers are where accounting records are sent to. |
 | [cisco.iosxe.accountingEntry](cisco.iosxe.accountingentry.md)                                                 | Cisco Accounting entry                                                                 |
 | [cisco.iosxe.auxLineEntry](cisco.iosxe.auxlineentry.md)                                                       | Cisco IOS XE Auxiliary Line (aux)                                                      |

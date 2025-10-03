@@ -28,6 +28,8 @@ Resources included in this pack:
 | [cisco.iosxe.auxLineEntry](cisco.iosxe.auxlineentry.md)                                                       | Cisco IOS XE Auxiliary Line (aux)                                                      |
 | [cisco.iosxe.consoleLineEntry](cisco.iosxe.consolelineentry.md)                                               | Cisco IOS XE Console Line (con)                                                        |
 | [cisco.iosxe.interface](cisco.iosxe.interface.md)                                                             | Cisco IOS XE Network interface resource                                                |
+| [cisco.iosxe.interfaceConfig](cisco.iosxe.interfaceconfig.md)                                                 | Cisco IOS XE Interface configuration                                                   |
+| [cisco.iosxe.ipConf](cisco.iosxe.ipconf.md)                                                                   |                                                                                        |
 | [cisco.iosxe.user](cisco.iosxe.user.md)                                                                       | Cisco IOS XE User configuration                                                        |
 | [cisco.iosxe.vtyLine](cisco.iosxe.vtyline.md)                                                                 | Cisco IOS XE Virtual Terminal Line (VTY)                                               |
 | [cisco.iosxr](cisco.iosxr.md)                                                                                 | Cisco IOS XR                                                                           |

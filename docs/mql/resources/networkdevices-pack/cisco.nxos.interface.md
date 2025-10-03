@@ -20,7 +20,7 @@ Cisco NX-OS Network interface resource
 | description   | string | Interface description                         |
 | adminState    | string | Administrative state (up/down)                |
 | linkStatus    | string | Link status (up/down)                         |
-| hardwareType  | string | Hardware type (e.g., VLAN, Ethernet)          |
+| hardwareType  | string | Hardware type (e.g., VLAN, Ethernet, Tunnel)  |
 | encapsulation | string | Encapsulation type (e.g., 802.1Q Virtual LAN) |
 | macAddress    | string | MAC address                                   |
 | bia           | string | Burned-in address                             |

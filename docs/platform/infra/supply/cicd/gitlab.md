@@ -129,4 +129,8 @@ You can copy example GitLab pipeline configs from the Mondoo Console.
 
 4. In the top-right corner of the sample config, select the copy icon to copy the config to your clipboard.
 
+## Set up a pipeline to scan your GitLab instance
+
+You can set up a scan of your GitLab instance itself from within a pipeline configuration. See [Scan GitLab Instance from GitLab CI/CD pipeline](/platform/infra/saas/gitlab/#scan-gitlab-instance-from-gitlab-cicd-pipeline) for more information.
+
 ---

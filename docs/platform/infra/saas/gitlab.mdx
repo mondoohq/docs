@@ -94,16 +94,13 @@ To learn more, read [Create a personal access token](https://docs.gitlab.com/ee/
 ## Scan GitLab Instance from GitLab CI/CD pipeline
 
 You can also set up a [GitLab pipeline](https://docs.gitlab.com/ee/ci/pipelines/) to scan your GitLab instance. This job can run at your own schedule scanning GitLab groups, GitLab projects, Terraform files and Kubernetes manifests, the same as the Mondoo hosted integration.
-This can be helpful for GitLab instances that have inbound IP allowlists set up, to restrict access to the instance. 
+This can be helpful for GitLab instances that have inbound IP allowlists set up to restrict access to the instance. 
 
 To set up scanning from a GitLab pipeline:
 
   - Create a personal access token (see above)
-
   - Create Mondoo credentials
-
   - Store those credentials in GitLab (see [Securely store credentials in GitLab](/platform/infra/supply/cicd/gitlab/#securely-store-credentials-in-gitlab))
-
   - Store the personal access token as a variable with the name `GITLABTOKEN`
 
 Now create a GitLab pipeline by creating a [`.gitlab-ci.yml`](https://docs.gitlab.com/ee/ci/yaml/gitlab_ci_yaml.html) configuration file.

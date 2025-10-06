@@ -26,10 +26,15 @@ Resources included in this pack:
 | [cisco.iosxe.accounting.server](cisco.iosxe.accounting.server.md)                                             | Cisco accounting entry server. These servers are where accounting records are sent to. |
 | [cisco.iosxe.accountingEntry](cisco.iosxe.accountingentry.md)                                                 | Cisco Accounting entry                                                                 |
 | [cisco.iosxe.auxLineEntry](cisco.iosxe.auxlineentry.md)                                                       | Cisco IOS XE Auxiliary Line (aux)                                                      |
+| [cisco.iosxe.config](cisco.iosxe.config.md)                                                                   | Cisco IOS XE Global configuration settings                                             |
 | [cisco.iosxe.consoleLineEntry](cisco.iosxe.consolelineentry.md)                                               | Cisco IOS XE Console Line (con)                                                        |
 | [cisco.iosxe.interface](cisco.iosxe.interface.md)                                                             | Cisco IOS XE Network interface resource                                                |
 | [cisco.iosxe.interfaceConfig](cisco.iosxe.interfaceconfig.md)                                                 | Cisco IOS XE Interface configuration                                                   |
-| [cisco.iosxe.ipConf](cisco.iosxe.ipconf.md)                                                                   |                                                                                        |
+| [cisco.iosxe.ipConf](cisco.iosxe.ipconf.md)                                                                   | Cisco IOS XE IPv4 configuration.                                                       |
+| [cisco.iosxe.keyChain](cisco.iosxe.keychain.md)                                                               | Cisco IOS XE Key Chain resource.                                                       |
+| [cisco.iosxe.keyChain.key](cisco.iosxe.keychain.key.md)                                                       | Cisco IOS XE key resource from within a key chain.                                     |
+| [cisco.iosxe.keyChain.key.lifetime](cisco.iosxe.keychain.key.lifetime.md)                                     | Cisco IOS XE Key Chain key lifetime period resource.                                   |
+| [cisco.iosxe.passwordEncryption](cisco.iosxe.passwordencryption.md)                                           | Cisco IOS XE Password encryption configuration                                         |
 | [cisco.iosxe.user](cisco.iosxe.user.md)                                                                       | Cisco IOS XE User configuration                                                        |
 | [cisco.iosxe.vtyLine](cisco.iosxe.vtyline.md)                                                                 | Cisco IOS XE Virtual Terminal Line (VTY)                                               |
 | [cisco.iosxr](cisco.iosxr.md)                                                                                 | Cisco IOS XR                                                                           |

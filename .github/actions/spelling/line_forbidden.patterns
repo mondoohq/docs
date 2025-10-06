@@ -137,6 +137,25 @@
 # Product Names
 #
 
+# s.b. Webex
+\bWebEx\b
+
+# s.b. FortiClient
+\bForti Client\b
+\bForticlient\b
+
+# s.b. TeamViewer
+\bTeam Viewer\b
+\bTeamviewer\b
+
+# s.b. LibreOffice
+\bLibre Office\b
+\bLibreoffice\b
+
+# s.b. JetBrains
+\bJet Brains\b
+\bJetbrains\b
+
 # s.b. EulerOS
 \bEuler OS\b
 

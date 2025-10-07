@@ -1,3 +1,4 @@
+aaaa
 AAAAB
 ACCOUNTADMIN
 acr
@@ -60,6 +61,7 @@ cloudflare
 cloudtrails
 Clusterwide
 cmek
+cname
 cni
 CODENAME
 codeql
@@ -107,6 +109,7 @@ externalsender
 falsey
 Fdq
 feb
+Fqdns
 fromjson
 gcfs
 Gci

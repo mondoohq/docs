@@ -1,12 +1,12 @@
 ---
-title: Artificial Intelligence Resource Pack - MQL Resources
+title: Artificial intelligence Resource Pack - MQL Resources
 id: artificial.intelligence.pack
-sidebar_label: Artificial Intelligence Resource Pack
+sidebar_label: Artificial intelligence Resource Pack
 displayed_sidebar: MQL
 description: The ai resource pack lets use AI/ML in MQL and access MCP servers.
 ---
 
-# Artificial Intelligence MQL Resource Pack Reference
+# Artificial intelligence MQL Resource Pack Reference
 
 The ai resource pack lets use AI/ML in MQL and access MCP servers.
 

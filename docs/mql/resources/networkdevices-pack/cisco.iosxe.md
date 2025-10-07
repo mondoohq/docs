@@ -26,3 +26,5 @@ Cisco IOS XE
 | consoleLine      | [cisco.iosxe.consoleLineEntry](cisco.iosxe.consolelineentry.md)         | The console (con) line 0, obtained by running 'show running-config all                            | sec line con 0'   |
 | accessLists      | &#91;&#93;[cisco.iosxe.accessListEntry](cisco.iosxe.accesslistentry.md) | The access-lists configured on the device, obtained by running 'show ip access-lists'.            |
 | ip               | [cisco.iosxe.ipConf](cisco.iosxe.ipconf.md)                             | The IPv4 configuration obtained by running 'show running-config all                               | sec ip'           |
+| keychains        | &#91;&#93;[cisco.iosxe.keyChain](cisco.iosxe.keychain.md)               | The key chains configured on the device, obtained by running 'show running-config                 | sec key chain'    |
+| configuration    | [cisco.iosxe.config](cisco.iosxe.config.md)                             | Obtains the device's configuration which holds various global settings.                           |

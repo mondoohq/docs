@@ -31,3 +31,4 @@ Amazon ECS cluster
 | tasks                             | &#91;&#93;[aws.ecs.task](aws.ecs.task.md)         | List of AWS ECS task definitions                       |
 | containerInstances                | &#91;&#93;[aws.ecs.instance](aws.ecs.instance.md) | List of AWS ECS container instances                    |
 | region                            | string                                            | Region where the cluster is located                    |
+| activeServicesCount               | int                                               | Number of services running in the cluster              |

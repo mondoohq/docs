@@ -31,10 +31,9 @@ Third-party application vulnerability scanning is vital because any security vul
 - GitHub Desktop App
 - JetBrains IDEs
 - LibreOffice
-- MySQL
 - Notepad++
 - Ollama
-- Oracle JDK
+- Oracle JDK on Windows
 - TeamViewer
 - VMware Tools
 
@@ -68,11 +67,11 @@ A Mondoo finding is now a finding no matter what type of finding it is. This eli
 
 When a CVE doesn’t include remediation data, but the vendor advisory does, we now directly show the remediation information on the CVE finding page. In the past we included a link to the advisory from the CVE page, but that required some awkward extra clicks and was overall funky at best. Now the necessary remediation is directly available in the Mondoo remediation section.
 
-![Mondoo now makes guided remediation from advisories easily accessible](/img/release-highlights/2025-09/remdediation.png)
+![Mondoo now makes guided remediation from advisories easily accessible](/img/release-highlights/2025-09/remediation.png)
 
 ## Mondoo 12.0
 
-After 69 weekly releases in the 11.x series of cnquery and cnspec clients, it was time to bump the version to 12.0. This release includes simplified command line output, improved cloud asset discovery, new network discovery capabilities, and cleanup of legacy MQL fields. See everything that's new in our [Mondoo 12.0 is out!](mondoo-12.0-is-out/) release notes.
+After 69 weekly releases in the 11.x series of cnquery and cnspec clients, it was time to bump the version to 12.0. This release includes simplified command line output, improved cloud asset discovery, new network discovery capabilities, and cleanup of legacy MQL fields. See everything that's new in our [Mondoo 12.0 is out!](2025-09-05-mondoo-12.0-is-out.md) release notes.
 
 ### New and updated policies and benchmarks
 
@@ -80,17 +79,19 @@ Security guidance is changing at a blistering pace and at Mondoo we’re continu
 
 Updated policies:
 
-- CIS VMware ESXi 8.0 benchmark updated from 1.1 to 1.2
-- CIS AIX 7 benchmark updated from 1.0 to 1.1
-- CIS Google Cloud Platform Foundation benchmark updated from 3.0 to 4.0
-- CIS Apple macOS 14.0 Sonoma benchmark updated from 2.0 to 2.1
+- CIS VMware ESXi 8.0 Benchmark updated from 1.1 to 1.2
+- CIS AIX 7 Benchmark updated from 1.0 to 1.1
+- CIS Google Cloud Platform Foundation Benchmark updated from 3.0 to 4.0
+- CIS Apple macOS 14.0 Sonoma Benchmark updated from 2.0 to 2.1
 
 New policies:
 
-- CIS Microsoft Azure Compute Services benchmark 1.0
-- CIS Cisco IOS XE 17.x benchmark 2.2.1
-- CIS Cisco IOS XR 7.x benchmark 3.0
-- CIS Microsoft Intune Windows benchmark 11 4.0
+- CIS Microsoft Azure Compute Services Benchmark 1.0
+- CIS Microsoft Azure Database Services Benchmark 1.0
+- CIS Cisco IOS XE 17.x Benchmark 2.2.1
+- CIS Cisco IOS XR 7.x Benchmark 3.0
+- CIS Microsoft Intune Windows Benchmark 11 4.0
+- CIS Microsoft Intune Windows Benchmark 10 4.0
 - VMware vSphere Security Configuration Guide 8 Benchmark
 
 ### Scale secure deployments with Workload Identity Federation (WIF)

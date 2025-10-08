@@ -15,7 +15,7 @@ date: 2025-10-08
 
 ## New and enhanced OS vulnerability detections
 
-Mondoo now supports the latest Linux distributions with support for Fedora 42, Raspbian 13, and Ubuntu 25.04. Detection of vulnerabilities on Windows systems has been improved with support for Microsoft Exchange SU updates and improved .NET Framework detection, ensuring Mondoo always recognizes the latest features, packages, and updates installed on your systems.
+Mondoo now supports the latest Linux distributions with support for Fedora 42, Raspbian 13, Ubuntu 25.04, ​​RHEL Extended Update Support (EUS), and Enhanced Extended Update Support (E4S). Detection of vulnerabilities on Windows systems has been improved with support for Microsoft Exchange SU updates and improved .NET Framework detection, ensuring Mondoo always recognizes the latest features, packages, and updates installed on your systems.
 
 ## Expanded vulnerability detection for third-party applications
 
@@ -37,11 +37,15 @@ Third-party application vulnerability scanning is vital because any security vul
 - TeamViewer
 - VMware Tools
 
+![Mondoo discovers applications and exposes vulnerabilities](/img/release-highlights/2025-09/adobe.png)
+
 ## Model Context Protocol (MCP) security
 
 MCP is very powerful because it allows AI agents to autonomously interact with external tools and data. However if not properly secured, it can introduce significant risks like prompt injection, data breaches, and the execution of unauthorized commands by malicious actors.
 
 That is why we’ve now added new experimental MCP security capabilities using cnquery’s AI provider and our new Mondoo Model Context Protocol (MCP) security policy. Stay tuned for more updates while we build out this functionality.
+
+![Mondoo discovers MCP servers and highlights security vulnerabilities](/img/release-highlights/2025-09/mcp.png)
 
 ## Support for BSI SYS 1.5 and DORA compliance frameworks
 

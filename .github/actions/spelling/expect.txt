@@ -93,6 +93,7 @@ dlp
 dlq
 dmark
 eas
+ebgp
 EDE
 efi
 eig
@@ -128,6 +129,7 @@ hashs
 headerorder
 holdtime
 hostkeys
+hsrp
 hvm
 iac
 iana
@@ -172,6 +174,7 @@ liveanalytics
 logd
 logfiles
 loggingservice
+lsp
 manageddevice
 managedrulegroupstatement
 managedzone
@@ -232,6 +235,7 @@ openssl
 Oqi
 orstatement
 osoverview
+ospf
 PACKNAME
 pagerduty
 pcx
@@ -331,6 +335,7 @@ vjtestpriv
 vmaqs
 Vnet
 vrf
+vrrp
 Vtpm
 vty
 Vtz

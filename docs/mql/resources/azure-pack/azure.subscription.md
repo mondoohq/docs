@@ -34,6 +34,7 @@ Use the `azure.subscription` resource to assess the configuration of Azure subsc
 | resources             | &#91;&#93;[azure.subscription.resource](azure.subscription.resource.md)               | All resources in a subscription               |
 | resourceGroups        | &#91;&#93;[azure.subscription.resourcegroup](azure.subscription.resourcegroup.md)     | Resource groups in the subscription           |
 | compute               | [azure.subscription.computeService](azure.subscription.computeservice.md)             | Compute resources in the subscription         |
+| batch                 | [azure.subscription.batchService](azure.subscription.batchservice.md)                 | Batch resources in the subscription           |
 | network               | [azure.subscription.networkService](azure.subscription.networkservice.md)             | Network resources in the subscription         |
 | storage               | [azure.subscription.storageService](azure.subscription.storageservice.md)             | Storage resources in the subscription         |
 | web                   | [azure.subscription.webService](azure.subscription.webservice.md)                     | Web resources in the subscription             |

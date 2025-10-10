@@ -35,6 +35,9 @@ Resources included in this pack:
 | [cisco.iosxe.keyChain.key](cisco.iosxe.keychain.key.md)                                                       | Cisco IOS XE key resource from within a key chain.                                     |
 | [cisco.iosxe.keyChain.key.lifetime](cisco.iosxe.keychain.key.lifetime.md)                                     | Cisco IOS XE Key Chain key lifetime period resource.                                   |
 | [cisco.iosxe.passwordEncryption](cisco.iosxe.passwordencryption.md)                                           | Cisco IOS XE Password encryption configuration                                         |
+| [cisco.iosxe.routerEigrpAddressFamily](cisco.iosxe.routereigrpaddressfamily.md)                               | Cisco IOS XE Routing EIGRP Address Family configuration from running config            |
+| [cisco.iosxe.routerEigrpAddressFamilyInterface](cisco.iosxe.routereigrpaddressfamilyinterface.md)             | Cisco IOS XE Routing EIGRP Address Family Interface configuration from running config  |
+| [cisco.iosxe.routerEigrpEntry](cisco.iosxe.routereigrpentry.md)                                               | Cisco IOS XE Routing EIGRP configuration from running config                           |
 | [cisco.iosxe.user](cisco.iosxe.user.md)                                                                       | Cisco IOS XE User configuration                                                        |
 | [cisco.iosxe.vtyLine](cisco.iosxe.vtyline.md)                                                                 | Cisco IOS XE Virtual Terminal Line (VTY)                                               |
 | [cisco.iosxr](cisco.iosxr.md)                                                                                 | Cisco IOS XR                                                                           |
@@ -65,9 +68,18 @@ Resources included in this pack:
 | [cisco.iosxr.runLineTransportIOEntry](cisco.iosxr.runlinetransportioentry.md)                                 | Cisco IOS XR Line Transport input from running config                                  |
 | [cisco.iosxr.runLoggingConfig](cisco.iosxr.runloggingconfig.md)                                               | Cisco IOS XR Running Config Logging configuration                                      |
 | [cisco.iosxr.runLoggingSyslogHost](cisco.iosxr.runloggingsysloghost.md)                                       | Cisco IOS XR Running Config Syslog Host from running config                            |
+| [cisco.iosxr.runManagementPlaneRule](cisco.iosxr.runmanagementplanerule.md)                                   | Cisco IOS XR Management Plane rules configuration from running config                  |
+| [cisco.iosxr.runRouterBgpEntry](cisco.iosxr.runrouterbgpentry.md)                                             | Cisco IOS XR Routing BGP configuration from running config                             |
+| [cisco.iosxr.runRouterBgpNeighbor](cisco.iosxr.runrouterbgpneighbor.md)                                       | Cisco IOS XR Routing BGP Neighbor configuration from running config                    |
 | [cisco.iosxr.runRouterEigrpAddressFamily](cisco.iosxr.runroutereigrpaddressfamily.md)                         | Cisco IOS XR Routing EIGRP Address Family configuration from running config            |
 | [cisco.iosxr.runRouterEigrpAddressFamilyInterface](cisco.iosxr.runroutereigrpaddressfamilyinterface.md)       | Cisco IOS XR Routing EIGRP Address Family Interface configuration from running config  |
 | [cisco.iosxr.runRouterEigrpEntry](cisco.iosxr.runroutereigrpentry.md)                                         | Cisco IOS XR Routing EIGRP configuration from running config                           |
+| [cisco.iosxr.runRouterHsrpEntry](cisco.iosxr.runrouterhsrpentry.md)                                           | Cisco IOS XR Routing HSRP configuration from running config                            |
+| [cisco.iosxr.runRouterIsisEntry](cisco.iosxr.runrouterisisentry.md)                                           | Cisco IOS XR Routing ISIS configuration from running config                            |
+| [cisco.iosxr.runRouterIsisInterface](cisco.iosxr.runrouterisisinterface.md)                                   | Cisco IOS XR Routing ISIS Interface configuration from running config                  |
+| [cisco.iosxr.runRouterOspfArea](cisco.iosxr.runrouterospfarea.md)                                             | Cisco IOS XR Routing OSPF Area configuration from running config                       |
+| [cisco.iosxr.runRouterRipInterface](cisco.iosxr.runrouterripinterface.md)                                     | Cisco IOS XR Routing RIP configuration from running config                             |
+| [cisco.iosxr.runRouterVrrpEntry](cisco.iosxr.runroutervrrpentry.md)                                           | Cisco IOS XR Routing VRRP configuration from running config                            |
 | [cisco.iosxr.runSnmpCommunitiesEntry](cisco.iosxr.runsnmpcommunitiesentry.md)                                 | Cisco IOS XR SNMP Community Strings from running config                                |
 | [cisco.iosxr.runSnmpGroupsEntry](cisco.iosxr.runsnmpgroupsentry.md)                                           | Cisco IOS XR SNMP Groups from running config                                           |
 | [cisco.iosxr.runSnmpHostsEntry](cisco.iosxr.runsnmphostsentry.md)                                             | Cisco IOS XR SNMP Host Strings from running config                                     |
@@ -81,6 +93,8 @@ Resources included in this pack:
 | [cisco.iosxr.vtyLinesEntry](cisco.iosxr.vtylinesentry.md)                                                     | Cisco IOS XR VTY lines configuration                                                   |
 | [cisco.nxos](cisco.nxos.md)                                                                                   | Cisco NX-OS                                                                            |
 | [cisco.nxos.interface](cisco.nxos.interface.md)                                                               | Cisco NX-OS Network interface resource                                                 |
+| [cisco.nxos.user](cisco.nxos.user.md)                                                                         | Cisco NX-OS User configuration                                                         |
+| [cisco.nxos.user.credential](cisco.nxos.user.credential.md)                                                   | Cisco NX-OS User credential                                                            |
 | [networkdevices.command](networkdevices.command.md)                                                           | Network devices command resource                                                       |
 | [ntc.template](ntc.template.md)                                                                               | NTC template                                                                           |
 | [ntc.templates](ntc.templates.md)                                                                             | NTC templates                                                                          |

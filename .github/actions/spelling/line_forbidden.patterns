@@ -162,6 +162,23 @@
 # s.b. openEuler
 \bOpen[Ee]uler\b
 
+# s.b. OpenWrt
+\b[Oo]penWRT\b
+
+# s.b. SUSE Linux Micro
+\bSLES Micro OS\b
+\bSLES Micro\b
+
+# s.b. DragonFly BSD
+\bDragon[Ff]lyBSD\b
+\bDragonfly BSD\b
+
+# s.b. PLCnext
+\bPLCNext\b
+
+# s.b. SteamOS
+\bSteam OS\b
+
 # s.b. Smart Net Total Care
 \bSMARTnet\b
 

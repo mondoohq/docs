@@ -50,7 +50,13 @@ import Partial from "../../../partials/\_editor-owner.mdx";
 
 :::important
 
-Mondoo can scan both a Kubernetes (K8s) cluster using the Mondoo K8s Operator as well as the account (AWS account, GCP project, or Azure subscription) where the cluster is deployed. To avoid duplication of assets, if the account is integrated with VM scanning enabled, or if you plan to enable it, ensure that Node Scanning is disabled for the Kubernetes cluster.
+Mondoo can scan Kubernetes clusters in two ways: 
+
+- Directly, using the Mondoo Kubernetes Operator
+
+- As part of the cloud account (AWS account, GCP project, or Azure subscription) where the cluster is deployed
+
+If you enable (or plan to enable) VM scanning when you set up your AWS, GCP, or Azure integration AND you enable **Scan nodes** in your Kubernetes integration, you create duplicate assets (two of the same cluster). To prevent this, be sure to disable **Scan nodes** in the Kubernetes integration.
 
 :::
 

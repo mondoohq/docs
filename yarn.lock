@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@ai-sdk/gateway@1.0.39":
-  version "1.0.39"
-  resolved "https://registry.yarnpkg.com/@ai-sdk/gateway/-/gateway-1.0.39.tgz#1f259fda75c7a72bf99a958194ae6275fa3f7d5a"
-  integrity sha512-ijYCKG2sbn2RBVfIgaXNXvzHAf2HpFXxQODtjMI+T7Z4CLryflytchsZZ9qrGtsjiQVopKOV6m6kj4lq5fnbsg==
+"@ai-sdk/gateway@1.0.40":
+  version "1.0.40"
+  resolved "https://registry.yarnpkg.com/@ai-sdk/gateway/-/gateway-1.0.40.tgz#81a554edbb11b286fb657587710047f169d13b2a"
+  integrity sha512-zlixM9jac0w0jjYl5gwNq+w9nydvraAmLaZQbbh+QpHU+OPkTIZmyBcKeTq5eGQKQxhi+oquHxzCSKyJx3egGw==
   dependencies:
     "@ai-sdk/provider" "2.0.0"
     "@ai-sdk/provider-utils" "3.0.12"
@@ -28,12 +28,12 @@
     json-schema "^0.4.0"
 
 "@ai-sdk/react@^2.0.30":
-  version "2.0.68"
-  resolved "https://registry.yarnpkg.com/@ai-sdk/react/-/react-2.0.68.tgz#e37fab5a51479b005eaa560c79f9821561c3e1e0"
-  integrity sha512-dj21puWzGsNNrDE/26cytapMlS2/LD5NiN8TrU59fU/FVwuFHjwiepSfscBik54t/xNYRQIU+Qvt7lM7jnXJdg==
+  version "2.0.70"
+  resolved "https://registry.yarnpkg.com/@ai-sdk/react/-/react-2.0.70.tgz#1ede8e28899028ddd6ecf986b839ea9541f7a334"
+  integrity sha512-84So0vv9R2eL+7XAS1xAoqCx1jQGKb2WH8miJV8rBvF1QF9G5otFm35LhPPwZyJDq68vuVsvhIde1yzDCw2B8A==
   dependencies:
     "@ai-sdk/provider-utils" "3.0.12"
-    ai "5.0.68"
+    ai "5.0.70"
     swr "^2.2.5"
     throttleit "2.1.0"
 
@@ -2571,9 +2571,9 @@
     "@types/node" "*"
 
 "@types/node@*":
-  version "24.7.1"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-24.7.1.tgz#3f0b17eddcd965c9e337af22459b04bafbf96e5e"
-  integrity sha512-CmyhGZanP88uuC5GpWU9q+fI61j2SkhO3UGMUdfYRE6Bcy0ccyzn1Rqj9YAB/ZY4kOXmNf0ocah5GtphmLMP6Q==
+  version "24.7.2"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-24.7.2.tgz#5adf66b6e2ac5cab1d10a2ad3682e359cb652f4a"
+  integrity sha512-/NbVmcGTP+lj5oa4yiYxxeBjRivKQ5Ns1eSZeB99ExsEQ6rX5XYU1Zy/gGxY/ilqtD4Etx9mKyrPxZRetiahhA==
   dependencies:
     undici-types "~7.14.0"
 
@@ -2900,12 +2900,12 @@ aggregate-error@^3.0.0:
     clean-stack "^2.0.0"
     indent-string "^4.0.0"
 
-ai@5.0.68, ai@^5.0.30:
-  version "5.0.68"
-  resolved "https://registry.yarnpkg.com/ai/-/ai-5.0.68.tgz#e2e39934bd1af50e3059141a4bb758e4bc8b06b1"
-  integrity sha512-SB6r+4TkKVlSg2ozGBSfuf6Is5hrcX/bpGBzOoyHIN3b4ILGhaly0IHEvP8+3GGIHXqtkPVEUmR6V05jKdjNlg==
+ai@5.0.70, ai@^5.0.30:
+  version "5.0.70"
+  resolved "https://registry.yarnpkg.com/ai/-/ai-5.0.70.tgz#2768cf3e0cd0d42701a633a8979d46a660ab7ac5"
+  integrity sha512-srJV++Ml1X8I33gTiiJQpq6GUbAv5ivjSzDzzF9SM4d25zq+/m+zTtHBb794tYKTz2PgbJ3oop9+gU50ZdCLbQ==
   dependencies:
-    "@ai-sdk/gateway" "1.0.39"
+    "@ai-sdk/gateway" "1.0.40"
     "@ai-sdk/provider" "2.0.0"
     "@ai-sdk/provider-utils" "3.0.12"
     "@opentelemetry/api" "1.9.0"
@@ -3336,9 +3336,9 @@ caniuse-api@^3.0.0:
     lodash.uniq "^4.5.0"
 
 caniuse-lite@^1.0.0, caniuse-lite@^1.0.30001702, caniuse-lite@^1.0.30001746:
-  version "1.0.30001749"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001749.tgz#21a43b923577932097fe32bcaabb6da7f4677632"
-  integrity sha512-0rw2fJOmLfnzCRbkm8EyHL8SvI2Apu5UbnQuTsJ0ClgrH8hcwFooJ1s5R0EP8o8aVrFu8++ae29Kt9/gZAZp/Q==
+  version "1.0.30001750"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001750.tgz#c229f82930033abd1502c6f73035356cf528bfbc"
+  integrity sha512-cuom0g5sdX6rw00qOoLNSFCJ9/mYIsuSOA+yzpDw8eopiFqcVwQvZHqov0vmEighRxX++cfC0Vg1G+1Iy/mSpQ==
 
 ccount@^2.0.0:
   version "2.0.1"
@@ -4127,9 +4127,9 @@ ee-first@1.1.1:
   integrity sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==
 
 electron-to-chromium@^1.5.227:
-  version "1.5.234"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.234.tgz#d895b6dba84269f4e83b3a1149dcc55e27848c30"
-  integrity sha512-RXfEp2x+VRYn8jbKfQlRImzoJU01kyDvVPBmG39eU2iuRVhuS6vQNocB8J0/8GrIMLnPzgz4eW6WiRnJkTuNWg==
+  version "1.5.235"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.235.tgz#778dac70537ed9e9e0abf25a49cc94b5a23aaa0e"
+  integrity sha512-i/7ntLFwOdoHY7sgjlTIDo4Sl8EdoTjWIaKinYOVfC6bOp71bmwenyZthWHcasxgHDNWbWxvG9M3Ia116zIaYQ==
 
 emoji-regex@^8.0.0:
   version "8.0.0"
@@ -8383,9 +8383,9 @@ statuses@2.0.1:
   integrity sha512-OpZ3zP+jT1PI7I8nemJX4AKmAX070ZkYPVWV/AaKTJl+tXCTGyVdC1a4SL8RUQYEwk/f34ZX8UTykN68FwrqAA==
 
 std-env@^3.7.0:
-  version "3.9.0"
-  resolved "https://registry.yarnpkg.com/std-env/-/std-env-3.9.0.tgz#1a6f7243b339dca4c9fd55e1c7504c77ef23e8f1"
-  integrity sha512-UGvjygr6F6tpH7o2qyqR6QYpwraIjKSdtzyBdyytFOHmPZY917kwdwLG0RbOjWOnKmnm3PeHjaoLLMie7kPLQw==
+  version "3.10.0"
+  resolved "https://registry.yarnpkg.com/std-env/-/std-env-3.10.0.tgz#d810b27e3a073047b2b5e40034881f5ea6f9c83b"
+  integrity sha512-5GS12FdOZNliM5mAOxFRg7Ir0pWz8MdpYm6AY6VPkGpbA7ZzmbzNcBJQ0GPvvyWgcY7QAhCgf9Uy89I03faLkg==
 
 string-width@^4.1.0, string-width@^4.2.0:
   version "4.2.3"
@@ -8471,16 +8471,16 @@ strip-json-comments@~2.0.1:
   integrity sha512-4gB8na07fecVVkOI6Rs4e7T6NOTki5EmL7TUduTs6bu3EdnSycntVJ4re8kgZA+wx9IueI2Y11bfbgwtzuE0KQ==
 
 style-to-js@^1.0.0:
-  version "1.1.17"
-  resolved "https://registry.yarnpkg.com/style-to-js/-/style-to-js-1.1.17.tgz#488b1558a8c1fd05352943f088cc3ce376813d83"
-  integrity sha512-xQcBGDxJb6jjFCTzvQtfiPn6YvvP2O8U1MDIPNfJQlWMYfktPy+iGsHE7cssjs7y84d9fQaK4UF3RIJaAHSoYA==
+  version "1.1.18"
+  resolved "https://registry.yarnpkg.com/style-to-js/-/style-to-js-1.1.18.tgz#3e6c13bd4c4db079bd2c2c94571cce5c758bc2ff"
+  integrity sha512-JFPn62D4kJaPTnhFUI244MThx+FEGbi+9dw1b9yBBQ+1CZpV7QAT8kUtJ7b7EUNdHajjF/0x8fT+16oLJoojLg==
   dependencies:
-    style-to-object "1.0.9"
+    style-to-object "1.0.11"
 
-style-to-object@1.0.9:
-  version "1.0.9"
-  resolved "https://registry.yarnpkg.com/style-to-object/-/style-to-object-1.0.9.tgz#35c65b713f4a6dba22d3d0c61435f965423653f0"
-  integrity sha512-G4qppLgKu/k6FwRpHiGiKPaPTFcG3g4wNVX/Qsfu+RqQM30E7Tyu/TEgxcL9PNLF5pdRLwQdE3YKKf+KF2Dzlw==
+style-to-object@1.0.11:
+  version "1.0.11"
+  resolved "https://registry.yarnpkg.com/style-to-object/-/style-to-object-1.0.11.tgz#cf252c4051758b7acb18a5efb296f91fb79bb9c4"
+  integrity sha512-5A560JmXr7wDyGLK12Nq/EYS38VkGlglVzkis1JEdbGWSnbQIEhZzTJhzURXN5/8WwwFCs/f/VVcmkTppbXLow==
   dependencies:
     inline-style-parser "0.2.4"
 

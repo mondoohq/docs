@@ -43,6 +43,10 @@ Resources included in this pack:
 | [cisco.iosxe.keyChain](cisco.iosxe.keychain.md)                                                                       | Cisco IOS XE Key Chain resource.                                                       |
 | [cisco.iosxe.keyChain.key](cisco.iosxe.keychain.key.md)                                                               | Cisco IOS XE key resource from within a key chain.                                     |
 | [cisco.iosxe.keyChain.key.lifetime](cisco.iosxe.keychain.key.lifetime.md)                                             | Cisco IOS XE Key Chain key lifetime period resource.                                   |
+| [cisco.iosxe.ntpConfiguration](cisco.iosxe.ntpconfiguration.md)                                                       | Cisco IOS XE NTP configuration                                                         |
+| [cisco.iosxe.ntpConfiguration.authenticationKey](cisco.iosxe.ntpconfiguration.authenticationkey.md)                   | Cisco IOS XE NTP authentication key                                                    |
+| [cisco.iosxe.ntpConfiguration.server](cisco.iosxe.ntpconfiguration.server.md)                                         | Cisco IOS XE NTP server                                                                |
+| [cisco.iosxe.ntpConfiguration.trustedKey](cisco.iosxe.ntpconfiguration.trustedkey.md)                                 | Cisco IOS XE NTP trusted key                                                           |
 | [cisco.iosxe.passwordEncryption](cisco.iosxe.passwordencryption.md)                                                   | Cisco IOS XE Password encryption configuration                                         |
 | [cisco.iosxe.routerEigrpAddressFamily](cisco.iosxe.routereigrpaddressfamily.md)                                       | Cisco IOS XE Routing EIGRP Address Family configuration from running config            |
 | [cisco.iosxe.routerEigrpAddressFamilyInterface](cisco.iosxe.routereigrpaddressfamilyinterface.md)                     | Cisco IOS XE Routing EIGRP Address Family Interface configuration from running config  |

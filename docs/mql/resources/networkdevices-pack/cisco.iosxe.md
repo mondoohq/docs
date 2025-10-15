@@ -37,3 +37,4 @@ Cisco IOS XE
 | routerOspf       | &#91;&#93;[cisco.iosxe.routerOspfEntry](cisco.iosxe.routerospfentry.md)   | The running config router OSPF configuration obtained by running 'show running-config all             | sec router ospf'      |
 | cryptoKeysRsa    | &#91;&#93;[cisco.iosxe.cryptoKeyRsa](cisco.iosxe.cryptokeyrsa.md)         | The RSA public keys configured on the device, obtained by running 'show crypto key mypubkey rsa'      |
 | snmp             | [cisco.iosxe.snmpConfiguration](cisco.iosxe.snmpconfiguration.md)         | The SNMP configuration on the device.                                                                 |
+| ntp              | [cisco.iosxe.ntpConfiguration](cisco.iosxe.ntpconfiguration.md)           | The NTP configuration on the device.                                                                  |

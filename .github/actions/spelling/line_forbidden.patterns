@@ -140,10 +140,6 @@
 # s.b. Webex
 \bWebEx\b
 
-# s.b. FortiClient
-\bForti Client\b
-\bForticlient\b
-
 # s.b. TeamViewer
 \bTeam Viewer\b
 \bTeamviewer\b
@@ -396,6 +392,14 @@
 #
 # Fortinet Terms
 #
+
+# s.b. FortiSwitch
+\bForti Switch\b
+\bFortiswitch\b
+
+# s.b. FortiClient
+\bForti Client\b
+\bForticlient\b
 
 # s.b. FortiGate
 \bFortigate\b

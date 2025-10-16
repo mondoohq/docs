@@ -81,6 +81,7 @@ cyclonedx
 datacompute
 datapath
 DATAUSER
+datetime
 dba
 Ddos
 debconf

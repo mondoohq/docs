@@ -43,6 +43,13 @@ Resources included in this pack:
 | [cisco.iosxe.keyChain](cisco.iosxe.keychain.md)                                                                       | Cisco IOS XE Key Chain resource.                                                       |
 | [cisco.iosxe.keyChain.key](cisco.iosxe.keychain.key.md)                                                               | Cisco IOS XE key resource from within a key chain.                                     |
 | [cisco.iosxe.keyChain.key.lifetime](cisco.iosxe.keychain.key.lifetime.md)                                             | Cisco IOS XE Key Chain key lifetime period resource.                                   |
+| [cisco.iosxe.loggingConfiguration](cisco.iosxe.loggingconfiguration.md)                                               | Cisco IOS XE Logging configuration                                                     |
+| [cisco.iosxe.loggingConfiguration.host](cisco.iosxe.loggingconfiguration.host.md)                                     | Cisco IOS XE Logging Host.                                                             |
+| [cisco.iosxe.loggingConfiguration.sourceInterface](cisco.iosxe.loggingconfiguration.sourceinterface.md)               | Cisco IOS XE Logging Source Interface                                                  |
+| [cisco.iosxe.ntpConfiguration](cisco.iosxe.ntpconfiguration.md)                                                       | Cisco IOS XE NTP configuration                                                         |
+| [cisco.iosxe.ntpConfiguration.authenticationKey](cisco.iosxe.ntpconfiguration.authenticationkey.md)                   | Cisco IOS XE NTP authentication key                                                    |
+| [cisco.iosxe.ntpConfiguration.server](cisco.iosxe.ntpconfiguration.server.md)                                         | Cisco IOS XE NTP server                                                                |
+| [cisco.iosxe.ntpConfiguration.trustedKey](cisco.iosxe.ntpconfiguration.trustedkey.md)                                 | Cisco IOS XE NTP trusted key                                                           |
 | [cisco.iosxe.passwordEncryption](cisco.iosxe.passwordencryption.md)                                                   | Cisco IOS XE Password encryption configuration                                         |
 | [cisco.iosxe.routerEigrpAddressFamily](cisco.iosxe.routereigrpaddressfamily.md)                                       | Cisco IOS XE Routing EIGRP Address Family configuration from running config            |
 | [cisco.iosxe.routerEigrpAddressFamilyInterface](cisco.iosxe.routereigrpaddressfamilyinterface.md)                     | Cisco IOS XE Routing EIGRP Address Family Interface configuration from running config  |
@@ -58,6 +65,7 @@ Resources included in this pack:
 | [cisco.iosxe.snmpConfiguration.trapConfig](cisco.iosxe.snmpconfiguration.trapconfig.md)                               | Cisco IOS XE SNMP Trap configuration                                                   |
 | [cisco.iosxe.snmpConfiguration.user](cisco.iosxe.snmpconfiguration.user.md)                                           | Cisco IOS XE SNMP User                                                                 |
 | [cisco.iosxe.sshConfig](cisco.iosxe.sshconfig.md)                                                                     | Cisco IOS XE SSH configuration                                                         |
+| [cisco.iosxe.timestampFormat](cisco.iosxe.timestampformat.md)                                                         | Cisco IOS XE Timestamp format configuration                                            |
 | [cisco.iosxe.user](cisco.iosxe.user.md)                                                                               | Cisco IOS XE User configuration                                                        |
 | [cisco.iosxe.vtyLine](cisco.iosxe.vtyline.md)                                                                         | Cisco IOS XE Virtual Terminal Line (VTY)                                               |
 | [cisco.iosxr](cisco.iosxr.md)                                                                                         | Cisco IOS XR                                                                           |

@@ -14,12 +14,14 @@ Cisco IOS XE Virtual Terminal Line (VTY)
 
 **Fields**
 
-| ID                   | TYPE             | DESCRIPTION                                                                 |
-| -------------------- | ---------------- | --------------------------------------------------------------------------- |
-| startLine            | int              | VTY line start                                                              |
-| endLine              | int              | VTY line end                                                                |
-| accessClassIn        | int              | The inbound access-class number that the VTY line uses, if specified.       |
-| accessClassOut       | int              | The outbound access-class number that the VTY line uses, if specified.      |
-| inputTransportTypes  | &#91;&#93;string | The input transports types, if specified. Examples are 'telnet' and 'ssh'.  |
-| outputTransportTypes | &#91;&#93;string | The output transports types, if specified. Examples are 'telnet' and 'ssh'. |
-| execTimeout          | time             | The exec timeout for the vty line, if specified.                            |
+| ID                   | TYPE                                                          | DESCRIPTION                                                                    |
+| -------------------- | ------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| startLine            | int                                                           | VTY line start                                                                 |
+| endLine              | int                                                           | VTY line end                                                                   |
+| accessClassIn        | string                                                        | The inbound access-class number or name that the VTY line uses, if specified.  |
+| aclIn                | [cisco.iosxe.accessListEntry](cisco.iosxe.accesslistentry.md) | The inbound ACL, if specified.                                                 |
+| accessClassOut       | string                                                        | The outbound access-class number or name that the VTY line uses, if specified. |
+| aclOut               | [cisco.iosxe.accessListEntry](cisco.iosxe.accesslistentry.md) | The outbound ACL, if specified.                                                |
+| inputTransportTypes  | &#91;&#93;string                                              | The input transports types, if specified. Examples are 'telnet' and 'ssh'.     |
+| outputTransportTypes | &#91;&#93;string                                              | The output transports types, if specified. Examples are 'telnet' and 'ssh'.    |
+| execTimeout          | time                                                          | The exec timeout for the vty line, if specified.                               |

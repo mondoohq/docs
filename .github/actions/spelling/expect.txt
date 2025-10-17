@@ -344,6 +344,7 @@ Vtz
 vulnerabilityassessment
 vulnerabilityassessmentsettings
 vulnmgmt
+webauth
 westeurope
 widescale
 wil

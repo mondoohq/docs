@@ -25,3 +25,4 @@ AWS Organization resource
 | masterAccountId    | string                                  | ID of the organization's master account                                      |
 | masterAccountEmail | string                                  | Email owner of the organization's master account                             |
 | accounts           | &#91;&#93;[aws.account](aws.account.md) | List of accounts that belong to the organization, if available to the caller |
+| id                 | string                                  | Organization ID                                                              |

@@ -58,6 +58,7 @@ Resources included in this pack:
 | [ipAddress](ipaddress.md)                               | IP address (v4 or v6) with additional networking details   |
 | [iptables](iptables.md)                                 | IPv4 tables                                                |
 | [iptables.entry](iptables.entry.md)                     |                                                            |
+| [journald.config](journald.config.md)                   | systemd journald configuration                             |
 | [kernel](kernel.md)                                     | System kernel information                                  |
 | [kernel.module](kernel.module.md)                       | System kernel module information                           |
 | [kubelet](kubelet.md)                                   | Kubernetes kubelet configuration                           |

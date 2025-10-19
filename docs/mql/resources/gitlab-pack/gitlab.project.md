@@ -51,3 +51,6 @@ GitLab project
 | emptyRepo                                 | bool                                                                          | Whether the repo is empty                                                      |
 | sharedRunnersEnabled                      | bool                                                                          | Whether the project is enabled for shared runners                              |
 | groupRunnersEnabled                       | bool                                                                          | Whether the project is enabled for group runners                               |
+| removeSourceBranchAfterMerge              | bool                                                                          | Whether the merge request source brand is removed after merge                  |
+| lfsEnabled                                | bool                                                                          | Whether the project has LFS enabled                                            |
+| autocloseReferencedIssues                 | bool                                                                          | Whether the project has autoclose referenced issues enabled                    |

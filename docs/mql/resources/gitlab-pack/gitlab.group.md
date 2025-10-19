@@ -28,3 +28,4 @@ GitLab group
 | emailsDisabled                 | bool                                          | Whether group email notifications are disabled                                   |
 | mentionsDisabled               | bool                                          | Whether group mentions within issues and merge requests are disabled             |
 | projects                       | &#91;&#93;[gitlab.project](gitlab.project.md) | List of all projects that belong to the group                                    |
+| allowedEmailDomainsList        | string                                        | List of allowed email domains for the group                                      |

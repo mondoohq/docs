@@ -25,6 +25,7 @@ Audiencesign
 auditlog
 authorizationservice
 auths
+autoclose
 autodisconnect
 autoprovisioned
 autoremove
@@ -169,6 +170,7 @@ kyleen
 labelmatchstatement
 lappy
 letha
+lfs
 libwebsockets
 linux
 liveanalytics

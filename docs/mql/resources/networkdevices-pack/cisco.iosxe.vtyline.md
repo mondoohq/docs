@@ -25,3 +25,4 @@ Cisco IOS XE Virtual Terminal Line (VTY)
 | inputTransportTypes  | &#91;&#93;string                                              | The input transports types, if specified. Examples are 'telnet' and 'ssh'.     |
 | outputTransportTypes | &#91;&#93;string                                              | The output transports types, if specified. Examples are 'telnet' and 'ssh'.    |
 | execTimeout          | time                                                          | The exec timeout for the vty line, if specified.                               |
+| loginAuthentication  | string                                                        | The aaa login authentication method for the vty line, if specified             |

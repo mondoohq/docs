@@ -26,6 +26,8 @@ Resources included in this pack:
 | [cisco.iosxe.accounting.server](cisco.iosxe.accounting.server.md)                                                     | Cisco accounting entry server. These servers are where accounting records are sent to. |
 | [cisco.iosxe.accountingEntry](cisco.iosxe.accountingentry.md)                                                         | Cisco Accounting entry                                                                 |
 | [cisco.iosxe.auxLineEntry](cisco.iosxe.auxlineentry.md)                                                               | Cisco IOS XE Auxiliary Line (aux)                                                      |
+| [cisco.iosxe.bgpConfig](cisco.iosxe.bgpconfig.md)                                                                     | Cisco IOS XE Routing BGP configuration                                                 |
+| [cisco.iosxe.bgpConfig.neighbor](cisco.iosxe.bgpconfig.neighbor.md)                                                   | Cisco IOS XE BGP neighbor                                                              |
 | [cisco.iosxe.bootpConfig](cisco.iosxe.bootpconfig.md)                                                                 | Cisco IOS XE BootP configuration                                                       |
 | [cisco.iosxe.cdpConfig](cisco.iosxe.cdpconfig.md)                                                                     | Cisco IOS XE CDP configuration                                                         |
 | [cisco.iosxe.config](cisco.iosxe.config.md)                                                                           | Cisco IOS XE Global configuration settings                                             |

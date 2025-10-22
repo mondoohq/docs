@@ -24,6 +24,7 @@ Cisco IOS XE
 | cdp              | [cisco.iosxe.cdpConfig](cisco.iosxe.cdpconfig.md)                         | Cisco Discovery Protocol (CDP) configuration obtained by running 'show cdp'                           |
 | dhcp             | [cisco.iosxe.dhcpConfig](cisco.iosxe.dhcpconfig.md)                       | Dynamic Host Configuration Protocol (DHCP) configuration obtained by running 'show running-config all | include dhcp'         |
 | bootp            | [cisco.iosxe.bootpConfig](cisco.iosxe.bootpconfig.md)                     | Bootstrap protocol (BOOTP) configuration obtained by running 'show running-config all                 | include bootp'        |
+| bgp              | [cisco.iosxe.bgpConfig](cisco.iosxe.bgpconfig.md)                         | Border Gateway Protocol (BGP) configuration obtained by running 'show running-config all              | sec router bgp'       |
 | aaa              | [cisco.iosxe.aaa](cisco.iosxe.aaa.md)                                     | AAA configuration                                                                                     |
 | users            | &#91;&#93;[cisco.iosxe.user](cisco.iosxe.user.md)                         | Usernames and privilege level and password information., Obtained by running 'show running-config     | include username'     |
 | vtyLines         | &#91;&#93;[cisco.iosxe.vtyLine](cisco.iosxe.vtyline.md)                   | The VTY lines, obtained by running 'show running-config                                               | sec vty'              |

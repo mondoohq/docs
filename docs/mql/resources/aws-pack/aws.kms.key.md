@@ -28,3 +28,4 @@ The `aws.kms.key` resource provides fields for assessing the configuration of in
 | keyRotationEnabled | bool              | Whether key rotation is enabled |
 | metadata           | dict              | Metadata for the key            |
 | tags               | map[string]string | Tags for the KMS key            |
+| aliases            | &#91;&#93;string  | Aliases for the KMS key         |

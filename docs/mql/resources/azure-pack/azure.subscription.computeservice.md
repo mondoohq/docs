@@ -3,7 +3,7 @@ title: azure.subscription.computeService
 id: azure.subscription.computeService
 sidebar_label: azure.subscription.computeService
 displayed_sidebar: MQL
-description: Azure compute
+description: Azure Compute
 ---
 
 # azure.subscription.computeService
@@ -14,7 +14,7 @@ description: Azure compute
 
 **Description**
 
-Azure compute
+Azure Compute
 
 **Fields**
 

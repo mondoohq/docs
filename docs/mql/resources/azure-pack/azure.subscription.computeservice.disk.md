@@ -3,7 +3,7 @@ title: azure.subscription.computeService.disk
 id: azure.subscription.computeService.disk
 sidebar_label: azure.subscription.computeService.disk
 displayed_sidebar: MQL
-description: Azure disk resource
+description: Azure compute disk resource
 ---
 
 # azure.subscription.computeService.disk
@@ -14,7 +14,7 @@ description: Azure disk resource
 
 **Description**
 
-Azure disk resource
+Azure compute disk resource
 
 **Fields**
 

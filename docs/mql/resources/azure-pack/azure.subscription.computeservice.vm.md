@@ -3,7 +3,7 @@ title: azure.subscription.computeService.vm
 id: azure.subscription.computeService.vm
 sidebar_label: azure.subscription.computeService.vm
 displayed_sidebar: MQL
-description: Azure compute virtual machine
+description: Azure Compute virtual machine
 ---
 
 # azure.subscription.computeService.vm
@@ -14,7 +14,7 @@ description: Azure compute virtual machine
 
 **Description**
 
-Azure compute virtual machine
+Azure Compute virtual machine
 
 **Fields**
 

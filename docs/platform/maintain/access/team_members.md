@@ -8,7 +8,7 @@ image: /img/featured_img/mondoo-feature.jpg
 
 You can invite team members at the organization level or at an individual space level.
 
-Team members of an organization have access to all of the spaces and workspace under that organization, as well any additional spaces created in the future.
+Team members of an organization have access to all of the spaces and workspaces under that organization, as well any additional spaces created in the future.
 
 ## Role-based access control
 

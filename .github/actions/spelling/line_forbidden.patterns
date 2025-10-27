@@ -393,6 +393,10 @@
 # Fortinet Terms
 #
 
+# s.b. FortiCloud
+\bForti Cloud\b
+\bForticloud\b
+
 # s.b. FortiSwitch
 \bForti Switch\b
 \bFortiswitch\b
@@ -402,18 +406,22 @@
 \bForticlient\b
 
 # s.b. FortiGate
+\bForti Gate\b
 \bFortigate\b
 
 # s.b. Fortinet
 \bFortiNet\b
 
 # s.b. FortiGuard
+\bForti Guard\b
 \bFortiguard\b
 
 # s.b. FortiAnalyzer
+\bForti Analyzer\b
 \bFortianalyzer\b
 
 # s.b. FortiManager
+\bForti Manager\b
 \bFortimanager\b
 
 # s.b. FortiOS

@@ -122,6 +122,7 @@ Resources included in this pack:
 | [cisco.iosxr.user](cisco.iosxr.user.md)                                                                               | Cisco IOS XR User configuration                                                        |
 | [cisco.iosxr.vtyLinesEntry](cisco.iosxr.vtylinesentry.md)                                                             | Cisco IOS XR VTY lines configuration                                                   |
 | [cisco.nxos](cisco.nxos.md)                                                                                           | Cisco NX-OS                                                                            |
+| [cisco.nxos.coppConfig](cisco.nxos.coppconfig.md)                                                                     | Cisco NX-OS Control Plane Policing (CoPP) configuration                                |
 | [cisco.nxos.feature](cisco.nxos.feature.md)                                                                           | Cisco NX-OS Feature configuration                                                      |
 | [cisco.nxos.interface](cisco.nxos.interface.md)                                                                       | Cisco NX-OS Network interface resource                                                 |
 | [cisco.nxos.runAaaAuthenticationLoginEntry](cisco.nxos.runaaaauthenticationloginentry.md)                             | Cisco NX-OS AAA authentication login method list from running config                   |

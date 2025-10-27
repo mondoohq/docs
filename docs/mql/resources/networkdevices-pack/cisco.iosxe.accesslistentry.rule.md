@@ -9,13 +9,15 @@ displayed_sidebar: MQL
 
 **Fields**
 
-| ID                | TYPE   | DESCRIPTION                                                  |
-| ----------------- | ------ | ------------------------------------------------------------ |
-| acl               | string | ACL name                                                     |
-| protocol          | string | Protocol (ip/tcp/udp)                                        |
-| action            | string | Action (permit/deny)                                         |
-| priority          | int    | The evaluation order of the access list entry.               |
-| sourceIp          | string | source IP address or `any`                                   |
-| sourceIpMask      | string | Optional. The mask (wildcard) of the source IP address.      |
-| destinationIp     | string | destination IP address or `any`                              |
-| destinationIpMask | string | Optional. The mask (wildcard) of the destination IP address. |
+| ID                            | TYPE   | DESCRIPTION                                                      |
+| ----------------------------- | ------ | ---------------------------------------------------------------- |
+| acl                           | string | ACL name                                                         |
+| protocol                      | string | Protocol (ip/tcp/udp)                                            |
+| action                        | string | Action (permit/deny)                                             |
+| priority                      | int    | The evaluation order of the access list entry.                   |
+| sourceAddress                 | ip     | Optional. Source IP address for the rule.                        |
+| sourceWildcardMask            | ip     | Optional. Source IPv4 wildcard mask for the source ip.           |
+| destinationAddress            | ip     | Optional. Destination IP address for the rule.                   |
+| destinationWildcardMask       | ip     | Optional. Destination IPv4 wildcard mask for the destination ip. |
+| sourceNetworkObjectGroup      | string | Optional. The source network object group for the rule.          |
+| destinationNetworkObjectGroup | string | Optional. The destination network object group for the rule.     |

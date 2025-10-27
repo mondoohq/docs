@@ -8,15 +8,46 @@ image: /img/featured_img/mondoo-feature.jpg
 
 You can invite team members at the organization level or at an individual space level.
 
-Team members of an organization have access to all of the spaces under that organization, as well any additional spaces created in the future.
+Team members of an organization have access to all of the spaces and workspace under that organization, as well any additional spaces created in the future.
 
 ## Role-based access control
 
-Team members of organizations and spaces are granted one of these role-based access controls:
+Team members of organizations and spaces are granted one of these three base roles:
 
-- **Viewer** - Read-only access
-- **Editor** - Manage integrations, assets, policies, and team members
+- **Viewer** - Read-only access to the view content in all spaces / workspaces within the organization including:
+  - assets
+  - compliance frameworks
+  - dashboards
+  - exceptions
+  - findings
+  - reports
+  - tickets
+- **Editor** - Viewer access plus the ability to manage:
+  - assets (add / remove)
+  - compliance frameworks (add / remove / modify scope)
+  - exceptions (create / extend / approve)
+  - integrations (add / remove / modify)
+  - policies (add / remove / active / deactivate)
+  - reports (create / remove)
+  - service accounts (add / remove)
+  - SLAs (modify)
+  - team members (add / remove / modify permissions)
+  - tickets (create / remove)
+  - workspaces (add / remove / modify)
 - **Owner** - Editor access plus the ability to create and delete spaces and organizations
+
+To provide more fine-grained control over user access use the **Viewer** base role plus one of more of these additional permissions:
+
+- Exception Reviewer
+- Exception Requester
+- Integrations Manager
+- Policy Editor
+- Policy Manager
+- Query Pack Editor
+- Query Pack Manager
+- SLA Manager
+- Ticket Creator
+- Ticket Manager
 
 ## Add team members to an organization
 

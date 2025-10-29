@@ -25,7 +25,8 @@ Microsoft
 | serviceprincipals      | &#91;&#93;[microsoft.serviceprincipal](microsoft.serviceprincipal.md)                     | List of service principals                 |
 | enterpriseApplications | &#91;&#93;[microsoft.serviceprincipal](microsoft.serviceprincipal.md)                     | List of enterprise applications            |
 | roles                  | [microsoft.roles](microsoft.roles.md)                                                     | List of roles                              |
-| settings               | dict                                                                                      | Microsoft 365 settings                     |
+| settings               | dict                                                                                      | Deprecated: use groupSettings instead      |
+| groupSettings          | &#91;&#93;[microsoft.setting](microsoft.setting.md)                                       | Microsoft 365 settings                     |
 | tenantDomainName       | string                                                                                    | The connected tenant's default domain name |
 | identityAndAccess      | [microsoft.identityAndAccess](microsoft.identityandaccess.md)                             | Identity and Access policies               |
 | accessReviews          | [microsoft.identityAndAccess.accessReviews](microsoft.identityandaccess.accessreviews.md) | Access review definitions                  |

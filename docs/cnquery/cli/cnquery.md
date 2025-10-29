@@ -25,6 +25,7 @@ cnquery is a cloud-native tool for querying your entire infrastructure.
 - [cnquery bundle](cnquery_bundle.md) - Create, upload, and validate query packs
 - [cnquery login](cnquery_login.md) - Register with Mondoo Platform
 - [cnquery logout](cnquery_logout.md) - Log out from Mondoo Platform
+- [cnquery lsp](cnquery_lsp.md) - Launch the MQL Language Server
 - [cnquery providers](cnquery_providers.md) - Providers add connectivity to all assets
 - [cnquery run](cnquery_run.md) - Run an MQL query
 - [cnquery sbom](cnquery_sbom.md) - Experimental: Generate a software bill of materials (SBOM) for a given asset

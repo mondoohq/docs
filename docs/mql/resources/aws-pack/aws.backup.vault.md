@@ -20,12 +20,15 @@ The `aws.backup.vault` resource provides fields representing an individual AWS B
 
 **Fields**
 
-| ID               | TYPE                                                                        | DESCRIPTION                                        |
-| ---------------- | --------------------------------------------------------------------------- | -------------------------------------------------- |
-| arn              | string                                                                      | ARN of the vault                                   |
-| name             | string                                                                      | Name of the vault                                  |
-| recoveryPoints   | &#91;&#93;[aws.backup.vaultRecoveryPoint](aws.backup.vaultrecoverypoint.md) | List of recovery points stored in the backup vault |
-| region           | string                                                                      | Region of the vault                                |
-| createdAt        | time                                                                        | Date the backup vault was created                  |
-| locked           | bool                                                                        | Whether the backup is locked                       |
-| encryptionKeyArn | string                                                                      | ARN of the encryption key                          |
+| ID               | TYPE                                                                        | DESCRIPTION                                                             |
+| ---------------- | --------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| arn              | string                                                                      | ARN of the vault                                                        |
+| name             | string                                                                      | Name of the vault                                                       |
+| recoveryPoints   | &#91;&#93;[aws.backup.vaultRecoveryPoint](aws.backup.vaultrecoverypoint.md) | List of recovery points stored in the backup vault                      |
+| region           | string                                                                      | Region of the vault                                                     |
+| createdAt        | time                                                                        | Date the backup vault was created                                       |
+| locked           | bool                                                                        | Whether the backup is locked                                            |
+| lockedAt         | time                                                                        | Date when the backup was locked                                         |
+| encryptionKeyArn | string                                                                      | ARN of the encryption key                                               |
+| maxRetentionDays | int                                                                         | The maximum retention period that the vault retains its recovery points |
+| minRetentionDays | int                                                                         | The minimum retention period that the vault retains its recovery points |

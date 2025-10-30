@@ -39,6 +39,7 @@ bia
 bigquery
 BJHy
 bluesky
+bootflash
 bqthk
 bsdutils
 bsky
@@ -95,6 +96,7 @@ DHE
 dlp
 dlq
 dmark
+dsa
 eas
 ebgp
 EDE
@@ -113,6 +115,7 @@ externalsender
 falsey
 Fdq
 feb
+fips
 Fqdns
 fromjson
 gcfs
@@ -249,12 +252,14 @@ pii
 pipefail
 pki
 pkr
+poap
 portgroup
 postgre
 PROFILENAME
 PROJECTID
 protonmail
 pushconfig
+pxe
 pytz
 querypack
 QUERYUID

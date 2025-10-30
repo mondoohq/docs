@@ -22,6 +22,7 @@ Resources included in this pack:
 | [k8s.app](k8s.app.md)                                                                           | Kubernetes Application                      |
 | [k8s.configmap](k8s.configmap.md)                                                               | Kubernetes ConfigMap                        |
 | [k8s.container](k8s.container.md)                                                               | Kubernetes workload container               |
+| [k8s.containerStatus](k8s.containerstatus.md)                                                   | Kubernetes container status                 |
 | [k8s.cronjob](k8s.cronjob.md)                                                                   | Kubernetes CronJob                          |
 | [k8s.customresource](k8s.customresource.md)                                                     | Kubernetes CustomResource                   |
 | [k8s.daemonset](k8s.daemonset.md)                                                               | Kubernetes DaemonSet                        |

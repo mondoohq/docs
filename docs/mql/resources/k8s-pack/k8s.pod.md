@@ -35,6 +35,7 @@ Kubernetes Pod
 | ephemeralContainers | &#91;&#93;[k8s.ephemeralContainer](k8s.ephemeralcontainer.md) | Ephemeral containers                 |
 | initContainers      | &#91;&#93;[k8s.initContainer](k8s.initcontainer.md)           | Init containers                      |
 | containers          | &#91;&#93;[k8s.container](k8s.container.md)                   | Contained containers                 |
+| containerStatuses   | &#91;&#93;[k8s.containerStatus](k8s.containerstatus.md)       | Container statuses                   |
 | node                | [k8s.node](k8s.node.md)                                       | Node the pod runs on                 |
 
 **References**

@@ -3,9 +3,14 @@ title: cisco.iosxe.accessListEntry.rule
 id: cisco.iosxe.accessListEntry.rule
 sidebar_label: cisco.iosxe.accessListEntry.rule
 displayed_sidebar: MQL
+description: Cisco IOS XE access list rule configuration
 ---
 
 # cisco.iosxe.accessListEntry.rule
+
+**Description**
+
+Cisco IOS XE access list rule configuration
 
 **Fields**
 

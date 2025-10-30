@@ -19,6 +19,7 @@ Docker image
 | id          | string            | Image ID                                                      |
 | size        | int               | Image size in kilobytes                                       |
 | virtualsize | int               | Virtual image size in kilobytes. Deprecated; use size instead |
+| repoDigests | &#91;&#93;string  | Repo digests                                                  |
 | tags        | &#91;&#93;string  | Tag key value pairs                                           |
 | labels      | map[string]string | Labels key value pairs                                        |
 

@@ -21,8 +21,8 @@ Resources included in this pack:
 | [cisco.iosxe.aaaAuthentication.methodGroup](cisco.iosxe.aaaauthentication.methodgroup.md)                             | Method group for AAA authentication login entry                                        |
 | [cisco.iosxe.aaaAuthenticationEnableEntry](cisco.iosxe.aaaauthenticationenableentry.md)                               | Cisco IOS XE AAA enable configuration                                                  |
 | [cisco.iosxe.aaaAuthenticationLoginEntry](cisco.iosxe.aaaauthenticationloginentry.md)                                 | Cisco IOS XE AAA login configuration                                                   |
-| [cisco.iosxe.accessListEntry](cisco.iosxe.accesslistentry.md)                                                         |                                                                                        |
-| [cisco.iosxe.accessListEntry.rule](cisco.iosxe.accesslistentry.rule.md)                                               |                                                                                        |
+| [cisco.iosxe.accessListEntry](cisco.iosxe.accesslistentry.md)                                                         | Cisco IOS XE access list configuration                                                 |
+| [cisco.iosxe.accessListEntry.rule](cisco.iosxe.accesslistentry.rule.md)                                               | Cisco IOS XE access list rule configuration                                            |
 | [cisco.iosxe.accounting.server](cisco.iosxe.accounting.server.md)                                                     | Cisco accounting entry server. These servers are where accounting records are sent to. |
 | [cisco.iosxe.accountingEntry](cisco.iosxe.accountingentry.md)                                                         | Cisco Accounting entry                                                                 |
 | [cisco.iosxe.auxLineEntry](cisco.iosxe.auxlineentry.md)                                                               | Cisco IOS XE Auxiliary Line (aux)                                                      |
@@ -122,11 +122,17 @@ Resources included in this pack:
 | [cisco.iosxr.user](cisco.iosxr.user.md)                                                                               | Cisco IOS XR User configuration                                                        |
 | [cisco.iosxr.vtyLinesEntry](cisco.iosxr.vtylinesentry.md)                                                             | Cisco IOS XR VTY lines configuration                                                   |
 | [cisco.nxos](cisco.nxos.md)                                                                                           | Cisco NX-OS                                                                            |
+| [cisco.nxos.bootConfig](cisco.nxos.bootconfig.md)                                                                     | Cisco NX-OS Boot configuration                                                         |
 | [cisco.nxos.coppConfig](cisco.nxos.coppconfig.md)                                                                     | Cisco NX-OS Control Plane Policing (CoPP) configuration                                |
 | [cisco.nxos.feature](cisco.nxos.feature.md)                                                                           | Cisco NX-OS Feature configuration                                                      |
+| [cisco.nxos.fipsConfig](cisco.nxos.fipsconfig.md)                                                                     | Cisco NX-OS FIPS configuration                                                         |
 | [cisco.nxos.interface](cisco.nxos.interface.md)                                                                       | Cisco NX-OS Network interface resource                                                 |
+| [cisco.nxos.interfaceHsrpEntry](cisco.nxos.interfacehsrpentry.md)                                                     | Cisco NX-OS HSRP configuration per interface                                           |
+| [cisco.nxos.interfaceHsrpEntry.hsrpGroup](cisco.nxos.interfacehsrpentry.hsrpgroup.md)                                 | Cisco NX-OS HSRP Group configuration                                                   |
 | [cisco.nxos.routerEigrpEntry](cisco.nxos.routereigrpentry.md)                                                         | Cisco NX-OS Routing EIGRP entry configuration from running config                      |
 | [cisco.nxos.routerEigrpEntry.addressFamily](cisco.nxos.routereigrpentry.addressfamily.md)                             | Cisco NX-OS Routing EIGRP Address Family from running config                           |
+| [cisco.nxos.routerOspfEntry](cisco.nxos.routerospfentry.md)                                                           | Cisco NX-OS Routing OSPF entry configuration from running config                       |
+| [cisco.nxos.routerOspfEntry.ospfInterface](cisco.nxos.routerospfentry.ospfinterface.md)                               | Cisco NX-OS Routing OSPF Interface configuration                                       |
 | [cisco.nxos.runAaaAuthenticationLoginEntry](cisco.nxos.runaaaauthenticationloginentry.md)                             | Cisco NX-OS AAA authentication login method list from running config                   |
 | [cisco.nxos.runAaaAuthenticationLoginEntry.methodGroup](cisco.nxos.runaaaauthenticationloginentry.methodgroup.md)     | Method group for AAA authentication login entry                                        |
 | [cisco.nxos.runAaaGroupServerRadius](cisco.nxos.runaaagroupserverradius.md)                                           | Cisco NX-OS AAA Group Server RADIUS configuration                                      |
@@ -136,6 +142,7 @@ Resources included in this pack:
 | [cisco.nxos.scheduler](cisco.nxos.scheduler.md)                                                                       | Cisco NX-OS Scheduler configuration                                                    |
 | [cisco.nxos.scheduler.job](cisco.nxos.scheduler.job.md)                                                               | Cisco NX-OS Scheduler Job                                                              |
 | [cisco.nxos.scheduler.schedule](cisco.nxos.scheduler.schedule.md)                                                     | Cisco NX-OS Scheduler Schedule                                                         |
+| [cisco.nxos.sshConfig](cisco.nxos.sshconfig.md)                                                                       |                                                                                        |
 | [cisco.nxos.user](cisco.nxos.user.md)                                                                                 | Cisco NX-OS User configuration                                                         |
 | [cisco.nxos.user.credential](cisco.nxos.user.credential.md)                                                           | Cisco NX-OS User credential                                                            |
 | [networkdevices.command](networkdevices.command.md)                                                                   | Network devices command resource                                                       |

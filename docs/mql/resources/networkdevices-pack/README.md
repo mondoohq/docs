@@ -129,6 +129,9 @@ Resources included in this pack:
 | [cisco.nxos.interface](cisco.nxos.interface.md)                                                                       | Cisco NX-OS Network interface resource                                                 |
 | [cisco.nxos.interfaceHsrpEntry](cisco.nxos.interfacehsrpentry.md)                                                     | Cisco NX-OS HSRP configuration per interface                                           |
 | [cisco.nxos.interfaceHsrpEntry.hsrpGroup](cisco.nxos.interfacehsrpentry.hsrpgroup.md)                                 | Cisco NX-OS HSRP Group configuration                                                   |
+| [cisco.nxos.loggingConfig](cisco.nxos.loggingconfig.md)                                                               | Cisco NX-OS Logging configuration                                                      |
+| [cisco.nxos.loggingConfig.facility](cisco.nxos.loggingconfig.facility.md)                                             | Cisco NX-OS Logging Facility configuration                                             |
+| [cisco.nxos.loggingConfig.server](cisco.nxos.loggingconfig.server.md)                                                 | Cisco NX-OS Logging Remote Server configuration                                        |
 | [cisco.nxos.routerEigrpEntry](cisco.nxos.routereigrpentry.md)                                                         | Cisco NX-OS Routing EIGRP entry configuration from running config                      |
 | [cisco.nxos.routerEigrpEntry.addressFamily](cisco.nxos.routereigrpentry.addressfamily.md)                             | Cisco NX-OS Routing EIGRP Address Family from running config                           |
 | [cisco.nxos.routerOspfEntry](cisco.nxos.routerospfentry.md)                                                           | Cisco NX-OS Routing OSPF entry configuration from running config                       |

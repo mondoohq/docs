@@ -17,6 +17,7 @@ approvalsetting
 appsettings
 appslot
 appstore
+arp
 ashburn
 assetid
 ASUSTe
@@ -141,6 +142,7 @@ iac
 iana
 iap
 iccid
+icmpv
 ietf
 ilb
 imagetools
@@ -313,6 +315,7 @@ suki
 SXp
 tacacs
 tailscale
+talos
 targetgroup
 tde
 teamsmeetingpolicyconfig
@@ -324,6 +327,7 @@ textfsm
 tfblock
 Thu
 timestream
+timevalues
 tmpkqyme
 toplevel
 tpu
@@ -336,6 +340,7 @@ unversioned
 uppercasing
 urpf
 usb
+userpassphrase
 UXd
 VALUEX
 VAULTNAME
@@ -369,5 +374,6 @@ XXXXXXXXX
 YAMLFILE
 yast
 yescrypt
+zorin
 ZRg
 zxkk

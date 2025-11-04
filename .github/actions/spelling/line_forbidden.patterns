@@ -861,9 +861,8 @@
 \bCloud ops\b
 \bcloud ops\b
 
-# s.b. Batch Service
-\bBatch service\b
-\bbatch service\b
+# s.b. Azure Batch
+\bAzure batch\b
 
 # s.b. Service Fabric Cluster
 \bservice fabric cluster\b

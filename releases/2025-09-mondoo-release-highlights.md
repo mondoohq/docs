@@ -4,7 +4,7 @@ sidebar_label: September Highlights
 description: As the colors of fall begin to show and the days start to get shorter, we certainly haven’t been sitting still at Mondoo. This month, we greatly extended our vulnerability detection capabilities, adding support for new operating systems and an impressive list of third-party applications. We also added support for EU and German compliance frameworks Dora and BSI SYS 1.5. On top of that we added experimental MCP security, streamlined the process of listing and filtering findings, and made advisory remediations easier to access. Dig in to find out more!
 
 authors: [tim]
-image: /img/release-highlights/2025-08/banner.png
+image: /img/release-highlights/2025-09/banner.png
 tags: [release, mondoo]
 date: 2025-10-08
 ---

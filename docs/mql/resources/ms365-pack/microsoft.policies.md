@@ -24,3 +24,4 @@ Microsoft policies
 | authenticationMethodsPolicy               | [microsoft.policies.authenticationMethodsPolicy](microsoft.policies.authenticationmethodspolicy.md)         | Authentication methods policy                                              |
 | activityBasedTimeoutPolicies              | &#91;&#93;[microsoft.policies.activityBasedTimeoutPolicy](microsoft.policies.activitybasedtimeoutpolicy.md) | Activity-based timeout policies                                            |
 | externalIdentitiesPolicy                  | [microsoft.policies.externalIdentitiesPolicy](microsoft.policies.externalidentitiespolicy.md)               | Tenant-wide policy that controls whether external users can leave a tenant |
+| crossTenantAccessPolicy                   | [microsoft.policies.crossTenantAccessPolicyDefault](microsoft.policies.crosstenantaccesspolicydefault.md)   | Default configuration of cross-tenant access policy                        |

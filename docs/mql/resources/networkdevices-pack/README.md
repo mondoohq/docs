@@ -122,8 +122,15 @@ Resources included in this pack:
 | [cisco.iosxr.user](cisco.iosxr.user.md)                                                                               | Cisco IOS XR User configuration                                                        |
 | [cisco.iosxr.vtyLinesEntry](cisco.iosxr.vtylinesentry.md)                                                             | Cisco IOS XR VTY lines configuration                                                   |
 | [cisco.nxos](cisco.nxos.md)                                                                                           | Cisco NX-OS                                                                            |
+| [cisco.nxos.accessControlList](cisco.nxos.accesscontrollist.md)                                                       | Cisco NX-OS Access Control List (ACL)                                                  |
+| [cisco.nxos.accessControlList.entry](cisco.nxos.accesscontrollist.entry.md)                                           | Cisco NX-OS Access Control List (ACL) Entry                                            |
+| [cisco.nxos.bgpRouterConfig](cisco.nxos.bgprouterconfig.md)                                                           | Cisco NX-OS BGP Router configuration                                                   |
+| [cisco.nxos.bgpRouterConfig.neighbor](cisco.nxos.bgprouterconfig.neighbor.md)                                         | Cisco NX-OS BGP Router Neighbor                                                        |
+| [cisco.nxos.bgpRouterConfig.neighbor.af](cisco.nxos.bgprouterconfig.neighbor.af.md)                                   | Cisco NX-OS BGP Router Neighbor Address Family                                         |
 | [cisco.nxos.bootConfig](cisco.nxos.bootconfig.md)                                                                     | Cisco NX-OS Boot configuration                                                         |
+| [cisco.nxos.cdpAllEntry](cisco.nxos.cdpallentry.md)                                                                   | Cisco NX-OS CDP status entry for interface                                             |
 | [cisco.nxos.coppConfig](cisco.nxos.coppconfig.md)                                                                     | Cisco NX-OS Control Plane Policing (CoPP) configuration                                |
+| [cisco.nxos.encryptionServiceConfig](cisco.nxos.encryptionserviceconfig.md)                                           | Cisco NX-OS Encryption Service Configuration                                           |
 | [cisco.nxos.feature](cisco.nxos.feature.md)                                                                           | Cisco NX-OS Feature configuration                                                      |
 | [cisco.nxos.fipsConfig](cisco.nxos.fipsconfig.md)                                                                     | Cisco NX-OS FIPS configuration                                                         |
 | [cisco.nxos.interface](cisco.nxos.interface.md)                                                                       | Cisco NX-OS Network interface resource                                                 |
@@ -132,6 +139,7 @@ Resources included in this pack:
 | [cisco.nxos.loggingConfig](cisco.nxos.loggingconfig.md)                                                               | Cisco NX-OS Logging configuration                                                      |
 | [cisco.nxos.loggingConfig.facility](cisco.nxos.loggingconfig.facility.md)                                             | Cisco NX-OS Logging Facility configuration                                             |
 | [cisco.nxos.loggingConfig.server](cisco.nxos.loggingconfig.server.md)                                                 | Cisco NX-OS Logging Remote Server configuration                                        |
+| [cisco.nxos.passphraseTimevalues](cisco.nxos.passphrasetimevalues.md)                                                 |                                                                                        |
 | [cisco.nxos.routerEigrpEntry](cisco.nxos.routereigrpentry.md)                                                         | Cisco NX-OS Routing EIGRP entry configuration from running config                      |
 | [cisco.nxos.routerEigrpEntry.addressFamily](cisco.nxos.routereigrpentry.addressfamily.md)                             | Cisco NX-OS Routing EIGRP Address Family from running config                           |
 | [cisco.nxos.routerOspfEntry](cisco.nxos.routerospfentry.md)                                                           | Cisco NX-OS Routing OSPF entry configuration from running config                       |
@@ -140,6 +148,7 @@ Resources included in this pack:
 | [cisco.nxos.runAaaAuthenticationLoginEntry.methodGroup](cisco.nxos.runaaaauthenticationloginentry.methodgroup.md)     | Method group for AAA authentication login entry                                        |
 | [cisco.nxos.runAaaGroupServerRadius](cisco.nxos.runaaagroupserverradius.md)                                           | Cisco NX-OS AAA Group Server RADIUS configuration                                      |
 | [cisco.nxos.runAaaGroupServerTacacs](cisco.nxos.runaaagroupservertacacs.md)                                           | Cisco NX-OS AAA Group Server TACACS+ configuration                                     |
+| [cisco.nxos.runInterface](cisco.nxos.runinterface.md)                                                                 | Cisco NX-OS Running Config Interface                                                   |
 | [cisco.nxos.runRadiusServer](cisco.nxos.runradiusserver.md)                                                           | Cisco NX-OS RADIUS server from running config                                          |
 | [cisco.nxos.runTacacsServer](cisco.nxos.runtacacsserver.md)                                                           | Cisco NX-OS TACACS+ server from running config                                         |
 | [cisco.nxos.scheduler](cisco.nxos.scheduler.md)                                                                       | Cisco NX-OS Scheduler configuration                                                    |

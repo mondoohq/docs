@@ -76,7 +76,7 @@ Speaking of end-of-life operating systems, Windows 10 is now officially EOL. If 
 
 Keeping your organization’s domains secure can feel like a full-time job, especially as teams spin up new subdomains for projects. With automatic subdomain detection, you now have complete visibility into the security of your external properties. Configure a single scanning integration for your main domain, and Mondoo will automatically discover and scan every subdomain for you.
 
-![Mondoo now includes automatic subdomain detection](/img/release-highlights/2025-09/domains.png)
+![Mondoo now includes automatic subdomain detection](/img/release-highlights/2025-10/domains.png)
 
 ## Support for all major operating systems
 

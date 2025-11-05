@@ -56,17 +56,17 @@ The `cnspec status` command validates cnspec registration and ensures that commu
 cnspec status
 → loaded configuration from /Users/stella/.config/mondoo/mondoo.yml using source default
 → Platform:		macos
-→ Version:		13.4.1
+→ Version:		26.0.1
 → Hostname:		stella.home
 → IP:			192.168.254.21
-→ Time:			2024-03-23T12:07:41-08:00
-→ Version:		10.8.4 (API Version: 10)
-→ Latest Version:	10.8.4
+→ Time:			2025-11-23T12:07:41-08:00
+→ Version:		12.8.0 (API Version: 12)
+→ Latest Version:	12.8.0
 → Installed Providers:	core | os | mock
 → API ConnectionConfig:	https://us.api.mondoo.com
 → API Status:		SERVING
-→ API Time:		2024-03-23T20:07:42Z
-→ API Version:		10
+→ API Time:		2025-11-23T20:07:42Z
+→ API Version:		11
 x client is not registered
 x The Mondoo Platform credentials provided at /root/.config/mondoo/mondoo.yml didn't successfully authenticate with Mondoo Platform. Please re-authenticate with Mondoo Platform. To learn how, read https://mondoo.com/docs/cnspec/cnspec-adv-install/registration/.
 ```
@@ -75,17 +75,17 @@ x The Mondoo Platform credentials provided at /root/.config/mondoo/mondoo.yml di
 cnspec status
 → loaded configuration from /Users/mwezi/.config/mondoo/mondoo.yml using source default
 → Platform:		macos
-→ Version:		13.4.1
+→ Version:		26.0.1
 → Hostname:		mwezi.home
 → IP:			192.168.254.21
-→ Time:			2024-03-23T12:07:41-08:00
-→ Version:		10.8.4 (API Version: 10)
-→ Latest Version:	10.8.4
+→ Time:			2025-11-23T12:07:41-08:00
+→ Version:		12.8.0 (API Version: 12)
+→ Latest Version:	12.8.0
 → Installed Providers:	arista | aws | azure | core | mock | os
 → API ConnectionConfig:	https://api.edge.mondoo.com
 → API Status:		SERVING
-→ API Time:		2024-03-23T20:07:42Z
-→ API Version:		10
+→ API Time:		2025-11-23T20:07:42Z
+→ API Version:		11
 → Owner:		//captain.api.mondoo.app/spaces/lunalectric-team-workstations
 → Client:		//agents.api.mondoo.app/spaces/lunalectric-team-workstations/agents/2SARlZgQnFLAzj7jfiS1Fx2HBz8
 → Service Account:      //agents.api.mondoo.app/spaces/lunalectric-team-workstations/serviceaccounts/2bMtksUk9EjrI5MC3tTf6UmhNC2
@@ -97,17 +97,17 @@ cnspec status
 cnspec status
 → loaded configuration from /Users/cosmo/.config/mondoo/mondoo.yml using source default
 → Platform:		macos
-→ Version:		13.4.1
+→ Version:		26.0.1
 → Hostname:		cosmo.home
 → IP:			192.168.254.21
-→ Time:			2024-03-23T12:07:41-08:00
-→ Version:		10.8.4 (API Version: 10)
-→ Latest Version:	10.8.4
+→ Time:			2025-11-23T12:07:41-08:00
+→ Version:		12.8.0 (API Version: 12)
+→ Latest Version:	12.8.0
 → Installed Providers:	arista | aws | azure | core | mock | os
 → API ConnectionConfig:	https://api.edge.mondoo.com
 → API Status:		SERVING
-→ API Time:		2024-03-23T20:07:42Z
-→ API Version:		10
+→ API Time:		2025-11-23T20:07:42Z
+→ API Version:		11
 → Owner:		//captain.api.mondoo.app/spaces/lunalectric-team-workstations
 → Client:		//agents.api.mondoo.app/spaces/lunalectric-team-workstations/agents/2SARlZgQnFLAzj7jfiS1Fx2HBz8
 → Service Account:      //agents.api.mondoo.app/spaces/lunalectric-team-workstations/serviceaccounts/2bMtksUk9EjrI5MC3tTf6UmhNC2
@@ -120,17 +120,17 @@ cnspec status
 cnspec status
 → loaded configuration from /Users/cosmo/.config/mondoo/mondoo.yml using source default
 → Platform:		macos
-→ Version:		13.4.1
+→ Version:		26.0.1
 → Hostname:		tsuki.home
 → IP:			192.168.254.21
-→ Time:			2024-03-23T12:07:41-08:00
-→ Version:		10.8.4 (API Version: 10)
-→ Latest Version:	10.8.4
+→ Time:			2025-11-23T12:07:41-08:00
+→ Version:		12.8.0 (API Version: 12)
+→ Latest Version:	12.8.0
 → Installed Providers:	 aws | azure | core | mock | os
 → API ConnectionConfig:	https://api.edge.mondoo.com
 → API Status:		SERVING
-→ API Time:		2024-03-23T20:07:42Z
-→ API Version:		10
+→ API Time:		2025-11-23T20:07:42Z
+→ API Version:		11
 → Owner:		//captain.api.mondoo.app/spaces/lunalectric-team-workstations
 → Client:		//agents.api.mondoo.app/spaces/lunalectric-team-workstations/agents/2SARlZgQnFLAzj7jfiS1Fx2HBz8
 → Service Account:      //agents.api.mondoo.app/spaces/lunalectric-team-workstations/serviceaccounts/2bMtksUk9EjrI5MC3tTf6UmhNC2

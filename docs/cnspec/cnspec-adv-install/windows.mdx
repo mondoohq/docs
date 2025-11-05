@@ -16,9 +16,7 @@ The msi package `REGISTRATIONTOKEN` argument allows you to pass in a temporary r
 Before you integrate Microsoft Windows with Mondoo:
 
 - Confirm access to the internet using PowerShell or CMD Terminal
-
 - Confirm access to Mondoo systems using PowerShell or CMD Terminal
-
 - Synchronize your system clock
 
 import Partial from "./_providers-note.mdx";
@@ -43,7 +41,7 @@ Telnet google.com 443
 
 If you have a proxy setting in your environment, you _might_ need to configure it in the PowerShell and CMD Terminal:
 
-```
+```powershell title="Check proxy settings"
 netsh winhttp show proxy
 ```
 
@@ -102,37 +100,33 @@ Install-Mondoo # -RegistrationToken $MONDOO_REGISTRATION_TOKEN
 The installation creates one or two directories:
 
 - The `C:\Program Files\Mondoo` directory contains binaries.
-
-````
-
 - The `C:\ProgramData\Mondoo` directory is only created if the registration token is used. It contains the `mondoo.yml` configuration file.
-
 
 ## Option B: Install manually (Mondoo package including cnspec)
 
 1. Download the [Mondoo Windows installer](https://releases.mondoo.com/mondoo/latest).
 2. Execute the installer as administrator.
 
-   Example:
+      Example:
 
-```powershell title="manual installation"
-# PowerShell
-Start-Process -Wait msiexec -ArgumentList ' /i  mondoo_8.9.1_windows_amd64.msi'
+      ```powershell title="manual installation"
+      # PowerShell
+      Start-Process -Wait msiexec -ArgumentList ' /i  mondoo_12.8.1_windows_amd64.msi'
 
-# CMD Terminal
-start /wait msiexec /i mondoo_8.9.1_windows_amd64.msi
-````
+      # CMD Terminal
+      start /wait msiexec /i mondoo_12.8.1_windows_amd64.msi
+      ````
 
 3. Follow the steps and agree to the license agreement.
 4. (Optional) Register cnspec with your Mondoo Platform account.
 
-If you enter a registration token during the installation wizard, cnspec registers automatically.
+      If you enter a registration token during the installation wizard, cnspec registers automatically.
 
-You can also register by token later if needed:
+      You can also register by token later if needed:
 
-```powershell title="CMD Terminal"
-start /wait msiexec /i mondoo_10.9.1_windows_amd64.msi  REGISTRATIONTOKEN="XXXXXXXXXXXXXXXXX"
-```
+      ```powershell title="CMD Terminal"
+      start /wait msiexec /i mondoo_12.8.1_windows_amd64.msi  REGISTRATIONTOKEN="XXXXXXXXXXXXXXXXX"
+      ```
 
 ## Test and troubleshoot
 

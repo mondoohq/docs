@@ -93,7 +93,7 @@ New policies:
 - CIS Microsoft Azure Compute Services Benchmark 1.0
 - CIS Microsoft Azure Database Services Benchmark 1.0
 - CIS Cisco IOS XE 17.x Benchmark 2.2.1
-- CIS Cisco IOS XR 7.x Benchmark 3.0
+- CIS Cisco IOS XR 7.x Benchmark 1.0.1
 - CIS Microsoft Intune Windows Benchmark 11 4.0
 - CIS Microsoft Intune Windows Benchmark 10 4.0
 - VMware vSphere Security Configuration Guide 8 Benchmark

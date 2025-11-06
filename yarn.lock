@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@ai-sdk/gateway@2.0.6":
-  version "2.0.6"
-  resolved "https://registry.yarnpkg.com/@ai-sdk/gateway/-/gateway-2.0.6.tgz#13d046b044a5f96f9f693b2935a594dfa7873ecd"
-  integrity sha512-FmhR6Tle09I/RUda8WSPpJ57mjPWzhiVVlB50D+k+Qf/PBW0CBtnbAUxlNSR5v+NIZNLTK3C56lhb23ntEdxhQ==
+"@ai-sdk/gateway@2.0.7":
+  version "2.0.7"
+  resolved "https://registry.yarnpkg.com/@ai-sdk/gateway/-/gateway-2.0.7.tgz#e3b77ef01658b47a19956313fc2a36b9e5a951f3"
+  integrity sha512-/AI5AKi4vOK9SEb8Z1dfXkhsJ5NAfWsoJQc96B/mzn2KIrjw5occOjIwD06scuhV9xWlghCoXJT1sQD9QH/tyg==
   dependencies:
     "@ai-sdk/provider" "2.0.0"
     "@ai-sdk/provider-utils" "3.0.16"
@@ -28,12 +28,12 @@
     json-schema "^0.4.0"
 
 "@ai-sdk/react@^2.0.30":
-  version "2.0.87"
-  resolved "https://registry.yarnpkg.com/@ai-sdk/react/-/react-2.0.87.tgz#facaa51d071e45d3cc3077f965887fbd27c22962"
-  integrity sha512-uuM/FU2bT+DDQzL6YcwdQWZ5aKdT0QYsZzCNwM4jag4UQkryYJJ+CBpo2u3hZr4PaIIuL7TZzGMCzDN/UigQ9Q==
+  version "2.0.88"
+  resolved "https://registry.yarnpkg.com/@ai-sdk/react/-/react-2.0.88.tgz#d43d95372d4be6659098ed5fc547d5c9bc222774"
+  integrity sha512-WdJfH2u5hJvpjCVYqEamt+k69OHonFqLDXz9qNcS07sjUewEHjjApMVu6r4DabP3i2fx+ycLzCNdJ3B91T99Mw==
   dependencies:
     "@ai-sdk/provider-utils" "3.0.16"
-    ai "5.0.87"
+    ai "5.0.88"
     swr "^2.2.5"
     throttleit "2.1.0"
 
@@ -2907,12 +2907,12 @@ aggregate-error@^3.0.0:
     clean-stack "^2.0.0"
     indent-string "^4.0.0"
 
-ai@5.0.87, ai@^5.0.30:
-  version "5.0.87"
-  resolved "https://registry.yarnpkg.com/ai/-/ai-5.0.87.tgz#61524395b514409798687b3cd54631cd599404f7"
-  integrity sha512-9Cjx7o8IY9zAczigX0Tk/BaQwjPe/M6DpEjejKSBNrf8mOPIvyM+pJLqJSC10IsKci3FPsnaizJeJhoetU1Wfw==
+ai@5.0.88, ai@^5.0.30:
+  version "5.0.88"
+  resolved "https://registry.yarnpkg.com/ai/-/ai-5.0.88.tgz#2726caa09e4fb2a507ab0b1e061ee73387eca0d4"
+  integrity sha512-72nSwQT6iMgfbblwDo59cmFTtsNzfyMVH9MigeIh5IHiqoDqxRAkv0IBb9XYj6RD52tAJw7Wj/n+LEhezvYqkw==
   dependencies:
-    "@ai-sdk/gateway" "2.0.6"
+    "@ai-sdk/gateway" "2.0.7"
     "@ai-sdk/provider" "2.0.0"
     "@ai-sdk/provider-utils" "3.0.16"
     "@opentelemetry/api" "1.9.0"
@@ -3348,9 +3348,9 @@ caniuse-api@^3.0.0:
     lodash.uniq "^4.5.0"
 
 caniuse-lite@^1.0.0, caniuse-lite@^1.0.30001702, caniuse-lite@^1.0.30001751:
-  version "1.0.30001753"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001753.tgz#419f8fc9bab6f1a1d10d9574d0b3374f823c5b00"
-  integrity sha512-Bj5H35MD/ebaOV4iDLqPEtiliTN29qkGtEHCwawWn4cYm+bPJM2NsaP30vtZcnERClMzp52J4+aw2UNbK4o+zw==
+  version "1.0.30001754"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001754.tgz#7758299d9a72cce4e6b038788a15b12b44002759"
+  integrity sha512-x6OeBXueoAceOmotzx3PO4Zpt4rzpeIFsSr6AAePTZxSkXiYDUmpypEl7e2+8NCd9bD7bXjqyef8CJYPC1jfxg==
 
 ccount@^2.0.0:
   version "2.0.1"

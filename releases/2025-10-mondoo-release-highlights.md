@@ -47,7 +47,7 @@ New CIS benchmarks:
 
 - CIS Red Hat Enterprise Linux 10 Benchmark v1.0.1
 - CIS Cisco IOS XE 17.x Benchmark v2.2.1 level 2
-- CIS Cisco IOS XR 7.x Benchmark v3.0 level 2
+- CIS Cisco IOS XR 7.x Benchmark v1.0.1 level 2
 
 Updated CIS benchmarks:
 

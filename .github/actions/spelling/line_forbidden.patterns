@@ -137,6 +137,19 @@
 # Product Names
 #
 
+# s.b. FreeBSD
+\bFree BSD\b
+
+# s.b. NetBSD
+\bNet BSD\b
+
+# s.b. OpenBSD
+\bOpen BSD\b
+
+# s.b. DragonFly BSD
+\bDragon[Ff]lyBSD\b
+\bDragonfly BSD\b
+
 # s.b. Webex
 \bWebEx\b
 

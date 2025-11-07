@@ -97,17 +97,22 @@ Finally, a round up of a number of miscellaneous improvements:
 
 ## Resource updates
 
-- New data exposed in our AWS ECS resource
-- Azure subscription resource now includes web apps information
+- AWS account resource now includes alternative contact information
+- AWS ElastiCache cluster resource now includes snapshot window data
+- AWS KMS key resource now includes tag and alias information
+- Azure Subscription resource now includes web apps information
+- Azure Web apps resource now includes private endpoint connection information
+- Docker image resource now includes repo digest information
+- Kernel resource now exposes kernel information on FreeBSD
+- Kubernetes pod resource now includes container statuses information
+- M365 Exchange Online resource now include `hostedContentFilterPolicy` field
 - New AWS Macie resource
 - New Azure Batch resources
-- New Azure Web Hosting environments resource
-- Azure Web apps resource now includes private endpoint connection information
 - New Azure Cache for Redis resource
-- AWS KMS key resource now includes tag and alias information
-- Kernel resource now exposes kernel information on FreeBSD
+- New Azure Web Hosting environments resource
+- New fields in the AWS Backup vault recovery point resource
+- New fields in the AWS Backup vault resource
+- New fields in the AWS ECS resource
 - New journald resource
-- AWS ElastiCache cluster resource now includes snapshot window data
-- AWS Account resource now includes alternative contact information
 
 That’s a wrap for October! We have many more exciting updates and additions planned for November. Stay tuned!

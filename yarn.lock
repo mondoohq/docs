@@ -4787,13 +4787,12 @@ got@^12.1.0:
     p-cancelable "^3.0.0"
     responselike "^3.0.0"
 
-got@^14.6.0:
-  version "14.6.2"
-  resolved "https://registry.yarnpkg.com/got/-/got-14.6.2.tgz#1b1deb4d9c3e1e4a4d8db85d3796c21f41173c32"
-  integrity sha512-bnhvxegqufyxHAmzwCZSscjGLVpw6/NzTXOk2tQVu/b9Q9FeMAgLabYulXEQRwP04UYltnkcZwvBq14fsdqvyw==
+got@^14.6.3:
+  version "14.6.3"
+  resolved "https://registry.yarnpkg.com/got/-/got-14.6.3.tgz#f50d61c77268d394b59b8e93364de6425190e812"
+  integrity sha512-u1nNamHo7oAkyTkMD7g0F0pIvW6vNAF9CCmtkh8ZQrlToKJZ5wEPQHFqt6RzaZC0rJMzH+rnjIElyTsIkT0wQw==
   dependencies:
     "@sindresorhus/is" "^7.0.1"
-    "@szmarczak/http-timer" "^5.0.1"
     byte-counter "^0.1.0"
     cacheable-lookup "^7.0.0"
     cacheable-request "^13.0.12"

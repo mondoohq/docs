@@ -26,7 +26,7 @@ Download and install cnquery on your assets.
 | ----------------------------------- | --------------------------------------------------- | ------------------------------------------------------ |
 | [AWS](/cnquery/cloud/aws/)          | [GitHub](/cnquery/saas/github/)                     | [Linux](/cnquery/cnquery-oper/cnquery-linux-intro)     |
 | [Azure](/cnquery/cloud/azure/)      | [Google Workspace](/cnquery/saas/google_workspace/) | [macOS](/cnquery/cnquery-oper/cnquery-macos-intro)     |
-| [Google Cloud](/cnquery/cloud/gcp/) | [Microsoft 365](/cnquery/saas/ms365/)               | [Windows](/cnquery/cnquery-oper/cnquery-windows-intro) |
+| [Google Cloud](/cnquery/cloud/gcp/) | [Microsoft 365](/cnquery/saas/m365/)                | [Windows](/cnquery/cnquery-oper/cnquery-windows-intro) |
 | [Kubernetes](/cnquery/cloud/k8s/)   | [Okta](/cnquery/saas/okta/)                         |                                                        |
 | [VMware](/cnquery/cloud/vmware/)    | [Slack](/cnquery/saas/slack/)                       |                                                        |
 |                                     | [Snowflake](/cnquery/saas/snowflake/)               |                                                        |

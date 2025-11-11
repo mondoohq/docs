@@ -60,7 +60,7 @@ These specialized packs let you deep-dive into attributes unique to the platform
 - [Google Workspace resource pack](./google-workspace-pack/)
 - [IPMI resource pack](./ipmi-pack)
 - [Kubernetes resource pack](./k8s-pack)
-- [Microsoft 365 resource pack](./ms365-pack)
+- [Microsoft 365 resource pack](./m365-pack)
 - [Mondoo Platform resource pack](./mondoo-pack)
 - [Nmap resource pack](./nmap-pack)
 - [Okta resource pack](./okta-pack)

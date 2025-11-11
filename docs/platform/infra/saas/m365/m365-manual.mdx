@@ -78,7 +78,7 @@ Like any service that integrates with Azure, Mondoo must have an app registratio
 
 ![create a new app registration in Azure](/img/platform/infra/cloud/azure/new-app-reg.png)
 
-5. Enter the application name `mondoo-ms365` and select **Accounts in this organizational directory only** as the supported account type. Mondoo does not require an application redirect URI.
+5. Enter the application name `mondoo-m365` and select **Accounts in this organizational directory only** as the supported account type. Mondoo does not require an application redirect URI.
 
 6. Select the **Register** button.
 
@@ -102,11 +102,11 @@ import Graph from "./_include-graph.mdx";
 
 3. Select **+ Add assignments**.
 
-4. Find and select the newly created app, **mondoo-ms365**.
+4. Find and select the newly created app, **mondoo-m365**.
 
-5. Assign the **mondoo-ms365** app the **Global Reader** role.
+5. Assign the **mondoo-m365** app the **Global Reader** role.
 
-6. When you return to the Assignments page, select **Refresh** and verify that the mondoo-ms365 app has been assigned the Global Reader role.
+6. When you return to the Assignments page, select **Refresh** and verify that the mondoo-m365 app has been assigned the Global Reader role.
 
 ### Step D: Upload the application certificate
 
@@ -184,7 +184,7 @@ After you've created and granted permissions to a new app registration, you can 
 
    - INTEGRATIONS page: In the side navigation bar, under **INTEGRATIONS**, select **Add New Integration**. Under Cloud Security, select **Microsoft 365**.
 
-     ![integration-create-image](/img/platform/infra/saas/ms365/add-int-ms365-top.png)
+     ![integration-create-image](/img/platform/infra/saas/m365/add-int-m365-top.png)
 
 2. In the **Choose an integration name** box, enter a name for the integration. Make it a name that lets you easily recognize the Microsoft 365 tenant.
 
@@ -215,17 +215,17 @@ certificate goes here
 
 Upload the certificate to Mondoo: In the **Drag and drop your .pem file here** box, select the cloud icon and choose the file to upload.
 
-![integration-create-image](/img/platform/infra/saas/ms365/add-int-ms365-bottom.png)
+![integration-create-image](/img/platform/infra/saas/m365/add-int-m365-bottom.png)
 
 7. To complete the integration, select the **START SCANNING** button.
 
-8. On the Recommended Policies page, enable the policies on which you want to base assessments of your ms365 environment. To learn more, read [Manage Policies](/platform/security/posture/policies/).
+8. On the Recommended Policies page, enable the policies on which you want to base assessments of your M365 environment. To learn more, read [Manage Policies](/platform/security/posture/policies/).
 
 Mondoo begins scanning your Microsoft 365 resources. When it completes, you can see results on the INVENTORY page. To learn more, read [Monitor Your Infrastructure Security](/platform/security/posture/monitor/).
 
 :::info Didn't get the expected results?
 
-Read [Test and Troubleshoot Microsoft 365 Configuration](/platform/infra/saas/ms365/troubleshoot/).
+Read [Test and Troubleshoot Microsoft 365 Configuration](/platform/infra/saas/m365/troubleshoot/).
 
 :::
 

@@ -40,7 +40,7 @@ Create an integration to set up continuous Mondoo scanning of your Microsoft 365
 
    - INTEGRATIONS page: In the side navigation bar, under **INTEGRATIONS**, select **Add New Integration**. Under SaaS, select **Microsoft 365**.
 
-     ![Automated approach to adding an Microsoft 365 integration to Mondoo](/img/platform/infra/saas/ms365/auto-int.png)
+     ![Automated approach to adding an Microsoft 365 integration to Mondoo](/img/platform/infra/saas/m365/auto-int.png)
 
 2. Under **Copy the installation command**, you see a custom command that Mondoo generates for you. Running this command in Azure Cloud Shell creates the Mondoo Microsoft 365 integration for you.
 
@@ -50,23 +50,23 @@ Create an integration to set up continuous Mondoo scanning of your Microsoft 365
 
 4. Select the **AZURE CLOUD SHELL** button to open Azure Cloud Shell.
 
-   ![Azure Cloud Shell](/img/platform/infra/saas/ms365/cloud-shell.png)
+   ![Azure Cloud Shell](/img/platform/infra/saas/m365/cloud-shell.png)
 
 5. Paste the copied command in Azure Cloud Shell and press the Enter or Return key. Respond to these prompts:
 
-   ![Select a subscription](/img/platform/infra/saas/ms365/select-sub.png)
+   ![Select a subscription](/img/platform/infra/saas/m365/select-sub.png)
 
    a. When you select this **primary subscription**, you're specifying where Mondoo creates the resources it needs to perform scans. Use the down arrow key to select the subscription you want and then press Enter.
 
-   ![Resources Mondoo will create in Azure](/img/platform/infra/saas/ms365/resources.png)
+   ![Resources Mondoo will create in Azure](/img/platform/infra/saas/m365/resources.png)
 
    b. The Mondoo automation shows how many resources it must create so it can scan your Microsoft 365 environment. Press the down arrow key to select **2. Show details** and then press Enter.
 
-   ![Details of Microsoft 365 automated integration setup](/img/platform/infra/saas/ms365/details.png)
+   ![Details of Microsoft 365 automated integration setup](/img/platform/infra/saas/m365/details.png)
 
    c. Review the list of resources the Mondoo automation must create so it can scan your Microsoft 365 environment. Press Enter to continue the integration setup.
 
-   ![Success creating a Mondoo Microsoft 365 integration](/img/platform/infra/saas/ms365/success.png)
+   ![Success creating a Mondoo Microsoft 365 integration](/img/platform/infra/saas/m365/success.png)
    - When the Mondoo automation reports success, you're finished in Azure Cloud Shell. If you don't see the success message within 5 minutes, read the [Troubleshoot](#troubleshoot) section below.
 
 6. Return to the Mondoo console and select the **START SCANNING** button.
@@ -110,7 +110,7 @@ Renewing the application certificate can be done from the Azure CLI:
 
 - [Learn more about Mondoo](/platform/start/plat-what-is/)
 
-- [Test or troubleshoot a Microsoft 365 integration](/platform/infra/saas/ms365/troubleshoot/)
+- [Test or troubleshoot a Microsoft 365 integration](/platform/infra/saas/m365/troubleshoot/)
 
 - [Integrate Mondoo with other SaaS platforms in your infrastructure](/platform/infra/saas/overview/)
 

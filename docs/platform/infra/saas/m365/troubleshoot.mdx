@@ -23,7 +23,7 @@ wget https://releases.mondoo.com/cnspec/8.9.0/cnspec_8.9.0_linux_amd64.tar.gz
 tar -xvf cnspec_8.9.0_linux_amd64.tar.gz
 ```
 
-2. From https://github.com/mondoohq/cnspec-policies/tree/main/core, download the open source Azure policy bundle (mondoo-ms365-security.mql.yaml):
+2. From https://github.com/mondoohq/cnspec-policies/tree/main/core, download the open source Azure policy bundle (mondoo-m365-security.mql.yaml):
 
 ```bash
 git clone https://github.com/mondoohq/cnspec-policies.git
@@ -34,7 +34,7 @@ git clone https://github.com/mondoohq/cnspec-policies.git
 Scan the platform using the downloaded policy bundle:
 
 ```bash
-./cnspec scan ms365 --certificate-path certificate.combo.pem --tenant-id YOUR-TENANT-ID --client-id YOUR-CLIENT-ID --policy-bundle mondoo-ms365-security.mql.yaml
+./cnspec scan ms365 --certificate-path certificate.combo.pem --tenant-id YOUR-TENANT-ID --client-id YOUR-CLIENT-ID --policy-bundle mondoo-m365-security.mql.yaml
 ```
 
 You can also run a specific policy:
@@ -74,7 +74,7 @@ Create a client secret:
 Scan with cnspec using the client secret:
 
 ```bash
-./cnspec scan ms365 --client-secret YOUR-CLIENT-SECRET-VALUE --tenant-id YOUR-TENANT-ID --client-id YOUR-CLIENT-ID --policy-bundle mondoo-ms365-security.mql.yaml
+./cnspec scan ms365 --client-secret YOUR-CLIENT-SECRET-VALUE --tenant-id YOUR-TENANT-ID --client-id YOUR-CLIENT-ID --policy-bundle mondoo-m365-security.mql.yaml
 ```
 
 For `YOUR-TENANT-ID`, and `YOUR-CLIENT-ID`, substitute your Azure information.

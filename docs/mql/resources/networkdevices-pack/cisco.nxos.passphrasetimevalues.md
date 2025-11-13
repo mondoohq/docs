@@ -3,9 +3,14 @@ title: cisco.nxos.passphraseTimevalues
 id: cisco.nxos.passphraseTimevalues
 sidebar_label: cisco.nxos.passphraseTimevalues
 displayed_sidebar: MQL
+description: Cisco NX-OS passphrase time values
 ---
 
 # cisco.nxos.passphraseTimevalues
+
+**Description**
+
+Cisco NX-OS passphrase time values
 
 **Fields**
 

@@ -3,9 +3,14 @@ title: cisco.nxos.sshConfig
 id: cisco.nxos.sshConfig
 sidebar_label: cisco.nxos.sshConfig
 displayed_sidebar: MQL
+description: Cisco NX-OS SSH configuration
 ---
 
 # cisco.nxos.sshConfig
+
+**Description**
+
+Cisco NX-OS SSH configuration
 
 **Fields**
 

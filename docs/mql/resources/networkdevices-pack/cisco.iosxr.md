@@ -56,3 +56,4 @@ Cisco IOS XR
 | routerHsrp             | &#91;&#93;[cisco.iosxr.runRouterHsrpEntry](cisco.iosxr.runrouterhsrpentry.md)                   | Running Config Router HSRP configurations, Command: `show running-config router hsrp`                        |
 | routerRipInterfaces    | &#91;&#93;[cisco.iosxr.runRouterRipInterface](cisco.iosxr.runrouterripinterface.md)             | Running Config Router RIP Interfaces configurations, Command: `show running-config router rip`               |
 | managementPlaneRules   | &#91;&#93;[cisco.iosxr.runManagementPlaneRule](cisco.iosxr.runmanagementplanerule.md)           | Running Config Management Plane rules configuration, Command: `show running-config formal control-plane      |
+| inventory              | &#91;&#93;[cisco.ios.inventoryEntry](cisco.ios.inventoryentry.md)                               | The inventory, obtained by running 'show inventory'                                                          |

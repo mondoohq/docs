@@ -3,14 +3,14 @@ title: cisco.iosxe.keyChain
 id: cisco.iosxe.keyChain
 sidebar_label: cisco.iosxe.keyChain
 displayed_sidebar: MQL
-description: Cisco IOS XE Key Chain resource.
+description: Cisco IOS XE Keychain resource.
 ---
 
 # cisco.iosxe.keyChain
 
 **Description**
 
-Cisco IOS XE Key Chain resource.
+Cisco IOS XE Keychain resource.
 
 **Fields**
 

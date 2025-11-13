@@ -40,3 +40,4 @@ Cisco IOS XE
 | snmp             | [cisco.iosxe.snmpConfiguration](cisco.iosxe.snmpconfiguration.md)         | The SNMP configuration on the device.                                                                 |
 | ntp              | [cisco.iosxe.ntpConfiguration](cisco.iosxe.ntpconfiguration.md)           | The NTP configuration on the device.                                                                  |
 | logging          | [cisco.iosxe.loggingConfiguration](cisco.iosxe.loggingconfiguration.md)   | The logging configuration on the device.                                                              |
+| inventory        | &#91;&#93;[cisco.ios.inventoryEntry](cisco.ios.inventoryentry.md)         | The inventory, obtained by running 'show inventory'                                                   |

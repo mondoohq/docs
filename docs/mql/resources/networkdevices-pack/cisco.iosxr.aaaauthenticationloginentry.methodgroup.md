@@ -3,14 +3,14 @@ title: cisco.iosxr.aaaAuthenticationLoginEntry.methodGroup
 id: cisco.iosxr.aaaAuthenticationLoginEntry.methodGroup
 sidebar_label: cisco.iosxr.aaaAuthenticationLoginEntry.methodGroup
 displayed_sidebar: MQL
-description: Method group for AAA authentication login entry
+description: Cisco NX-OS method group for AAA authentication login entry
 ---
 
 # cisco.iosxr.aaaAuthenticationLoginEntry.methodGroup
 
 **Description**
 
-Method group for AAA authentication login entry
+Cisco NX-OS method group for AAA authentication login entry
 
 **Fields**
 

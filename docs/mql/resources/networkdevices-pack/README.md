@@ -130,6 +130,7 @@ Resources included in this pack:
 | [cisco.nxos.bgpRouterConfig.neighbor.af](cisco.nxos.bgprouterconfig.neighbor.af.md)                                     | Cisco NX-OS BGP Router Neighbor Address Family                                         |
 | [cisco.nxos.bootConfig](cisco.nxos.bootconfig.md)                                                                       | Cisco NX-OS Boot configuration                                                         |
 | [cisco.nxos.cdpAllEntry](cisco.nxos.cdpallentry.md)                                                                     | Cisco NX-OS CDP status entry for interface                                             |
+| [cisco.nxos.clockConfiguration](cisco.nxos.clockconfiguration.md)                                                       | Cisco NX-OS Clock Configuration                                                        |
 | [cisco.nxos.coppConfig](cisco.nxos.coppconfig.md)                                                                       | Cisco NX-OS Control Plane Policing (CoPP) configuration                                |
 | [cisco.nxos.encryptionServiceConfig](cisco.nxos.encryptionserviceconfig.md)                                             | Cisco NX-OS Encryption Service Configuration                                           |
 | [cisco.nxos.feature](cisco.nxos.feature.md)                                                                             | Cisco NX-OS Feature configuration                                                      |
@@ -142,6 +143,8 @@ Resources included in this pack:
 | [cisco.nxos.loggingConfig](cisco.nxos.loggingconfig.md)                                                                 | Cisco NX-OS Logging configuration                                                      |
 | [cisco.nxos.loggingConfig.facility](cisco.nxos.loggingconfig.facility.md)                                               | Cisco NX-OS Logging Facility configuration                                             |
 | [cisco.nxos.loggingConfig.server](cisco.nxos.loggingconfig.server.md)                                                   | Cisco NX-OS Logging Remote Server configuration                                        |
+| [cisco.nxos.ntpConfiguration](cisco.nxos.ntpconfiguration.md)                                                           | Cisco NX-OS NTP Configuration                                                          |
+| [cisco.nxos.ntpConfiguration.server](cisco.nxos.ntpconfiguration.server.md)                                             | Cisco NX-OS NTP Server configuration                                                   |
 | [cisco.nxos.passphraseTimevalues](cisco.nxos.passphrasetimevalues.md)                                                   | Cisco NX-OS passphrase time values                                                     |
 | [cisco.nxos.role](cisco.nxos.role.md)                                                                                   | Cisco NX-OS Role configuration                                                         |
 | [cisco.nxos.role.rule](cisco.nxos.role.rule.md)                                                                         | Cisco NX-OS Role Rule                                                                  |
@@ -162,6 +165,7 @@ Resources included in this pack:
 | [cisco.nxos.snmpConfiguration](cisco.nxos.snmpconfiguration.md)                                                         | Cisco NX-OS SNMP Configuration                                                         |
 | [cisco.nxos.snmpConfiguration.community](cisco.nxos.snmpconfiguration.community.md)                                     | Cisco NX-OS SNMP Community configuration                                               |
 | [cisco.nxos.snmpConfiguration.host](cisco.nxos.snmpconfiguration.host.md)                                               | Cisco NX-OS SNMP Host configuration                                                    |
+| [cisco.nxos.snmpConfiguration.settings](cisco.nxos.snmpconfiguration.settings.md)                                       | Cisco NX-OS SNMP Settings                                                              |
 | [cisco.nxos.snmpConfiguration.trap](cisco.nxos.snmpconfiguration.trap.md)                                               | Cisco NX-OS SNMP Trap configuration                                                    |
 | [cisco.nxos.snmpConfiguration.user](cisco.nxos.snmpconfiguration.user.md)                                               | Cisco NX-OS SNMP User configuration                                                    |
 | [cisco.nxos.snmpConfiguration.user.authenticationSettings](cisco.nxos.snmpconfiguration.user.authenticationsettings.md) | Cisco NX-OS SNMP User Authentication and Encryption settings                           |

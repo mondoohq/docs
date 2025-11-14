@@ -45,4 +45,5 @@ Cisco IOS XE Network interface resource
 | abort         | string                                                        | Abort error count                             |
 | lastInput     | string                                                        | Time of last input                            |
 | lastOutput    | string                                                        | Time of last output                           |
+| mediaType     | string                                                        | Media type                                    |
 | config        | [cisco.iosxe.interfaceConfig](cisco.iosxe.interfaceconfig.md) | The interface configuration                   |

@@ -16,6 +16,7 @@ Cisco NX-OS SNMP Configuration
 
 | ID          | TYPE                                                                                          | DESCRIPTION                                                      |
 | ----------- | --------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
+| settings    | [cisco.nxos.snmpConfiguration.settings](cisco.nxos.snmpconfiguration.settings.md)             | SNMP settings.                                                   |
 | users       | &#91;&#93;[cisco.nxos.snmpConfiguration.user](cisco.nxos.snmpconfiguration.user.md)           | SNMP Users configuration.                                        |
 | communities | &#91;&#93;[cisco.nxos.snmpConfiguration.community](cisco.nxos.snmpconfiguration.community.md) | SNMP Communities configuration.                                  |
 | hosts       | &#91;&#93;[cisco.nxos.snmpConfiguration.host](cisco.nxos.snmpconfiguration.host.md)           | SNMP Hosts configuration.                                        |

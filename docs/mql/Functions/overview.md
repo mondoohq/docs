@@ -32,7 +32,7 @@ Each function links to a dedicated documentation page with examples.
 | ---------------------------------------- | ------------------------------------------------------ |
 | [first](./array/first.mdx)               | Return the first element of an array                   |
 | [last](./array/last.mdx)                 | Return the last element of an array                    |
-| [length](./array/length.mdx)             | Number of elements in the array                        |
+| [length](./array/length.mdx)             | Return the number of elements in the array             |
 | [where](./array/where.mdx)               | Filter by predicate                                    |
 | [map](./array/map.mdx)                   | Transform each element                                 |
 | [flat](./array/flat.mdx)                 | Flatten nested arrays                                  |
@@ -47,6 +47,10 @@ Each function links to a dedicated documentation page with examples.
 | [any](./array/any.mdx)                   | Assert at least one element satisfies predicate        |
 | [one](./array/one.mdx)                   | Assert exactly one element satisfies predicate         |
 | [none](./array/none.mdx)                 | Assert no elements satisfy predicate                   |
+| [in](./array/in.mdx)                     | DEETS                                                  |
+| [join](./array/join.mdx)                 | Join all values in an array into a single string       |
+| [notIn](./array/notIn.mdx)               | Assets that the element is not in the array            |
+| [reverse](./array/reverse.mdx)           | Reverses the order of the array                        |
 
 ---
 
@@ -83,6 +87,7 @@ Each function links to a dedicated documentation page with examples.
 | [lines](./string/lines.mdx)         | Split string into lines                               |
 | [split](./string/split.mdx)         | Split string by a delimiter                           |
 | [trim](./string/trim.mdx)           | Trim whitespace or specified characters               |
+| [in](./string/in.mdx)               | DEETS                                                 |
 
 ---
 
@@ -93,6 +98,8 @@ Each function links to a dedicated documentation page with examples.
 | [inRange](./number/inrange.mdx) | Check if a number is within a range |
 
 ---
+
+### Time Functions
 
 | Function                      | Summary                               |
 | ----------------------------- | ------------------------------------- |

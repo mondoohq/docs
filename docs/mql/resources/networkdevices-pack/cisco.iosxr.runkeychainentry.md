@@ -15,7 +15,8 @@ Cisco IOS XR Key Chain (key) Entry from running config
 **Fields**
 
 | ID        | TYPE   | DESCRIPTION    |
-| --------- | ------ | -------------- |
+|-----------|--------|----------------|
 | name      | string | Key chain name |
 | key       | int    | Key index      |
 | keyString | string | Key string     |
+

@@ -15,6 +15,7 @@ Cisco IOS XE access list configuration
 **Fields**
 
 | ID    | TYPE                                                                              | DESCRIPTION                    |
-| ----- | --------------------------------------------------------------------------------- | ------------------------------ |
+|-------|-----------------------------------------------------------------------------------|--------------------------------|
 | acl   | string                                                                            | ACL name                       |
 | rules | &#91;&#93;[cisco.iosxe.accessListEntry.rule](cisco.iosxe.accesslistentry.rule.md) | the security rules of this ACL |
+

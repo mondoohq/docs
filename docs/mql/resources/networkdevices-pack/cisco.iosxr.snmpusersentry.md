@@ -15,7 +15,8 @@ Cisco IOS XR SNMP Users from `show snmp user`
 **Fields**
 
 | ID          | TYPE   | DESCRIPTION                      |
-| ----------- | ------ | -------------------------------- |
+|-------------|--------|----------------------------------|
 | username    | string | Username                         |
 | storageType | string | Storage type (e.g., nonvolatile) |
 | engineId    | string | Engine ID                        |
+

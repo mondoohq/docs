@@ -15,6 +15,7 @@ Cisco IOS XR Routing ISIS Interface configuration from running config
 **Fields**
 
 | ID                | TYPE                                  | DESCRIPTION                                         |
-| ----------------- | ------------------------------------- | --------------------------------------------------- |
+|-------------------|---------------------------------------|-----------------------------------------------------|
 | interface         | [cisco.interface](cisco.interface.md) | Interface                                           |
 | helloAuthKeyChain | string                                | Hello authentication key chain name (if configured) |
+

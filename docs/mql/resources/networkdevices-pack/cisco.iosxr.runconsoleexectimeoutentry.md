@@ -15,6 +15,7 @@ Cisco IOS XR Console exec-timeout from running config
 **Fields**
 
 | ID      | TYPE | DESCRIPTION          |
-| ------- | ---- | -------------------- |
+|---------|------|----------------------|
 | minutes | int  | Exec timeout minutes |
 | seconds | int  | Exec timeout seconds |
+

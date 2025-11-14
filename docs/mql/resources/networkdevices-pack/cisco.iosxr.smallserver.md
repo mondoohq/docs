@@ -15,7 +15,8 @@ Cisco IOS XR Small server configuration
 **Fields**
 
 | ID         | TYPE   | DESCRIPTION                                 |
-| ---------- | ------ | ------------------------------------------- |
+|------------|--------|---------------------------------------------|
 | protocol   | string | Small server protocol (e.g., "tcp", "http") |
 | ipVersion  | string | IP Version (IPv4/IPv6)                      |
 | maxServers | int    | Maximum number of servers                   |
+

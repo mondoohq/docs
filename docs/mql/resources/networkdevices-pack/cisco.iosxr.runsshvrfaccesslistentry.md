@@ -15,8 +15,9 @@ Cisco IOS XR SSH VRF access-list from running config
 **Fields**
 
 | ID       | TYPE   | DESCRIPTION                 |
-| -------- | ------ | --------------------------- |
+|----------|--------|-----------------------------|
 | side     | string | Side of SSH (server/client) |
 | vrf      | string | VRF name (e.g. default)     |
 | protocol | string | Protocol (ipv4/ipv6)        |
 | acl      | string | ACL name                    |
+

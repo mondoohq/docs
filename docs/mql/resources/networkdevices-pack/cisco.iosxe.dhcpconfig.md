@@ -15,5 +15,6 @@ Cisco IOS XE DHCP configuration
 **Fields**
 
 | ID      | TYPE | DESCRIPTION       |
-| ------- | ---- | ----------------- |
+|---------|------|-------------------|
 | enabled | bool | DHCP enabled flag |
+

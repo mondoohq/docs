@@ -15,6 +15,7 @@ Method group for AAA authentication login entry
 **Fields**
 
 | ID    | TYPE   | DESCRIPTION                           |
-| ----- | ------ | ------------------------------------- |
+|-------|--------|---------------------------------------|
 | name  | string | Group name (e.g. tacacs_example)      |
 | local | bool   | If method is not a group, but 'local' |
+

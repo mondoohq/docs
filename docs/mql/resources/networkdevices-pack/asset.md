@@ -10,5 +10,6 @@ displayed_sidebar: MQL
 **Fields**
 
 | ID   | TYPE   | DESCRIPTION                            |
-| ---- | ------ | -------------------------------------- |
+|------|--------|----------------------------------------|
 | purl | string | Platform URL in the package URL format |
+

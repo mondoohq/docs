@@ -15,7 +15,7 @@ Cisco IOS XR NTP configuration for Cisco IOS XR
 **Fields**
 
 | ID              | TYPE             | DESCRIPTION                          |
-| --------------- | ---------------- | ------------------------------------ |
+|-----------------|------------------|--------------------------------------|
 | authenticate    | bool             | Authentication enabled flag          |
 | authKeys        | &#91;&#93;string | Authentication key IDs               |
 | authKeyTypes    | &#91;&#93;string | Authentication key types (e.g., md5) |
@@ -24,3 +24,4 @@ Cisco IOS XR NTP configuration for Cisco IOS XR
 | serverKeys      | &#91;&#93;string | NTP server keys                      |
 | sourceInterface | string           | Source interface for NTP packets     |
 | trustedKeys     | &#91;&#93;string | Trusted key IDs                      |
+

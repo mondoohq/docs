@@ -15,5 +15,6 @@ Cisco IOS XE CDP configuration
 **Fields**
 
 | ID      | TYPE | DESCRIPTION      |
-| ------- | ---- | ---------------- |
+|---------|------|------------------|
 | enabled | bool | CDP enabled flag |
+

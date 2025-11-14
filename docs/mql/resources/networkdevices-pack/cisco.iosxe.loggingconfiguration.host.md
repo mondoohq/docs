@@ -15,6 +15,7 @@ Cisco IOS XE Logging Host.
 **Fields**
 
 | ID     | TYPE   | DESCRIPTION                                       |
-| ------ | ------ | ------------------------------------------------- |
+|--------|--------|---------------------------------------------------|
 | host   | string | The IP address or hostname of the host.           |
 | isIpv6 | bool   | Whether the protocol of the host address is IPv6. |
+

@@ -15,7 +15,7 @@ Cisco IOS XE IPv4 configuration.
 **Fields**
 
 | ID                         | TYPE                                              | DESCRIPTION                                                                                                                                                                       |
-| -------------------------- | ------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|----------------------------|---------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | httpEnabled                | bool                                              | Whether the HTTP server is enabled.                                                                                                                                               |
 | httpsEnabled               | bool                                              | Whether HTTPS is enabled.                                                                                                                                                         |
 | httpPort                   | int                                               | The HTTP port number, if configured.                                                                                                                                              |
@@ -34,3 +34,4 @@ Cisco IOS XE IPv4 configuration.
 | radiusSourceInterface      | [cisco.iosxe.interface](cisco.iosxe.interface.md) | The interface used for outgoing RADIUS packets, if configured. Retrieved by using the 'radiusSourceInterfaceName' field.                                                          |
 | tacacsSourceInterfaceName  | string                                            | The name of the interface used for outgoing TACACS packets, if configured.                                                                                                        |
 | tacacsSourceInterface      | [cisco.iosxe.interface](cisco.iosxe.interface.md) | The interface used for outgoing TACACS packets, if configured. Retrieved by using the 'tacacsSourceInterfaceName' field.                                                          |
+

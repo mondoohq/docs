@@ -15,5 +15,6 @@ Cisco IOS XE SNMP Host configuration
 **Fields**
 
 | ID   | TYPE   | DESCRIPTION |
-| ---- | ------ | ----------- |
+|------|--------|-------------|
 | host | string |             |
+

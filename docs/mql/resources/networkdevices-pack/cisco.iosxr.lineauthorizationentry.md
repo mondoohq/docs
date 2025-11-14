@@ -15,7 +15,8 @@ Cisco IOS XR Line authorization configuration
 **Fields**
 
 | ID         | TYPE   | DESCRIPTION                                   |
-| ---------- | ------ | --------------------------------------------- |
+|------------|--------|-----------------------------------------------|
 | name       | string | TTY line name (e.g. console, default)         |
 | type       | string | Authorization type (e.g., exec, commands)     |
 | methodList | string | Authorization method list name (e.g. default) |
+

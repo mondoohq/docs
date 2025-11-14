@@ -19,6 +19,7 @@ networkdevices.command(command string)
 **Fields**
 
 | ID      | TYPE   | DESCRIPTION                     |
-| ------- | ------ | ------------------------------- |
+|---------|--------|---------------------------------|
 | command | string | Raw contents of the command     |
 | result  | string | output from running the command |
+

@@ -15,7 +15,7 @@ Cisco IOS XR Network interface resource
 **Fields**
 
 | ID            | TYPE   | DESCRIPTION                                   |
-| ------------- | ------ | --------------------------------------------- |
+|---------------|--------|-----------------------------------------------|
 | name          | string | Interface name/identifier                     |
 | description   | string | Interface description                         |
 | adminState    | string | Administrative state (up/down)                |
@@ -46,3 +46,4 @@ Cisco IOS XR Network interface resource
 | abort         | string | Abort error count                             |
 | lastInput     | string | Time of last input                            |
 | lastOutput    | string | Time of last output                           |
+

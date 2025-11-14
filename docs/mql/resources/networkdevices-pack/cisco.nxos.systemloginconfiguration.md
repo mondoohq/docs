@@ -15,7 +15,8 @@ Cisco NX-OS System Login Configuration
 **Fields**
 
 | ID       | TYPE | DESCRIPTION                                                                 |
-| -------- | ---- | --------------------------------------------------------------------------- |
+|----------|------|-----------------------------------------------------------------------------|
 | blockFor | int  | Time in seconds to block for when there are too many failed login attempts. |
 | attempts | int  | Number of failed login attempts before blocking.                            |
 | within   | int  | Time in seconds to reset the failed login attempts counter.                 |
+

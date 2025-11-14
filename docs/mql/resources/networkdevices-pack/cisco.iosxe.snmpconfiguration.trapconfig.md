@@ -15,5 +15,6 @@ Cisco IOS XE SNMP Trap configuration
 **Fields**
 
 | ID                | TYPE   | DESCRIPTION                                                           |
-| ----------------- | ------ | --------------------------------------------------------------------- |
+|-------------------|--------|-----------------------------------------------------------------------|
 | notificationTypes | string | The notification type, e.g. 'ospf cisco-specific errors config-error' |
+

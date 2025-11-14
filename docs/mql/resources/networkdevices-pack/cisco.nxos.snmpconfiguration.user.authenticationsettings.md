@@ -15,7 +15,7 @@ Cisco NX-OS SNMP User Authentication and Encryption settings
 **Fields**
 
 | ID                  | TYPE                                  | DESCRIPTION                                                                                                                                                                                                              |
-| ------------------- | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+|---------------------|---------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | groupName           | string                                | Optional. The SNMP group (user role) name associated to this user and these authentication settings.                                                                                                                     |
 | group               | [cisco.nxos.role](cisco.nxos.role.md) | Optional. The SNMP group (user role) associated to this user and these authentication settings.                                                                                                                          |
 | passwordEncType     | int                                   | Optional. The password encryption type.                                                                                                                                                                                  |
@@ -25,3 +25,4 @@ Cisco NX-OS SNMP User Authentication and Encryption settings
 | encryptionPassword  | string                                | Optional. The encryption password (key).                                                                                                                                                                                 |
 | engineId            | string                                | Optional. The SNMP engine ID.                                                                                                                                                                                            |
 | passwordFormat      | string                                | Optional. Authentication password format. Can be either `localizedkey`, or `localizedV2key`., When `localizedkey`, the passwords are in localized format., When `localizedV2key`, the passwords are in encrypted format. |
+

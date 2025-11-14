@@ -15,8 +15,7 @@ Cisco NX-OS Line Configuration
 **Fields**
 
 | ID           | TYPE   | DESCRIPTION                            |
-|--------------|--------|----------------------------------------|
+| ------------ | ------ | -------------------------------------- |
 | type         | string | Line type (e.g. vty, console)          |
 | execTimeout  | int    | Executive timeout in minutes           |
 | sessionLimit | int    | Session limit (max number of sessions) |
-

@@ -15,8 +15,7 @@ Cisco IOS XR Routing RIP configuration from running config
 **Fields**
 
 | ID           | TYPE                                  | DESCRIPTION                                   |
-|--------------|---------------------------------------|-----------------------------------------------|
+| ------------ | ------------------------------------- | --------------------------------------------- |
 | interface    | [cisco.interface](cisco.interface.md) | Interface                                     |
 | authKeyChain | string                                | Authentication key chain name (if configured) |
 | authMode     | string                                | Authentication mode (if configured)           |
-

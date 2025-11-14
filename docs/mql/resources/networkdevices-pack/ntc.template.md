@@ -20,9 +20,8 @@ ntc.template(command string)
 **Fields**
 
 | ID       | TYPE   | DESCRIPTION                           |
-|----------|--------|---------------------------------------|
+| -------- | ------ | ------------------------------------- |
 | id       | string | Index of the template in the list     |
 | platform | string | Platform that this template is for    |
 | command  | string | The command that this template is for |
 | template | string | NTC template file                     |
-

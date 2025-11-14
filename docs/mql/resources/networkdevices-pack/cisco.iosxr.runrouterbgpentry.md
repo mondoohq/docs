@@ -15,7 +15,6 @@ Cisco IOS XR Routing BGP configuration from running config
 **Fields**
 
 | ID        | TYPE                                                                              | DESCRIPTION   |
-|-----------|-----------------------------------------------------------------------------------|---------------|
+| --------- | --------------------------------------------------------------------------------- | ------------- |
 | asNumber  | int                                                                               | BGP AS number |
 | neighbors | &#91;&#93;[cisco.iosxr.runRouterBgpNeighbor](cisco.iosxr.runrouterbgpneighbor.md) | BGP Neighbors |
-

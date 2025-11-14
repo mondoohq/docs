@@ -15,7 +15,7 @@ Cisco NX-OS Access Control List (ACL) Entry
 **Fields**
 
 | ID                  | TYPE   | DESCRIPTION                                                 |
-|---------------------|--------|-------------------------------------------------------------|
+| ------------------- | ------ | ----------------------------------------------------------- |
 | seq                 | int    | Sequence Number                                             |
 | action              | string | Action (permit/deny)                                        |
 | remark              | string | ACL Remark                                                  |
@@ -28,4 +28,3 @@ Cisco NX-OS Access Control List (ACL) Entry
 | destinationWildcard | string | Destination Wildcard Mask (if any)                          |
 | port                | string | Port expression (eq/gt/lt/range)                            |
 | modifiers           | string | Modifiers (port expression extensions / MAC protocol / etc) |
-

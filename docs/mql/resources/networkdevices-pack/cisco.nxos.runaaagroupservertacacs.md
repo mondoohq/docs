@@ -15,7 +15,6 @@ Cisco NX-OS AAA Group Server TACACS+ configuration
 **Fields**
 
 | ID      | TYPE             | DESCRIPTION                          |
-|---------|------------------|--------------------------------------|
+| ------- | ---------------- | ------------------------------------ |
 | name    | string           | Server group name                    |
 | servers | &#91;&#93;string | Servers in this TACACS+ server group |
-

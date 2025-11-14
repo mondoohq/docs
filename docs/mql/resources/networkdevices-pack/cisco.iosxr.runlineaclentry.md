@@ -15,8 +15,7 @@ Cisco IOS XR Line ACL from running config
 **Fields**
 
 | ID           | TYPE   | DESCRIPTION                                                 |
-|--------------|--------|-------------------------------------------------------------|
+| ------------ | ------ | ----------------------------------------------------------- |
 | lineTemplate | string | Line template name (e.g. default, ssh-only-config)          |
 | direction    | string | Direction of traffic the ACL is applied to (ingress/egress) |
 | acl          | string | Name of the ACL applied to the line                         |
-

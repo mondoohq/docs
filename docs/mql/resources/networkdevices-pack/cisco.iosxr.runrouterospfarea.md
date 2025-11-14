@@ -15,7 +15,7 @@ Cisco IOS XR Routing OSPF Area configuration from running config
 **Fields**
 
 | ID                 | TYPE   | DESCRIPTION                                   |
-|--------------------|--------|-----------------------------------------------|
+| ------------------ | ------ | --------------------------------------------- |
 | processId          | int    | Process ID                                    |
 | addressFamily      | string | Address family (IPv4/IPv6)                    |
 | areaId             | int    | Area ID (e.g. 1)                              |
@@ -23,4 +23,3 @@ Cisco IOS XR Routing OSPF Area configuration from running config
 | msgDigestKeyId     | int    | Message digest key id (if configured)         |
 | msgDigestAlgorithm | string | Message digest algorithm (if configured)      |
 | msgDigestKey       | string | Message digest key value (if configured)      |
-

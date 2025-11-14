@@ -15,7 +15,6 @@ Cisco IOS XE Key Chain key lifetime period resource.
 **Fields**
 
 | ID    | TYPE | DESCRIPTION                       |
-|-------|------|-----------------------------------|
+| ----- | ---- | --------------------------------- |
 | start | time | The start of the lifetime period. |
 | end   | time | The end of the lifetime period.   |
-

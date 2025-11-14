@@ -19,7 +19,6 @@ cisco.iosxr.runLineAcl(lineTemplate string)
 **Fields**
 
 | ID           | TYPE                                                                    | DESCRIPTION                                        |
-|--------------|-------------------------------------------------------------------------|----------------------------------------------------|
+| ------------ | ----------------------------------------------------------------------- | -------------------------------------------------- |
 | lineTemplate | string                                                                  | Line template name (e.g. default, ssh-only-config) |
 | acl          | &#91;&#93;[cisco.iosxr.runLineAclEntry](cisco.iosxr.runlineaclentry.md) | ACL applied to the line                            |
-

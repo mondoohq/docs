@@ -15,8 +15,7 @@ Cisco NX-OS Feature configuration
 **Fields**
 
 | ID       | TYPE   | DESCRIPTION                                  |
-|----------|--------|----------------------------------------------|
+| -------- | ------ | -------------------------------------------- |
 | name     | string | Feature name                                 |
 | state    | string | Feature state (enabled/disabled/not-running) |
 | instance | int    | Instance                                     |
-

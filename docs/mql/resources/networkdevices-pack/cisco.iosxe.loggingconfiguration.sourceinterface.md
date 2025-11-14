@@ -15,8 +15,7 @@ Cisco IOS XE Logging Source Interface
 **Fields**
 
 | ID           | TYPE                                              | DESCRIPTION                                              |
-|--------------|---------------------------------------------------|----------------------------------------------------------|
+| ------------ | ------------------------------------------------- | -------------------------------------------------------- |
 | name         | string                                            | The name of the interface.                               |
 | vrfName      | string                                            | Optional. The Virtual Routing and Forwarding (VRF) name. |
 | srcInterface | [cisco.iosxe.interface](cisco.iosxe.interface.md) | The source interface.                                    |
-

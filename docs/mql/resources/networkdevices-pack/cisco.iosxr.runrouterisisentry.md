@@ -15,8 +15,7 @@ Cisco IOS XR Routing ISIS configuration from running config
 **Fields**
 
 | ID                  | TYPE                                                                                  | DESCRIPTION                                |
-|---------------------|---------------------------------------------------------------------------------------|--------------------------------------------|
+| ------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------ |
 | name                | string                                                                                | Process name                               |
 | lspPasswordKeyChain | string                                                                                | LSP Password Keychain name (if configured) |
 | interfaces          | &#91;&#93;[cisco.iosxr.runRouterIsisInterface](cisco.iosxr.runrouterisisinterface.md) | Interfaces in this ISIS process            |
-

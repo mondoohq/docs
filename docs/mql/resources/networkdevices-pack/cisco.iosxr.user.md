@@ -15,7 +15,7 @@ Cisco IOS XR User configuration
 **Fields**
 
 | ID             | TYPE             | DESCRIPTION              |
-|----------------|------------------|--------------------------|
+| -------------- | ---------------- | ------------------------ |
 | username       | string           | Username                 |
 | groups         | &#91;&#93;string | User groups              |
 | secretType     | string           | Secret encryption type   |
@@ -23,4 +23,3 @@ Cisco IOS XR User configuration
 | passwordPolicy | string           | Password policy          |
 | passwordType   | string           | Password encryption type |
 | passwordValue  | string           | Password hash value      |
-

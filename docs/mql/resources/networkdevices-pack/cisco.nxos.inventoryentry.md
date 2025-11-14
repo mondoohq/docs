@@ -15,10 +15,9 @@ Cisco NX-OS inventory entry
 **Fields**
 
 | ID             | TYPE   | DESCRIPTION                  |
-|----------------|--------|------------------------------|
+| -------------- | ------ | ---------------------------- |
 | name           | string | Inventory item name          |
 | description    | string | Inventory item description   |
 | serialNumber   | string | Inventory item serial number |
 | partNumber     | string | Inventory item part number   |
 | productVersion | string | Inventory item version       |
-

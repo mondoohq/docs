@@ -19,7 +19,6 @@ cisco.iosxr.runLineTransportIO(lineTemplate string)
 **Fields**
 
 | ID           | TYPE                                                                                    | DESCRIPTION                                        |
-|--------------|-----------------------------------------------------------------------------------------|----------------------------------------------------|
+| ------------ | --------------------------------------------------------------------------------------- | -------------------------------------------------- |
 | lineTemplate | string                                                                                  | Line template name (e.g. default, ssh-only-config) |
 | entries      | &#91;&#93;[cisco.iosxr.runLineTransportIOEntry](cisco.iosxr.runlinetransportioentry.md) | Transport confirations for the line                |
-

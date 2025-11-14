@@ -15,7 +15,6 @@ Cisco accounting entry server. These servers are where accounting records are se
 **Fields**
 
 | ID      | TYPE   | DESCRIPTION                                                                                                                                   |
-|---------|--------|-----------------------------------------------------------------------------------------------------------------------------------------------|
+| ------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------- |
 | name    | string | The name of the server. This can be built-in servers, such as 'radius' or 'tacacs+' or it can be 'group \<name\>' to indicate a custom group. |
 | isGroup | bool   | Whether the server is a custom group.                                                                                                         |
-

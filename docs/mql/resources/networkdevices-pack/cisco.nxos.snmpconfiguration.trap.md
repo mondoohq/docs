@@ -15,8 +15,7 @@ Cisco NX-OS SNMP Trap configuration
 **Fields**
 
 | ID          | TYPE   | DESCRIPTION                  |
-|-------------|--------|------------------------------|
+| ----------- | ------ | ---------------------------- |
 | description | string | The description of the trap. |
 | type        | string | The type of the trap.        |
 | enabled     | bool   | Whether the trap is enabled. |
-

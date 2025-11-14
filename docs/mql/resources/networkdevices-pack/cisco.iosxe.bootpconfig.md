@@ -15,6 +15,5 @@ Cisco IOS XE BootP configuration
 **Fields**
 
 | ID      | TYPE | DESCRIPTION        |
-|---------|------|--------------------|
+| ------- | ---- | ------------------ |
 | enabled | bool | BOOTP enabled flag |
-

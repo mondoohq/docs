@@ -15,7 +15,7 @@ Cisco IOS XR Logging configuration
 **Fields**
 
 | ID              | TYPE   | DESCRIPTION                    |
-|-----------------|--------|--------------------------------|
+| --------------- | ------ | ------------------------------ |
 | enabled         | bool   | Whether logging is enabled     |
 | dropped         | int    | Messages dropped count         |
 | flushes         | int    | Flushes count                  |
@@ -28,4 +28,3 @@ Cisco IOS XR Logging configuration
 | bufferMessages  | int    | Messages logged to the buffer  |
 | trapLogLevel    | string | Trap log level                 |
 | trapMessages    | int    | Messages logged to the trap    |
-

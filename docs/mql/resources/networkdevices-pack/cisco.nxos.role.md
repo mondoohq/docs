@@ -15,8 +15,7 @@ Cisco NX-OS Role configuration
 **Fields**
 
 | ID          | TYPE                                                      | DESCRIPTION                        |
-|-------------|-----------------------------------------------------------|------------------------------------|
+| ----------- | --------------------------------------------------------- | ---------------------------------- |
 | name        | string                                                    | The name of the SNMP group.        |
 | description | string                                                    | The description of the SNMP group. |
 | rules       | &#91;&#93;[cisco.nxos.role.rule](cisco.nxos.role.rule.md) | The rules associated to this role. |
-

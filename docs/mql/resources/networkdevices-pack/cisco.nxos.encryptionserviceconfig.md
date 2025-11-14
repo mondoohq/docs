@@ -15,8 +15,7 @@ Cisco NX-OS Encryption Service Configuration
 **Fields**
 
 | ID                  | TYPE | DESCRIPTION                              |
-|---------------------|------|------------------------------------------|
+| ------------------- | ---- | ---------------------------------------- |
 | enabled             | bool | Whether encryption service is enabled.   |
 | masterKeyConfigured | bool | Whether master key is configured.        |
 | type6EncryptionUsed | bool | Whether Type-6 encryption is being used. |
-

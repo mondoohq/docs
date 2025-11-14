@@ -15,7 +15,6 @@ Cisco NX-OS Scheduler Job
 **Fields**
 
 | ID       | TYPE             | DESCRIPTION                        |
-|----------|------------------|------------------------------------|
+| -------- | ---------------- | ---------------------------------- |
 | name     | string           | The name of the job.               |
 | commands | &#91;&#93;string | The commands executed by this job. |
-

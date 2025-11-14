@@ -15,7 +15,6 @@ Cisco IOS XR Routing EIGRP configuration from running config
 **Fields**
 
 | ID              | TYPE                                                                                            | DESCRIPTION              |
-|-----------------|-------------------------------------------------------------------------------------------------|--------------------------|
+| --------------- | ----------------------------------------------------------------------------------------------- | ------------------------ |
 | asNumber        | int                                                                                             | Autonomous system number |
 | addressFamilies | &#91;&#93;[cisco.iosxr.runRouterEigrpAddressFamily](cisco.iosxr.runroutereigrpaddressfamily.md) | Address families         |
-

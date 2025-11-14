@@ -15,7 +15,7 @@ Cisco IOS XR AAA group server configuration
 **Fields**
 
 | ID               | TYPE   | DESCRIPTION                                             |
-|------------------|--------|---------------------------------------------------------|
+| ---------------- | ------ | ------------------------------------------------------- |
 | protocol         | string | Protocol of the server group (e.g., tacacs+, radius)    |
 | groupName        | string | Group name                                              |
 | serverHost       | string | (Optional) TACACS+/RADIUS server IP address or hostname |
@@ -23,4 +23,3 @@ Cisco IOS XR AAA group server configuration
 | radiusAuthPort   | int    | (Optional) RADIUS server authentication port            |
 | radiusAcctPort   | int    | (Optional) RADIUS server accounting port                |
 | vrfInstanceName  | string | (Optional) VRF instance name for the server group       |
-

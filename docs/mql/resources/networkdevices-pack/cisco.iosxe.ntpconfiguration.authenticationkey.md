@@ -15,9 +15,8 @@ Cisco IOS XE NTP authentication key
 **Fields**
 
 | ID             | TYPE   | DESCRIPTION                                       |
-|----------------|--------|---------------------------------------------------|
+| -------------- | ------ | ------------------------------------------------- |
 | keyId          | int    | The identifier of the key.                        |
 | algorithm      | string | The algorithm. Currently only 'md5' is supported. |
 | key            | string | The key value.                                    |
 | encryptionType | string | Optional, the authentication key encryption type  |
-

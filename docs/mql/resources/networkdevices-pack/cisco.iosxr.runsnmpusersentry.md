@@ -15,7 +15,7 @@ Cisco IOS XR SNMP Users from running config
 **Fields**
 
 | ID              | TYPE   | DESCRIPTION                                             |
-|-----------------|--------|---------------------------------------------------------|
+| --------------- | ------ | ------------------------------------------------------- |
 | username        | string | Username                                                |
 | group           | string | Group name                                              |
 | version         | string | SNMP Version (1/2c/3)                                   |
@@ -26,4 +26,3 @@ Cisco IOS XR SNMP Users from running config
 | v3PrivKeyLength | int    | (optional) Privacy key length (for v3)                  |
 | protocol        | string | Protocol (IPv4/IPv6)                                    |
 | acl             | string | ACL name or number, e.g. "my-acl" or 10 (if configured) |
-

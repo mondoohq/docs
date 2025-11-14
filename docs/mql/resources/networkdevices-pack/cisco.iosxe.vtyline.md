@@ -15,7 +15,7 @@ Cisco IOS XE Virtual Terminal Line (VTY)
 **Fields**
 
 | ID                      | TYPE                                                                                  | DESCRIPTION                                                                                                                |
-|-------------------------|---------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
+| ----------------------- | ------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
 | startLine               | int                                                                                   | VTY line start                                                                                                             |
 | endLine                 | int                                                                                   | VTY line end                                                                                                               |
 | accessClassIn           | string                                                                                | The inbound access-class number or name that the VTY line uses, if specified.                                              |
@@ -27,4 +27,3 @@ Cisco IOS XE Virtual Terminal Line (VTY)
 | execTimeout             | time                                                                                  | The exec timeout for the vty line, if specified.                                                                           |
 | loginAuthenticationName | string                                                                                | The name of the aaa login authentication method for the vty line, if specified                                             |
 | loginAuthentication     | [cisco.iosxe.aaaAuthenticationLoginEntry](cisco.iosxe.aaaauthenticationloginentry.md) | The aaa login authentication method for the vty line, if specified. Obtained by using the 'loginAuthenticationName' field. |
-

@@ -13,7 +13,7 @@ The network devices resource pack lets you use MQL to query and assess the secur
 Resources included in this pack:
 
 | ID                                                                                                                      | DESCRIPTION                                                                            |
-|-------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|
+| ----------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
 | [asset](asset.md)                                                                                                       |                                                                                        |
 | [cisco.interface](cisco.interface.md)                                                                                   | Cisco generic interface parser                                                         |
 | [cisco.ios.inventoryEntry](cisco.ios.inventoryentry.md)                                                                 | Cisco IOS inventory entry                                                              |
@@ -177,4 +177,3 @@ Resources included in this pack:
 | [ntc.template](ntc.template.md)                                                                                         | NTC template                                                                           |
 | [ntc.templates](ntc.templates.md)                                                                                       | NTC templates                                                                          |
 | [parse.textfsm](parse.textfsm.md)                                                                                       | Parse TextFSM files                                                                    |
-

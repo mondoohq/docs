@@ -15,8 +15,7 @@ Cisco NX-OS Access Control List (ACL)
 **Fields**
 
 | ID      | TYPE                                                                                  | DESCRIPTION                 |
-|---------|---------------------------------------------------------------------------------------|-----------------------------|
+| ------- | ------------------------------------------------------------------------------------- | --------------------------- |
 | name    | string                                                                                | ACL Name                    |
 | type    | string                                                                                | ACL Type (IP/IPv6/MAC/MPLS) |
 | entries | &#91;&#93;[cisco.nxos.accessControlList.entry](cisco.nxos.accesscontrollist.entry.md) | ACL Entries                 |
-

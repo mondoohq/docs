@@ -15,8 +15,7 @@ Cisco NX-OS RADIUS server from running config
 **Fields**
 
 | ID      | TYPE   | DESCRIPTION                               |
-|---------|--------|-------------------------------------------|
+| ------- | ------ | ----------------------------------------- |
 | address | string | RADIUS server address                     |
 | keyType | int    | Key type (e.g., 0/plaintext, 7/encrypted) |
 | key     | string | Key value                                 |
-

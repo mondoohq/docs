@@ -15,7 +15,7 @@ Cisco IOS XE Logging configuration
 **Fields**
 
 | ID                                 | TYPE                                                                                                              | DESCRIPTION                                                                                           |
-|------------------------------------|-------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
+| ---------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
 | configurationChangesLoggingEnabled | bool                                                                                                              | Whether logging is enabled for changes in configuration.                                              |
 | logSuccessfulLogin                 | bool                                                                                                              | Whether successful logins are logged.                                                                 |
 | logUnsuccessfulLogin               | bool                                                                                                              | Whether unsuccessful logins are logged.                                                               |
@@ -26,4 +26,3 @@ Cisco IOS XE Logging configuration
 | trapSeverity                       | string                                                                                                            | Optional. The severity level for the trap log if configured.                                          |
 | hosts                              | &#91;&#93;[cisco.iosxe.loggingConfiguration.host](cisco.iosxe.loggingconfiguration.host.md)                       | A list of remote hosts configured on the device to which system and debug logs are sent.              |
 | sourceInterfaces                   | &#91;&#93;[cisco.iosxe.loggingConfiguration.sourceInterface](cisco.iosxe.loggingconfiguration.sourceinterface.md) | A list of source interfaces configured on the device as the source address of system logging packets. |
-

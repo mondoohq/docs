@@ -15,11 +15,10 @@ Cisco NX-OS HSRP Group configuration
 **Fields**
 
 | ID                        | TYPE   | DESCRIPTION                                                                             |
-|---------------------------|--------|-----------------------------------------------------------------------------------------|
+| ------------------------- | ------ | --------------------------------------------------------------------------------------- |
 | groupId                   | int    | The HSRP group number.                                                                  |
 | protocol                  | string | The protocol of this HSRP group (ipv4 or ipv6).                                         |
 | md5AuthenticationKey      | string | Optional. The MD5 authentication key for this HSRP group.                               |
 | md5AuthenticationKeyType  | int    | Optional. The MD5 authentication key encryption type. 0 for plaintext, 7 for encrypted. |
 | md5AuthenticationKeychain | string | Optional. The MD5 authentication keychain for this HSRP group.                          |
 | authenticationText        | string | Optional. The authentication text.                                                      |
-

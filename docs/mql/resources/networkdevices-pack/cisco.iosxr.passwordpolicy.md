@@ -15,7 +15,7 @@ Cisco IOS XR Password policy configuration
 **Fields**
 
 | ID            | TYPE   | DESCRIPTION                                |
-|---------------|--------|--------------------------------------------|
+| ------------- | ------ | ------------------------------------------ |
 | name          | string | Policy name                                |
 | lifetimeUnit  | string | Password lifetime unit (days, hours, etc.) |
 | lifetimeValue | string | Password lifetime value                    |
@@ -23,4 +23,3 @@ Cisco IOS XR Password policy configuration
 | minLength     | string | Minimum password length                    |
 | numeric       | string | Minimum numeric characters required        |
 | specialChar   | string | Minimum special characters required        |
-

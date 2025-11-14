@@ -15,6 +15,5 @@ Cisco NX-OS Control Plane Policing (CoPP) configuration
 **Fields**
 
 | ID      | TYPE   | DESCRIPTION       |
-|---------|--------|-------------------|
+| ------- | ------ | ----------------- |
 | profile | string | The CoPP profile. |
-

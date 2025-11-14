@@ -15,7 +15,7 @@ Cisco NX-OS SNMP Host configuration
 **Fields**
 
 | ID               | TYPE                                            | DESCRIPTION                                                                                    |
-|------------------|-------------------------------------------------|------------------------------------------------------------------------------------------------|
+| ---------------- | ----------------------------------------------- | ---------------------------------------------------------------------------------------------- |
 | address          | string                                          | The hostname, IPv4 or IPv6 address of the SNMP host.                                           |
 | notificationType | string                                          | `traps` or `informs` notification type.                                                        |
 | snmpVersion      | string                                          | The SNMP version used for notification messages.                                               |
@@ -24,4 +24,3 @@ Cisco NX-OS SNMP Host configuration
 | srcInterfaceName | string                                          | Optional. The SNMP source interface name used for sending out SNMP notifications to this host. |
 | srcInterface     | [cisco.nxos.interface](cisco.nxos.interface.md) | Optional. The SNMP source interface used for sending out SNMP notifications to this host.      |
 | udpPort          | int                                             | Optional. The UDP port number used for sending out SNMP notifications to this host.            |
-

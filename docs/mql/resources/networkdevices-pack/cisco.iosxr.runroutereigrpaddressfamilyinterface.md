@@ -15,7 +15,6 @@ Cisco IOS XR Routing EIGRP Address Family Interface configuration from running c
 **Fields**
 
 | ID           | TYPE                                  | DESCRIPTION                                   |
-|--------------|---------------------------------------|-----------------------------------------------|
+| ------------ | ------------------------------------- | --------------------------------------------- |
 | interface    | [cisco.interface](cisco.interface.md) | Interface                                     |
 | authKeyChain | string                                | Authentication Key chain name (if configured) |
-

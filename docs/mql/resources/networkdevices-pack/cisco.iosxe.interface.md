@@ -15,7 +15,7 @@ Cisco IOS XE Network interface resource
 **Fields**
 
 | ID            | TYPE                                                          | DESCRIPTION                                   |
-|---------------|---------------------------------------------------------------|-----------------------------------------------|
+| ------------- | ------------------------------------------------------------- | --------------------------------------------- |
 | name          | string                                                        | Interface name/identifier                     |
 | description   | string                                                        | Interface description                         |
 | linkStatus    | string                                                        | Link status (up/down)                         |
@@ -47,4 +47,3 @@ Cisco IOS XE Network interface resource
 | lastOutput    | string                                                        | Time of last output                           |
 | mediaType     | string                                                        | Media type                                    |
 | config        | [cisco.iosxe.interfaceConfig](cisco.iosxe.interfaceconfig.md) | The interface configuration                   |
-

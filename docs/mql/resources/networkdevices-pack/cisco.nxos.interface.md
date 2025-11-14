@@ -15,7 +15,7 @@ Cisco NX-OS Network interface resource
 **Fields**
 
 | ID            | TYPE   | DESCRIPTION                                   |
-|---------------|--------|-----------------------------------------------|
+| ------------- | ------ | --------------------------------------------- |
 | name          | string | Interface name/identifier                     |
 | description   | string | Interface description                         |
 | adminState    | string | Administrative state (up/down)                |
@@ -37,4 +37,3 @@ Cisco NX-OS Network interface resource
 | inputErrors   | string | Input error count                             |
 | outputErrors  | string | Output error count                            |
 | mode          | string | Interface mode                                |
-

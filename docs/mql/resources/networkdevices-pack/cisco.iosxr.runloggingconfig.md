@@ -15,7 +15,7 @@ Cisco IOS XR Running Config Logging configuration
 **Fields**
 
 | ID                 | TYPE   | DESCRIPTION                  |
-|--------------------|--------|------------------------------|
+| ------------------ | ------ | ---------------------------- |
 | consoleLogLevel    | string | Console log level            |
 | consoleLogFileSize | int    | Console log file size        |
 | monitorLogLevel    | string | Monitor log level            |
@@ -25,4 +25,3 @@ Cisco IOS XR Running Config Logging configuration
 | trapLogLevel       | string | Trap log level               |
 | trapLogFileSize    | int    | Trap log file size           |
 | sourceInterface    | string | Source interface for logging |
-

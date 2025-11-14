@@ -15,7 +15,6 @@ Cisco NX-OS Routing EIGRP entry configuration from running config
 **Fields**
 
 | ID              | TYPE                                                                                                | DESCRIPTION                                     |
-|-----------------|-----------------------------------------------------------------------------------------------------|-------------------------------------------------|
+| --------------- | --------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
 | as              | string                                                                                              | The router EIGRP autonomous system (AS) number. |
 | addressFamilies | &#91;&#93;[cisco.nxos.routerEigrpEntry.addressFamily](cisco.nxos.routereigrpentry.addressfamily.md) | Address families.                               |
-

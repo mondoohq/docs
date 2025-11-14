@@ -15,7 +15,7 @@ Cisco NX-OS passphrase time values
 **Fields**
 
 | ID              | TYPE   | DESCRIPTION                                                                           |
-|-----------------|--------|---------------------------------------------------------------------------------------|
+| --------------- | ------ | ------------------------------------------------------------------------------------- |
 | user            | string | Username this configuration applies to (empty if this is the global defaults config). |
 | warningTimeUnit | string | The Warning time before passphrase expiration units(normally `days`).                 |
 | warningTime     | int    | The Warning time before passphrase expiration value.                                  |
@@ -23,4 +23,3 @@ Cisco NX-OS passphrase time values
 | graceTime       | int    | The Grace time before passphrase expiration value.                                    |
 | lifeTimeUnit    | string | The Lifetime units(normally `days`).                                                  |
 | lifeTime        | int    | The Lifetime value.                                                                   |
-

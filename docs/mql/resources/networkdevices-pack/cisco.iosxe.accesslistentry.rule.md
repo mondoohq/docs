@@ -15,7 +15,7 @@ Cisco IOS XE access list rule configuration
 **Fields**
 
 | ID                            | TYPE   | DESCRIPTION                                                      |
-|-------------------------------|--------|------------------------------------------------------------------|
+| ----------------------------- | ------ | ---------------------------------------------------------------- |
 | acl                           | string | ACL name                                                         |
 | protocol                      | string | Protocol (ip/tcp/udp)                                            |
 | action                        | string | Action (permit/deny)                                             |
@@ -26,4 +26,3 @@ Cisco IOS XE access list rule configuration
 | destinationWildcardMask       | ip     | Optional. Destination IPv4 wildcard mask for the destination ip. |
 | sourceNetworkObjectGroup      | string | Optional. The source network object group for the rule.          |
 | destinationNetworkObjectGroup | string | Optional. The destination network object group for the rule.     |
-

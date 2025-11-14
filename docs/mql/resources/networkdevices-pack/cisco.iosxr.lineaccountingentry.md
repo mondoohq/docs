@@ -15,8 +15,7 @@ Cisco IOS XR Line accounting configuration
 **Fields**
 
 | ID         | TYPE   | DESCRIPTION                                |
-|------------|--------|--------------------------------------------|
+| ---------- | ------ | ------------------------------------------ |
 | name       | string | TTY line name (e.g. console, default)      |
 | type       | string | Accounting type (e.g., exec, commands)     |
 | methodList | string | Accounting method list name (e.g. default) |
-

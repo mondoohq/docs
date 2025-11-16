@@ -245,15 +245,31 @@ const legacyRedirects = [
   // Nov 2025 minor cleanup
   {
     from: "/cnquery/cnquery-oper/cnquery-linux-intro",
-    to: "/cnquery/os/cnquery-linux-intro",
+    to: "/cnquery/os/linux",
   },
   {
     from: "/cnquery/cnquery-oper/cnquery-macos-intro",
-    to: "/cnquery/os/cnquery-macos-intro",
+    to: "/cnquery/os/macos",
   },
   {
     from: "/cnquery/cnquery-oper/cnquery-windows-intro",
-    to: "/cnquery/os/cnquery-windows-intro",
+    to: "/cnquery/os/windows",
+  },
+  {
+    from: "/cnspec/cnspec-oper/cnspec-linux-intro",
+    to: "/cnspec/os/linux",
+  },
+  {
+    from: "/cnspec/cnspec-oper/cnspec-macos-intro",
+    to: "/cnspec/os/macos",
+  },
+  {
+    from: "/cnspec/cnspec-oper/cnspec-windows-intro",
+    to: "/cnspec/os/windows",
+  },
+  {
+    from: "/cnspec/cnspec-oper/arista",
+    to: "/cnspec/network/arista",
   },
 ];
 

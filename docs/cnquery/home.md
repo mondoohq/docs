@@ -22,14 +22,14 @@ Download and install cnquery on your assets.
 
 ### Get started with:
 
-| **Cloud**                           | **SaaS**                                            | **OS**                                       |
-| ----------------------------------- | --------------------------------------------------- | -------------------------------------------- |
-| [AWS](/cnquery/cloud/aws/)          | [GitHub](/cnquery/saas/github/)                     | [Linux](/cnquery/os/cnquery-linux-intro)     |
-| [Azure](/cnquery/cloud/azure/)      | [Google Workspace](/cnquery/saas/google_workspace/) | [macOS](/cnquery/os/cnquery-macos-intro)     |
-| [Google Cloud](/cnquery/cloud/gcp/) | [Microsoft 365](/cnquery/saas/ms365/)               | [Windows](/cnquery/os/cnquery-windows-intro) |
-| [Kubernetes](/cnquery/cloud/k8s/)   | [Okta](/cnquery/saas/okta/)                         |                                              |
-| [VMware](/cnquery/cloud/vmware/)    | [Slack](/cnquery/saas/slack/)                       |                                              |
-|                                     | [Snowflake](/cnquery/saas/snowflake/)               |                                              |
+| **Cloud**                           | **SaaS**                                            | **OS**                         |
+| ----------------------------------- | --------------------------------------------------- | ------------------------------ |
+| [AWS](/cnquery/cloud/aws/)          | [GitHub](/cnquery/saas/github/)                     | [Linux](/cnquery/os/linux)     |
+| [Azure](/cnquery/cloud/azure/)      | [Google Workspace](/cnquery/saas/google_workspace/) | [macOS](/cnquery/os/macos)     |
+| [Google Cloud](/cnquery/cloud/gcp/) | [Microsoft 365](/cnquery/saas/ms365/)               | [Windows](/cnquery/os/windows) |
+| [Kubernetes](/cnquery/cloud/k8s/)   | [Okta](/cnquery/saas/okta/)                         |                                |
+| [VMware](/cnquery/cloud/vmware/)    | [Slack](/cnquery/saas/slack/)                       |                                |
+|                                     | [Snowflake](/cnquery/saas/snowflake/)               |                                |
 
 ### [CLI command reference](/cnquery/cli/cnquery/)
 

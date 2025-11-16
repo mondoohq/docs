@@ -200,17 +200,17 @@ module.exports = {
           items: [
             {
               type: "doc",
-              id: "cnquery/cnquery-oper/cnquery-linux-intro",
+              id: "cnquery/os/cnquery-linux-intro",
               label: "Linux",
             },
             {
               type: "doc",
-              id: "cnquery/cnquery-oper/cnquery-macos-intro",
+              id: "cnquery/os/cnquery-macos-intro",
               label: "macOS",
             },
             {
               type: "doc",
-              id: "cnquery/cnquery-oper/cnquery-windows-intro",
+              id: "cnquery/os/cnquery-windows-intro",
               label: "Windows",
             },
           ],

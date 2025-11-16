@@ -242,6 +242,19 @@ const legacyRedirects = [
     from: "/references/cli/mondoo",
     to: "/cnspec/cli/cnspec_scan",
   },
+  // Nov 2025 minor cleanup
+  {
+    from: "/cnquery/cnquery-oper/cnquery-linux-intro",
+    to: "/cnquery/os/cnquery-linux-intro",
+  },
+  {
+    from: "/cnquery/cnquery-oper/cnquery-macos-intro",
+    to: "/cnquery/os/cnquery-macos-intro",
+  },
+  {
+    from: "/cnquery/cnquery-oper/cnquery-windows-intro",
+    to: "/cnquery/os/cnquery-windows-intro",
+  },
 ];
 
 module.exports = {

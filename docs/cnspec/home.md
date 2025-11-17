@@ -26,9 +26,9 @@ Download and install cnspec on your assets.
 - [Azure](/cnspec/cloud/azure/)
 - [GCP](/cnspec/cloud/gcp/)
 - [Kubernetes](/cnspec/cloud/k8s/)
-- [Linux](/cnspec/cnspec-oper/cnspec-linux-intro)
-- [macOS](/cnspec/cnspec-oper/cnspec-macos-intro)
-- [Windows](/cnspec/cnspec-oper/cnspec-windows-intro)
+- [Linux](/cnspec/os/linux)
+- [macOS](/cnspec/os/macos)
+- [Windows](/cnspec/os/windows)
 
 ### [CLI Command Reference](/cnspec/cli/cnspec/)
 

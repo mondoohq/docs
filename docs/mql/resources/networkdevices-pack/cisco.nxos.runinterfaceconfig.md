@@ -1,12 +1,12 @@
 ---
-title: cisco.nxos.runInterface
-id: cisco.nxos.runInterface
-sidebar_label: cisco.nxos.runInterface
+title: cisco.nxos.runInterfaceConfig
+id: cisco.nxos.runInterfaceConfig
+sidebar_label: cisco.nxos.runInterfaceConfig
 displayed_sidebar: MQL
 description: Cisco NX-OS Running Config Interface
 ---
 
-# cisco.nxos.runInterface
+# cisco.nxos.runInterfaceConfig
 
 **Description**
 

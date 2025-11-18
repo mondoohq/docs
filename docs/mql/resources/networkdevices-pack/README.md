@@ -139,6 +139,8 @@ Resources included in this pack:
 | [cisco.nxos.interfaceHsrpEntry](cisco.nxos.interfacehsrpentry.md)                                                       | Cisco NX-OS HSRP configuration per interface                                           |
 | [cisco.nxos.interfaceHsrpEntry.hsrpGroup](cisco.nxos.interfacehsrpentry.hsrpgroup.md)                                   | Cisco NX-OS HSRP Group configuration                                                   |
 | [cisco.nxos.inventoryEntry](cisco.nxos.inventoryentry.md)                                                               | Cisco NX-OS inventory entry                                                            |
+| [cisco.nxos.ipConf](cisco.nxos.ipconf.md)                                                                               | Cisco NX-OS IP configuration                                                           |
+| [cisco.nxos.ipv6.raGuardPolicyConfig](cisco.nxos.ipv6.raguardpolicyconfig.md)                                           | Cisco NX-OS IPv6 RA Guard Policy configuration                                         |
 | [cisco.nxos.lineConfig](cisco.nxos.lineconfig.md)                                                                       | Cisco NX-OS Line Configuration                                                         |
 | [cisco.nxos.loggingConfig](cisco.nxos.loggingconfig.md)                                                                 | Cisco NX-OS Logging configuration                                                      |
 | [cisco.nxos.loggingConfig.facility](cisco.nxos.loggingconfig.facility.md)                                               | Cisco NX-OS Logging Facility configuration                                             |

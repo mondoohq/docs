@@ -265,6 +265,7 @@ pxe
 pytz
 querypack
 QUERYUID
+raguard
 ratebasedstatement
 regexmatchstatement
 regexpatternsetreferencestatement

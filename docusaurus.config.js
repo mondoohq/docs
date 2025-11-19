@@ -212,7 +212,7 @@ const legacyRedirects = [
   },
   {
     from: "/cloud/ms365/",
-    to: "/platform/infra/saas/ms365/ms365-auto",
+    to: "/platform/infra/saas/m365/m365-auto",
   },
   {
     from: "/agent",
@@ -325,6 +325,8 @@ module.exports = {
             return [
               existingPath.replace("/platform/ticketing", "/platform/cases"),
             ];
+          } else if (existingPath.includes("ms365")) {
+            return [existingPath.replace("ms365", "m365")];
           }
           return undefined; // Return a falsy value: no redirect created
         },

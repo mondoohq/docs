@@ -115,7 +115,7 @@ cnspec scan atlassian jira --host HOST_URL --user USER@DOMAIN --user-token YOUR_
 cnspec scan ms365 --certificate-path certificate.combo.pem --tenant-id YOUR_TENANT_ID --client-id YOUR_CLIENT_ID
 ```
 
-To learn more, read [Assess Microsoft 365 Security with cnspec](/cnspec/saas/ms365/).
+To learn more, read [Assess Microsoft 365 Security with cnspec](/cnspec/saas/m365/).
 
 #### Scan Okta
 

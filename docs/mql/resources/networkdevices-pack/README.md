@@ -147,6 +147,7 @@ Resources included in this pack:
 | [cisco.nxos.loggingConfig.server](cisco.nxos.loggingconfig.server.md)                                                   | Cisco NX-OS Logging Remote Server configuration                                        |
 | [cisco.nxos.ntpConfiguration](cisco.nxos.ntpconfiguration.md)                                                           | Cisco NX-OS NTP Configuration                                                          |
 | [cisco.nxos.ntpConfiguration.server](cisco.nxos.ntpconfiguration.server.md)                                             | Cisco NX-OS NTP Server configuration                                                   |
+| [cisco.nxos.passphraseLengthConfig](cisco.nxos.passphraselengthconfig.md)                                               | Cisco NX-OS Global Password Length Configuration                                       |
 | [cisco.nxos.passphraseTimevalues](cisco.nxos.passphrasetimevalues.md)                                                   | Cisco NX-OS passphrase time values                                                     |
 | [cisco.nxos.role](cisco.nxos.role.md)                                                                                   | Cisco NX-OS Role configuration                                                         |
 | [cisco.nxos.role.rule](cisco.nxos.role.rule.md)                                                                         | Cisco NX-OS Role Rule                                                                  |
@@ -158,7 +159,7 @@ Resources included in this pack:
 | [cisco.nxos.runAaaAuthenticationLoginEntry.methodGroup](cisco.nxos.runaaaauthenticationloginentry.methodgroup.md)       | Method group for AAA authentication login entry                                        |
 | [cisco.nxos.runAaaGroupServerRadius](cisco.nxos.runaaagroupserverradius.md)                                             | Cisco NX-OS AAA Group Server RADIUS configuration                                      |
 | [cisco.nxos.runAaaGroupServerTacacs](cisco.nxos.runaaagroupservertacacs.md)                                             | Cisco NX-OS AAA Group Server TACACS+ configuration                                     |
-| [cisco.nxos.runInterface](cisco.nxos.runinterface.md)                                                                   | Cisco NX-OS Running Config Interface                                                   |
+| [cisco.nxos.runInterfaceConfig](cisco.nxos.runinterfaceconfig.md)                                                       | Cisco NX-OS Running Config Interface                                                   |
 | [cisco.nxos.runRadiusServer](cisco.nxos.runradiusserver.md)                                                             | Cisco NX-OS RADIUS server from running config                                          |
 | [cisco.nxos.runTacacsServer](cisco.nxos.runtacacsserver.md)                                                             | Cisco NX-OS TACACS+ server from running config                                         |
 | [cisco.nxos.scheduler](cisco.nxos.scheduler.md)                                                                         | Cisco NX-OS Scheduler configuration                                                    |
@@ -172,6 +173,7 @@ Resources included in this pack:
 | [cisco.nxos.snmpConfiguration.user](cisco.nxos.snmpconfiguration.user.md)                                               | Cisco NX-OS SNMP User configuration                                                    |
 | [cisco.nxos.snmpConfiguration.user.authenticationSettings](cisco.nxos.snmpconfiguration.user.authenticationsettings.md) | Cisco NX-OS SNMP User Authentication and Encryption settings                           |
 | [cisco.nxos.sshConfig](cisco.nxos.sshconfig.md)                                                                         | Cisco NX-OS SSH configuration                                                          |
+| [cisco.nxos.switchportConfig](cisco.nxos.switchportconfig.md)                                                           | Cisco NX-OS Switchport configuration                                                   |
 | [cisco.nxos.systemLoginConfiguration](cisco.nxos.systemloginconfiguration.md)                                           | Cisco NX-OS System Login Configuration                                                 |
 | [cisco.nxos.user](cisco.nxos.user.md)                                                                                   | Cisco NX-OS User configuration                                                         |
 | [cisco.nxos.user.credential](cisco.nxos.user.credential.md)                                                             | Cisco NX-OS User credential                                                            |

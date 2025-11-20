@@ -14,8 +14,8 @@ Cisco NX-OS AAA authentication login method list from running config
 
 **Fields**
 
-| ID            | TYPE                                                         | DESCRIPTION                                |
-| ------------- | ------------------------------------------------------------ | ------------------------------------------ |
-| name          | string                                                       | Method list name                           |
-| methods       | string                                                       | Authentication methods in this method list |
-| methodsGroups | &#91;&#93;cisco.nxos.aaaAuthenticationLoginEntry.methodGroup | Parse methods into structured groups       |
+| ID            | TYPE                                                                                                                        | DESCRIPTION                                |
+| ------------- | --------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------ |
+| name          | string                                                                                                                      | Method list name                           |
+| methods       | string                                                                                                                      | Authentication methods in this method list |
+| methodsGroups | &#91;&#93;[cisco.nxos.runAaaAuthenticationLoginEntry.methodGroup](cisco.nxos.runaaaauthenticationloginentry.methodgroup.md) | Parse methods into structured groups       |

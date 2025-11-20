@@ -18,3 +18,4 @@ Method group for AAA authentication login entry
 | ----- | ------ | ------------------------------------- |
 | name  | string | Group name (e.g. tacacs_example)      |
 | local | bool   | If method is not a group, but 'local' |
+| group | bool   | If method is a group                  |

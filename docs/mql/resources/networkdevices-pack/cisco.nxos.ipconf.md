@@ -14,6 +14,7 @@ Cisco NX-OS IP configuration
 
 **Fields**
 
-| ID                 | TYPE | DESCRIPTION                        |
-| ------------------ | ---- | ---------------------------------- |
-| sourceRouteEnabled | bool | Whether source routing is enabled. |
+| ID                  | TYPE | DESCRIPTION                        |
+| ------------------- | ---- | ---------------------------------- |
+| sourceRouteEnabled  | bool | Whether source routing is enabled. |
+| dhcpSnoopingEnabled | bool | Whether DHCP snooping is enabled.  |

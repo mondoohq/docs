@@ -37,5 +37,5 @@ Cisco NX-OS Network interface resource
 | inputErrors      | string                                                            | Input error count                                                                                      |
 | outputErrors     | string                                                            | Output error count                                                                                     |
 | mode             | string                                                            | Interface mode                                                                                         |
-| runningConfig    | [cisco.nxos.runInterfaceConfig](cisco.nxos.runinterfaceconfig.md) | The interface configuration, obtained by running 'show running-config interface'                       |
-| switchportConfig | [cisco.nxos.switchportConfig](cisco.nxos.switchportconfig.md)     | The interface switchport configuration, obtained by running 'show running-config interface switchport' |
+| runningConfig    | [cisco.nxos.runInterfaceConfig](cisco.nxos.runinterfaceconfig.md) | The interface configuration, obtained by running `show running-config interface`                       |
+| switchportConfig | [cisco.nxos.switchportConfig](cisco.nxos.switchportconfig.md)     | The interface switchport configuration, obtained by running `show running-config interface switchport` |

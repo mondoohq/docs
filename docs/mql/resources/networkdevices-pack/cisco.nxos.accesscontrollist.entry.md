@@ -22,8 +22,8 @@ Cisco NX-OS Access Control List (ACL) Entry
 | source              | string | Source Address / Mask / MAC                                 |
 | destination         | string | Destination Address / Mask / MAC                            |
 | protocol            | string | Protocol (ip/tcp/udp/icmp/icmpv6/arp/etc)                   |
-| sourceAddress       | string | Source Address / Mask, MAC address or `any` keyword,        |
-| destinationAddress  | string | Destination Address / Mask, MAC address or `any` keyword,   |
+| sourceAddress       | string | Source Address / Mask, MAC address or `any` keyword         |
+| destinationAddress  | string | Destination Address / Mask, MAC address or `any` keyword    |
 | sourceWildcard      | string | Source Wildcard Mask (if any)                               |
 | destinationWildcard | string | Destination Wildcard Mask (if any)                          |
 | port                | string | Port expression (eq/gt/lt/range)                            |

@@ -20,5 +20,5 @@ Cisco IOS XR Management Plane rules configuration from running config
 | interface | [cisco.interface](cisco.interface.md) | Interface                                          |
 | action    | string                                | Rule action (allow/deny)                           |
 | protocol  | string                                | Protocol (e.g., ssh, telnet, snmp)                 |
-| ipVersion | string                                | IP version (ipv4/ipv6)                             |
+| ipVersion | string                                | IP version (IPv4/IPv6)                             |
 | address   | ip                                    | Address or subnet in CIDR notation (if applicable) |

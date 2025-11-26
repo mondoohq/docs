@@ -33,15 +33,15 @@ Each finding has a base score associated with it.
 
 Base scores evaluate a threat in a vacuum. Mondoo makes them more accurate by applying _contextual risk factors_ that are unique to your assets and environment.
 
-| Risk Factor | Description | Affect on Risk Score |
-| --- | --- | --- |
-| **Internet-facing** | The asset has a public IP address and is exposed to the internet. | Raise |
-| **Remote exploit** | The vulnerability can be exploited remotely without user interaction. | Raise |
-| **Accessible keys** | Key or credential information is exposed on the asset. | Raise |
-| **In use** | The asset has a running service or is in active use. | Raise |
-| **End-of-life (EOL)** | The asset is running an EOL operating system. | Raise |
-| **Database** | The asset hosts a running database. | Raise |
-| **Defensive** | The asset has defensive countermeasures (SELinux or AppArmor). | Lower |
+| Risk Factor           | Description                                                           | Affect on Risk Score |
+| --------------------- | --------------------------------------------------------------------- | -------------------- |
+| **Internet-facing**   | The asset has a public IP address and is exposed to the internet.     | Raise                |
+| **Remote exploit**    | The vulnerability can be exploited remotely without user interaction. | Raise                |
+| **Accessible keys**   | Key or credential information is exposed on the asset.                | Raise                |
+| **In use**            | The asset has a running service or is in active use.                  | Raise                |
+| **End-of-life (EOL)** | The asset is running an EOL operating system.                         | Raise                |
+| **Database**          | The asset hosts a running database.                                   | Raise                |
+| **Defensive**         | The asset has defensive countermeasures (SELinux or AppArmor).        | Lower                |
 
 ### Blast Radius
 

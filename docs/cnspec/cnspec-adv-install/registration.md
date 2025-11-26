@@ -104,7 +104,8 @@ cnspec status
 → Time:			2025-11-25T17:58:10-08:00
 → Version:		12.11.0 (API Version: 12)
 → Latest Version:	12.11.0
-→ Installed Providers:    core | mock | os
+→ Providers URL:	https://releases.mondoo.com/providers
+→ Installed Providers:	 core | mock | os
 → API ConnectionConfig:	https://api.edge.mondoo.com
 → API Status:		SERVING
 → API Time:		2025-11-26T01:58:10Z
@@ -126,6 +127,7 @@ cnspec status
 → Time:			2025-11-23T12:07:41-08:00
 → Version:		12.11.0 (API Version: 12)
 → Latest Version:	12.11.0
+→ Providers URL:	https://releases.mondoo.com/providers
 → Installed Providers:	 core | mock | os
 → API ConnectionConfig:	https://api.edge.mondoo.com
 → API Status:		SERVING

@@ -41,6 +41,7 @@
 #### Step C: Exchange your token for access to the Mondoo space
 
 Fetch the local token:
+
 ```bash
 curl -H "Metadata-Flavor: Google" "http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/default/identity?audience=test"
 ```
@@ -59,10 +60,9 @@ curl --request POST \
 ```
 
 | For...   | Substitute...                                                                               |
-|:-------- |:------------------------------------------------------------------------------------------- |
+| :------- | :------------------------------------------------------------------------------------------ |
 | AUDIENCE | The `audience` value Mondoo provided when you followed the instructions in **Step C** above |
 | ISSUER   | The `issuer` value Mondoo provided when you followed the instructions in **Step C** above   |
-| TOKEN    | The token GCP provided when you followed the instructions in **Step B** above                                                |
+| TOKEN    | The token GCP provided when you followed the instructions in **Step B** above               |
 
 This call returns a Mondoo service account in the form of a `base64_credential` value, which your workload can use to access the Mondoo space by setting MONDOO_CONFIG_BASE64 to the returned value.
-

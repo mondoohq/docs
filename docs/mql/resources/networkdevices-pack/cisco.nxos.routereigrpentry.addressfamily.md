@@ -21,3 +21,4 @@ Cisco NX-OS Routing EIGRP Address Family from running config
 | md5AuthenticationMode          | bool   | Whether message digest 5 (MD5) authentication is enabled.                  |
 | authKeychain                   | string | Optional. Name of the keychain used for authentication.                    |
 | adjacencyChangeLoggingEnabled  | bool   | Whether logging of adjacency changes is enabled.                           |
+| vrf                            | string | Optional. The name of the VRF table which this address family applies to.  |

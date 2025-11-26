@@ -26,13 +26,13 @@ Returns this help:
 
 ```
 ports:              TCP/IP ports on the system
-  list []port:      TCP/IP ports on the system
+  list []port:      All ports in use by processes (both listening and non-listening)
   listening []port: All listening ports
 ```
 
 The shell features auto-complete, which makes it easy to explore.
 
-Once inside the shell, you can enter MQL checks like this:
+Once inside the shell, you can enter MQL queries to live test against your system like this:
 
 ```coffeescript
 ports.listening.none( port == 23 )

@@ -107,21 +107,28 @@ These are the available cnquery providers:
 
 | Provider         | Target                                    |
 | ---------------- | ----------------------------------------- |
+| ai               | MCP Servers                               |
 | ansible          | Ansible IaC code                          |
 | arista           | Arista network devices                    |
 | atlassian        | Atlassian Cloud                           |
 | aws              | Amazon Web Services                       |
 | azure            | Microsoft Azure                           |
+| cloudflare       | Cloudflare CDN                            |
 | cloudformation   | AWS CloudFormation                        |
 | equinix          | Equinix Metal                             |
 | gcp              | Google Cloud                              |
 | github           | GitHub                                    |
 | gitlab           | GitLab                                    |
 | google-workspace | Google Workspace                          |
+| ipinfo           | ipinfo.io address information             |
 | ipmi             | Intelligent Platform Management Interface |
 | k8s              | Kubernetes                                |
+| mondoo           | Mondoo Platform                           |
 | ms365            | Microsoft 365                             |
-| network          | Hosts                                     |
+| network          | HTTP/HTTPS Hosts                          |
+| networkdevices   | Cisco / Fortinet devices                  |
+| networkdiscovery | Subdomains from a host                    |
+| nmap             | Nmap host scan                            |
 | oci              | Oracle Cloud Infrastructure               |
 | okta             | Okta                                      |
 | opcua            | OPC Unified Architecture                  |
@@ -129,6 +136,7 @@ These are the available cnquery providers:
 | shodan           | Shodan Search Engine                      |
 | slack            | Slack                                     |
 | snowflake        | Snowflake                                 |
+| tailscale        | Tailscale networks                        |
 | terraform        | HashiCorp Terraform IaC code              |
 | vcd              | VMware Cloud Director                     |
 | vsphere          | VMware vSphere                            |
@@ -291,8 +299,8 @@ To manually configure builtin providers, you can modify the list of [`builtinPro
 
 → builtin (found 3 providers)
 
-  core 9.1.3
-  mock 9.0.0 with connectors: mock
+  core 11.0.98
+  mock 9.0.0 with connectors: mock, upstream
   mypro 0.0.1 with connectors: mytarget
 
 ...

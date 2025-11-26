@@ -15,11 +15,11 @@ bash -c "$(curl -sSL https://install.mondoo.com/sh)"
 ```powershell
 Set-ExecutionPolicy Unrestricted -Scope Process -Force;
 [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072;
-iex ((New-Object System.Net.WebClient).DownloadString('https://install.mondoo.com/ps1/cnspec'));
-Install-Mondoo -Product cnspec;
+iex ((New-Object System.Net.WebClient).DownloadString('https://install.mondoo.com/ps1'));
+Install-Mondoo;
 ```
 
-(You can read the [Windows installation script](https://install.mondoo.com/ps1/cnspec).)
+(You can read the [Windows installation script](https://install.mondoo.com/ps1).)
 
 ### Installation options
 

@@ -56,36 +56,37 @@ The `cnspec status` command validates cnspec registration and ensures that commu
 cnspec status
 → loaded configuration from /Users/stella/.config/mondoo/mondoo.yml using source default
 → Platform:		macos
-→ Version:		26.0.1
+→ Version:		26.1
 → Hostname:		stella.home
-→ IP:			192.168.254.21
-→ Time:			2025-11-23T12:07:41-08:00
-→ Version:		12.8.0 (API Version: 12)
-→ Latest Version:	12.8.0
+→ IP:			172.16.1.94
+→ Time:			2025-11-25T17:55:43-08:00
+→ Version:		12.11.0 (API Version: 12)
+→ Latest Version:	12.11.0
+→ Providers URL:	https://releases.mondoo.com/providers
 → Installed Providers:	core | os | mock
 → API ConnectionConfig:	https://us.api.mondoo.com
 → API Status:		SERVING
-→ API Time:		2025-11-23T20:07:42Z
-→ API Version:		11
+→ API Time:		2025-11-26T01:55:43Z
+→ API Version:		12
 x client is not registered
-x The Mondoo Platform credentials provided at /root/.config/mondoo/mondoo.yml didn't successfully authenticate with Mondoo Platform. Please re-authenticate with Mondoo Platform. To learn how, read https://mondoo.com/docs/cnspec/cnspec-adv-install/registration/.
 ```
 
 ```bash title="Correctly registered client"
 cnspec status
 → loaded configuration from /Users/mwezi/.config/mondoo/mondoo.yml using source default
 → Platform:		macos
-→ Version:		26.0.1
+→ Version:		26.1
 → Hostname:		mwezi.home
 → IP:			192.168.254.21
-→ Time:			2025-11-23T12:07:41-08:00
-→ Version:		12.8.0 (API Version: 12)
-→ Latest Version:	12.8.0
-→ Installed Providers:	arista | aws | azure | core | mock | os
-→ API ConnectionConfig:	https://api.edge.mondoo.com
+→ Time:			2025-11-25T17:58:10-08:00
+→ Version:		12.11.0 (API Version: 12)
+→ Latest Version:	12.11.0
+→ Providers URL:	https://releases.mondoo.com/providers
+→ Installed Providers:	core | os | mock
+→ API ConnectionConfig:	https://us.api.mondoo.com
 → API Status:		SERVING
-→ API Time:		2025-11-23T20:07:42Z
-→ API Version:		11
+→ API Time:		2025-11-26T01:58:10Z
+→ API Version:		12
 → Owner:		//captain.api.mondoo.app/spaces/lunalectric-team-workstations
 → Client:		//agents.api.mondoo.app/spaces/lunalectric-team-workstations/agents/2SARlZgQnFLAzj7jfiS1Fx2HBz8
 → Service Account:      //agents.api.mondoo.app/spaces/lunalectric-team-workstations/serviceaccounts/2bMtksUk9EjrI5MC3tTf6UmhNC2
@@ -97,17 +98,17 @@ cnspec status
 cnspec status
 → loaded configuration from /Users/cosmo/.config/mondoo/mondoo.yml using source default
 → Platform:		macos
-→ Version:		26.0.1
+→ Version:		26.1
 → Hostname:		cosmo.home
 → IP:			192.168.254.21
-→ Time:			2025-11-23T12:07:41-08:00
-→ Version:		12.8.0 (API Version: 12)
-→ Latest Version:	12.8.0
-→ Installed Providers:	arista | aws | azure | core | mock | os
+→ Time:			2025-11-25T17:58:10-08:00
+→ Version:		12.11.0 (API Version: 12)
+→ Latest Version:	12.11.0
+→ Installed Providers:    core | mock | os
 → API ConnectionConfig:	https://api.edge.mondoo.com
 → API Status:		SERVING
-→ API Time:		2025-11-23T20:07:42Z
-→ API Version:		11
+→ API Time:		2025-11-26T01:58:10Z
+→ API Version:		12
 → Owner:		//captain.api.mondoo.app/spaces/lunalectric-team-workstations
 → Client:		//agents.api.mondoo.app/spaces/lunalectric-team-workstations/agents/2SARlZgQnFLAzj7jfiS1Fx2HBz8
 → Service Account:      //agents.api.mondoo.app/spaces/lunalectric-team-workstations/serviceaccounts/2bMtksUk9EjrI5MC3tTf6UmhNC2
@@ -117,20 +118,19 @@ x could not connect to mondoo platform error="rpc error: code = Unauthenticated 
 
 ```bash title="No current system time (clock skew detected)"
 cnspec status
-cnspec status
 → loaded configuration from /Users/cosmo/.config/mondoo/mondoo.yml using source default
 → Platform:		macos
-→ Version:		26.0.1
+→ Version:		26.1
 → Hostname:		tsuki.home
 → IP:			192.168.254.21
 → Time:			2025-11-23T12:07:41-08:00
-→ Version:		12.8.0 (API Version: 12)
-→ Latest Version:	12.8.0
-→ Installed Providers:	 aws | azure | core | mock | os
+→ Version:		12.11.0 (API Version: 12)
+→ Latest Version:	12.11.0
+→ Installed Providers:	 core | mock | os
 → API ConnectionConfig:	https://api.edge.mondoo.com
 → API Status:		SERVING
 → API Time:		2025-11-23T20:07:42Z
-→ API Version:		11
+→ API Version:		12
 → Owner:		//captain.api.mondoo.app/spaces/lunalectric-team-workstations
 → Client:		//agents.api.mondoo.app/spaces/lunalectric-team-workstations/agents/2SARlZgQnFLAzj7jfiS1Fx2HBz8
 → Service Account:      //agents.api.mondoo.app/spaces/lunalectric-team-workstations/serviceaccounts/2bMtksUk9EjrI5MC3tTf6UmhNC2

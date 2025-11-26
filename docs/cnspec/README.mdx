@@ -33,40 +33,28 @@ cnspec scan local
 This (truncated) sample result shows the individual checks that cnspec performs according to the policy. It includes a summary of the scan with a letter grade:
 
 ```
-Checks:
-✓ Pass:  Disable Media Sharing
-✓ Pass:  Do not enable the "root" account
-✓ Pass:  Disable Bluetooth Sharing
-✕ Fail:  Enable security auditing
-✓ Pass:  Enable Firewall
+Asset: (macOS) Mac.localdomain
+------------------------------
+
+Passing:
+✓ Control access to audit records
+✓ Disable Bonjour advertising service
+✓ Disable Content Caching
+✓ Disable File Sharing
 ...
-✕ Fail:  Ensure Firewall is configured to log
-✓ Pass:  Ensure nfs server is not running.
-✓ Pass:  Disable Content Caching
-✕ Fail:  Ensure AirDrop Is Disabled
-✓ Pass:  Control access to audit records
+✓ Password Age
+✓ Password History
+✓ Retain install.log for 365 or more days with no maximum size
+✓ Set a minimum password length
+
+Failing:
+✕ MEDIUM (40):    Reduce the sudo timeout period
 
 
-Summary
-========================
-
-Target:     user-macbook-pro
-Score:      A    80/100     (100% completed)
-✓ Passed:   ███████████ 70% (21)
-✕ Failed:   ███ 17% (5)
-! Errors:   ██ 13% (4)
-» Skipped:  0% (0)
-
-Policies:
-A  80  macOS Security by Mondoo
-
-
-Scanned 1 assets
+Scanned 1 asset
 
 macOS
-    B Stella.home
-
-For detailed output, run this scan with "-o full".
+  LOW (1):      Mac.localdomain
 ```
 
 ## Scan remote targets
@@ -76,7 +64,7 @@ You can also specify remote targets to scan.
 This example scans a docker image:
 
 ```bash
-cnspec scan docker image ubuntu:22.04
+cnspec scan docker image ubuntu:24.04
 ```
 
 This scans an aws account using the local AWS configuration profile:

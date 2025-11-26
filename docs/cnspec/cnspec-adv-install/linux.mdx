@@ -90,24 +90,7 @@ We recommend that you create an integration and retrieve a token from Mondoo:
 
    - If you've accessed the console before, in the side navigation bar, under INTEGRATIONS, select Add New Integration. Under **Server and Endpoint Security**, select your operating system.
 
-3. Copy the MONDOO_REGISTRATION_TOKEN value.
-
-4. In your terminal, enter:
-
-```bash title="Automated installation script"
-export MONDOO_REGISTRATION_TOKEN='sample-token-CI6Ii8vYWdlbnRzABEL775kb28uYXBwL3NwYWNlcy9mcmllbmRseS1jb3JpLTY1NjU5Ni9zZXJ2aWNlYWNjb3VudHMvMnNqM21aSVhvczloZGxHQ0J2aE1kVVJ3N1g5IiwidHlwIjoiSldUIn0.eyJpYXQiOjE3Mzg5HANNAsImlzcyI6Im1vbmRvby9hbDEWEYuYmYiOjE3Mzg5NTUzMTUsInN1YiI6Ii8vYWdlbnRzLmFwaS5tb25kb28uYXBwL3NwYWNlcy9mcmllbmRseS1jb3JpLTY1NjU5Ni9zZXJ2aWNlYWNjb3VudHMvMnNqM21aSVhvczloZGxHQ0J2aE1kVVJ3N1g5In0.Xz_N4lRFQtu5RqoLRep7V_JGhZrOm_1s7_hrrnaKyqYT0bYyUhJXzno0_r8nJj_Z6w-GGZgC6DZutK2GkC-6pic3f2oU3YKPBxH5atBH7AEaQpcmCOSMOL42ErGzt4D'
-curl -sSL https://install.mondoo.com/sh | bash -s -- -u enable -s enable -t $MONDOO_REGISTRATION_TOKEN
-```
-
-:::note
-
-You can also register and create a configuration file after installation using this command:
-
-```bash title="Automated installation script"
-cnspec login --token $MONDOO_REGISTRATION_TOKEN --config /etc/opt/mondoo/mondoo.yml
-```
-
-:::
+3. Copy the installation command including the registration token and run this in your terminal.
 
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";

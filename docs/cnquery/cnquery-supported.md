@@ -13,7 +13,7 @@ cnquery can request information from:
 | Target                        | Example                                                                                                                                                     |
 | ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Ansible playbooks             | `cnquery shell ansible YOUR_PLAYBOOK.yml`                                                                                                                   |
-| Arista network devices        | `cnquery shell arista DEVICE_PUBLIC_IP --ask-pass`                                                                                                          |
+| Arista network devices        | `cnquery shell arista DEVICE_IP --ask-pass`                                                                                                                 |
 | Atlassian organizations       | `cnquery shell atlassian --host YOUR_HOST_URL --admin-token YOUR_TOKEN`                                                                                     |
 | AWS accounts                  | `cnquery shell aws`                                                                                                                                         |
 | AWS CloudFormation templates  | `cnquery shell cloudformation cloudformation_file.json`                                                                                                     |
@@ -21,11 +21,13 @@ cnquery can request information from:
 | AWS EC2 EBS volume            | `cnquery shell aws ec2 ebs volume VOLUMEID`                                                                                                                 |
 | AWS EC2 Instance Connect      | `cnquery shell aws ec2 instance-connect ec2-user@INSTANCEID`                                                                                                |
 | AWS EC2 instances             | `cnquery shell ssh user@host`                                                                                                                               |
+| Cisco IOS / NX-OS devices     | `cnquery shell nd-ssh USER_NAME@DEVICE_IP --ask-pass`                                                                                                       |
+| Cloudflare                    | `cnquery shell cloudflare --token TOKEN`                                                                                                                    |
 | Confluence users              | `cnquery shell atlassian --host YOUR_HOST_URL --admin-token YOUR_TOKEN`                                                                                     |
 | Container images              | `cnquery shell container ubuntu:latest`                                                                                                                     |
 | Container registries          | `cnquery shell container registry index.docker.io/library/rockylinux:8 `                                                                                    |
-| Dockerfiles                   | `cnquery shell docker file FILENAME`                                                                                                                        |
 | DNS records                   | `cnquery shell host mondoo.com`                                                                                                                             |
+| Dockerfiles                   | `cnquery shell docker file FILENAME`                                                                                                                        |
 | GitHub organizations          | `cnquery shell github org mondoohq`                                                                                                                         |
 | GitHub repositories           | `cnquery shell github repo mondoohq/cnquery`                                                                                                                |
 | GitLab groups                 | `cnquery shell gitlab --group mondoohq`                                                                                                                     |
@@ -47,7 +49,9 @@ cnquery can request information from:
 | Running containers            | `cnquery shell docker CONTAINER_ID`                                                                                                                         |
 | Shodan search engine          | `cnquery shell shodan --token TOKEN`                                                                                                                        |
 | Slack team                    | `cnquery shell slack --token TOKEN`                                                                                                                         |
+| Snowflake                     | `cnquery shell snowflake --account ACCOUNT-ID --region REGION --user YOUR-USER-ID --role YOUR-ROLE --ask-pass`                                              |
 | SSL certificates on websites  | `cnquery shell host mondoo.com`                                                                                                                             |
+| Tailscale                     | `cnquery shell tailscale --token TOKEN`                                                                                                                     |
 | Terraform HCL                 | `cnquery shell terraform HCL_FILE_OR_PATH`                                                                                                                  |
 | Terraform plan                | `cnquery shell terraform plan plan.json`                                                                                                                    |
 | Terraform state               | `cnquery shell terraform state state.json`                                                                                                                  |

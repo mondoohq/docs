@@ -37,7 +37,7 @@ shell snowflake --account ACCOUNT-ID --region REGION --user YOUR-ID  --role YOUR
 For example, run:
 
 ```shell
-shell snowflake --account zi12345 --region us-central1.gcp --user CHRIS  --role ACCOUNTADMIN --private-key ~/.ssh/id_rsa
+shell snowflake --account zi12345 --region us-central1.gcp --user CHRIS --role ACCOUNTADMIN --private-key ~/.ssh/id_rsa
 ```
 
 ## Explore a Snowflake account with cnquery shell
@@ -45,7 +45,7 @@ shell snowflake --account zi12345 --region us-central1.gcp --user CHRIS  --role 
 Use this command to open cnquery shell and query your Snowflake configuration and identities:
 
 ```shell
-cnquery shell snowflake --account ACCOUNT-ID --region REGION -- user YOUR-USER-ID -- role YOUR-ROLE --ask-pass~/.ssh/id_rsa
+cnquery shell snowflake --account ACCOUNT-ID --region REGION --user YOUR-USER-ID --role YOUR-ROLE --private-key ~/.ssh/id_rsa
 ```
 
 | For...       | Substitute...                                                                                                                                                                                                                                                                            |
@@ -57,7 +57,7 @@ cnquery shell snowflake --account ACCOUNT-ID --region REGION -- user YOUR-USER-I
 | YOUR-KEY     | The path to your private key you generated and assigned to your account                                                                                                                                                                                                                  |
 
 ```shell
-cnquery shell snowflake --account zc74621 --region us-central1.gcp -- user STELLA -- role ACCOUNTADMIN --private-key ~/.ssh/id_rsa
+cnquery shell snowflake --account zc74621 --region us-central1.gcp --user STELLA --role ACCOUNTADMIN --private-key ~/.ssh/id_rsa
 ```
 
 ### Example queries

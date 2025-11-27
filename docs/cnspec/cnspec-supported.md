@@ -21,11 +21,13 @@ cnspec can make assertions against and scan:
 | AWS EC2 EBS volume            | `cnspec scan aws ec2 ebs volume VOLUMEID`                                                                                                             |
 | AWS EC2 Instance Connect      | `cnspec scan aws ec2 instance-connect ec2-user@INSTANCEID`                                                                                            |
 | AWS EC2 instances             | `cnspec scan ssh user@host`                                                                                                                           |
+| Cisco IOS / NX-OS devices     | `cnspec scan nd-ssh USER_NAME@DEVICE_IP --ask-pass`                                                                                                   |
+| Cloudflare                    | `cnspec scan cloudflare --token TOKEN`                                                                                                                |
 | Confluence users              | `cnspec scan atlassian --host YOUR_HOST_URL --admin-token YOUR_TOKEN`                                                                                 |
 | Container images              | `cnspec scan container ubuntu:latest`                                                                                                                 |
 | Container registries          | `cnspec scan container registry index.docker.io/library/rockylinux:8 `                                                                                |
-| Dockerfiles                   | `cnspec scan docker file FILENAME`                                                                                                                    |
 | DNS records                   | `cnspec scan host mondoo.com`                                                                                                                         |
+| Dockerfiles                   | `cnspec scan docker file FILENAME`                                                                                                                    |
 | GitHub organizations          | `cnspec scan github org mondoohq`                                                                                                                     |
 | GitHub repositories           | `cnspec scan github repo mondoohq/cnquery`                                                                                                            |
 | GitLab groups                 | `cnspec scan gitlab --group mondoohq`                                                                                                                 |
@@ -47,7 +49,9 @@ cnspec can make assertions against and scan:
 | Running containers            | `cnspec scan docker CONTAINER_ID`                                                                                                                     |
 | Shodan search engine          | `cnspec scan shodan --token TOKEN`                                                                                                                    |
 | Slack team                    | `cnspec scan slack --token TOKEN`                                                                                                                     |
+| Snowflake                     | `cnspec scan snowflake --account ACCOUNT-ID --region REGION --user YOUR-USER-ID --role YOUR-ROLE --ask-pass`                                          |
 | SSL certificates on websites  | `cnspec scan host mondoo.com`                                                                                                                         |
+| Tailscale                     | `cnspec scan tailscale --token TOKEN`                                                                                                                 |
 | Terraform HCL                 | `cnspec scan terraform HCL_FILE_OR_PATH`                                                                                                              |
 | Terraform plan                | `cnspec scan terraform plan plan.json`                                                                                                                |
 | Terraform state               | `cnspec scan terraform state state.json`                                                                                                              |

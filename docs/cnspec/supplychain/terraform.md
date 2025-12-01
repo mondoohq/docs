@@ -342,7 +342,7 @@ resource "aws_instance" "web" {
     private_key = file(var.private_key)
   }
 
-  instance_type = "t2.micro"
+  instance_type = "t3.micro"
 
   # Lookup the correct AMI based on the region as we specified
   ami = var.aws_amis[var.aws_region]

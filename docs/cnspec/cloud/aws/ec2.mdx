@@ -26,7 +26,7 @@ help aws.ec2
 This test assesses whether any running EC2 instances have a public IP:
 
 ```bash
-aws.ec2.instances.all( state = "running" && publicIp != "" )
+aws.ec2.instances.all( state = "running" && publicIp != empty )
 ```
 
 If the test passes (no running instances have a public IP) then cnspec returns `ok`:

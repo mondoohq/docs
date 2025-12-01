@@ -26,41 +26,33 @@ cnspec finds the default policy for AWS and runs a scan based on that policy. It
 
 ```coffeescript
 → discover related assets for 1 asset(s)
-→ resolved assets resolved-assets=1
-→ connecting to asset AWS Account lunalectric-management (177048008586) (api)
+→ verifying connection client type=aws
 
-██████████████████████████████████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░  60% AWS Account lunalectric-management (177048008586)
-
-
-Asset: AWS Account lunalectric-management (177048008586)
-========================================================
-Checks:
-✕ Fail:  Ensure IAM Users Receive Permissions Only Through Groups
-✕ Fail:  D  20  Checks whether the instance metadata version is configured with IMDSv2 (http tokens required)
-✓ Pass:  Ensure MFA is enabled for the "root user" account
-✕ Fail:  D  20  Ensure the default security group of every VPC restricts all traffic
-✕ Fail:  B  70  Checks whether the active access keys are rotated within the number of days specified in maxAccessKeyAge (default 90)
-✓ Pass:  Ensure there is only one active access key available for any single IAM user
-✓ Pass:  Ensure no root user account access key exists
-✓ Pass:  Checks if the required S3 public access block settings are configured from the account level
-✕ Fail:  B  70  Ensure VPC flow logging is enabled in all VPCs
-! Error: Checks whether the account password policy for IAM users meets the specified requirements
-✕ Fail:  F   5  Checks whether the AWS IAM users have multi-factor authentication (MFA) enabled
-✓ Pass:  Checks if Amazon Simple Storage Service (S3) has bucket-level public access restrictions at the bucket level.
-✕ Fail:  D  20  Ensures no instances have a public IP
-✕ Fail:  B  70  Ensure EBS volume encryption is enabled by default
-✓ Pass:  Checks whether IAM groups have at least one IAM user
+ AWS Account lunalectric-management (1234567891011) ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% score: CRITICAL
 
 
-Summary (1 assets)
-==================
+Asset: (AWS Account) AWS Account lunalectric-management (1234567891011)
+----------------------------------------------------------------------
 
-Target:     AWS Account lunalectric-management (177048008586)
-Score:      F     0/100     (100% completed)
-✓ Passed:   ██████ 40% (6)
-✕ Failed:   ████████ 53% (8)
-! Errors:   █ 7% (1)
-» Skipped:  0% (0)
+Passing:
+✓ Ensure Amazon OpenSearch Service domains are configured with encryption-at-rest
+✓ Ensure MFA is enabled for the "root user" account
+✓ Ensure no root user account access key exists
+✓ Ensure strong account password policy requirements are used
+
+Failing:
+✕ HIGH (70):      Ensure IAM user access keys are rotated
+✕ HIGH (80):      Ensure no public IPs are associated with EC2 instances
+✕ CRITICAL (90):  Ensure EBS volume encryption is enabled by default
+✕ CRITICAL (90):  Ensure EC2 instances use IMDSv2 for metadata access
+✕ CRITICAL (90):  Ensure multi-factor authentication is enabled for all IAM users with console access
+✕ CRITICAL (95):  Ensure public access to S3 buckets is blocked at the account level
+
+
+Scanned 1 asset
+
+AWS Account
+  CRITICAL (95):  AWS Account lunalectric-management (1234567891011)
 ```
 
 :::tip
@@ -182,7 +174,9 @@ If the test fails, (one or more CloudTrails do not have KMS keys) then cnspec pr
 ```coffeescript
 [failed] [].all()
   actual:   [
-    0: aws.cloudtrail.trail id = arn:aws:cloudtrail:us-east-1:921877552404:trail/s3-events
+    0: aws.cloudtrail.trail region="us-east-1" name="organizational-trail" {
+      kmsKey: null
+    }
   ]
 ```
 
@@ -201,10 +195,19 @@ If one or more users aren't using MFA, cnspec lists them:
 ```coffeescript
 [failed] [].all()
   actual:   [
-    0: aws.iam.usercredentialreportentry id = aws/iam/credentialreport/arn:aws:iam::921000052404:user/abel
-    1: aws.iam.usercredentialreportentry id = aws/iam/credentialreport/arn:aws:iam::921000052404:user/coco
-    2: aws.iam.usercredentialreportentry id = aws/iam/credentialreport/arn:aws:iam::921000052404:user/ecs-deploy
-    3: aws.iam.usercredentialreportentry id = aws/iam/credentialreport/arn:aws:iam::921000052404:user/gitlab-migration-user
+  actual:   [
+    0: aws.iam.usercredentialreportentry arn="arn:aws:iam::921000052404:user/abel" {
+      mfaActive: false
+    }
+    1: aws.iam.usercredentialreportentry arn="arn:aws:iam::921000052404:user/coco" {
+      mfaActive: false
+    }
+    2: aws.iam.usercredentialreportentry arn="arn:aws:iam::921000052404:user/bob" {
+      mfaActive: false
+    }
+    3: aws.iam.usercredentialreportentry arn="arn:aws:iam::921000052404:user/jill" {
+      mfaActive: false
+    }
   ]
 ```
 

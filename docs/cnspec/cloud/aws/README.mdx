@@ -57,7 +57,7 @@ Amazon provides the **ReadOnlyAccess** IAM profile, which grants read-only acces
 To quickly confirm that cnspec has access to your AWS environment, run this test from your terminal:
 
 ```bash
-cnspec run aws -c 'aws.account.id!="foo"'
+cnspec run aws -c 'aws.account.id != "foo"'
 ```
 
 It asserts that your AWS account ID value is not `foo`.

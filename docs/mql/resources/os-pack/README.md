@@ -72,6 +72,7 @@ Resources included in this pack:
 | [machine.system](machine.system.md)                     | SMBIOS system information                                  |
 | [macos](macos.md)                                       | macOS specific resources                                   |
 | [macos.alf](macos.alf.md)                               | macOS application layer firewall (ALF) service             |
+| [macos.hardware](macos.hardware.md)                     | macOS hardware overview                                    |
 | [macos.systemExtension](macos.systemextension.md)       | macOS system extension                                     |
 | [macos.systemsetup](macos.systemsetup.md)               | macOS machine settings                                     |
 | [macos.timemachine](macos.timemachine.md)               | macOS Time Machine                                         |
@@ -80,6 +81,8 @@ Resources included in this pack:
 | [mount.point](mount.point.md)                           | Unix mount point                                           |
 | [network](network.md)                                   | Network information on this system                         |
 | [networkInterface](networkinterface.md)                 | Detailed information of a network interface                |
+| [networkRoute](networkroute.md)                         | information on the network routes                          |
+| [networkRoutes](networkroutes.md)                       | Collection of routing table entries on the system.         |
 | [npm.package](npm.package.md)                           |                                                            |
 | [npm.packages](npm.packages.md)                         | npm packages                                               |
 | [ntp.conf](ntp.conf.md)                                 | NTP service configuration                                  |

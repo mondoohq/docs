@@ -16,7 +16,7 @@ With Mondoo security scanning in CI/CD systems, you can:
 
 - Scan [Kubernetes manifests](/cnspec/cloud/k8s/manifest/)
 
-- Scan infrastructure as code configuration files (such as [Terraform configurations](/cnspec/supplychain/terraform/))
+- Scan infrastructure as code configuration files (such as [Terraform files](/cnspec/supplychain/terraform/), Cloudformation templates, or Dockerfiles)
 
 ## Supported platforms
 

@@ -16,6 +16,7 @@ macOS specific resources
 
 | ID                    | TYPE                                                        | DESCRIPTION                          |
 | --------------------- | ----------------------------------------------------------- | ------------------------------------ |
+| computerName          | string                                                      | macOS computer name                  |
 | userPreferences       | map[string]dict                                             | macOS user defaults                  |
 | userHostPreferences   | map[string]dict                                             | macOS user defaults for current host |
 | globalAccountPolicies | dict                                                        | macOS global account policies        |

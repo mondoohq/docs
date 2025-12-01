@@ -37,6 +37,8 @@ These packs include resources for querying assets like hostnames, checking certi
 - [Network (host/DNS/certs) resource pack](./network-pack)
 - [Network Devices resource pack](./networkdevices-pack)
 - [Network Discovery resource pack](./networkdiscovery-pack)
+- [FortiOS resource pack](./fortios-pack/)
+- [ipinfo.io resource pack](./ipinfo-pack)
 
 **IaC-specific resource packs:**
 These specialized packs let you examine infrastructure-as-code (IaC) files:

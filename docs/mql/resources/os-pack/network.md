@@ -17,3 +17,4 @@ Network information on this system
 | ID         | TYPE                                              | DESCRIPTION        |
 | ---------- | ------------------------------------------------- | ------------------ |
 | interfaces | &#91;&#93;[networkInterface](networkinterface.md) | Network interfaces |
+| routes     | [networkRoutes](networkroutes.md)                 | Routes             |

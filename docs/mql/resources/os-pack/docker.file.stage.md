@@ -18,7 +18,8 @@ Dockerfile stages
 | ---------- | ----------------------------------------------------- | -------------------------------------------------------------- |
 | from       | [docker.file.from](docker.file.from.md)               | The source of this stage, specified via `FROM` in Dockerfiles  |
 | file       | [docker.file](docker.file.md)                         | Contains the reference to the Dockerfile this stage belongs to |
-| env        | map[string]string                                     | Environment variables configured in the Dockerfile             |
+| env        | &#91;&#93;[docker.file.env](docker.file.env.md)       | ENV instructions in this Dockerfile                            |
+| arg        | &#91;&#93;[docker.file.arg](docker.file.arg.md)       | ARG instructions in the Dockerfile                             |
 | labels     | map[string]string                                     | LABEL instructions in the Dockerfile                           |
 | run        | &#91;&#93;[docker.file.run](docker.file.run.md)       | RUN instructions in this Dockerfile                            |
 | cmd        | [docker.file.run](docker.file.run.md)                 | CMD instructions in this Dockerfile                            |

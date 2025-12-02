@@ -18,7 +18,8 @@ journald.config(path string)
 
 **Fields**
 
-| ID     | TYPE              | DESCRIPTION                         |
-| ------ | ----------------- | ----------------------------------- |
-| file   | [file](file.md)   | File of this journald configuration |
-| params | map[string]string | Configuration values of this config |
+| ID       | TYPE                                                            | DESCRIPTION                                 |
+| -------- | --------------------------------------------------------------- | ------------------------------------------- |
+| file     | [file](file.md)                                                 | File of this journald configuration         |
+| params   | map[string]string                                               | Deprecated; use sections() instead          |
+| sections | &#91;&#93;[journald.config.section](journald.config.section.md) | All sections in this journald configuration |

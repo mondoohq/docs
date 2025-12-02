@@ -195,7 +195,7 @@ cnspec scan --inventory-file FILENAME
       --policy strings                Lists policies to execute. This requires --policy-bundle. You can pass multiple policies using --policy POLICY.
   -f, --policy-bundle strings         Path to local policy file
       --props stringToString          Custom values for properties (default [])
-      --score-threshold int           If any score falls below the threshold, exit 1.
+      --score-threshold int           If any score falls above the threshold, exit 1.
       --trace-id string               Trace identifier
 ```
 

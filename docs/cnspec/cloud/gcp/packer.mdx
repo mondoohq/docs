@@ -45,7 +45,7 @@ To scan for vulnerabilities, you must register cnspec with Mondoo Platform. [Sig
 
 Packer plugin cnspec provides this configuration:
 
-- `score_threshold` - This configuration sets an `int` score threshold for security scans. If the scan produces a score that falls below the threshold, the build will fail.
+- `score_threshold` - This configuration sets an `int` score threshold for security scans. If the scan produces a score that falls above the threshold, the build will fail.
 - `on_failure = "continue"` - This configuration ensures that the Packer build will not fail even if the scan produces a score that falls below the `score_threshold`.
 - `sudo` - Some of the security configuration checks require elevated permissions to scan a given resource such as the `sshd_config`. Setting the `sudo` option to `active = true` configures the plugin to run in `sudo` mode.
 - `asset_name` - Override the asset name on Mondoo Platform. This configuration is only used in registered mode.

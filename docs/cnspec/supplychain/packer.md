@@ -46,7 +46,7 @@ If you prefer to build the plugin from sources, clone the GitHub repository loca
 | `annotations`        | Custom annotations can be applied to Packer build assets to provide additional metadata for asset tracking.                                    | `map of strings` | None        | No           |
 | `asset_name`         | Overwrite the asset name in Mondoo Platform.                                                                                                   | `string`         | None        | No           |
 | `on_failure`         | Set `on_failure = "continue"` to ignore build failures that do not meet any set `score_threshold`.                                             | `string`         | None        | No           |
-| `score_threshold`    | Set a score threshold for Packer builds `[0-100]`. Any scans that fall below the `score_threshold` will fail unless `on_failure = "continue"`. | `int`            | None        | No           |
+| `score_threshold`    | Set a score threshold for Packer builds `[0-100]`. Any scans that fall above the `score_threshold` will fail unless `on_failure = "continue"`. | `int`            | None        | No           |
 | `sudo`               | Use sudo to elevate permissions when running scans.                                                                                            | `bool`           | None        | No           |
 | `mondoo_config_path` | The path to the configuration to be used when running Mondoo scans. If left empty, cnspec tries to determine the config automatically.         | `string`         | None        | No           |
 

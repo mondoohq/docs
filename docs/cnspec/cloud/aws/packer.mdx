@@ -54,7 +54,7 @@ If you don't have access to IAM user credentials, use another authentication met
 
 Packer plugin cnspec provides this configuration:
 
-- `score_threshold` - This configuration sets an `int` score threshold for security scans. If the scan produces a score that falls below the threshold, the build will fail.
+- `score_threshold` - This configuration sets an `int` score threshold for security scans. If the scan produces a score that falls above the threshold, the build will fail.
 - `on_failure = "continue"` - This configuration ensures that the Packer build will not fail even if the scan produces a score that falls below the `score_threshold`.
 - `sudo` - Some of the security configuration checks require elevated permissions to scan a given resource such as the `sshd_config`. Setting the `sudo` option to `active = true` configures the plugin to run in `sudo` mode.
 - `asset_name` - Override the asset name on Mondoo Platform. This configuration is only used in registered mode.
@@ -245,7 +245,7 @@ cnspec-tested-amazon-ubuntu-2404-20251201234453.amazon-ebs.ubuntu2404: output wi
 ==> cnspec-tested-amazon-ubuntu-2404-20251201234453.amazon-ebs.ubuntu2404: detected packer build via ssh
 ==> cnspec-tested-amazon-ubuntu-2404-20251201234453.amazon-ebs.ubuntu2404: load config from detected MONDOO_CONFIG_BASE64
 ==> cnspec-tested-amazon-ubuntu-2404-20251201234453.amazon-ebs.ubuntu2404: successfully updated OS provider
-==> cnspec-tested-amazon-ubuntu-2404-20251201234453.amazon-ebs.ubuntu2404: use OS provider version 11.4.69 (/Users/tsmith/.config/mondoo/providers/os)
+==> cnspec-tested-amazon-ubuntu-2404-20251201234453.amazon-ebs.ubuntu2404: use OS provider version 11.4.69 (/Users/bboberson/.config/mondoo/providers/os)
 ==> cnspec-tested-amazon-ubuntu-2404-20251201234453.amazon-ebs.ubuntu2404: using service account credentials
 ==> cnspec-tested-amazon-ubuntu-2404-20251201234453.amazon-ebs.ubuntu2404: scan packer build
 ...

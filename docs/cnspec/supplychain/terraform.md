@@ -292,7 +292,7 @@ resource "digitalocean_droplet" "mywebserver" {
   }
 
   provisioner "local-exec" {
-    command = "cnspec scan ssh root@${self.ipv4_address} -i ${var.private_key} --insecure --score-threshold 0"
+    command = "cnspec scan ssh root@${self.ipv4_address} -i ${var.private_key} --insecure --score-threshold 80"
   }
 }
 ```
@@ -312,7 +312,7 @@ To trigger cnspec, use the `local-exec` and pass in the required arguments to co
 
 ```tf title="main.tf"
 provisioner "local-exec" {
-  command = "cnspec scan ssh root@${self.ipv4_address} -i ${var.private_key} --insecure --score-threshold 0"
+  command = "cnspec scan ssh root@${self.ipv4_address} -i ${var.private_key} --insecure --score-threshold 80"
 }
 ```
 
@@ -366,14 +366,14 @@ resource "aws_instance" "web" {
 
   # run scan of instance
   provisioner "local-exec" {
-    command = "cnspec scan ssh ubuntu@${coalesce(self.public_ip, self.private_ip)} -i ${var.private_key} --insecure --score-threshold 0"
+    command = "cnspec scan ssh ubuntu@${coalesce(self.public_ip, self.private_ip)} -i ${var.private_key} --insecure --score-threshold 80"
   }
 }
 
 # run scan of aws account
 resource "null_resource" "example1" {
   provisioner "local-exec" {
-    command = "cnspec scan aws --option 'region=${var.aws_region}' --score-threshold 0"
+    command = "cnspec scan aws --option 'region=${var.aws_region}' --score-threshold 80"
   }
 
   depends_on = [

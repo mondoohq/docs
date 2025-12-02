@@ -54,10 +54,10 @@ By default, `cnspec scan` returns these exit codes:
 
 - `1` indicates that the scan found critical policy failures.
 
-Instead of blocking the pipeline, you can choose to always pass the build if the scan was successful using the `--score-threshold 0` flag.
+Instead of blocking the pipeline, you can choose to always pass the build if the scan was successful using the `--score-threshold 100` flag.
 
 ```bash
-cnspec scan docker a3592cc01fdf --score-threshold 0
+cnspec scan docker a3592cc01fdf --score-threshold 100
 ```
 
 ## Store Mondoo credentials

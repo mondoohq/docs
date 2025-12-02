@@ -16,7 +16,7 @@ Cisco NX-OS Routing EIGRP Address Family from running config
 
 | ID                             | TYPE   | DESCRIPTION                                                                |
 | ------------------------------ | ------ | -------------------------------------------------------------------------- |
-| protocol                       | string | Address family protocol (ipv4\|ipv6).                                      |
+| protocol                       | string | Address family protocol (IPv4\|IPv6).                                      |
 | passiveInterfaceDefaultEnabled | bool   | Whether all interfaces are made passive by default for this EIGRP process. |
 | md5AuthenticationMode          | bool   | Whether message digest 5 (MD5) authentication is enabled.                  |
 | authKeychain                   | string | Optional. Name of the keychain used for authentication.                    |

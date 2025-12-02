@@ -248,6 +248,8 @@ osoverview
 ospf
 PACKNAME
 pagerduty
+palo
+panos
 pcx
 Pesoa
 Pids

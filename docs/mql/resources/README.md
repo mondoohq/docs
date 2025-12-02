@@ -38,6 +38,7 @@ These packs include resources for querying assets like hostnames, checking certi
 - [Network Devices resource pack](./networkdevices-pack)
 - [Network Discovery resource pack](./networkdiscovery-pack)
 - [FortiOS resource pack](./fortios-pack/)
+- [PAN-OS resource pack](./panos-pack/)
 - [ipinfo.io resource pack](./ipinfo-pack)
 
 **IaC-specific resource packs:**

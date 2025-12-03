@@ -23,7 +23,7 @@ To test an Cisco device with cnspec, you must have:
 Use the `cnspec scan` command to scan the device. Make sure to substitute USER_NAME and DEVICE_IP for actual values:
 
 ```bash
-cnquery shell nd-ssh USER_NAME@DEVICE_IP --ask-pass
+cnspec scan nd-ssh USER_NAME@DEVICE_IP --ask-pass
 ```
 
 Provide the password when prompted.
@@ -31,7 +31,7 @@ Provide the password when prompted.
 If the user you use for the SSH connection is not a level 15 admin user you will need to specify the enable password for the device as well with `--enable-password:
 
 ```bash
-cnquery shell nd-ssh USER_NAME@DEVICE_IP --ask-pass --enable-password YOUR_ENABLE_PASSWORD
+cnspec scan nd-ssh USER_NAME@DEVICE_IP --ask-pass --enable-password YOUR_ENABLE_PASSWORD
 ```
 
 ## Learn more

@@ -20,19 +20,21 @@ Use the `aws.iam` resource to assess the configuration of the AWS IAM service. T
 
 **Fields**
 
-| ID                    | TYPE                                                                                | DESCRIPTION                                             |
-| --------------------- | ----------------------------------------------------------------------------------- | ------------------------------------------------------- |
-| users                 | &#91;&#93;[aws.iam.user](aws.iam.user.md)                                           | List of IAM users in the account                        |
-| roles                 | &#91;&#93;[aws.iam.role](aws.iam.role.md)                                           | List of IAM roles in the account                        |
-| groups                | &#91;&#93;[aws.iam.group](aws.iam.group.md)                                         | List of IAM groups in the account                       |
-| policies              | &#91;&#93;[aws.iam.policy](aws.iam.policy.md)                                       | List of IAM policies in the account                     |
-| attachedPolicies      | &#91;&#93;[aws.iam.policy](aws.iam.policy.md)                                       | List of IAM policies attached to a user, role, or group |
-| credentialReport      | &#91;&#93;[aws.iam.usercredentialreportentry](aws.iam.usercredentialreportentry.md) | IAM credential report                                   |
-| accountPasswordPolicy | dict                                                                                | IAM account password policy for the account             |
-| accountSummary        | map[string]int                                                                      | IAM account summary                                     |
-| virtualMfaDevices     | &#91;&#93;[aws.iam.virtualmfadevice](aws.iam.virtualmfadevice.md)                   | List of virtual mfs devices associated with the account |
-| serverCertificates    | &#91;&#93;dict                                                                      | List of server certificates stored in IAM               |
-| instanceProfiles      | &#91;&#93;[aws.iam.instanceProfile](aws.iam.instanceprofile.md)                     |                                                         |
+| ID                    | TYPE                                                                                | DESCRIPTION                                                        |
+| --------------------- | ----------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
+| users                 | &#91;&#93;[aws.iam.user](aws.iam.user.md)                                           | List of IAM users in the account                                   |
+| roles                 | &#91;&#93;[aws.iam.role](aws.iam.role.md)                                           | List of IAM roles in the account                                   |
+| groups                | &#91;&#93;[aws.iam.group](aws.iam.group.md)                                         | List of IAM groups in the account                                  |
+| policies              | &#91;&#93;[aws.iam.policy](aws.iam.policy.md)                                       | List of IAM policies in the account                                |
+| attachedPolicies      | &#91;&#93;[aws.iam.policy](aws.iam.policy.md)                                       | List of IAM policies attached to a user, role, or group            |
+| credentialReport      | &#91;&#93;[aws.iam.usercredentialreportentry](aws.iam.usercredentialreportentry.md) | IAM credential report                                              |
+| accountPasswordPolicy | dict                                                                                | IAM account password policy for the account                        |
+| accountSummary        | map[string]int                                                                      | IAM account summary                                                |
+| virtualMfaDevices     | &#91;&#93;[aws.iam.virtualmfadevice](aws.iam.virtualmfadevice.md)                   | List of virtual mfs devices associated with the account            |
+| serverCertificates    | &#91;&#93;dict                                                                      | List of server certificates stored in IAM                          |
+| instanceProfiles      | &#91;&#93;[aws.iam.instanceProfile](aws.iam.instanceprofile.md)                     | List of IAM instance profiles in the account                       |
+| samlProviders         | &#91;&#93;[aws.iam.samlProvider](aws.iam.samlprovider.md)                           | List of SAML 2.0 identity providers configured in IAM              |
+| oidcProviders         | &#91;&#93;[aws.iam.oidcProvider](aws.iam.oidcprovider.md)                           | List of OpenID Connect (OIDC) identity providers configured in IAM |
 
 **Examples**
 

@@ -239,6 +239,7 @@ nsurlsessiond
 Nsxr
 ntc
 nxos
+oidc
 onnx
 openssh
 openssl

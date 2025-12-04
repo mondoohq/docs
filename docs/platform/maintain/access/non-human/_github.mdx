@@ -38,16 +38,12 @@ Create a GitHub Actions workflow in the repository you chose.
 
 Set the `id-token` value to `write`.
 
+Write the configuration values from **Step A** into a file, for example config.json.
+
 Configure the workflow to run these commands:
 
 ```
-# generate a token
-export MY_TOKEN=$(curl -H "Authorization: bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" "$ACTIONS_ID_TOKEN_REQUEST_URL&audience=test" | jq -r '.value')
-# exchange the token
-export MONDOO_CONFIG_BASE64=$(curl --request POST --url 'UNIVERSE_DOMAIN/SecureTokenService/ExchangeExternalToken' --header 'content-type: application/json' --data '{"audience": "AUDIENCE","issuer_uri": "ISSUER","jwt_token": "'"${MY_TOKEN}"'"}' | jq -r '.base64_credential')
-# install cnspec
-bash -c "$(curl -sSL https://install.mondoo.com/sh)"
-# run cnspec status to check for platform connectivity
+export MONDOO_CONFIG_PATH=/path/to/config.json
 cnspec status
 if [ $(echo $?) != 0 ]; then echo "failed to reach mondoo" exit 1; fi
 # run the scan

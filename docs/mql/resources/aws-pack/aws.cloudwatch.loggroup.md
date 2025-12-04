@@ -28,3 +28,4 @@ The `aws.cloudwatch.loggroup` object represents an individual AWS CloudWatch log
 | kmsKey          | [aws.kms.key](aws.kms.key.md)                                                               | KMS key used for log encryption                                    |
 | region          | string                                                                                      | Region where the log group is stored                               |
 | retentionInDays | int                                                                                         | Number of days to retain the log events in the specified log group |
+| tags            | map[string]string                                                                           | Tags for the log group                                             |

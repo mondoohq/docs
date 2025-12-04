@@ -28,7 +28,7 @@ This month we added vulnerability detection for the following new apps:
 
 More importantly, we’ve added full remediation steps and code snippets for 30+ commonly used applications, including Adobe products, Notepad++, 7-Zip, Dropbox, Microsoft 365, Google Chrome, Mozilla Firefox, Microsoft Edge, and many more. In addition, we now offer [agentic vulnerability patching](https://mondoo.com/blog/introducing-agentic-vulnerability-patching-using-ansible) for applications using the Mondoo security pipeline.
 
-DEETS
+![Software package remediation](/img/release-highlights/2025-11/software-remediation.png)
 
 ## New vulnerability and EOL detections
 
@@ -39,6 +39,8 @@ We’ve expanded vendor advisory and vulnerability detection for these new opera
 - AWS Bottlerocket
 
 We also made the following improvements to vulnerability detection on AlmaLinux and AIX and improved our EOL risk factor to accurately reevaluate if a system is upgraded in place.
+
+![macOS Tahoe asset](/img/release-highlights/2025-11/macos-tahoe.png)
 
 ## New and updated CIS policies
 
@@ -69,6 +71,8 @@ By identifying flaws in software and configurations of network devices, you can 
 - Model and serial number asset inventory data now displayed for all Cisco devices
 - New EOL and CVE scanning support for FortiOS and Pan-OS using new panos and fortios providers for cnquery/cnspec.
 - Cumulus Linux network distribution support
+
+![EOL Network Device](/img/release-highlights/2025-11/network-device.png)
 
 Stay tuned for more great network security additions coming soon!
 

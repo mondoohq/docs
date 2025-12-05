@@ -85,6 +85,8 @@ Yes, Mondoo scans literally everything. With our latest batch of new platforms, 
 
 Now that Mondoo supports over FIFTY unique operating systems we took the time to make it easier to deploy Mondoo onto systems. New simplified operating system integration pages make it easier to deploy Mondoo to the system of your choice and include updated commands to automatically run Mondoo as a service and keep it updated without additional effort.
 
+![Simplified Mondoo installation](/img/release-highlights/2025-11/integration.png)
+
 ## Resource updates
 
 - `k8s.pod` resource includes a new `containerStatuses` field using the new `k8s.containerStatus` resource

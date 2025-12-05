@@ -60,8 +60,6 @@ NPM packages are pre-written code modules that can be installed and managed usin
 - Improved detection of packages in multiple directories when using using cnquery shell
 - Remediation steps in all NPM findings
 
-DEETS
-
 ## New network security capabilities
 
 By identifying flaws in software and configurations of network devices, you can proactively patch and harden your networks, reducing your attack surface and protecting critical systems and data. This month, we made the following additions and improvements to our network security offering:

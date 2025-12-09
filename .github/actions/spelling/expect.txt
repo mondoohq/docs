@@ -75,7 +75,6 @@ coreutils
 cosmosdb
 cpe
 crcsmnky
-credentialreport
 crowdsource
 cryptokey
 csum

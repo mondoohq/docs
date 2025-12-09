@@ -57,7 +57,7 @@ NPM packages are pre-written code modules that can be installed and managed usin
 
 - NPM package results include a new package.script field exposing scripts in the npm packages
 - Support for scoped npm packages
-- Improved detection of packages in multiple directories when using using cnquery shell
+- Improved detection of packages in multiple directories when using cnquery shell
 - Remediation steps in all NPM findings
 
 ## New network security capabilities
@@ -80,7 +80,7 @@ Yes, Mondoo scans literally everything. With our latest batch of new platforms, 
 
 - New openSUSE MicroOS, Nobara Linux, and Huawei Cloud EulerOS (HCE) support.
 - Improved service detection on BSD systems, Alpine Linux with OpenRC installed, and systemd-based Linux distributions.
-- New package detection support on Dragonfly BSD, EndeavourOS, Parrot OS, AWS Bottlerocket, and Gentoo Linux.
+- New package detection support on DragonFly BSD, EndeavourOS, Parrot OS, AWS Bottlerocket, and Gentoo Linux.
 - New service detection support on Elementary Linux, Parrot OS, MX Linux, Zorin OS, and Gentoo Linux.
 
 Now that Mondoo supports over FIFTY unique operating systems we took the time to make it easier to deploy Mondoo onto systems. New simplified operating system integration pages make it easier to deploy Mondoo to the system of your choice and include updated commands to automatically run Mondoo as a service and keep it updated without additional effort.
@@ -91,7 +91,7 @@ Now that Mondoo supports over FIFTY unique operating systems we took the time to
 
 - `k8s.pod` resource includes a new `containerStatuses` field using the new `k8s.containerStatus` resource
 - `docker.image` resource includes a new `repoDigests` field
-- `kernel` resource support for openBSD, NetBSD, and Dragonfly BSD assets
+- `kernel` resource support for openBSD, NetBSD, and DragonFly BSD assets
 - New `network.route` resource for macOS, Linux, and Windows assets
 - New `microsoft.policies.crossTenantAccessPolicies` resource
 - New `microsoft.tenant.branding` resource
@@ -100,7 +100,7 @@ Now that Mondoo supports over FIFTY unique operating systems we took the time to
 ## Other misc updates
 
 - Support for Space IDs up to 64 characters long so you can use UIDs as a space ID
-- Crowdstrike import improvements prevent duplicate assets, support macOS 26, and support FQDN as asset name
+- CrowdStrike import improvements prevent duplicate assets, support macOS 26, and support FQDN as asset name
 - Organization tiles on the organizations page now include the total number of assets in the organization
 - Improved support for screen readers in the console
 - Your company name can now be set in organization details during setup

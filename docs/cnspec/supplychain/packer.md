@@ -20,9 +20,9 @@ To install this plugin, copy and paste this code into your Packer configuration 
 ```hcl
 packer {
   required_plugins {
-    mondoo = {
-      version = ">= 0.3.0"
-      source  = "github.com/mondoohq/mondoo"
+    cnspec = {
+      version = ">= 12.0.0"
+      source  = "github.com/mondoohq/cnspec"
     }
   }
 }
@@ -45,9 +45,10 @@ If you prefer to build the plugin from sources, clone the GitHub repository loca
 | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- | ----------- | ------------ |
 | `annotations`        | Custom annotations can be applied to Packer build assets to provide additional metadata for asset tracking.                                    | `map of strings` | None        | No           |
 | `asset_name`         | Overwrite the asset name in Mondoo Platform.                                                                                                   | `string`         | None        | No           |
+| `debug`              | Enables debug logging.                                                                                                                         | `bool`           | false       | No           |
 | `on_failure`         | Set `on_failure = "continue"` to ignore build failures that do not meet any set `score_threshold`.                                             | `string`         | None        | No           |
 | `score_threshold`    | Set a score threshold for Packer builds `[0-100]`. Any scans that fall below the `score_threshold` will fail unless `on_failure = "continue"`. | `int`            | None        | No           |
-| `sudo`               | Use sudo to elevate permissions when running scans.                                                                                            | `bool`           | None        | No           |
+| `sudo`               | Use sudo to elevate permissions when running scans.                                                                                            | `bool`           | false       | No           |
 | `mondoo_config_path` | The path to the configuration to be used when running Mondoo scans. If left empty, cnspec tries to determine the config automatically.         | `string`         | None        | No           |
 
 ### Example: Complete configuration

@@ -465,7 +465,7 @@ Create a playbook to run a cnspec scan against your inventory. This is an exampl
       local_action: ansible.builtin.command ssh-add ~/.ssh/id_ed25519
       run_once: true
     - name: run cnspec scan for target destination
-      local_action: ansible.builtin.command cnspec scan --insecure --score-threshold 0 ssh {{ ansible_user }}@{{ inventory_hostname }}
+      local_action: ansible.builtin.command cnspec scan --insecure --risk-threshold 90 ssh {{ ansible_user }}@{{ inventory_hostname }}
 ```
 
 Be sure to save the file.

@@ -123,8 +123,8 @@ stages:
             displayName: "Login to Azure Container Registry"
 
           - script: |
-              # be sure to change the score-threshold value to control the minimum accepted asset score before CI jobs fail
-              cnspec scan docker image $(imageNamespace)/$(imageRepo):latest --score-threshold 100 --output junit > TEST-cnspec.xml
+              # be sure to change the risk-threshold value to control the maximum accepted asset score before CI jobs fail
+              cnspec scan docker image $(imageNamespace)/$(imageRepo):latest --risk-threshold 90 --output junit > TEST-cnspec.xml
             displayName: "Scan Docker Image with cnspec"
             env:
               MONDOO_CONFIG_BASE64: $(MONDOO_CONFIG_BASE64)

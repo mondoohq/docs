@@ -85,13 +85,13 @@ stages:
        entrypoint: [""]
     script:
       - mkdir -p /root/.docker/ && echo "{"auths":{"$CI_REGISTRY":{"username":"$CI_REGISTRY_USER","password":"$CI_REGISTRY_PASSWORD"}}}" > /root/.docker/config.json
-      # be sure to change the score-threshold value to control the minimum accepted asset score before CI jobs fail
-      - cnspec scan container ${CI_REGISTRY_IMAGE}:${CI_COMMIT_REF_SLUG} --score-threshold 90
+      # be sure to change the risk-threshold value to control the maximum accepted asset score before CI jobs fail
+      - cnspec scan container ${CI_REGISTRY_IMAGE}:${CI_COMMIT_REF_SLUG} --risk-threshold 90
     dependencies:
       - build-docker
 ```
 
-If medium asset scores are allowed, i.e. if the pipeline should still turn green with a medium asset score, then set the `--score-threshold` to 40.
+If medium asset scores are allowed, i.e. if the pipeline should still turn green with a medium asset score, then set the `--risk-threshold` to 50.
 
 ## JUnit report
 
@@ -105,7 +105,7 @@ mondoo:
     entrypoint: [""]
   script:
     - mkdir -p /root/.docker/ && echo "{\"auths\":{\"$CI_REGISTRY\":{\"username\":\"$CI_REGISTRY_USER\",\"password\":\"$CI_REGISTRY_PASSWORD\"}}}" > /root/.docker/config.json
-    - cnspec scan container ${CI_REGISTRY_IMAGE}:latest --score-threshold 90  --output junit > mondoo-junit.xml
+    - cnspec scan container ${CI_REGISTRY_IMAGE}:latest --risk-threshold 90  --output junit > mondoo-junit.xml
   artifacts:
     paths:
       - mondoo-junit.xml

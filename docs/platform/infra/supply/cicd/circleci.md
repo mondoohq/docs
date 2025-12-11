@@ -82,8 +82,8 @@ version: 2
               ./cnspec version
         # - run: docker login -u $DOCKER_USER -p $DOCKER_PASS
         - run: docker build -t yourorg/docker-image:0.1.$CIRCLE_BUILD_NUM .
-        # be sure to change the score-threshold value to control the minimum accepted asset score before CI jobs fail
-        - run: ./cnspec scan docker yourorg/docker-image:0.1.$CIRCLE_BUILD_NUM --score-threshold 90
+        # be sure to change the risk-threshold value to control the maximum accepted asset score before CI jobs fail
+        - run: ./cnspec scan docker yourorg/docker-image:0.1.$CIRCLE_BUILD_NUM --risk-threshold 90
         # - run: docker push docker yourorg/docker-image:0.1.$CIRCLE_BUILD_NUM
 ```
 

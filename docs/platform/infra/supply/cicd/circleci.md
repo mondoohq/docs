@@ -57,24 +57,14 @@ Configure your CircleCI project to store the credentials for cnspec:
 This example lets you build Docker images as part of your [CI/CD pipeline](https://circleci.com/docs/building-docker-images/). You can use cnspec to verify the Docker image before you push it to the registry. This configuration runs a `docker build` and a `cnspec scan`:
 
 ```yml title=".circleci/config.yml"
-version: 2
+version: 2.1
   jobs:
     build:
       docker:
-        - image: centos:7
+        - image: cimg/base:stable
       steps:
         - setup_remote_docker
         - checkout
-        # use a primary image that already has Docker (recommended)
-        # or install it during a build like we do here
-        - run:
-            name: Install Docker client
-            command: |
-              set -x
-              VER="18.09.3"
-              curl -L -o /tmp/docker-$VER.tgz https://download.docker.com/linux/static/stable/x86_64/docker-$VER.tgz
-              tar -xz -C /tmp -f /tmp/docker-$VER.tgz
-              mv /tmp/docker/* /usr/bin
         - run:
             name: Install cnspec
             command: |

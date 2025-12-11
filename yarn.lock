@@ -28,12 +28,12 @@
     json-schema "^0.4.0"
 
 "@ai-sdk/react@^2.0.30":
-  version "2.0.109"
-  resolved "https://registry.yarnpkg.com/@ai-sdk/react/-/react-2.0.109.tgz#1f5dd07643bd8371015d05e9c9348110889cbb68"
-  integrity sha512-5qM8KuN7bv7E+g6BXkSAYLFjwIfMSTKOA1prjg1zEShJXJyLSc+Yqkd3EfGibm75b7nJAqJNShurDmR/IlQqFQ==
+  version "2.0.111"
+  resolved "https://registry.yarnpkg.com/@ai-sdk/react/-/react-2.0.111.tgz#de101af565981d1d6bf06f9b3d47c20052bbff67"
+  integrity sha512-CY2HW/bxTwpRMvd1SmnF1Fg/zv+v4wSDz+a6Vg+7AqF5YkFSmxsyYHEjZ8WzoeQDaDZXJbLM2ToajUHAQoZNtQ==
   dependencies:
     "@ai-sdk/provider-utils" "3.0.18"
-    ai "5.0.108"
+    ai "5.0.109"
     swr "^2.2.5"
     throttleit "2.1.0"
 
@@ -2928,10 +2928,10 @@ aggregate-error@^3.0.0:
     clean-stack "^2.0.0"
     indent-string "^4.0.0"
 
-ai@5.0.108, ai@^5.0.30:
-  version "5.0.108"
-  resolved "https://registry.yarnpkg.com/ai/-/ai-5.0.108.tgz#b1b6e66b705baabcf98370336b03ebaacbf1874f"
-  integrity sha512-Jex3Lb7V41NNpuqJHKgrwoU6BCLHdI1Pg4qb4GJH4jRIDRXUBySJErHjyN4oTCwbiYCeb/8II9EnqSRPq9EifA==
+ai@5.0.109, ai@^5.0.30:
+  version "5.0.109"
+  resolved "https://registry.yarnpkg.com/ai/-/ai-5.0.109.tgz#9bdc50691c1bb3fcf82cd2f22e649dfda57ac0ed"
+  integrity sha512-tW8K4Z0bcYH9PzP7gMmPilgBwgpylEL25bRtWruUnrTS45S6ryNJ6YSEh6mZajlIEDS6bcur7srdXVGERxjVXQ==
   dependencies:
     "@ai-sdk/gateway" "2.0.18"
     "@ai-sdk/provider" "2.0.0"

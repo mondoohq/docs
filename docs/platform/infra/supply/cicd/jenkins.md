@@ -69,8 +69,8 @@ pipeline {
           steps{
             sh 'bash -c "$(curl -sSL https://install.mondoo.com/sh)"'
             sh './cnspec version'
-            // be sure to change the score-threshold value to control the minimum accepted asset score before CI jobs fail
-            sh "./cnspec scan docker ${REGISTRY}:${env.BUILD_ID} --score-threshold 90"
+            // be sure to change the risk-threshold value to control the maximum accepted asset score before CI jobs fail
+            sh "./cnspec scan docker ${REGISTRY}:${env.BUILD_ID} --risk-threshold 90"
           }
         }
         stage('Deploy Image') {

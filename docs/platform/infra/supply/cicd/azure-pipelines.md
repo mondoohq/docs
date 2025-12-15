@@ -98,46 +98,46 @@ variables:
 stages:
   - stage: BuildApp
     jobs:
-    - job: BuildPushImage
-      steps:
-      - task: Docker@2
-        inputs:
-          containerRegistry: "AzureRegistry"
-          repository: "$(imageRepo)"
-          command: "buildAndPush"
-          Dockerfile: "**/Dockerfile"
-          tags: latest
+      - job: BuildPushImage
+        steps:
+          - task: Docker@2
+            inputs:
+              containerRegistry: "AzureRegistry"
+              repository: "$(imageRepo)"
+              command: "buildAndPush"
+              Dockerfile: "**/Dockerfile"
+              tags: latest
   - stage: ScanwithCnspec
     jobs:
       - job: ScanImage
         steps:
-        # - task: Docker@2
-        #   inputs:
-        #     containerRegistry: "AzureRegistry"
-        #     command: "login"
-        - script: |
-            bash -c "$(curl -sSL https://install.mondoo.com/sh)"
-            cnspec version
-          displayName: "Install cnspec"
+          # - task: Docker@2
+          #   inputs:
+          #     containerRegistry: "AzureRegistry"
+          #     command: "login"
+          - script: |
+              bash -c "$(curl -sSL https://install.mondoo.com/sh)"
+              cnspec version
+            displayName: "Install cnspec"
 
-        - script: |
-            docker login securityimages.azurecr.io --username [SERVICE_PRINCIPAL_APP_ID] --password [SERVICE_PRINCIPAL_PASSWORD]
-          displayName: "Log into Azure Container Registry"
+          - script: |
+              docker login securityimages.azurecr.io --username [SERVICE_PRINCIPAL_APP_ID] --password [SERVICE_PRINCIPAL_PASSWORD]
+            displayName: "Log into Azure Container Registry"
 
-        - script: |
-            # be sure to change the risk-threshold value to control the maximum accepted asset score before CI jobs fail
-            cnspec scan docker image $(imageNamespace)/$(imageRepo):latest --risk-threshold 80 --output junit > TEST-cnspec.xml
-          displayName: "Scan Docker Image with cnspec"
-          env:
-            MONDOO_CONFIG_BASE64: $(MONDOO_CONFIG_BASE64)
+          - script: |
+              # be sure to change the risk-threshold value to control the maximum accepted asset score before CI jobs fail
+              cnspec scan docker image $(imageNamespace)/$(imageRepo):latest --risk-threshold 80 --output junit > TEST-cnspec.xml
+            displayName: "Scan Docker Image with cnspec"
+            env:
+              MONDOO_CONFIG_BASE64: $(MONDOO_CONFIG_BASE64)
 
-        - task: PublishTestResults@2
-          inputs:
-            testResultsFormat: "JUnit"
-            testResultsFiles: "**/TEST-*.xml"
-            mergeTestResults: true
-            testRunTitle: "cnspec"
-          condition: succeededOrFailed()
+          - task: PublishTestResults@2
+            inputs:
+              testResultsFormat: "JUnit"
+              testResultsFiles: "**/TEST-*.xml"
+              mergeTestResults: true
+              testRunTitle: "cnspec"
+            condition: succeededOrFailed()
 ```
 
 Because cnspec uses a score threshold of 100, the pipeline fails if cnspec finds any security issues. It generates a link to the XML file, which shows the result of the scan.

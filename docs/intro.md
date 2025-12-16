@@ -26,7 +26,9 @@ The Mondoo unified security platform finds and prioritizes vulnerabilities and m
 
 - [SaaS](/platform/infra/saas/overview/)
 
-- [Hosts, DNS, and certificates](/platform/infra/networking/overview/)
+- [Hosts, DNS, and certificates](/platform/infra/networks/overview/)
+
+- [Network devices](/platform/infra/network-devices/overview/)
 
 - [Servers and Endpoints](/platform/infra/opsys/osoverview/)
 

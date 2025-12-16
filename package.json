@@ -42,7 +42,7 @@
     "search-insights": "^2.17.3",
     "terser": "5.44.1",
     "url-loader": "^4.1.1",
-    "webpack": "^5.103.0",
+    "webpack": "^5.104.0",
     "ws": "^8.18.3"
   },
   "browserslist": {

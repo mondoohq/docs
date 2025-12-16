@@ -22,7 +22,7 @@ The Mondoo unified security platform finds and prioritizes vulnerabilities and m
 
 - [SaaS](/platform/infra/saas/overview/)
 
-- [Network](/platform/infra/networking/overview/)
+- [Networks](/platform/infra/networks/overview/)
 
 - [Software Supply Chain](/platform/infra/supply/overview/)
 

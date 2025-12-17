@@ -25,11 +25,13 @@ A _resource_ is a source of information about an asset in your infrastructure, s
 [**Core resource pack:**](./core-pack)
 The core pack is essential for queries and checks against many different systems. Use it to retrieve information about users, files, packages, ports, and much more.
 
-[**Operating system resource pack:**](./os-pack)
-Some of the resources in the operating system pack span different operating systems, while others are specific to a single operating system.
-
 [**AI resource pack:**](./ai-pack)
 Secure AI MCP servers and use AI within any MQL query using resources in the AI resource pack.
+
+**OS resource packs**: These packs query common operating system components and also well as files on disk using YARA rules
+
+- [OS resource pack](./os-pack)
+- [YARA resource pack](./yara-pack)
 
 **Network resource packs:**
 These packs include resources for querying assets like hostnames, checking certificate contents, and discovering network resources.

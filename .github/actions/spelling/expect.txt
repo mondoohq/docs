@@ -378,6 +378,7 @@ xssmatchstatement
 XXXXXX
 XXXXXXXXX
 YAMLFILE
+yara
 yast
 yescrypt
 zorin

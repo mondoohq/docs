@@ -112,7 +112,7 @@ The team member receives an invitation inviting them to the space.
 
 5. Select **Add Roles** to add new roles to the team member and then select **Apply**
 
-![Edit member](/img/platform/maintain/access/edit_member.png)
+   ![Edit member](/img/platform/maintain/access/edit_member.png)
 
 ## Delete a team member
 
@@ -126,6 +126,6 @@ The team member receives an invitation inviting them to the space.
 
 5. Select **Remove Member** and then confirm the removal.
 
-![Remove member](/img/platform/maintain/access/remove_member.png)
+   ![Remove member](/img/platform/maintain/access/remove_member.png)
 
 ---

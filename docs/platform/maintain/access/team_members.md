@@ -93,12 +93,12 @@ The team member receives an invitation inviting them to the space.
 
 3. Select the **Members** tab.
 
-4. To see pending invitations, select the **INVITATIONS** tab.
+4. If the space or organization has any pending invitations a **Pending Invitations** section will be shown.
 
-   ![Managing team invites](/img/platform/maintain/access/invitations.png)
+   ![Pending invitations](/img/platform/maintain/access/invitations.png)
    - To resend an invitation, select the circular arrow icon beside the invitation's status.
 
-   - To revoke an invitation, select the X icon beside the invitation's status.
+   - To revoke an invitation, select the delete icon beside the invitation's status.
 
 ## Edit a team member's role
 
@@ -108,9 +108,11 @@ The team member receives an invitation inviting them to the space.
 
 3. Select the **Members** tab.
 
-4. In the row for the team member you want to edit, select the three vertical dots and then select **Edit**.
+4. Select the team member you want to edit
 
-5. Select the new role and select the **SAVE** button.
+5. Select **Add Roles** to add new roles to the team member and then select **Apply**
+
+![Edit member](/img/platform/maintain/access/edit_member.png)
 
 ## Delete a team member
 
@@ -120,6 +122,10 @@ The team member receives an invitation inviting them to the space.
 
 3. Select the **Members** tab.
 
-4. In the row for the team member you want to remove, select the three vertical dots and then select **Delete**.
+4. Select the team member you want to remove.
+
+5. Select **Remove Member** and then confirm the removal.
+
+![Remove member](/img/platform/maintain/access/remove_member.png)
 
 ---

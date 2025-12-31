@@ -6,6 +6,12 @@ const legacyRedirects = [
   // NOTE: Path / is equivalent to https://mondoo.com/docs/
   //
 
+  // From Dec 2025 exceptions rework:
+  {
+    from: "/platform/security/customize/exceptions/advisories",
+    to: "/platform/security/customize/exceptions/asset-findings",
+  },
+
   // From Aug 2025 align the ticketing paths
   {
     from: "/platform/ticketing/setup",

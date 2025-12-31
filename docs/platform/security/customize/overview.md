@@ -12,7 +12,7 @@ To meet your business's unique security needs, you can customize policies:
 
 - [Set an exception on a policy](/platform/security/customize/exceptions/policies/) to exclude certain checks from running.
 
-- [Set an exception on an asset advisory](/platform/security/customize/exceptions/advisories/) to exclude it from an asset's vulnerability assessment.
+- [Set an exception on an asset finding](/platform/security/customize/exceptions/asset-findings/) to exclude it from an asset's assessment.
 
 - [Change check properties](/platform/security/customize/props/) to customize the values that Mondoo scans for.
 

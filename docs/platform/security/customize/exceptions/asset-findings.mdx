@@ -1,14 +1,14 @@
 ---
-title: Set Exceptions on Asset Advisories
-sidebar_label: Set Exceptions on Asset Advisories
+title: Set Exceptions on Asset Findings
+sidebar_label: Set Exceptions on Asset Findings
 sidebar_position: 4
-description: Control which advisories Mondoo uses to assess an asset's vulnerability
+description: Control which findings Mondoo uses to assess an asset's risk
 image: /img/featured_img/mondoo-feature.jpg
 ---
 
-Set _advisory exceptions_ to customize how Mondoo evaluates your assets. Advisory exceptions tell Mondoo to exclude certain [advisories](/platform/security/posture/advisories/) when assessing an asset's security posture.
+Set _finding exceptions_ to customize how Mondoo evaluates your assets. Finding exceptions tell Mondoo to exclude certain findings, either security checks or vendor advisories/CVEs, when assessing an asset's security posture.
 
-If an asset has advisories that, for any reason, you don't want to include in your assessments, you can _disable_ them. Doing so instructs Mondoo to skip them entirely. Mondoo doesn't prioritize disabled advisories or include them when evaluating the asset's vulnerability to attack.
+If an asset has findings that, for any reason, you don't want to include in your assessments, you can _disable_ them. Doing so instructs Mondoo to skip them entirely. Mondoo doesn't prioritize disabled advisories or include them when evaluating the asset's vulnerability to attack.
 
 You can temporarily exclude an advisory by setting it to Risk Accepted. While an advisory is in this state, it won't affect the asset's vulnerability score. Use Risk Acceptance when you intend to address an advisory later but want to prevent it from impacting your team's current priorities.
 

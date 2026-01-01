@@ -15,49 +15,62 @@ When combined with Mondoo Platform's management capabilities, cnspec can continu
 ```bash
 $ cnspec scan
 
-→ no provider specified, defaulting to local. Use --help to see all providers.
-→ loaded configuration from /Users/tsmith/.config/mondoo/mondoo.yml using source default
-→ using service account credentials
+→ Connecting to your local system. To learn how to scan other platforms, use the --help flag.
+→ no Mondoo configuration file provided, using defaults
+! No credentials provided. Switching to --incognito mode.
 → discover related assets for 1 asset(s)
-→ synchronize assets
 
- MacBook.localdomain ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% score
+ Bob Bobberson ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% score: LOW
 
 
-Asset: MacBook.localdomain
+Asset: (macOS) Bob Bobberson
 ----------------------------
 
-Data queries:
-asset.title: "macOS, bare metal"
-packages.list.length: 428
-title: "macOS, bare metal"
-asset: {
-  kind: "baremetal"
-  version: "14.0"
-  title: "macOS, bare metal"
-  arch: "arm64"
-  platform: "macos"
-  runtime: ""
-  name: "MacBook.localdomain"
-}
+Passing:
+✓ Control access to audit records
+✓ Disable Bonjour advertising service
+✓ Disable Content Caching
+✓ Disable File Sharing
+✓ Disable Internet Sharing
+✓ Disable Media Sharing
+✓ Disable Printer Sharing
+✓ Disable Remote Apple Events
+✓ Disable Remote Login
+✓ Disable Remote Management
+✓ Disable Screen Sharing
+✓ Do not enable the "root" account
+✓ Enable "Show Wi-Fi status in menu bar"
+✓ Enable FileVault
+✓ Enable Firewall
+✓ Enable Firewall Stealth Mode
+✓ Enable Gatekeeper
+✓ Enable security auditing
+✓ Ensure AirDrop Is Disabled
+✓ Ensure EDR Agent is installed
+✓ Ensure EDR Agent is running
+✓ Ensure Firewall is configured to log
+✓ Ensure NFS server is not running
+✓ Ensure automatic checking of software updates enabled
+✓ Ensure automatic download of software updates enabled
+✓ Ensure critical updates are installed automatically
+✓ Ensure http server is not running
+✓ Ensure macOS is up to date
+✓ Ensure security auditing retention
+✓ Password Age
+✓ Password History
+✓ Retain install.log for 365 or more days with no maximum size
+✓ Set a minimum password length
 
-Checks:
-✕ Fail:  C  50  Ensure AirDrop Is Disabled
-✓ Pass:  A 100  Disable Internet Sharing
-✓ Pass:  A 100  Ensure automatic checking of software updates enabled
-✓ Pass:  A 100  Enable security auditing
-✓ Pass:  A 100  Disable Remote Login
-✓ Pass:  A 100  Ensure automatic download of software updates enabled
-✓ Pass:  A 100  Enable Firewall
+Failing:
+✕ MEDIUM (40):    Reduce the sudo timeout period
+. Skipped:        Disable Bluetooth Sharing
+. Skipped:        Ensure macOS Kernel Code Execution Vulnerability CVE-2023-32434 is not on the system
 
-....
 
-Scanned 1 assets
+Scanned 1 asset
 
 macOS
-    A MacBook.localdomain
-
-For detailed output, run this scan with "-o full".
+  LOW (1):      Bob Bobberson
 ```
 
 ## Communication matrix, IPs, and DNS names

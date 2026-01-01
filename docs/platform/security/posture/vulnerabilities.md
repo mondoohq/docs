@@ -28,9 +28,9 @@ Find vulnerabilities for assets in a space:
 
    :::
 
-2. In the left navigation, under **Findings**, select **CVEs**.
+2. In the left navigation, under **Findings**, select **Vulnerabilities**.
 
-   ![Find vulnerabilities](/img/platform/security/cves.png)
+   ![Find vulnerabilities](/img/platform/security/vulnerabilities.png)
 
    The list shows CVEs found in your infrastructure. For each CVE, Mondoo shows a rank (priority compared to other CVEs), score (CRITICAL, HIGH, MEDIUM, OR LOW), blast radius (calculated based on the affected assets), any [risk factors](#risk-factors), and when the vulnerability was first found in your infrastructure.
 
